@@ -1,3 +1,56 @@
+<script>
+// Diagnostic: Check if app.showDetails is globally accessible
+window.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    if (window.app && typeof app.showDetails === 'function') {
+      console.log('[DIAG] app.showDetails is globally accessible.');
+    } else {
+      console.error('[DIAG] app.showDetails is NOT accessible globally!');
+    }
+    // Diagnostic: Add event delegation for Details button as fallback
+    document.body.addEventListener('click', function(e) {
+      const btn = e.target.closest('button[title="View details"]');
+      if (btn) {
+        console.log('[DIAG] Delegated Details button click detected.');
+        // Try to extract date and secretItem from the onclick attribute
+        const onclick = btn.getAttribute('onclick');
+        if (onclick) {
+          const match = onclick.match(/showDetails\('([^']*)', '([^']*)'\)/);
+          if (match) {
+            const date = match[1];
+            const item = match[2];
+            if (window.app && typeof app.showDetails === 'function') {
+              app.showDetails(date, item);
+            }
+          }
+        }
+      }
+    });
+    // Diagnostic: Log modal visibility when showDetails is called
+    const origShowDetails = window.app && app.showDetails;
+    if (origShowDetails) {
+      app.showDetails = function(date, item) {
+        console.log('[DIAG] showDetails called (delegated):', date, item);
+        origShowDetails.call(this, date, item);
+        setTimeout(function() {
+          const modal = document.getElementById('modal-backdrop');
+          if (modal) {
+            const style = window.getComputedStyle(modal);
+            console.log('[DIAG] Modal display:', style.display, 'Visibility:', style.visibility, 'Z-index:', style.zIndex);
+            if (!modal.classList.contains('hidden')) {
+              console.log('[DIAG] Modal is visible.');
+            } else {
+              console.warn('[DIAG] Modal is still hidden after showDetails.');
+            }
+          } else {
+            console.error('[DIAG] Modal element not found.');
+          }
+        }, 100);
+      };
+    }
+  }, 500);
+});
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
