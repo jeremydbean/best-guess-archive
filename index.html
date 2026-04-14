@@ -214,7 +214,7 @@
       <div class="flex items-center gap-2 text-xs text-slate-400">
         <span class="material-symbols-outlined text-[#FFA300] text-[16px]">timer</span>
         <label for="clue-duration-select">Clue Display Time:</label>
-        <select id="clue-duration-select" class="bg-slate-800 border border-slate-600 focus:border-blue-500 text-white rounded px-1 py-0.5 outline-none transition" onchange="localStorage.setItem('clue_time', this.value); if(app.currentGame) app.renderGameLoop();">
+        <select id="clue-duration-select" class="bg-slate-800 border border-slate-600 focus:border-blue-500 text-white rounded px-1 py-0.5 outline-none transition" onchange="localStorage.setItem('clue_time', this.value); if(app.currentGame && app.gameStarted) app.renderGameLoop();">
           <option value="20">20s (Real Game)</option>
           <option value="30">30s</option>
           <option value="45">45s</option>
@@ -643,6 +643,7 @@ class App {
     const idx = Math.floor(Math.random() * this.games.length);
     this.currentGame = this.games[idx];
     this.currentClueIndex = 0;
+    this.gameStarted = false;
 
     document.getElementById('game-date').innerText = this.currentGame.date;
 
@@ -661,6 +662,34 @@ class App {
       ? 'Win gold on earliest clue · silver next · bronze third'
       : 'One guess only. Earliest correct clue takes the pot.';
 
+    document.getElementById('past-clues').innerHTML = '';
+    const inputEl = document.getElementById('guess-input');
+    if (inputEl) {
+      inputEl.value = '';
+      inputEl.disabled = true;
+    }
+    
+    const activeEl = document.getElementById('active-clue-area');
+    if (activeEl) {
+      activeEl.innerHTML = `
+        <div class="flex flex-col items-center justify-center space-y-6 w-full h-full pb-8">
+          <div class="text-slate-400 font-medium text-lg tracking-widest uppercase">Ready to play?</div>
+          <button class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-bold text-xl md:text-2xl flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_40px_rgba(37,99,235,0.6)] transition transform hover:scale-105" onclick="app.startGameplay()">
+            <span class="material-symbols-outlined text-3xl">play_circle</span>
+            START GAME
+          </button>
+        </div>
+      `;
+    }
+  }
+
+  startGameplay() {
+    this.gameStarted = true;
+    const inputEl = document.getElementById('guess-input');
+    if (inputEl) {
+      inputEl.disabled = false;
+      inputEl.focus();
+    }
     this.renderGameLoop();
   }
 
@@ -764,17 +793,18 @@ class App {
   }
 
   nextClue() {
-    this.clearTimers();
-    if (this.currentClueIndex < 4) {
-      this.currentClueIndex++;
-      this.renderGameLoop();
-    } else {
-      this.endGame(false, "Time's up! You ran out of clues.");
+      if (!this.gameStarted) return;
+      this.clearTimers();
+      if (this.currentClueIndex < 4) {
+        this.currentClueIndex++;
+        this.renderGameLoop();
+      } else {
+        this.endGame(false, "Time's up! You ran out of clues.");
+      }
     }
-  }
 
-  submitGuess() {
-    const input = document.getElementById('guess-input').value.trim();
+    submitGuess() {
+      if (!this.gameStarted) return;
     if (!input) return;
 
     const guess  = input.toLowerCase().replace(/[^a-z0-9]/g, '');
