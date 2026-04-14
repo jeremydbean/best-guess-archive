@@ -1137,6 +1137,18 @@ class App {
     document.getElementById('db-count-display').innerText = `Showing ${filtered.length} of ${this.games.length} games`;
 
     document.getElementById('db-table-body').innerHTML = filtered.map(g => {
+      // Cancelled / stub entry — no game was played
+      if (g.note && g.clues.length === 0) {
+        return `<tr class="border-b border-red-900/40 bg-red-950/20">
+          <td class="px-4 py-4 text-slate-400 font-mono text-xs whitespace-nowrap">${g.date}</td>
+          <td colspan="13" class="px-4 py-4">
+            <span class="inline-flex items-center gap-2 text-sm font-bold text-red-400">
+              <span class="material-symbols-outlined" style="font-size:18px">cancel</span>
+              ${g.note} — no episode aired
+            </span>
+          </td>
+        </tr>`;
+      }
       const isV2 = g.format === 'v2';
 
       // Medal map: clue number (1-5) → emoji
@@ -1240,6 +1252,18 @@ class App {
     document.getElementById('archive-count-display').innerText = `Showing ${filtered.length} of ${this.games.length} games`;
 
     document.getElementById('archive-table-body').innerHTML = filtered.map(g => {
+      // Cancelled / stub entry
+      if (g.note && g.clues.length === 0) {
+        return `<tr class="border-b border-red-900/40 bg-red-950/20">
+          <td class="px-6 py-4 text-slate-400 font-mono text-xs whitespace-nowrap">${g.date}</td>
+          <td colspan="7" class="px-6 py-4">
+            <span class="inline-flex items-center gap-2 text-sm font-bold text-red-400">
+              <span class="material-symbols-outlined" style="font-size:18px">cancel</span>
+              ${g.note} — no episode aired
+            </span>
+          </td>
+        </tr>`;
+      }
       const medalCell = g.format === 'v2'
         ? `<span class="text-[10px] bg-yellow-900/30 text-yellow-400 px-1 rounded mr-1">🥇${g.goldClue}</span><span class="text-[10px] bg-slate-700/50 text-slate-300 px-1 rounded mr-1">🥈${g.silverClue}</span><span class="text-[10px] bg-orange-900/30 text-orange-400 px-1 rounded">🥉${g.bronzeClue}</span>`
         : `<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-900 text-blue-300 text-xs font-bold">${g.goldClue || g.winningClue}</span>`;
