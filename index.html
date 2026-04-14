@@ -369,12 +369,7 @@
       #db-floating-scrollbar { display: none !important; }
     }
   </style>
-  <div class="flex items-center gap-2 mb-2">
-    <button id="db-zoom-out" class="px-3 py-1 rounded bg-slate-800 text-slate-200 border border-slate-600 hover:bg-slate-700 font-bold text-sm" title="Zoom Out">-</button>
-    <button id="db-zoom-in" class="px-3 py-1 rounded bg-slate-800 text-slate-200 border border-slate-600 hover:bg-slate-700 font-bold text-sm" title="Zoom In">+</button>
-    <button id="db-zoom-reset" class="px-3 py-1 rounded bg-slate-800 text-slate-200 border border-slate-600 hover:bg-slate-700 font-bold text-sm" title="Reset Zoom">Reset</button>
-    <span class="text-xs text-slate-400 ml-2" id="db-zoom-label">100%</span>
-  </div>
+
   <div class="glass-panel rounded-xl overflow-hidden shadow-xl border border-slate-700 db-responsive-container">
     <div class="relative db-responsive-inner">
       <div class="db-table-scroll" id="db-table-scroll" style="transition: transform 0.2s;">
@@ -1457,57 +1452,17 @@ class App {
         <td class="px-2 py-1 align-middle">${winnersHtml}</td>
         <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
         <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${(g.host || '—').replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson')}</td>
-        <td class="px-1 py-1 text-right align-top">
+        <td class="px-1 py-1 text-right align-middle">
           <button onclick="app.showDetails('${g.date.replace(/'/g,"\\'")}', '${g.secretItem.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}")" class="text-blue-400 hover:text-blue-300" title="View details" style="padding:0 2px;">
             <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
           </button>
         </td>
       </tr>`;
     }).join('');
-    // After rendering, set up zoom controls
-    this._setupDatabaseZoom();
+    // Zoom feature removed
   }
 
-  // Setup zoom controls for the database table
-  _setupDatabaseZoom() {
-    const zoomInBtn = document.getElementById('db-zoom-in');
-    const zoomOutBtn = document.getElementById('db-zoom-out');
-    const zoomResetBtn = document.getElementById('db-zoom-reset');
-    const zoomLabel = document.getElementById('db-zoom-label');
-    const tableScroll = document.getElementById('db-table-scroll');
-    const table = tableScroll ? tableScroll.querySelector('table') : null;
-    if (!zoomInBtn || !zoomOutBtn || !zoomResetBtn || !zoomLabel || !tableScroll || !table) return;
 
-    if (typeof this._dbZoom === 'undefined') this._dbZoom = 1;
-
-    zoomInBtn.onclick = null;
-    zoomOutBtn.onclick = null;
-    zoomResetBtn.onclick = null;
-
-    // Update zoom label and table scale
-    const updateZoom = () => {
-      table.style.transform = `scale(${this._dbZoom})`;
-      table.style.transformOrigin = 'left top';
-      // Adjust min-width so the scroll area matches the scaled table
-      table.parentElement.style.height = (table.offsetHeight * this._dbZoom) + 'px';
-      table.parentElement.style.overflowX = 'auto';
-      zoomLabel.innerText = Math.round(this._dbZoom * 100) + '%';
-    };
-    updateZoom();
-
-    zoomInBtn.onclick = () => {
-      this._dbZoom = Math.min(2, this._dbZoom + 0.1);
-      updateZoom();
-    };
-    zoomOutBtn.onclick = () => {
-      this._dbZoom = Math.max(0.5, this._dbZoom - 0.1);
-      updateZoom();
-    };
-    zoomResetBtn.onclick = () => {
-      this._dbZoom = 1;
-      updateZoom();
-    };
-  }
 
   filterDatabase() { this.renderDatabase(); }
 
