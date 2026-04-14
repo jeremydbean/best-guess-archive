@@ -1840,16 +1840,12 @@ class App {
     ];
     document.getElementById('stats-records-grid').innerHTML = records.map(r =>
       `<div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/30">
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-slate-500" id="status-indicator"></span>
-          <span id="data-source-status">Loading...</span>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="material-symbols-outlined text-2xl ${r.color}">${r.icon}</span>
+          <span class="font-bold text-white text-lg">${r.label}</span>
         </div>
-        <!-- Subtle admin button -->
-        <button class="opacity-10 hover:opacity-100 transition-opacity p-2 text-slate-500 hover:text-white" onclick="app.setView('admin')" title="Admin">
-          <span class="material-symbols-outlined text-sm">admin_panel_settings</span>
-        </button>
-        <a href="https://www.reddit.com/r/BestGuessLive/" target="_blank" rel="noopener noreferrer" class="ml-2 hover:text-orange-400 font-bold">Reddit</a>
-        <a href="https://discord.com/invite/pNv8G2Kjew" target="_blank" rel="noopener noreferrer" class="ml-2 hover:text-indigo-400 font-bold">Discord</a>
+        <div class="text-3xl font-bold ${r.color} mb-1">${r.val}</div>
+        <div class="text-xs text-slate-400 mb-2">${r.sub}</div>
       </div>`
     ).join('');
     const easiest = [...games].sort((a,b)=>(b.totalWinners||b.winnerCount||0)-(a.totalWinners||a.winnerCount||0)).slice(0,5);
