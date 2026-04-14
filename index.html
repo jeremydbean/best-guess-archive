@@ -751,14 +751,14 @@ class App {
         if (textEl) textEl.innerText = remaining + 's';
       } else {
         clearInterval(this._clueInterval);
-        if (textEl) textEl.innerHTML = '<span class="text-[10px] text-[#FFA300] uppercase animate-pulse leading-none pt-0.5">WAITING 15s...</span>';
+        if (textEl) textEl.innerHTML = '<span class="text-[10px] text-[#FFA300] uppercase animate-pulse leading-none pt-0.5">WAITING 5s...</span>';
         barEl.style.transition = 'none';
         barEl.style.width = '0%';
         barEl.classList.remove('shadow-[0_0_10px_rgba(250,204,21,0.8)]');
 
         this._delayTimeout = setTimeout(() => {
           this.nextClue();
-        }, 15000);
+        }, 5000);
       }
     }, 1000);
   }
@@ -1048,8 +1048,8 @@ class App {
   // ==================== ADMIN ====================
   initAdmin() {
     setTimeout(() => {
-      const o  = document.getElementById('gh-owner');          if (o)  o.value  = localStorage.getItem('gh_owner')          || '';
-      const r  = document.getElementById('gh-repo');           if (r)  r.value  = localStorage.getItem('gh_repo')           || '';
+      const o  = document.getElementById('gh-owner');          if (o)  o.value  = localStorage.getItem('gh_owner')          || 'jeremydbean';
+      const r  = document.getElementById('gh-repo');           if (r)  r.value  = localStorage.getItem('gh_repo')           || 'best-guess-archive';
       const p  = document.getElementById('gh-pat');            if (p)  p.value  = localStorage.getItem('gh_pat')            || '';
       this.populateDeleteDates();
     }, 50);
