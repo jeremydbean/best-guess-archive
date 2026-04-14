@@ -1285,6 +1285,17 @@ class App {
   // ==================== STATS ====================
   renderStats() {
     const games = this.games;
+    // Unique days
+    const uniqueDates = [...new Set(games.map(g => g.date))];
+    const totalGames = uniqueDates.length;
+    const totalRounds = games.length;
+    // Days since launch
+    let daysSinceLaunch = 0;
+    if (uniqueDates.length) {
+      const firstDate = new Date(uniqueDates[0]);
+      const today = new Date();
+      daysSinceLaunch = Math.max(0, Math.ceil((today - firstDate) / (1000 * 60 * 60 * 24)));
+    }
     const parseNum = s => { if (typeof s === 'number') return s; return parseInt(String(s).replace(/[^0-9]/g,''), 10) || 0; };
     const parsePayoutStr = s => Number(String(s||'0').replace(/[$,]/g,'')) || 0;
 
@@ -1303,7 +1314,9 @@ class App {
 
     // ---- KPI Grid ----
     const kpis = [
-      {label:'Total Games', val: games.length.toLocaleString(), color:'text-blue-400', icon:'sports_esports'},
+      {label:'Total Games', val: totalGames.toLocaleString(), color:'text-blue-400', icon:'sports_esports'},
+      {label:'Total Rounds', val: totalRounds.toLocaleString(), color:'text-blue-400', icon:'casino'},
+      {label:'Days Since Launch', val: daysSinceLaunch.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
       {label:'Total Paid Out', val:'$'+totalPot.toLocaleString(), color:'text-green-400', icon:'payments'},
       {label:'Total Winners', val: totalWinners.toLocaleString(), color:'text-yellow-400', icon:'emoji_events'},
       {label:'Solo Wins', val: soloWins.toLocaleString(), color:'text-red-400', icon:'person'},
@@ -1360,9 +1373,23 @@ class App {
       });
 
       // ---- Avg Winners Per Winning Clue ----
+      // For v2 games, use gold/silver/bronzeWinners for their respective clues; for v1, use totalWinners/winnerCount for winningClue
       const wcWinnersMap = {1:[],2:[],3:[],4:[],5:[]};
-      games.forEach(g => { const wc = Number(g.winningClue||g.goldClue); const w = g.totalWinners||g.winnerCount||0; if (wc>=1&&wc<=5) wcWinnersMap[wc].push(w); });
-      const avgWinnersByClue = [1,2,3,4,5].map(n => { const a=wcWinnersMap[n]; return a.length ? Math.round(a.reduce((x,y)=>x+y,0)/a.length) : 0; });
+      games.forEach(g => {
+        if (g.format === 'v2') {
+          if (g.goldClue && g.goldWinners != null) wcWinnersMap[Number(g.goldClue)].push(Number(g.goldWinners));
+          if (g.silverClue && g.silverWinners != null) wcWinnersMap[Number(g.silverClue)].push(Number(g.silverWinners));
+          if (g.bronzeClue && g.bronzeWinners != null) wcWinnersMap[Number(g.bronzeClue)].push(Number(g.bronzeWinners));
+        } else {
+          const wc = Number(g.winningClue||g.goldClue);
+          const w = g.totalWinners||g.winnerCount||0;
+          if (wc>=1&&wc<=5) wcWinnersMap[wc].push(w);
+        }
+      });
+      const avgWinnersByClue = [1,2,3,4,5].map(n => {
+        const a=wcWinnersMap[n];
+        return a.length ? Math.round(a.reduce((x,y)=>x+y,0)/a.length) : 0;
+      });
       this._charts.avgWinnersClue = new Chart(document.getElementById('chart-avg-winners-clue'), {
         type:'bar',
         data:{ labels:['Clue 1','Clue 2','Clue 3','Clue 4','Clue 5'],
