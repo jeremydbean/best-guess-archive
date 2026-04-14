@@ -1461,20 +1461,22 @@ class App {
     const zoomResetBtn = document.getElementById('db-zoom-reset');
     const zoomLabel = document.getElementById('db-zoom-label');
     const tableScroll = document.getElementById('db-table-scroll');
-    if (!zoomInBtn || !zoomOutBtn || !zoomResetBtn || !zoomLabel || !tableScroll) return;
+    const table = tableScroll ? tableScroll.querySelector('table') : null;
+    if (!zoomInBtn || !zoomOutBtn || !zoomResetBtn || !zoomLabel || !tableScroll || !table) return;
 
-    // Use a property to store zoom level
     if (typeof this._dbZoom === 'undefined') this._dbZoom = 1;
 
-    // Remove previous listeners to avoid stacking
     zoomInBtn.onclick = null;
     zoomOutBtn.onclick = null;
     zoomResetBtn.onclick = null;
 
     // Update zoom label and table scale
     const updateZoom = () => {
-      tableScroll.style.transform = `scale(${this._dbZoom})`;
-      tableScroll.style.transformOrigin = 'left top';
+      table.style.transform = `scale(${this._dbZoom})`;
+      table.style.transformOrigin = 'left top';
+      // Adjust min-width so the scroll area matches the scaled table
+      table.parentElement.style.height = (table.offsetHeight * this._dbZoom) + 'px';
+      table.parentElement.style.overflowX = 'auto';
       zoomLabel.innerText = Math.round(this._dbZoom * 100) + '%';
     };
     updateZoom();
