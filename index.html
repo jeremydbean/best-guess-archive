@@ -406,10 +406,12 @@
           white-space: normal;
           word-break: break-word;
         }
-        /* Prevent word-wrap for the Date column */
+        /* Prevent one-letter-per-line for the Date column */
         .db-table td:first-child, .db-table th:first-child {
-          white-space: nowrap;
-          word-break: normal;
+          min-width: 160px;
+          max-width: 260px;
+          white-space: normal;
+          word-break: break-word;
         }
       </style>
     </div>
