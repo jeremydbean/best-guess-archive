@@ -1310,10 +1310,21 @@ class App {
     const uniqueDates = [...new Set(games.map(g => g.date))];
     const totalGames = uniqueDates.length;
     const totalRounds = games.length;
-    // Days since launch
+
+    // Days since new rules launch (v2)
+    const v2Games = games.filter(g => g.format === 'v2');
+    let daysSinceNewRules = 0;
+    if (v2Games.length) {
+      const v2Dates = [...new Set(v2Games.map(g => g.date))].sort((a, b) => new Date(a) - new Date(b));
+      const firstV2Date = new Date(v2Dates[0]);
+      const today = new Date();
+      daysSinceNewRules = Math.max(0, Math.ceil((today - firstV2Date) / (1000 * 60 * 60 * 24)));
+    }
+
+    // Days since launch (classic/v1)
     let daysSinceLaunch = 0;
     if (uniqueDates.length) {
-      const firstDate = new Date(uniqueDates[0]);
+      const firstDate = new Date(uniqueDates[uniqueDates.length - 1]);
       const today = new Date();
       daysSinceLaunch = Math.max(0, Math.ceil((today - firstDate) / (1000 * 60 * 60 * 24)));
     }
@@ -1337,6 +1348,7 @@ class App {
     const kpis = [
       {label:'Total Games', val: totalGames.toLocaleString(), color:'text-blue-400', icon:'sports_esports'},
       {label:'Total Rounds', val: totalRounds.toLocaleString(), color:'text-blue-400', icon:'casino'},
+      {label:'Days Since New Rules Launch', val: daysSinceNewRules.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
       {label:'Days Since Launch', val: daysSinceLaunch.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
       {label:'Total Paid Out', val:'$'+totalPot.toLocaleString(), color:'text-green-400', icon:'payments'},
       {label:'Total Winners', val: totalWinners.toLocaleString(), color:'text-yellow-400', icon:'emoji_events'},
