@@ -1488,6 +1488,8 @@ class App {
     // ---- Host Comparison Table ----
     const hostMap = {};
     games.forEach(g => {
+      // Exclude cancelled/unplayed games (note and zero clues)
+      if (g.note && g.clues.length === 0) return;
       const h = g.host || 'Unknown';
       if (!hostMap[h]) hostMap[h] = {games:0,winners:0,pot:0,clues:[]};
       hostMap[h].games++;
