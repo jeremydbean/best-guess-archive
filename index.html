@@ -381,43 +381,48 @@
       <p class="text-sm text-slate-400">Paste the JSON array from your Gemini pipeline below. One or two game objects per episode are fine. New games will be prepended to <code class="bg-slate-800 px-1 rounded text-xs">data/games.json</code> and committed to GitHub. The site rebuilds in ~30 seconds.</p>
 
       <!-- Schema reference -->
-      <details class="text-xs text-slate-500 cursor-pointer">
-        <summary class="hover:text-slate-300 transition select-none">▶ Show expected JSON schema (copy this prompt for Gemini)</summary>
+      <details class="text-xs text-slate-500 cursor-pointer group">
+        <summary class="hover:text-slate-300 transition select-none flex items-center justify-between">
+          <span>▶ Show Gemini Transcript Prompt</span>
+          <button class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-1 px-3 border border-slate-600 rounded text-[10px] uppercase shadow-sm group-open:flex hidden" onclick="app.copyGeminiPrompt(event)">Copy Prompt</button>
+        </summary>
         <div class="mt-3 bg-slate-900/70 rounded-lg p-4 border border-slate-700 space-y-3">
-          <p class="text-slate-300 text-xs">Tell Gemini: <em>"Parse this Best Guess Live transcript and return a JSON array matching this schema exactly:"</em></p>
-          <pre class="overflow-x-auto text-slate-300 text-[11px] leading-relaxed">[
-  {
-    "date": "Monday, April 14, 2026",
-    "pot": 7500,
-    "format": "v2",
-    "host": "Hunter March",
-    "secretItem": "EXAMPLE ITEM",
-    "clues": [
-      { "text": "CLUE TEXT", "correct": "5", "guesses": "6,000", "explanation": "Host explanation here." },
-      { "text": "CLUE TEXT", "correct": "10", "guesses": "5,000", "explanation": "Host explanation here." },
-      { "text": "CLUE TEXT", "correct": "50", "guesses": "4,000", "explanation": "Host explanation here." },
-      { "text": "CLUE TEXT", "correct": "100", "guesses": "3,000", "explanation": "Host explanation here." },
-      { "text": "CLUE TEXT", "correct": "1000", "guesses": "2,000", "explanation": "Host explanation here." }
-    ],
-    "goldClue": 1,
-    "silverClue": 2,
-    "bronzeClue": 3,
-    "goldWinners": 5,
-    "silverWinners": 10,
-    "bronzeWinners": 50,
-    "totalWinners": 65,
-    "goldPayout": 600.00,
-    "silverPayout": 250.00,
-    "bronzePayout": 40.00,
-    "winnerPayout": "$7,500.00",
-    "winnerNames": "Winner One, Winner Two",
-    "wrongGuesses": "wrong guess 1, wrong guess 2"
-  }
-]
+          <p class="text-slate-300 text-xs">Copy this entire prompt and paste it into Gemini along with the YouTube transcript:</p>
+          <pre id="gemini-prompt-text" class="overflow-x-auto text-slate-300 text-[11px] leading-relaxed">Parse this Best Guess Live transcript and return a JSON object (or array of objects if there are multiple episodes) matching this exact schema:
 
-NOTE: Use format "v1" for older episodes with a single winning clue.
-For v1, set goldClue to the winning clue number; set silverClue/bronzeClue/goldWinners/silverWinners/bronzeWinners to 0.
-pot is 5000 for round 1 and 10000 for round 2 in v1 episodes.</pre>
+{
+  "date": "Monday, April 14, 2026",
+  "pot": 7500,
+  "format": "v2",
+  "host": "Hunter March",
+  "secretItem": "EXAMPLE ITEM",
+  "clues": [
+    { "text": "THE CLUE TEXT", "correct": "5", "guesses": "6,000", "explanation": "Host explanation here." },
+    { "text": "THE CLUE TEXT", "correct": "10", "guesses": "5,000", "explanation": "Host explanation here." },
+    { "text": "THE CLUE TEXT", "correct": "50", "guesses": "4,000", "explanation": "Host explanation here." },
+    { "text": "THE CLUE TEXT", "correct": "100", "guesses": "3,000", "explanation": "Host explanation here." },
+    { "text": "THE CLUE TEXT", "correct": "1000", "guesses": "2,000", "explanation": "Host explanation here." }
+  ],
+  "goldClue": 1,
+  "silverClue": 2,
+  "bronzeClue": 3,
+  "goldWinners": 5,
+  "silverWinners": 10,
+  "bronzeWinners": 50,
+  "totalWinners": 65,
+  "goldPayout": 600.00,
+  "silverPayout": 250.00,
+  "bronzePayout": 40.00,
+  "winnerPayout": "$7,500.00",
+  "winnerNames": "Winner One, Winner Two",
+  "wrongGuesses": "wrong guess 1, wrong guess 2"
+}
+
+FORMATTING RULES:
+1. "format" is "v2" for the 3-medal games, or "v1" for classic.
+2. In "v1" classic format, set "goldClue" to the clue number that won, and set silverClue, bronzeClue, goldWinners, silverWinners, and bronzeWinners to 0.
+3. Pot is typically 5000 for game 1, and 10000 for game 2.
+4. Provide only pure valid JSON, do not include markdown blocks.</pre>
         </div>
       </details>
 
@@ -1212,17 +1217,43 @@ class App {
       <div class="glass-panel p-4 rounded-lg border ${g.format==='v2'?'border-yellow-600/30':'border-slate-700'}">
         <div class="flex justify-between items-start gap-4">
           <div>
-            <span class="text-xs ${g.format==='v2'?'text-yellow-400 bg-yellow-900/30':'text-slate-400 bg-slate-800'} px-2 py-0.5 rounded font-bold uppercase">${g.format==='v2'?'New Format':'Classic Format'} · ${g.date}</span>
-            <div class="text-xl font-bold text-white mt-1">${g.secretItem}</div>
-            <div class="text-sm text-slate-400 mt-1">Host: ${g.host||'?'} · Pot: $${(g.pot||0).toLocaleString()}</div>
+            <span class="text-[10px] ${g.format==='v2'?'text-yellow-400 bg-yellow-900/30':'text-slate-400 bg-slate-800'} px-2 py-0.5 rounded font-bold uppercase">${g.format==='v2'?'V2 FORMAT':'V1 FORMAT'} · ${g.date}</span>
+            <div class="text-xl font-bold font-display text-white mt-1">${g.secretItem}</div>
+            <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">Host: ${g.host||'?'} <span class="mx-2 opacity-30">|</span> Pot: $${(g.pot||0).toLocaleString()}</div>
           </div>
-          <div class="text-xs text-slate-500 shrink-0 text-right">
-            ${g.format==='v2' ? `🥇C${g.goldClue} 🥈C${g.silverClue} 🥉C${g.bronzeClue}` : `Clue ${g.goldClue}`}
+          <div class="text-xs text-slate-300 bg-slate-900 px-3 py-2 rounded-lg border border-slate-700 shrink-0 text-right">
+            ${g.format==='v2' ? 
+              `<div class="flex gap-3 font-bold">
+                 <div class="flex flex-col items-center"><span class="text-[10px] text-slate-500 uppercase">1st (C${g.goldClue})</span><span class="text-yellow-500">${g.goldWinners} WIN</span></div>
+                 <div class="flex flex-col items-center border-l border-slate-700 pl-3"><span class="text-[10px] text-slate-500 uppercase">2nd (C${g.silverClue})</span><span class="text-slate-300">${g.silverWinners} WIN</span></div>
+                 <div class="flex flex-col items-center border-l border-slate-700 pl-3"><span class="text-[10px] text-slate-500 uppercase">3rd (C${g.bronzeClue})</span><span class="text-orange-400">${g.bronzeWinners} WIN</span></div>
+               </div>` : 
+              `<div class="font-bold flex flex-col items-center"><span class="text-[10px] text-slate-500 uppercase">WINNING CLUE:</span><span class="text-white text-lg">C${g.goldClue}</span></div>`}
           </div>
         </div>
-        <div class="mt-2 text-xs text-slate-500 flex flex-wrap gap-2">${g.clues.map((c,i)=>`<span class="bg-slate-800 px-2 py-0.5 rounded">C${i+1}: ${c.text.slice(0,28)}${c.text.length>28?'…':''}</span>`).join('')}</div>
+        <div class="mt-3 text-[10px] text-slate-400 flex flex-col gap-1.5 divide-y divide-slate-800/50 border border-slate-800 rounded p-2 bg-slate-900/30">
+          ${g.clues.map((c,i)=>`<div class="pt-1.5 first:pt-0"><b class="text-slate-300">C${i+1}:</b> ${c.text} <span class="opacity-50 mx-1">/</span> ${c.correct} correct <span class="opacity-50 mx-1">/</span> ${c.guesses} total</div>`).join('')}
+        </div>
       </div>`).join('');
     btn.disabled = false;
+  }
+
+  copyGeminiPrompt(e) {
+    if (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+    const txt = document.getElementById('gemini-prompt-text').innerText;
+    navigator.clipboard.writeText(txt).then(() => {
+      const btn = e.target;
+      const old = btn.innerText;
+      btn.innerText = 'Copied!';
+      btn.classList.add('bg-green-700', 'border-green-600');
+      setTimeout(() => {
+        btn.innerText = old;
+        btn.classList.remove('bg-green-700', 'border-green-600');
+      }, 2000);
+    }).catch(console.error);
   }
 
   async publishImport() {
