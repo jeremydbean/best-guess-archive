@@ -1242,22 +1242,21 @@ class App {
       if (!getRes.ok) throw new Error(`GitHub GET failed (${getRes.status}). Check your PAT and repo settings.`);
       const fileData = await getRes.json();
 
-      // 2. Decode, deduplicate, merge
+      // 2. Decode, overwrite existing, merge
       const existing = JSON.parse(atob(fileData.content.replace(/\n/g, '')));
-      const existingKeys = new Set(existing.map(g => g.date + '||' + g.secretItem));
-      const newGames = this._pendingGames.filter(g => !existingKeys.has(g.date + '||' + g.secretItem));
-      if (!newGames.length) throw new Error('All games in this batch already exist in the archive (duplicate check passed — nothing to add).');
+      const pendingKeys = new Set(this._pendingGames.map(g => g.date + '||' + g.secretItem));
+      const filteredExisting = existing.filter(g => !pendingKeys.has(g.date + '||' + g.secretItem));
 
       // 3. Prepend and commit
-      const merged  = [...newGames, ...existing];
+      const merged  = [...this._pendingGames, ...filteredExisting];
       const content = btoa(unescape(encodeURIComponent(JSON.stringify(merged, null, 2))));
 
-      status.innerText = `Committing ${newGames.length} new game${newGames.length>1?'s':''}...`;
+      status.innerText = `Committing ${this._pendingGames.length} game${this._pendingGames.length>1?'s':''} (overwriting duplicates if any)...`;
       const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/games.json`, {
         method: 'PUT',
         headers: { Authorization: `token ${pat}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          message: `Add ${newGames.length} game${newGames.length>1?'s':''}: ${newGames.map(g=>g.secretItem).join(', ')}`,
+          message: `Import ${this._pendingGames.length} game${this._pendingGames.length>1?'s':''}: ${this._pendingGames.map(g=>g.secretItem).join(', ')}`,
           content,
           sha: fileData.sha
         })
@@ -1265,6 +1264,7 @@ class App {
       if (!putRes.ok) throw new Error(`GitHub commit failed (${putRes.status}): ${await putRes.text()}`);
 
       // 4. Update local state
+      const publishedCount = this._pendingGames.length;
       this.games = merged;
       this._pendingGames = null;
       document.getElementById('import-json').value = '';
@@ -1273,7 +1273,7 @@ class App {
       btn.innerText = 'Publish to GitHub';
 
       status.className = 'text-sm font-medium px-4 py-2 rounded bg-green-900/20 text-green-400';
-      status.innerText = `✓ ${newGames.length} game${newGames.length>1?'s':''} published! GitHub Pages will rebuild in ~30 seconds.`;
+      status.innerText = `✓ ${publishedCount} game${publishedCount > 1 ? 's' : ''} published! GitHub Pages will rebuild in ~30 seconds.`;
     } catch (e) {
       status.className = 'text-sm font-medium px-4 py-2 rounded bg-red-900/20 text-red-400';
       status.innerText = `Error: ${e.message}`;
