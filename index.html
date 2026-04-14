@@ -1442,8 +1442,8 @@ class App {
         <td class="px-2 py-1 text-center align-top"><span class="font-mono text-blue-300">${totalPlayers.toLocaleString()}</span></td>
         <td class="px-2 py-1 align-top">${winnersHtml}</td>
         <td class="px-2 py-1 align-top">${payoutsHtml}</td>
-        <td class="px-2 py-1 text-slate-400 whitespace-nowrap align-top">${g.host || '—'}</td>
-        <td class="px-2 py-1 text-right align-top">
+        <td class="px-1 py-1 text-slate-400 align-top" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${g.host || '—'}</td>
+        <td class="px-1 py-1 text-right align-top">
           <button onclick="app.showDetails('${g.date.replace(/'/g,"\\'")}', '${g.secretItem.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}")" class="text-blue-400 hover:text-blue-300" title="View details" style="padding:0 2px;">
             <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
           </button>
