@@ -400,14 +400,30 @@
         <tbody class="divide-y divide-slate-700/50" id="db-table-body"></tbody>
       </table>
       <style>
-        .db-table th, .db-table td {
+        .db-table th {
+          padding: 12px 18px;
+          vertical-align: middle;
+          white-space: nowrap;
+        }
+        .db-table td {
           padding: 12px 18px;
           vertical-align: middle;
           white-space: normal;
           word-break: break-word;
         }
-        /* Date column never wraps and expands as needed */
-        .db-table td:first-child, .db-table th:first-child {
+        /* Never wrap for Date, Pot, Winning Clue, Total Players, Winners, Details columns */
+        .db-table td:first-child,
+        .db-table th:first-child,
+        .db-table td:nth-child(3),
+        .db-table th:nth-child(3),
+        .db-table td:nth-child(9),
+        .db-table th:nth-child(9),
+        .db-table td:nth-child(10),
+        .db-table th:nth-child(10),
+        .db-table td:nth-child(11),
+        .db-table th:nth-child(11),
+        .db-table td:last-child,
+        .db-table th:last-child {
           white-space: nowrap;
           word-break: normal;
         }
