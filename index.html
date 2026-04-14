@@ -449,6 +449,25 @@ FORMATTING RULES:
       <!-- Status -->
       <div id="import-status" class="hidden text-sm font-medium px-4 py-2 rounded"></div>
     </div>
+    
+    <!-- Manage Archive -->
+    <div class="glass-panel p-6 rounded-xl space-y-4">
+      <h3 class="font-bold text-white flex items-center gap-2">
+        <span class="material-symbols-outlined text-red-500">delete</span> Delete by Date
+      </h3>
+      <p class="text-sm text-slate-400">Remove all games matching a specific date from the archive. Use this to clean up bad imports before re-importing.</p>
+      
+      <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+        <select id="delete-date-select" class="w-full sm:w-64 bg-slate-800 border border-slate-700 rounded px-3 py-2 text-white text-sm focus:outline-none focus:border-red-500">
+          <option value="">Loading dates...</option>
+        </select>
+        <button class="bg-red-700 hover:bg-red-600 text-white font-bold px-4 py-2 rounded text-sm shrink-0" onclick="app.deleteDate()">
+          Delete Selected Date
+        </button>
+      </div>
+      <!-- Delete Status -->
+      <div id="delete-status" class="hidden text-sm font-medium px-4 py-2 rounded"></div>
+    </div>
 
     <!-- Tip Jar Links -->
     <div class="glass-panel p-6 rounded-xl space-y-4 border-t-2 border-pink-500/40">
@@ -1078,7 +1097,100 @@ class App {
       const tc = document.getElementById('tip-cashapp-url');   if (tc) tc.value = localStorage.getItem('tip_cashapp')       || 'https://cash.app/$JeremyBean';
       const tp = document.getElementById('tip-paypal-url');    if (tp) tp.value = localStorage.getItem('tip_paypal')        || 'https://paypal.me/KindaCharming';
       const gi = document.getElementById('ga-measurement-id'); if (gi) gi.value = localStorage.getItem('ga_measurement_id') || 'G-YYGK3MHH26';
+      this.populateDeleteDates();
     }, 50);
+  }
+
+  populateDeleteDates() {
+    const sel = document.getElementById('delete-date-select');
+    if (!sel) return;
+    
+    // Get unique dates
+    const dates = [...new Set(this.games.map(g => g.date))].sort((a,b) => new Date(b) - new Date(a));
+    
+    if (dates.length === 0) {
+      sel.innerHTML = '<option value="">No games found</option>';
+      return;
+    }
+    
+    sel.innerHTML = '<option value="">Select a date to delete...</option>' + 
+      dates.map(d => {
+        const gamesOnDate = this.games.filter(g => g.date === d);
+        return `<option value="${d}">${d} (${gamesOnDate.length} game${gamesOnDate.length>1?'s':''})</option>`;
+      }).join('');
+  }
+
+  async deleteDate() {
+    const dateToDelete = document.getElementById('delete-date-select').value;
+    const status = document.getElementById('delete-status');
+    const owner = localStorage.getItem('gh_owner');
+    const repo  = localStorage.getItem('gh_repo');
+    const pat   = localStorage.getItem('gh_pat');
+    
+    if (!dateToDelete) {
+      status.className = 'text-sm font-medium px-4 py-2 rounded bg-red-900/20 text-red-400 mt-2';
+      status.innerText = 'Please select a date first.';
+      status.classList.remove('hidden');
+      return;
+    }
+    
+    if (!owner || !repo || !pat) {
+      status.className = 'text-sm font-medium px-4 py-2 rounded bg-red-900/20 text-red-400 mt-2';
+      status.innerText = 'Save your GitHub settings first.';
+      status.classList.remove('hidden');
+      return;
+    }
+    
+    if (!confirm(`Are you sure you want to delete all games from ${dateToDelete}? This action will directly commit to GitHub.`)) {
+      return;
+    }
+    
+    status.className = 'text-sm font-medium px-4 py-2 rounded bg-blue-900/20 text-blue-400 mt-2';
+    status.innerText = `Fetching current data for ${dateToDelete}...`;
+    status.classList.remove('hidden');
+    
+    try {
+      // 1. Get current file + SHA
+      const getRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/games.json`, {
+        headers: { Authorization: `token ${pat}`, Accept: 'application/vnd.github.v3+json' }
+      });
+      if (!getRes.ok) throw new Error(`GitHub GET failed (${getRes.status}).`);
+      const fileData = await getRes.json();
+
+      // 2. Decode and filter out the selected date
+      const existing = JSON.parse(atob(fileData.content.replace(/\n/g, '')));
+      const gamesToKeep = existing.filter(g => g.date !== dateToDelete);
+      const deletedCount = existing.length - gamesToKeep.length;
+      
+      if (deletedCount === 0) {
+        throw new Error(`No games found matching date ${dateToDelete} in the remote file.`);
+      }
+
+      // 3. Commit the updated array
+      const content = btoa(unescape(encodeURIComponent(JSON.stringify(gamesToKeep, null, 2))));
+      
+      status.innerText = `Committing deletion of ${deletedCount} game${deletedCount>1?'s':''} from ${dateToDelete}...`;
+      const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/games.json`, {
+        method: 'PUT',
+        headers: { Authorization: `token ${pat}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: `Delete ${deletedCount} game${deletedCount>1?'s':''} from ${dateToDelete}`,
+          content,
+          sha: fileData.sha
+        })
+      });
+      if (!putRes.ok) throw new Error(`GitHub commit failed (${putRes.status}): ${await putRes.text()}`);
+
+      // 4. Update local state
+      this.games = gamesToKeep;
+      this.populateDeleteDates();
+      
+      status.className = 'text-sm font-medium px-4 py-2 rounded bg-green-900/20 text-green-400 mt-2';
+      status.innerText = `✓ Successfully deleted ${deletedCount} game${deletedCount>1?'s':''} from ${dateToDelete}. GitHub Pages will rebuild in ~30 seconds.`;
+    } catch (e) {
+      status.className = 'text-sm font-medium px-4 py-2 rounded bg-red-900/20 text-red-400 mt-2';
+      status.innerText = `Error: ${e.message}`;
+    }
   }
 
   saveTipLinks() {
