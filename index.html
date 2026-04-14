@@ -1156,9 +1156,9 @@ class App {
         const correct = parseN(clue.correct);
         const guesses = parseN(clue.guesses);
         const pct = guesses > 0 ? ((correct / guesses) * 100).toFixed(1) : '0.0';
-        // For classic games (not v2), do NOT show medal emoji on the winning clue, just the highlight and star
+        // For classic games (not v2), highlight only the clue text for the winning clue, no star or gold coloring on the clue number column
         return `<td class="px-4 py-3 align-top" style="min-width:200px">
-          <div class="font-medium ${isWinning && !isV2 ? 'text-yellow-300 bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm' : 'text-slate-200'} leading-snug">${clue.text}${isWinning && !isV2 ? ' <span class=\"font-bold text-yellow-400 ml-1\">★</span>' : ''}</div>
+          <div class="font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${clue.text}</div>
           <div class="text-xs font-mono mt-1"><span class="text-green-500">${correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${guesses.toLocaleString()}</span><span class="text-slate-600"> (${pct}%)</span>${(isV2 && medal) ? `<span class=\"ml-1 text-sm\">${medal}</span>` : ''}</div>
         </td>`;
       }).join('');
@@ -1200,7 +1200,7 @@ class App {
         </td>
         <td class="px-4 py-3 text-green-400 font-mono whitespace-nowrap align-top">$${g.pot.toLocaleString()}</td>
         ${clueCells}
-        <td class="px-4 py-3 text-center font-bold ${!isV2 ? 'text-yellow-400' : 'text-slate-400'} align-top">${winningClueNum || ''}${!isV2 && winningClueNum ? ' <span class=\"text-yellow-400\">★</span>' : ''}</td>
+        <td class="px-4 py-3 text-center font-bold ${!isV2 ? 'text-yellow-400' : 'text-slate-400'} align-top">${winningClueNum || ''}</td>
         <td class="px-4 py-3 text-center align-top"><span class="font-mono text-blue-300">${totalPlayers.toLocaleString()}</span></td>
         <td class="px-4 py-3 align-top">${winnersHtml}</td>
         <td class="px-4 py-3 align-top">${payoutsHtml}</td>
