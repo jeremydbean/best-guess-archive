@@ -52,7 +52,8 @@
         <!-- <button class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition" onclick="app.setView('archive')">Archive</button> -->
         <button class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition" onclick="app.setView('stats')">Stats</button>
         <a href="https://docs.google.com/document/d/1B0zI_zQSs3KjPKeih-MvGMOYWe5llT1EW-ZBK0gvGdQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition text-blue-400 font-bold">Transcripts</a>
-        <a href="https://discord.com/invite/pNv8G2Kjew" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition flex items-center group text-indigo-400 font-bold" title="Discord">Discord</a>
+          <a href="https://www.reddit.com/r/BestGuessLive/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition flex items-center group text-orange-400 font-bold" title="Reddit">Reddit</a>
+          <a href="https://discord.com/invite/pNv8G2Kjew" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition flex items-center group text-indigo-400 font-bold" title="Discord">Discord</a>
         <button class="ml-2 flex items-center gap-1.5 bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-500 hover:to-rose-400 text-white text-xs font-bold px-3 py-1.5 rounded-full transition shadow-lg shadow-pink-900/30" onclick="app.openTipJar()">
           <span class="material-symbols-outlined" style="font-size:14px;line-height:1">volunteer_activism</span> TIP JAR
         </button>
@@ -110,11 +111,11 @@
 <template id="view-home">
 <div class="flex flex-col items-center justify-center space-y-12 fade-in py-10">
   <div class="text-center space-y-6 max-w-3xl">
-    <div class="relative inline-block group cursor-pointer" onclick="app.startRandomGame()">
+    <div class="relative inline-block group cursor-pointer" onclick="app.setView('database')">
       <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-blue-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
       <img src="bestguessarchive.png" alt="Best Guess Logo" class="relative w-48 h-48 mx-auto rounded-full border-4 border-slate-800 shadow-2xl hover:scale-105 transition transform duration-300 object-cover">
     </div>
-    <h1 class="text-5xl md:text-7xl font-display font-bold tracking-tight">
+    <h1 class="text-5xl md:text-7xl font-display font-bold tracking-tight cursor-pointer" onclick="app.setView('database')">
       <span class="text-white">THE COMPLETE</span><br>
       <span class="gold-gradient-text">ARCHIVE</span>
     </h1>
