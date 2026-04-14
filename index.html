@@ -1199,10 +1199,15 @@ class App {
 
     const errors = [];
     parsed.forEach((g, i) => {
-      ['date','secretItem','clues','goldClue'].forEach(k => {
+      ['date','format','host','pot','secretItem','clues','goldClue','totalWinners','winnerPayout','winnerNames','wrongGuesses'].forEach(k => {
         if (g[k] === undefined || g[k] === null || g[k] === '') errors.push(`Game ${i+1}: missing "${k}"`);
       });
       if (g.clues && g.clues.length !== 5) errors.push(`Game ${i+1}: clues array must have exactly 5 items (found ${g.clues?.length})`);
+      if (g.format === 'v2') {
+        ['silverClue','bronzeClue','goldWinners','silverWinners','bronzeWinners','goldPayout','silverPayout','bronzePayout'].forEach(k => {
+          if (g[k] === undefined || g[k] === null || g[k] === '') errors.push(`Game ${i+1} (v2 format): missing "${k}"`);
+        });
+      }
     });
 
     if (errors.length) {
