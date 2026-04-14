@@ -1488,10 +1488,25 @@ class App {
         <td class="px-2 py-1 align-top">${payoutsHtml}</td>
         <td class="px-1 py-1 text-slate-400 align-top" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px;">${(g.host || '—')}</td>
         <td class="px-1 py-1 text-right align-top">
-          <button onclick="app.showDetails('${g.date.replace(/'/g,"\\'")}', '${g.secretItem.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}")" class="text-blue-400 hover:text-blue-300" title="View details" style="padding:0 2px;">
+          <button class="text-blue-400 hover:text-blue-300 details-btn" title="View details" style="padding:0 2px;"
+            data-date="${g.date.replace(/&/g,'&amp;').replace(/"/g,'&quot;')}"
+            data-item="${g.secretItem.replace(/&/g,'&amp;').replace(/"/g,'&quot;')}">
             <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
           </button>
         </td>
+        // Add event delegation for Details button clicks
+        _setupDetailsDelegation() {
+          const tableBody = document.getElementById('db-table-body');
+          if (!tableBody) return;
+          tableBody.addEventListener('click', (e) => {
+            const btn = e.target.closest('.details-btn');
+            if (btn) {
+              const date = btn.getAttribute('data-date');
+              const item = btn.getAttribute('data-item');
+              this.showDetails(date, item);
+            }
+          });
+        }
       </tr>`;
     }).join('');
     // After rendering, set up zoom controls
@@ -1539,6 +1554,12 @@ class App {
   }
 
   filterDatabase() { this.renderDatabase(); }
+  // After rendering the table, always re-setup event delegation
+  renderDatabase() {
+    // ...existing code...
+    this._setupDatabaseZoom();
+    this._setupDetailsDelegation();
+  }
 
   sortDatabase(key) {
     if (!this._sortDir) this._sortDir = {};
