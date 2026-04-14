@@ -1877,6 +1877,36 @@ class App {
         <div class="text-xs text-slate-400 mb-2">${r.sub}</div>
       </div>`
     ).join('');
+
+    // ---- Hardest Games (won on Clue 5, lowest % correct) ----
+    const hardestGames = games
+      .filter(g => {
+        const winClue = Number(g.winningClue || g.goldClue);
+        return winClue === 5 && (g.totalWinners || g.winnerCount || 0) > 0;
+      })
+      .map(g => {
+        const totalGuesses = g.clues.reduce((a, c) => a + parseNum(c.guesses), 0);
+        const totalCorrect = g.clues.reduce((a, c) => a + parseNum(c.correct), 0);
+        const pct = totalGuesses > 0 ? totalCorrect / totalGuesses : 1;
+        return { g, pct };
+      })
+      .sort((a, b) => a.pct - b.pct)
+      .slice(0, 5);
+    document.getElementById('stats-hardest-list').innerHTML = hardestGames.map(({ g, pct }) => {
+      const w = g.totalWinners || g.winnerCount || 0;
+      return `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0">
+        <div>
+          <div class="font-bold text-white">${g.secretItem}</div>
+          <div class="text-xs text-slate-500">${g.date}</div>
+        </div>
+        <div class="text-right shrink-0 ml-4">
+          <div class="text-red-400 font-bold text-sm bg-red-900/20 px-2 py-1 rounded">${(pct * 100).toFixed(2)}%</div>
+          <div class="text-xs text-slate-500 mt-1">${w.toLocaleString()} winner${w === 1 ? '' : 's'}</div>
+        </div>
+      </li>`;
+    }).join('');
+
+    // Easiest, Fewest, Biggest Pots
     const easiest = [...games].sort((a,b)=>(b.totalWinners||b.winnerCount||0)-(a.totalWinners||a.winnerCount||0)).slice(0,5);
     document.getElementById('stats-easiest-list').innerHTML = easiest.map(g => {
       const w=g.totalWinners||g.winnerCount||0;
