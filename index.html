@@ -1284,7 +1284,8 @@ class App {
 
   // ==================== STATS ====================
   renderStats() {
-    const games = this.games;
+    // Exclude cancelled/unplayed games (note && clues.length === 0)
+    const games = this.games.filter(g => !(g.note && g.clues.length === 0));
     // Unique days
     const uniqueDates = [...new Set(games.map(g => g.date))];
     const totalGames = uniqueDates.length;
@@ -1376,6 +1377,9 @@ class App {
       // For v2 games, use gold/silver/bronzeWinners for their respective clues; for v1, use totalWinners/winnerCount for winningClue
       const wcWinnersMap = {1:[],2:[],3:[],4:[],5:[]};
       games.forEach(g => {
+          // Already filtered above
+          // Already filtered above
+          // Already filtered above
         if (g.format === 'v2') {
           if (g.goldClue && g.goldWinners != null) wcWinnersMap[Number(g.goldClue)].push(Number(g.goldWinners));
           if (g.silverClue && g.silverWinners != null) wcWinnersMap[Number(g.silverClue)].push(Number(g.silverWinners));
