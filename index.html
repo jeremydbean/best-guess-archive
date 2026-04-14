@@ -290,7 +290,7 @@
       margin: 0 auto;
     }
     .db-table {
-      min-width: 1200px;
+      min-width: 1400px;
       width: 100%;
       max-width: none;
     }
@@ -406,12 +406,10 @@
           white-space: normal;
           word-break: break-word;
         }
-        /* Prevent one-letter-per-line for the Date column */
+        /* Date column never wraps and expands as needed */
         .db-table td:first-child, .db-table th:first-child {
-          min-width: 160px;
-          max-width: 260px;
-          white-space: normal;
-          word-break: break-word;
+          white-space: nowrap;
+          word-break: normal;
         }
       </style>
     </div>
