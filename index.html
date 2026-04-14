@@ -128,15 +128,28 @@
         <div class="text-3xl font-bold text-yellow-400 font-display" id="total-winners-display">...</div>
       </div>
     </div>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-      <button class="btn-primary px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-2 group" onclick="app.startRandomGame()">
-        <span class="material-symbols-outlined group-hover:rotate-12 transition">play_circle</span>
-        PLAY RANDOM GAME
-      </button>
-      <button class="glass-panel px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition flex items-center justify-center gap-2" onclick="app.setView('database')">
-        <span class="material-symbols-outlined">database</span>
-        BROWSE DATABASE
-      </button>
+    <div class="flex flex-col gap-4 justify-center mt-10">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="btn-primary px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-2 group" onclick="app.startRandomGame()">
+          <span class="material-symbols-outlined group-hover:rotate-12 transition">play_circle</span>
+          PLAY RANDOM GAME
+        </button>
+        <button class="glass-panel px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition flex items-center justify-center gap-2" onclick="app.setView('database')">
+          <span class="material-symbols-outlined">database</span>
+          BROWSE DATABASE
+        </button>
+      </div>
+      <!-- Timer Select -->
+      <div class="flex items-center justify-center gap-3 text-sm text-slate-400 mt-2 fade-in">
+        <span class="material-symbols-outlined text-[#FFA300] text-[18px]">timer</span>
+        <label for="clue-duration-select">Clue Display Time:</label>
+        <select id="clue-duration-select" class="bg-slate-800 border border-slate-600 focus:border-blue-500 text-white rounded px-2 py-1 outline-none transition" onchange="localStorage.setItem('clue_time', this.value)">
+          <option value="20">20 Seconds (Real Game)</option>
+          <option value="30">30 Seconds</option>
+          <option value="45">45 Seconds</option>
+          <option value="60">60 Seconds</option>
+        </select>
+      </div>
     </div>
 
     <!-- Tip Jar -->
@@ -564,7 +577,12 @@ class App {
       container.style.overflow = '';
     }
     window.scrollTo(0, 0);
-    if (name === 'home')     { this.renderHomeStats(); this._applyTipLinks(); }
+    if (name === 'home') {
+      this.renderHomeStats(); 
+      this._applyTipLinks();
+      const durSel = document.getElementById('clue-duration-select');
+      if (durSel) durSel.value = localStorage.getItem('clue_time') || '20';
+    }
     if (name === 'database') this.renderDatabase();
     if (name === 'stats')    this.renderStats();
     if (name === 'admin')    this.initAdmin();
@@ -637,8 +655,14 @@ class App {
   }
 
   // ==================== PLAY ====================
+  clearTimers() {
+    if (this._clueTimeout) clearTimeout(this._clueTimeout);
+    if (this._clueInterval) clearInterval(this._clueInterval);
+    if (this._delayTimeout) clearTimeout(this._delayTimeout);
+  }
+
   startRandomGame() {
-    if (this.timer) clearTimeout(this.timer);
+    this.clearTimers();
     this.setView('play');
     const idx = Math.floor(Math.random() * this.games.length);
     this.currentGame = this.games[idx];
@@ -665,11 +689,12 @@ class App {
   }
 
   exitGame() {
-    if (this.timer) clearTimeout(this.timer);
+    this.clearTimers();
     this.setView('home');
   }
 
   renderGameLoop() {
+    this.clearTimers();
     const g = this.currentGame;
     const ci = this.currentClueIndex;
 
@@ -687,39 +712,45 @@ class App {
       pastEl.scrollTop = pastEl.scrollHeight;
     }
 
+    const durOpt = localStorage.getItem('clue_time') || '20';
+    const clueSecs = parseInt(durOpt, 10);
+
     // Active clue card — takes the remaining space
     const activeEl = document.getElementById('active-clue-area');
     if (!activeEl) return;
 
     activeEl.innerHTML = `
-      <div class="w-full bg-slate-800 rounded-2xl border-2 border-blue-500 shadow-2xl overflow-hidden clue-stack-enter">
-        <div class="px-5 pt-5 pb-4">
-          <div class="flex justify-between items-center mb-4">
-            <span class="text-xs font-bold text-blue-400 bg-blue-900/30 px-2 py-1 rounded">CLUE ${ci+1} of 5</span>
-            <span class="text-xs font-mono text-white/40" id="timer-text-${ci}"></span>
+      <div class="w-full bg-slate-800 rounded-2xl border border-slate-700 shadow-[0_0_20px_rgba(0,0,0,0.5)] overflow-hidden clue-stack-enter relative">
+        <div class="px-3 pt-4 pb-5 md:px-6 md:pt-6 md:pb-6">
+          <div class="flex justify-between items-center mb-5">
+            <span class="text-xs font-bold text-blue-400 bg-blue-900/30 px-3 py-1 bg-opacity-50 rounded-full border border-blue-500/30 shadow-sm tracking-wider">CLUE ${ci+1} of 5</span>
+            <span class="text-xs font-bold font-mono text-slate-300 bg-slate-900/50 px-2 py-1 rounded" id="timer-text-${ci}"></span>
           </div>
-          <div id="loading-state-${ci}" class="flex flex-col items-center justify-center py-8 gap-3">
-            <div class="w-6 h-6 border-2 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
-            <span class="text-blue-400 font-display tracking-widest text-sm animate-pulse">INCOMING TRANSMISSION...</span>
+          <div id="loading-state-${ci}" class="flex flex-col items-center justify-center py-10 md:py-16 gap-3">
+            <div class="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin shadow-lg"></div>
+            <span class="text-blue-500 font-display tracking-widest text-sm md:text-base animate-pulse uppercase">Incoming...</span>
           </div>
-          <div id="text-state-${ci}" class="hidden py-2">
-            <h2 class="text-2xl md:text-3xl font-bold text-white leading-tight text-center">${g.clues[ci].text}</h2>
+          <div id="text-state-${ci}" class="hidden py-4 w-full">
+            <div class="bg-gradient-to-br from-[#001D4A] via-[#003087] to-[#001D4A] border-[3px] border-[#FFA300] rounded-xl shadow-2xl px-5 py-10 md:p-12 w-full flex items-center justify-center min-h-[160px] relative overflow-hidden">
+              <div class="absolute inset-0 bg-[#0047AB] opacity-30 mix-blend-screen blur-xl"></div>
+              <h2 class="text-3xl md:text-5xl font-extrabold text-white font-display uppercase tracking-widest text-center relative z-10" style="text-shadow: 2px 3px 0px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; line-height: 1.3;">
+                ${g.clues[ci].text}
+              </h2>
+            </div>
           </div>
         </div>
-        <div class="h-1.5 w-full bg-slate-700">
-          <div id="timer-bar-${ci}" class="h-full bg-blue-500 w-full"></div>
+        <div class="h-2 w-full bg-slate-900 absolute bottom-0 left-0">
+          <div id="timer-bar-${ci}" class="h-full bg-yellow-400 w-full shadow-[0_0_10px_rgba(250,204,21,0.8)]"></div>
         </div>
       </div>`;
 
-    this.timer = setTimeout(() => {
+    this._clueTimeout = setTimeout(() => {
       const loading = document.getElementById(`loading-state-${ci}`);
       const text = document.getElementById(`text-state-${ci}`);
       if (loading) loading.classList.add('hidden');
       if (text) text.classList.remove('hidden');
-      const wordCount = g.clues[ci].text.split(/\s+/).length;
-      const secs = Math.max(10, Math.min(30, Math.ceil(8 + wordCount * 0.8)));
       this.runClueTimer(
-        secs,
+        clueSecs,
         document.getElementById(`timer-bar-${ci}`),
         document.getElementById(`timer-text-${ci}`)
       );
@@ -727,6 +758,7 @@ class App {
   }
 
   runClueTimer(seconds, barEl, textEl) {
+    if (!barEl) return;
     barEl.style.transition = 'none';
     barEl.style.width = '100%';
     barEl.classList.add('timer-bar');
@@ -736,20 +768,27 @@ class App {
 
     let remaining = seconds;
     if (textEl) textEl.innerText = remaining + 's';
-    const interval = setInterval(() => {
+    
+    this._clueInterval = setInterval(() => {
       remaining--;
-      if (textEl) textEl.innerText = remaining + 's';
-      if (remaining <= 0) clearInterval(interval);
-    }, 1000);
+      if (remaining > 0) {
+        if (textEl) textEl.innerText = remaining + 's';
+      } else {
+        clearInterval(this._clueInterval);
+        if (textEl) textEl.innerHTML = '<span class="text-[10px] text-[#FFA300] uppercase animate-pulse leading-none pt-0.5">WAITING 15s...</span>';
+        barEl.style.transition = 'none';
+        barEl.style.width = '0%';
+        barEl.classList.remove('shadow-[0_0_10px_rgba(250,204,21,0.8)]');
 
-    this.timer = setTimeout(() => {
-      clearInterval(interval);
-      this.nextClue();
-    }, seconds * 1000);
+        this._delayTimeout = setTimeout(() => {
+          this.nextClue();
+        }, 15000);
+      }
+    }, 1000);
   }
 
   nextClue() {
-    if (this.timer) clearTimeout(this.timer);
+    this.clearTimers();
     if (this.currentClueIndex < 4) {
       this.currentClueIndex++;
       this.renderGameLoop();
@@ -759,7 +798,6 @@ class App {
   }
 
   submitGuess() {
-    if (this.timer) clearTimeout(this.timer);
     const input = document.getElementById('guess-input').value.trim();
     if (!input) return;
 
@@ -767,6 +805,7 @@ class App {
     const answer = this.currentGame.secretItem.toLowerCase().replace(/[^a-z0-9]/g, '');
 
     if (guess === answer) {
+      this.clearTimers();
       const n = this.currentClueIndex + 1;
       const g = this.currentGame;
 
