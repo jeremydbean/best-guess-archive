@@ -1111,6 +1111,10 @@ class App {
     const parseN = s => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) || 0;
     const fmtMoney = (n, decimals = 2) => '$' + Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
     const filter = (document.getElementById('db-search')?.value || '').toLowerCase();
+
+    // Always sort by date descending by default for database view
+    this.games.sort((a, b) => new Date(b.date) - new Date(a.date));
+
     const filtered = this.games.filter(g =>
       g.secretItem.toLowerCase().includes(filter) ||
       g.date.toLowerCase().includes(filter) ||
