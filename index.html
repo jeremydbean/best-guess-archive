@@ -1505,7 +1505,8 @@ class App {
     const zoomResetBtn = document.getElementById('db-zoom-reset');
     const zoomLabel = document.getElementById('db-zoom-label');
     const tableScroll = document.getElementById('db-table-scroll');
-    if (!zoomInBtn || !zoomOutBtn || !zoomResetBtn || !zoomLabel || !tableScroll) return;
+    const table = tableScroll ? tableScroll.querySelector('table') : null;
+    if (!zoomInBtn || !zoomOutBtn || !zoomResetBtn || !zoomLabel || !tableScroll || !table) return;
 
     if (typeof this._dbZoom === 'undefined') this._dbZoom = 1;
 
@@ -1513,12 +1514,12 @@ class App {
     zoomOutBtn.onclick = null;
     zoomResetBtn.onclick = null;
 
-    // Update zoom label and scale the entire scroll container
+    // Update zoom label and table scale
     const updateZoom = () => {
-      tableScroll.style.transform = `scale(${this._dbZoom})`;
-      tableScroll.style.transformOrigin = 'left top';
-      // Adjust the height of the parent to match scaled content
-      tableScroll.parentElement.style.height = (tableScroll.scrollHeight * this._dbZoom) + 'px';
+      table.style.transform = `scale(${this._dbZoom})`;
+      table.style.transformOrigin = 'left top';
+      table.parentElement.style.height = '';
+      table.parentElement.style.overflowX = 'auto';
       zoomLabel.innerText = Math.round(this._dbZoom * 100) + '%';
     };
     updateZoom();
@@ -2285,10 +2286,6 @@ class App {
 }
 
 window.app = new App();
-// Ensure global app is always accessible after navigation/rerender
-document.addEventListener('DOMContentLoaded', function() {
-  window.app = window.app || new App();
-});
 </script>
 </body>
 </html>
