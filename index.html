@@ -213,6 +213,7 @@
     <div class="flex justify-between">
       <div class="flex items-center gap-2 text-xs text-slate-400">
         <span class="material-symbols-outlined text-[#FFA300] text-[16px]">timer</span>
+        <label for="clue-duration-select">Clue Display Time:</label>
         <select id="clue-duration-select" class="bg-slate-800 border border-slate-600 focus:border-blue-500 text-white rounded px-1 py-0.5 outline-none transition" onchange="localStorage.setItem('clue_time', this.value); if(app.currentGame) app.renderGameLoop();">
           <option value="20">20s (Real Game)</option>
           <option value="30">30s</option>
