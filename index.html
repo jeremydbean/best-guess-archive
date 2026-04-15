@@ -1437,83 +1437,6 @@ class App {
           return `<tr><td colspan="15" class="text-red-400">Error rendering row: ${e.message}</td></tr>`;
         }
       }).join('');
-        }
-        const isV2 = g.format === 'v2';
-
-        // Medal map: clue number (1-5) → emoji
-        const medalMap = {};
-        if (g.goldClue) medalMap[Number(g.goldClue)] = '🥇';
-        if (isV2 && g.silverClue) medalMap[Number(g.silverClue)] = (medalMap[Number(g.silverClue)] || '') + '🥈';
-        if (isV2 && g.bronzeClue) medalMap[Number(g.bronzeClue)] = (medalMap[Number(g.bronzeClue)] || '') + '🥉';
-
-        // Clue cells
-        const winningClueNum = g.winningClue || g.goldClue;
-        const cluesArr = Array.isArray(g.clues) ? g.clues : [];
-        const clueCells = Array.from({ length: 5 }, (_, i) => {
-          const clue = cluesArr[i];
-          const medal = medalMap[i + 1] || '';
-          const isWinning = (i + 1) === Number(winningClueNum);
-          if (!clue) return `<td class="px-4 py-3 text-slate-700 text-center align-middle">—</td>`;
-          const correct = parseN(clue.correct);
-          const guesses = parseN(clue.guesses);
-          const pct = guesses > 0 ? ((correct / guesses) * 100).toFixed(3) : '0.000';
-          // For classic games (not v2), highlight only the clue text for the winning clue, no star or gold coloring on the clue number column
-          return `<td class="px-4 py-3 align-middle" style="min-width:200px">
-            <div class="font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${clue.text || ''}</div>
-            <div class="text-xs font-mono mt-1"><span class="text-green-500">${correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${guesses.toLocaleString()}</span><span class="text-slate-600"> (${pct}%)</span>${(isV2 && medal) ? `<span class=\"ml-1 text-sm\">${medal}</span>` : ''}</div>
-          </td>`;
-        }).join('');
-
-        // Total players
-        const totalPlayers = cluesArr.reduce((a, c) => a + parseN(c.guesses), 0);
-
-        // Winners
-        const totalW = g.totalWinners || g.winnerCount || 0;
-        const winnersHtml = isV2
-          ? `<div class="text-xs text-center space-y-0.5">
-              <div>🥇 <span class="font-mono text-yellow-400">${(g.goldWinners || 0).toLocaleString()}</span></div>
-              <div>🥈 <span class="font-mono text-slate-300">${(g.silverWinners || 0).toLocaleString()}</span></div>
-              <div>🥉 <span class="font-mono text-amber-600">${(g.bronzeWinners || 0).toLocaleString()}</span></div>
-              <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono">${totalW.toLocaleString()} total</div>
-            </div>`
-          : `<div class="text-center font-mono text-slate-300">${totalW.toLocaleString()}</div>`;
-
-        // Payouts
-        const payoutsHtml = isV2
-          ? `<div class="text-xs font-mono space-y-0.5" style="min-width:150px">
-              <div>🥇 <span class="text-yellow-400">${fmtMoney(g.goldPayout)}</span></div>
-              <div>🥈 <span class="text-slate-300">${fmtMoney(g.silverPayout)}</span></div>
-              <div>🥉 <span class="text-amber-600">${fmtMoney(g.bronzePayout)}</span></div>
-              <div class="border-t border-slate-700 pt-0.5 text-green-400">${g.winnerPayout || ''} total</div>
-            </div>`
-          : `<div class="font-mono" style="min-width:110px">
-              <span class="text-green-400">${g.winnerPayout || '—'}</span>
-              <div class="text-xs text-slate-500">per winner</div>
-            </div>`;
-
-        return `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
-          <td class="px-1 py-1 text-slate-400 font-mono text-[11px] align-middle" style="max-width:80px;overflow:hidden;text-overflow:ellipsis;">${g.date || ''}</td>
-          <td class="px-1 py-1 font-semibold text-white align-middle" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;">
-            <span style="white-space:nowrap;">${g.secretItem || ''}</span>
-            ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${g.note}</span></div>` : ''}
-          </td>
-          <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${parseN(g.pot).toLocaleString()}</td>
-          ${clueCells}
-          <td class="px-2 py-1 text-center font-bold text-slate-400 align-middle">${winningClueNum || ''}</td>
-          <td class="px-2 py-1 text-center align-middle"><span class="font-mono text-blue-300">${totalPlayers.toLocaleString()}</span></td>
-          <td class="px-2 py-1 align-middle">${winnersHtml}</td>
-          <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
-          <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${(g.host || '—').replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson')}</td>
-          <td class="px-1 py-1 text-right align-middle">
-            <button onclick="console.log('Details button clicked:', '${(g.date || '').replace(/'/g,"\\'")}', '${((g.secretItem || '') + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}'); app.showDetails('${(g.date || '').replace(/'/g,"\\'")}', '${((g.secretItem || '') + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" class="text-blue-400 hover:text-blue-300" title="View details" style="padding:0 2px;">
-              <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
-            </button>
-          </td>
-        </tr>`;
-      } catch (err) {
-        return `<tr class='bg-red-900/40'><td colspan='13' class='text-red-400 font-bold'>Error rendering game: ${err.message}</td></tr>`;
-      }
-    }).join('');
     // Zoom feature removed
     // No stray parenthesis here
 
@@ -2347,6 +2270,8 @@ window.addEventListener('DOMContentLoaded', function() {
           }
         }, 100);
       };
+      // Ensure global assignment after diagnostics
+      window.app.showDetails = app.showDetails;
     }
   }, 500);
 });
