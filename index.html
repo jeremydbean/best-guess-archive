@@ -1347,12 +1347,28 @@ class App {
 
   // ==================== DATABASE ====================
   renderDatabase() {
-    const parseN = s => parseInt(String(s || '0').replace(/[^0-9]/g, ''), 10) || 0;
-    const fmtMoney = (n, decimals = 2) => '$' + Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+    const parseN = s => {
+      if (typeof s === 'number') return s;
+      if (typeof s === 'string') {
+        // Handle "?" or missing or comma numbers
+        const cleaned = s.replace(/[^0-9]/g, '');
+        return cleaned ? parseInt(cleaned, 10) : 0;
+      }
+      return 0;
+    };
+    const fmtMoney = (n, decimals = 2) => {
+      const num = Number(n);
+      if (isNaN(num)) return '$0.00';
+      return '$' + num.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+    };
     const filter = (document.getElementById('db-search')?.value || '').toLowerCase();
 
     // Always sort by date descending by default for database view
-    this.games.sort((a, b) => new Date(b.date) - new Date(a.date));
+    this.games.sort((a, b) => {
+      const da = new Date(a.date || 0);
+      const db = new Date(b.date || 0);
+      return db - da;
+    });
 
       // ---- Hardest Games (won on last clue, lowest % correct) ----
       const hardestGames = [...games]
@@ -1383,102 +1399,111 @@ class App {
         </li>`;
       }).join('') : '<li class="text-slate-500">No games found.</li>';
 
-    const filtered = this.games.filter(g =>
-      g.secretItem.toLowerCase().includes(filter) ||
-      g.date.toLowerCase().includes(filter) ||
-      (g.host && g.host.toLowerCase().includes(filter)) ||
-      (g.winnerNames && g.winnerNames.toLowerCase().includes(filter)) ||
-      (g.wrongGuesses && g.wrongGuesses.toLowerCase().includes(filter)) ||
-      g.clues.some(c => c.text.toLowerCase().includes(filter))
-    );
+    const filtered = this.games.filter(g => {
+      try {
+        return (
+          (g.secretItem || '').toString().toLowerCase().includes(filter) ||
+          (g.date || '').toString().toLowerCase().includes(filter) ||
+          (g.host || '').toString().toLowerCase().includes(filter) ||
+          (g.winnerNames || '').toString().toLowerCase().includes(filter) ||
+          (g.wrongGuesses || '').toString().toLowerCase().includes(filter) ||
+          (Array.isArray(g.clues) ? g.clues : []).some(c => (c.text || '').toString().toLowerCase().includes(filter))
+        );
+      } catch (e) {
+        return false;
+      }
+    });
     document.getElementById('db-count-display').innerText = `Showing ${filtered.length} of ${this.games.length} games`;
 
     document.getElementById('db-table-body').innerHTML = filtered.map(g => {
-      // Cancelled / stub entry — no game was played
-      if (g.note && g.clues.length === 0) {
-        return `<tr class="border-b border-red-900/40 bg-red-950/20">
-          <td class="px-4 py-4 text-slate-400 font-mono text-xs whitespace-nowrap">${g.date}</td>
-          <td colspan="13" class="px-4 py-4">
-            <span class="inline-flex items-center gap-2 text-sm font-bold text-red-400">
-              <span class="material-symbols-outlined" style="font-size:18px">cancel</span>
-              ${g.note} — no episode aired
-            </span>
+      try {
+        // Cancelled / stub entry — no game was played
+        if (g.note && (!g.clues || g.clues.length === 0)) {
+          return `<tr class="border-b border-red-900/40 bg-red-950/20">
+            <td class="px-4 py-4 text-slate-400 font-mono text-xs whitespace-nowrap">${g.date || ''}</td>
+            <td colspan="13" class="px-4 py-4">
+              <span class="inline-flex items-center gap-2 text-sm font-bold text-red-400">
+                <span class="material-symbols-outlined" style="font-size:18px">cancel</span>
+                ${g.note} — no episode aired
+              </span>
+            </td>
+          </tr>`;
+        }
+        const isV2 = g.format === 'v2';
+
+        // Medal map: clue number (1-5) → emoji
+        const medalMap = {};
+        if (g.goldClue) medalMap[Number(g.goldClue)] = '🥇';
+        if (isV2 && g.silverClue) medalMap[Number(g.silverClue)] = (medalMap[Number(g.silverClue)] || '') + '🥈';
+        if (isV2 && g.bronzeClue) medalMap[Number(g.bronzeClue)] = (medalMap[Number(g.bronzeClue)] || '') + '🥉';
+
+        // Clue cells
+        const winningClueNum = g.winningClue || g.goldClue;
+        const cluesArr = Array.isArray(g.clues) ? g.clues : [];
+        const clueCells = Array.from({ length: 5 }, (_, i) => {
+          const clue = cluesArr[i];
+          const medal = medalMap[i + 1] || '';
+          const isWinning = (i + 1) === Number(winningClueNum);
+          if (!clue) return `<td class="px-4 py-3 text-slate-700 text-center align-middle">—</td>`;
+          const correct = parseN(clue.correct);
+          const guesses = parseN(clue.guesses);
+          const pct = guesses > 0 ? ((correct / guesses) * 100).toFixed(3) : '0.000';
+          // For classic games (not v2), highlight only the clue text for the winning clue, no star or gold coloring on the clue number column
+          return `<td class="px-4 py-3 align-middle" style="min-width:200px">
+            <div class="font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${clue.text || ''}</div>
+            <div class="text-xs font-mono mt-1"><span class="text-green-500">${correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${guesses.toLocaleString()}</span><span class="text-slate-600"> (${pct}%)</span>${(isV2 && medal) ? `<span class=\"ml-1 text-sm\">${medal}</span>` : ''}</div>
+          </td>`;
+        }).join('');
+
+        // Total players
+        const totalPlayers = cluesArr.reduce((a, c) => a + parseN(c.guesses), 0);
+
+        // Winners
+        const totalW = g.totalWinners || g.winnerCount || 0;
+        const winnersHtml = isV2
+          ? `<div class="text-xs text-center space-y-0.5">
+              <div>🥇 <span class="font-mono text-yellow-400">${(g.goldWinners || 0).toLocaleString()}</span></div>
+              <div>🥈 <span class="font-mono text-slate-300">${(g.silverWinners || 0).toLocaleString()}</span></div>
+              <div>🥉 <span class="font-mono text-amber-600">${(g.bronzeWinners || 0).toLocaleString()}</span></div>
+              <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono">${totalW.toLocaleString()} total</div>
+            </div>`
+          : `<div class="text-center font-mono text-slate-300">${totalW.toLocaleString()}</div>`;
+
+        // Payouts
+        const payoutsHtml = isV2
+          ? `<div class="text-xs font-mono space-y-0.5" style="min-width:150px">
+              <div>🥇 <span class="text-yellow-400">${fmtMoney(g.goldPayout)}</span></div>
+              <div>🥈 <span class="text-slate-300">${fmtMoney(g.silverPayout)}</span></div>
+              <div>🥉 <span class="text-amber-600">${fmtMoney(g.bronzePayout)}</span></div>
+              <div class="border-t border-slate-700 pt-0.5 text-green-400">${g.winnerPayout || ''} total</div>
+            </div>`
+          : `<div class="font-mono" style="min-width:110px">
+              <span class="text-green-400">${g.winnerPayout || '—'}</span>
+              <div class="text-xs text-slate-500">per winner</div>
+            </div>`;
+
+        return `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
+          <td class="px-1 py-1 text-slate-400 font-mono text-[11px] align-middle" style="max-width:80px;overflow:hidden;text-overflow:ellipsis;">${g.date || ''}</td>
+          <td class="px-1 py-1 font-semibold text-white align-middle" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;">
+            <span style="white-space:nowrap;">${g.secretItem || ''}</span>
+            ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${g.note}</span></div>` : ''}
+          </td>
+          <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${parseN(g.pot).toLocaleString()}</td>
+          ${clueCells}
+          <td class="px-2 py-1 text-center font-bold text-slate-400 align-middle">${winningClueNum || ''}</td>
+          <td class="px-2 py-1 text-center align-middle"><span class="font-mono text-blue-300">${totalPlayers.toLocaleString()}</span></td>
+          <td class="px-2 py-1 align-middle">${winnersHtml}</td>
+          <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
+          <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${(g.host || '—').replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson')}</td>
+          <td class="px-1 py-1 text-right align-middle">
+            <button onclick="console.log('Details button clicked:', '${(g.date || '').replace(/'/g,"\\'")}', '${((g.secretItem || '') + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}'); app.showDetails('${(g.date || '').replace(/'/g,"\\'")}', '${((g.secretItem || '') + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" class="text-blue-400 hover:text-blue-300" title="View details" style="padding:0 2px;">
+              <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
+            </button>
           </td>
         </tr>`;
+      } catch (err) {
+        return `<tr class='bg-red-900/40'><td colspan='13' class='text-red-400 font-bold'>Error rendering game: ${err.message}</td></tr>`;
       }
-      const isV2 = g.format === 'v2';
-
-      // Medal map: clue number (1-5) → emoji
-      const medalMap = {};
-      if (g.goldClue) medalMap[Number(g.goldClue)] = '🥇';
-      if (isV2 && g.silverClue) medalMap[Number(g.silverClue)] = (medalMap[Number(g.silverClue)] || '') + '🥈';
-      if (isV2 && g.bronzeClue) medalMap[Number(g.bronzeClue)] = (medalMap[Number(g.bronzeClue)] || '') + '🥉';
-
-      // Clue cells
-      const winningClueNum = g.winningClue || g.goldClue;
-      const clueCells = Array.from({ length: 5 }, (_, i) => {
-        const clue = g.clues[i];
-        const medal = medalMap[i + 1] || '';
-        const isWinning = (i + 1) === Number(winningClueNum);
-        if (!clue) return `<td class="px-4 py-3 text-slate-700 text-center align-middle">—</td>`;
-        const correct = parseN(clue.correct);
-        const guesses = parseN(clue.guesses);
-        const pct = guesses > 0 ? ((correct / guesses) * 100).toFixed(3) : '0.000';
-        // For classic games (not v2), highlight only the clue text for the winning clue, no star or gold coloring on the clue number column
-        return `<td class="px-4 py-3 align-middle" style="min-width:200px">
-          <div class="font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${clue.text}</div>
-          <div class="text-xs font-mono mt-1"><span class="text-green-500">${correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${guesses.toLocaleString()}</span><span class="text-slate-600"> (${pct}%)</span>${(isV2 && medal) ? `<span class=\"ml-1 text-sm\">${medal}</span>` : ''}</div>
-        </td>`;
-      }).join('');
-
-      // Total players
-      const totalPlayers = g.clues.reduce((a, c) => a + parseN(c.guesses), 0);
-
-      // Winners
-      const totalW = g.totalWinners || g.winnerCount || 0;
-      const winnersHtml = isV2
-        ? `<div class="text-xs text-center space-y-0.5">
-            <div>🥇 <span class="font-mono text-yellow-400">${(g.goldWinners || 0).toLocaleString()}</span></div>
-            <div>🥈 <span class="font-mono text-slate-300">${(g.silverWinners || 0).toLocaleString()}</span></div>
-            <div>🥉 <span class="font-mono text-amber-600">${(g.bronzeWinners || 0).toLocaleString()}</span></div>
-            <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono">${totalW.toLocaleString()} total</div>
-          </div>`
-        : `<div class="text-center font-mono text-slate-300">${totalW.toLocaleString()}</div>`;
-
-      // Payouts
-      const payoutsHtml = isV2
-        ? `<div class="text-xs font-mono space-y-0.5" style="min-width:150px">
-            <div>🥇 <span class="text-yellow-400">${fmtMoney(g.goldPayout)}</span></div>
-            <div>🥈 <span class="text-slate-300">${fmtMoney(g.silverPayout)}</span></div>
-            <div>🥉 <span class="text-amber-600">${fmtMoney(g.bronzePayout)}</span></div>
-            <div class="border-t border-slate-700 pt-0.5 text-green-400">${g.winnerPayout || ''} total</div>
-          </div>`
-        : `<div class="font-mono" style="min-width:110px">
-            <span class="text-green-400">${g.winnerPayout || '—'}</span>
-            <div class="text-xs text-slate-500">per winner</div>
-          </div>`;
-
-      // Winner names
-
-      return `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
-        <td class="px-1 py-1 text-slate-400 font-mono text-[11px] align-middle" style="max-width:80px;overflow:hidden;text-overflow:ellipsis;">${g.date}</td>
-        <td class="px-1 py-1 font-semibold text-white align-middle" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;">
-          <span style="white-space:nowrap;">${g.secretItem}</span>
-          ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${g.note}</span></div>` : ''}
-        </td>
-        <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${g.pot.toLocaleString()}</td>
-        ${clueCells}
-        <td class="px-2 py-1 text-center font-bold text-slate-400 align-middle">${winningClueNum || ''}</td>
-        <td class="px-2 py-1 text-center align-middle"><span class="font-mono text-blue-300">${totalPlayers.toLocaleString()}</span></td>
-        <td class="px-2 py-1 align-middle">${winnersHtml}</td>
-        <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
-        <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${(g.host || '—').replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson')}</td>
-        <td class="px-1 py-1 text-right align-middle">
-          <button onclick="console.log('Details button clicked:', '${g.date.replace(/'/g,"\\'")}', '${(g.secretItem + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}'); app.showDetails('${g.date.replace(/'/g,"\\'")}', '${(g.secretItem + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" class="text-blue-400 hover:text-blue-300" title="View details" style="padding:0 2px;">
-            <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
-          </button>
-        </td>
-      </tr>`;
     }).join('');
     // Zoom feature removed
   }
