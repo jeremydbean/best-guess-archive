@@ -2300,7 +2300,12 @@ window.app = new App();
 // Ensure showDetails is globally accessible for diagnostics and event delegation
 window.app.showDetails = window.app.showDetails.bind(window.app);
 </script>
-</body>
+<script>
+// Move main app instantiation here so 'app' is defined before any onclicks or diagnostics
+window.app = new App();
+// Ensure showDetails is globally accessible
+window.app.showDetails = window.app.showDetails.bind(window.app);
+</script>
 <script>
 // Diagnostic: Check if app.showDetails is globally accessible
 window.addEventListener('DOMContentLoaded', function() {
