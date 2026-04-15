@@ -1371,7 +1371,7 @@ class App {
     });
 
       // ---- Hardest Games (won on last clue, lowest % correct) ----
-      const hardestGames = [...games]
+      const hardestGames = [...this.games]
         .filter(g => {
           const wc = Number(g.winningClue || g.goldClue);
           return wc === 5 && (g.totalWinners || g.winnerCount || 0) > 0;
