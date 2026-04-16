@@ -31,115 +31,130 @@
         "explanation": "Citrus drop refers to a lemon; 'help' is a synonym for 'aid' (Lemon-aid)."
       },
       {
-        {
-          "date": "Wednesday, April 15, 2026",
-          "pot": 7500,
-          "format": "v2",
-          "host": "Howie Mandel, Austin Show",
-          "secretItem": "YOGA",
-          "clues": [
-            {
-              "text": "A CLASS ACT",
-              "correct": "4",
-              "guesses": "5,668",
-              "explanation": "You often do yoga in a classroom setting."
-            },
-            {
-              "text": "SOME LIKE IT HOT",
-              "correct": "602",
-              "guesses": "5,576",
-              "explanation": "This refers to the common practice of hot yoga."
-            },
-            {
-              "text": "HAS AN INSTRUCTOR BUT YOU WEAR THE PANTS",
-              "correct": "7,666",
-              "guesses": "11,621",
-              "explanation": "Yoga typically has an instructor leading the session, and yoga pants are the standard attire."
-            },
-            {
-              "text": "WHERE YOU'LL FIND CATS, DOGS, COBRAS, AND WARRIORS",
-              "correct": "2,016",
-              "guesses": "4,702",
-              "explanation": "These are all popular yoga poses."
-            },
-            {
-              "text": "THE ANSWER IS A REAL STRETCH",
-              "correct": "2,158",
-              "guesses": "4,088",
-              "explanation": "Yoga involves significant stretching."
-            }
-          ],
-          "goldClue": 1,
-          "silverClue": 2,
-          "bronzeClue": 3,
-          "goldWinners": 4,
-          "silverWinners": 602,
-          "bronzeWinners": 7666,
-          "totalWinners": 8272,
-          "goldPayout": 750.00,
-          "silverPayout": 4.15,
-          "bronzePayout": 0.26,
-          "winnerPayout": "$7,500.00",
-          "winnerNames": "Fourthpacker 178, Tasha K",
-          "wrongGuesses": "CLOWN, COFFEE, TEACHER, ZOO, TEA"
-        },
-        {
-          "date": "Wednesday, April 15, 2026",
-          "pot": 7500,
-          "format": "v2",
-          "host": "Howie Mandel, Austin Show",
-          "secretItem": "YODA",
-          "clues": [
-            {
-              "text": "ONE SHIFTY ONE-OFF",
-              "correct": "0",
-              "guesses": "3,715",
-              "explanation": "Shifting one letter from YOGA (G to D) results in YODA."
-            },
-            {
-              "text": "MADE QUITE AN ENEMY",
-              "correct": "0",
-              "guesses": "4,288",
-              "explanation": "Yoda trained the Jedi who became major enemies of the dark side."
-            },
-            {
-              "text": "GENTLE BUT FORCEFUL",
-              "correct": "86",
-              "guesses": "7,271",
-              "explanation": "Yoda has a gentle demeanor but is a master of the Force."
-            },
-            {
-              "text": "KERMIT-Y AND HERMIT-Y",
-              "correct": "243",
-              "guesses": "6,704",
-              "explanation": "He is a green hermit and was originally a puppet like Kermit."
-            },
-            {
-              "text": "GUESS OR GUESS NOT THERE IS NO TRY",
-              "correct": "3,973",
-              "guesses": "7,881",
-              "explanation": "A play on his famous quote: 'Do or do not, there is no try.'"
-            }
-          ],
-          "goldClue": 3,
-          "silverClue": 4,
-          "bronzeClue": 5,
-          "goldWinners": 86,
-          "silverWinners": 243,
-          "bronzeWinners": 3973,
-          "totalWinners": 4302,
-          "goldPayout": 34.88,
-          "silverPayout": 10.28,
-          "bronzePayout": 0.50,
-          "winnerPayout": "$7,500.00",
-          "winnerNames": "Haliew, Aspottedpickle, Regalbark272, Hammsky1726, Goldendisc882",
-          "wrongGuesses": "FROG, MUPPETS, CRAB, KERMIT THE FROG, STICK SHIFT"
-        },
-        "text": "DUCK TO GET IN A FLYING CRAFT WHOSE BLADES SPIN",
-        "correct": "5,055",
-        "guesses": "6,179",
-        "explanation": "Duck To Get In A Flying Craft Whose Blades Spin - \"People often duck to enter. You should not often, you should always duck to get into a helicopter.\""
+        "text": "A LIQUID LIQUID FOR KIDS",
+        "correct": "2,183",
+        "guesses": "7,858",
+        "explanation": "Lemonade is a drink (liquid) that helps kids earn cash (liquid assets)."
       }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 2,
+    "silverWinners": 1,
+    "bronzeWinners": 157,
+    "totalWinners": 160,
+    "goldPayout": 1500,
+    "silverPayout": 2500,
+    "bronzePayout": 12.74,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Champ Caesar Psycho 812000",
+    "wrongGuesses": "LEMONADE STAND, ORANGE JUICE, COUNTDOWN, SUNNY D, ICE CREAM"
+  },
+  {
+    "date": "Wednesday, April 15, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel, Austin Show",
+    "secretItem": "YOGA",
+    "clues": [
+      {
+        "text": "A CLASS ACT",
+        "correct": "4",
+        "guesses": "5,668",
+        "explanation": "You often do yoga in a classroom setting."
+      },
+      {
+        "text": "SOME LIKE IT HOT",
+        "correct": "602",
+        "guesses": "5,576",
+        "explanation": "This refers to the common practice of hot yoga."
+      },
+      {
+        "text": "HAS AN INSTRUCTOR BUT YOU WEAR THE PANTS",
+        "correct": "7,666",
+        "guesses": "11,621",
+        "explanation": "Yoga typically has an instructor leading the session, and yoga pants are the standard attire."
+      },
+      {
+        "text": "WHERE YOU'LL FIND CATS, DOGS, COBRAS, AND WARRIORS",
+        "correct": "2,016",
+        "guesses": "4,702",
+        "explanation": "These are all popular yoga poses."
+      },
+      {
+        "text": "THE ANSWER IS A REAL STRETCH",
+        "correct": "2,158",
+        "guesses": "4,088",
+        "explanation": "Yoga involves significant stretching."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 4,
+    "silverWinners": 602,
+    "bronzeWinners": 7666,
+    "totalWinners": 8272,
+    "goldPayout": 750.00,
+    "silverPayout": 4.15,
+    "bronzePayout": 0.26,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Fourthpacker 178, Tasha K",
+    "wrongGuesses": "CLOWN, COFFEE, TEACHER, ZOO, TEA"
+  },
+  {
+    "date": "Wednesday, April 15, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel, Austin Show",
+    "secretItem": "YODA",
+    "clues": [
+      {
+        "text": "ONE SHIFTY ONE-OFF",
+        "correct": "0",
+        "guesses": "3,715",
+        "explanation": "Shifting one letter from YOGA (G to D) results in YODA."
+      },
+      {
+        "text": "MADE QUITE AN ENEMY",
+        "correct": "0",
+        "guesses": "4,288",
+        "explanation": "Yoda trained the Jedi who became major enemies of the dark side."
+      },
+      {
+        "text": "GENTLE BUT FORCEFUL",
+        "correct": "86",
+        "guesses": "7,271",
+        "explanation": "Yoda has a gentle demeanor but is a master of the Force."
+      },
+      {
+        "text": "KERMIT-Y AND HERMIT-Y",
+        "correct": "243",
+        "guesses": "6,704",
+        "explanation": "He is a green hermit and was originally a puppet like Kermit."
+      },
+      {
+        "text": "GUESS OR GUESS NOT THERE IS NO TRY",
+        "correct": "3,973",
+        "guesses": "7,881",
+        "explanation": "A play on his famous quote: 'Do or do not, there is no try.'"
+      }
+    ],
+    "goldClue": 3,
+    "silverClue": 4,
+    "bronzeClue": 5,
+    "goldWinners": 86,
+    "silverWinners": 243,
+    "bronzeWinners": 3973,
+    "totalWinners": 4302,
+    "goldPayout": 34.88,
+    "silverPayout": 10.28,
+    "bronzePayout": 0.50,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Haliew, Aspottedpickle, Regalbark272, Hammsky1726, Goldendisc882",
+    "wrongGuesses": "FROG, MUPPETS, CRAB, KERMIT THE FROG, STICK SHIFT"
+  },
     ],
     "goldClue": 1,
     "silverClue": 0,
