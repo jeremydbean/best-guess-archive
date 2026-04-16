@@ -1420,7 +1420,7 @@ class App {
         // For classic games (not v2), highlight only the clue text for the winning clue, no star or gold coloring on the clue number column
         return `<td class="px-4 py-3 align-middle" style="min-width:200px">
           <div class="font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${clue.text}</div>
-          <div class="text-xs font-mono mt-0.5 flex items-center flex-wrap gap-x-1"><span class="text-green-500">${correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${guesses.toLocaleString()}</span><span class="text-slate-600"> (${pct}%)</span>${(isV2 && medal) ? `<span class=\"ml-1 text-sm\">${medal}</span>` : ''}</div>
+          <div class="text-xs font-mono mt-0.5 flex items-center flex-wrap gap-x-1"><span class="text-green-500">${correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${guesses.toLocaleString()}</span><span class="text-slate-600"> (${pct}%)${(isV2 && medal) ? `&nbsp;<span class=\"ml-1 text-sm whitespace-nowrap\">${medal}</span>` : ''}</span></div>
         </td>`;
       }).join('');
 
