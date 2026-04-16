@@ -7,19 +7,19 @@
     "secretItem": "LEGO",
     "clues": [
       {
-        "text": "**FOLLOW THE LEADER** 🥇",
+        "text": "FOLLOW THE LEADER",
         "correct": "6",
         "guesses": "7,091",
         "explanation": "You start with one piece and each piece follows the lead of the next one to complete the set."
       },
       {
-        "text": "**SNEAKY ARCH ENEMY** 🥈",
+        "text": "SNEAKY ARCH ENEMY",
         "correct": "9",
         "guesses": "6,369",
         "explanation": "When you step on them with the arch of your foot there is no greater enemy and it is very sneaky you never see it coming."
       },
       {
-        "text": "**PRESS PLAY** 🥉",
+        "text": "PRESS PLAY",
         "correct": "11",
         "guesses": "6,406",
         "explanation": "When you play with them you literally press them together you press to play."
@@ -59,19 +59,19 @@
     "secretItem": "PARKING METER",
     "clues": [
       {
-        "text": "**TIMING IS EVERYTHING** 🥇",
+        "text": "TIMING IS EVERYTHING",
         "correct": "1",
         "guesses": "5,740",
         "explanation": "Its whole purpose is to sell you time in a parking spot and you need a time when you get back to it."
       },
       {
-        "text": "**QUARTERLY EARNINGS** 🥈",
+        "text": "QUARTERLY EARNINGS",
         "correct": "230",
         "guesses": "9,457",
         "explanation": "You can usually pay a parking meter with quarters it earns quarters."
       },
       {
-        "text": "**START IN POLE POSITION** 🥉",
+        "text": "START IN POLE POSITION",
         "correct": "301",
         "guesses": "9,298",
         "explanation": "You start the parking meter when your car is in position by the pole."
@@ -1912,7 +1912,7 @@
         "text": "MIND READERS UNITE",
         "correct": "0",
         "guesses": "?",
-        "explanation": "Mind Readers Unite - 'Because youÃÂ¢ÃÂÃÂre trying to guess what America thinks!'"
+        "explanation": "Mind Readers Unite - 'Because youÃÂÃÂ¢ÃÂÃÂÃÂÃÂre trying to guess what America thinks!'"
       },
       {
         "text": "RIVALRY FOR DNA",
@@ -2074,7 +2074,7 @@
         "text": "TRENDY POPUP",
         "correct": "2",
         "guesses": "8948",
-        "explanation": "Trendy Popup - 'They pop up above your lip and lately theyÃÂ¢ÃÂÃÂve been very trendy.'"
+        "explanation": "Trendy Popup - 'They pop up above your lip and lately theyÃÂÃÂ¢ÃÂÃÂÃÂÃÂve been very trendy.'"
       },
       {
         "text": "MID COVER BAND",
@@ -2188,7 +2188,7 @@
         "text": "ALL FOR NOTHING",
         "correct": "5",
         "guesses": "5237",
-        "explanation": "All For Nothing - 'ItÃÂ¢ÃÂÃÂs all the information in the world almost all of it available at no cost.'"
+        "explanation": "All For Nothing - 'ItÃÂÃÂ¢ÃÂÃÂÃÂÃÂs all the information in the world almost all of it available at no cost.'"
       },
       {
         "text": "GREAT WORK EVERYBODY",
@@ -2206,7 +2206,7 @@
         "text": "ONLINE BRATANNICA BUT EVEN MORE GIGANTICA",
         "correct": "3063",
         "guesses": "8361",
-        "explanation": "Online Bratannica But Even More Gigantica - 'ItÃÂ¢ÃÂÃÂs like the encyclopedia but with way more articles and itÃÂ¢ÃÂÃÂs online.'"
+        "explanation": "Online Bratannica But Even More Gigantica - 'ItÃÂÃÂ¢ÃÂÃÂÃÂÃÂs like the encyclopedia but with way more articles and itÃÂÃÂ¢ÃÂÃÂÃÂÃÂs online.'"
       }
     ],
     "goldClue": 1,
@@ -2248,7 +2248,7 @@
         "text": "A BLAST FROM THE PAST",
         "correct": "8",
         "guesses": "7604",
-        "explanation": "A Blast From The Past - 'You were having a good time last night and now youÃÂ¢ÃÂÃÂre suffering the consequences.'"
+        "explanation": "A Blast From The Past - 'You were having a good time last night and now youÃÂÃÂ¢ÃÂÃÂÃÂÃÂre suffering the consequences.'"
       },
       {
         "text": "CAN HAPPEN IN VEGAS JUST LIKE \"THE\" MOVIE",
@@ -2290,7 +2290,7 @@
         "text": "MAKEUP WITH NO MAKEUP",
         "correct": "0",
         "guesses": "9408",
-        "explanation": "Makeup With No Makeup - 'The dadÃÂ¢ÃÂÃÂs trying to make up with his son... and theyÃÂ¢ÃÂÃÂre both clown fish clowns that donÃÂ¢ÃÂÃÂt wear makeup.'"
+        "explanation": "Makeup With No Makeup - 'The dadÃÂÃÂ¢ÃÂÃÂÃÂÃÂs trying to make up with his son... and theyÃÂÃÂ¢ÃÂÃÂÃÂÃÂre both clown fish clowns that donÃÂÃÂ¢ÃÂÃÂÃÂÃÂt wear makeup.'"
       },
       {
         "text": "A GUILT TRIP",
@@ -4144,7 +4144,7 @@
         "text": "MIX DILL HERBS AND MAYO AND VEGGIES SAY HEYO",
         "correct": "6320",
         "guesses": "10439",
-        "explanation": "Mix Dill Herbs And Mayo And Veggies Say Heyo - 'That's the recipe. And many people use ranch on a cruditÃÂÃÂ© platter.'"
+        "explanation": "Mix Dill Herbs And Mayo And Veggies Say Heyo - 'That's the recipe. And many people use ranch on a cruditÃÂÃÂÃÂÃÂ© platter.'"
       },
       {
         "text": "HIDDEN VALLEY MADE VALID TO POUR ON YOUR SALAD",
@@ -6379,7 +6379,7 @@
     "bronzePayout": 0,
     "winnerPayout": "$769.23",
     "winnerNames": "Names not read",
-    "wrongGuesses": "PIÃÂÃÂ±ATA, BEETHOVEN'S FIFTH, INK, GIFT, SALMONELLA, DEBT, TICKET, ADVICE, TIME, MONEY, SPEEDING",
+    "wrongGuesses": "PIÃÂÃÂÃÂÃÂ±ATA, BEETHOVEN'S FIFTH, INK, GIFT, SALMONELLA, DEBT, TICKET, ADVICE, TIME, MONEY, SPEEDING",
     "winningClue": 1,
     "winnerCount": 13
   },
@@ -6946,7 +6946,7 @@
         "text": "ALL THE RIGHT MOVES",
         "correct": "53",
         "guesses": "16,000",
-        "explanation": "All the right moves - \"Pac-man is a 90ÃÂÃÂ° right angles it's always right you It's always a right angle a 90ÃÂÃÂ° angle is all the moves are right angles\""
+        "explanation": "All the right moves - \"Pac-man is a 90ÃÂÃÂÃÂÃÂ° right angles it's always right you It's always a right angle a 90ÃÂÃÂÃÂÃÂ° angle is all the moves are right angles\""
       },
       {
         "text": "HIS WIFE TOOK HIS NAME",
@@ -9061,10 +9061,10 @@
         "explanation": "Arrives orderly in many shapes and sizes - \"arrives orderly in many shapes and sizes.\""
       },
       {
-        "text": "PASS THE KETCHUP S'IL VOUS PLAÃÂÃÂT",
+        "text": "PASS THE KETCHUP S'IL VOUS PLAÃÂÃÂÃÂÃÂT",
         "correct": "1,800",
         "guesses": "N/A",
-        "explanation": "Pass the ketchup s'il vous plaÃÂÃÂ®t - \"well pass the ketchup see play French and fries.\""
+        "explanation": "Pass the ketchup s'il vous plaÃÂÃÂÃÂÃÂ®t - \"well pass the ketchup see play French and fries.\""
       }
     ],
     "goldClue": 3,
