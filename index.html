@@ -141,7 +141,7 @@ document.addEventListener('focusout', function(e) {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center gap-3 cursor-pointer" onclick="app.setView('home')">
-        <img src="bestguessarchive.png" alt="Best Guess Archive Logo" class="h-10 w-10 rounded-full border-2 border-yellow-500 object-cover">
+        <img src="bestguessarchive.png" alt="Best Guess Archive Logo" class="h-10 w-10 rounded-full border-2 border-yellow-500 object-cover" loading="lazy" decoding="async">
         <span class="font-display text-xl tracking-wider text-white">BEST GUESS <span class="text-yellow-500">ARCHIVE</span></span>
       </div>
       <div class="hidden md:flex items-center space-x-1">
@@ -209,7 +209,7 @@ document.addEventListener('focusout', function(e) {
   <div class="text-center space-y-6 max-w-3xl">
     <div class="relative inline-block group cursor-pointer" onclick="app.startRandomGame()">
       <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-blue-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-      <img src="bestguessarchive.png" alt="Best Guess Logo" class="relative w-48 h-48 mx-auto rounded-full border-4 border-slate-800 shadow-2xl hover:scale-105 transition transform duration-300 object-cover">
+      <img src="bestguessarchive.png" alt="Best Guess Logo" class="relative w-48 h-48 mx-auto rounded-full border-4 border-slate-800 shadow-2xl hover:scale-105 transition transform duration-300 object-cover" loading="lazy" decoding="async">
     </div>
     <h1 class="text-5xl md:text-7xl font-display font-bold tracking-tight">
       <span class="text-white">THE COMPLETE</span><br>
@@ -233,17 +233,34 @@ document.addEventListener('focusout', function(e) {
       </div>
     </div>
     <div class="flex flex-col gap-4 justify-center mt-10">
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <button class="btn-primary px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-2 group" onclick="app.startRandomGame()">
-          <span class="material-symbols-outlined group-hover:rotate-12 transition">play_circle</span>
-          PLAY RANDOM GAME
-        </button>
-        <button class="glass-panel px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition flex items-center justify-center gap-2" onclick="app.setView('database')">
-          <span class="material-symbols-outlined">database</span>
-          BROWSE DATABASE
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button class="btn-primary px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-2 group" onclick="app.startRandomGame()">
+            <span class="material-symbols-outlined group-hover:rotate-12 transition">play_circle</span>
+            PLAY RANDOM GAME
+          </button>
+          <button class="glass-panel px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition flex items-center justify-center gap-2" onclick="app.setView('database')">
+            <span class="material-symbols-outlined">database</span>
+            BROWSE DATABASE
+          </button>
+        </div>
+        <button class="mt-4 mx-auto text-blue-400 hover:text-blue-200 underline text-sm font-bold" onclick="app.openHowToPlay()">
+          <span class="material-symbols-outlined align-middle text-base mr-1">help</span> How to Play
         </button>
       </div>
-    </div>
+<!-- How to Play Modal Template -->
+<template id="how-to-play-modal">
+  <div class="space-y-6">
+    <h2 class="text-3xl font-display font-bold text-yellow-400">How to Play</h2>
+    <ol class="list-decimal list-inside text-slate-200 space-y-2 text-lg">
+      <li>Read the clue and try to guess the secret item.</li>
+      <li>Type your guess and press <b>Lock In</b> or hit <b>Enter</b>.</li>
+      <li>Each round gives you a new clue if you’re wrong.</li>
+      <li>Guess as early as possible for a bigger share of the prize!</li>
+      <li>See your results and popular wrong guesses at the end.</li>
+    </ol>
+    <div class="text-slate-400 text-sm pt-2">Tip: You only get one guess per game. Make it count!</div>
+  </div>
+</template>
 
     <!-- Tip Jar -->
     <div class="mt-10 w-full max-w-md mx-auto">
