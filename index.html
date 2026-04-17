@@ -100,6 +100,30 @@
 
 <!-- Floating input preview for mobile -->
 <div id="guess-preview-box"></div>
+// --- Floating input preview logic (MOVED HERE to avoid visible code) ---
+(function() {
+  function updateGuessPreviewBox() {
+    const input = document.getElementById('guess-input');
+    const box = document.getElementById('guess-preview-box');
+    if (!input || !box) return;
+    if (document.body.classList.contains('keyboard-open')) {
+      box.textContent = input.value;
+      box.style.opacity = input.value ? '1' : '0.5';
+    } else {
+      box.textContent = '';
+      box.style.opacity = '0';
+    }
+  }
+  document.addEventListener('input', function(e) {
+    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+  });
+  document.addEventListener('focusin', function(e) {
+    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+  });
+  document.addEventListener('focusout', function(e) {
+    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+  });
+})();
 // Floating input preview logic
 (function() {
   function updateGuessPreviewBox() {
