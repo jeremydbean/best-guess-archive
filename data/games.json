@@ -1,5 +1,109 @@
 [
   {
+    "date": "Thursday, April 16, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "FORTUNE COOKIE",
+    "clues": [
+      {
+        "text": "ALWAYS IN RARE FORM",
+        "correct": "4",
+        "guesses": "6,587",
+        "explanation": "A fortune cookie is a unique, rare shape and a rare way to receive your future."
+      },
+      {
+        "text": "WHERE THE PAST MEETS THE FUTURE",
+        "correct": "1",
+        "guesses": "5,836",
+        "explanation": "The meal you just ate is in the past, and the fortune predicts your potential future."
+      },
+      {
+        "text": "FOOD FOR THOUGHT",
+        "correct": "76",
+        "guesses": "6,646",
+        "explanation": "The cookie is food, and the paper inside provides a thought or fortune."
+      },
+      {
+        "text": "A WISE SURPRISE THAT MAY BE LIES",
+        "correct": "763",
+        "guesses": "3,794",
+        "explanation": "Fortunes are meant to be wise but are often vague or inaccurate."
+      },
+      {
+        "text": "A SWEET AND CRUNCHY PAPER WAIT",
+        "correct": "1226",
+        "guesses": "4,849",
+        "explanation": "The cookie is sweet and crunchy, and you wait until the end of the meal for the paper inside."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 4,
+    "silverWinners": 1,
+    "bronzeWinners": 76,
+    "totalWinners": 81,
+    "goldPayout": 750,
+    "silverPayout": 2500,
+    "bronzePayout": 26.31,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "CivilRoadway591, RudeOrchid693, 321OH",
+    "wrongGuesses": "STEAK, SUSHI, PRESENT, DIAMOND, COW"
+  },
+  {
+    "date": "Thursday, April 16, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "POOL TABLE",
+    "clues": [
+      {
+        "text": "OFTEN HUNCHED OVER",
+        "correct": "1",
+        "guesses": "5,283",
+        "explanation": "Players must hunch over the table to line up and take their shots."
+      },
+      {
+        "text": "WALL-TO-WALL CARPETING",
+        "correct": "19",
+        "guesses": "3,770",
+        "explanation": "The felt surface of the table acts as a carpet covering the entire playing area."
+      },
+      {
+        "text": "NO LIFEGUARD ON DUTY",
+        "correct": "699",
+        "guesses": "6,316",
+        "explanation": "A pun on the word 'pool'; billiards tables do not require lifeguards."
+      },
+      {
+        "text": "THE CARGO PANTS OF FURNITURE",
+        "correct": "630",
+        "guesses": "6,370",
+        "explanation": "Like cargo pants, a pool table is defined by having several pockets."
+      },
+      {
+        "text": "EARNED ITS STRIPES EATING SOLIDS",
+        "correct": "1543",
+        "guesses": "6,771",
+        "explanation": "In pool, the balls are divided into stripes and solids, which the table 'eats' when they are potted."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 19,
+    "bronzeWinners": 699,
+    "totalWinners": 719,
+    "goldPayout": 3000,
+    "silverPayout": 131.57,
+    "bronzePayout": 2.86,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Jortlyn",
+    "wrongGuesses": "RECLINER, COUCH, POOL, CAMEL, OTTOMAN"
+  },
+  {
     "date": "Tuesday, April 14, 2026",
     "pot": 7500,
     "format": "v2",
@@ -1912,7 +2016,7 @@
         "text": "MIND READERS UNITE",
         "correct": "0",
         "guesses": "?",
-        "explanation": "Mind Readers Unite - 'Because youÃÂÃÂ¢ÃÂÃÂÃÂÃÂre trying to guess what America thinks!'"
+        "explanation": "Mind Readers Unite - 'Because youÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂre trying to guess what America thinks!'"
       },
       {
         "text": "RIVALRY FOR DNA",
@@ -2074,7 +2178,7 @@
         "text": "TRENDY POPUP",
         "correct": "2",
         "guesses": "8948",
-        "explanation": "Trendy Popup - 'They pop up above your lip and lately theyÃÂÃÂ¢ÃÂÃÂÃÂÃÂve been very trendy.'"
+        "explanation": "Trendy Popup - 'They pop up above your lip and lately theyÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂve been very trendy.'"
       },
       {
         "text": "MID COVER BAND",
@@ -2188,7 +2292,7 @@
         "text": "ALL FOR NOTHING",
         "correct": "5",
         "guesses": "5237",
-        "explanation": "All For Nothing - 'ItÃÂÃÂ¢ÃÂÃÂÃÂÃÂs all the information in the world almost all of it available at no cost.'"
+        "explanation": "All For Nothing - 'ItÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs all the information in the world almost all of it available at no cost.'"
       },
       {
         "text": "GREAT WORK EVERYBODY",
@@ -2206,7 +2310,7 @@
         "text": "ONLINE BRATANNICA BUT EVEN MORE GIGANTICA",
         "correct": "3063",
         "guesses": "8361",
-        "explanation": "Online Bratannica But Even More Gigantica - 'ItÃÂÃÂ¢ÃÂÃÂÃÂÃÂs like the encyclopedia but with way more articles and itÃÂÃÂ¢ÃÂÃÂÃÂÃÂs online.'"
+        "explanation": "Online Bratannica But Even More Gigantica - 'ItÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs like the encyclopedia but with way more articles and itÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs online.'"
       }
     ],
     "goldClue": 1,
@@ -2248,7 +2352,7 @@
         "text": "A BLAST FROM THE PAST",
         "correct": "8",
         "guesses": "7604",
-        "explanation": "A Blast From The Past - 'You were having a good time last night and now youÃÂÃÂ¢ÃÂÃÂÃÂÃÂre suffering the consequences.'"
+        "explanation": "A Blast From The Past - 'You were having a good time last night and now youÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂre suffering the consequences.'"
       },
       {
         "text": "CAN HAPPEN IN VEGAS JUST LIKE \"THE\" MOVIE",
@@ -2290,7 +2394,7 @@
         "text": "MAKEUP WITH NO MAKEUP",
         "correct": "0",
         "guesses": "9408",
-        "explanation": "Makeup With No Makeup - 'The dadÃÂÃÂ¢ÃÂÃÂÃÂÃÂs trying to make up with his son... and theyÃÂÃÂ¢ÃÂÃÂÃÂÃÂre both clown fish clowns that donÃÂÃÂ¢ÃÂÃÂÃÂÃÂt wear makeup.'"
+        "explanation": "Makeup With No Makeup - 'The dadÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs trying to make up with his son... and theyÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂre both clown fish clowns that donÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂt wear makeup.'"
       },
       {
         "text": "A GUILT TRIP",
@@ -4144,7 +4248,7 @@
         "text": "MIX DILL HERBS AND MAYO AND VEGGIES SAY HEYO",
         "correct": "6320",
         "guesses": "10439",
-        "explanation": "Mix Dill Herbs And Mayo And Veggies Say Heyo - 'That's the recipe. And many people use ranch on a cruditÃÂÃÂÃÂÃÂ© platter.'"
+        "explanation": "Mix Dill Herbs And Mayo And Veggies Say Heyo - 'That's the recipe. And many people use ranch on a cruditÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© platter.'"
       },
       {
         "text": "HIDDEN VALLEY MADE VALID TO POUR ON YOUR SALAD",
@@ -6379,7 +6483,7 @@
     "bronzePayout": 0,
     "winnerPayout": "$769.23",
     "winnerNames": "Names not read",
-    "wrongGuesses": "PIÃÂÃÂÃÂÃÂ±ATA, BEETHOVEN'S FIFTH, INK, GIFT, SALMONELLA, DEBT, TICKET, ADVICE, TIME, MONEY, SPEEDING",
+    "wrongGuesses": "PIÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±ATA, BEETHOVEN'S FIFTH, INK, GIFT, SALMONELLA, DEBT, TICKET, ADVICE, TIME, MONEY, SPEEDING",
     "winningClue": 1,
     "winnerCount": 13
   },
@@ -6946,7 +7050,7 @@
         "text": "ALL THE RIGHT MOVES",
         "correct": "53",
         "guesses": "16,000",
-        "explanation": "All the right moves - \"Pac-man is a 90ÃÂÃÂÃÂÃÂ° right angles it's always right you It's always a right angle a 90ÃÂÃÂÃÂÃÂ° angle is all the moves are right angles\""
+        "explanation": "All the right moves - \"Pac-man is a 90ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ° right angles it's always right you It's always a right angle a 90ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ° angle is all the moves are right angles\""
       },
       {
         "text": "HIS WIFE TOOK HIS NAME",
@@ -9061,10 +9165,10 @@
         "explanation": "Arrives orderly in many shapes and sizes - \"arrives orderly in many shapes and sizes.\""
       },
       {
-        "text": "PASS THE KETCHUP S'IL VOUS PLAÃÂÃÂÃÂÃÂT",
+        "text": "PASS THE KETCHUP S'IL VOUS PLAÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂT",
         "correct": "1,800",
         "guesses": "N/A",
-        "explanation": "Pass the ketchup s'il vous plaÃÂÃÂÃÂÃÂ®t - \"well pass the ketchup see play French and fries.\""
+        "explanation": "Pass the ketchup s'il vous plaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ®t - \"well pass the ketchup see play French and fries.\""
       }
     ],
     "goldClue": 3,
