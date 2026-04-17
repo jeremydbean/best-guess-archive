@@ -17,6 +17,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 <style>
+        /* Floating input preview for mobile */
+        @media (max-width: 600px) {
+          #guess-preview-box {
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 56px;
+            z-index: 1000;
+            background: rgba(30,41,59,0.98);
+            border-top: 2px solid #3b82f6;
+            border-bottom: 2px solid #f59e42;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 0.7rem 1.2rem;
+            border-radius: 18px 18px 0 0;
+            box-shadow: 0 -2px 16px 0 rgba(0,0,0,0.18);
+            pointer-events: none;
+            transition: opacity 0.2s;
+            max-width: 98vw;
+            margin: 0 auto;
+            overflow-x: auto;
+            white-space: pre-wrap;
+          }
+          body.keyboard-open #guess-preview-box {
+            display: block;
+          }
+        }
       @media (max-width: 600px) {
         body.keyboard-open #active-clue-area .bg-gradient-to-br {
           min-height: 40px !important;
@@ -67,6 +97,31 @@
 </style>
 </head>
 <body class="flex flex-col">
+
+<!-- Floating input preview for mobile -->
+<div id="guess-preview-box"></div>
+// Floating input preview logic
+function updateGuessPreviewBox() {
+  const input = document.getElementById('guess-input');
+  const box = document.getElementById('guess-preview-box');
+  if (!input || !box) return;
+  if (document.body.classList.contains('keyboard-open')) {
+    box.textContent = input.value;
+    box.style.opacity = input.value ? '1' : '0.5';
+  } else {
+    box.textContent = '';
+    box.style.opacity = '0';
+  }
+}
+document.addEventListener('input', function(e) {
+  if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+});
+document.addEventListener('focusin', function(e) {
+  if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+});
+document.addEventListener('focusout', function(e) {
+  if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+});
 
 <script>
 // Detect keyboard open on mobile and adjust layout
