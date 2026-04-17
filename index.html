@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Best Guess Archive - Interactive Game</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYGK3MHH26"></script>
@@ -32,6 +32,13 @@
   .clue-stack-enter { animation: slideIn .4s cubic-bezier(.16,1,.3,1); }
   @keyframes slideIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
   .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+  @media (max-width: 600px) {
+    #play-game-layout { max-width: 100vw !important; }
+    #past-clues { position: sticky; top: 0; z-index: 20; background: rgba(15,23,42,0.97); box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08); }
+    #input-container { position: sticky; bottom: 0; z-index: 30; background: rgba(15,23,42,0.97); box-shadow: 0 -2px 8px 0 rgba(0,0,0,0.08); }
+    #active-clue-area { min-height: 120px; }
+    input#guess-input { font-size: 18px; padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+  }
 </style>
 </head>
 <body class="flex flex-col">
@@ -195,7 +202,7 @@
     </div>
   </div>
 
-  <!-- Past clues — compact, always visible, scrollable if somehow they overflow -->
+  <!-- Past clues — sticky on mobile, always visible, scrollable if overflow -->
   <div class="flex-shrink-0 px-3 pt-2 pb-1 space-y-1.5 overflow-y-auto" style="max-height:35%" id="past-clues"></div>
 
   <!-- Active clue — takes all remaining height, vertically centered -->
@@ -1216,47 +1223,49 @@ class App {
       const answer = this.currentGame.secretItem.toLowerCase().replace(/[^a-z0-9]/g, '');
       inputEl.disabled = true;
       inputEl.value = '';
+      // Store the user's guess for summary
+      this.lastGuess = input;
 
       if (guess === answer) {
-      this.clearTimers();
-      const n = this.currentClueIndex + 1;
-      const g = this.currentGame;
+        this.clearTimers();
+        const n = this.currentClueIndex + 1;
+        const g = this.currentGame;
 
-      if (g.format === 'v2') {
-        const { goldClue, silverClue, bronzeClue, goldWinners, silverWinners, bronzeWinners } = g;
-        const lastMedalClue = bronzeClue || silverClue || goldClue;
-        if (n < goldClue) {
-          this.endGame(true, `You solved it before any real winners! Gold wasn't cracked until Clue ${goldClue}. You'd win the entire $3,000 gold pot solo!`, 3000, 'gold');
-        } else if (n === goldClue) {
-          const share = 3000 / (Number(goldWinners) + 1);
-          this.endGame(true, `🥇 Gold! You matched ${Number(goldWinners).toLocaleString()} real gold winner${goldWinners != 1 ? 's' : ''} on Clue ${goldClue}. You'd be winner #${(Number(goldWinners)+1).toLocaleString()}!`, share, 'gold');
-        } else if (silverClue && n === silverClue) {
-          const share = 2500 / (Number(silverWinners) + 1);
-          this.endGame(true, `🥈 Silver! You matched ${Number(silverWinners).toLocaleString()} silver winner${silverWinners != 1 ? 's' : ''} on Clue ${silverClue}. You'd share the $2,500 silver pot!`, share, 'silver');
-        } else if (bronzeClue && n === bronzeClue) {
-          const share = 2000 / (Number(bronzeWinners) + 1);
-          this.endGame(true, `🥉 Bronze! You matched ${Number(bronzeWinners).toLocaleString()} bronze winner${bronzeWinners != 1 ? 's' : ''} on Clue ${bronzeClue}. You'd share the $2,000 bronze pot!`, share, 'bronze');
-        } else if (n < lastMedalClue) {
-          this.endGame(false, `Correct answer, wrong clue! You guessed on Clue ${n}, but medal tiers were set at Clue ${goldClue} (🥇 gold)${silverClue ? ', Clue ' + silverClue + ' (🥈 silver)' : ''}${bronzeClue ? ', Clue ' + bronzeClue + ' (🥉 bronze)' : ''}. You needed to hold your guess for a medal clue.`);
+        if (g.format === 'v2') {
+          const { goldClue, silverClue, bronzeClue, goldWinners, silverWinners, bronzeWinners } = g;
+          const lastMedalClue = bronzeClue || silverClue || goldClue;
+          if (n < goldClue) {
+            this.endGame(true, `You solved it before any real winners! Gold wasn't cracked until Clue ${goldClue}. You'd win the entire $3,000 gold pot solo!`, 3000, 'gold');
+          } else if (n === goldClue) {
+            const share = 3000 / (Number(goldWinners) + 1);
+            this.endGame(true, `🥇 Gold! You matched ${Number(goldWinners).toLocaleString()} real gold winner${goldWinners != 1 ? 's' : ''} on Clue ${goldClue}. You'd be winner #${(Number(goldWinners)+1).toLocaleString()}!`, share, 'gold');
+          } else if (silverClue && n === silverClue) {
+            const share = 2500 / (Number(silverWinners) + 1);
+            this.endGame(true, `🥈 Silver! You matched ${Number(silverWinners).toLocaleString()} silver winner${silverWinners != 1 ? 's' : ''} on Clue ${silverClue}. You'd share the $2,500 silver pot!`, share, 'silver');
+          } else if (bronzeClue && n === bronzeClue) {
+            const share = 2000 / (Number(bronzeWinners) + 1);
+            this.endGame(true, `🥉 Bronze! You matched ${Number(bronzeWinners).toLocaleString()} bronze winner${bronzeWinners != 1 ? 's' : ''} on Clue ${bronzeClue}. You'd share the $2,000 bronze pot!`, share, 'bronze');
+          } else if (n < lastMedalClue) {
+            this.endGame(false, `Correct answer, wrong clue! You guessed on Clue ${n}, but medal tiers were set at Clue ${goldClue} (🥇 gold)${silverClue ? ', Clue ' + silverClue + ' (🥈 silver)' : ''}${bronzeClue ? ', Clue ' + bronzeClue + ' (🥉 bronze)' : ''}. You needed to hold your guess for a medal clue.`);
+          } else {
+            this.endGame(false, `You were right, but too late! All medals were awarded by Clue ${lastMedalClue}. You answered on Clue ${n}.`);
+          }
         } else {
-          this.endGame(false, `You were right, but too late! All medals were awarded by Clue ${lastMedalClue}. You answered on Clue ${n}.`);
+          const winningClue = g.winningClue || g.goldClue;
+          const winnerCount = g.totalWinners || g.winnerCount || 0;
+          if (n > winningClue) {
+            this.endGame(false, `You were right! But too late — the game ended on Clue ${winningClue}.`);
+          } else if (n < winningClue) {
+            this.endGame(true, `You got it early! Real players didn't solve it until Clue ${winningClue}. You win the whole pot!`, g.pot);
+          } else {
+            const share = g.pot / (winnerCount + 1);
+            this.endGame(true, `Correct! You matched the ${winnerCount.toLocaleString()} real winner${winnerCount !== 1 ? 's' : ''} on Clue ${winningClue}. You'd be winner #${(winnerCount+1).toLocaleString()}!`, share);
+          }
         }
       } else {
-        const winningClue = g.winningClue || g.goldClue;
-        const winnerCount = g.totalWinners || g.winnerCount || 0;
-        if (n > winningClue) {
-          this.endGame(false, `You were right! But too late — the game ended on Clue ${winningClue}.`);
-        } else if (n < winningClue) {
-          this.endGame(true, `You got it early! Real players didn't solve it until Clue ${winningClue}. You win the whole pot!`, g.pot);
-        } else {
-          const share = g.pot / (winnerCount + 1);
-          this.endGame(true, `Correct! You matched the ${winnerCount.toLocaleString()} real winner${winnerCount !== 1 ? 's' : ''} on Clue ${winningClue}. You'd be winner #${(winnerCount+1).toLocaleString()}!`, share);
-        }
+        this.endGame(false, `"${input}" was incorrect.`);
       }
-    } else {
-      this.endGame(false, `"${input}" was incorrect.`);
     }
-  }
 
   endGame(won, message, amount = 0, medal = null) {
     // Hide the fixed-height game layout, restore normal page flow for the result
@@ -1293,9 +1302,13 @@ class App {
     const totalPlayers = g.clues.reduce((a, c) => a + (parseInt(String(c.guesses).replace(/[^0-9]/g, '')) || 0), 0);
     const totalCorrect = g.clues.reduce((a, c) => a + (parseInt(String(c.correct).replace(/[^0-9]/g, '')) || 0), 0);
     const clueStats = g.clues.map((c, i) => `<div class="flex justify-between text-xs"><span>Clue ${i+1}:</span><span>${c.correct} correct / ${c.guesses} guesses</span></div>`).join('');
+    // Show user's guess, clue guessed, and popular wrong guesses if available
     let extraStats = `<div class="mt-2 text-xs text-slate-400">Total guesses: <span class="text-white font-bold">${totalPlayers.toLocaleString()}</span> &nbsp;|&nbsp; Total correct: <span class="text-white font-bold">${totalCorrect.toLocaleString()}</span></div>`;
-    extraStats += `<div class="mt-2 text-xs text-slate-400">Your guess: <span class="text-white font-bold">${this.lastGuess || '(none)'}</span> &nbsp;|&nbsp; Clue guessed: <span class="text-white font-bold">${clueNum}</span></div>`;
-    extraStats += `<div class="mt-2 text-xs text-slate-400">Breakdown by clue:</div>${clueStats}`;
+    extraStats += `<div class="mt-2 text-xs text-slate-400">Your guess: <span class="text-white font-bold">${this.lastGuess ? this.lastGuess : '(none)'}${this.lastGuess && this.lastGuess.trim() === '' ? '(none)' : ''}</span> &nbsp;|&nbsp; Clue guessed: <span class="text-white font-bold">${clueNum}</span></div>`;
+    if (g.wrongGuesses) {
+      extraStats += `<div class=\"mt-2 text-xs text-red-400\">Popular wrong guesses: <span class=\"text-white font-bold\">${g.wrongGuesses}</span></div>`;
+    }
+    extraStats += `<div class=\"mt-2 text-xs text-slate-400\">Breakdown by clue:</div>${clueStats}`;
     if (g.format === 'v2') {
       statsEl.innerHTML = `
         <div class="flex justify-between border-b border-white/5 pb-2">
