@@ -100,54 +100,7 @@
 
 <!-- Floating input preview for mobile -->
 <div id="guess-preview-box"></div>
-// --- Floating input preview logic (MOVED HERE to avoid visible code) ---
-(function() {
-  function updateGuessPreviewBox() {
-    const input = document.getElementById('guess-input');
-    const box = document.getElementById('guess-preview-box');
-    if (!input || !box) return;
-    if (document.body.classList.contains('keyboard-open')) {
-      box.textContent = input.value;
-      box.style.opacity = input.value ? '1' : '0.5';
-    } else {
-      box.textContent = '';
-      box.style.opacity = '0';
-    }
-  }
-  document.addEventListener('input', function(e) {
-    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
-  });
-  document.addEventListener('focusin', function(e) {
-    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
-  });
-  document.addEventListener('focusout', function(e) {
-    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
-  });
-})();
-// Floating input preview logic
-(function() {
-  function updateGuessPreviewBox() {
-    const input = document.getElementById('guess-input');
-    const box = document.getElementById('guess-preview-box');
-    if (!input || !box) return;
-    if (document.body.classList.contains('keyboard-open')) {
-      box.textContent = input.value;
-      box.style.opacity = input.value ? '1' : '0.5';
-    } else {
-      box.textContent = '';
-      box.style.opacity = '0';
-    }
-  }
-  document.addEventListener('input', function(e) {
-    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
-  });
-  document.addEventListener('focusin', function(e) {
-    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
-  });
-  document.addEventListener('focusout', function(e) {
-    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
-  });
-})();
+
 
 <script>
 // Detect keyboard open on mobile and adjust layout
@@ -1446,9 +1399,9 @@ class App {
     let extraStats = `<div class="mt-2 text-xs text-slate-400">Total guesses: <span class="text-white font-bold">${totalPlayers.toLocaleString()}</span> &nbsp;|&nbsp; Total correct: <span class="text-white font-bold">${totalCorrect.toLocaleString()}</span></div>`;
     extraStats += `<div class="mt-2 text-xs text-slate-400">Your guess: <span class="text-white font-bold">${this.lastGuess ? this.lastGuess : '(none)'}${this.lastGuess && this.lastGuess.trim() === '' ? '(none)' : ''}</span> &nbsp;|&nbsp; Clue guessed: <span class="text-white font-bold">${clueNum}</span></div>`;
     if (g.wrongGuesses) {
-      extraStats += `<div class=\"mt-2 text-xs text-red-400\">Popular wrong guesses: <span class=\"text-white font-bold\">${g.wrongGuesses}</span></div>`;
+      extraStats += `<div class="mt-2 text-xs text-red-400">Popular wrong guesses: <span class="text-white font-bold">${g.wrongGuesses}</span></div>`;
     }
-    extraStats += `<div class=\"mt-2 text-xs text-slate-400\">Breakdown by clue:</div>${clueStats}`;
+    extraStats += `<div class="mt-2 text-xs text-slate-400">Breakdown by clue:</div>${clueStats}`;
     if (g.format === 'v2') {
       statsEl.innerHTML = `
         <div class="flex justify-between border-b border-white/5 pb-2">
@@ -1573,7 +1526,7 @@ class App {
         // For classic games (not v2), highlight only the clue text for the winning clue, no star or gold coloring on the clue number column
         return `<td class="px-4 py-3 align-middle" style="min-width:200px">
           <div class="font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${clue.text}</div>
-          <div class="text-xs font-mono mt-0.5 flex items-center flex-wrap gap-x-1"><span class="text-green-500">${correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${guesses.toLocaleString()}</span><span class="text-slate-600"> (${pct}%)${(isV2 && medal) ? `&nbsp;<span class=\"ml-1 text-sm whitespace-nowrap\">${medal}</span>` : ''}</span></div>
+          <div class="text-xs font-mono mt-0.5 flex items-center flex-wrap gap-x-1"><span class="text-green-500">${correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${guesses.toLocaleString()}</span><span class="text-slate-600"> (${pct}%)${(isV2 && medal) ? `&nbsp;<span class="ml-1 text-sm whitespace-nowrap">${medal}</span>` : ''}</span></div>
         </td>`;
       }).join('');
 
@@ -1615,7 +1568,7 @@ class App {
         <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${g.pot.toLocaleString()}</td>
         ${clueCells}
         <td class="px-2 py-1 text-center font-bold text-slate-400 align-middle">${winningClueNum || ''}</td>
-        <td class="px-2 py-1 text-center align-middle"><span class="font-mono text-blue-300">${totalPlayers.toLocaleString()}</span></td>
+        <td class="px-2 py-1 align-middle"><span class="font-mono text-blue-300">${totalPlayers.toLocaleString()}</span></td>
         <td class="px-2 py-1 align-middle">${winnersHtml}</td>
         <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
         <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${(g.host || '—').replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson')}</td>
@@ -2244,7 +2197,7 @@ class App {
           <div>
             <span class="text-[10px] ${g.format==='v2'?'text-yellow-400 bg-yellow-900/30':'text-slate-400 bg-slate-800'} px-2 py-0.5 rounded font-bold uppercase">${g.format==='v2'?'V2 FORMAT':'V1 FORMAT'} · ${g.date}</span>
             <div class="text-xl font-bold font-display text-white mt-1">${g.secretItem}</div>
-            <div class="text-xs text-slate-400 mt-1 uppercase tracking-wide">Host: ${g.host||'?'} <span class="mx-2 opacity-30">|</span> Pot: $${(g.pot||0).toLocaleString()}</div>
+            <div class="text-xs text-slate-400 mt-1 uppercase tracking-widest">Host: ${g.host||'?'} <span class="mx-2 opacity-30">|</span> Pot: $${(g.pot||0).toLocaleString()}</div>
           </div>
           <div class="text-xs text-slate-300 bg-slate-900 px-3 py-2 rounded-lg border border-slate-700 shrink-0 text-right">
             ${g.format==='v2' ? 
@@ -2366,7 +2319,6 @@ class App {
       const publishedCount = this._pendingGames.length;
       this.games = merged;
       this.populateDeleteDates();
-      this.renderSelectedDatePreview();
       this._pendingGames = null;
       document.getElementById('import-json').value = '';
       document.getElementById('import-preview').classList.add('hidden');
@@ -2388,56 +2340,29 @@ window.app = new App();
 </script>
 </body>
 <script>
-// Diagnostic: Check if app.showDetails is globally accessible
-window.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() {
-    if (window.app && typeof app.showDetails === 'function') {
-      console.log('[DIAG] app.showDetails is globally accessible.');
+// --- Floating input preview logic (only instance, correct location) ---
+(function() {
+  function updateGuessPreviewBox() {
+    const input = document.getElementById('guess-input');
+    const box = document.getElementById('guess-preview-box');
+    if (!input || !box) return;
+    if (document.body.classList.contains('keyboard-open')) {
+      box.textContent = input.value;
+      box.style.opacity = input.value ? '1' : '0.5';
     } else {
-      console.error('[DIAG] app.showDetails is NOT accessible globally!');
+      box.textContent = '';
+      box.style.opacity = '0';
     }
-    // Diagnostic: Add event delegation for Details button as fallback
-    document.body.addEventListener('click', function(e) {
-      const btn = e.target.closest('button[title="View details"]');
-      if (btn) {
-        console.log('[DIAG] Delegated Details button click detected.');
-        // Try to extract date and secretItem from the onclick attribute
-        const onclick = btn.getAttribute('onclick');
-        if (onclick) {
-          const match = onclick.match(/showDetails\('([^']*)', '([^']*)'\)/);
-          if (match) {
-            const date = match[1];
-            const item = match[2];
-            if (window.app && typeof app.showDetails === 'function') {
-              app.showDetails(date, item);
-            }
-          }
-        }
-      }
-    });
-    // Diagnostic: Log modal visibility when showDetails is called
-    const origShowDetails = window.app && app.showDetails;
-    if (origShowDetails) {
-      app.showDetails = function(date, item) {
-        console.log('[DIAG] showDetails called (delegated):', date, item);
-        origShowDetails.call(this, date, item);
-        setTimeout(function() {
-          const modal = document.getElementById('modal-backdrop');
-          if (modal) {
-            const style = window.getComputedStyle(modal);
-            console.log('[DIAG] Modal display:', style.display, 'Visibility:', style.visibility, 'Z-index:', style.zIndex);
-            if (!modal.classList.contains('hidden')) {
-              console.log('[DIAG] Modal is visible.');
-            } else {
-              console.warn('[DIAG] Modal is still hidden after showDetails.');
-            }
-          } else {
-            console.error('[DIAG] Modal element not found.');
-          }
-        }, 100);
-      };
-    }
-  }, 500);
-});
+  }
+  document.addEventListener('input', function(e) {
+    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+  });
+  document.addEventListener('focusin', function(e) {
+    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+  });
+  document.addEventListener('focusout', function(e) {
+    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+  });
+})();
 </script>
 </html>
