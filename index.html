@@ -1632,7 +1632,7 @@ class App {
                   : isClassicWin ? '<span class="text-xs font-bold text-yellow-400 bg-yellow-900/30 px-2 py-1 rounded">★ Winning Clue</span>' : '';
       return `<div class="mb-6 pb-6 border-b border-slate-700 last:border-0 ${isClassicWin ? 'bg-yellow-900/10 border-yellow-400/30' : ''}">
         <div class="flex flex-wrap justify-between items-center mb-2 gap-2">
-          <span class="text-xs font-bold ${isClassicWin ? 'text-yellow-400 bg-yellow-900/30 border border-yellow-400/40 px-2 py-1 rounded-full uppercase tracking-wider'>Clue ${n}</span>
+          <span class="text-xs font-bold ${isClassicWin ? 'text-yellow-400 bg-yellow-900/30 border border-yellow-400/40' : 'text-blue-400 bg-blue-900/30'} px-2 py-1 rounded">Clue ${n}</span>
           ${badge}
           <span class="text-xs text-slate-500 ml-auto">${c.correct} correct / ${c.guesses} guesses</span>
         </div>
@@ -2339,4 +2339,30 @@ class App {
 window.app = new App();
 </script>
 </body>
+<script>
+// --- Floating input preview logic (only instance, correct location) ---
+(function() {
+  function updateGuessPreviewBox() {
+    const input = document.getElementById('guess-input');
+    const box = document.getElementById('guess-preview-box');
+    if (!input || !box) return;
+    if (document.body.classList.contains('keyboard-open')) {
+      box.textContent = input.value;
+      box.style.opacity = input.value ? '1' : '0.5';
+    } else {
+      box.textContent = '';
+      box.style.opacity = '0';
+    }
+  }
+  document.addEventListener('input', function(e) {
+    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+  });
+  document.addEventListener('focusin', function(e) {
+    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+  });
+  document.addEventListener('focusout', function(e) {
+    if (e.target && e.target.id === 'guess-input') updateGuessPreviewBox();
+  });
+})();
+</script>
 </html>
