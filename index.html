@@ -17,6 +17,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 <style>
+      @media (max-width: 600px) {
+        body.keyboard-open #active-clue-area .bg-gradient-to-br {
+          min-height: 40px !important;
+          padding: 0.25rem 0.5rem !important;
+          height: auto !important;
+          box-shadow: none !important;
+        }
+        body.keyboard-open #active-clue-area .bg-gradient-to-br h2 {
+          font-size: 1.1rem !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          line-height: 1.2 !important;
+        }
+        body.keyboard-open #active-clue-area .absolute.inset-0 {
+          display: none !important;
+        }
+      }
     /* Mobile keyboard handling and compressed layout */
     @media (max-width: 600px) {
       body.keyboard-open #play-game-layout { max-height: 100dvh !important; overflow: hidden; }
