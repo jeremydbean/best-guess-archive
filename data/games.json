@@ -1,5 +1,109 @@
 [
   {
+    "date": "Friday, April 17, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "JURASSIC PARK",
+    "clues": [
+      {
+        "text": "AN ORIGINAL OF UNORIGINALS",
+        "correct": "1",
+        "guesses": "3,795",
+        "explanation": "It's the original movie in the franchise and the dinosaurs are very unoriginal because they're clones."
+      },
+      {
+        "text": "MANY OF THE STARS ARE HAS-BEENS",
+        "correct": "5",
+        "guesses": "7,323",
+        "explanation": "The stars of the movie are dinosaurs, who have been extinct. That's like the only celebrity where you're allowed to call them a has-been."
+      },
+      {
+        "text": "GROUNDBREAKING AND GROUNDSHAKING",
+        "correct": "23",
+        "guesses": "8,093",
+        "explanation": "Well, the special effects were groundbreaking and the dinosaurs literally, famously shook the earth."
+      },
+      {
+        "text": "DON'T FEED THE ANIMALS YOURSELF",
+        "correct": "369",
+        "guesses": "3,792",
+        "explanation": "Well, all the human characters in that movie tried to avoid dying to dinosaurs. So feeding them yourself is the worst zoo to feed animals."
+      },
+      {
+        "text": "IN 1993, MOVIE NIGHT WAS DINO-MITE",
+        "correct": "3,296",
+        "guesses": "5,541",
+        "explanation": "Yeah, definitely was JURASSIC PARK premiered in 1993 and they were not only dino-mite, they were dinosaurs."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 5,
+    "bronzeWinners": 23,
+    "totalWinners": 29,
+    "goldPayout": 3000,
+    "silverPayout": 500,
+    "bronzePayout": 86.95,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "GwenVlogs",
+    "wrongGuesses": "ZOO, EARTHQUAKE, WALK OF FAME, METEOR, DANCING WITH THE STARS"
+  },
+  {
+    "date": "Friday, April 17, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "LIPSTICK",
+    "clues": [
+      {
+        "text": "IT'S A TWISTER",
+        "correct": "2",
+        "guesses": "5,942",
+        "explanation": "You twist the LIPSTICK up to use it. It's a twister, it literally is a twister."
+      },
+      {
+        "text": "EXPOSES WHITE COLLAR CRIMINAL ACTIVITY",
+        "correct": "167",
+        "guesses": "4,770",
+        "explanation": "Like the old saying, LIPSTICK on your collar could get you in trouble."
+      },
+      {
+        "text": "BY THE SKIN OF YOUR TEETH",
+        "correct": "485",
+        "guesses": "8,074",
+        "explanation": "Well, that's where you put it, the skin around your teeth. Kind of a weird way to think about it."
+      },
+      {
+        "text": "DOWN THE TUBES",
+        "correct": "261",
+        "guesses": "5,394",
+        "explanation": "Well, LIPSTICK comes in a tube that goes up and down. Specifically down the tubes."
+      },
+      {
+        "text": "KISS AND MAKE UP",
+        "correct": "1,403",
+        "guesses": "4,219",
+        "explanation": "Okay, kiss and make up, that one's pretty obvious."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 2,
+    "silverWinners": 167,
+    "bronzeWinners": 485,
+    "totalWinners": 654,
+    "goldPayout": 1500,
+    "silverPayout": 14.97,
+    "bronzePayout": 4.12,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "SwaggySwamp, SpectralNachos89",
+    "wrongGuesses": "TONGUE, TOOTHPASTE, TORNADO, WIZARD OF OZ, DENTIST"
+  },
+  {
     "date": "Thursday, April 16, 2026",
     "pot": 7500,
     "format": "v2",
@@ -2016,7 +2120,7 @@
         "text": "MIND READERS UNITE",
         "correct": "0",
         "guesses": "?",
-        "explanation": "Mind Readers Unite - 'Because youÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂre trying to guess what America thinks!'"
+        "explanation": "Mind Readers Unite - 'Because youÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂre trying to guess what America thinks!'"
       },
       {
         "text": "RIVALRY FOR DNA",
@@ -2178,7 +2282,7 @@
         "text": "TRENDY POPUP",
         "correct": "2",
         "guesses": "8948",
-        "explanation": "Trendy Popup - 'They pop up above your lip and lately theyÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂve been very trendy.'"
+        "explanation": "Trendy Popup - 'They pop up above your lip and lately theyÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂve been very trendy.'"
       },
       {
         "text": "MID COVER BAND",
@@ -2292,7 +2396,7 @@
         "text": "ALL FOR NOTHING",
         "correct": "5",
         "guesses": "5237",
-        "explanation": "All For Nothing - 'ItÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs all the information in the world almost all of it available at no cost.'"
+        "explanation": "All For Nothing - 'ItÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs all the information in the world almost all of it available at no cost.'"
       },
       {
         "text": "GREAT WORK EVERYBODY",
@@ -2310,7 +2414,7 @@
         "text": "ONLINE BRATANNICA BUT EVEN MORE GIGANTICA",
         "correct": "3063",
         "guesses": "8361",
-        "explanation": "Online Bratannica But Even More Gigantica - 'ItÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs like the encyclopedia but with way more articles and itÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs online.'"
+        "explanation": "Online Bratannica But Even More Gigantica - 'ItÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs like the encyclopedia but with way more articles and itÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs online.'"
       }
     ],
     "goldClue": 1,
@@ -2352,7 +2456,7 @@
         "text": "A BLAST FROM THE PAST",
         "correct": "8",
         "guesses": "7604",
-        "explanation": "A Blast From The Past - 'You were having a good time last night and now youÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂre suffering the consequences.'"
+        "explanation": "A Blast From The Past - 'You were having a good time last night and now youÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂre suffering the consequences.'"
       },
       {
         "text": "CAN HAPPEN IN VEGAS JUST LIKE \"THE\" MOVIE",
@@ -2394,7 +2498,7 @@
         "text": "MAKEUP WITH NO MAKEUP",
         "correct": "0",
         "guesses": "9408",
-        "explanation": "Makeup With No Makeup - 'The dadÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs trying to make up with his son... and theyÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂre both clown fish clowns that donÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂt wear makeup.'"
+        "explanation": "Makeup With No Makeup - 'The dadÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂs trying to make up with his son... and theyÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂre both clown fish clowns that donÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂt wear makeup.'"
       },
       {
         "text": "A GUILT TRIP",
@@ -4248,7 +4352,7 @@
         "text": "MIX DILL HERBS AND MAYO AND VEGGIES SAY HEYO",
         "correct": "6320",
         "guesses": "10439",
-        "explanation": "Mix Dill Herbs And Mayo And Veggies Say Heyo - 'That's the recipe. And many people use ranch on a cruditÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© platter.'"
+        "explanation": "Mix Dill Herbs And Mayo And Veggies Say Heyo - 'That's the recipe. And many people use ranch on a cruditÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© platter.'"
       },
       {
         "text": "HIDDEN VALLEY MADE VALID TO POUR ON YOUR SALAD",
@@ -6483,7 +6587,7 @@
     "bronzePayout": 0,
     "winnerPayout": "$769.23",
     "winnerNames": "Names not read",
-    "wrongGuesses": "PIÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±ATA, BEETHOVEN'S FIFTH, INK, GIFT, SALMONELLA, DEBT, TICKET, ADVICE, TIME, MONEY, SPEEDING",
+    "wrongGuesses": "PIÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±ATA, BEETHOVEN'S FIFTH, INK, GIFT, SALMONELLA, DEBT, TICKET, ADVICE, TIME, MONEY, SPEEDING",
     "winningClue": 1,
     "winnerCount": 13
   },
@@ -7050,7 +7154,7 @@
         "text": "ALL THE RIGHT MOVES",
         "correct": "53",
         "guesses": "16,000",
-        "explanation": "All the right moves - \"Pac-man is a 90ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ° right angles it's always right you It's always a right angle a 90ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ° angle is all the moves are right angles\""
+        "explanation": "All the right moves - \"Pac-man is a 90ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ° right angles it's always right you It's always a right angle a 90ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ° angle is all the moves are right angles\""
       },
       {
         "text": "HIS WIFE TOOK HIS NAME",
@@ -9165,10 +9269,10 @@
         "explanation": "Arrives orderly in many shapes and sizes - \"arrives orderly in many shapes and sizes.\""
       },
       {
-        "text": "PASS THE KETCHUP S'IL VOUS PLAÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂT",
+        "text": "PASS THE KETCHUP S'IL VOUS PLAÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂT",
         "correct": "1,800",
         "guesses": "N/A",
-        "explanation": "Pass the ketchup s'il vous plaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ®t - \"well pass the ketchup see play French and fries.\""
+        "explanation": "Pass the ketchup s'il vous plaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ®t - \"well pass the ketchup see play French and fries.\""
       }
     ],
     "goldClue": 3,
