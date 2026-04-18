@@ -2150,7 +2150,7 @@ class App {
       const fileData = await getRes.json();
 
       // 2. Decode and filter out the selected date
-      const existing = JSON.parse(atob(fileData.content.replace(/\n/g, '')));
+      const existing = JSON.parse(decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, '')))));
       const gamesToKeep = existing.filter(g => g.date !== dateToDelete);
       const deletedCount = existing.length - gamesToKeep.length;
       
@@ -2159,7 +2159,7 @@ class App {
       }
 
       // 3. Commit the updated array
-      const content = btoa(unescape(encodeURIComponent(JSON.stringify(gamesToKeep, null, 2))));
+      const content = btoa(encodeURIComponent(JSON.stringify(gamesToKeep, null, 2)));
       
       status.innerText = `Committing deletion of ${deletedCount} game${deletedCount>1?'s':''} from ${dateToDelete}...`;
       const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/games.json`, {
@@ -2334,7 +2334,7 @@ class App {
       const fileData = await getRes.json();
 
       // 2. Decode, overwrite existing, merge
-      const existing = JSON.parse(atob(fileData.content.replace(/\n/g, '')));
+      const existing = JSON.parse(decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, '')))));
       const targetReplaceDate = document.getElementById('delete-date-select').value;
       
       let filteredExisting = [];
@@ -2349,7 +2349,7 @@ class App {
 
       // 3. Prepend and commit
       const merged  = [...this._pendingGames, ...filteredExisting];
-      const content = btoa(unescape(encodeURIComponent(JSON.stringify(merged, null, 2))));
+      const content = btoa(encodeURIComponent(JSON.stringify(merged, null, 2)));
 
       let commitMsg = `Import ${this._pendingGames.length} game${this._pendingGames.length>1?'s':''}: ${this._pendingGames.map(g=>g.secretItem).join(', ')}`;
       if (targetReplaceDate) {
