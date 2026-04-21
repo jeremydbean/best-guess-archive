@@ -1228,6 +1228,13 @@ class App {
     if (this._delayTimeout) clearTimeout(this._delayTimeout);
   }
 
+  // Case-insensitive comparison helper that also strips spaces, punctuation, and any
+  // Unicode injected by mobile keyboards. NFKD decomposes accented chars and ligatures;
+  // [^a-z0-9] then removes the leftover combining marks along with everything else.
+  _normalizeAnswer(s) {
+    return String(s || '').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g, '');
+  }
+
   startRandomGame() {
     this.clearTimers();
     this.setView('play');
@@ -1403,8 +1410,8 @@ class App {
       const input = inputEl.value.trim();
       if (!input) return;
 
-      const guess  = input.toLowerCase().replace(/[^a-z0-9]/g, '');
-      const answer = this.currentGame.secretItem.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const guess  = this._normalizeAnswer(input);
+      const answer = this._normalizeAnswer(this.currentGame.secretItem);
       inputEl.disabled = true;
       inputEl.value = '';
       // Store the user's guess for summary
