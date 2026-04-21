@@ -2249,8 +2249,11 @@ class App {
       return;
     }
 
+    // Robust validation
     const errors = [];
+    const seenDates = new Set();
     parsed.forEach((g, i) => {
+<<<<<<< HEAD
       const label = `Game ${i+1}${g.secretItem ? ` ("${g.secretItem}")` : ''}`;
 
       // date
@@ -2318,6 +2321,15 @@ class App {
         errors.push(`${label}: "wrongGuesses" field is missing (use null or "" if none)`);
 
       // v2-specific fields
+=======
+      // Basic required fields
+      ['date','format','host','pot','secretItem','clues','goldClue','totalWinners','winnerPayout','winnerNames','wrongGuesses'].forEach(k => {
+        if (g[k] === undefined || g[k] === null || g[k] === '') errors.push(`Game ${i+1}: missing "${k}"`);
+      });
+      // Clues array
+      if (!Array.isArray(g.clues) || g.clues.length !== 5) errors.push(`Game ${i+1}: clues array must have exactly 5 items (found ${g.clues?.length})`);
+      // v2 format extra fields
+>>>>>>> 65672e4 (Revamp admin import system: strict validation, no overwrite, safe deletion only)
       if (g.format === 'v2') {
         ['silverClue','bronzeClue'].forEach(k => {
           const n = Number(g[k]);
@@ -2333,7 +2345,20 @@ class App {
             errors.push(`${label}: "${k}" is missing`);
         });
       }
+      // Check for duplicate dates in import
+      if (seenDates.has(g.date)) errors.push(`Game ${i+1}: duplicate date "${g.date}" in import file`);
+      seenDates.add(g.date);
     });
+
+    // Check for collisions with existing games
+    if (this.games && Array.isArray(this.games)) {
+      const existingKeys = new Set(this.games.map(g => g.date + '||' + g.secretItem));
+      parsed.forEach((g, i) => {
+        if (existingKeys.has(g.date + '||' + g.secretItem)) {
+          errors.push(`Game ${i+1}: duplicate date+secretItem already exists in database (${g.date}, ${g.secretItem})`);
+        }
+      });
+    }
 
     if (errors.length) {
       preview.classList.remove('hidden');
@@ -2397,7 +2422,7 @@ class App {
   }
 
   async publishImport() {
-    console.log("Publish import triggered", this._pendingGames);
+    // No overwrite or replace logic; only allow adding new games if no collision
     if (!this._pendingGames) {
       alert("No games to publish. Please preview the JSON first.");
       return;
@@ -2430,6 +2455,7 @@ class App {
       if (!getRes.ok) throw new Error(`GitHub GET failed (${getRes.status}). Check your PAT and repo settings.`);
       const fileData = await getRes.json();
 
+<<<<<<< HEAD
       // 2. Decode, overwrite existing, merge
       const existing = JSON.parse(this._b64DecodeUTF8(fileData.content));
       if (!Array.isArray(existing)) throw new Error('games.json on GitHub is not a valid array. Aborting to prevent data loss.');
@@ -2448,15 +2474,27 @@ class App {
       // 3. Prepend and commit
       const merged  = [...this._pendingGames, ...filteredExisting];
       const content = this._b64EncodeUTF8(JSON.stringify(merged, null, 2));
-
-      let commitMsg = `Import ${this._pendingGames.length} game${this._pendingGames.length>1?'s':''}: ${this._pendingGames.map(g=>g.secretItem).join(', ')}`;
-      if (targetReplaceDate) {
-        status.innerText = `Replacing all games on target date (${targetReplaceDate}) with new import...`;
-        commitMsg += ` (Replacing Date: ${targetReplaceDate})`;
-      } else {
-        status.innerText = `Committing ${this._pendingGames.length} game${this._pendingGames.length>1?'s':''} (overwriting duplicates if any)...`;
+=======
+      // 2. Decode and validate no collisions
+      const existing = JSON.parse(decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, '')))));
+      const existingKeys = new Set(existing.map(g => g.date + '||' + g.secretItem));
+      const collision = this._pendingGames.some(g => existingKeys.has(g.date + '||' + g.secretItem));
+      if (collision) {
+        status.className = 'text-sm font-medium px-4 py-2 rounded bg-red-900/20 text-red-400';
+        status.innerText = 'Import aborted: One or more games already exist with the same date and secret item.';
+        btn.disabled = false;
+        btn.innerText = 'Publish to GitHub';
+        return;
       }
-      
+
+      // 3. Append new games only
+      const merged = [...existing, ...this._pendingGames];
+      const content = btoa(encodeURIComponent(JSON.stringify(merged, null, 2)));
+>>>>>>> 65672e4 (Revamp admin import system: strict validation, no overwrite, safe deletion only)
+
+      const commitMsg = `Import ${this._pendingGames.length} game${this._pendingGames.length>1?'s':''}: ${this._pendingGames.map(g=>g.secretItem).join(', ')}`;
+      status.innerText = `Committing ${this._pendingGames.length} new game${this._pendingGames.length>1?'s':''}...`;
+
       const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/games.json`, {
         method: 'PUT',
         headers: { Authorization: `token ${pat}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
