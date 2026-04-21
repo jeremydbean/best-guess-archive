@@ -1017,7 +1017,7 @@ FORMATTING RULES:
 //   crypto.subtle.digest('SHA-256',new TextEncoder().encode('YOURPIN'))
 //     .then(b=>console.log([...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')))
 // Then update ADMIN_PIN_HASH below and commit.
-const ADMIN_PIN_HASH = '269ea4910f6202594cab138862120b206126129a90e9a74a8d4ffeabc3871f1f'; // SHA-256("8131010372172929")
+const ADMIN_PIN_HASH = '269ea4910f6202594cab138862120b206126129a90e9a74a8d4ffeabc3871f1f'; // SHA-256 of admin PIN
 
 async function sha256hex(str) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
@@ -1026,17 +1026,6 @@ async function sha256hex(str) {
 
 // ============================================================
 class App {
-    // Reload games from database and re-render stats
-    async refreshStats() {
-      try {
-        const res = await fetch('data/games.json?_=' + Date.now());
-        if (!res.ok) throw new Error('Failed to fetch games.json');
-        this.games = await res.json();
-        this.renderStats();
-      } catch (e) {
-        alert('Error refreshing stats: ' + e.message);
-      }
-    }
   constructor() {
     this.games = [];
     this.currentGame = null;
@@ -1170,13 +1159,11 @@ class App {
   // Apply saved tip links to the home page cards
   _applyTipLinks() {
     const { cashapp, paypal } = this._tipDefaults();
-    const cashApp = cashapp;
-    const pp      = paypal;
     setTimeout(() => {
       const ca = document.getElementById('tip-cashapp');
       const ppEl = document.getElementById('tip-paypal');
-      if (ca) ca.href = cashApp;
-      if (ppEl) ppEl.href = pp;
+      if (ca) ca.href = cashapp;
+      if (ppEl) ppEl.href = paypal;
     }, 50);
   }
 
@@ -1557,10 +1544,10 @@ class App {
     const fmtMoney = (n, decimals = 2) => '$' + Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
     const filter = (document.getElementById('db-search')?.value || '').toLowerCase();
 
-    // Always sort by date descending by default for database view
-    this.games.sort((a, b) => new Date(b.date) - new Date(a.date));
+    // Always sort by date descending by default for database view (use a copy to avoid mutating this.games)
+    const sorted = [...this.games].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    const filtered = this.games.filter(g =>
+    const filtered = sorted.filter(g =>
       g.secretItem.toLowerCase().includes(filter) ||
       g.date.toLowerCase().includes(filter) ||
       (g.host && g.host.toLowerCase().includes(filter)) ||
@@ -1909,9 +1896,6 @@ class App {
       // For v2 games, use gold/silver/bronzeWinners for their respective clues; for v1, use totalWinners/winnerCount for winningClue
       const wcWinnersMap = {1:[],2:[],3:[],4:[],5:[]};
       games.forEach(g => {
-          // Already filtered above
-          // Already filtered above
-          // Already filtered above
         if (g.format === 'v2') {
           if (g.goldClue && g.goldWinners != null && Number(g.goldWinners) > 0) wcWinnersMap[Number(g.goldClue)].push(Number(g.goldWinners));
           if (g.silverClue && g.silverWinners != null && Number(g.silverWinners) > 0) wcWinnersMap[Number(g.silverClue)].push(Number(g.silverWinners));
@@ -2138,6 +2122,17 @@ class App {
     document.getElementById('stat-avg-clue').innerText = 'C' + (gamesWithClue?(totalClueSum/gamesWithClue).toFixed(1):0);
   }
 
+  async refreshStats() {
+    try {
+      const res = await fetch('data/games.json?_=' + Date.now());
+      if (!res.ok) throw new Error('Failed to fetch games.json');
+      this.games = await res.json();
+      this.renderStats();
+    } catch (e) {
+      alert('Error refreshing stats: ' + e.message);
+    }
+  }
+
   // ==================== ADMIN ====================
   initAdmin() {
     setTimeout(() => {
@@ -2307,6 +2302,7 @@ class App {
       if (!Array.isArray(g.clues) || g.clues.length !== 5) errors.push(`Game ${i+1}: clues array must have exactly 5 items (found ${g.clues?.length})`);
       // v2 format extra fields
       if (g.format === 'v2') {
+        const label = `Game ${i+1}`;
         ['silverClue','bronzeClue'].forEach(k => {
           const n = Number(g[k]);
           if (g[k] === undefined || g[k] === null || g[k] === '' || !Number.isInteger(n) || n < 1 || n > 5)
@@ -2432,7 +2428,7 @@ class App {
       const fileData = await getRes.json();
 
       // 2. Decode and validate no collisions
-      const existing = JSON.parse(decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, '')))));
+      const existing = JSON.parse(this._b64DecodeUTF8(fileData.content));
       const existingKeys = new Set(existing.map(g => g.date + '||' + g.secretItem));
       const collision = this._pendingGames.some(g => existingKeys.has(g.date + '||' + g.secretItem));
       if (collision) {
@@ -2445,7 +2441,7 @@ class App {
 
       // 3. Append new games only
       const merged = [...existing, ...this._pendingGames];
-      const content = btoa(encodeURIComponent(JSON.stringify(merged, null, 2)));
+      const content = this._b64EncodeUTF8(JSON.stringify(merged, null, 2));
 
       const commitMsg = `Import ${this._pendingGames.length} game${this._pendingGames.length>1?'s':''}: ${this._pendingGames.map(g=>g.secretItem).join(', ')}`;
       status.innerText = `Committing ${this._pendingGames.length} new game${this._pendingGames.length>1?'s':''}...`;
