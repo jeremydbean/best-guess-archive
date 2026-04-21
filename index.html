@@ -89,8 +89,12 @@
   .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
   @media (max-width: 600px) {
     #play-game-layout { max-width: 100vw !important; }
-    #past-clues { position: sticky; top: 0; z-index: 20; background: rgba(15,23,42,0.97); box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08); }
-    #input-container { position: sticky; bottom: 0; z-index: 30; background: rgba(15,23,42,0.97); box-shadow: 0 -2px 8px 0 rgba(0,0,0,0.08); }
+    /* No sticky here — the flex column already positions these correctly.
+       sticky would resolve to <body> (overflow:hidden is not a scroll container),
+       causing #past-clues to float up and overlap the game header on devices
+       where dvh !== window.innerHeight - navHeight by even 1px. */
+    #past-clues { background: rgba(15,23,42,0.97); }
+    #input-container { background: rgba(15,23,42,0.97); }
     #active-clue-area { min-height: 120px; }
     input#guess-input { font-size: 18px; padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
   }
