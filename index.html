@@ -453,40 +453,10 @@ document.addEventListener('focusout', function(e) {
       overflow-x: auto;
       margin: 0 auto;
       scrollbar-gutter: stable both-edges;
+      scroll-behavior: smooth;
     }
-    .db-floating-side-arrow {
-      position: fixed;
-      top: 50vh;
-      transform: translateY(-50%);
-      height: 3.25rem;
-      width: 3.25rem;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      border: 1px solid rgba(96,165,250,0.42);
-      background: linear-gradient(180deg, rgba(15,23,42,0.96) 0%, rgba(30,41,59,0.94) 100%);
-      color: #e2e8f0;
-      box-shadow: 0 14px 30px rgba(2,6,23,0.32);
-      cursor: pointer;
-      z-index: 120;
-      transition: transform 0.18s, background 0.18s, color 0.18s, opacity 0.18s;
-      backdrop-filter: blur(10px);
-    }
-    .db-floating-side-arrow:hover {
-      color: #7dd3fc;
-      background: linear-gradient(180deg, rgba(30,41,59,0.98) 0%, rgba(51,65,85,0.96) 100%);
-      transform: translateY(-50%) scale(1.03);
-    }
-    .db-floating-side-arrow:disabled {
-      cursor: default;
-      transform: translateY(-50%);
-    }
-    #db-floating-side-left {
-      left: 1rem;
-    }
-    #db-floating-side-right {
-      right: 1rem;
+    .db-table-shell {
+      position: relative;
     }
     .db-table-shell::before,
     .db-table-shell::after {
@@ -517,58 +487,28 @@ document.addEventListener('focusout', function(e) {
       width: 100%;
       max-width: none;
     }
-      /* Revert to default table layout */
-        }
-        .db-table th, .db-table td {
-          vertical-align: middle;
-        }
-        .db-table th {
-          /* Revert to default header style */
-        }
-        .db-table tbody tr:hover {
-          /* Remove row hover effect */
-        }
-        .db-table td {
-          /* Revert to default cell style */
-        }
-        .db-table td.text-right {
-          /* Remove forced right alignment */
-        }
-        .db-table td.text-center, .db-table th.text-center {
-          /* Remove forced center alignment */
-        }
-        .db-table th[onclick]::after {
-          /* Remove sorting indicator arrows */
-        }
-        .db-table th.sorted-asc::after {
-          /* Remove sorting indicator arrows */
-        }
-        .db-table th.sorted-desc::after {
-          /* Remove sorting indicator arrows */
-        }
+    .db-table th,
+    .db-table td {
+      vertical-align: middle;
     }
-    /* Removed max-width on containers to allow horizontal overflow for floating scrollbar */
-
-    /* Desktop scroll dock */
-    .db-scroll-dock {
-      position: sticky;
-      top: 4.5rem;
-      z-index: 30;
-      width: 100%;
+    .db-desktop-scroll-controls {
       display: none;
       align-items: center;
-      gap: 0.75rem;
-      padding: 0.75rem 0.9rem;
-      background: linear-gradient(180deg, rgba(15,23,42,0.97) 0%, rgba(15,23,42,0.92) 100%);
-      border-top: 1px solid rgba(96,165,250,0.18);
-      border-bottom: 1px solid rgba(148,163,184,0.14);
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid rgba(96,165,250,0.18);
+      background: linear-gradient(180deg, rgba(15,23,42,0.96) 0%, rgba(15,23,42,0.88) 100%);
       backdrop-filter: blur(12px);
+    }
+    .db-desktop-scroll-controls[hidden] {
+      display: none !important;
     }
     .db-scroll-copy {
       display: flex;
       flex-direction: column;
-      flex-shrink: 0;
-      min-width: 170px;
+      gap: 0.2rem;
+      min-width: 0;
     }
     .db-scroll-kicker {
       font-size: 0.62rem;
@@ -579,150 +519,76 @@ document.addEventListener('focusout', function(e) {
       font-weight: 800;
     }
     .db-scroll-caption {
-      font-size: 0.72rem;
+      font-size: 0.78rem;
       color: #94a3b8;
-      margin-top: 0.18rem;
-      white-space: nowrap;
     }
-    .db-scroll-shell {
-      position: relative;
-      flex: 1 1 auto;
-      min-width: 0;
+    .db-scroll-actions {
       display: flex;
       align-items: center;
-      gap: 0.55rem;
-    }
-    .db-scroll-shell::before,
-    .db-scroll-shell::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 28px;
-      pointer-events: none;
-      z-index: 1;
-    }
-    .db-scroll-shell::before {
-      left: 2.6rem;
-      background: linear-gradient(90deg, rgba(15,23,42,0.95), rgba(15,23,42,0));
-    }
-    .db-scroll-shell::after {
-      right: 2.6rem;
-      background: linear-gradient(270deg, rgba(15,23,42,0.95), rgba(15,23,42,0));
-    }
-    .db-scroll-track {
-      overflow-x: scroll;
-      width: 100%;
-      height: 16px;
-      padding: 2px 0;
-      border-radius: 999px;
-      background: rgba(30,41,59,0.95);
-      border: 1px solid rgba(71,85,105,0.85);
-      scrollbar-color: #60a5fa rgba(15,23,42,0.2);
-      scrollbar-width: thin;
-      position: relative;
-      z-index: 2;
-    }
-    .db-scroll-track > div {
-      height: 8px;
-      border-radius: 999px;
-    }
-    .db-scroll-track::-webkit-scrollbar {
-      height: 10px;
-    }
-    .db-scroll-track::-webkit-scrollbar-track {
-      background: rgba(15,23,42,0.28);
-      border-radius: 999px;
-    }
-    .db-scroll-track::-webkit-scrollbar-thumb {
-      background: linear-gradient(90deg, #38bdf8, #60a5fa);
-      border-radius: 999px;
-      border: 1px solid rgba(15,23,42,0.18);
-    }
-    .db-scroll-track::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(90deg, #7dd3fc, #93c5fd);
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
     .db-scroll-arrow {
-      height: 2rem;
-      width: 2rem;
+      min-width: 8.5rem;
+      height: 2.75rem;
+      padding: 0 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 0.55rem;
       color: #e2e8f0;
-      background: rgba(30,41,59,0.96);
+      background: linear-gradient(180deg, rgba(30,41,59,0.98) 0%, rgba(15,23,42,0.95) 100%);
       border-radius: 999px;
       cursor: pointer;
-      border: 1px solid rgba(96,165,250,0.35);
-      box-shadow: 0 4px 14px rgba(2,6,23,0.22);
+      border: 1px solid rgba(96,165,250,0.4);
+      box-shadow: 0 8px 18px rgba(2,6,23,0.22);
       transition: background 0.2s, color 0.2s, transform 0.2s;
-      position: relative;
-      z-index: 2;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
     }
     .db-scroll-arrow:hover {
-      color: #60a5fa;
-      background: rgba(51,65,85,0.98);
+      color: #7dd3fc;
+      background: linear-gradient(180deg, rgba(51,65,85,0.98) 0%, rgba(30,41,59,0.98) 100%);
       transform: translateY(-1px);
     }
     .db-scroll-arrow:disabled {
       cursor: default;
       transform: none;
+      opacity: 0.35;
+    }
+    .db-scroll-arrow .db-arrow-glyph {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      line-height: 1;
+      letter-spacing: 0;
     }
     @media (min-width: 768px) {
-      .db-scroll-dock { display: flex; }
+      .db-desktop-scroll-controls { display: flex; }
     }
     @media (max-width: 767px) {
-      .db-scroll-dock { display: none !important; }
-      .db-floating-side-arrow { display: none !important; }
-    }
-
-    /* Floating horizontal scrollbar */
-    #db-floating-scrollbar {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 24px;
-      background: rgba(30,41,59,0.95);
-      border-top: 1px solid #334155;
-      z-index: 100;
-      display: none;
-      align-items: center;
-      padding: 0 16px;
-      box-shadow: 0 -2px 8px 0 rgba(0,0,0,0.12);
-    }
-    #db-floating-scrollbar-inner {
-      overflow-x: auto;
-      width: 100%;
-      height: 16px;
-    }
-    #db-floating-scrollbar .db-float-arrow {
-      height: 20px;
-      width: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #cbd5e1;
-      background: #1e293b;
-      border-radius: 6px;
-      margin: 0 4px;
-      cursor: pointer;
-      border: 1px solid #334155;
-      opacity: 0.9;
-      transition: background 0.2s, color 0.2s;
-    }
-    #db-floating-scrollbar .db-float-arrow:hover {
-      color: #60a5fa;
-      background: #334155;
-    }
-    @media (min-width: 768px) {
-      #db-floating-scrollbar { display: none !important; }
-    }
-    @media (max-width: 600px) {
-      #db-floating-scrollbar { display: none !important; }
+      .db-desktop-scroll-controls { display: none !important; }
     }
   </style>
 
   <div class="glass-panel rounded-xl overflow-hidden shadow-xl border border-slate-700 db-responsive-container">
+    <div id="db-desktop-controls" class="db-desktop-scroll-controls" hidden>
+      <div class="db-scroll-copy">
+        <span class="db-scroll-kicker">Desktop Column Scroll</span>
+        <span class="db-scroll-caption">Use the clear &lt; and &gt; buttons to move across the table.</span>
+      </div>
+      <div class="db-scroll-actions">
+        <button id="db-scroll-left" class="db-scroll-arrow" aria-label="Scroll database left">
+          <span class="db-arrow-glyph" aria-hidden="true">&lt;</span>
+          <span>LEFT</span>
+        </button>
+        <button id="db-scroll-right" class="db-scroll-arrow" aria-label="Scroll database right">
+          <span>RIGHT</span>
+          <span class="db-arrow-glyph" aria-hidden="true">&gt;</span>
+        </button>
+      </div>
+    </div>
     <div class="relative db-responsive-inner db-table-shell" id="db-table-shell">
       <div class="db-table-scroll" id="db-table-scroll" style="transition: transform 0.2s;">
         <table class="db-table w-full text-left text-xs text-slate-300 leading-tight">
@@ -747,270 +613,69 @@ document.addEventListener('focusout', function(e) {
         <tbody class="divide-y divide-slate-700/50" id="db-table-body"></tbody>
       </table>
     </div>
-    <div id="db-scrollbar" class="db-scroll-dock">
-      <div class="db-scroll-copy">
-        <span class="db-scroll-kicker">Desktop Scroll</span>
-        <span class="db-scroll-caption">Drag the bar or tap arrows to scan columns</span>
-      </div>
-      <div class="db-scroll-shell">
-      <button id="db-scroll-left" class="db-scroll-arrow" style="display:none; opacity:0.95;" aria-label="Scroll database left">
-        <span class="material-symbols-outlined">arrow_back_ios_new</span>
-      </button>
-      <div id="db-scrollbar-inner" class="db-scroll-track">
-        <div></div>
-      </div>
-      <button id="db-scroll-right" class="db-scroll-arrow" style="display:none; opacity:0.95;" aria-label="Scroll database right">
-        <span class="material-symbols-outlined">arrow_forward_ios</span>
-      </button>
-      </div>
-    </div>
     <div class="bg-slate-900/50 px-6 py-3 text-xs text-slate-500 flex justify-between items-center">
       <span id="db-count-display">Loading database...</span>
     </div>
     <script>
+    window.setupDatabaseScrollControls = function setupDatabaseScrollControls() {
+      const controls = document.getElementById('db-desktop-controls');
+      const tableShell = document.getElementById('db-table-shell');
+      const tableScroll = document.getElementById('db-table-scroll');
+      const leftBtn = document.getElementById('db-scroll-left');
+      const rightBtn = document.getElementById('db-scroll-right');
+      if (!controls || !tableShell || !tableScroll || !leftBtn || !rightBtn) return;
 
-    // Move floating horizontal scrollbar to <body> and control its visibility globally
-    (function() {
-      // Create floating bar if not present
-      if (!document.getElementById('db-floating-scrollbar')) {
-        const floatBar = document.createElement('div');
-        floatBar.id = 'db-floating-scrollbar';
-        floatBar.innerHTML = `
-          <span class="db-float-arrow" id="db-float-left" title="Scroll left">
-            <span class="material-symbols-outlined">arrow_back_ios_new</span>
-          </span>
-          <div id="db-floating-scrollbar-inner"><div style="height:1px;"></div></div>
-          <span class="db-float-arrow" id="db-float-right" title="Scroll right">
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
-          </span>
-        `;
-        floatBar.style.display = 'none';
-        document.body.appendChild(floatBar);
+      if (typeof tableScroll._dbScrollCleanup === 'function') {
+        tableScroll._dbScrollCleanup();
+        tableScroll._dbScrollCleanup = null;
       }
-      if (!document.getElementById('db-floating-side-left')) {
-        const sideLeft = document.createElement('button');
-        sideLeft.id = 'db-floating-side-left';
-        sideLeft.className = 'db-floating-side-arrow';
-        sideLeft.setAttribute('aria-label', 'Scroll database left');
-        sideLeft.innerHTML = '<span class="material-symbols-outlined">chevron_left</span>';
-        sideLeft.style.display = 'none';
-        document.body.appendChild(sideLeft);
-      }
-      if (!document.getElementById('db-floating-side-right')) {
-        const sideRight = document.createElement('button');
-        sideRight.id = 'db-floating-side-right';
-        sideRight.className = 'db-floating-side-arrow';
-        sideRight.setAttribute('aria-label', 'Scroll database right');
-        sideRight.innerHTML = '<span class="material-symbols-outlined">chevron_right</span>';
-        sideRight.style.display = 'none';
-        document.body.appendChild(sideRight);
-      }
-      // Helper to get elements
-      function getDbEls() {
-        return {
-          tableShell: document.getElementById('db-table-shell'),
-          tableScroll: document.getElementById('db-table-scroll'),
-          table: document.querySelector('#db-table-scroll table'),
-          fakeScrollbar: document.getElementById('db-scrollbar-inner'),
-          leftBtn: document.getElementById('db-scroll-left'),
-          rightBtn: document.getElementById('db-scroll-right'),
-          sideLeft: document.getElementById('db-floating-side-left'),
-          sideRight: document.getElementById('db-floating-side-right'),
-          floatBar: document.getElementById('db-floating-scrollbar'),
-          floatInner: document.getElementById('db-floating-scrollbar-inner'),
-          floatLeft: document.getElementById('db-float-left'),
-          floatRight: document.getElementById('db-float-right'),
-        };
-      }
-      // Sync and show/hide logic
-      function setupFloatingBar() {
-        const { tableShell, tableScroll, table, fakeScrollbar, leftBtn, rightBtn, sideLeft, sideRight, floatBar, floatInner, floatLeft, floatRight } = getDbEls();
-        if (!tableScroll || !table || !fakeScrollbar || !floatBar || !floatInner || !floatLeft || !floatRight || !tableShell || !sideLeft || !sideRight) return;
-        if (typeof floatBar._dbCleanup === 'function') {
-          floatBar._dbCleanup();
-          floatBar._dbCleanup = null;
-        }
-        function syncWidth() {
-          fakeScrollbar.firstElementChild.style.width = table.scrollWidth + 'px';
-          floatInner.firstElementChild.style.width = table.scrollWidth + 'px';
-        }
-        function syncScroll() {
-          fakeScrollbar.scrollLeft = tableScroll.scrollLeft;
-          floatInner.scrollLeft = tableScroll.scrollLeft;
-          updateArrows();
-        }
-        function syncFakeScroll() {
-          tableScroll.scrollLeft = fakeScrollbar.scrollLeft;
-          floatInner.scrollLeft = fakeScrollbar.scrollLeft;
-          updateArrows();
-        }
-        function syncFloatScroll() {
-          tableScroll.scrollLeft = floatInner.scrollLeft;
-          fakeScrollbar.scrollLeft = floatInner.scrollLeft;
-          updateArrows();
-        }
-        function updateArrows() {
-          const maxScroll = tableScroll.scrollWidth - tableScroll.clientWidth;
-          const canScroll = maxScroll > 10;
-          const canScrollLeft = tableScroll.scrollLeft > 10;
-          const canScrollRight = tableScroll.scrollLeft < maxScroll - 10;
-          if (leftBtn && rightBtn) {
-            if (canScroll) {
-              leftBtn.style.display = '';
-              rightBtn.style.display = '';
-              leftBtn.disabled = !canScrollLeft;
-              rightBtn.disabled = !canScrollRight;
-              leftBtn.style.opacity = leftBtn.disabled ? 0.4 : 0.95;
-              rightBtn.style.opacity = rightBtn.disabled ? 0.4 : 0.95;
-            } else {
-              leftBtn.style.display = 'none';
-              rightBtn.style.display = 'none';
-            }
-          }
-          if (sideLeft && sideRight) {
-            sideLeft.style.display = canScroll ? 'flex' : 'none';
-            sideRight.style.display = canScroll ? 'flex' : 'none';
-            sideLeft.disabled = !canScrollLeft;
-            sideRight.disabled = !canScrollRight;
-            sideLeft.style.opacity = sideLeft.disabled ? 0.28 : 0.98;
-            sideRight.style.opacity = sideRight.disabled ? 0.28 : 0.98;
-          }
-          if (tableShell) {
-            tableShell.classList.toggle('can-scroll-left', canScrollLeft);
-            tableShell.classList.toggle('can-scroll-right', canScrollRight);
-          }
-          if (floatLeft && floatRight) {
-            if (canScroll) {
-              floatLeft.style.display = '';
-              floatRight.style.display = '';
-              floatLeft.style.opacity = canScrollLeft ? 0.95 : 0.4;
-              floatRight.style.opacity = canScrollRight ? 0.95 : 0.4;
-            } else {
-              floatLeft.style.display = 'none';
-              floatRight.style.display = 'none';
-            }
-          }
-        }
-        function updateFloatBarVisibility() {
-          const needsScroll = tableScroll.scrollWidth > tableScroll.clientWidth + 10;
-          floatBar.style.display = needsScroll ? 'flex' : 'none';
-        }
-        function updateSideArrowPosition() {
-          if (!sideLeft || !sideRight || !tableShell) return;
-          const desktop = window.innerWidth >= 768;
-          const rect = tableShell.getBoundingClientRect();
-          const maxScroll = tableScroll.scrollWidth - tableScroll.clientWidth;
-          const needsScroll = desktop && maxScroll > 10;
-          const verticallyVisible = rect.bottom > 120 && rect.top < window.innerHeight - 120;
-          if (!needsScroll || !verticallyVisible) {
-            sideLeft.style.display = 'none';
-            sideRight.style.display = 'none';
-            return;
-          }
-          const visibleTop = Math.max(rect.top, 96);
-          const visibleBottom = Math.min(rect.bottom, window.innerHeight - 96);
-          const centerY = Math.max(120, Math.min((visibleTop + visibleBottom) / 2, window.innerHeight - 120));
-          sideLeft.style.top = centerY + 'px';
-          sideRight.style.top = centerY + 'px';
-          sideLeft.style.left = Math.max(16, rect.left + 10) + 'px';
-          sideRight.style.left = Math.max(16, rect.right - 62) + 'px';
-          sideLeft.style.right = 'auto';
-          sideRight.style.right = 'auto';
-        }
-        const onFakeScroll = syncFakeScroll;
-        const onFloatScroll = syncFloatScroll;
-        const onTableScroll = function() {
-          syncScroll();
-          updateFloatBarVisibility();
-          updateSideArrowPosition();
-        };
-        const onLeftClick = function() {
-          tableScroll.scrollBy({ left: -320, behavior: 'smooth' });
-        };
-        const onRightClick = function() {
-          tableScroll.scrollBy({ left: 320, behavior: 'smooth' });
-        };
-        const onSideLeftClick = function() {
-          tableScroll.scrollBy({ left: -320, behavior: 'smooth' });
-        };
-        const onSideRightClick = function() {
-          tableScroll.scrollBy({ left: 320, behavior: 'smooth' });
-        };
-        const onFloatLeftClick = function() {
-          tableScroll.scrollBy({ left: -320, behavior: 'smooth' });
-        };
-        const onFloatRightClick = function() {
-          tableScroll.scrollBy({ left: 320, behavior: 'smooth' });
-        };
-        const onResize = function() {
-          syncWidth();
-          updateFloatBarVisibility();
-          updateArrows();
-          updateSideArrowPosition();
-        };
-        const onWindowScroll = function() {
-          updateSideArrowPosition();
-        };
-        // Event listeners
-        fakeScrollbar.addEventListener('scroll', onFakeScroll);
-        floatInner.addEventListener('scroll', onFloatScroll);
-        tableScroll.addEventListener('scroll', onTableScroll);
-        leftBtn && leftBtn.addEventListener('click', onLeftClick);
-        rightBtn && rightBtn.addEventListener('click', onRightClick);
-        sideLeft.addEventListener('click', onSideLeftClick);
-        sideRight.addEventListener('click', onSideRightClick);
-        floatLeft.addEventListener('click', onFloatLeftClick);
-        floatRight.addEventListener('click', onFloatRightClick);
-        window.addEventListener('resize', onResize);
-        window.addEventListener('scroll', onWindowScroll, { passive: true });
-        setTimeout(syncWidth, 100);
-        syncWidth();
-        setTimeout(updateArrows, 200);
-        setTimeout(updateArrows, 1000);
-        setTimeout(updateFloatBarVisibility, 200);
-        setTimeout(updateFloatBarVisibility, 1000);
-        setTimeout(updateSideArrowPosition, 200);
-        setTimeout(updateSideArrowPosition, 1000);
-        // Show bar
-        updateFloatBarVisibility();
-        updateArrows();
-        updateSideArrowPosition();
-        floatBar._dbCleanup = function() {
-          fakeScrollbar.removeEventListener('scroll', onFakeScroll);
-          floatInner.removeEventListener('scroll', onFloatScroll);
-          tableScroll.removeEventListener('scroll', onTableScroll);
-          leftBtn && leftBtn.removeEventListener('click', onLeftClick);
-          rightBtn && rightBtn.removeEventListener('click', onRightClick);
-          sideLeft.removeEventListener('click', onSideLeftClick);
-          sideRight.removeEventListener('click', onSideRightClick);
-          floatLeft.removeEventListener('click', onFloatLeftClick);
-          floatRight.removeEventListener('click', onFloatRightClick);
-          window.removeEventListener('resize', onResize);
-          window.removeEventListener('scroll', onWindowScroll);
-          sideLeft.style.display = 'none';
-          sideRight.style.display = 'none';
-        };
-      }
-      // Show/hide floating bar on view change
-      const origSetView = app.setView.bind(app);
-      app.setView = function(name) {
-        origSetView(name);
-        const floatBar = document.getElementById('db-floating-scrollbar');
-        if (name === 'database') {
-          setTimeout(setupFloatingBar, 200);
-        } else {
-          if (floatBar && typeof floatBar._dbCleanup === 'function') {
-            floatBar._dbCleanup();
-            floatBar._dbCleanup = null;
-          }
-          if (floatBar) floatBar.style.display = 'none';
-        }
+      const scrollStep = () => Math.max(320, Math.round(tableScroll.clientWidth * 0.72));
+
+      const updateControls = () => {
+        const maxScroll = Math.max(0, tableScroll.scrollWidth - tableScroll.clientWidth);
+        const needsScroll = maxScroll > 10;
+        const canScrollLeft = tableScroll.scrollLeft > 10;
+        const canScrollRight = tableScroll.scrollLeft < maxScroll - 10;
+        const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+
+        controls.hidden = !(isDesktop && needsScroll);
+        leftBtn.disabled = !canScrollLeft;
+        rightBtn.disabled = !canScrollRight;
+        tableShell.classList.toggle('can-scroll-left', canScrollLeft);
+        tableShell.classList.toggle('can-scroll-right', canScrollRight);
       };
-      // If already on database view, setup immediately
-      if (document.getElementById('db-table-scroll')) {
-        setTimeout(setupFloatingBar, 200);
+
+      const onLeftClick = () => {
+        tableScroll.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
+      };
+      const onRightClick = () => {
+        tableScroll.scrollBy({ left: scrollStep(), behavior: 'smooth' });
+      };
+      const onResize = () => updateControls();
+      const onScroll = () => updateControls();
+
+      leftBtn.addEventListener('click', onLeftClick);
+      rightBtn.addEventListener('click', onRightClick);
+      tableScroll.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onResize);
+
+      updateControls();
+      requestAnimationFrame(updateControls);
+      setTimeout(updateControls, 120);
+
+      tableScroll._dbScrollCleanup = function() {
+        leftBtn.removeEventListener('click', onLeftClick);
+        rightBtn.removeEventListener('click', onRightClick);
+        tableScroll.removeEventListener('scroll', onScroll);
+        window.removeEventListener('resize', onResize);
+      };
+    };
+
+    setTimeout(() => {
+      if (typeof window.setupDatabaseScrollControls === 'function') {
+        window.setupDatabaseScrollControls();
       }
-    })();
+    }, 0);
     </script>
   </div>
 </div>
@@ -2136,7 +1801,11 @@ class App {
         </td>
       </tr>`;
     }).join('');
-    // Zoom feature removed
+    setTimeout(() => {
+      if (typeof window.setupDatabaseScrollControls === 'function') {
+        window.setupDatabaseScrollControls();
+      }
+    }, 0);
   }
 
 
