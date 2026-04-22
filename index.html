@@ -2105,6 +2105,7 @@ class App {
 
     // ---- Records & Fun Facts ----
     const biggestPot = games.reduce((a,b) => b.pot>a.pot ? b : a);
+    const lowestPot = games.filter(g=>g.pot>0).reduce((a,b) => b.pot<a.pot ? b : a);
     const mostWinnersGame = games.reduce((a,b) => (b.totalWinners||b.winnerCount||0)>(a.totalWinners||a.winnerCount||0) ? b : a);
     const mostGuessesGame = games.reduce((a,g) => { const t=g.clues.reduce((x,c)=>x+parseNum(c.guesses),0); return t>a.t?{t,g}:a; },{t:0,g:null});
     const longestItem = games.reduce((a,b) => b.secretItem.length>a.secretItem.length ? b : a);
@@ -2147,6 +2148,7 @@ class App {
 
     const records = [
       {icon:'monetization_on', color:'text-yellow-400', label:'Biggest Single Pot', val:'$'+biggestPot.pot.toLocaleString(), sub: biggestPot.secretItem+' · '+biggestPot.date},
+      {icon:'arrow_downward', color:'text-slate-400', label:'Lowest Single Pot', val:'$'+lowestPot.pot.toLocaleString(), sub: lowestPot.secretItem+' · '+lowestPot.date},
       {icon:'people', color:'text-green-400', label:'Most Winners in One Game', val:(mostWinnersGame.totalWinners||mostWinnersGame.winnerCount||0).toLocaleString(), sub: mostWinnersGame.secretItem+' · '+mostWinnersGame.date},
       {icon:'dangerous', color:'text-red-400', label:'Hardest Clue (Lowest %)',
         val: hardestClue ? `${hardestClue.clue.text}` : 'N/A',
