@@ -2194,7 +2194,7 @@ class App {
     const fewest = [...games].filter(g=>perWinner(g)!==null).sort((a,b)=>perWinner(a)-perWinner(b)).slice(0,5);
     document.getElementById('stats-fewest-list').innerHTML = fewest.map(g => {
       const amt=perWinner(g); const w=g.totalWinners||g.winnerCount||0;
-      return `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0"><div><div class="font-bold text-white">${g.secretItem}</div><div class="text-xs text-slate-500">${g.date}</div></div><div class="text-right shrink-0 ml-4"><div class="text-slate-300 font-bold text-sm bg-slate-700/50 px-2 py-1 rounded">$${Math.round(amt).toLocaleString()}/winner</div><div class="text-xs text-slate-500 mt-1">${w.toLocaleString()} winner${w===1?'':'s'} · $${g.pot.toLocaleString()} pot</div></div></li>`;
+      return `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0"><div><div class="font-bold text-white">${g.secretItem}</div><div class="text-xs text-slate-500">${g.date}</div></div><div class="text-right shrink-0 ml-4"><div class="text-slate-300 font-bold text-sm bg-slate-700/50 px-2 py-1 rounded">$${amt.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}/winner</div><div class="text-xs text-slate-500 mt-1">${w.toLocaleString()} winner${w===1?'':'s'} · $${g.pot.toLocaleString()} pot</div></div></li>`;
     }).join('');
     const bigPots = [...games].filter(g=>perWinner(g)!==null).sort((a,b)=>perWinner(b)-perWinner(a)).slice(0,5);
     document.getElementById('stats-bigpots-list').innerHTML = bigPots.map(g => {
