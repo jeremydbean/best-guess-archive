@@ -1411,16 +1411,25 @@ class App {
       stackEl.appendChild(div);
     }
 
-    // Hide the timer row during the brief "Incoming..." reveal
+    // Keep the timer row visible during the brief "Incoming..." reveal so the
+    // layout doesn't jump. Show it in a neutral greyed state with no animation.
     const timerRow = document.getElementById('timer-row');
-    if (timerRow) timerRow.style.display = 'none';
+    const barEl = document.getElementById('main-timer-bar');
+    const textEl = document.getElementById('main-timer-text');
+    if (timerRow) timerRow.style.display = '';
+    if (barEl) {
+      barEl.style.transition = 'none';
+      barEl.style.width = '100%';
+      barEl.style.background = 'rgba(148,163,184,0.3)';
+      barEl.style.boxShadow = 'none';
+    }
+    if (textEl) textEl.innerHTML = '<span class="text-white/50 font-display tabular-nums">—</span>';
 
     this._clueTimeout = setTimeout(() => {
       const loading = document.getElementById(`loading-state-${ci}`);
       const text = document.getElementById(`text-state-${ci}`);
       if (loading) loading.classList.add('hidden');
       if (text) text.classList.remove('hidden');
-      if (timerRow) timerRow.style.display = '';
       this.runClueTimer(
         clueSecs,
         document.getElementById('main-timer-bar'),
@@ -1457,26 +1466,16 @@ class App {
         if (textEl) textEl.innerText = remaining;
       } else {
         clearInterval(this._clueInterval);
-        // Switch the timer row into "waiting" mode — bar refills in a cooler blue
-        // over the 5s gap, countdown shows 5 → 1. Pill stays untouched.
+        // Waiting phase — grey out the bar (no animation) and swap the countdown
+        // number for a clean "WAITING 5s..." indicator. Pill stays untouched.
         barEl.style.transition = 'none';
-        barEl.style.width = '0%';
-        barEl.style.background = 'linear-gradient(90deg, #60a5fa 0%, #3b82f6 100%)';
-        barEl.style.boxShadow = '0 0 6px rgba(59,130,246,0.6)';
-        barEl.offsetHeight;
-        barEl.style.transition = 'width 5s linear';
         barEl.style.width = '100%';
+        barEl.style.background = 'rgba(148,163,184,0.35)';
+        barEl.style.boxShadow = 'none';
 
-        let wait = 5;
-        if (textEl) textEl.innerText = wait;
-        this._waitInterval = setInterval(() => {
-          wait--;
-          if (wait > 0) {
-            if (textEl) textEl.innerText = wait;
-          } else {
-            clearInterval(this._waitInterval);
-          }
-        }, 1000);
+        if (textEl) {
+          textEl.innerHTML = '<span class="text-[10px] md:text-xs text-[#FFA300] font-display font-bold uppercase tracking-widest animate-pulse whitespace-nowrap">Waiting 5s...</span>';
+        }
 
         this._delayTimeout = setTimeout(() => {
           this.nextClue();
