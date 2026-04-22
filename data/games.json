@@ -739,7 +739,7 @@
     "secretItem": "SKUNK",
     "clues": [
       {
-        "text": "TAILS YOU LOSE",
+        "text": "TAILS, YOU LOSE!",
         "correct": "134",
         "guesses": "9,819",
         "explanation": "Tails You Lose - 'If you see their tail go up, you're probably getting sprayed.'"
@@ -763,7 +763,7 @@
         "explanation": "Black And White And Dread All Over - 'They're generally black and white, and if you see one, you feel dread. You run away.'"
       },
       {
-        "text": "WHEN ONE CROSSES YOUR PATH TAKE A TOMATO JUICE BATH",
+        "text": "WHEN ONE CROSSES YOUR PATH, TAKE A TOMATO JUICE BATH",
         "correct": "2,222",
         "guesses": "254",
         "explanation": "When One Crosses Your Path Take A Tomato Juice Bath - 'A tomato juice bath can help you get rid of the smell.'"
@@ -799,13 +799,13 @@
         "explanation": "Don't Let Me Down - 'The whole goal is to keep the hula hoop off the ground, so you just keep it going.'"
       },
       {
-        "text": "SHAKE RATTLE AND ROLL",
+        "text": "SHAKE, RATTLE, AND ROLL",
         "correct": "41",
         "guesses": "8,069",
         "explanation": "Shake Rattle And Roll - 'It rolls around your waist, and it keeps your hips shaking, and it's filled with noise-making little beads.'"
       },
       {
-        "text": "HIP HIP HOORAY",
+        "text": "HIP HIP HOORAY!",
         "correct": "922",
         "guesses": "5,638",
         "explanation": "Hip Hip Hooray - 'You'll say hooray if you successfully move from hip to hip.'"
