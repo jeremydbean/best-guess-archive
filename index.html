@@ -64,9 +64,9 @@
       linear-gradient(
         to bottom,
         rgba(2,6,22,0.78) 0%,
-        rgba(2,6,22,0.58) 40%,
-        rgba(2,6,22,0.25) 78%,
-        rgba(2,6,22,0.05) 100%
+        rgba(2,6,22,0.55) 45%,
+        rgba(2,6,22,0.18) 72%,
+        rgba(2,6,22,0.0) 100%
       ),
       url('play-bg.jpg');
     background-repeat: no-repeat;
@@ -368,12 +368,14 @@ document.addEventListener('focusout', function(e) {
   <!-- Active clue — pinned just above the timer row -->
   <div class="flex-shrink-0 px-3 pt-1 pb-1" id="active-clue-area"></div>
 
-  <!-- Timer row — orange/yellow progress bar + countdown number, below active clue -->
-  <div class="flex-shrink-0 px-3 pt-1 pb-2 flex items-center gap-3" id="timer-row" style="display:none">
-    <div class="flex-grow h-2.5 rounded-full overflow-hidden" style="background:rgba(0,0,0,0.45); box-shadow: inset 0 1px 2px rgba(0,0,0,0.5)">
-      <div id="main-timer-bar" class="h-full" style="background: linear-gradient(90deg, #f97316 0%, #fb923c 40%, #fbbf24 100%); box-shadow: 0 0 8px rgba(251,146,60,0.7); width:100%"></div>
+  <!-- Timer row — transparent grey pill wrapping the orange bar + countdown -->
+  <div class="flex-shrink-0 px-3 pt-1 pb-2" id="timer-row" style="display:none">
+    <div class="flex items-center gap-3 rounded-xl px-3 py-2" style="background:rgba(255,255,255,0.12); backdrop-filter:blur(6px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 8px rgba(0,0,0,0.35)">
+      <div class="flex-grow h-2.5 rounded-full overflow-hidden" style="background:rgba(0,0,0,0.4); box-shadow: inset 0 1px 2px rgba(0,0,0,0.5)">
+        <div id="main-timer-bar" class="h-full" style="background: linear-gradient(90deg, #f97316 0%, #fb923c 40%, #fbbf24 100%); box-shadow: 0 0 8px rgba(251,146,60,0.7); width:100%"></div>
+      </div>
+      <div id="main-timer-text" class="text-white font-bold font-display text-xl md:text-2xl tabular-nums leading-none min-w-[2.25rem] text-right" style="text-shadow: 0 1px 2px rgba(0,0,0,0.6)">0</div>
     </div>
-    <div id="main-timer-text" class="text-white font-bold font-display text-xl md:text-2xl tabular-nums leading-none min-w-[2.25rem] text-right" style="text-shadow: 0 1px 2px rgba(0,0,0,0.6)">0</div>
   </div>
 
   <!-- Input bar — always at bottom, part of normal flow (not fixed) -->
@@ -1311,15 +1313,13 @@ class App {
 
     document.getElementById('game-date').innerText = this.currentGame.date;
 
-    // Live player count: use the max guess count across this game's clues as the
-    // best proxy for total participants (one guess per player per clue; the peak
-    // clue is the closest to total unique players).
+    // Total players: sum of all clue guess counts for this secret item.
     const countEl = document.getElementById('game-player-count');
     if (countEl) {
-      const maxGuesses = Math.max(0, ...this.currentGame.clues.map(c =>
-        parseInt(String(c.guesses || '0').replace(/,/g, ''), 10) || 0
-      ));
-      countEl.innerText = maxGuesses.toLocaleString();
+      const totalGuesses = this.currentGame.clues.reduce((sum, c) =>
+        sum + (parseInt(String(c.guesses || '0').replace(/,/g, ''), 10) || 0), 0
+      );
+      countEl.innerText = totalGuesses.toLocaleString();
     }
 
     const hint = document.getElementById('play-rules-hint');
