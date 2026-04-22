@@ -527,31 +527,31 @@
     "secretItem": "LEMONADE",
     "clues": [
       {
-        "text": "3 TO ONE",
+        "text": "3 TO 1 \u2014 2 winners / 5,528 guesses",
         "correct": "2",
         "guesses": "5,528",
         "explanation": "Only three ingredients (lemons, water, and sugar) are needed to make one drink."
       },
       {
-        "text": "A ROCKY START",
+        "text": "A ROCKY START \u2014 1 winner / 6,082 guesses",
         "correct": "1",
         "guesses": "6,082",
         "explanation": "Lemonade is commonly served 'on the rocks' over ice."
       },
       {
-        "text": "SUMMER STREET SIGN",
+        "text": "SUMMER STREET SIGN \u2014 157 winners / 6,285 guesses",
         "correct": "157",
         "guesses": "6,285",
         "explanation": "Kids often set up lemonade stands with signs along streets during the summer."
       },
       {
-        "text": "HELP THE CITRUS DROP",
+        "text": "HELP THE CITRUS DROP \u2014 1,005 winners / 5,066 guesses",
         "correct": "1,050",
         "guesses": "5,066",
         "explanation": "Citrus drop refers to a lemon; 'help' is a synonym for 'aid' (Lemon-aid)."
       },
       {
-        "text": "A LIQUID LIQUID FOR KIDS",
+        "text": "A LIQUID LIQUID FOR KIDS \u2014 2,183 winners / 7,858 guesses",
         "correct": "2,183",
         "guesses": "7,858",
         "explanation": "Lemonade is a drink (liquid) that helps kids earn cash (liquid assets)."
@@ -579,31 +579,31 @@
     "secretItem": "BART SIMPSON",
     "clues": [
       {
-        "text": "NEVER CHANGES WITH THE SEASONS",
+        "text": "NEVER CHANGES WITH THE SEASONS \u2014 0 winners / 5,512 guesses",
         "correct": "0",
         "guesses": "5,512",
         "explanation": "The character has remained the same age throughout the show's 37 seasons."
       },
       {
-        "text": "POPULAR H&M PRODUCT",
+        "text": "POPULAR H&M PRODUCT \u2014 5 winners / 6,574 guesses",
         "correct": "5",
         "guesses": "6,574",
         "explanation": "He is the product/child of Homer and Marge (H&M)."
       },
       {
-        "text": "DISTINCT STYLE POINTS",
+        "text": "DISTINCT STYLE POINTS \u2014 6 winners / 11,258 guesses",
         "correct": "6",
         "guesses": "11,258",
         "explanation": "His spiky haircut features several distinct, pointed tips."
       },
       {
-        "text": "ON BOARD FOR SHENANIGANS",
+        "text": "ON BOARD FOR SHENANIGANS \u2014 4 winners / 3,691 guesses",
         "correct": "4",
         "guesses": "3,691",
         "explanation": "He is a skateboarder (on board) known for causing trouble (shenanigans)."
       },
       {
-        "text": "TV'S ANIMATED MIXED UP BRAT",
+        "text": "TV'S ANIMATED MIXED-UP BRAT \u2014 1,179 winners / 3,987 guesses",
         "correct": "1,179",
         "guesses": "3,967",
         "explanation": "Bart is an animated character and his name is an anagram of 'brat'."
@@ -895,7 +895,7 @@
         "explanation": "Multiple Finish Lines - 'You can win in many ways including getting it five up, down, across, or diagonal.'"
       },
       {
-        "text": "A GAME O A DOG O AND A SONG O",
+        "text": "A GAME-O, A DOG-O, AND A SONG-O",
         "correct": "3,158",
         "guesses": "3,785",
         "explanation": "A Game O A Dog O And A Song O - 'The game, the dog, and the song all end in O, or are all bingo.'"
@@ -2224,7 +2224,7 @@
         "text": "MIND READERS UNITE",
         "correct": "0",
         "guesses": "?",
-        "explanation": "Mind Readers Unite - 'Because you’re trying to guess what America thinks!'"
+        "explanation": "Mind Readers Unite - 'Because you\u2019re trying to guess what America thinks!'"
       },
       {
         "text": "RIVALRY FOR DNA",
@@ -2386,7 +2386,7 @@
         "text": "TRENDY POPUP",
         "correct": "2",
         "guesses": "8948",
-        "explanation": "Trendy Popup - 'They pop up above your lip and lately they’ve been very trendy.'"
+        "explanation": "Trendy Popup - 'They pop up above your lip and lately they\u2019ve been very trendy.'"
       },
       {
         "text": "MID COVER BAND",
@@ -2500,7 +2500,7 @@
         "text": "ALL FOR NOTHING",
         "correct": "5",
         "guesses": "5237",
-        "explanation": "All For Nothing - 'It’s all the information in the world almost all of it available at no cost.'"
+        "explanation": "All For Nothing - 'It\u2019s all the information in the world almost all of it available at no cost.'"
       },
       {
         "text": "GREAT WORK EVERYBODY",
@@ -2518,7 +2518,7 @@
         "text": "ONLINE BRATANNICA BUT EVEN MORE GIGANTICA",
         "correct": "3063",
         "guesses": "8361",
-        "explanation": "Online Bratannica But Even More Gigantica - 'It’s like the encyclopedia but with way more articles and it’s online.'"
+        "explanation": "Online Bratannica But Even More Gigantica - 'It\u2019s like the encyclopedia but with way more articles and it\u2019s online.'"
       }
     ],
     "goldClue": 1,
@@ -2560,7 +2560,7 @@
         "text": "A BLAST FROM THE PAST",
         "correct": "8",
         "guesses": "7604",
-        "explanation": "A Blast From The Past - 'You were having a good time last night and now you’re suffering the consequences.'"
+        "explanation": "A Blast From The Past - 'You were having a good time last night and now you\u2019re suffering the consequences.'"
       },
       {
         "text": "CAN HAPPEN IN VEGAS JUST LIKE \"THE\" MOVIE",
@@ -2602,7 +2602,7 @@
         "text": "MAKEUP WITH NO MAKEUP",
         "correct": "0",
         "guesses": "9408",
-        "explanation": "Makeup With No Makeup - 'The dad’s trying to make up with his son... and they’re both clown fish clowns that don’t wear makeup.'"
+        "explanation": "Makeup With No Makeup - 'The dad\u2019s trying to make up with his son... and they\u2019re both clown fish clowns that don\u2019t wear makeup.'"
       },
       {
         "text": "A GUILT TRIP",
@@ -4456,7 +4456,7 @@
         "text": "MIX DILL HERBS AND MAYO AND VEGGIES SAY HEYO",
         "correct": "6320",
         "guesses": "10439",
-        "explanation": "Mix Dill Herbs And Mayo And Veggies Say Heyo - 'That's the recipe. And many people use ranch on a crudité platter.'"
+        "explanation": "Mix Dill Herbs And Mayo And Veggies Say Heyo - 'That's the recipe. And many people use ranch on a crudit\u00e9 platter.'"
       },
       {
         "text": "HIDDEN VALLEY MADE VALID TO POUR ON YOUR SALAD",
@@ -6241,7 +6241,7 @@
         "explanation": "A Quick Dip In The Eerie Canal - \"While you are dipping your finger in someone's ear canal it's disgusting don't do it.\""
       },
       {
-        "text": "THE SLOBBERY FINGER WHERE YOU HEAR 'OH DEAR'",
+        "text": "A SLOBBERY FINGER WHERE YOU HEAR, OH DEAR!",
         "correct": "5,718",
         "guesses": "8,813",
         "explanation": "The Slobbery Finger Where You Hear Oh Dear - \"Clue number five a slobbery finger were you here oh dear.\""
@@ -6691,7 +6691,7 @@
     "bronzePayout": 0,
     "winnerPayout": "$769.23",
     "winnerNames": "Names not read",
-    "wrongGuesses": "PIñATA, BEETHOVEN'S FIFTH, INK, GIFT, SALMONELLA, DEBT, TICKET, ADVICE, TIME, MONEY, SPEEDING",
+    "wrongGuesses": "PI\u00f1ATA, BEETHOVEN'S FIFTH, INK, GIFT, SALMONELLA, DEBT, TICKET, ADVICE, TIME, MONEY, SPEEDING",
     "winningClue": 1,
     "winnerCount": 13
   },
@@ -7258,7 +7258,7 @@
         "text": "ALL THE RIGHT MOVES",
         "correct": "53",
         "guesses": "16,000",
-        "explanation": "All the right moves - \"Pac-man is a 90° right angles it's always right you It's always a right angle a 90° angle is all the moves are right angles\""
+        "explanation": "All the right moves - \"Pac-man is a 90\u00b0 right angles it's always right you It's always a right angle a 90\u00b0 angle is all the moves are right angles\""
       },
       {
         "text": "HIS WIFE TOOK HIS NAME",
@@ -9373,10 +9373,10 @@
         "explanation": "Arrives orderly in many shapes and sizes - \"arrives orderly in many shapes and sizes.\""
       },
       {
-        "text": "PASS THE KETCHUP S'IL VOUS PLAÎT",
+        "text": "PASS THE KETCHUP S'IL VOUS PLA\u00ceT",
         "correct": "1,800",
         "guesses": "N/A",
-        "explanation": "Pass the ketchup s'il vous plaît - 'well pass the ketchup, see, play French and fries.'"
+        "explanation": "Pass the ketchup s'il vous pla\u00eet - 'well pass the ketchup, see, play French and fries.'"
       }
     ],
     "goldClue": 3,
@@ -10294,7 +10294,7 @@
         "text": "WHETHER ON TOP OF THE WEATHER OR UNDER THE WEATHER",
         "correct": "1582",
         "guesses": "4,252",
-        "explanation": "Temperature, and a thermometer measures your temperature—and your body temperature—especially when you're sick. Are you under the weather? You get it."
+        "explanation": "Temperature, and a thermometer measures your temperature\u2014and your body temperature\u2014especially when you're sick. Are you under the weather? You get it."
       }
     ],
     "goldClue": 1,
@@ -10328,25 +10328,25 @@
         "text": "LOTS OF RIPS BUT NO HOLES",
         "correct": "5",
         "guesses": "10,074",
-        "explanation": "You can take big swings, but there is usually no hole to hit the ball into. That's the point—you're just driving; you're not trying to get to a hole."
+        "explanation": "You can take big swings, but there is usually no hole to hit the ball into. That's the point\u2014you're just driving; you're not trying to get to a hole."
       },
       {
         "text": "STOVE TOP IN A CAR",
         "correct": "11",
         "guesses": "4,965",
-        "explanation": "This is a riddle: you drive a car, and a stove top is often called a range—AKA driving range."
+        "explanation": "This is a riddle: you drive a car, and a stove top is often called a range\u2014AKA driving range."
       },
       {
         "text": "DISTANCE MAKES THE HEART GROW FONDER",
         "correct": "28",
         "guesses": "3,529",
-        "explanation": "You feel good the farther you hit it—that’s the whole point of a driving range."
+        "explanation": "You feel good the farther you hit it\u2014that\u2019s the whole point of a driving range."
       },
       {
         "text": "REHEARSAL IS IN FULL SWING",
         "correct": "103",
         "guesses": "6,097",
-        "explanation": "It's where you practice your golf swing. It's all about the rehearsal in your swing—that’s what a driving range is for."
+        "explanation": "It's where you practice your golf swing. It's all about the rehearsal in your swing\u2014that\u2019s what a driving range is for."
       }
     ],
     "goldClue": 1,
