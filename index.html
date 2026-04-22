@@ -1032,11 +1032,15 @@ async function sha256hex(str) {
 
 window.cleanupDatabaseScrollControls = function cleanupDatabaseScrollControls() {
   const tableScroll = document.getElementById('db-table-scroll');
+  const tableShell = document.getElementById('db-table-shell');
   const leftBtn = document.getElementById('db-scroll-left');
   const rightBtn = document.getElementById('db-scroll-right');
   if (tableScroll && typeof tableScroll._dbScrollCleanup === 'function') {
     tableScroll._dbScrollCleanup();
     tableScroll._dbScrollCleanup = null;
+  }
+  if (tableShell) {
+    tableShell.classList.remove('can-scroll-left', 'can-scroll-right');
   }
   if (leftBtn) leftBtn.hidden = true;
   if (rightBtn) rightBtn.hidden = true;
@@ -1101,9 +1105,17 @@ window.setupDatabaseScrollControls = function setupDatabaseScrollControls() {
   const onRightClick = () => {
     tableScroll.scrollBy({ left: scrollStep(), behavior: 'smooth' });
   };
-  const onResize = () => updateControls();
-  const onScroll = () => updateControls();
-  const onWindowScroll = () => updateControls();
+  let updateRaf = null;
+  const scheduleUpdate = () => {
+    if (updateRaf) return;
+    updateRaf = requestAnimationFrame(() => {
+      updateRaf = null;
+      updateControls();
+    });
+  };
+  const onResize = () => scheduleUpdate();
+  const onScroll = () => scheduleUpdate();
+  const onWindowScroll = () => scheduleUpdate();
 
   leftBtn.addEventListener('click', onLeftClick);
   rightBtn.addEventListener('click', onRightClick);
@@ -1112,8 +1124,8 @@ window.setupDatabaseScrollControls = function setupDatabaseScrollControls() {
   window.addEventListener('scroll', onWindowScroll, { passive: true });
 
   updateControls();
-  requestAnimationFrame(updateControls);
-  setTimeout(updateControls, 120);
+  requestAnimationFrame(scheduleUpdate);
+  setTimeout(scheduleUpdate, 120);
 
   tableScroll._dbScrollCleanup = function() {
     leftBtn.removeEventListener('click', onLeftClick);
@@ -1121,6 +1133,10 @@ window.setupDatabaseScrollControls = function setupDatabaseScrollControls() {
     tableScroll.removeEventListener('scroll', onScroll);
     window.removeEventListener('resize', onResize);
     window.removeEventListener('scroll', onWindowScroll);
+    if (updateRaf) {
+      cancelAnimationFrame(updateRaf);
+      updateRaf = null;
+    }
   };
 };
 
@@ -1862,7 +1878,7 @@ class App {
       // Cancelled / stub entry — no game was played
       if (g.note && g.clues.length === 0) {
         return `<tr class="border-b border-red-900/40 bg-red-950/20">
-          <td class="pl-4 pr-1 py-4 text-slate-400 font-mono text-xs db-col-date">${g.date}</td>
+          <td class="pl-4 pr-1 py-4 text-slate-400 font-mono text-xs db-col-date" title="${g.date}">${g.date}</td>
           <td colspan="13" class="px-4 py-4">
             <span class="inline-flex items-center gap-2 text-sm font-bold text-red-400">
               <span class="material-symbols-outlined" style="font-size:18px">cancel</span>
@@ -1926,7 +1942,7 @@ class App {
       // Winner names
 
       return `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
-        <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date">${g.date}</td>
+        <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${g.date}">${g.date}</td>
         <td class="px-1 py-1 font-semibold text-white align-middle" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;">
           <span style="white-space:nowrap;">${g.secretItem}</span>
           ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${g.note}</span></div>` : ''}
