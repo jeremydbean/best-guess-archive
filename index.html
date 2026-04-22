@@ -47,32 +47,15 @@
             display: block;
           }
         }
-      @media (max-width: 600px) {
-        body.keyboard-open #active-clue-area .bg-gradient-to-br {
-          min-height: 40px !important;
-          padding: 0.25rem 0.5rem !important;
-          height: auto !important;
-          box-shadow: none !important;
-        }
-        body.keyboard-open #active-clue-area .bg-gradient-to-br h2 {
-          font-size: 1.1rem !important;
-          padding: 0 !important;
-          margin: 0 !important;
-          line-height: 1.2 !important;
-        }
-        body.keyboard-open #active-clue-area .absolute.inset-0 {
-          display: none !important;
-        }
-      }
     /* Mobile keyboard handling and compressed layout */
     @media (max-width: 600px) {
-      body.keyboard-open #play-game-layout { max-height: 100dvh !important; overflow: hidden; }
-      body.keyboard-open #active-clue-area { min-height: 60px !important; padding: 0 !important; }
-      body.keyboard-open #active-clue-area h2 { font-size: 1.2rem !important; padding: 0.5rem 0 !important; }
-      body.keyboard-open #past-clues { max-height: 80px !important; }
+      body.in-play #play-game-layout { overflow: hidden; }
+      /* Removed keyboard-open layout rules — JS height tracking + flex handles compression */
       body.keyboard-open #input-container { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
     }
   body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #fff; background-image: radial-gradient(circle at 50% 0%, #1e1b4b, #0f172a); min-height: 100vh; }
+  body.in-play nav { display: none !important; }
+  body.in-play { overflow: hidden; touch-action: none; }
   .font-display { font-family: 'Oswald', sans-serif; }
   .glass-panel { background: rgba(30,41,59,.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.1); }
   .gold-gradient-text { background: linear-gradient(to bottom,#fde68a,#d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -89,8 +72,12 @@
   .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
   @media (max-width: 600px) {
     #play-game-layout { max-width: 100vw !important; }
-    #past-clues { position: sticky; top: 0; z-index: 20; background: rgba(15,23,42,0.97); box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08); }
-    #input-container { position: sticky; bottom: 0; z-index: 30; background: rgba(15,23,42,0.97); box-shadow: 0 -2px 8px 0 rgba(0,0,0,0.08); }
+    /* No sticky here — the flex column already positions these correctly.
+       sticky would resolve to <body> (overflow:hidden is not a scroll container),
+       causing #past-clues to float up and overlap the game header on devices
+       where dvh !== window.innerHeight - navHeight by even 1px. */
+    #past-clues { background: rgba(15,23,42,0.97); }
+    #input-container { background: rgba(15,23,42,0.97); }
     #active-clue-area { min-height: 120px; }
     input#guess-input { font-size: 18px; padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
   }
@@ -103,35 +90,58 @@
 
 
 <script>
-// Detect keyboard open on mobile and adjust layout
+// Detect keyboard open on mobile and adjust layout.
+// iPads running iPadOS 13+ report as "Macintosh", so check touch support too.
 function isMobile() {
-  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 }
-let lastInnerHeight = window.innerHeight;
-window.addEventListener('resize', function() {
-  if (!isMobile()) return;
-  // If height shrinks by >120px, likely keyboard is open
-  if (window.innerHeight < lastInnerHeight - 120) {
+
+function setKeyboardOpen(open) {
+  if (open) {
     document.body.classList.add('keyboard-open');
-  } else if (window.innerHeight > lastInnerHeight + 80) {
+  } else {
     document.body.classList.remove('keyboard-open');
   }
-  lastInnerHeight = window.innerHeight;
-});
-// Also handle input focus/blur for extra reliability
+}
+
+// visualViewport is the reliable API: window.innerHeight stays fixed on iOS
+// when the soft keyboard opens, but visualViewport.height shrinks.
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', function() {
+    if (!isMobile()) return;
+    const gap = window.innerHeight - window.visualViewport.height;
+    setKeyboardOpen(gap > 120);
+  });
+} else {
+  // Fallback for older browsers
+  let lastInnerHeight = window.innerHeight;
+  window.addEventListener('resize', function() {
+    if (!isMobile()) return;
+    if (window.innerHeight < lastInnerHeight - 120) {
+      setKeyboardOpen(true);
+    } else if (window.innerHeight > lastInnerHeight + 80) {
+      setKeyboardOpen(false);
+    }
+    lastInnerHeight = window.innerHeight;
+  });
+}
+
+// focusin immediately marks keyboard open (before resize fires).
+// focusout uses a short delay so tapping SKIP CLUE doesn't collapse the
+// layout before the tap registers on its new position.
+let _kbCloseTimer = null;
 document.addEventListener('focusin', function(e) {
-  if (isMobile() && e.target && e.target.id === 'guess-input') {
-    document.body.classList.add('keyboard-open');
-    setTimeout(()=>{
-      // Scroll the play area into view
-      const play = document.getElementById('play-game-layout');
-      if (play) play.scrollIntoView({block:'start', behavior:'smooth'});
-    }, 100);
+  if (e.target && e.target.id === 'guess-input') {
+    clearTimeout(_kbCloseTimer);
+    if (isMobile()) setKeyboardOpen(true);
   }
 });
 document.addEventListener('focusout', function(e) {
-  if (isMobile() && e.target && e.target.id === 'guess-input') {
-    document.body.classList.remove('keyboard-open');
+  if (e.target && e.target.id === 'guess-input') {
+    _kbCloseTimer = setTimeout(function() {
+      setKeyboardOpen(false);
+    }, 150);
   }
 });
 </script>
@@ -341,7 +351,8 @@ document.addEventListener('focusout', function(e) {
   <!-- Input bar — always at bottom, part of normal flow (not fixed) -->
   <div class="flex-shrink-0 border-t border-white/10 bg-slate-900/80 backdrop-blur-md px-3 pt-3 pb-4" id="input-container" style="padding-bottom: max(1rem, env(safe-area-inset-bottom))">
     <div class="relative mb-2">
-      <input autocomplete="off" id="guess-input" type="text"
+      <input autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="go"
+        id="guess-input" type="text"
         class="w-full bg-slate-800 border border-slate-600 rounded-lg py-3 pl-4 pr-28 text-base text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
         placeholder="Your best guess..."
         onkeydown="if(event.key==='Enter') app.submitGuess()">
@@ -349,19 +360,19 @@ document.addEventListener('focusout', function(e) {
         <span class="material-symbols-outlined" style="font-size:16px;line-height:1">check</span> LOCK IN
       </button>
     </div>
-    <div class="flex justify-between">
+    <div class="flex justify-between items-center">
       <div class="flex items-center gap-2 text-xs text-slate-400">
         <span class="material-symbols-outlined text-[#FFA300] text-[16px]">timer</span>
-        <label for="clue-duration-select">Clue Display Time:</label>
-        <select id="clue-duration-select" class="bg-slate-800 border border-slate-600 focus:border-blue-500 text-white rounded px-1 py-0.5 outline-none transition" onchange="localStorage.setItem('clue_time', this.value); if(app.currentGame && app.gameStarted) app.renderGameLoop();">
-          <option value="20">20s (Real Game)</option>
+        <label for="clue-duration-select" class="hidden sm:inline">Clue Time:</label>
+        <select id="clue-duration-select" class="bg-slate-800 border border-slate-600 focus:border-blue-500 text-white rounded px-2 py-1.5 outline-none transition text-xs" onchange="localStorage.setItem('clue_time', this.value); if(app.currentGame && app.gameStarted) app.renderGameLoop();">
+          <option value="20">20s (Real)</option>
           <option value="30">30s</option>
           <option value="45">45s</option>
           <option value="60">60s</option>
         </select>
       </div>
-      <button class="text-slate-400 hover:text-white flex items-center gap-1 text-xs transition" onclick="app.nextClue()">
-        SKIP CLUE <span class="material-symbols-outlined" style="font-size:14px;line-height:1">skip_next</span>
+      <button class="text-slate-400 hover:text-white active:text-white flex items-center gap-1 text-xs font-bold transition py-2 px-3 rounded-lg hover:bg-white/10 active:bg-white/10 min-h-[36px]" onclick="app.nextClue()">
+        SKIP <span class="material-symbols-outlined" style="font-size:16px;line-height:1">skip_next</span>
       </button>
     </div>
   </div>
@@ -1070,22 +1081,71 @@ class App {
     if (!tpl) return;
     const container = document.getElementById('app-container');
     container.innerHTML = tpl.innerHTML;
-    // Play mode: fill the viewport with no padding so the layout is self-contained
+    // Play mode: absolute full-viewport layout using position:fixed so no
+    // part of the page (including the sticky nav) can appear behind or
+    // around the game. Inline styles are used (not just the in-play class)
+    // because they have maximum specificity and cannot be overridden by
+    // Tailwind classes or iOS Safari quirks.
+    const navEl = document.querySelector('nav');
     if (name === 'play') {
+      document.body.classList.add('in-play');
+      document.documentElement.style.overflow = 'hidden';
+      if (navEl) navEl.style.display = 'none';
       container.style.padding = '0';
       container.style.overflow = 'hidden';
-      // Size the game layout to fill remaining viewport below the nav (64px)
       const layout = document.getElementById('play-game-layout');
       if (layout) {
-        layout.style.height = 'calc(100dvh - 64px)';
-        layout.style.maxWidth = '48rem'; // max-w-3xl equivalent
+        layout.style.position = 'fixed';
+        layout.style.left = '0';
+        layout.style.right = '0';
         layout.style.margin = '0 auto';
+        layout.style.maxWidth = '48rem';
+        layout.style.zIndex = '100';
+        // Track both height AND offsetTop of the visual viewport.
+        // On iOS Safari, even with overflow:hidden on body, Safari can shift
+        // the visual viewport when an input is focused (offsetTop becomes > 0),
+        // placing our fixed-top layout above the visible area. Tracking offsetTop
+        // keeps the layout anchored to what the user can actually see.
+        const applyPlayLayout = () => {
+          const vv = window.visualViewport;
+          const vvh = vv ? vv.height : window.innerHeight;
+          const vvTop = vv ? vv.offsetTop : 0;
+          layout.style.top = vvTop + 'px';
+          layout.style.height = vvh + 'px';
+        };
+        applyPlayLayout();
+        if (this._playResizeHandler) {
+          window.removeEventListener('resize', this._playResizeHandler);
+          if (window.visualViewport) {
+            window.visualViewport.removeEventListener('resize', this._playResizeHandler);
+            window.visualViewport.removeEventListener('scroll', this._playResizeHandler);
+          }
+        }
+        this._playResizeHandler = applyPlayLayout;
+        window.addEventListener('resize', this._playResizeHandler);
+        if (window.visualViewport) {
+          window.visualViewport.addEventListener('resize', this._playResizeHandler);
+          window.visualViewport.addEventListener('scroll', this._playResizeHandler);
+        }
       }
     } else {
+      document.body.classList.remove('in-play');
+      document.documentElement.style.overflow = '';
+      if (navEl) navEl.style.display = '';
       container.style.padding = '';
       container.style.overflow = '';
+      if (this._playResizeHandler) {
+        window.removeEventListener('resize', this._playResizeHandler);
+        if (window.visualViewport) {
+          window.visualViewport.removeEventListener('resize', this._playResizeHandler);
+          window.visualViewport.removeEventListener('scroll', this._playResizeHandler);
+        }
+        this._playResizeHandler = null;
+      }
     }
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     if (name === 'home') {
       this.renderHomeStats(); 
       this._applyTipLinks();
@@ -1204,6 +1264,13 @@ class App {
     if (this._delayTimeout) clearTimeout(this._delayTimeout);
   }
 
+  // Case-insensitive comparison helper that also strips spaces, punctuation, and any
+  // Unicode injected by mobile keyboards. NFKD decomposes accented chars and ligatures;
+  // [^a-z0-9] then removes the leftover combining marks along with everything else.
+  _normalizeAnswer(s) {
+    return String(s || '').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g, '');
+  }
+
   startRandomGame() {
     this.clearTimers();
     this.setView('play');
@@ -1255,7 +1322,9 @@ class App {
     const inputEl = document.getElementById('guess-input');
     if (inputEl) {
       inputEl.disabled = false;
-      inputEl.focus();
+      // setTimeout defers focus to the next tick, which is required on iOS Safari
+      // for programmatic .focus() to reliably open the soft keyboard.
+      setTimeout(() => inputEl.focus(), 0);
     }
     this.renderGameLoop();
   }
@@ -1377,8 +1446,8 @@ class App {
       const input = inputEl.value.trim();
       if (!input) return;
 
-      const guess  = input.toLowerCase().replace(/[^a-z0-9]/g, '');
-      const answer = this.currentGame.secretItem.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const guess  = this._normalizeAnswer(input);
+      const answer = this._normalizeAnswer(this.currentGame.secretItem);
       inputEl.disabled = true;
       inputEl.value = '';
       // Store the user's guess for summary
@@ -1426,12 +1495,29 @@ class App {
     }
 
   endGame(won, message, amount = 0, medal = null) {
+    // Dismiss the soft keyboard before switching to the result screen
+    const inputEl = document.getElementById('guess-input');
+    if (inputEl) inputEl.blur();
+
     // Hide the fixed-height game layout, restore normal page flow for the result
     const layout = document.getElementById('play-game-layout');
     if (layout) layout.classList.add('hidden');
     const container = document.getElementById('app-container');
     container.style.padding = '';
     container.style.overflow = '';
+    // Restore nav, body scroll, and html overflow so the result screen is usable.
+    document.body.classList.remove('in-play');
+    document.documentElement.style.overflow = '';
+    const navEl = document.querySelector('nav');
+    if (navEl) navEl.style.display = '';
+    if (this._playResizeHandler) {
+      window.removeEventListener('resize', this._playResizeHandler);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener('resize', this._playResizeHandler);
+        window.visualViewport.removeEventListener('scroll', this._playResizeHandler);
+      }
+      this._playResizeHandler = null;
+    }
     document.getElementById('game-state-result').classList.remove('hidden');
     window.scrollTo(0, 0);
 
@@ -2270,6 +2356,165 @@ class App {
     setTimeout(() => ok.classList.add('hidden'), 2500);
   }
 
+  // Full schema validator — used by both previewImport (client-side) and publishImport (server-side re-check).
+  // Returns an array of human-readable error strings; empty array means all clear.
+  _validateGames(parsed, existingGames = []) {
+    const errors = [];
+
+    if (!Array.isArray(parsed)) {
+      errors.push('Input must be a JSON array.');
+      return errors;
+    }
+    if (parsed.length === 0) {
+      errors.push('Import contains no games.');
+      return errors;
+    }
+
+    const existingKeys = new Set((existingGames || []).map(g => g.date + '||' + g.secretItem));
+    const seenKeys = new Set();
+
+    parsed.forEach((g, i) => {
+      const label = `Game ${i + 1}`;
+
+      // format
+      if (g.format !== 'v1' && g.format !== 'v2') {
+        errors.push(`${label}: "format" must be "v1" or "v2" (got ${JSON.stringify(g.format)})`);
+      }
+
+      // date — must be a non-empty string that parses as a real date
+      if (!g.date || typeof g.date !== 'string' || g.date.trim() === '') {
+        errors.push(`${label}: "date" is missing or empty`);
+      } else if (isNaN(new Date(g.date).getTime())) {
+        errors.push(`${label}: "date" is not a valid date (got ${JSON.stringify(g.date)})`);
+      }
+
+      // pot — must be a positive finite number (not a string)
+      if (typeof g.pot !== 'number' || !isFinite(g.pot) || g.pot <= 0) {
+        errors.push(`${label}: "pot" must be a positive number (got ${JSON.stringify(g.pot)})`);
+      }
+
+      // secretItem — non-empty string
+      if (!g.secretItem || typeof g.secretItem !== 'string' || g.secretItem.trim() === '') {
+        errors.push(`${label}: "secretItem" is missing or empty`);
+      }
+
+      // host — non-empty string
+      if (!g.host || typeof g.host !== 'string' || g.host.trim() === '') {
+        errors.push(`${label}: "host" is missing or empty`);
+      }
+
+      // goldClue — integer 1-5
+      const goldClueN = Number(g.goldClue);
+      if (g.goldClue === undefined || g.goldClue === null || g.goldClue === '' ||
+          !Number.isInteger(goldClueN) || goldClueN < 1 || goldClueN > 5) {
+        errors.push(`${label}: "goldClue" must be an integer 1–5 (got ${JSON.stringify(g.goldClue)})`);
+      }
+
+      // totalWinners — non-negative integer
+      if (typeof g.totalWinners !== 'number' || !Number.isInteger(g.totalWinners) || g.totalWinners < 0) {
+        errors.push(`${label}: "totalWinners" must be a non-negative integer (got ${JSON.stringify(g.totalWinners)})`);
+      }
+
+      // winnerPayout — non-empty string
+      if (!g.winnerPayout || typeof g.winnerPayout !== 'string' || g.winnerPayout.trim() === '') {
+        errors.push(`${label}: "winnerPayout" is missing or empty`);
+      }
+
+      // winnerNames and wrongGuesses — must exist (can be empty string, but not null/undefined)
+      if (g.winnerNames === undefined || g.winnerNames === null) {
+        errors.push(`${label}: "winnerNames" is missing`);
+      }
+      if (g.wrongGuesses === undefined || g.wrongGuesses === null) {
+        errors.push(`${label}: "wrongGuesses" is missing`);
+      }
+
+      // clues array — exactly 5 objects each with text, correct, guesses
+      if (!Array.isArray(g.clues)) {
+        errors.push(`${label}: "clues" must be an array`);
+      } else if (g.clues.length !== 5) {
+        errors.push(`${label}: "clues" must have exactly 5 items (found ${g.clues.length})`);
+      } else {
+        g.clues.forEach((c, ci) => {
+          const clueLabel = `${label} Clue ${ci + 1}`;
+          if (!c || typeof c !== 'object' || Array.isArray(c)) {
+            errors.push(`${clueLabel}: must be an object`);
+            return;
+          }
+          if (!c.text || typeof c.text !== 'string' || c.text.trim() === '') {
+            errors.push(`${clueLabel}: "text" is missing or empty`);
+          }
+          if (c.correct === undefined || c.correct === null || c.correct === '') {
+            errors.push(`${clueLabel}: "correct" is missing`);
+          } else if (isNaN(parseInt(String(c.correct).replace(/[^0-9]/g, ''), 10))) {
+            errors.push(`${clueLabel}: "correct" must be a number (got ${JSON.stringify(c.correct)})`);
+          }
+          if (c.guesses === undefined || c.guesses === null || c.guesses === '') {
+            errors.push(`${clueLabel}: "guesses" is missing`);
+          } else if (isNaN(parseInt(String(c.guesses).replace(/[^0-9]/g, ''), 10))) {
+            errors.push(`${clueLabel}: "guesses" must be a number (got ${JSON.stringify(c.guesses)})`);
+          }
+        });
+      }
+
+      // v2-specific checks
+      if (g.format === 'v2') {
+        ['silverClue', 'bronzeClue'].forEach(k => {
+          const n = Number(g[k]);
+          if (g[k] === undefined || g[k] === null || g[k] === '' || !Number.isInteger(n) || n < 1 || n > 5) {
+            errors.push(`${label}: "${k}" must be an integer 1–5 (got ${JSON.stringify(g[k])})`);
+          }
+        });
+
+        // Medal clue numbers must all be distinct
+        const gc = Number(g.goldClue), sc = Number(g.silverClue), bc = Number(g.bronzeClue);
+        if (Number.isInteger(gc) && Number.isInteger(sc) && Number.isInteger(bc)) {
+          if (gc === sc || gc === bc || sc === bc) {
+            errors.push(`${label}: goldClue, silverClue, bronzeClue must all be different (got ${gc}, ${sc}, ${bc})`);
+          }
+        }
+
+        ['goldWinners', 'silverWinners', 'bronzeWinners'].forEach(k => {
+          if (typeof g[k] !== 'number' || !isFinite(g[k]) || g[k] < 0) {
+            errors.push(`${label}: "${k}" must be a non-negative number (got ${JSON.stringify(g[k])})`);
+          }
+        });
+
+        ['goldPayout', 'silverPayout', 'bronzePayout'].forEach(k => {
+          if (typeof g[k] !== 'number' || !isFinite(g[k]) || g[k] < 0) {
+            errors.push(`${label}: "${k}" must be a non-negative number (got ${JSON.stringify(g[k])})`);
+          }
+        });
+
+        // totalWinners must equal sum of medal winners
+        const goldW = typeof g.goldWinners === 'number' ? g.goldWinners : 0;
+        const silverW = typeof g.silverWinners === 'number' ? g.silverWinners : 0;
+        const bronzeW = typeof g.bronzeWinners === 'number' ? g.bronzeWinners : 0;
+        const computedTotal = goldW + silverW + bronzeW;
+        if (typeof g.totalWinners === 'number' && Number.isInteger(g.totalWinners) && g.totalWinners !== computedTotal) {
+          errors.push(`${label}: totalWinners (${g.totalWinners}) does not equal goldWinners+silverWinners+bronzeWinners (${computedTotal})`);
+        }
+      }
+
+      // Duplicate within this import batch.
+      // Same date with different answers is fine (two games per day is normal).
+      // Only block if BOTH date AND secretItem are identical.
+      if (g.date && g.secretItem) {
+        const key = g.date + '||' + g.secretItem;
+        if (seenKeys.has(key)) {
+          errors.push(`${label}: same answer ("${g.secretItem}") already used for date "${g.date}" earlier in this import — two games on the same date is fine, but both cannot have the same secretItem`);
+        }
+        seenKeys.add(key);
+      }
+
+      // Collision with existing database
+      if (g.date && g.secretItem && existingKeys.has(g.date + '||' + g.secretItem)) {
+        errors.push(`${label}: a game with answer "${g.secretItem}" on date "${g.date}" already exists in the database — remove this duplicate from the import`);
+      }
+    });
+
+    return errors;
+  }
+
   previewImport() {
     const raw     = document.getElementById('import-json').value.trim();
     const preview = document.getElementById('import-preview');
@@ -2279,6 +2524,12 @@ class App {
     status.className  = 'hidden';
     this._pendingGames = null;
     btn.disabled = true;
+
+    if (!raw) {
+      preview.classList.remove('hidden');
+      preview.innerHTML = `<div class="text-red-400 text-sm bg-red-900/20 p-3 rounded">Nothing to import — paste JSON above first.</div>`;
+      return;
+    }
 
     let parsed;
     try {
@@ -2290,47 +2541,7 @@ class App {
       return;
     }
 
-    // Robust validation
-    const errors = [];
-    const seenDates = new Set();
-    parsed.forEach((g, i) => {
-      // Basic required fields
-      ['date','format','host','pot','secretItem','clues','goldClue','totalWinners','winnerPayout','winnerNames','wrongGuesses'].forEach(k => {
-        if (g[k] === undefined || g[k] === null || g[k] === '') errors.push(`Game ${i+1}: missing "${k}"`);
-      });
-      // Clues array
-      if (!Array.isArray(g.clues) || g.clues.length !== 5) errors.push(`Game ${i+1}: clues array must have exactly 5 items (found ${g.clues?.length})`);
-      // v2 format extra fields
-      if (g.format === 'v2') {
-        const label = `Game ${i+1}`;
-        ['silverClue','bronzeClue'].forEach(k => {
-          const n = Number(g[k]);
-          if (g[k] === undefined || g[k] === null || g[k] === '' || !Number.isInteger(n) || n < 1 || n > 5)
-            errors.push(`${label}: "${k}" must be an integer 1–5 (got ${JSON.stringify(g[k])})`);
-        });
-        ['goldWinners','silverWinners','bronzeWinners'].forEach(k => {
-          if (typeof g[k] !== 'number' || !isFinite(g[k]) || g[k] < 0)
-            errors.push(`${label}: "${k}" must be a non-negative number (got ${JSON.stringify(g[k])})`);
-        });
-        ['goldPayout','silverPayout','bronzePayout'].forEach(k => {
-          if (g[k] === undefined || g[k] === null || g[k] === '')
-            errors.push(`${label}: "${k}" is missing`);
-        });
-      }
-      // Check for duplicate dates in import
-      if (seenDates.has(g.date)) errors.push(`Game ${i+1}: duplicate date "${g.date}" in import file`);
-      seenDates.add(g.date);
-    });
-
-    // Check for collisions with existing games
-    if (this.games && Array.isArray(this.games)) {
-      const existingKeys = new Set(this.games.map(g => g.date + '||' + g.secretItem));
-      parsed.forEach((g, i) => {
-        if (existingKeys.has(g.date + '||' + g.secretItem)) {
-          errors.push(`Game ${i+1}: duplicate date+secretItem already exists in database (${g.date}, ${g.secretItem})`);
-        }
-      });
-    }
+    const errors = this._validateGames(parsed, this.games);
 
     if (errors.length) {
       preview.classList.remove('hidden');
@@ -2349,12 +2560,12 @@ class App {
             <div class="text-xs text-slate-400 mt-1 uppercase tracking-widest">Host: ${g.host||'?'} <span class="mx-2 opacity-30">|</span> Pot: $${(g.pot||0).toLocaleString()}</div>
           </div>
           <div class="text-xs text-slate-300 bg-slate-900 px-3 py-2 rounded-lg border border-slate-700 shrink-0 text-right">
-            ${g.format==='v2' ? 
+            ${g.format==='v2' ?
               `<div class="flex gap-3 font-bold">
                  <div class="flex flex-col items-center"><span class="text-[10px] text-slate-500 uppercase">1st (C${g.goldClue})</span><span class="text-yellow-500">${g.goldWinners} WIN</span></div>
                  <div class="flex flex-col items-center border-l border-slate-700 pl-3"><span class="text-[10px] text-slate-500 uppercase">2nd (C${g.silverClue})</span><span class="text-slate-300">${g.silverWinners} WIN</span></div>
                  <div class="flex flex-col items-center border-l border-slate-700 pl-3"><span class="text-[10px] text-slate-500 uppercase">3rd (C${g.bronzeClue})</span><span class="text-orange-400">${g.bronzeWinners} WIN</span></div>
-               </div>` : 
+               </div>` :
               `<div class="font-bold flex flex-col items-center"><span class="text-[10px] text-slate-500 uppercase">WINNING CLUE:</span><span class="text-white text-lg">C${g.goldClue}</span></div>`}
           </div>
         </div>
@@ -2395,7 +2606,7 @@ class App {
 
   async publishImport() {
     // No overwrite or replace logic; only allow adding new games if no collision
-    if (!this._pendingGames) {
+    if (!this._pendingGames || !Array.isArray(this._pendingGames) || this._pendingGames.length === 0) {
       alert("No games to publish. Please preview the JSON first.");
       return;
     }
@@ -2427,24 +2638,47 @@ class App {
       if (!getRes.ok) throw new Error(`GitHub GET failed (${getRes.status}). Check your PAT and repo settings.`);
       const fileData = await getRes.json();
 
-      // 2. Decode and validate no collisions
-      const existing = JSON.parse(this._b64DecodeUTF8(fileData.content));
-      const existingKeys = new Set(existing.map(g => g.date + '||' + g.secretItem));
-      const collision = this._pendingGames.some(g => existingKeys.has(g.date + '||' + g.secretItem));
-      if (collision) {
-        status.className = 'text-sm font-medium px-4 py-2 rounded bg-red-900/20 text-red-400';
-        status.innerText = 'Import aborted: One or more games already exist with the same date and secret item.';
-        btn.disabled = false;
-        btn.innerText = 'Publish to GitHub';
-        return;
+      // 2. Decode live data and run all safety checks before touching anything
+
+      // Safety 1: remote file must decode to a valid JSON array
+      let existing;
+      try {
+        existing = JSON.parse(this._b64DecodeUTF8(fileData.content));
+      } catch (decodeErr) {
+        throw new Error(`Remote games.json could not be decoded: ${decodeErr.message}. Aborting.`);
+      }
+      if (!Array.isArray(existing)) {
+        throw new Error('Remote games.json is not a valid array. Aborting to prevent data loss.');
       }
 
-      // 3. Append new games only
+      // Safety 2: re-validate pending games against the live database (defense in depth)
+      const revalidationErrors = this._validateGames(this._pendingGames, existing);
+      if (revalidationErrors.length) {
+        throw new Error(`Validation failed against live data:\n• ${revalidationErrors.join('\n• ')}`);
+      }
+
+      // Safety 3: merged array must be exactly existing + pending in size (no deletions)
       const merged = [...existing, ...this._pendingGames];
+      if (merged.length !== existing.length + this._pendingGames.length) {
+        throw new Error(`Safety check failed: expected ${existing.length + this._pendingGames.length} total records but got ${merged.length}. Aborting.`);
+      }
+
+      // Safety 4: encode and verify it round-trips cleanly before sending to GitHub
       const content = this._b64EncodeUTF8(JSON.stringify(merged, null, 2));
+      let roundTripped;
+      try {
+        roundTripped = JSON.parse(this._b64DecodeUTF8(content));
+      } catch (rtErr) {
+        throw new Error(`Encoding verification failed (could not decode what was encoded): ${rtErr.message}. Aborting.`);
+      }
+      if (!Array.isArray(roundTripped) || roundTripped.length !== merged.length) {
+        throw new Error(`Encoding verification failed: round-trip produced ${roundTripped?.length ?? 'invalid'} records, expected ${merged.length}. Aborting.`);
+      }
+
+      // Safety 5: all checks passed — show the admin a count summary before committing
+      status.innerText = `Verified: ${existing.length} existing + ${this._pendingGames.length} new = ${merged.length} total. Committing...`;
 
       const commitMsg = `Import ${this._pendingGames.length} game${this._pendingGames.length>1?'s':''}: ${this._pendingGames.map(g=>g.secretItem).join(', ')}`;
-      status.innerText = `Committing ${this._pendingGames.length} new game${this._pendingGames.length>1?'s':''}...`;
 
       const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/games.json`, {
         method: 'PUT',
