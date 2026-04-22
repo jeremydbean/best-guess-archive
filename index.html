@@ -1926,7 +1926,7 @@ class App {
     // Days since launch (classic/v1)
     let daysSinceLaunch = 0;
     if (uniqueDates.length) {
-      const firstDate = new Date(uniqueDates[uniqueDates.length - 1]);
+      const firstDate = new Date([...uniqueDates].sort((a, b) => new Date(a) - new Date(b))[0]);
       const today = new Date();
       daysSinceLaunch = Math.max(0, Math.ceil((today - firstDate) / (1000 * 60 * 60 * 24)));
     }
