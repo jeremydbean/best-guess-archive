@@ -577,7 +577,7 @@ document.addEventListener('focusout', function(e) {
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 4rem;
+      width: 2.25rem;
       pointer-events: none;
       z-index: 20;
       opacity: 0;
@@ -585,11 +585,11 @@ document.addEventListener('focusout', function(e) {
     }
     .db-table-shell::before {
       left: 0;
-      background: linear-gradient(90deg, rgba(15,23,42,0.82), rgba(15,23,42,0));
+      background: linear-gradient(90deg, rgba(10,16,33,0.46), rgba(10,16,33,0));
     }
     .db-table-shell::after {
       right: 0;
-      background: linear-gradient(270deg, rgba(15,23,42,0.82), rgba(15,23,42,0));
+      background: linear-gradient(270deg, rgba(10,16,33,0.36), rgba(10,16,33,0));
     }
     .db-table-shell.can-scroll-left::before,
     .db-table-shell.can-scroll-right::after {
@@ -1892,7 +1892,7 @@ class App {
         <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
         <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${(g.host || '—').replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson')}</td>
         <td class="px-1 py-1 text-right align-middle">
-          <button onclick="console.log('Details button clicked:', '${g.date.replace(/'/g,"\\'")}', '${(g.secretItem + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}'); app.showDetails('${g.date.replace(/'/g,"\\'")}', '${(g.secretItem + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" class="text-blue-400 hover:text-blue-300" title="View details" style="padding:0 2px;">
+          <button onclick="console.log('Details button clicked:', '${g.date.replace(/'/g,"\\'")}', '${(g.secretItem + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}'); app.showDetails('${g.date.replace(/'/g,"\\'")}', '${(g.secretItem + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" class="inline-flex items-center justify-center rounded-full border border-blue-400/25 bg-slate-900/55 text-blue-300 hover:text-blue-100 hover:border-blue-300/40 hover:bg-slate-900/75 transition" title="View details" style="padding:4px;">
             <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
           </button>
         </td>
