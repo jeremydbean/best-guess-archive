@@ -8,7 +8,7 @@ Last updated: 2026-04-22
 
 ## Latest Known Commit
 
-- `1aed4ba` - Update clue formatting for Wet Willie, Bingo, Lemonade, and Bart Simpson
+- `9b375db` - Fix regressions from Codex commits
 
 ## Current State
 
@@ -18,7 +18,6 @@ Last updated: 2026-04-22
 - Admin import/delete flow has extra safety checks and preview escaping.
 - Stats payout badges were corrected to avoid relying on Tailwind arbitrary classes inside JS-rendered HTML.
 - Database date column width was reduced from the earlier oversized value to better preserve secret-item alignment.
-- Clue text formatting updated: Wet Willie, Bingo, Lemonade, and Bart Simpson clues now match requested format with winner/guess counts included where applicable.
 
 ## Working Agreement
 
