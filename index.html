@@ -1827,7 +1827,7 @@ class App {
       // Cancelled / stub entry — no game was played
       if (g.note && g.clues.length === 0) {
         return `<tr class="border-b border-red-900/40 bg-red-950/20">
-          <td class="px-4 py-4 text-slate-400 font-mono text-xs whitespace-nowrap">${g.date}</td>
+          <td class="pl-4 pr-1 py-4 text-slate-400 font-mono text-xs whitespace-nowrap">${g.date}</td>
           <td colspan="13" class="px-4 py-4">
             <span class="inline-flex items-center gap-2 text-sm font-bold text-red-400">
               <span class="material-symbols-outlined" style="font-size:18px">cancel</span>
@@ -1891,7 +1891,7 @@ class App {
       // Winner names
 
       return `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
-        <td class="px-1 py-1 text-slate-400 font-mono text-[11px] align-middle" style="max-width:80px;overflow:hidden;text-overflow:ellipsis;">${g.date}</td>
+        <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle" style="max-width:80px;overflow:hidden;text-overflow:ellipsis;">${g.date}</td>
         <td class="px-1 py-1 font-semibold text-white align-middle" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;">
           <span style="white-space:nowrap;">${g.secretItem}</span>
           ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${g.note}</span></div>` : ''}
@@ -1903,7 +1903,6 @@ class App {
         <td class="px-2 py-1 align-middle">${winnersHtml}</td>
         <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
         <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${(g.host || '—').replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson')}</td>
-        <td class="px-1 py-1 text-right align-middle" style="position:sticky;right:0;background:#0f172a;">
         <td class="px-1 py-1 text-right align-middle" style="position:sticky;right:0;background:#0f172a;">
           <button onclick="app.showDetails('${g.date.replace(/'/g,"\\'")}', '${(g.secretItem + '').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" class="inline-flex items-center justify-center rounded-full border border-blue-400/25 bg-slate-900/55 text-blue-300 hover:text-blue-100 hover:border-blue-300/40 hover:bg-slate-900/75 transition" title="View details" style="padding:4px;">
             <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
