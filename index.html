@@ -343,8 +343,8 @@ document.addEventListener('focusout', function(e) {
   <!-- Past clues — sticky on mobile, always visible, scrollable if overflow -->
   <div class="flex-shrink-0 px-3 pt-2 pb-1 space-y-1.5 overflow-y-auto" style="max-height:35%" id="past-clues"></div>
 
-  <!-- Active clue — takes all remaining height, vertically centered -->
-  <div class="flex-grow flex items-center justify-center px-3 py-2 min-h-0" id="active-clue-area">
+  <!-- Active clue — takes all remaining height, card stretches to fill it -->
+  <div class="flex-grow flex items-stretch px-3 py-2 min-h-0 overflow-hidden" id="active-clue-area">
     <div class="text-slate-500 text-sm">Preparing...</div>
   </div>
 
@@ -817,16 +817,16 @@ document.addEventListener('focusout', function(e) {
     </div>
     <div class="glass-panel p-6 rounded-xl border-t-4 border-slate-500">
       <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-        <span class="material-symbols-outlined text-slate-400">person_remove</span> Fewest Winners
+        <span class="material-symbols-outlined text-slate-400">arrow_downward</span> Lowest Amount Won
       </h3>
-      <p class="text-xs text-slate-400 mb-4">Barely anyone cracked these episodes.</p>
+      <p class="text-xs text-slate-400 mb-4">Episodes where each winner took home the smallest share of the pot.</p>
       <ul class="space-y-3" id="stats-fewest-list"></ul>
     </div>
     <div class="glass-panel p-6 rounded-xl border-t-4 border-yellow-500">
       <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-        <span class="material-symbols-outlined text-yellow-400">monetization_on</span> Biggest Pots
+        <span class="material-symbols-outlined text-yellow-400">emoji_events</span> Highest Amount Won
       </h3>
-      <p class="text-xs text-slate-400 mb-4">Episodes with the most money on the line.</p>
+      <p class="text-xs text-slate-400 mb-4">Episodes where each winner took home the biggest share of the pot.</p>
       <ul class="space-y-3" id="stats-bigpots-list"></ul>
     </div>
   </div>
@@ -1361,18 +1361,18 @@ class App {
     if (!activeEl) return;
 
     activeEl.innerHTML = `
-      <div class="w-full bg-slate-800 rounded-2xl border border-slate-700 shadow-[0_0_20px_rgba(0,0,0,0.5)] overflow-hidden clue-stack-enter relative">
-        <div class="px-3 pt-4 pb-5 md:px-6 md:pt-6 md:pb-6">
-          <div class="flex justify-between items-center mb-5">
+      <div class="w-full bg-slate-800 rounded-2xl border border-slate-700 shadow-[0_0_20px_rgba(0,0,0,0.5)] overflow-hidden clue-stack-enter relative flex flex-col">
+        <div class="px-3 pt-3 pb-5 md:px-6 md:pt-4 md:pb-6 flex-grow flex flex-col justify-center min-h-0">
+          <div class="flex justify-between items-center mb-2">
             <span class="text-xs font-bold text-blue-400 bg-blue-900/30 px-3 py-1 bg-opacity-50 rounded-full border border-blue-500/30 shadow-sm tracking-wider">CLUE ${ci+1} of 5</span>
             <span class="text-xs font-bold font-mono text-slate-300 bg-slate-900/50 px-2 py-1 rounded" id="timer-text-${ci}"></span>
           </div>
-          <div id="loading-state-${ci}" class="flex flex-col items-center justify-center py-10 md:py-16 gap-3">
+          <div id="loading-state-${ci}" class="flex flex-col items-center justify-center py-4 gap-3">
             <div class="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin shadow-lg"></div>
             <span class="text-blue-500 font-display tracking-widest text-sm md:text-base animate-pulse uppercase">Incoming...</span>
           </div>
-          <div id="text-state-${ci}" class="hidden py-4 w-full">
-            <div class="bg-gradient-to-br from-[#001D4A] via-[#003087] to-[#001D4A] border-[3px] border-[#FFA300] rounded-xl shadow-2xl px-5 py-10 md:p-12 w-full flex items-center justify-center min-h-[160px] relative overflow-hidden">
+          <div id="text-state-${ci}" class="hidden py-2 w-full">
+            <div class="bg-gradient-to-br from-[#001D4A] via-[#003087] to-[#001D4A] border-[3px] border-[#FFA300] rounded-xl shadow-2xl px-5 py-6 md:p-10 w-full flex items-center justify-center relative overflow-hidden">
               <div class="absolute inset-0 bg-[#0047AB] opacity-30 mix-blend-screen blur-xl"></div>
               <h2 class="text-3xl md:text-5xl font-extrabold text-white font-display uppercase tracking-widest text-center relative z-10" style="text-shadow: 2px 3px 0px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; line-height: 1.3;">
                 ${g.clues[ci].text}
@@ -2190,15 +2190,16 @@ class App {
       const w=g.totalWinners||g.winnerCount||0;
       return `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0"><div><div class="font-bold text-white">${g.secretItem}</div><div class="text-xs text-slate-500">${g.date}</div></div><div class="text-right shrink-0 ml-4"><div class="text-green-400 font-bold text-sm bg-green-900/20 px-2 py-1 rounded">${w.toLocaleString()}</div><div class="text-xs text-slate-500 mt-1">winners</div></div></li>`;
     }).join('');
-    const fewest = [...games].filter(g=>(g.totalWinners||g.winnerCount||0)>0).sort((a,b)=>(a.totalWinners||a.winnerCount||0)-(b.totalWinners||b.winnerCount||0)).slice(0,5);
+    const perWinner = g => { const w=g.totalWinners||g.winnerCount||0; return w>0&&g.pot>0?g.pot/w:null; };
+    const fewest = [...games].filter(g=>perWinner(g)!==null).sort((a,b)=>perWinner(a)-perWinner(b)).slice(0,5);
     document.getElementById('stats-fewest-list').innerHTML = fewest.map(g => {
-      const w=g.totalWinners||g.winnerCount||0;
-      return `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0"><div><div class="font-bold text-white">${g.secretItem}</div><div class="text-xs text-slate-500">${g.date}</div></div><div class="text-right shrink-0 ml-4"><div class="text-slate-300 font-bold text-sm bg-slate-700/50 px-2 py-1 rounded">${w.toLocaleString()}</div><div class="text-xs text-slate-500 mt-1">winner${w===1?'':'s'}</div></div></li>`;
+      const amt=perWinner(g); const w=g.totalWinners||g.winnerCount||0;
+      return `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0"><div><div class="font-bold text-white">${g.secretItem}</div><div class="text-xs text-slate-500">${g.date}</div></div><div class="text-right shrink-0 ml-4"><div class="text-slate-300 font-bold text-sm bg-slate-700/50 px-2 py-1 rounded">$${Math.round(amt).toLocaleString()}/winner</div><div class="text-xs text-slate-500 mt-1">${w.toLocaleString()} winner${w===1?'':'s'} · $${g.pot.toLocaleString()} pot</div></div></li>`;
     }).join('');
-    const bigPots = [...games].sort((a,b)=>b.pot-a.pot).slice(0,5);
+    const bigPots = [...games].filter(g=>perWinner(g)!==null).sort((a,b)=>perWinner(b)-perWinner(a)).slice(0,5);
     document.getElementById('stats-bigpots-list').innerHTML = bigPots.map(g => {
-      const w=g.totalWinners||g.winnerCount||0;
-      return `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0"><div><div class="font-bold text-white">${g.secretItem}</div><div class="text-xs text-slate-500">${g.date}</div></div><div class="text-right shrink-0 ml-4"><div class="text-yellow-400 font-bold text-sm bg-yellow-900/20 px-2 py-1 rounded">$${g.pot.toLocaleString()}</div><div class="text-xs text-slate-500 mt-1">${w.toLocaleString()} winners</div></div></li>`;
+      const amt=perWinner(g); const w=g.totalWinners||g.winnerCount||0;
+      return `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0"><div><div class="font-bold text-white">${g.secretItem}</div><div class="text-xs text-slate-500">${g.date}</div></div><div class="text-right shrink-0 ml-4"><div class="text-yellow-400 font-bold text-sm bg-yellow-900/20 px-2 py-1 rounded">$${Math.round(amt).toLocaleString()}/winner</div><div class="text-xs text-slate-500 mt-1">${w.toLocaleString()} winner${w===1?'':'s'} · $${g.pot.toLocaleString()} pot</div></div></li>`;
     }).join('');
 
     // ---- Quick Breakdown (legacy compact grid) ----
