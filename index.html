@@ -1112,6 +1112,7 @@ class App {
           const vvTop = vv ? vv.offsetTop : 0;
           layout.style.top = vvTop + 'px';
           layout.style.height = vvh + 'px';
+          if (typeof this.currentClueIndex === 'number') this.fitClueText(this.currentClueIndex);
         };
         applyPlayLayout();
         if (this._playResizeHandler) {
@@ -1365,19 +1366,19 @@ class App {
     const _clueTrack     = _tl > 20 ? 'tracking-wide'         : 'tracking-widest';
     activeEl.innerHTML = `
       <div class="w-full bg-slate-800 rounded-2xl border border-slate-700 shadow-[0_0_20px_rgba(0,0,0,0.5)] overflow-hidden clue-stack-enter relative flex flex-col">
-        <div class="px-3 pt-3 pb-5 md:px-6 md:pt-4 md:pb-6 flex-grow flex flex-col justify-center min-h-0">
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-xs font-bold text-blue-400 bg-blue-900/30 px-3 py-1 bg-opacity-50 rounded-full border border-blue-500/30 shadow-sm tracking-wider">CLUE ${ci+1} of 5</span>
-            <span class="text-xs font-bold font-mono text-slate-300 bg-slate-900/50 px-2 py-1 rounded" id="timer-text-${ci}"></span>
-          </div>
-          <div id="loading-state-${ci}" class="flex flex-col items-center justify-center py-4 gap-3">
+        <div class="flex justify-between items-center flex-shrink-0 px-3 pt-3 md:px-6 md:pt-4">
+          <span class="text-xs font-bold text-blue-400 bg-blue-900/30 px-3 py-1 bg-opacity-50 rounded-full border border-blue-500/30 shadow-sm tracking-wider">CLUE ${ci+1} of 5</span>
+          <span class="text-xs font-bold font-mono text-slate-300 bg-slate-900/50 px-2 py-1 rounded" id="timer-text-${ci}"></span>
+        </div>
+        <div class="flex-grow min-h-0 px-3 pt-3 pb-5 md:px-6 md:pt-3 md:pb-6 flex flex-col">
+          <div id="loading-state-${ci}" class="flex-grow flex flex-col items-center justify-center gap-3">
             <div class="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin shadow-lg"></div>
             <span class="text-blue-500 font-display tracking-widest text-sm md:text-base animate-pulse uppercase">Incoming...</span>
           </div>
-          <div id="text-state-${ci}" class="hidden py-2 w-full">
-            <div class="bg-gradient-to-br from-[#001D4A] via-[#003087] to-[#001D4A] border-[3px] border-[#FFA300] rounded-xl shadow-2xl px-5 py-6 md:p-10 w-full flex items-center justify-center relative overflow-hidden">
+          <div id="text-state-${ci}" class="hidden flex-grow min-h-0 flex w-full">
+            <div class="bg-gradient-to-br from-[#001D4A] via-[#003087] to-[#001D4A] border-[3px] border-[#FFA300] rounded-xl shadow-2xl px-4 py-4 md:px-8 md:py-6 w-full h-full flex items-center justify-center relative overflow-hidden">
               <div class="absolute inset-0 bg-[#0047AB] opacity-30 mix-blend-screen blur-xl"></div>
-              <h2 class="${_clueFsClass} font-extrabold text-white font-display uppercase ${_clueTrack} text-center relative z-10" style="text-shadow: 2px 3px 0px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; line-height: 1.3; overflow-wrap: break-word; word-break: break-word;">
+              <h2 class="${_clueFsClass} font-extrabold text-white font-display uppercase ${_clueTrack} text-center relative z-10" style="text-shadow: 2px 3px 0px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; line-height: 1.2; overflow-wrap: break-word; word-break: break-word;">
                 ${g.clues[ci].text}
               </h2>
             </div>
@@ -1393,12 +1394,33 @@ class App {
       const text = document.getElementById(`text-state-${ci}`);
       if (loading) loading.classList.add('hidden');
       if (text) text.classList.remove('hidden');
+      this.fitClueText(ci);
       this.runClueTimer(
         clueSecs,
         document.getElementById(`timer-bar-${ci}`),
         document.getElementById(`timer-text-${ci}`)
       );
     }, 1500);
+  }
+
+  fitClueText(ci) {
+    const textState = document.getElementById(`text-state-${ci}`);
+    if (!textState || textState.classList.contains('hidden')) return;
+    const blueBox = textState.firstElementChild;
+    const h2 = blueBox && blueBox.querySelector('h2');
+    if (!h2 || !blueBox) return;
+    h2.style.fontSize = '';
+    requestAnimationFrame(() => {
+      const boxW = blueBox.clientWidth, boxH = blueBox.clientHeight;
+      if (!boxW || !boxH) return;
+      let fs = parseFloat(getComputedStyle(h2).fontSize);
+      for (let i = 0; i < 40; i++) {
+        if (h2.scrollHeight <= boxH - 4 && h2.scrollWidth <= boxW - 4) break;
+        fs *= 0.93;
+        if (fs < 9) { h2.style.fontSize = '9px'; break; }
+        h2.style.fontSize = fs + 'px';
+      }
+    });
   }
 
   runClueTimer(seconds, barEl, textEl) {
