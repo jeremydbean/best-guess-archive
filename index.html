@@ -2782,12 +2782,14 @@ window.app = new App();
     const input = document.getElementById('guess-input');
     const box = document.getElementById('guess-preview-box');
     if (!input || !box) return;
-    if (document.body.classList.contains('keyboard-open')) {
+    if (document.body.classList.contains('keyboard-open') && input.value) {
       box.textContent = input.value;
-      box.style.opacity = input.value ? '1' : '0.5';
+      box.style.opacity = '1';
+      box.style.visibility = 'visible';
     } else {
       box.textContent = '';
       box.style.opacity = '0';
+      box.style.visibility = 'hidden';
     }
   }
   document.addEventListener('input', function(e) {
