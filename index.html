@@ -987,7 +987,7 @@ FORMATTING RULES:
         <select id="delete-date-select" class="w-full sm:w-80 bg-slate-800 border border-slate-700 rounded px-3 py-2 text-white text-sm focus:outline-none focus:border-red-500" onchange="app.renderSelectedDatePreview()">
           <option value="">Loading dates...</option>
         </select>
-        <button class="bg-red-700 hover:bg-red-600 text-white font-bold px-4 py-2 rounded text-sm shrink-0" onclick="app.deleteDate()">
+        <button id="btn-delete-date" class="bg-red-700 hover:bg-red-600 text-white font-bold px-4 py-2 rounded text-sm shrink-0 disabled:opacity-40 disabled:cursor-not-allowed" onclick="app.deleteDate()">
           Delete Selected Date
         </button>
       </div>
@@ -2485,6 +2485,15 @@ class App {
   }
 
   // ==================== ADMIN ====================
+  _escapeHtml(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   initAdmin() {
     setTimeout(() => {
       const o  = document.getElementById('gh-owner');          if (o)  o.value  = localStorage.getItem('gh_owner')          || 'jeremydbean';
@@ -2509,7 +2518,8 @@ class App {
     sel.innerHTML = '<option value="">(None selected)</option>' + 
       dates.map(d => {
         const gamesOnDate = this.games.filter(g => g.date === d);
-        return `<option value="${d}">${d} (${gamesOnDate.length} game${gamesOnDate.length>1?'s':''})</option>`;
+        const esc = this._escapeHtml(d);
+        return `<option value="${esc}">${esc} (${gamesOnDate.length} game${gamesOnDate.length>1?'s':''})</option>`;
       }).join('');
   }
 
@@ -2522,14 +2532,16 @@ class App {
     }
     
     const games = this.games.filter(g => g.date === date);
-    container.innerHTML = `<div class="font-bold text-white mb-2">Existing items for ${date}:</div>` + 
-      games.map((g, i) => `<div><span class="text-blue-400">Game ${i+1}:</span> <strong>${g.secretItem}</strong> <span class="opacity-50 mx-1">|</span> Hosted by ${g.host || '?'}</div>`).join('');
+    const esc = (v) => this._escapeHtml(v);
+    container.innerHTML = `<div class="font-bold text-white mb-2">Existing items for ${esc(date)}:</div>` + 
+      games.map((g, i) => `<div><span class="text-blue-400">Game ${i+1}:</span> <strong>${esc(g.secretItem)}</strong> <span class="opacity-50 mx-1">|</span> Hosted by ${esc(g.host || '?')}</div>`).join('');
     container.classList.remove('hidden');
   }
 
   async deleteDate() {
     const dateToDelete = document.getElementById('delete-date-select').value;
     const status = document.getElementById('delete-status');
+    const btn = document.getElementById('btn-delete-date');
     const owner = localStorage.getItem('gh_owner');
     const repo  = localStorage.getItem('gh_repo');
     const pat   = this._ghPat;
@@ -2555,6 +2567,7 @@ class App {
     status.className = 'text-sm font-medium px-4 py-2 rounded bg-blue-900/20 text-blue-400 mt-2';
     status.innerText = `Fetching current data for ${dateToDelete}...`;
     status.classList.remove('hidden');
+    if (btn) btn.disabled = true;
     
     try {
       // 1. Get current file + SHA
@@ -2592,12 +2605,17 @@ class App {
       // 4. Update local state
       this.games = gamesToKeep;
       this.populateDeleteDates();
+      document.getElementById('delete-date-select').value = '';
+      const preview = document.getElementById('date-preview-container');
+      if (preview) preview.classList.add('hidden');
       
       status.className = 'text-sm font-medium px-4 py-2 rounded bg-green-900/20 text-green-400 mt-2';
       status.innerText = `✓ Successfully deleted ${deletedCount} game${deletedCount>1?'s':''} from ${dateToDelete}. GitHub Pages will rebuild in ~30 seconds.`;
     } catch (e) {
       status.className = 'text-sm font-medium px-4 py-2 rounded bg-red-900/20 text-red-400 mt-2';
       status.innerText = `Error: ${e.message}`;
+    } finally {
+      if (btn) btn.disabled = false;
     }
   }
 
@@ -2810,19 +2828,21 @@ class App {
 
     if (errors.length) {
       preview.classList.remove('hidden');
-      preview.innerHTML = `<div class="text-red-400 text-sm bg-red-900/20 p-3 rounded space-y-1"><div class="font-bold mb-2">⛔ Import blocked — fix these errors before publishing:</div>${errors.map(e => `<div class="pl-2">• ${e}</div>`).join('')}</div>`;
+      preview.innerHTML = `<div class="text-red-400 text-sm bg-red-900/20 p-3 rounded space-y-1"><div class="font-bold mb-2">⛔ Import blocked — fix these errors before publishing:</div>${errors.map(e => `<div class="pl-2">• ${this._escapeHtml(e)}</div>`).join('')}</div>`;
       return;
     }
 
     this._pendingGames = parsed;
     preview.classList.remove('hidden');
-    preview.innerHTML = parsed.map(g => `
+    preview.innerHTML = parsed.map(g => {
+      const esc = (v) => this._escapeHtml(v);
+      return `
       <div class="glass-panel p-4 rounded-lg border ${g.format==='v2'?'border-yellow-600/30':'border-slate-700'}">
         <div class="flex justify-between items-start gap-4">
           <div>
-            <span class="text-[10px] ${g.format==='v2'?'text-yellow-400 bg-yellow-900/30':'text-slate-400 bg-slate-800'} px-2 py-0.5 rounded font-bold uppercase">${g.format==='v2'?'V2 FORMAT':'V1 FORMAT'} · ${g.date}</span>
-            <div class="text-xl font-bold font-display text-white mt-1">${g.secretItem}</div>
-            <div class="text-xs text-slate-400 mt-1 uppercase tracking-widest">Host: ${g.host||'?'} <span class="mx-2 opacity-30">|</span> Pot: $${(g.pot||0).toLocaleString()}</div>
+            <span class="text-[10px] ${g.format==='v2'?'text-yellow-400 bg-yellow-900/30':'text-slate-400 bg-slate-800'} px-2 py-0.5 rounded font-bold uppercase">${g.format==='v2'?'V2 FORMAT':'V1 FORMAT'} · ${esc(g.date)}</span>
+            <div class="text-xl font-bold font-display text-white mt-1">${esc(g.secretItem)}</div>
+            <div class="text-xs text-slate-400 mt-1 uppercase tracking-widest">Host: ${esc(g.host||'?')} <span class="mx-2 opacity-30">|</span> Pot: $${(g.pot||0).toLocaleString()}</div>
           </div>
           <div class="text-xs text-slate-300 bg-slate-900 px-3 py-2 rounded-lg border border-slate-700 shrink-0 text-right">
             ${g.format==='v2' ?
@@ -2835,19 +2855,20 @@ class App {
           </div>
         </div>
         <div class="mt-3 text-[10px] text-slate-400 flex flex-col gap-1.5 divide-y divide-slate-800/50 border border-slate-800 rounded p-2 bg-slate-900/30">
-          ${g.clues.map((c,i)=>`<div class="pt-1.5 first:pt-0"><b class="text-slate-300">C${i+1}:</b> ${c.text} <span class="opacity-50 mx-1">/</span> ${c.correct} correct <span class="opacity-50 mx-1">/</span> ${c.guesses} total</div>`).join('')}
+          ${g.clues.map((c,i)=>`<div class="pt-1.5 first:pt-0"><b class="text-slate-300">C${i+1}:</b> ${esc(c.text)} <span class="opacity-50 mx-1">/</span> ${esc(c.correct)} correct <span class="opacity-50 mx-1">/</span> ${esc(c.guesses)} total</div>`).join('')}
         </div>
         <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div class="bg-slate-900/50 border border-slate-700/50 p-2.5 rounded-lg overflow-hidden">
             <span class="text-[10px] text-red-400 font-bold uppercase tracking-widest block mb-1">Popular Wrong Guesses</span>
-            <div class="text-slate-300 text-xs capitalize truncate" title="${g.wrongGuesses}">${g.wrongGuesses || 'None listed'}</div>
+            <div class="text-slate-300 text-xs capitalize truncate" title="${esc(g.wrongGuesses)}">${esc(g.wrongGuesses || 'None listed')}</div>
           </div>
           <div class="bg-slate-900/50 border border-slate-700/50 p-2.5 rounded-lg overflow-hidden">
             <span class="text-[10px] text-green-400 font-bold uppercase tracking-widest block mb-1">Winners (${g.totalWinners})</span>
-            <div class="text-slate-300 text-xs capitalize truncate" title="${g.winnerNames}">${g.winnerNames || 'None listed'}</div>
+            <div class="text-slate-300 text-xs capitalize truncate" title="${esc(g.winnerNames)}">${esc(g.winnerNames || 'None listed')}</div>
           </div>
         </div>
-      </div>`).join('');
+      </div>`;
+    }).join('');
     btn.disabled = false;
   }
 
@@ -2922,8 +2943,9 @@ class App {
         throw new Error(`Validation failed against live data:\n• ${revalidationErrors.join('\n• ')}`);
       }
 
-      // Safety 3: merged array must be exactly existing + pending in size (no deletions)
-      const merged = [...existing, ...this._pendingGames];
+      // Safety 3: merged array must be exactly pending + existing in size (no deletions)
+      // Keep imports prepended so freshest entries appear first in source order.
+      const merged = [...this._pendingGames, ...existing];
       if (merged.length !== existing.length + this._pendingGames.length) {
         throw new Error(`Safety check failed: expected ${existing.length + this._pendingGames.length} total records but got ${merged.length}. Aborting.`);
       }
