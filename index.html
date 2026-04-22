@@ -56,10 +56,19 @@
   body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #fff; background-image: radial-gradient(circle at 50% 0%, #1e1b4b, #0f172a); min-height: 100vh; }
   body.in-play nav { display: none !important; }
   body.in-play { overflow: hidden; touch-action: none; }
-  /* Play background: starry southwest night image, dimmed so clue pills stay readable. */
+  /* Play background: starry southwest night image, dimmed at top for clue readability,
+     gradually lighter toward the bottom so the warm orange horizon glow shines through. */
   body.in-play {
     background-color: #050b1a;
-    background-image: linear-gradient(rgba(2,6,22,0.55), rgba(2,6,22,0.55)), url('play-bg.jpg');
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(2,6,22,0.78) 0%,
+        rgba(2,6,22,0.58) 40%,
+        rgba(2,6,22,0.25) 78%,
+        rgba(2,6,22,0.05) 100%
+      ),
+      url('play-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -67,7 +76,7 @@
   }
   /* Make play layout transparent so the body background shows through */
   body.in-play #play-game-layout { background: transparent; }
-  body.in-play #play-game-layout > div:first-child { background: rgba(2,6,22,0.75) !important; backdrop-filter: blur(8px); }
+  body.in-play #play-top-bar { background: transparent; }
   body.in-play #input-container { background: rgba(2,6,22,0.85) !important; backdrop-filter: blur(10px); }
   .font-display { font-family: 'Oswald', sans-serif; }
   .glass-panel { background: rgba(30,41,59,.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.1); }
@@ -338,27 +347,33 @@ document.addEventListener('focusout', function(e) {
 <template id="view-play">
 <!-- Game layout — fills viewport, no page scroll during play -->
 <div id="play-game-layout" class="flex flex-col">
-  <!-- Header bar -->
-  <div class="flex-shrink-0 flex items-center justify-between gap-3 px-4 py-2 border-b border-white/10 bg-slate-900/70 backdrop-blur-sm">
-    <button class="text-slate-400 hover:text-white flex items-center gap-1 text-xs font-bold transition shrink-0" onclick="app.exitGame()">
-      <span class="material-symbols-outlined" style="font-size:18px;line-height:1">close</span> QUIT
+  <!-- Header bar — minimal: menu icon, date, live player count -->
+  <div class="flex-shrink-0 flex items-center justify-between gap-3 px-3 py-2" id="play-top-bar">
+    <button class="flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 text-white transition shrink-0" onclick="app.exitGame()" aria-label="Quit game">
+      <span class="material-symbols-outlined" style="font-size:22px;line-height:1">menu</span>
     </button>
     <div class="text-center min-w-0 flex-grow">
       <div class="text-white font-semibold text-xs md:text-sm truncate" id="game-date">Loading...</div>
-      <div class="text-[10px] text-slate-500" id="play-rules-hint">One guess only.</div>
+      <div class="text-[10px] text-white/60 truncate" id="play-rules-hint">One guess only.</div>
     </div>
-    <div class="text-right shrink-0">
-      <div class="text-[9px] text-green-500 uppercase tracking-widest" id="pot-label">Pot</div>
-      <div class="text-green-400 font-mono font-bold text-sm leading-tight" id="game-pot">$0</div>
+    <div class="flex items-center gap-1.5 shrink-0 text-white font-bold">
+      <span class="font-mono text-sm md:text-base tabular-nums" id="game-player-count">0</span>
+      <span class="material-symbols-outlined" style="font-size:20px;line-height:1">group</span>
     </div>
   </div>
 
-  <!-- Past clues — scrollable above active, oldest at top, newest just above active -->
-  <div class="flex-grow overflow-y-auto px-3 pt-1 pb-2 space-y-2 min-h-0" id="past-clues"></div>
+  <!-- Past clues — flex-grow area, clues pile at the BOTTOM (just above active pill) -->
+  <div class="flex-grow overflow-y-auto px-3 pt-1 pb-1 min-h-0 flex flex-col justify-end space-y-2" id="past-clues"></div>
 
-  <!-- Active clue — pinned at bottom, always visible as the highlighted pill -->
-  <div class="flex-shrink-0 px-3 pt-1 pb-2" id="active-clue-area">
-    <div class="text-slate-500 text-sm">Preparing...</div>
+  <!-- Active clue — pinned just above the timer row -->
+  <div class="flex-shrink-0 px-3 pt-1 pb-1" id="active-clue-area"></div>
+
+  <!-- Timer row — orange/yellow progress bar + countdown number, below active clue -->
+  <div class="flex-shrink-0 px-3 pt-1 pb-2 flex items-center gap-3" id="timer-row" style="display:none">
+    <div class="flex-grow h-2.5 rounded-full overflow-hidden" style="background:rgba(0,0,0,0.45); box-shadow: inset 0 1px 2px rgba(0,0,0,0.5)">
+      <div id="main-timer-bar" class="h-full" style="background: linear-gradient(90deg, #f97316 0%, #fb923c 40%, #fbbf24 100%); box-shadow: 0 0 8px rgba(251,146,60,0.7); width:100%"></div>
+    </div>
+    <div id="main-timer-text" class="text-white font-bold font-display text-xl md:text-2xl tabular-nums leading-none min-w-[2.25rem] text-right" style="text-shadow: 0 1px 2px rgba(0,0,0,0.6)">0</div>
   </div>
 
   <!-- Input bar — always at bottom, part of normal flow (not fixed) -->
@@ -1275,6 +1290,7 @@ class App {
   clearTimers() {
     if (this._clueTimeout) clearTimeout(this._clueTimeout);
     if (this._clueInterval) clearInterval(this._clueInterval);
+    if (this._waitInterval) clearInterval(this._waitInterval);
     if (this._delayTimeout) clearTimeout(this._delayTimeout);
   }
 
@@ -1295,23 +1311,26 @@ class App {
 
     document.getElementById('game-date').innerText = this.currentGame.date;
 
-    const potEl   = document.getElementById('game-pot');
-    const labelEl = document.getElementById('pot-label');
-    if (this.currentGame.format === 'v2') {
-      potEl.innerHTML   = `$${this.currentGame.pot.toLocaleString()}<div class="text-[10px] text-slate-400 mt-0.5">🥇$3K · 🥈$2.5K · 🥉$2K</div>`;
-      labelEl.innerText = 'Prize Pot';
-    } else {
-      potEl.innerText   = '$' + this.currentGame.pot.toLocaleString();
-      labelEl.innerText = 'Prize Pot';
+    // Live player count: use the max guess count across this game's clues as the
+    // best proxy for total participants (one guess per player per clue; the peak
+    // clue is the closest to total unique players).
+    const countEl = document.getElementById('game-player-count');
+    if (countEl) {
+      const maxGuesses = Math.max(0, ...this.currentGame.clues.map(c =>
+        parseInt(String(c.guesses || '0').replace(/,/g, ''), 10) || 0
+      ));
+      countEl.innerText = maxGuesses.toLocaleString();
     }
 
     const hint = document.getElementById('play-rules-hint');
     if (hint) hint.innerText = this.currentGame.format === 'v2'
-      ? 'Win gold on earliest clue · silver next · bronze third'
-      : 'One guess only. Earliest correct clue takes the pot.';
+      ? `$${this.currentGame.pot.toLocaleString()} pot · Gold/Silver/Bronze tiers`
+      : `$${this.currentGame.pot.toLocaleString()} pot · earliest correct wins`;
 
     const activeEl = document.getElementById('active-clue-area');
     if (activeEl) activeEl.innerHTML = '';
+    const timerRow = document.getElementById('timer-row');
+    if (timerRow) timerRow.style.display = 'none';
     const inputEl = document.getElementById('guess-input');
     if (inputEl) {
       inputEl.value = '';
@@ -1364,14 +1383,14 @@ class App {
     const _clueFsClass   = _tl > 35 ? 'text-sm md:text-base' : _tl > 22 ? 'text-base md:text-lg' : _tl > 14 ? 'text-lg md:text-xl' : 'text-xl md:text-2xl';
     const _clueTrack     = _tl > 22 ? 'tracking-wide'        : 'tracking-wider';
 
-    // Active clue — pill card, lighter blue gradient + person icon (like the show)
+    // Active clue — lighter blue pill with person icon. Timer/countdown live below in #timer-row.
     activeEl.innerHTML = `
-      <div class="flex items-stretch rounded-xl overflow-hidden relative clue-stack-enter" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%); box-shadow: 0 0 15px rgba(59,130,246,0.55);">
-        <div class="flex items-center justify-center px-3 flex-shrink-0" style="background:rgba(0,0,0,0.28); min-width:3rem;">
+      <div class="flex items-stretch rounded-xl overflow-hidden relative clue-stack-enter" style="background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 45%, #2563eb 100%); box-shadow: 0 0 22px rgba(96,165,250,0.6), 0 0 8px rgba(255,255,255,0.15) inset;">
+        <div class="flex items-center justify-center px-3 flex-shrink-0" style="background:rgba(0,0,0,0.3); min-width:3rem;">
           <span class="material-symbols-outlined text-white" style="font-size:26px">account_circle</span>
         </div>
-        <div class="w-px self-stretch flex-shrink-0" style="background:rgba(255,255,255,0.4)"></div>
-        <div class="flex-grow flex items-center justify-between px-3 py-3 min-w-0 gap-2">
+        <div class="w-px self-stretch flex-shrink-0" style="background:rgba(255,255,255,0.45)"></div>
+        <div class="flex-grow flex items-center px-3 py-3 min-w-0">
           <div class="flex-grow min-w-0">
             <div id="loading-state-${ci}" class="flex items-center gap-2">
               <div class="w-3.5 h-3.5 border-2 border-white/80 border-t-transparent rounded-full animate-spin"></div>
@@ -1379,10 +1398,6 @@ class App {
             </div>
             <h2 id="text-state-${ci}" class="hidden ${_clueFsClass} font-bold text-white font-display uppercase ${_clueTrack} leading-tight" style="text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; overflow-wrap: break-word; word-break: break-word;">${g.clues[ci].text}</h2>
           </div>
-          <span class="text-[10px] font-bold font-mono text-white flex-shrink-0 bg-black/30 px-1.5 py-0.5 rounded" id="timer-text-${ci}"></span>
-        </div>
-        <div class="h-1 w-full absolute bottom-0 left-0 pointer-events-none" style="background:rgba(0,0,0,0.35)">
-          <div id="timer-bar-${ci}" class="h-full bg-yellow-400 w-full" style="box-shadow: 0 0 6px rgba(250,204,21,0.8)"></div>
         </div>
       </div>`;
 
@@ -1409,16 +1424,21 @@ class App {
       pastEl.scrollTop = pastEl.scrollHeight;
     }
 
+    // Hide the timer row during the brief "Incoming..." reveal
+    const timerRow = document.getElementById('timer-row');
+    if (timerRow) timerRow.style.display = 'none';
+
     this._clueTimeout = setTimeout(() => {
       const loading = document.getElementById(`loading-state-${ci}`);
       const text = document.getElementById(`text-state-${ci}`);
       if (loading) loading.classList.add('hidden');
       if (text) text.classList.remove('hidden');
       this.fitClueText(ci);
+      if (timerRow) timerRow.style.display = '';
       this.runClueTimer(
         clueSecs,
-        document.getElementById(`timer-bar-${ci}`),
-        document.getElementById(`timer-text-${ci}`)
+        document.getElementById('main-timer-bar'),
+        document.getElementById('main-timer-text')
       );
     }, 1500);
   }
@@ -1433,26 +1453,44 @@ class App {
 
   runClueTimer(seconds, barEl, textEl) {
     if (!barEl) return;
+    // Active-clue drain: orange/yellow bar shrinks left-to-right over `seconds`.
     barEl.style.transition = 'none';
     barEl.style.width = '100%';
-    barEl.classList.add('timer-bar');
+    barEl.style.background = 'linear-gradient(90deg, #f97316 0%, #fb923c 40%, #fbbf24 100%)';
+    barEl.style.boxShadow = '0 0 8px rgba(251,146,60,0.7)';
     barEl.offsetHeight; // force reflow
     barEl.style.transition = `width ${seconds}s linear`;
     barEl.style.width = '0%';
 
     let remaining = seconds;
-    if (textEl) textEl.innerText = remaining + 's';
-    
+    if (textEl) textEl.innerText = remaining;
+
     this._clueInterval = setInterval(() => {
       remaining--;
       if (remaining > 0) {
-        if (textEl) textEl.innerText = remaining + 's';
+        if (textEl) textEl.innerText = remaining;
       } else {
         clearInterval(this._clueInterval);
-        if (textEl) textEl.innerHTML = '<span class="text-[10px] text-[#FFA300] uppercase animate-pulse leading-none pt-0.5">WAITING 5s...</span>';
+        // Switch the timer row into "waiting" mode — bar refills in a cooler blue
+        // over the 5s gap, countdown shows 5 → 1. Pill stays untouched.
         barEl.style.transition = 'none';
         barEl.style.width = '0%';
-        barEl.classList.remove('shadow-[0_0_10px_rgba(250,204,21,0.8)]');
+        barEl.style.background = 'linear-gradient(90deg, #60a5fa 0%, #3b82f6 100%)';
+        barEl.style.boxShadow = '0 0 6px rgba(59,130,246,0.6)';
+        barEl.offsetHeight;
+        barEl.style.transition = 'width 5s linear';
+        barEl.style.width = '100%';
+
+        let wait = 5;
+        if (textEl) textEl.innerText = wait;
+        this._waitInterval = setInterval(() => {
+          wait--;
+          if (wait > 0) {
+            if (textEl) textEl.innerText = wait;
+          } else {
+            clearInterval(this._waitInterval);
+          }
+        }, 1000);
 
         this._delayTimeout = setTimeout(() => {
           this.nextClue();
