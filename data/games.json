@@ -10258,5 +10258,109 @@
     "wrongGuesses": "AI, SNOW, MEME, MONEY, CLUB, SUSHI, APPETIZERS, TENNIS, WHIFFLE BALL",
     "winningClue": 1,
     "winnerCount": 10
+  },
+  {
+    "date": "Tuesday, April 21, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "THERMOMETER",
+    "clues": [
+      {
+        "text": "IN AND OUT",
+        "correct": "5",
+        "guesses": "5,766",
+        "explanation": "The thermometer goes in and out of your mouth."
+      },
+      {
+        "text": "UP AND DOWN",
+        "correct": "9",
+        "guesses": "7,847",
+        "explanation": "The temperature on the thermometer goes up and down."
+      },
+      {
+        "text": "STILL DRIVES A MERCURY",
+        "correct": "4439",
+        "guesses": "355",
+        "explanation": "Even today, mercury can still be found in thermometers. That's how they work: mercury goes up or down depending on your temperature."
+      },
+      {
+        "text": "TEMP WORKER WITH A DEGREE",
+        "correct": "3344",
+        "guesses": "6000",
+        "explanation": "Its job is to tell you the temperature in degrees."
+      },
+      {
+        "text": "WEATHER OR UNDER THE WEATHER",
+        "correct": "1582",
+        "guesses": "4,205",
+        "explanation": "Temperature, and a thermometer measures your temperature—and your body temperature—especially when you're sick. Are you under the weather? You get it."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 5,
+    "silverWinners": 9,
+    "bronzeWinners": 4439,
+    "totalWinners": 4453,
+    "goldPayout": 600,
+    "silverPayout": 277.77,
+    "bronzePayout": 0.45,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Cranky Llama 266, Mag Maggie 321",
+    "wrongGuesses": "BELLYBUTTONS, THE HINDENBURG, GARAGE, YO-YO, JAY LENO, SYLVESTER STALLONE, UBER DRIVER"
+  },
+  {
+    "date": "Tuesday, April 21, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "DRIVING RANGE",
+    "clues": [
+      {
+        "text": "FORMAL ATTIRE NOT REQUIRED",
+        "correct": "1",
+        "guesses": "4,833",
+        "explanation": "Golf courses often have a strict dress code, but a driving range doesn't. No formal attire is required."
+      },
+      {
+        "text": "LOTS OF RIPS BUT NO HOLES",
+        "correct": "5",
+        "guesses": "10,074",
+        "explanation": "You can take big swings, but there is usually no hole to hit the ball into. That's the point—you're just driving; you're not trying to get to a hole."
+      },
+      {
+        "text": "STOVE TOP IN A CAR",
+        "correct": "11",
+        "guesses": "4,965",
+        "explanation": "This is a riddle: you drive a car, and a stove top is often called a range—AKA driving range."
+      },
+      {
+        "text": "DISTANCE MAKES THE HEART GROW FONDER",
+        "correct": "28",
+        "guesses": "3,529",
+        "explanation": "You feel good the farther you hit it—that’s the whole point of a driving range."
+      },
+      {
+        "text": "REHEARSAL IS IN FULL SWING",
+        "correct": "103",
+        "guesses": "6,097",
+        "explanation": "It's where you practice your golf swing. It's all about the rehearsal in your swing—that’s what a driving range is for."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 5,
+    "bronzeWinners": 11,
+    "totalWinners": 17,
+    "goldPayout": 3000,
+    "silverPayout": 500,
+    "bronzePayout": 181.81,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Mike Big House",
+    "wrongGuesses": "BED, VELCRO SNEAKERS, GYM, FOOD TRUCK, CAMPING, SECOND FAMILY"
   }
 ]
