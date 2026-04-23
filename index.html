@@ -1353,6 +1353,111 @@ class App {
     return btoa(binary);
   }
 
+  async _githubRequest(url, options = {}) {
+    const res = await fetch(url, {
+      ...options,
+      headers: {
+        Accept: 'application/vnd.github+json',
+        ...(options.headers || {})
+      }
+    });
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`${options.method || 'GET'} ${url} failed (${res.status}): ${text}`);
+    }
+    if (res.status === 204) return null;
+    return res.json();
+  }
+
+  async _getRemoteGamesState(owner, repo, pat) {
+    const headers = { Authorization: `token ${pat}` };
+    const ref = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/main`, { headers });
+    const headCommitSha = ref.object.sha;
+    const commit = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/commits/${headCommitSha}`, { headers });
+    const rootTreeSha = commit.tree.sha;
+    const tree = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/trees/${rootTreeSha}?recursive=1`, { headers });
+    const entry = (tree.tree || []).find(item => item.path === 'data/games.json' && item.type === 'blob');
+    if (!entry) throw new Error('Could not find data/games.json in the repository tree.');
+    const blob = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/blobs/${entry.sha}`, { headers });
+    const parsed = JSON.parse(this._b64DecodeUTF8(blob.content));
+    if (!Array.isArray(parsed)) {
+      throw new Error('Remote data/games.json is not a valid array. Aborting to prevent data loss.');
+    }
+    return {
+      headers,
+      headCommitSha,
+      rootTreeSha,
+      fileBlobSha: entry.sha,
+      games: parsed
+    };
+  }
+
+  async _commitGamesState(owner, repo, pat, nextGames, message, expectedHeadSha) {
+    const state = await this._getRemoteGamesState(owner, repo, pat);
+    if (expectedHeadSha && state.headCommitSha !== expectedHeadSha) {
+      throw new Error('The branch changed on GitHub while this edit was being prepared. Please try again.');
+    }
+
+    const content = this._b64EncodeUTF8(JSON.stringify(nextGames, null, 2));
+    const blob = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/blobs`, {
+      method: 'POST',
+      headers: {
+        ...state.headers,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content,
+        encoding: 'base64'
+      })
+    });
+
+    const tree = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/trees`, {
+      method: 'POST',
+      headers: {
+        ...state.headers,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        base_tree: state.rootTreeSha,
+        tree: [
+          {
+            path: 'data/games.json',
+            mode: '100644',
+            type: 'blob',
+            sha: blob.sha
+          }
+        ]
+      })
+    });
+
+    const commit = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/commits`, {
+      method: 'POST',
+      headers: {
+        ...state.headers,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message,
+        tree: tree.sha,
+        parents: [state.headCommitSha]
+      })
+    });
+
+    await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/refs/heads/main`, {
+      method: 'PATCH',
+      headers: {
+        ...state.headers,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        sha: commit.sha,
+        force: false
+      })
+    });
+
+    return { commitSha: commit.sha, previousHeadSha: state.headCommitSha };
+  }
+
   _parseArchiveDateParts(dateStr) {
     const m = String(dateStr || '').trim().match(/^(?:[A-Za-z]+,\s+)?([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})$/);
     if (!m) return null;
@@ -2730,16 +2835,8 @@ class App {
     if (btn) btn.disabled = true;
     
     try {
-      // 1. Get current file + SHA
-      const getRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/games.json`, {
-        headers: { Authorization: `token ${pat}`, Accept: 'application/vnd.github.v3+json' }
-      });
-      if (!getRes.ok) throw new Error(`GitHub GET failed (${getRes.status}).`);
-      const fileData = await getRes.json();
-
-      // 2. Decode and filter out the selected date
-      const existing = JSON.parse(this._b64DecodeUTF8(fileData.content));
-      if (!Array.isArray(existing)) throw new Error('games.json on GitHub is not a valid array. Aborting to prevent data loss.');
+      const remoteState = await this._getRemoteGamesState(owner, repo, pat);
+      const existing = remoteState.games;
       const gamesToKeep = existing.filter(g => g.date !== dateToDelete);
       const deletedCount = existing.length - gamesToKeep.length;
 
@@ -2747,20 +2844,15 @@ class App {
         throw new Error(`No games found matching date ${dateToDelete} in the remote file.`);
       }
 
-      // 3. Commit the updated array
-      const content = this._b64EncodeUTF8(JSON.stringify(gamesToKeep, null, 2));
-      
       status.innerText = `Committing deletion of ${deletedCount} game${deletedCount>1?'s':''} from ${dateToDelete}...`;
-      const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/games.json`, {
-        method: 'PUT',
-        headers: { Authorization: `token ${pat}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: `Delete ${deletedCount} game${deletedCount>1?'s':''} from ${dateToDelete}`,
-          content,
-          sha: fileData.sha
-        })
-      });
-      if (!putRes.ok) throw new Error(`GitHub commit failed (${putRes.status}): ${await putRes.text()}`);
+      await this._commitGamesState(
+        owner,
+        repo,
+        pat,
+        gamesToKeep,
+        `Delete ${deletedCount} game${deletedCount>1?'s':''} from ${dateToDelete}`,
+        remoteState.headCommitSha
+      );
 
       // 4. Update local state
       this.games = gamesToKeep;
@@ -3078,25 +3170,8 @@ class App {
     status.classList.remove('hidden');
 
     try {
-      // 1. Get current file + SHA
-      const getRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/games.json`, {
-        headers: { Authorization: `token ${pat}`, Accept: 'application/vnd.github.v3+json' }
-      });
-      if (!getRes.ok) throw new Error(`GitHub GET failed (${getRes.status}). Check your PAT and repo settings.`);
-      const fileData = await getRes.json();
-
-      // 2. Decode live data and run all safety checks before touching anything
-
-      // Safety 1: remote file must decode to a valid JSON array
-      let existing;
-      try {
-        existing = JSON.parse(this._b64DecodeUTF8(fileData.content));
-      } catch (decodeErr) {
-        throw new Error(`Remote games.json could not be decoded: ${decodeErr.message}. Aborting.`);
-      }
-      if (!Array.isArray(existing)) {
-        throw new Error('Remote games.json is not a valid array. Aborting to prevent data loss.');
-      }
+      const remoteState = await this._getRemoteGamesState(owner, repo, pat);
+      const existing = remoteState.games;
 
       // Safety 2: re-validate pending games against the live database (defense in depth)
       const revalidationErrors = this._validateGames(this._pendingGames, existing);
@@ -3127,17 +3202,7 @@ class App {
       status.innerText = `Verified: ${existing.length} existing + ${this._pendingGames.length} new = ${merged.length} total. Committing...`;
 
       const commitMsg = `Import ${this._pendingGames.length} game${this._pendingGames.length>1?'s':''}: ${this._pendingGames.map(g=>g.secretItem).join(', ')}`;
-
-      const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/games.json`, {
-        method: 'PUT',
-        headers: { Authorization: `token ${pat}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: commitMsg,
-          content,
-          sha: fileData.sha
-        })
-      });
-      if (!putRes.ok) throw new Error(`GitHub commit failed (${putRes.status}): ${await putRes.text()}`);
+      await this._commitGamesState(owner, repo, pat, merged, commitMsg, remoteState.headCommitSha);
 
       // 4. Update local state
       const publishedCount = this._pendingGames.length;
