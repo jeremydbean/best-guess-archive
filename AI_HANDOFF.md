@@ -8,7 +8,7 @@ Last updated: 2026-04-23
 
 ## Latest Known Commit
 
-- `e19d7ff` - Use Git database API for admin writes
+- `b7236b7` - Keep games metadata in sync from admin writes
 
 ## Current State
 
@@ -16,7 +16,7 @@ Last updated: 2026-04-23
 - Database side arrows are working on desktop.
 - Home page KPI counters animate on load without layout shift.
 - Admin import/delete flow has extra safety checks and preview escaping.
-- Admin import/delete now writes `data/games.json` through the Git database API (blob/tree/commit/ref) instead of the Contents API, which avoids the old contents-endpoint size ceiling.
+- Admin import/delete now writes `data/games.json` and `data/games-meta.json` together through the Git database API (blob/tree/commit/ref), avoiding the old contents-endpoint size ceiling and keeping home-page totals in sync.
 - Stats payout badges were corrected to avoid relying on Tailwind arbitrary classes inside JS-rendered HTML.
 - Database date column width was reduced from the earlier oversized value to better preserve secret-item alignment.
 
@@ -41,4 +41,4 @@ Last updated: 2026-04-23
 - Date column width still keeps secret items aligned.
 - Home KPI counters do not cause layout shift.
 - Admin import previews render safely and publish in the intended order.
-- Admin writes still target `main` and fail safely if GitHub advances between fetch and commit.
+- Admin writes still target `main`, update both JSON data files in one commit, and fail safely if GitHub advances between fetch and commit.

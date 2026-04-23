@@ -1393,21 +1393,50 @@ class App {
     };
   }
 
+  _buildGamesMeta(games) {
+    return games.map(g => {
+      const meta = {
+        date: g.date,
+        secretItem: g.secretItem,
+        pot: g.pot,
+        totalWinners: typeof g.totalWinners === 'number' ? g.totalWinners : Number(g.winnerCount) || 0,
+        host: g.host,
+        format: g.format,
+        clueCount: Array.isArray(g.clues) ? g.clues.length : (g.clueCount ?? 0)
+      };
+      if (g.note) meta.note = g.note;
+      return meta;
+    });
+  }
+
   async _commitGamesState(owner, repo, pat, nextGames, message, expectedHeadSha) {
     const state = await this._getRemoteGamesState(owner, repo, pat);
     if (expectedHeadSha && state.headCommitSha !== expectedHeadSha) {
       throw new Error('The branch changed on GitHub while this edit was being prepared. Please try again.');
     }
 
-    const content = this._b64EncodeUTF8(JSON.stringify(nextGames, null, 2));
-    const blob = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/blobs`, {
+    const gamesContent = this._b64EncodeUTF8(JSON.stringify(nextGames, null, 2));
+    const gamesBlob = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/blobs`, {
       method: 'POST',
       headers: {
         ...state.headers,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        content,
+        content: gamesContent,
+        encoding: 'base64'
+      })
+    });
+
+    const metaContent = this._b64EncodeUTF8(JSON.stringify(this._buildGamesMeta(nextGames), null, 2));
+    const metaBlob = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/blobs`, {
+      method: 'POST',
+      headers: {
+        ...state.headers,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: metaContent,
         encoding: 'base64'
       })
     });
@@ -1425,7 +1454,13 @@ class App {
             path: 'data/games.json',
             mode: '100644',
             type: 'blob',
-            sha: blob.sha
+            sha: gamesBlob.sha
+          },
+          {
+            path: 'data/games-meta.json',
+            mode: '100644',
+            type: 'blob',
+            sha: metaBlob.sha
           }
         ]
       })
