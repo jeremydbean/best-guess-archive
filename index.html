@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Best Guess Archive - Interactive Game</title>
+<link rel="preload" as="image" href="bestguessarchive.png" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYGK3MHH26"></script>
 <script>
@@ -12,8 +15,7 @@
   gtag('js', new Date());
   gtag('config', 'G-YYGK3MHH26');
 </script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="tailwind.css">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -283,7 +285,7 @@ document.addEventListener('focusout', function(e) {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center gap-3 cursor-pointer" onclick="app.setView('home')">
-        <img src="bestguessarchive.png" alt="Best Guess Archive Logo" class="h-10 w-10 rounded-full border-2 border-yellow-500 object-cover" loading="lazy" decoding="async">
+        <img src="bestguessarchive.png" alt="Best Guess Archive Logo" class="h-10 w-10 rounded-full border-2 border-yellow-500 object-cover" decoding="async">
         <span class="font-display text-2xl tracking-[0.05em] text-white leading-none">BEST GUESS <span class="text-[#ffbb39]">ARCHIVE</span></span>
       </div>
       <div class="hidden md:flex items-center space-x-3">
@@ -1150,6 +1152,10 @@ class App {
     this._pendingGames = null;
     this._ghPat = '';
     this._dbSort = { key: 'date', dir: 'desc' };
+    this._fullGamesLoaded = false;
+    this._fullGamesLoading = null;
+    this._homeStatsCache = null;
+    this._statsCache = null;
     this.init();
   }
 
@@ -1194,11 +1200,13 @@ class App {
   }
 
   _isStubGame(g) {
-    return !!(g && g.note && Array.isArray(g.clues) && g.clues.length === 0);
+    const clueCount = Array.isArray(g.clues) ? g.clues.length : (g.clueCount ?? -1);
+    return !!(g && g.note && clueCount === 0);
   }
 
   _isPlayableGame(g) {
-    return !!(g && Array.isArray(g.clues) && g.clues.length > 0 && !this._isStubGame(g));
+    const clueCount = Array.isArray(g.clues) ? g.clues.length : (g.clueCount ?? -1);
+    return !!(g && clueCount > 0 && !this._isStubGame(g));
   }
 
   _getPlayableGames() {
@@ -1207,18 +1215,38 @@ class App {
 
   async init() {
     try {
-      const res = await fetch('./data/games.json?v=' + Date.now());
+      const res = await fetch('./data/games-meta.json?v=' + Date.now());
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       this.games = await res.json();
       this._normalizeGames(this.games);
       document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full bg-green-500';
       document.getElementById('data-source-status').innerText = `${this.games.length} rounds loaded`;
     } catch (err) {
-      console.error('Could not load games.json:', err);
+      console.error('Could not load games-meta.json:', err);
       document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full bg-red-500';
       document.getElementById('data-source-status').innerText = 'Data load failed';
     }
     this.setView('home');
+  }
+
+  _ensureFullGamesLoaded() {
+    if (this._fullGamesLoaded) return Promise.resolve();
+    if (this._fullGamesLoading) return this._fullGamesLoading;
+    this._fullGamesLoading = fetch('./data/games.json')
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then(data => {
+        this.games = data;
+        this._normalizeGames(this.games);
+        this._fullGamesLoaded = true;
+        this._fullGamesLoading = null;
+        this._homeStatsCache = null;
+        this._statsCache = null;
+      })
+      .catch(err => {
+        console.error('Could not load games.json:', err);
+        this._fullGamesLoading = null;
+      });
+    return this._fullGamesLoading;
   }
 
   // ==================== VIEWS ====================
@@ -1333,9 +1361,19 @@ class App {
       const durSel = document.getElementById('clue-duration-select');
       if (durSel) durSel.value = localStorage.getItem('clue_time') || '20';
     }
-    if (name === 'database') this.renderDatabase();
+    if (name === 'database') {
+      if (this._fullGamesLoaded) {
+        this.renderDatabase();
+      } else {
+        const tbody = document.getElementById('db-table-body');
+        if (tbody) tbody.innerHTML = '<tr><td colspan="10" class="text-center py-12 text-slate-400">Loading game data…</td></tr>';
+        this._ensureFullGamesLoaded().then(() => this.renderDatabase());
+      }
+    }
     // if (name === 'archive')  this.renderArchive();
-    if (name === 'stats')    this.renderStats();
+    if (name === 'stats') {
+      this._ensureFullGamesLoaded().then(() => this.renderStats());
+    }
     if (name === 'admin')    this.initAdmin();
   }
 
@@ -1380,10 +1418,15 @@ class App {
 
   renderHomeStats() {
     if (!this.games.length) return;
-    const playableGames = this._getPlayableGames();
-    const totalPot     = playableGames.reduce((a, g) => a + g.pot, 0);
-    const totalWinners = playableGames.reduce((a, g) => a + (g.totalWinners), 0);
-    const uniqueDatesCount = new Set(playableGames.map(game => game.date)).size;
+    if (!this._homeStatsCache) {
+      const playableGames = this._getPlayableGames();
+      this._homeStatsCache = {
+        totalPot: playableGames.reduce((a, g) => a + g.pot, 0),
+        totalWinners: playableGames.reduce((a, g) => a + g.totalWinners, 0),
+        uniqueDatesCount: new Set(playableGames.map(g => g.date)).size
+      };
+    }
+    const { totalPot, totalWinners, uniqueDatesCount } = this._homeStatsCache;
     setTimeout(() => {
       const m = document.getElementById('total-money-display');
       const g = document.getElementById('total-games-display');
@@ -1970,7 +2013,10 @@ class App {
 
 
 
-  filterDatabase() { this.renderDatabase(); }
+  filterDatabase() {
+    clearTimeout(this._filterTimer);
+    this._filterTimer = setTimeout(() => this.renderDatabase(), 150);
+  }
 
   sortDatabase(key) {
     const sameKey = this._dbSort && this._dbSort.key === key;
@@ -2166,8 +2212,16 @@ class App {
       </div>`
     ).join('');
 
-    // --- Chart.js global defaults ---
-    if (typeof Chart !== 'undefined') {
+    // --- Chart.js: lazy-load on first stats visit, then init ---
+    if (typeof Chart === 'undefined') {
+      if (!this._chartJsLoading) {
+        this._chartJsLoading = true;
+        const s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js';
+        s.onload = () => this.renderStats();
+        document.head.appendChild(s);
+      }
+    } else if (typeof Chart !== 'undefined') {
       Chart.defaults.color = '#94a3b8';
       Chart.defaults.borderColor = 'rgba(148,163,184,0.08)';
 
@@ -2472,6 +2526,9 @@ class App {
       if (!res.ok) throw new Error('Failed to fetch games.json');
       this.games = await res.json();
       this._normalizeGames(this.games);
+      this._fullGamesLoaded = true;
+      this._fullGamesLoading = null;
+      this._homeStatsCache = null;
       this.renderStats();
     } catch (e) {
       alert('Error refreshing stats: ' + e.message);

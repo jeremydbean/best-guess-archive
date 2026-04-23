@@ -1,0 +1,1758 @@
+[
+  {
+    "date": "Wednesday, April 22, 2026",
+    "secretItem": "CLOWN",
+    "pot": 7500,
+    "totalWinners": 845,
+    "host": "Howie Mandel",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, April 22, 2026",
+    "secretItem": "ATM",
+    "pot": 7500,
+    "totalWinners": 172,
+    "host": "Howie Mandel",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, April 20, 2026",
+    "secretItem": "RAINBOW",
+    "pot": 7500,
+    "totalWinners": 595,
+    "host": "Hunter March",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, April 20, 2026",
+    "secretItem": "MUHAMMAD ALI",
+    "pot": 7500,
+    "totalWinners": 1364,
+    "host": "Hunter March",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, April 17, 2026",
+    "secretItem": "JURASSIC PARK",
+    "pot": 7500,
+    "totalWinners": 29,
+    "host": "Hunter March",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, April 17, 2026",
+    "secretItem": "LIPSTICK",
+    "pot": 7500,
+    "totalWinners": 654,
+    "host": "Hunter March",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, April 16, 2026",
+    "secretItem": "FORTUNE COOKIE",
+    "pot": 7500,
+    "totalWinners": 81,
+    "host": "Howie Mandel",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, April 16, 2026",
+    "secretItem": "POOL TABLE",
+    "pot": 7500,
+    "totalWinners": 719,
+    "host": "Howie Mandel",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, April 14, 2026",
+    "secretItem": "LEGO",
+    "pot": 7500,
+    "totalWinners": 26,
+    "host": "Hunter March",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, April 14, 2026",
+    "secretItem": "PARKING METER",
+    "pot": 7500,
+    "totalWinners": 532,
+    "host": "Hunter March",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, April 15, 2026",
+    "secretItem": "YOGA",
+    "pot": 7500,
+    "totalWinners": 8272,
+    "host": "Howie Mandel, Austin Show",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, April 15, 2026",
+    "secretItem": "YODA",
+    "pot": 7500,
+    "totalWinners": 4302,
+    "host": "Howie Mandel, Austin Show",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, April 13, 2026",
+    "secretItem": "LEMONADE",
+    "pot": 7500,
+    "totalWinners": 160,
+    "host": "Hunter March",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, April 13, 2026",
+    "secretItem": "BART SIMPSON",
+    "pot": 7500,
+    "totalWinners": 15,
+    "host": "Hunter March",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, April 10, 2026",
+    "secretItem": "HELICOPTER",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, April 10, 2026",
+    "secretItem": "SHOWER",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, April 8, 2026",
+    "secretItem": "SKUNK",
+    "pot": 5000,
+    "totalWinners": 134,
+    "host": "Jade Catapa",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, April 8, 2026",
+    "secretItem": "HULA HOOP",
+    "pot": 10000,
+    "totalWinners": 7,
+    "host": "Jade Catapa",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, April 9, 2026",
+    "secretItem": "(No Game)",
+    "pot": 0,
+    "totalWinners": 0,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 0,
+    "note": "Game was cancelled"
+  },
+  {
+    "date": "Tuesday, April 7, 2026",
+    "secretItem": "BINGO",
+    "pot": 5000,
+    "totalWinners": 9645,
+    "host": "Anthony Anderson",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, April 7, 2026",
+    "secretItem": "OPRAH",
+    "pot": 10000,
+    "totalWinners": 13,
+    "host": "Anthony Anderson",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, April 6, 2026",
+    "secretItem": "BURRITO",
+    "pot": 5000,
+    "totalWinners": 11,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, April 6, 2026",
+    "secretItem": "MOUTHWASH",
+    "pot": 10000,
+    "totalWinners": 19,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, April 3, 2026",
+    "secretItem": "DENTURES",
+    "pot": 5000,
+    "totalWinners": 8,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, April 3, 2026",
+    "secretItem": "PILLOW",
+    "pot": 10000,
+    "totalWinners": 603,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, April 2, 2026",
+    "secretItem": "LICENSE PLATE",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, April 2, 2026",
+    "secretItem": "BANANA PEEL",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, April 1, 2026",
+    "secretItem": "SUNGLASSES",
+    "pot": 5000,
+    "totalWinners": 76,
+    "host": "Karen Fox",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, April 1, 2026",
+    "secretItem": "EMOJI",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Karen Fox",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, March 31, 2026",
+    "secretItem": "HIGH HEELS",
+    "pot": 5000,
+    "totalWinners": 6,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, March 31, 2026",
+    "secretItem": "SNOOP DOGG",
+    "pot": 10000,
+    "totalWinners": 4,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, March 30, 2026",
+    "secretItem": "CLOUD",
+    "pot": 5000,
+    "totalWinners": 44,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, March 30, 2026",
+    "secretItem": "SARCASM",
+    "pot": 10000,
+    "totalWinners": 46,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, March 27, 2026",
+    "secretItem": "BRIDESMAIDS",
+    "pot": 5000,
+    "totalWinners": 6,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, March 27, 2026",
+    "secretItem": "MONSTER TRUCK",
+    "pot": 10000,
+    "totalWinners": 291,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, March 26, 2026",
+    "secretItem": "CORKSCREW",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, March 26, 2026",
+    "secretItem": "ZEBRA",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, March 25, 2026",
+    "secretItem": "QUICKSAND",
+    "pot": 5000,
+    "totalWinners": 403,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, March 25, 2026",
+    "secretItem": "SURF AND TURF",
+    "pot": 10000,
+    "totalWinners": 6,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, March 24, 2026",
+    "secretItem": "NAP",
+    "pot": 5000,
+    "totalWinners": 6,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, March 24, 2026",
+    "secretItem": "VOLCANO",
+    "pot": 10000,
+    "totalWinners": 9,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, March 23, 2026",
+    "secretItem": "TRAMPOLINE",
+    "pot": 5000,
+    "totalWinners": 65,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, March 23, 2026",
+    "secretItem": "DRIVE-THRU",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, March 20, 2026",
+    "secretItem": "BEEHIVE",
+    "pot": 5000,
+    "totalWinners": 8,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, March 20, 2026",
+    "secretItem": "FAMILY FEUD",
+    "pot": 10000,
+    "totalWinners": 7,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, March 19, 2026",
+    "secretItem": "JUNK MAIL",
+    "pot": 5000,
+    "totalWinners": 3,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, March 19, 2026",
+    "secretItem": "PIZZA",
+    "pot": 10000,
+    "totalWinners": 459,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, March 18, 2026",
+    "secretItem": "MUSTACHE",
+    "pot": 5000,
+    "totalWinners": 2,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, March 18, 2026",
+    "secretItem": "THE MALL",
+    "pot": 10000,
+    "totalWinners": 129,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, March 17, 2026",
+    "secretItem": "WIKIPEDIA",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, March 17, 2026",
+    "secretItem": "HANGOVER",
+    "pot": 10000,
+    "totalWinners": 4,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, March 16, 2026",
+    "secretItem": "FINDING NEMO",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, March 16, 2026",
+    "secretItem": "EXIT SIGN",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, March 13, 2026",
+    "secretItem": "SELFIE",
+    "pot": 5000,
+    "totalWinners": 353,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, March 13, 2026",
+    "secretItem": "ENVELOPE",
+    "pot": 10000,
+    "totalWinners": 59,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, March 12, 2026",
+    "secretItem": "UMBRELLA",
+    "pot": 5000,
+    "totalWinners": 104,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, March 12, 2026",
+    "secretItem": "ELVIS PRESLEY",
+    "pot": 10000,
+    "totalWinners": 158,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, March 11, 2026",
+    "secretItem": "TAX REFUND",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, March 11, 2026",
+    "secretItem": "WORLD CUP",
+    "pot": 10000,
+    "totalWinners": 8,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, March 10, 2026",
+    "secretItem": "SKATEBOARD",
+    "pot": 5000,
+    "totalWinners": 990,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, March 10, 2026",
+    "secretItem": "LOCKER",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, March 9, 2026",
+    "secretItem": "THUNDER",
+    "pot": 5000,
+    "totalWinners": 11,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, March 9, 2026",
+    "secretItem": "MICROWAVE",
+    "pot": 10000,
+    "totalWinners": 19,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, March 6, 2026",
+    "secretItem": "ELMO",
+    "pot": 5000,
+    "totalWinners": 34,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, March 6, 2026",
+    "secretItem": "BELT",
+    "pot": 10000,
+    "totalWinners": 1336,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, March 5, 2026",
+    "secretItem": "BEACH",
+    "pot": 5000,
+    "totalWinners": 7,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, March 5, 2026",
+    "secretItem": "TIP",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, March 4, 2026",
+    "secretItem": "FACEBOOK",
+    "pot": 5000,
+    "totalWinners": 2,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, March 4, 2026",
+    "secretItem": "FLAT TIRE",
+    "pot": 10000,
+    "totalWinners": 93,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, March 3, 2026",
+    "secretItem": "REVENGE",
+    "pot": 5000,
+    "totalWinners": 8,
+    "host": "Howie Mandel, Alexa Bliss",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, March 3, 2026",
+    "secretItem": "MADISON SQUARE GARDEN",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Howie Mandel, Alexa Bliss",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, March 2, 2026",
+    "secretItem": "TAYLOR SWIFT",
+    "pot": 5000,
+    "totalWinners": 38,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, March 2, 2026",
+    "secretItem": "PLEDGE OF ALLEGIANCE",
+    "pot": 10000,
+    "totalWinners": 43,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, February 27, 2026",
+    "secretItem": "GREAT BARRIER REEF",
+    "pot": 5000,
+    "totalWinners": 15,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, February 27, 2026",
+    "secretItem": "BOX OF CHOCOLATES",
+    "pot": 10000,
+    "totalWinners": 12,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, February 26, 2026",
+    "secretItem": "SNEEZE",
+    "pot": 5000,
+    "totalWinners": 38,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, February 26, 2026",
+    "secretItem": "TABLE LEAF",
+    "pot": 10000,
+    "totalWinners": 204,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, February 25, 2026",
+    "secretItem": "LEAP YEAR",
+    "pot": 10000,
+    "totalWinners": 12,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, February 25, 2026",
+    "secretItem": "DMV",
+    "pot": 20000,
+    "totalWinners": 163,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, February 24, 2026",
+    "secretItem": "FINGERPRINT",
+    "pot": 5000,
+    "totalWinners": 2,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, February 24, 2026",
+    "secretItem": "ROLLER COASTER",
+    "pot": 10000,
+    "totalWinners": 2541,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, February 23, 2026",
+    "secretItem": "BACK TO THE FUTURE",
+    "pot": 5000,
+    "totalWinners": 52,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, February 23, 2026",
+    "secretItem": "SHOE HORN",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, February 20, 2026",
+    "secretItem": "WINK",
+    "pot": 5000,
+    "totalWinners": 2,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, February 20, 2026",
+    "secretItem": "BEYONCE",
+    "pot": 10000,
+    "totalWinners": 90,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, February 19, 2026",
+    "secretItem": "RANCH",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, February 19, 2026",
+    "secretItem": "BABYSITTER",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, February 18, 2026",
+    "secretItem": "THE TOOTH FAIRY",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, February 18, 2026",
+    "secretItem": "BELLY BUTTON",
+    "pot": 20000,
+    "totalWinners": 9,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, February 17, 2026",
+    "secretItem": "PARADE",
+    "pot": 8888,
+    "totalWinners": 19,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, February 17, 2026",
+    "secretItem": "MOON",
+    "pot": 18888,
+    "totalWinners": 1047,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, February 16, 2026",
+    "secretItem": "MONA LISA",
+    "pot": 5000,
+    "totalWinners": 13,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, February 16, 2026",
+    "secretItem": "HITCHHIKING",
+    "pot": 10000,
+    "totalWinners": 12,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, February 13, 2026",
+    "secretItem": "GRANDPARENTS",
+    "pot": 5000,
+    "totalWinners": 16,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, February 13, 2026",
+    "secretItem": "VOICEMAIL",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, February 12, 2026",
+    "secretItem": "PICKUP LINE",
+    "pot": 5000,
+    "totalWinners": 25,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, February 12, 2026",
+    "secretItem": "PENCIL SHARPENER",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, February 11, 2026",
+    "secretItem": "SHOELACE",
+    "pot": 10000,
+    "totalWinners": 17,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, February 11, 2026",
+    "secretItem": "PETTING ZOO",
+    "pot": 20000,
+    "totalWinners": 83,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, February 10, 2026",
+    "secretItem": "SOULMATE",
+    "pot": 5000,
+    "totalWinners": 174,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, February 10, 2026",
+    "secretItem": "SIGNATURE",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, February 9, 2026",
+    "secretItem": "FIRST DATE",
+    "pot": 5000,
+    "totalWinners": 159,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, February 9, 2026",
+    "secretItem": "SUSPENDERS",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, February 6, 2026",
+    "secretItem": "CUTTING BOARD",
+    "pot": 5000,
+    "totalWinners": 22,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, February 6, 2026",
+    "secretItem": "SCARECROW",
+    "pot": 10000,
+    "totalWinners": 163,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, February 5, 2026",
+    "secretItem": "MANICURE",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, February 5, 2026",
+    "secretItem": "COASTER",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, February 4, 2026",
+    "secretItem": "FAST FORWARD",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, February 4, 2026",
+    "secretItem": "KFC",
+    "pot": 20000,
+    "totalWinners": 13,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, February 3, 2026",
+    "secretItem": "GOLDEN GATE BRIDGE",
+    "pot": 5000,
+    "totalWinners": 3,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, February 3, 2026",
+    "secretItem": "HOLE IN ONE",
+    "pot": 10000,
+    "totalWinners": 58,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, February 2, 2026",
+    "secretItem": "PARACHUTE",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, February 2, 2026",
+    "secretItem": "X-RAY",
+    "pot": 10000,
+    "totalWinners": 12,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, January 30, 2026",
+    "secretItem": "GRAND CANYON",
+    "pot": 5000,
+    "totalWinners": 2,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, January 30, 2026",
+    "secretItem": "MOUSE PAD",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, January 29, 2026",
+    "secretItem": "ROSE",
+    "pot": 5000,
+    "totalWinners": 13,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, January 29, 2026",
+    "secretItem": "REFEREE",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, January 28, 2026",
+    "secretItem": "BOBBING FOR APPLES",
+    "pot": 10000,
+    "totalWinners": 4023,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, January 28, 2026",
+    "secretItem": "WET WILLIE",
+    "pot": 20000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, January 27, 2026",
+    "secretItem": "ODOMETER",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, January 27, 2026",
+    "secretItem": "EGGNOG",
+    "pot": 10000,
+    "totalWinners": 111,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, January 26, 2026",
+    "secretItem": "LOS ANGELES DODGERS",
+    "pot": 5000,
+    "totalWinners": 53,
+    "host": "Hunter March, Anthony Anderson",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, January 26, 2026",
+    "secretItem": "TELESCOPE",
+    "pot": 10000,
+    "totalWinners": 19,
+    "host": "Hunter March, Anthony Anderson",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, January 23, 2026",
+    "secretItem": "YAWN",
+    "pot": 5000,
+    "totalWinners": 4,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, January 23, 2026",
+    "secretItem": "BOOKMARK",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, January 22, 2026",
+    "secretItem": "TIMES SQUARE",
+    "pot": 5000,
+    "totalWinners": 38,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, January 22, 2026",
+    "secretItem": "SPEEDING TICKET",
+    "pot": 10000,
+    "totalWinners": 13,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, January 21, 2026",
+    "secretItem": "SIMON SAYS",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, January 21, 2026",
+    "secretItem": "APRIL FOOL'S DAY",
+    "pot": 20000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, January 20, 2026",
+    "secretItem": "SCUBA DIVING",
+    "pot": 5000,
+    "totalWinners": 16,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, January 20, 2026",
+    "secretItem": "AVOCADO",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, January 19, 2026",
+    "secretItem": "WATERFALL",
+    "pot": 5000,
+    "totalWinners": 8,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, January 19, 2026",
+    "secretItem": "LAWNMOWER",
+    "pot": 10000,
+    "totalWinners": 402,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, January 16, 2026",
+    "secretItem": "VICTORIA'S SECRET",
+    "pot": 5000,
+    "totalWinners": 12,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, January 16, 2026",
+    "secretItem": "SNOOZE BUTTON",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, January 15, 2026",
+    "secretItem": "COSTCO",
+    "pot": 5000,
+    "totalWinners": 2,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, January 15, 2026",
+    "secretItem": "HARMONICA",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, January 14, 2026",
+    "secretItem": "PAC-MAN",
+    "pot": 10000,
+    "totalWinners": 9,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, January 14, 2026",
+    "secretItem": "TOUPEE",
+    "pot": 20000,
+    "totalWinners": 4,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, January 13, 2026",
+    "secretItem": "ENGAGEMENT RING",
+    "pot": 5000,
+    "totalWinners": 118,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, January 13, 2026",
+    "secretItem": "PEPPERONI",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, January 12, 2026",
+    "secretItem": "WHISPER",
+    "pot": 5000,
+    "totalWinners": 59,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, January 12, 2026",
+    "secretItem": "AMAZON",
+    "pot": 10000,
+    "totalWinners": 2890,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, January 9, 2026",
+    "secretItem": "ICE CREAM TRUCK",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, January 9, 2026",
+    "secretItem": "MIRAGE",
+    "pot": 10000,
+    "totalWinners": 47,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, January 8, 2026",
+    "secretItem": "EIFFEL TOWER",
+    "pot": 5000,
+    "totalWinners": 1132,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, January 8, 2026",
+    "secretItem": "UNICYCLE",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, January 7, 2026",
+    "secretItem": "LADY GAGA",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, January 7, 2026",
+    "secretItem": "HORSE SHOE",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, January 6, 2026",
+    "secretItem": "THE MACARENA",
+    "pot": 5000,
+    "totalWinners": 6,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, January 6, 2026",
+    "secretItem": "MIDNIGHT",
+    "pot": 10000,
+    "totalWinners": 7,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, January 5, 2026",
+    "secretItem": "BUGS BUNNY",
+    "pot": 5000,
+    "totalWinners": 7,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, January 5, 2026",
+    "secretItem": "CACTUS",
+    "pot": 10000,
+    "totalWinners": 6,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, January 2, 2026",
+    "secretItem": "SALT AND PEPPER",
+    "pot": 5000,
+    "totalWinners": 3,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, January 2, 2026",
+    "secretItem": "6 7",
+    "pot": 10000,
+    "totalWinners": 51,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, January 1, 2026",
+    "secretItem": "KENTUCKY DERBY",
+    "pot": 5000,
+    "totalWinners": 2,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, January 1, 2026",
+    "secretItem": "JOKE",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, December 31, 2025",
+    "secretItem": "BUZZ LIGHTYEAR",
+    "pot": 11111,
+    "totalWinners": 2,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, December 31, 2025",
+    "secretItem": "7-ELEVEN",
+    "pot": 111111,
+    "totalWinners": 1343,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, December 30, 2025",
+    "secretItem": "MCDONALD'S",
+    "pot": 5000,
+    "totalWinners": 342,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, December 30, 2025",
+    "secretItem": "SANDCASTLE",
+    "pot": 10000,
+    "totalWinners": 15,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, December 29, 2025",
+    "secretItem": "WONDER WOMAN",
+    "pot": 5000,
+    "totalWinners": 9,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, December 29, 2025",
+    "secretItem": "CAVITY",
+    "pot": 10000,
+    "totalWinners": 46,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, December 26, 2025",
+    "secretItem": "BAGGAGE CLAIM",
+    "pot": 200000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, December 26, 2025",
+    "secretItem": "ICE CUBE TRAY",
+    "pot": 300000,
+    "totalWinners": 348,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, December 25, 2025",
+    "secretItem": "GARBAGE TRUCK",
+    "pot": 70000,
+    "totalWinners": 11,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, December 25, 2025",
+    "secretItem": "CRUTCHES",
+    "pot": 130000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, December 24, 2025",
+    "secretItem": "CURLING IRON",
+    "pot": 50000,
+    "totalWinners": 68,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, December 24, 2025",
+    "secretItem": "SPEED BUMP",
+    "pot": 100000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, December 23, 2025",
+    "secretItem": "SEINFELD",
+    "pot": 35000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, December 23, 2025",
+    "secretItem": "PIGGY BANK",
+    "pot": 65000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, December 22, 2025",
+    "secretItem": "PINOCCHIO",
+    "pot": 20000,
+    "totalWinners": 20,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, December 22, 2025",
+    "secretItem": "WILL FERRELL",
+    "pot": 30000,
+    "totalWinners": 2,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, December 19, 2025",
+    "secretItem": "UGLY SWEATER",
+    "pot": 5000,
+    "totalWinners": 7,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, December 19, 2025",
+    "secretItem": "MR. T",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, December 18, 2025",
+    "secretItem": "KING KONG",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, December 18, 2025",
+    "secretItem": "FRENCH FRIES",
+    "pot": 10000,
+    "totalWinners": 2,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, December 17, 2025",
+    "secretItem": "RUDOLPH THE RED-NOSED REINDEER",
+    "pot": 5000,
+    "totalWinners": 16,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, December 17, 2025",
+    "secretItem": "OREO",
+    "pot": 10000,
+    "totalWinners": 3,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, December 16, 2025",
+    "secretItem": "THE GRINCH",
+    "pot": 5000,
+    "totalWinners": 3,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, December 16, 2025",
+    "secretItem": "BOWLING",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, December 15, 2025",
+    "secretItem": "PARIS HILTON",
+    "pot": 5000,
+    "totalWinners": 655,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, December 15, 2025",
+    "secretItem": "MONOPOLY",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, December 12, 2025",
+    "secretItem": "GOODYEAR BLIMP",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Friday, December 12, 2025",
+    "secretItem": "BIRTHDAY CAKE",
+    "pot": 10000,
+    "totalWinners": 14,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, December 11, 2025",
+    "secretItem": "M&MS",
+    "pot": 5000,
+    "totalWinners": 25,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, December 11, 2025",
+    "secretItem": "TITANIC",
+    "pot": 10000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, December 10, 2025",
+    "secretItem": "JAMES BOND",
+    "pot": 5000,
+    "totalWinners": 49,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Wednesday, December 10, 2025",
+    "secretItem": "S'MORES",
+    "pot": 10000,
+    "totalWinners": 9,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, December 9, 2025",
+    "secretItem": "CHATGPT",
+    "pot": 5000,
+    "totalWinners": 1,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, December 9, 2025",
+    "secretItem": "MOUNT RUSHMORE",
+    "pot": 10000,
+    "totalWinners": 16,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, December 8, 2025",
+    "secretItem": "BARBIE",
+    "pot": 5000,
+    "totalWinners": 2,
+    "host": "Hunter March",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Monday, December 8, 2025",
+    "secretItem": "PICKLEBALL",
+    "pot": 10000,
+    "totalWinners": 10,
+    "host": "Howie Mandel",
+    "format": "v1",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, April 21, 2026",
+    "secretItem": "THERMOMETER",
+    "pot": 7500,
+    "totalWinners": 4453,
+    "host": "Howie Mandel",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Tuesday, April 21, 2026",
+    "secretItem": "DRIVING RANGE",
+    "pot": 7500,
+    "totalWinners": 17,
+    "host": "Howie Mandel",
+    "format": "v2",
+    "clueCount": 5
+  }
+]
