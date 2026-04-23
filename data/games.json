@@ -1,5 +1,109 @@
 [
   {
+    "date": "Wednesday, April 22, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "CLOWN",
+    "clues": [
+      {
+        "text": "EXTREMELY EMOTIONAL",
+        "correct": "50",
+        "guesses": "4,448",
+        "explanation": "Clowns are characterized by extreme emotions, famously represented by the contrasting happy and sad clown archetypes."
+      },
+      {
+        "text": "MAKE UP TO BREAK UP",
+        "correct": "402",
+        "guesses": "5,605",
+        "explanation": "A clown applies heavy makeup specifically to break you up into laughter and smiles."
+      },
+      {
+        "text": "BELONGS IN THE CARPOOL LANE",
+        "correct": "393",
+        "guesses": "5,475",
+        "explanation": "This refers to the classic clown car gag where dozens of people cram into one vehicle, making them perfect for the carpool lane."
+      },
+      {
+        "text": "DISCOURAGED AT SCHOOL BUT ENCOURAGED AT PARTIES",
+        "correct": "508",
+        "guesses": "5,073",
+        "explanation": "While being a class clown is discouraged by teachers in school, it is highly encouraged behavior at a birthday party."
+      },
+      {
+        "text": "HAS HUMONGOUS SHOES TO FILL",
+        "correct": "6,059",
+        "guesses": "9,050",
+        "explanation": "Clowns are known for wearing comically oversized red shoes, meaning they literally have humongous shoes to fill."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 50,
+    "silverWinners": 402,
+    "bronzeWinners": 393,
+    "totalWinners": 845,
+    "goldPayout": 60.0,
+    "silverPayout": 6.21,
+    "bronzePayout": 5.08,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "I Am The Genius 215, Sour Standard 627, Hot Dog Freak",
+    "wrongGuesses": "MASCARA, DIVORCE, EMOJI, KARAOKE, INSIDE OUT"
+  },
+  {
+    "date": "Wednesday, April 22, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "ATM",
+    "clues": [
+      {
+        "text": "SUPPLIES ARE LIMITED",
+        "correct": "1",
+        "guesses": "3,556",
+        "explanation": "Most automated teller machines have a daily withdrawal limit, and your own account's supply of cash is often limited."
+      },
+      {
+        "text": "WHAT'S MINE IS YOURS...KINDA",
+        "correct": "1",
+        "guesses": "5,934",
+        "explanation": "The machine is filled with the bank's money, but it essentially becomes yours as soon as you withdraw it."
+      },
+      {
+        "text": "TAKE NOTE OF THESE THREE LETTERS",
+        "correct": "170",
+        "guesses": "9,019",
+        "explanation": "You take physical bank notes out of an ATM, which is a common three-letter abbreviation."
+      },
+      {
+        "text": "PUT A PIN IN IT",
+        "correct": "472",
+        "guesses": "5,266",
+        "explanation": "To access your funds at an ATM, you must enter your personal identification number, or PIN."
+      },
+      {
+        "text": "ALWAYS ABLE TO KEEP YOUR BALANCE",
+        "correct": "1,493",
+        "guesses": "6,479",
+        "explanation": "The ATM keeps track of your financial records and allows you to check your current account balance at any time."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 1,
+    "bronzeWinners": 170,
+    "totalWinners": 172,
+    "goldPayout": 3000.0,
+    "silverPayout": 2500.0,
+    "bronzePayout": 11.76,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Petite Mower 675, True Rat King, Amy To Please, Cloudy Scroll",
+    "wrongGuesses": "IOU, DNA, MAP, TOILET PAPER, IRS"
+  },
+  {
     "date": "Monday, April 20, 2026",
     "pot": 7500,
     "format": "v2",
