@@ -8,7 +8,7 @@ Last updated: 2026-04-23
 
 ## Latest Known Commit
 
-- `b7236b7` - Keep games metadata in sync from admin writes
+- `bb96712` - Keep games metadata in sync from admin writes
 
 ## Current State
 
