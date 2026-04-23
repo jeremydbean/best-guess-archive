@@ -10,31 +10,31 @@
         "text": "EXTREMELY EMOTIONAL",
         "correct": "50",
         "guesses": "4,448",
-        "explanation": "Clowns are characterized by extreme emotions, famously represented by the contrasting happy and sad clown archetypes."
+        "explanation": "Sad clowns, happy clowns. It's always about the extreme emotions."
       },
       {
         "text": "MAKE UP TO BREAK UP",
         "correct": "402",
         "guesses": "5,605",
-        "explanation": "A clown applies heavy makeup specifically to break you up into laughter and smiles."
+        "explanation": "Clowns wear makeup to break you up, to break up."
       },
       {
         "text": "BELONGS IN THE CARPOOL LANE",
         "correct": "393",
         "guesses": "5,475",
-        "explanation": "This refers to the classic clown car gag where dozens of people cram into one vehicle, making them perfect for the carpool lane."
+        "explanation": "Many, many clowns can fit into a CLOWN car."
       },
       {
         "text": "DISCOURAGED AT SCHOOL BUT ENCOURAGED AT PARTIES",
         "correct": "508",
         "guesses": "5,073",
-        "explanation": "While being a class clown is discouraged by teachers in school, it is highly encouraged behavior at a birthday party."
+        "explanation": "Class clowns. They discouraged me every time I was at school. But at parties, they always want you to be funny."
       },
       {
         "text": "HAS HUMONGOUS SHOES TO FILL",
         "correct": "6,059",
         "guesses": "9,050",
-        "explanation": "Clowns are known for wearing comically oversized red shoes, meaning they literally have humongous shoes to fill."
+        "explanation": "Clown shoes are giant."
       }
     ],
     "goldClue": 1,
@@ -62,31 +62,31 @@
         "text": "SUPPLIES ARE LIMITED",
         "correct": "1",
         "guesses": "3,556",
-        "explanation": "Most automated teller machines have a daily withdrawal limit, and your own account's supply of cash is often limited."
+        "explanation": "Most ATMs have a daily limit on what they have in there, plus your supply of what you have in the bank is limited."
       },
       {
         "text": "WHAT'S MINE IS YOURS...KINDA",
         "correct": "1",
         "guesses": "5,934",
-        "explanation": "The machine is filled with the bank's money, but it essentially becomes yours as soon as you withdraw it."
+        "explanation": "The ATM is filled with the bank's money, but it becomes yours when you take it out."
       },
       {
         "text": "TAKE NOTE OF THESE THREE LETTERS",
         "correct": "170",
         "guesses": "9,019",
-        "explanation": "You take physical bank notes out of an ATM, which is a common three-letter abbreviation."
+        "explanation": "You literally take bank notes out of your what? ATM! Three letters."
       },
       {
         "text": "PUT A PIN IN IT",
         "correct": "472",
         "guesses": "5,266",
-        "explanation": "To access your funds at an ATM, you must enter your personal identification number, or PIN."
+        "explanation": "You access the ATM by entering your PIN."
       },
       {
         "text": "ALWAYS ABLE TO KEEP YOUR BALANCE",
         "correct": "1,493",
         "guesses": "6,479",
-        "explanation": "The ATM keeps track of your financial records and allows you to check your current account balance at any time."
+        "explanation": "It keeps track of your account balance. You go to the ATM, you take your money, you look at your balance."
       }
     ],
     "goldClue": 1,
