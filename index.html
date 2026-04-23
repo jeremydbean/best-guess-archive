@@ -547,7 +547,7 @@ document.addEventListener('focusout', function(e) {
     </div>
     <div class="relative w-full md:w-96">
       <span class="material-symbols-outlined absolute left-3 top-3 text-slate-400">search</span>
-      <input id="db-search" type="text" onkeyup="app.filterDatabase()"
+      <input id="db-search" type="text" oninput="app.scheduleDatabaseFilter()"
         class="w-full bg-slate-800 border border-slate-700 rounded-full py-2 pl-10 pr-4 text-white focus:outline-none focus:border-blue-500"
         placeholder="Search item, date, host, clue, or winner name...">
     </div>
@@ -1259,6 +1259,16 @@ class App {
 
   setView(name) {
     this.updateNavActiveState(name);
+    if (name !== 'home') {
+      if (this._homeStatsFrame1) cancelAnimationFrame(this._homeStatsFrame1);
+      if (this._homeStatsFrame2) cancelAnimationFrame(this._homeStatsFrame2);
+      this._homeStatsFrame1 = null;
+      this._homeStatsFrame2 = null;
+    }
+    if (name !== 'database' && this._dbFilterTimer) {
+      clearTimeout(this._dbFilterTimer);
+      this._dbFilterTimer = null;
+    }
     if (name !== 'database' && typeof window.cleanupDatabaseScrollControls === 'function') {
       window.cleanupDatabaseScrollControls();
     }
@@ -1427,14 +1437,20 @@ class App {
       };
     }
     const { totalPot, totalWinners, uniqueDatesCount } = this._homeStatsCache;
-    setTimeout(() => {
+    if (this._homeStatsFrame1) cancelAnimationFrame(this._homeStatsFrame1);
+    if (this._homeStatsFrame2) cancelAnimationFrame(this._homeStatsFrame2);
+    this._homeStatsFrame1 = requestAnimationFrame(() => {
+      this._homeStatsFrame2 = requestAnimationFrame(() => {
+        this._homeStatsFrame1 = null;
+        this._homeStatsFrame2 = null;
       const m = document.getElementById('total-money-display');
       const g = document.getElementById('total-games-display');
       const w = document.getElementById('total-winners-display');
       if (m) this._animateHomeStat(m, totalPot, v => '$' + v.toLocaleString(), 900);
       if (g) this._animateHomeStat(g, uniqueDatesCount, v => v.toLocaleString(), 700);
       if (w) this._animateHomeStat(w, totalWinners, v => v.toLocaleString(), 850);
-    }, 50);
+      });
+    });
   }
 
   // Default tip URLs (overridden by admin settings if saved)
@@ -2016,6 +2032,14 @@ class App {
   filterDatabase() {
     clearTimeout(this._filterTimer);
     this._filterTimer = setTimeout(() => this.renderDatabase(), 150);
+  }
+
+  scheduleDatabaseFilter() {
+    if (this._dbFilterTimer) clearTimeout(this._dbFilterTimer);
+    this._dbFilterTimer = setTimeout(() => {
+      this._dbFilterTimer = null;
+      this.renderDatabase();
+    }, 100);
   }
 
   sortDatabase(key) {
