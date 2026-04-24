@@ -8,7 +8,7 @@ Last updated: 2026-04-23
 
 ## Latest Known Commit
 
-- Pending this import - Add Thursday, April 23, 2026 games
+- `68417b4` - Add April 23 CHOPSTICKS and TIME games
 
 ## Current State
 
