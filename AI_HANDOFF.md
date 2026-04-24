@@ -8,7 +8,7 @@ Last updated: 2026-04-23
 
 ## Latest Known Commit
 
-- `bb96712` - Keep games metadata in sync from admin writes
+- Pending this import - Add Thursday, April 23, 2026 games
 
 ## Current State
 
@@ -17,6 +17,7 @@ Last updated: 2026-04-23
 - Home page KPI counters animate on load without layout shift.
 - Admin import/delete flow has extra safety checks and preview escaping.
 - Admin import/delete now writes `data/games.json` and `data/games-meta.json` together through the Git database API (blob/tree/commit/ref), avoiding the old contents-endpoint size ceiling and keeping home-page totals in sync.
+- Latest imported episode: Thursday, April 23, 2026 with CHOPSTICKS and TIME, including the Fan Appreciation Week Netflix Shop voucher detail.
 - Stats payout badges were corrected to avoid relying on Tailwind arbitrary classes inside JS-rendered HTML.
 - Database date column width was reduced from the earlier oversized value to better preserve secret-item alignment.
 

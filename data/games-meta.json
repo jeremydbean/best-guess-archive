@@ -1,5 +1,23 @@
 [
   {
+    "date": "Thursday, April 23, 2026",
+    "secretItem": "CHOPSTICKS",
+    "pot": 7500,
+    "totalWinners": 331,
+    "host": "Hunter March",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
+    "date": "Thursday, April 23, 2026",
+    "secretItem": "TIME",
+    "pot": 7500,
+    "totalWinners": 960,
+    "host": "Hunter March",
+    "format": "v2",
+    "clueCount": 5
+  },
+  {
     "date": "Wednesday, April 22, 2026",
     "secretItem": "CLOWN",
     "pot": 7500,

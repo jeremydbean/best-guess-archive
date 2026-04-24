@@ -1,5 +1,109 @@
 [
   {
+    "date": "Thursday, April 23, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "CHOPSTICKS",
+    "clues": [
+      {
+        "text": "2 FOR 1",
+        "correct": "24",
+        "guesses": "4,811 🥇",
+        "explanation": "With chopsticks, two sticks become one unit to help you eat."
+      },
+      {
+        "text": "A FULFILLING PRACTICE",
+        "correct": "42",
+        "guesses": "4,097 🥈",
+        "explanation": "Chopstick expertise is very fulfilling. It feels good to finally get good at it, and the practice is literally for filling your tummy."
+      },
+      {
+        "text": "DESPITE THE NAME, THEY'RE NOT FOR CUTTING",
+        "correct": "265",
+        "guesses": "3,571 🥉",
+        "explanation": "Even though they are called chopsticks, you should not try to chop anything with them; it would take forever."
+      },
+      {
+        "text": "INCREDIBLE PICK-UP ARTISTS",
+        "correct": "1,667",
+        "guesses": "5,512",
+        "explanation": "Their whole purpose is to pick up your food. If you use them the right way, they pick up everything."
+      },
+      {
+        "text": "ASIAN UTENSILS YOU HOLD LIKE TWO PENCILS",
+        "correct": "11,891",
+        "guesses": "12,410",
+        "explanation": "Chopsticks are traditional Asian utensils, and the proper way to use them is by holding them just like two pencils."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 24,
+    "silverWinners": 42,
+    "bronzeWinners": 265,
+    "totalWinners": 331,
+    "goldPayout": 125,
+    "silverPayout": 59.52,
+    "bronzePayout": 7.54,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "CodyLicious, ScreechyMeow, CheckeredCups",
+    "wrongGuesses": "TWINS, BOGO, DENTIST, TONGS, TWIX"
+  },
+  {
+    "date": "Thursday, April 23, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TIME",
+    "clues": [
+      {
+        "text": "INVISIBLE YET VISIBLE",
+        "correct": "24",
+        "guesses": "8,442 🥇",
+        "explanation": "You cannot see time itself, but you can definitely see its effects on everything around you."
+      },
+      {
+        "text": "NO MATTER WHERE, IT'S ALWAYS THERE",
+        "correct": "260",
+        "guesses": "10,108 🥈",
+        "explanation": "Wherever you go, literally anywhere in the world, time is always passing."
+      },
+      {
+        "text": "ONCE YOU'RE THERE, IT CHANGES",
+        "correct": "676",
+        "guesses": "5,703 🥉",
+        "explanation": "As soon as you arrive at any given moment, that moment is already over and has changed."
+      },
+      {
+        "text": "NOT ACTUALLY MONEY BUT EVERYONE SPENDS IT",
+        "correct": "4,361",
+        "guesses": "5,491",
+        "explanation": "This refers to the famous phrase 'time is money.' Everyone spends time even though it is not currency."
+      },
+      {
+        "text": "A CLOCK CAN STOP, BUT I NEVER DO",
+        "correct": "2,401",
+        "guesses": "2,846",
+        "explanation": "That is exactly what time does; it does not stop, even when watches or clocks break down."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 24,
+    "silverWinners": 260,
+    "bronzeWinners": 676,
+    "totalWinners": 960,
+    "goldPayout": 125,
+    "silverPayout": 9.61,
+    "bronzePayout": 2.95,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "DanielaS, WesternLeo889, BassDude, MissWorld594",
+    "wrongGuesses": "AIR, SHADOW, WIND, OXYGEN, WATER"
+  },
+  {
     "date": "Wednesday, April 22, 2026",
     "pot": 7500,
     "format": "v2",
@@ -44,7 +148,7 @@
     "silverWinners": 402,
     "bronzeWinners": 393,
     "totalWinners": 845,
-    "goldPayout": 60.0,
+    "goldPayout": 60,
     "silverPayout": 6.21,
     "bronzePayout": 5.08,
     "winnerPayout": "$7,500.00",
@@ -96,8 +200,8 @@
     "silverWinners": 1,
     "bronzeWinners": 170,
     "totalWinners": 172,
-    "goldPayout": 3000.0,
-    "silverPayout": 2500.0,
+    "goldPayout": 3000,
+    "silverPayout": 2500,
     "bronzePayout": 11.76,
     "winnerPayout": "$7,500.00",
     "winnerNames": "Petite Mower 675, True Rat King, Amy To Please, Cloudy Scroll",
@@ -2328,7 +2432,7 @@
         "text": "MIND READERS UNITE",
         "correct": "0",
         "guesses": "?",
-        "explanation": "Mind Readers Unite - 'Because you\u2019re trying to guess what America thinks!'"
+        "explanation": "Mind Readers Unite - 'Because you’re trying to guess what America thinks!'"
       },
       {
         "text": "RIVALRY FOR DNA",
@@ -2490,7 +2594,7 @@
         "text": "TRENDY POPUP",
         "correct": "2",
         "guesses": "8948",
-        "explanation": "Trendy Popup - 'They pop up above your lip and lately they\u2019ve been very trendy.'"
+        "explanation": "Trendy Popup - 'They pop up above your lip and lately they’ve been very trendy.'"
       },
       {
         "text": "MID COVER BAND",
@@ -2604,7 +2708,7 @@
         "text": "ALL FOR NOTHING",
         "correct": "5",
         "guesses": "5237",
-        "explanation": "All For Nothing - 'It\u2019s all the information in the world almost all of it available at no cost.'"
+        "explanation": "All For Nothing - 'It’s all the information in the world almost all of it available at no cost.'"
       },
       {
         "text": "GREAT WORK EVERYBODY",
@@ -2622,7 +2726,7 @@
         "text": "ONLINE BRATANNICA BUT EVEN MORE GIGANTICA",
         "correct": "3063",
         "guesses": "8361",
-        "explanation": "Online Bratannica But Even More Gigantica - 'It\u2019s like the encyclopedia but with way more articles and it\u2019s online.'"
+        "explanation": "Online Bratannica But Even More Gigantica - 'It’s like the encyclopedia but with way more articles and it’s online.'"
       }
     ],
     "goldClue": 1,
@@ -2664,7 +2768,7 @@
         "text": "A BLAST FROM THE PAST",
         "correct": "8",
         "guesses": "7604",
-        "explanation": "A Blast From The Past - 'You were having a good time last night and now you\u2019re suffering the consequences.'"
+        "explanation": "A Blast From The Past - 'You were having a good time last night and now you’re suffering the consequences.'"
       },
       {
         "text": "CAN HAPPEN IN VEGAS JUST LIKE \"THE\" MOVIE",
@@ -2706,7 +2810,7 @@
         "text": "MAKEUP WITH NO MAKEUP",
         "correct": "0",
         "guesses": "9408",
-        "explanation": "Makeup With No Makeup - 'The dad\u2019s trying to make up with his son... and they\u2019re both clown fish clowns that don\u2019t wear makeup.'"
+        "explanation": "Makeup With No Makeup - 'The dad’s trying to make up with his son... and they’re both clown fish clowns that don’t wear makeup.'"
       },
       {
         "text": "A GUILT TRIP",
@@ -4560,7 +4664,7 @@
         "text": "MIX DILL HERBS AND MAYO AND VEGGIES SAY HEYO",
         "correct": "6320",
         "guesses": "10439",
-        "explanation": "Mix Dill Herbs And Mayo And Veggies Say Heyo - 'That's the recipe. And many people use ranch on a crudit\u00e9 platter.'"
+        "explanation": "Mix Dill Herbs And Mayo And Veggies Say Heyo - 'That's the recipe. And many people use ranch on a crudité platter.'"
       },
       {
         "text": "HIDDEN VALLEY MADE VALID TO POUR ON YOUR SALAD",
@@ -6795,7 +6899,7 @@
     "bronzePayout": 0,
     "winnerPayout": "$769.23",
     "winnerNames": "Names not read",
-    "wrongGuesses": "PI\u00f1ATA, BEETHOVEN'S FIFTH, INK, GIFT, SALMONELLA, DEBT, TICKET, ADVICE, TIME, MONEY, SPEEDING",
+    "wrongGuesses": "PIñATA, BEETHOVEN'S FIFTH, INK, GIFT, SALMONELLA, DEBT, TICKET, ADVICE, TIME, MONEY, SPEEDING",
     "winningClue": 1,
     "winnerCount": 13
   },
@@ -7362,7 +7466,7 @@
         "text": "ALL THE RIGHT MOVES",
         "correct": "53",
         "guesses": "16,000",
-        "explanation": "All the right moves - \"Pac-man is a 90\u00b0 right angles it's always right you It's always a right angle a 90\u00b0 angle is all the moves are right angles\""
+        "explanation": "All the right moves - \"Pac-man is a 90° right angles it's always right you It's always a right angle a 90° angle is all the moves are right angles\""
       },
       {
         "text": "HIS WIFE TOOK HIS NAME",
@@ -9477,10 +9581,10 @@
         "explanation": "Arrives orderly in many shapes and sizes - \"arrives orderly in many shapes and sizes.\""
       },
       {
-        "text": "PASS THE KETCHUP S'IL VOUS PLA\u00ceT",
+        "text": "PASS THE KETCHUP S'IL VOUS PLAÎT",
         "correct": "1,800",
         "guesses": "N/A",
-        "explanation": "Pass the ketchup s'il vous pla\u00eet - 'well pass the ketchup, see, play French and fries.'"
+        "explanation": "Pass the ketchup s'il vous plaît - 'well pass the ketchup, see, play French and fries.'"
       }
     ],
     "goldClue": 3,
@@ -10398,7 +10502,7 @@
         "text": "WHETHER ON TOP OF THE WEATHER OR UNDER THE WEATHER",
         "correct": "1582",
         "guesses": "4,252",
-        "explanation": "Temperature, and a thermometer measures your temperature\u2014and your body temperature\u2014especially when you're sick. Are you under the weather? You get it."
+        "explanation": "Temperature, and a thermometer measures your temperature—and your body temperature—especially when you're sick. Are you under the weather? You get it."
       }
     ],
     "goldClue": 1,
@@ -10432,25 +10536,25 @@
         "text": "LOTS OF RIPS BUT NO HOLES",
         "correct": "5",
         "guesses": "10,074",
-        "explanation": "You can take big swings, but there is usually no hole to hit the ball into. That's the point\u2014you're just driving; you're not trying to get to a hole."
+        "explanation": "You can take big swings, but there is usually no hole to hit the ball into. That's the point—you're just driving; you're not trying to get to a hole."
       },
       {
         "text": "STOVE TOP IN A CAR",
         "correct": "11",
         "guesses": "4,965",
-        "explanation": "This is a riddle: you drive a car, and a stove top is often called a range\u2014AKA driving range."
+        "explanation": "This is a riddle: you drive a car, and a stove top is often called a range—AKA driving range."
       },
       {
         "text": "DISTANCE MAKES THE HEART GROW FONDER",
         "correct": "28",
         "guesses": "3,529",
-        "explanation": "You feel good the farther you hit it\u2014that\u2019s the whole point of a driving range."
+        "explanation": "You feel good the farther you hit it—that’s the whole point of a driving range."
       },
       {
         "text": "REHEARSAL IS IN FULL SWING",
         "correct": "103",
         "guesses": "6,097",
-        "explanation": "It's where you practice your golf swing. It's all about the rehearsal in your swing\u2014that\u2019s what a driving range is for."
+        "explanation": "It's where you practice your golf swing. It's all about the rehearsal in your swing—that’s what a driving range is for."
       }
     ],
     "goldClue": 1,
