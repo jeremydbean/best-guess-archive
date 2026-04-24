@@ -8,7 +8,7 @@ Last updated: 2026-04-24
 
 ## Latest Known Commit
 
-- Pending this review pass - Harden archive rendering against injected markup
+- `e1d4d6c` - Harden archive rendering paths
 
 ## Current State
 
