@@ -496,7 +496,7 @@ document.addEventListener('focusout', function(e) {
       <div class="flex items-center gap-2 text-xs text-slate-400">
         <span class="material-symbols-outlined text-[#FFA300] text-[16px]">timer</span>
         <label for="clue-duration-select" class="hidden sm:inline">Clue Time:</label>
-        <select id="clue-duration-select" class="bg-slate-800 border border-slate-600 focus:border-blue-500 text-white rounded px-2 py-1.5 outline-none transition text-xs" onchange="localStorage.setItem('clue_time', this.value); if(app.currentGame && app.gameStarted) app.renderGameLoop();">
+        <select id="clue-duration-select" class="bg-slate-800 border border-slate-600 focus:border-blue-500 text-white rounded px-2 py-1.5 outline-none transition text-xs" onchange="app.setClueDuration(this.value)">
           <option value="20">20s (Real)</option>
           <option value="30">30s</option>
           <option value="45">45s</option>
@@ -1507,7 +1507,7 @@ class App {
     } catch (err) {
       console.error('Could not load games-meta.json:', err);
       document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full bg-red-500';
-      document.getElementById('data-source-status').innerText = 'Data load failed';
+      document.getElementById('data-source-status').innerText = `Data load failed: ${err.message}`;
     }
     this.setView('home');
   }
@@ -1521,13 +1521,22 @@ class App {
         this.games = data;
         this._normalizeGames(this.games);
         this._fullGamesLoaded = true;
-        this._fullGamesLoading = null;
       })
-      .catch(err => {
-        console.error('Could not load games.json:', err);
-        this._fullGamesLoading = null;
-      });
+      .finally(() => { this._fullGamesLoading = null; });
     return this._fullGamesLoading;
+  }
+
+  _showDataLoadError(err) {
+    console.error('Could not load games.json:', err);
+    const statusEl = document.getElementById('data-source-status');
+    const indicatorEl = document.getElementById('status-indicator');
+    if (statusEl) statusEl.innerText = `Data load failed: ${err.message}`;
+    if (indicatorEl) indicatorEl.className = 'w-2 h-2 rounded-full bg-red-500';
+  }
+
+  setClueDuration(value) {
+    localStorage.setItem('clue_time', value);
+    if (this.currentGame && this.gameStarted) this.renderGameLoop();
   }
 
   // ==================== VIEWS ====================
@@ -1663,12 +1672,18 @@ class App {
       } else {
         const tbody = document.getElementById('db-table-body');
         if (tbody) tbody.innerHTML = '<tr><td colspan="10" class="text-center py-12 text-slate-400">Loading game data…</td></tr>';
-        this._ensureFullGamesLoaded().then(() => this.renderDatabase());
+        this._ensureFullGamesLoaded()
+          .then(() => this.renderDatabase())
+          .catch(err => {
+            console.error('Could not load games.json:', err);
+            if (tbody) tbody.innerHTML = `<tr><td colspan="10" class="text-center py-12 text-red-400">Failed to load game data: ${this._escapeHtml(err.message)}</td></tr>`;
+          });
       }
     }
-    // if (name === 'archive')  this.renderArchive();
     if (name === 'stats') {
-      this._ensureFullGamesLoaded().then(() => this.renderStats());
+      this._ensureFullGamesLoaded()
+        .then(() => this.renderStats())
+        .catch(err => this._showDataLoadError(err));
     }
     if (name === 'admin')    this.initAdmin();
   }
@@ -1815,8 +1830,17 @@ class App {
     return String(s || '').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g, '');
   }
 
-  startRandomGame() {
+  async startRandomGame() {
     this.clearTimers();
+    // Play needs the full clues array; init only loads games-meta.json.
+    if (!this._fullGamesLoaded) {
+      try {
+        await this._ensureFullGamesLoaded();
+      } catch (err) {
+        this._showDataLoadError(err);
+        return;
+      }
+    }
     const playableGames = this._getPlayableGames();
     if (!playableGames.length) {
       alert('No playable archived games are available right now.');
@@ -2341,6 +2365,8 @@ class App {
     const esc = (v) => this._escapeHtml(v);
 
     // Bonus/special gift mapping by date
+    // bonusMap values are trusted hardcoded HTML (contain <br> and <b>); bonus.desc is
+    // interpolated raw below. Any dynamic fields added here must go through _escapeHtml.
     const bonusMap = {
       'Wednesday, December 31, 2025': {
         title: 'Uber Voucher',
