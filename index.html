@@ -1388,7 +1388,6 @@ class App {
       headers,
       headCommitSha,
       rootTreeSha,
-      fileBlobSha: entry.sha,
       games: parsed
     };
   }
@@ -1409,86 +1408,49 @@ class App {
     });
   }
 
-  async _commitGamesState(owner, repo, pat, nextGames, message, expectedHeadSha) {
-    const state = await this._getRemoteGamesState(owner, repo, pat);
-    if (expectedHeadSha && state.headCommitSha !== expectedHeadSha) {
-      throw new Error('The branch changed on GitHub while this edit was being prepared. Please try again.');
-    }
+  // Commit an updated games array + regenerated meta in one atomic git commit.
+  // Pass the `state` object returned by a prior _getRemoteGamesState call; this reuses
+  // its SHAs instead of refetching. The ref PATCH is fast-forward-only, so a concurrent
+  // commit between fetch and write causes the PATCH to fail cleanly with a 422.
+  async _commitGamesState(owner, repo, pat, state, nextGames, message) {
+    const hj = { ...state.headers, 'Content-Type': 'application/json' };
+    const base = `https://api.github.com/repos/${owner}/${repo}`;
 
-    const gamesContent = this._b64EncodeUTF8(JSON.stringify(nextGames, null, 2));
-    const gamesBlob = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/blobs`, {
-      method: 'POST',
-      headers: {
-        ...state.headers,
-        'Content-Type': 'application/json'
-      },
+    const gamesBlob = await this._githubRequest(`${base}/git/blobs`, {
+      method: 'POST', headers: hj,
       body: JSON.stringify({
-        content: gamesContent,
+        content: this._b64EncodeUTF8(JSON.stringify(nextGames, null, 2)),
         encoding: 'base64'
       })
     });
 
-    const metaContent = this._b64EncodeUTF8(JSON.stringify(this._buildGamesMeta(nextGames), null, 2));
-    const metaBlob = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/blobs`, {
-      method: 'POST',
-      headers: {
-        ...state.headers,
-        'Content-Type': 'application/json'
-      },
+    const metaBlob = await this._githubRequest(`${base}/git/blobs`, {
+      method: 'POST', headers: hj,
       body: JSON.stringify({
-        content: metaContent,
+        content: this._b64EncodeUTF8(JSON.stringify(this._buildGamesMeta(nextGames), null, 2)),
         encoding: 'base64'
       })
     });
 
-    const tree = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/trees`, {
-      method: 'POST',
-      headers: {
-        ...state.headers,
-        'Content-Type': 'application/json'
-      },
+    const tree = await this._githubRequest(`${base}/git/trees`, {
+      method: 'POST', headers: hj,
       body: JSON.stringify({
         base_tree: state.rootTreeSha,
         tree: [
-          {
-            path: 'data/games.json',
-            mode: '100644',
-            type: 'blob',
-            sha: gamesBlob.sha
-          },
-          {
-            path: 'data/games-meta.json',
-            mode: '100644',
-            type: 'blob',
-            sha: metaBlob.sha
-          }
+          { path: 'data/games.json',      mode: '100644', type: 'blob', sha: gamesBlob.sha },
+          { path: 'data/games-meta.json', mode: '100644', type: 'blob', sha: metaBlob.sha  }
         ]
       })
     });
 
-    const commit = await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/commits`, {
-      method: 'POST',
-      headers: {
-        ...state.headers,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        message,
-        tree: tree.sha,
-        parents: [state.headCommitSha]
-      })
+    const commit = await this._githubRequest(`${base}/git/commits`, {
+      method: 'POST', headers: hj,
+      body: JSON.stringify({ message, tree: tree.sha, parents: [state.headCommitSha] })
     });
 
-    await this._githubRequest(`https://api.github.com/repos/${owner}/${repo}/git/refs/heads/main`, {
-      method: 'PATCH',
-      headers: {
-        ...state.headers,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        sha: commit.sha,
-        force: false
-      })
+    await this._githubRequest(`${base}/git/refs/heads/main`, {
+      method: 'PATCH', headers: hj,
+      body: JSON.stringify({ sha: commit.sha })
     });
 
     return { commitSha: commit.sha, previousHeadSha: state.headCommitSha };
@@ -2910,9 +2872,9 @@ class App {
         owner,
         repo,
         pat,
+        remoteState,
         gamesToKeep,
-        `Delete ${deletedCount} game${deletedCount>1?'s':''} from ${dateToDelete}`,
-        remoteState.headCommitSha
+        `Delete ${deletedCount} game${deletedCount>1?'s':''} from ${dateToDelete}`
       );
 
       // 4. Update local state
@@ -3263,7 +3225,7 @@ class App {
       status.innerText = `Verified: ${existing.length} existing + ${this._pendingGames.length} new = ${merged.length} total. Committing...`;
 
       const commitMsg = `Import ${this._pendingGames.length} game${this._pendingGames.length>1?'s':''}: ${this._pendingGames.map(g=>g.secretItem).join(', ')}`;
-      await this._commitGamesState(owner, repo, pat, merged, commitMsg, remoteState.headCommitSha);
+      await this._commitGamesState(owner, repo, pat, remoteState, merged, commitMsg);
 
       // 4. Update local state
       const publishedCount = this._pendingGames.length;

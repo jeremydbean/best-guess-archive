@@ -8,7 +8,7 @@ Last updated: 2026-04-24
 
 ## Latest Known Commit
 
-- `e1d4d6c` - Harden archive rendering paths
+- `e1d4d6c` - Harden archive rendering paths; follow-up cleanup of `_commitGamesState` on feature branch
 
 ## Current State
 
@@ -43,5 +43,6 @@ Last updated: 2026-04-24
 - Date column width still keeps secret items aligned.
 - Home KPI counters do not cause layout shift.
 - Admin import previews render safely and publish in the intended order.
-- Admin writes still target `main`, update both JSON data files in one commit, and fail safely if GitHub advances between fetch and commit.
+- Admin writes still target `main`, update both JSON data files in one commit, and fail safely if GitHub advances between fetch and commit (ref PATCH is fast-forward-only, no explicit `force: false` needed).
+- `_commitGamesState` takes the pre-fetched state object instead of re-reading — one tree walk per admin action instead of two.
 - Re-check visible database details and play result screens after future `innerHTML` edits, especially any new fields that come from pasted/imported game JSON.
