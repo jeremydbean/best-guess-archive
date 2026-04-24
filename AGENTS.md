@@ -19,6 +19,7 @@ git pull --rebase origin main
 - Commit directly on `main`.
 - Push directly to `origin/main`.
 - Do not create feature branches, backup branches, or PR branches unless the owner explicitly asks.
+- Do not leave non-main remote branches behind. If one exists and its commits are already on `main`, delete it before handoff.
 
 ## Handoff Rules
 

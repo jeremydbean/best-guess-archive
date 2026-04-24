@@ -14,3 +14,4 @@ After editing:
 - update `AI_HANDOFF.md`
 - commit on `main`
 - push to `origin/main`
+- clean up stale non-main branches only after confirming their work is already on `main`

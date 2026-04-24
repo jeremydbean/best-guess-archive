@@ -8,11 +8,12 @@ Last updated: 2026-04-24
 
 ## Latest Known Commit
 
-- `6af60cf` - Fix play-feature data dependency; harden lazy-load error handling
+- `1226608` - Update AI_HANDOFF after play-feature fix and lazy-load hardening
 
 ## Current State
 
 - GitHub Pages publishes from `main`.
+- Main-only workflow is in effect. Do not create branches; remove stale non-main branches after confirming their commits are already represented on `main`.
 - Database side arrows are working on desktop.
 - Home page KPI counters animate on load without layout shift.
 - Admin import/delete flow has extra safety checks and preview escaping.
@@ -49,3 +50,15 @@ Last updated: 2026-04-24
 - `_ensureFullGamesLoaded` now propagates fetch errors; all three call sites (database, stats, play) have `.catch` handlers that surface the failure. `_showDataLoadError` reuses the top-bar status indicator.
 - Clue-time `<select>` no longer has an inline onchange handler; calls `app.setClueDuration(value)`.
 - Re-check visible database details and play result screens after future `innerHTML` edits, especially any new fields that come from pasted/imported game JSON.
+
+## Codex Verification (2026-04-24)
+
+- Verified `main` includes Claude branch commit `6af60cf`; the remaining Claude remote branch is stale relative to `main` and should be deleted during cleanup.
+- `data/games.json` and `data/games-meta.json` parse cleanly and metadata regenerates exactly from the full games file.
+- Inline browser scripts in `index.html` pass syntax checks.
+- Static local asset references in the rendered HTML all exist.
+- Local browser smoke test at `http://127.0.0.1:5173/` passed for Home, Play, Database, and Stats with no console errors:
+  - Home loaded 197 rounds from `games-meta.json`.
+  - Play Random Game loaded full clues before selecting a game and rendered date/player count.
+  - Database rendered 197 rows.
+  - Stats rendered headline values including `$2,619,998` total paid out and `285` average winners.
