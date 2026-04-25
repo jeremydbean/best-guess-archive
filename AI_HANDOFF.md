@@ -8,7 +8,7 @@ Last updated: 2026-04-25
 
 ## Latest Known Implementation Commit
 
-- `81e99b7` - Reimport transcripts from clean doc; fix mobile transcript layout
+- `22551c6` - Fix Jan 1-14 missing transcript content; make clue callouts consistent
 
 ## Current State
 
@@ -23,8 +23,9 @@ Last updated: 2026-04-25
 - 100 total game days (99 playable + 1 cancelled: Thursday, April 9, 2026).
 - 199 game objects in `data/games.json` (most dates have two rounds).
 - **Transcripts reimported** from `Best_Guess_Live_Clean_Readable_Transcripts.docx` (uploaded to repo root). All 100 transcripts use games.json as canonical source for rounds/clues/host/pot/format. Section tags now read "Round 1 Results" / "Round 2 Results" (previously "Reveal").
+- **Jan 1-14 transcripts fixed**: These episodes had no Heading2 section markers in the docx. A heuristic state machine now splits them into 6 sections using phrase triggers ("crystal ball reveals", "correct answer was", etc.) and space-normalized secret-item matching. All 10 episodes are now fully populated.
 - **Mobile transcript layout fixed**: episode list max-height reduced from 32rem to 9rem on mobile; tapping an episode smooth-scrolls to the transcript detail panel. Desktop still uses 32rem two-column layout.
-- **Clue lines** in transcript sections (null speaker, "Clue N: TEXT") now render as left-bordered callout blocks for visual distinction.
+- **Clue lines** in transcript sections now render as left-bordered callout blocks consistently across all episode formats. Pattern matches "Clue N:" and "Clue number N:" (spelled or numeric) on any line regardless of speaker attribution.
 
 ## Daily Update Workflow
 
