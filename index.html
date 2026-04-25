@@ -1734,7 +1734,7 @@ class App {
       this._homeStatsCache = {
         totalPot: playableGames.reduce((a, g) => a + g.pot, 0),
         totalWinners: playableGames.reduce((a, g) => a + g.totalWinners, 0),
-        uniqueDatesCount: new Set(playableGames.map(g => g.date)).size
+        uniqueDatesCount: new Set(this.games.map(g => g.date)).size
       };
     }
     const { totalPot, totalWinners, uniqueDatesCount } = this._homeStatsCache;
@@ -2490,7 +2490,7 @@ class App {
 
     const games = this.games.filter(g => !this._getGameMeta(g).isStub);
     const uniqueDates = [...new Set(games.map(g => g.date))];
-    const totalGames = uniqueDates.length;
+    const totalGames = new Set(this.games.map(g => g.date)).size;
     const totalRounds = games.length;
     const today = new Date();
     const v2Dates = [...new Set(games.filter(g => g.format === 'v2').map(g => g.date))].sort((a, b) => this._compareArchiveDates(a, b));
