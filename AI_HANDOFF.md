@@ -1,6 +1,6 @@
 # AI Handoff
 
-Last updated: 2026-04-24
+Last updated: 2026-04-25
 
 ## Current Branch
 
@@ -8,7 +8,7 @@ Last updated: 2026-04-24
 
 ## Latest Known Commit
 
-- `4c58825` - Add internal transcript archive
+- Pending local commit - reconcile transcript dates and add transcript-to-database links
 
 ## Current State
 
@@ -33,8 +33,10 @@ Last updated: 2026-04-24
 - Regenerated `data/transcripts.json` from the `.docx`: 90 transcripts, first `Monday, December 8, 2025`, last `Friday, April 24, 2026`.
 - `index.html` has internal transcript navigation and a lazy-loaded `view-transcripts` page with search, episode list, and detail panel.
 - Database details modals include a `View full episode transcript` button for the selected date.
+- Transcript detail pages include per-game database detail buttons for that transcript date.
 - Transcript text is escaped before rendering.
 - Validation passed after the transcript commit: Python importer compile/run, generated transcript JSON matches `data/transcripts.json`, inline JS syntax check, `games.json`/`games-meta.json` consistency, and no remaining Google Doc transcript link in `index.html`.
+- Corrected the source-doc date typo for the MANICURE/COASTER transcript: `Wednesday, February 5, 2025` maps to `Thursday, February 5, 2026`; all transcript dates now match a database date.
 
 ## Working Agreement
 

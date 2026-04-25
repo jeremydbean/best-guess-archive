@@ -119,12 +119,6 @@
   .nav-link.active {
     color: #ffbb39;
   }
-  .nav-link--accent {
-    color: #8bbcff;
-  }
-  .nav-link--accent:hover {
-    color: #b5d5ff;
-  }
   .nav-link--feedback {
     color: #f28ab8;
   }
@@ -294,7 +288,7 @@ document.addEventListener('focusout', function(e) {
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="database" onclick="app.setView('database')">Database</button>
         <!-- <button class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition" onclick="app.setView('archive')">Archive</button> -->
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="stats" onclick="app.setView('stats')">Stats</button>
-        <button class="nav-link nav-link--accent px-3 py-2 rounded-md text-sm transition font-bold" data-nav-view="transcripts" onclick="app.setView('transcripts')">Transcripts</button>
+        <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="transcripts" onclick="app.setView('transcripts')">Transcripts</button>
         <a href="https://forms.gle/zzTwMu8wpZpC5zR58" target="_blank" rel="noopener noreferrer" class="nav-link nav-link--feedback px-3 py-2 rounded-md text-sm transition font-bold flex items-center gap-1">
           <span class="material-symbols-outlined align-middle text-base">bug_report</span> Report a Bug / Feedback
         </a>
@@ -314,7 +308,7 @@ document.addEventListener('focusout', function(e) {
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('database'); document.getElementById('mobile-menu').classList.add('hidden')">Database</button>
       <!-- <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('archive'); document.getElementById('mobile-menu').classList.add('hidden')">Archive</button> -->
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('stats'); document.getElementById('mobile-menu').classList.add('hidden')">Stats</button>
-      <button class="px-3 py-2 text-left rounded-md hover:bg-white/10 text-blue-300 font-bold" onclick="app.setView('transcripts'); document.getElementById('mobile-menu').classList.add('hidden')">Transcripts</button>
+      <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('transcripts'); document.getElementById('mobile-menu').classList.add('hidden')">Transcripts</button>
       <button class="flex items-center gap-2 px-3 py-2 text-left rounded-md bg-gradient-to-r from-pink-900/40 to-rose-900/40 hover:from-pink-900/60 text-pink-300 font-bold" onclick="app.openTipJar(); document.getElementById('mobile-menu').classList.add('hidden')">
         <span class="material-symbols-outlined text-sm">volunteer_activism</span> KindaCharming's Tip Jar
       </button>
@@ -2448,6 +2442,15 @@ class App {
     this.showDetails(button?.dataset?.date || '', button?.dataset?.item || '');
   }
 
+  openDatabaseDetailsFromButton(button) {
+    const date = button?.dataset?.date || '';
+    const item = button?.dataset?.item || '';
+    if (!date || !item) return;
+    this._ensureFullGamesLoaded()
+      .then(() => this.showDetails(date, item))
+      .catch(err => this._showDataLoadError(err));
+  }
+
   showDetails(date, item) {
     const g = this.games.find(x => x.date === date && x.secretItem === item);
     if (!g) return;
@@ -2655,11 +2658,24 @@ class App {
       nodes.detail.innerHTML = '<div class="text-slate-400">No transcript selected.</div>';
       return;
     }
+    const relatedGames = this.games.filter(g => g.date === transcript.date && !this._isStubGame(g));
+    const relatedGamesHtml = relatedGames.length
+      ? relatedGames.map(g => `
+          <button type="button" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" onclick="app.openDatabaseDetailsFromButton(this)"
+            class="inline-flex items-center gap-2 rounded-full border border-slate-600/70 bg-slate-900/60 px-3 py-1.5 text-xs font-bold text-slate-200 hover:border-yellow-400/50 hover:text-yellow-300 transition">
+            <span class="material-symbols-outlined text-sm">database</span>
+            ${esc(g.secretItem)} details
+          </button>
+        `).join('')
+      : '<span class="text-xs text-slate-500">No matching database entry found for this transcript date.</span>';
 
     nodes.detail.innerHTML = `
       <div class="mb-6 border-b border-slate-700/60 pb-4">
         <div class="text-xs uppercase tracking-widest text-blue-300 font-bold mb-2">Episode Transcript</div>
         <h3 class="text-2xl md:text-3xl font-display font-bold text-white">${esc(transcript.date)}</h3>
+        <div class="mt-4 flex flex-wrap gap-2">
+          ${relatedGamesHtml}
+        </div>
       </div>
       <div class="space-y-7">
         ${(transcript.sections || []).map(section => `

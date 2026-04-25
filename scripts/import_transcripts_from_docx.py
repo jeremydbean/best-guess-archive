@@ -34,6 +34,10 @@ STOP_HEADINGS = {
     "JSON",
     "JSON Data",
 }
+DATE_CORRECTIONS = {
+    # The exported transcript doc has this MANICURE/COASTER episode misdated.
+    "Wednesday, February 5, 2025": "Thursday, February 5, 2026",
+}
 
 
 def paragraph_text(paragraph: ET.Element) -> str:
@@ -72,7 +76,8 @@ def normalize_date(text: str) -> str:
     if not match:
         return text.strip()
     parsed = datetime.strptime(match.group(0).title(), "%A, %B %d, %Y")
-    return parsed.strftime(f"%A, %B {parsed.day}, %Y")
+    normalized = parsed.strftime(f"%A, %B {parsed.day}, %Y")
+    return DATE_CORRECTIONS.get(normalized, normalized)
 
 
 def is_date_heading(paragraph: dict[str, str | None]) -> bool:
