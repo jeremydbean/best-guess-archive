@@ -8,7 +8,8 @@ Last updated: 2026-04-24
 
 ## Latest Known Commit
 
-- `39934c2` - Add April 24, 2026 games: BENJAMIN FRANKLIN and CHAMPAGNE
+- `d571678` - Count cancelled game dates toward total show days
+- Transcript import/view work is in progress locally and should be committed after verification.
 
 ## Current State
 
@@ -24,10 +25,22 @@ Last updated: 2026-04-24
 - Stats charts now use shared Chart.js usability defaults: taller chart panels, larger hover hit targets, x-column hover activation for bar charts, minimum visible bar lengths, improved tooltips, and logarithmic scales for high-spread clue charts.
 - Database date column width was reduced from the earlier oversized value to better preserve secret-item alignment.
 
+## Transcript Import Work
+
+- User wants the public Google Doc transcript link replaced with in-site transcripts, one transcript per air date.
+- Source file provided locally: `/Users/jeremybean/Downloads/KindaCharming's Best Guess Live Show Transcripts.docx`.
+- Added local importer: `scripts/import_transcripts_from_docx.py`.
+- Importer reads `word/document.xml`, finds date headings, keeps only paragraphs under `Show Transcript`, and stops before `Explanation Table`, `Clue & Answer Results Table`, or JSON/table appendices.
+- Regenerated `data/transcripts.json` from the `.docx`: 90 transcripts, first `Monday, December 8, 2025`, last `Friday, April 24, 2026`.
+- `index.html` has internal transcript navigation and a lazy-loaded `view-transcripts` page with search, episode list, and detail panel.
+- Database details modals include a `View full episode transcript` button for the selected date.
+- Transcript text is escaped before rendering.
+
 ## Working Agreement
 
 - Pull/rebase `origin/main` before making edits if remote has moved.
 - Leave all work on `main`.
+- Commit directly to `main` and push to `origin/main` when finished.
 - Update this file after meaningful changes so the next agent can pick up quickly.
 
 ## Performance Architecture (added 2026-04-23)
@@ -46,12 +59,13 @@ Last updated: 2026-04-24
 - Home KPI counters do not cause layout shift.
 - Admin import previews render safely and publish in the intended order.
 - Admin writes still target `main`, update both JSON data files in one commit, and fail safely if GitHub advances between fetch and commit (ref PATCH is fast-forward-only, no explicit `force: false` needed).
-- `_commitGamesState` takes the pre-fetched state object instead of re-reading — one tree walk per admin action instead of two.
-- Play feature (`startRandomGame`) now awaits the full games.json load before starting — previously it would crash unless the user had opened Database or Stats first (which is what triggers the lazy load of clues data).
+- `_commitGamesState` takes the pre-fetched state object instead of re-reading - one tree walk per admin action instead of two.
+- Play feature (`startRandomGame`) now awaits the full games.json load before starting - previously it would crash unless the user had opened Database or Stats first (which is what triggers the lazy load of clues data).
 - `_ensureFullGamesLoaded` now propagates fetch errors; all three call sites (database, stats, play) have `.catch` handlers that surface the failure. `_showDataLoadError` reuses the top-bar status indicator.
 - Clue-time `<select>` no longer has an inline onchange handler; calls `app.setClueDuration(value)`.
 - Re-check visible database details and play result screens after future `innerHTML` edits, especially any new fields that come from pasted/imported game JSON.
 - After future Stats chart edits, verify the Clue 5 bar in "Avg Payout Per Winner by Clue" remains visible and hoverable; current data has Clue 5 averaging only `$2` versus thousands for other clues.
+- After transcript edits, verify the Transcripts nav opens the internal archive and no longer links directly to the Google Doc.
 
 ## Codex Verification (2026-04-24)
 

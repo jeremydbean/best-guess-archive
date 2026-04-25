@@ -294,7 +294,7 @@ document.addEventListener('focusout', function(e) {
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="database" onclick="app.setView('database')">Database</button>
         <!-- <button class="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/10 transition" onclick="app.setView('archive')">Archive</button> -->
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="stats" onclick="app.setView('stats')">Stats</button>
-        <a href="https://docs.google.com/document/d/1B0zI_zQSs3KjPKeih-MvGMOYWe5llT1EW-ZBK0gvGdQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="nav-link nav-link--accent px-3 py-2 rounded-md text-sm transition font-bold">Transcripts</a>
+        <button class="nav-link nav-link--accent px-3 py-2 rounded-md text-sm transition font-bold" data-nav-view="transcripts" onclick="app.setView('transcripts')">Transcripts</button>
         <a href="https://forms.gle/zzTwMu8wpZpC5zR58" target="_blank" rel="noopener noreferrer" class="nav-link nav-link--feedback px-3 py-2 rounded-md text-sm transition font-bold flex items-center gap-1">
           <span class="material-symbols-outlined align-middle text-base">bug_report</span> Report a Bug / Feedback
         </a>
@@ -314,6 +314,7 @@ document.addEventListener('focusout', function(e) {
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('database'); document.getElementById('mobile-menu').classList.add('hidden')">Database</button>
       <!-- <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('archive'); document.getElementById('mobile-menu').classList.add('hidden')">Archive</button> -->
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('stats'); document.getElementById('mobile-menu').classList.add('hidden')">Stats</button>
+      <button class="px-3 py-2 text-left rounded-md hover:bg-white/10 text-blue-300 font-bold" onclick="app.setView('transcripts'); document.getElementById('mobile-menu').classList.add('hidden')">Transcripts</button>
       <button class="flex items-center gap-2 px-3 py-2 text-left rounded-md bg-gradient-to-r from-pink-900/40 to-rose-900/40 hover:from-pink-900/60 text-pink-300 font-bold" onclick="app.openTipJar(); document.getElementById('mobile-menu').classList.add('hidden')">
         <span class="material-symbols-outlined text-sm">volunteer_activism</span> KindaCharming's Tip Jar
       </button>
@@ -696,6 +697,61 @@ document.addEventListener('focusout', function(e) {
 </template>
 
 <!-- Archive view removed: all features merged into database view -->
+
+<!-- TRANSCRIPTS -->
+<template id="view-transcripts">
+<div class="fade-in space-y-6 pb-20">
+  <style>
+    .transcript-search-wrap {
+      width: 100%;
+      max-width: 32rem;
+    }
+    .transcript-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .transcript-list {
+      max-height: 32rem;
+    }
+    .transcript-detail {
+      min-height: 24rem;
+    }
+    @media (min-width: 1024px) {
+      .transcript-layout {
+        grid-template-columns: 20rem minmax(0, 1fr);
+      }
+    }
+  </style>
+  <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+    <div>
+      <h2 class="text-3xl font-display font-bold">Show <span class="text-blue-400">Transcripts</span></h2>
+      <p class="text-slate-400 text-sm mt-1">Episode transcripts imported into the archive, one page per air date.</p>
+    </div>
+    <div class="relative transcript-search-wrap">
+      <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+      <input id="transcript-search" type="text" placeholder="Search date, speaker, clue, or transcript text"
+        class="w-full bg-slate-800/80 border border-slate-700 focus:border-blue-500 text-white rounded-full pl-11 pr-4 py-3 outline-none transition">
+    </div>
+  </div>
+
+  <div class="transcript-layout">
+    <aside class="glass-panel rounded-xl border border-slate-700/60 overflow-hidden">
+      <div class="px-4 py-3 border-b border-slate-700/60 flex items-center justify-between">
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-bold">Episodes</span>
+        <span id="transcript-count" class="text-xs text-blue-300">Loading...</span>
+      </div>
+      <div id="transcript-list" class="transcript-list overflow-y-auto divide-y divide-slate-800"></div>
+    </aside>
+
+    <article class="glass-panel rounded-xl border border-slate-700/60 overflow-hidden">
+      <div id="transcript-detail" class="transcript-detail p-5 md:p-8">
+        <div class="text-slate-400">Loading transcripts...</div>
+      </div>
+    </article>
+  </div>
+</div>
+</template>
 
 <!-- STATS -->
 <template id="view-stats">
@@ -1154,6 +1210,11 @@ class App {
     this._dbSort = { key: 'date', dir: 'desc' };
     this._fullGamesLoaded = false;
     this._fullGamesLoading = null;
+    this.transcripts = [];
+    this._transcriptsLoaded = false;
+    this._transcriptsLoading = null;
+    this._transcriptsError = null;
+    this._selectedTranscriptDate = '';
     this._homeStatsCache = null;
     this._statsCache = null;
     this._dataVersion = 0;
@@ -1219,6 +1280,11 @@ class App {
       nodes.chartAvgWinners = document.getElementById('chart-avg-winners-clue');
       nodes.chartPotDist = document.getElementById('chart-pot-dist');
       nodes.chartPayoutClue = document.getElementById('chart-payout-clue');
+    } else if (name === 'transcripts') {
+      nodes.search = document.getElementById('transcript-search');
+      nodes.count = document.getElementById('transcript-count');
+      nodes.list = document.getElementById('transcript-list');
+      nodes.detail = document.getElementById('transcript-detail');
     } else if (name === 'admin') {
       nodes.owner = document.getElementById('gh-owner');
       nodes.repo = document.getElementById('gh-repo');
@@ -1539,6 +1605,26 @@ class App {
     if (this.currentGame && this.gameStarted) this.renderGameLoop();
   }
 
+  _ensureTranscriptsLoaded() {
+    if (this._transcriptsLoaded) return Promise.resolve();
+    if (this._transcriptsLoading) return this._transcriptsLoading;
+    this._transcriptsLoading = fetch('./data/transcripts.json')
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then(data => {
+        this.transcripts = Array.isArray(data) ? data : [];
+        this._transcriptsLoaded = true;
+        this._transcriptsError = null;
+        this._transcriptsLoading = null;
+      })
+      .catch(err => {
+        console.error('Could not load transcripts.json:', err);
+        this.transcripts = [];
+        this._transcriptsError = err;
+        this._transcriptsLoading = null;
+      });
+    return this._transcriptsLoading;
+  }
+
   // ==================== VIEWS ====================
   updateNavActiveState(viewName) {
     document.querySelectorAll('[data-nav-view]').forEach(el => {
@@ -1684,6 +1770,10 @@ class App {
       this._ensureFullGamesLoaded()
         .then(() => this.renderStats())
         .catch(err => this._showDataLoadError(err));
+    }
+    if (name === 'transcripts') {
+      this.renderTranscriptsLoading();
+      this._ensureTranscriptsLoaded().then(() => this.renderTranscripts());
     }
     if (name === 'admin')    this.initAdmin();
   }
@@ -2474,6 +2564,10 @@ class App {
           <span class="font-bold text-white">Winners:</span> ${esc((g.winnerNames || 'None listed').toUpperCase())}
         </div>
         ${bonus ? `<div class='mt-6 bg-blue-900/20 border border-blue-400/30 rounded-lg p-4 text-left max-w-xl mx-auto'><span class='font-bold text-blue-300 block mb-1'>Special Bonus: ${esc(bonus.title)}</span><span class='text-blue-100 text-sm'>${bonus.desc}</span></div>` : ''}
+        <button class="mt-5 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-950/30 px-4 py-2 text-sm font-bold text-blue-200 hover:bg-blue-900/40 transition" onclick="app.openTranscriptDate('${esc(g.date)}')">
+          <span class="material-symbols-outlined text-base">article</span>
+          View full episode transcript
+        </button>
       </div>
       <div class="bg-slate-900/50 rounded-xl p-2 mb-6 border border-white/5">${cluesHtml}</div>
       <div class="text-sm text-slate-400 bg-red-900/10 border border-red-500/20 p-4 rounded-lg">
@@ -2482,6 +2576,107 @@ class App {
   }
 
   closeModal() { document.getElementById('modal-backdrop').classList.add('hidden'); }
+
+  // ==================== TRANSCRIPTS ====================
+  _getTranscriptSearchText(transcript) {
+    return [
+      transcript.date,
+      ...(transcript.sections || []).flatMap(section => [
+        section.tag,
+        ...(section.lines || []).flatMap(line => [line.speaker, line.text])
+      ])
+    ].filter(Boolean).join('\n').toLowerCase();
+  }
+
+  renderTranscriptsLoading() {
+    const nodes = this._getViewNodes('transcripts');
+    if (nodes.count) nodes.count.innerText = 'Loading...';
+    if (nodes.list) nodes.list.innerHTML = '<div class="p-4 text-sm text-slate-400">Loading transcripts...</div>';
+    if (nodes.detail) nodes.detail.innerHTML = '<div class="text-slate-400">Loading transcripts...</div>';
+  }
+
+  renderTranscripts() {
+    const nodes = this._getViewNodes('transcripts');
+    const esc = (v) => this._escapeHtml(v);
+    if (this._transcriptsError) {
+      if (nodes.count) nodes.count.innerText = 'Error';
+      if (nodes.list) nodes.list.innerHTML = '<div class="p-4 text-sm text-red-300">Failed to load transcripts.</div>';
+      if (nodes.detail) nodes.detail.innerHTML = `<div class="text-red-300">Failed to load transcripts: ${esc(this._transcriptsError.message)}</div>`;
+      return;
+    }
+    const query = (nodes.search?.value || '').toLowerCase().trim();
+    const sorted = [...this.transcripts].sort((a, b) => this._compareArchiveDates(b.date, a.date));
+    const filtered = query ? sorted.filter(t => this._getTranscriptSearchText(t).includes(query)) : sorted;
+
+    if (!this._selectedTranscriptDate || !filtered.some(t => t.date === this._selectedTranscriptDate)) {
+      this._selectedTranscriptDate = filtered[0]?.date || '';
+    }
+
+    if (nodes.search && !nodes.search._transcriptBound) {
+      nodes.search.addEventListener('input', () => this.renderTranscripts());
+      nodes.search._transcriptBound = true;
+    }
+
+    if (nodes.count) nodes.count.innerText = `${filtered.length} of ${this.transcripts.length}`;
+    if (nodes.list) {
+      nodes.list.innerHTML = filtered.length
+        ? filtered.map(t => {
+            const active = t.date === this._selectedTranscriptDate;
+            const lineCount = (t.sections || []).reduce((sum, section) => sum + (section.lines || []).length, 0);
+            return `<button type="button" data-date="${esc(t.date)}" onclick="app.showTranscriptFromButton(this)"
+              class="w-full text-left px-4 py-3 transition ${active ? 'bg-blue-950/45 border-l-2 border-blue-400' : 'hover:bg-slate-800/50 border-l-2 border-transparent'}">
+              <div class="font-bold text-white text-sm">${esc(t.date)}</div>
+              <div class="text-xs text-slate-500 mt-1">${(t.sections || []).length} sections · ${lineCount} lines</div>
+            </button>`;
+          }).join('')
+        : '<div class="p-4 text-sm text-slate-400">No transcripts match that search.</div>';
+    }
+
+    const selected = sorted.find(t => t.date === this._selectedTranscriptDate) || filtered[0];
+    this.renderTranscriptDetail(selected);
+  }
+
+  showTranscriptFromButton(button) {
+    this._selectedTranscriptDate = button?.dataset?.date || '';
+    this.renderTranscripts();
+  }
+
+  openTranscriptDate(date) {
+    this._selectedTranscriptDate = date || '';
+    this.closeModal();
+    this.setView('transcripts');
+  }
+
+  renderTranscriptDetail(transcript) {
+    const nodes = this._getViewNodes('transcripts');
+    if (!nodes.detail) return;
+    const esc = (v) => this._escapeHtml(v);
+    if (!transcript) {
+      nodes.detail.innerHTML = '<div class="text-slate-400">No transcript selected.</div>';
+      return;
+    }
+
+    nodes.detail.innerHTML = `
+      <div class="mb-6 border-b border-slate-700/60 pb-4">
+        <div class="text-xs uppercase tracking-widest text-blue-300 font-bold mb-2">Episode Transcript</div>
+        <h3 class="text-2xl md:text-3xl font-display font-bold text-white">${esc(transcript.date)}</h3>
+      </div>
+      <div class="space-y-7">
+        ${(transcript.sections || []).map(section => `
+          <section>
+            <h4 class="text-sm uppercase tracking-widest text-yellow-400 font-bold mb-3">${esc(section.tag || 'Transcript')}</h4>
+            <div class="space-y-3">
+              ${(section.lines || []).map(line => `
+                <p class="text-sm md:text-base leading-relaxed text-slate-300">
+                  ${line.speaker ? `<span class="font-bold text-white">${esc(line.speaker)}:</span> ` : ''}
+                  ${esc(line.text)}
+                </p>
+              `).join('')}
+            </div>
+          </section>
+        `).join('')}
+      </div>`;
+  }
 
   // ==================== STATS ====================
   _getStatsData() {
