@@ -8,8 +8,7 @@ Last updated: 2026-04-24
 
 ## Latest Known Commit
 
-- `d571678` - Count cancelled game dates toward total show days
-- Transcript import/view work is in progress locally and should be committed after verification.
+- `4c58825` - Add internal transcript archive
 
 ## Current State
 
@@ -35,6 +34,7 @@ Last updated: 2026-04-24
 - `index.html` has internal transcript navigation and a lazy-loaded `view-transcripts` page with search, episode list, and detail panel.
 - Database details modals include a `View full episode transcript` button for the selected date.
 - Transcript text is escaped before rendering.
+- Validation passed after the transcript commit: Python importer compile/run, generated transcript JSON matches `data/transcripts.json`, inline JS syntax check, `games.json`/`games-meta.json` consistency, and no remaining Google Doc transcript link in `index.html`.
 
 ## Working Agreement
 
