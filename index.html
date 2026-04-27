@@ -199,6 +199,13 @@
   .clue-stack-enter { animation: slideIn .4s cubic-bezier(.16,1,.3,1); }
   @keyframes slideIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
   .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+  mark.search-hl {
+    background: rgba(250, 204, 21, 0.28);
+    color: #fef08a;
+    border-radius: 2px;
+    padding: 0 1px;
+    font-style: normal;
+  }
   @media (max-width: 600px) {
     #play-game-layout { max-width: 100vw !important; }
     /* No sticky here — the flex column already positions these correctly.
@@ -2088,11 +2095,12 @@ class App {
   }
 
   // ==================== DATABASE ====================
-  _renderDatabaseRow(g) {
-    const cached = this._dbRowHtmlCache.get(g);
+  _renderDatabaseRow(g, query = '') {
+    const cached = !query && this._dbRowHtmlCache.get(g);
     if (cached) return cached;
 
     const esc = (v) => this._escapeHtml(v);
+    const hl = (v) => this._highlight(v, query);
     const fmtMoney = (n, decimals = 2) => '$' + Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
     const meta = this._getGameMeta(g);
 
@@ -2122,7 +2130,7 @@ class App {
       const isWinning = (i + 1) === meta.winningClueNum;
       if (!clueMeta) return `<td class="px-4 py-3 text-slate-700 text-center align-middle">—</td>`;
       return `<td class="px-4 py-3 align-middle" style="min-width:200px">
-        <div class="font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${esc(clueMeta.clue.text)}</div>
+        <div class="font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${hl(clueMeta.clue.text)}</div>
         <div class="text-xs font-mono mt-0.5 flex items-center flex-wrap gap-x-1"><span class="text-green-500">${clueMeta.correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${clueMeta.guesses.toLocaleString()}</span><span class="text-slate-600"> (${clueMeta.pct}%)${(isV2 && medal) ? `&nbsp;<span class="ml-1 text-sm whitespace-nowrap">${medal}</span>` : ''}</span></div>
       </td>`;
     }).join('');
@@ -2149,11 +2157,12 @@ class App {
           <div class="text-xs text-slate-500">per winner</div>
         </div>`;
 
+    const hostHl = this._highlight(g.host || '—', query).replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson');
     const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
-      <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${esc(g.date)}</td>
+      <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
       <td class="px-1 py-1 font-semibold text-white align-middle" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;">
-        <span style="white-space:nowrap;">${esc(g.secretItem)}</span>
-        ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${esc(g.note)}</span></div>` : ''}
+        <span style="white-space:nowrap;">${hl(g.secretItem)}</span>
+        ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${hl(g.note)}</span></div>` : ''}
       </td>
       <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${g.pot.toLocaleString()}</td>
       ${clueCells}
@@ -2161,7 +2170,7 @@ class App {
       <td class="px-2 py-1 align-middle"><span class="font-mono text-blue-300">${meta.totalPlayers.toLocaleString()}</span></td>
       <td class="px-2 py-1 align-middle">${winnersHtml}</td>
       <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
-      <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${meta.hostHtml}</td>
+      <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${hostHl}</td>
       <td class="px-1 py-1 text-right align-middle" style="position:sticky;right:0;background:#0f172a;">
         <button onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="inline-flex items-center justify-center rounded-full border border-blue-400/25 bg-slate-900/55 text-blue-300 hover:text-blue-100 hover:border-blue-300/40 hover:bg-slate-900/75 transition" title="View details" style="padding:4px;">
           <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
@@ -2169,7 +2178,7 @@ class App {
       </td>
     </tr>`;
 
-    this._dbRowHtmlCache.set(g, html);
+    if (!query) this._dbRowHtmlCache.set(g, html);
     return html;
   }
 
@@ -2179,7 +2188,7 @@ class App {
     const sort = this._dbSort || { key: 'date', dir: 'desc' };
     const filtered = this._getFilteredGames(filter, sort);
     if (nodes.count) nodes.count.innerText = `Showing ${filtered.length} of ${this.games.length} games`;
-    if (nodes.body) nodes.body.innerHTML = filtered.map(g => this._renderDatabaseRow(g)).join('');
+    if (nodes.body) nodes.body.innerHTML = filtered.map(g => this._renderDatabaseRow(g, filter)).join('');
     requestAnimationFrame(() => {
       if (typeof window.setupDatabaseScrollControls === 'function') {
         window.setupDatabaseScrollControls();
@@ -2354,16 +2363,16 @@ class App {
             const hostText = t.host || 'Host unknown';
             return `<button type="button" data-date="${esc(t.date)}" onclick="app.showTranscriptFromButton(this)"
               class="w-full text-left px-4 py-3 transition ${active ? 'bg-blue-900/30 border-l-2 border-blue-400' : 'hover:bg-slate-800/50 border-l-2 border-transparent'}">
-              <div class="font-bold text-white text-sm">${esc(t.date)}</div>
-              <div class="text-xs text-blue-300 mt-1">${esc(itemText)}</div>
-              <div class="text-xs text-slate-500 mt-1">${esc(hostText)} · ${(t.sections || []).length} sections · ${lineCount} lines</div>
+              <div class="font-bold text-white text-sm">${this._highlight(t.date, query)}</div>
+              <div class="text-xs text-blue-300 mt-1">${this._highlight(itemText, query)}</div>
+              <div class="text-xs text-slate-500 mt-1">${this._highlight(hostText, query)} · ${(t.sections || []).length} sections · ${lineCount} lines</div>
             </button>`;
           }).join('')
         : '<div class="p-4 text-sm text-slate-400">No transcripts match that search.</div>';
     }
 
     const selected = sorted.find(t => t.date === this._selectedTranscriptDate) || filtered[0];
-    this.renderTranscriptDetail(selected);
+    this.renderTranscriptDetail(selected, query);
   }
 
   showTranscriptFromButton(button) {
@@ -2382,10 +2391,11 @@ class App {
     this.setView('transcripts');
   }
 
-  renderTranscriptDetail(transcript) {
+  renderTranscriptDetail(transcript, query = '') {
     const nodes = this._getViewNodes('transcripts');
     if (!nodes.detail) return;
     const esc = (v) => this._escapeHtml(v);
+    const hl = (v) => this._highlight(v, query);
     if (!transcript) {
       nodes.detail.innerHTML = '<div class="text-slate-400">No transcript selected.</div>';
       return;
@@ -2450,14 +2460,14 @@ class App {
             const cm = isResults && line.text.match(clueRE);
             if (cm) {
               prevSpeaker = null;
-              return `<span class="transcript-clue-line"><span class="transcript-clue-label">${esc(cm[1])}:</span>${esc(cm[2])}</span>`;
+              return `<span class="transcript-clue-line"><span class="transcript-clue-label">${hl(cm[1])}:</span>${hl(cm[2])}</span>`;
             }
             const speaker = line.speaker || '';
             const showBadge = speaker && speaker !== prevSpeaker;
             prevSpeaker = speaker || prevSpeaker;
-            const badgeHtml = showBadge ? `<div><span class="transcript-speaker-badge">${esc(speaker)}</span></div>` : '';
+            const badgeHtml = showBadge ? `<div><span class="transcript-speaker-badge">${hl(speaker)}</span></div>` : '';
             const lineClass = (speaker && !showBadge) ? 'transcript-line-cont' : '';
-            return `${badgeHtml}<p class="text-sm leading-relaxed text-slate-300 ${lineClass}">${esc(line.text)}</p>`;
+            return `${badgeHtml}<p class="text-sm leading-relaxed text-slate-300 ${lineClass}">${hl(line.text)}</p>`;
           }).join('');
           return `
           <section>
@@ -2942,6 +2952,21 @@ class App {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#39;');
+  }
+
+  _highlight(rawText, query) {
+    const esc = s => this._escapeHtml(s);
+    if (!query || !rawText) return esc(rawText || '');
+    const re = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    const parts = [];
+    let last = 0, m;
+    while ((m = re.exec(String(rawText))) !== null) {
+      parts.push(esc(rawText.slice(last, m.index)));
+      parts.push(`<mark class="search-hl">${esc(m[0])}</mark>`);
+      last = m.index + m[0].length;
+    }
+    parts.push(esc(rawText.slice(last)));
+    return parts.join('');
   }
 
 }
