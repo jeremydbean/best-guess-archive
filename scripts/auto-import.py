@@ -72,12 +72,9 @@ def get_imported_dates() -> set:
         return set()
 
 
-SPECIAL_EPISODE_RE = re.compile(r"\b(EXTRA|RECAP|BONUS|BEHIND[ -]THE[ -]SCENES|TRAILER|PREVIEW)\b", re.IGNORECASE)
-
-
-def is_regular_episode(title: str) -> bool:
-    """Skip EXTRA/recap/bonus videos — auto-import only handles regular two-round episodes."""
-    return not SPECIAL_EPISODE_RE.search(title or "")
+def is_best_guess_episode(title: str) -> bool:
+    """Accept any video whose title contains 'Best Guess Live' (case-insensitive)."""
+    return "best guess live" in (title or "").lower()
 
 
 def fetch_transcript(video_id: str) -> str:
@@ -247,15 +244,19 @@ def main():
             (vid, title, dt, format_archive_date(dt))
             for vid, title, dt in videos
             if format_archive_date(dt) not in imported_dates
-            and is_regular_episode(title)
+            and is_best_guess_episode(title)
         ]
 
         if not pending:
-            print("No new regular episodes found (EXTRA/recap/bonus videos are skipped).")
+            print("No new Best Guess Live episodes found.")
             sys.exit(0)
 
-        video_id, video_title, _dt, episode_date = pending[0]  # oldest first
+        video_id, video_title, _dt, episode_date = pending[-1]  # newest unimported
         print(f"New episode: {episode_date} — {video_title}")
+        if len(pending) > 1:
+            others = [f"{ed} ({vid})" for vid, _t, _dt, ed in pending[:-1]]
+            print(f"Note: {len(pending) - 1} older unimported episode(s) skipped — "
+                  f"use the workflow_dispatch video_id input to backfill: {', '.join(others)}")
 
     print(f"Fetching transcript for {video_id}…")
     try:
