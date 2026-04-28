@@ -26,7 +26,7 @@ jobs:
 
       - name: Run auto-import
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.BGL_SCHEDULER_CLAUDE }}
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
         run: |
           $videoId = "${{ github.event.inputs.video_id }}"
