@@ -1855,11 +1855,11 @@ class App {
   }
 
   copyDailyImportPrompt() {
-    this._copyText('Use docs/DAILY_IMPORT_PROMPT.md with the raw transcript in incoming/YYYY-MM-DD.txt. Then run npm run audit, commit on main, and push origin main.', 'Daily import prompt');
+    this._copyText('Use docs/DAILY_IMPORT_PROMPT.md with the raw transcript in incoming/YYYY-MM-DD.txt. Then run npm run audit:fix && npm run audit, commit on main, and push origin main.', 'Daily import prompt');
   }
 
   copyAuditCommand() {
-    this._copyText('npm run audit', 'Audit command');
+    this._copyText('npm run audit:fix && npm run audit', 'Audit command');
   }
 
   _safeExternalUrl(value, fallback) {

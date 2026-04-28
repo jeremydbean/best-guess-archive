@@ -8,7 +8,7 @@ Last updated: 2026-04-28
 
 ## Latest Known Implementation Commit
 
-- Current commit - Add import audit tooling and UI shortcuts
+- Current commit - Audit self-healing update
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
 - `fbb8b4a` - Reformat all Dec/Jan/Feb/Mar transcripts to match established Results format
@@ -36,12 +36,13 @@ Last updated: 2026-04-28
 - **Transcript consistency audit 2026-04-28**: All 101 transcripts match the 101 game dates, use the canonical six-section order, have consistent `secretItems`/`rounds` metadata against `games.json`, and include expected result clue text under loose punctuation matching. Cleaned remaining escaped HTML entities in transcript text (`&amp;` → `&`) so M&M, S&P, and H&M render correctly.
 - **Import/UI quality-of-life update 2026-04-28**: Added `npm run audit` via `tools/audit-data.mjs`, an `incoming/` raw transcript drop folder, and `docs/DAILY_IMPORT.md`, `docs/DAILY_IMPORT_PROMPT.md`, and `docs/IMPORT_REPORT_TEMPLATE.md`. Home now has Latest Episode shortcuts and an optional `?health=1` data-health panel with copy buttons for the import prompt/audit command. Database rows now show bonus badges, transcript action icons, and quick-filter chips for bonus, transcripts, v2 rules, solo wins, and host.
 - **Footer/latest/health polish 2026-04-28**: Footer status now counts playable rounds only, excluding cancelled games. The health panel remains behind `?health=1` and has a discreet footer icon link. Latest Game card is more polished with host/round/winner metadata. Transcript section jump buttons were removed to keep the transcript header quieter.
+- **Audit self-healing update 2026-04-28**: `npm run audit:fix` regenerates `data/games-meta.json` from `data/games.json`; `npm run audit` now also validates archive date format/weekday, missing clue explanations, and non-negative numeric payout fields.
 
 ## Daily Update Workflow
 
 Every episode day, paste the following block to Claude or Codex. Claude/Codex will update `data/games.json`, `data/games-meta.json`, `data/transcripts.json`, and any special promo fields, then commit and push to `main`.
 
-Preferred no-preformat path: put the raw transcript at `incoming/YYYY-MM-DD.txt` and use `docs/DAILY_IMPORT_PROMPT.md`. Before every import commit, run `npm run audit` and fix every error.
+Preferred no-preformat path: put the raw transcript at `incoming/YYYY-MM-DD.txt` and use `docs/DAILY_IMPORT_PROMPT.md`. Before every import commit, run `npm run audit:fix`, then `npm run audit`, and fix every error.
 
 ### How to Prepare the Paste Block
 
@@ -153,7 +154,7 @@ Description: [full text including how-to-qualify. May use <br> and <b> tags.]
 
 1. Parses the paste into two game objects (one per round).
 2. Appends them to `data/games.json` (most recent dates go at the end — the database sorts descending by date at render time).
-3. Rebuilds `data/games-meta.json` from the full `games.json`.
+3. Runs `npm run audit:fix` to rebuild `data/games-meta.json` from the full `games.json`.
 4. Adds a new transcript entry to `data/transcripts.json` with all six canonical sections (Intro, Round 1, Round 1 Results, Round 2, Round 2 Results, Outro) and the round metadata.
 5. Commits all changed files to `main` and pushes.
 
@@ -244,7 +245,7 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 - **games-meta.json**: Lightweight (36KB) loaded on init for home stats. Full `games.json` lazy-loads when user first visits Database or Stats.
 - **Chart.js**: Injected dynamically on first Stats page visit only.
 - **filterDatabase**: Debounced 150ms.
-- **Data audit**: `npm run audit` validates JSON, inline scripts, generated meta, v2 winner totals, bonus coverage, transcript schemas, transcript/game alignment, result clue text, and escaped HTML entities.
+- **Data audit**: `npm run audit:fix` regenerates `games-meta.json`; `npm run audit` validates JSON, inline scripts, generated meta, archive dates, payout values, missing clue explanations, v2 winner totals, bonus coverage, transcript schemas, transcript/game alignment, result clue text, and escaped HTML entities.
 - **_homeStatsCache**: Invalidated when full games.json loads or refreshStats() runs.
 
 ## Things Worth Double-Checking After Future Edits
@@ -255,7 +256,7 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 - Database details modal shows bonus section for promo dates; verify `g.bonus` is present in games.json and the title is escaped, desc is trusted HTML.
 - Play feature (`startRandomGame`) awaits full games.json load before starting.
 - Stats charts render all 5 canvases; Clue 5 bar in "Avg Payout Per Winner by Clue" shows `Avg payout: $2`.
-- `data/games-meta.json` regenerates exactly from `data/games.json` after every import.
+- `npm run audit:fix` regenerates `data/games-meta.json` from `data/games.json` after every import.
 - Transcripts: search finds new date, shows host/chips/sections, database detail buttons work.
 
 ## Working Agreement

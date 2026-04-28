@@ -2,8 +2,13 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const asJson = process.argv.includes('--json');
+const shouldFix = process.argv.includes('--fix');
 const expectedSections = ['Intro', 'Round 1', 'Round 1 Results', 'Round 2', 'Round 2 Results', 'Outro'];
 const readJson = path => JSON.parse(fs.readFileSync(path, 'utf8'));
+const writeJson = (path, value) => fs.writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`);
+const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const datePattern = new RegExp(`^(${weekdayNames.join('|')}), (${monthNames.join('|')}) (\\d{1,2}), (\\d{4})$`);
 const loose = value => String(value || '')
   .normalize('NFKD')
   .replace(/[’']/g, '')
@@ -12,11 +17,42 @@ const loose = value => String(value || '')
   .toUpperCase();
 
 const games = readJson('data/games.json');
-const meta = readJson('data/games-meta.json');
+let meta = readJson('data/games-meta.json');
 const transcripts = readJson('data/transcripts.json');
 const issues = [];
+const fixes = [];
 const warn = (code, message, context = {}) => issues.push({ level: 'warn', code, message, ...context });
 const error = (code, message, context = {}) => issues.push({ level: 'error', code, message, ...context });
+
+function validateArchiveDate(date, context = {}) {
+  const match = String(date || '').match(datePattern);
+  if (!match) {
+    error('date-format', 'Date must use "Weekday, Month D, YYYY" format', { date, ...context });
+    return;
+  }
+  const [, weekday, month, dayRaw, yearRaw] = match;
+  const monthIndex = monthNames.indexOf(month);
+  const day = Number(dayRaw);
+  const year = Number(yearRaw);
+  const actual = new Date(year, monthIndex, day);
+  const isValidDate = actual.getFullYear() === year && actual.getMonth() === monthIndex && actual.getDate() === day;
+  if (!isValidDate) {
+    error('date-value', 'Date is not a valid calendar day', { date, ...context });
+    return;
+  }
+  const expectedWeekday = weekdayNames[actual.getDay()];
+  if (weekday !== expectedWeekday) {
+    error('date-weekday', `Date weekday should be ${expectedWeekday}`, { date, ...context });
+  }
+}
+
+function validatePayoutValue(value, field, context = {}) {
+  if (value == null || value === '') return;
+  const numeric = Number(String(value).replace(/[$,]/g, ''));
+  if (!Number.isFinite(numeric) || numeric < 0) {
+    error('payout-value', 'Payout field must be a non-negative number', { field, value, ...context });
+  }
+}
 
 const regeneratedMeta = games.map(g => {
   const entry = {
@@ -33,7 +69,13 @@ const regeneratedMeta = games.map(g => {
 });
 
 if (JSON.stringify(regeneratedMeta) !== JSON.stringify(meta)) {
-  error('meta-mismatch', 'data/games-meta.json does not regenerate exactly from data/games.json');
+  if (shouldFix) {
+    writeJson('data/games-meta.json', regeneratedMeta);
+    meta = regeneratedMeta;
+    fixes.push({ code: 'meta-regenerated', path: 'data/games-meta.json' });
+  } else {
+    error('meta-mismatch', 'data/games-meta.json is out of sync with data/games.json. Run `npm run audit:fix` to regenerate it.');
+  }
 }
 
 const html = fs.readFileSync('index.html', 'utf8');
@@ -51,12 +93,20 @@ const playableByDate = new Map();
 const allDates = new Set();
 for (const [index, g] of games.entries()) {
   allDates.add(g.date);
+  validateArchiveDate(g.date, { index, source: 'games.json', secretItem: g.secretItem });
   const isStub = !!g.note || (!g.secretItem && (!g.clues || !g.clues.length));
   if (!playableByDate.has(g.date)) playableByDate.set(g.date, []);
   if (!isStub) playableByDate.get(g.date).push(g);
 
   if (!isStub && (!Array.isArray(g.clues) || g.clues.length !== 5)) {
     error('clue-count', 'Playable game does not have exactly five clues', { index, date: g.date, secretItem: g.secretItem });
+  }
+  if (!isStub && Array.isArray(g.clues)) {
+    g.clues.forEach((clue, clueIndex) => {
+      if (!String(clue.explanation || '').trim()) {
+        warn('missing-explanation', 'Playable clue is missing an explanation', { index, date: g.date, secretItem: g.secretItem, clue: clueIndex + 1 });
+      }
+    });
   }
   if (g.format === 'v2' && !isStub) {
     const winnerSum = Number(g.goldWinners || 0) + Number(g.silverWinners || 0) + Number(g.bronzeWinners || 0);
@@ -66,6 +116,9 @@ for (const [index, g] of games.entries()) {
     const medalClues = [g.goldClue, g.silverClue, g.bronzeClue].map(Number).filter(Boolean);
     if (new Set(medalClues).size !== medalClues.length) {
       error('v2-medal-clues', 'v2 medal clue numbers are not distinct', { index, date: g.date, secretItem: g.secretItem, medalClues });
+    }
+    for (const field of ['goldPayout', 'silverPayout', 'bronzePayout']) {
+      validatePayoutValue(g[field], field, { index, date: g.date, secretItem: g.secretItem });
     }
   }
   if (g.bonus && (!g.bonus.title || !g.bonus.desc)) {
@@ -82,6 +135,7 @@ for (const [date, rounds] of playableByDate.entries()) {
 
 const transcriptDates = new Set();
 for (const [index, t] of transcripts.entries()) {
+  validateArchiveDate(t.date, { index, source: 'transcripts.json' });
   if (transcriptDates.has(t.date)) error('duplicate-transcript-date', 'Duplicate transcript date', { index, date: t.date });
   transcriptDates.add(t.date);
   const tags = (t.sections || []).map(section => section.tag);
@@ -145,6 +199,7 @@ const summary = {
   ok: !issues.some(issue => issue.level === 'error'),
   errors: issues.filter(issue => issue.level === 'error').length,
   warnings: issues.filter(issue => issue.level === 'warn').length,
+  fixes,
   counts: {
     games: games.length,
     meta: meta.length,
@@ -161,6 +216,9 @@ if (asJson) {
   console.log(`Data audit: ${summary.ok ? 'PASS' : 'FAIL'}`);
   console.log(`Games: ${games.length} | Meta: ${meta.length} | Transcripts: ${transcripts.length} | Dates: ${allDates.size} | Inline scripts: ${inlineScriptCount}`);
   console.log(`Errors: ${summary.errors} | Warnings: ${summary.warnings}`);
+  for (const fix of fixes) {
+    console.log(`[FIXED] ${fix.code}: ${fix.path}`);
+  }
   for (const issue of issues.slice(0, 60)) {
     console.log(`[${issue.level.toUpperCase()}] ${issue.code}: ${issue.message}${issue.date ? ` (${issue.date})` : ''}`);
   }

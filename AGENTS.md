@@ -74,24 +74,13 @@ Append the two new game objects to the END of the array. Do not prepend.
 
 ### 4. Regenerate data/games-meta.json
 
-Run or replicate this logic:
-```python
-import json
-with open('data/games.json') as f:
-    games = json.load(f)
-meta = []
-for g in games:
-    entry = {
-        "date": g["date"], "secretItem": g["secretItem"],
-        "pot": g["pot"], "host": g.get("host"), "format": g.get("format"),
-        "totalWinners": g.get("totalWinners", 0),
-        "clueCount": len(g.get("clues", []))
-    }
-    if g.get("note"): entry["note"] = g["note"]
-    meta.append(entry)
-with open('data/games-meta.json', 'w') as f:
-    json.dump(meta, f, indent=2)
+Run the audit fixer after editing `data/games.json`:
+
+```bash
+npm run audit:fix
 ```
+
+This rewrites `data/games-meta.json` from `data/games.json` and keeps the home-page stats in sync.
 
 ### 5. Add transcript entry to data/transcripts.json
 
@@ -107,6 +96,7 @@ Append the new entry to the END of the `transcripts.json` array.
 ### 6. Commit all changes
 
 ```bash
+npm run audit:fix
 npm run audit
 git add data/games.json data/games-meta.json data/transcripts.json
 git commit -m "Import [DATE]: [ROUND1_ANSWER] and [ROUND2_ANSWER]"
@@ -129,6 +119,7 @@ Also add a transcript entry with empty round content, `secretItems: []`, `rounds
 ### Validation Checks
 
 Before committing, verify:
+- `npm run audit:fix` has regenerated `data/games-meta.json`.
 - `npm run audit` passes with 0 errors.
 - Both games have exactly 5 clues.
 - `totalWinners` == `goldWinners` + `silverWinners` + `bronzeWinners`.
