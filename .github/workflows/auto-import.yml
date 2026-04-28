@@ -31,9 +31,6 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install Node deps
-        run: npm ci
-
       - name: Install Python deps
         run: pip install youtube-transcript-api anthropic
 
