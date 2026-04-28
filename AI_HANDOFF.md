@@ -45,6 +45,7 @@ Last updated: 2026-04-28
 - **Footer health popup polish 2026-04-28**: Footer playable-round status stays green once metadata loads, and the data health panel is now a closable fixed popup instead of an embedded Home section. `?health=1` opens the same popup.
 - **Simplified footer health popup 2026-04-28**: Footer health affordance now reads as quiet green status text (`200 rounds`) rather than a visible button. Data Health popup no longer includes copy prompt/audit buttons and has explicit safe padding/width so content is not clipped on mobile.
 - **Footer health indicator split 2026-04-28**: Footer round count is plain white text again, with a separate small circular health button beside it. The indicator is green for clean, yellow for issues, red for load failure, and opens the Data Health popup.
+- **Data health count cleanup 2026-04-28**: Data Health popup shows Playable Rounds, Game Dates, and Transcripts only; the Bonus Rounds card was removed.
 
 ## Daily Update Workflow
 
