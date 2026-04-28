@@ -190,6 +190,20 @@
   .home-actions .glass-panel {
     background: linear-gradient(180deg, rgba(18,25,52,0.92) 0%, rgba(14,21,43,0.82) 100%);
   }
+  .latest-episode-card {
+    padding: 1.65rem 1.5rem 1.5rem;
+    scroll-margin-top: 6rem;
+  }
+  .latest-episode-content {
+    padding: 0.15rem 0.1rem 0;
+  }
+  @media (max-width: 640px) {
+    .latest-episode-card {
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+      padding: 1.8rem 1.35rem 1.45rem;
+    }
+  }
   ::-webkit-scrollbar { width: 8px; height: 8px; }
   ::-webkit-scrollbar-track { background: #1e293b; }
   ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
@@ -422,14 +436,14 @@ document.addEventListener('focusout', function(e) {
         <div class="text-5xl md:text-6xl font-bold text-[#ffbb39] font-display leading-none" id="total-winners-display">...</div>
       </div>
     </div>
-    <div id="latest-episode-card" class="relative w-full max-w-5xl mx-auto overflow-hidden rounded-2xl border border-blue-400/25 bg-gradient-to-br from-slate-900/95 via-slate-900/82 to-blue-950/55 p-5 md:p-6 text-left shadow-2xl shadow-blue-950/20 hidden" style="scroll-margin-top:6rem">
+    <div id="latest-episode-card" class="latest-episode-card relative w-full max-w-5xl mx-auto overflow-hidden rounded-2xl border border-blue-400/25 bg-gradient-to-br from-slate-900/95 via-slate-900/82 to-blue-950/55 text-left shadow-2xl shadow-blue-950/20 hidden">
       <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-300/60 to-transparent"></div>
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 relative">
         <div class="flex min-w-0 items-start gap-4">
           <div class="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-blue-400/30 bg-blue-500/10 text-blue-200">
             <span class="material-symbols-outlined">live_tv</span>
           </div>
-          <div class="min-w-0">
+          <div class="latest-episode-content min-w-0">
             <div class="home-stat-label text-xs mb-2 text-blue-200">Latest Game</div>
             <div id="latest-episode-date" class="text-white font-display text-3xl md:text-4xl font-bold leading-tight" style="overflow-wrap:anywhere">...</div>
             <div id="latest-episode-items" class="mt-2 text-[#ffbb39] text-base md:text-lg font-black tracking-wide" style="overflow-wrap:anywhere">...</div>
@@ -437,11 +451,11 @@ document.addEventListener('focusout', function(e) {
           </div>
         </div>
         <div class="flex shrink-0 flex-col sm:flex-row gap-3">
-          <button class="btn-primary inline-flex items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-bold" onclick="app.openLatestDatabase()">
+          <button class="btn-primary inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-bold" onclick="app.openLatestDatabase()">
             <span class="material-symbols-outlined text-base">database</span>
             Database
           </button>
-          <button class="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-400/35 bg-blue-950/35 px-4 py-3 text-sm font-bold text-blue-100 hover:bg-blue-900/55 transition" onclick="app.openLatestTranscript()">
+          <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-blue-400/35 bg-blue-950/35 px-6 py-3 text-sm font-bold text-blue-100 hover:bg-blue-900/55 transition" onclick="app.openLatestTranscript()">
             <span class="material-symbols-outlined text-base">article</span>
             Transcript
           </button>

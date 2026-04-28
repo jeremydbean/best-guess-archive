@@ -37,7 +37,7 @@ Last updated: 2026-04-28
 - **Import/UI quality-of-life update 2026-04-28**: Added `npm run audit` via `tools/audit-data.mjs`, an `incoming/` raw transcript drop folder, and `docs/DAILY_IMPORT.md`, `docs/DAILY_IMPORT_PROMPT.md`, and `docs/IMPORT_REPORT_TEMPLATE.md`. Home now has Latest Episode shortcuts and an optional `?health=1` data-health panel with copy buttons for the import prompt/audit command. Database rows now show bonus badges, transcript action icons, and quick-filter chips for bonus, transcripts, v2 rules, solo wins, and host.
 - **Footer/latest/health polish 2026-04-28**: Footer status now counts playable rounds only, excluding cancelled games. The health panel remains behind `?health=1` and has a discreet footer icon link. Latest Game card is more polished with host/round/winner metadata. Transcript section jump buttons were removed to keep the transcript header quieter.
 - **Audit self-healing update 2026-04-28**: `npm run audit:fix` regenerates `data/games-meta.json` from `data/games.json`; `npm run audit` now also validates archive date format/weekday, missing clue explanations, and non-negative numeric payout fields.
-- **Latest game card layout fix 2026-04-28**: Home hero has bottom padding again, and the latest game card is explicitly full-width/max-width with safer text wrapping so the card/text does not get clipped on mobile-width screens.
+- **Latest game card layout fix 2026-04-28**: Home hero has bottom padding again, and the latest game card is explicitly full-width/max-width with safer text wrapping, extra inner gutters, and tip-jar-sized action buttons so the card/text does not get clipped on mobile-width screens.
 
 ## Daily Update Workflow
 
