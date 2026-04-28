@@ -10837,7 +10837,11 @@
     "bronzePayout": 25.95,
     "winnerPayout": "$7,500.00",
     "winnerNames": "Tuxie1989",
-    "wrongGuesses": "PEN, TIP, BRUSH, TOOTHBRUSH, ONION"
+    "wrongGuesses": "PEN, TIP, BRUSH, TOOTHBRUSH, ONION",
+    "bonus": {
+      "title": "Netflix Shop K-pop Demon Hunters Glass Voucher",
+      "desc": "All week, everyone who answers correctly on the second puzzle receives a voucher for a K-pop Demon Hunters glass from the Netflix Shop, valued at $24.95. You qualify by submitting a correct answer by Clue 5 in Round 2, regardless of cash winnings. Last week’s $5 Netflix Shop vouchers expire on May 5 at 2:59 AM Eastern Time."
+    }
   },
   {
     "date": "Monday, April 27, 2026",
