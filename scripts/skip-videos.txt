@@ -1,0 +1,3 @@
+# Video IDs to skip during auto-import RSS discovery.
+# One ID per line. Use workflow_dispatch with the video_id input to import manually if needed.
+dv-Jvg4aT9A

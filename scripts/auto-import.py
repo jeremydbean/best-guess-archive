@@ -72,6 +72,15 @@ def get_imported_dates() -> set:
         return set()
 
 
+def load_skip_ids() -> set:
+    """Load manually excluded video IDs from scripts/skip-videos.txt."""
+    try:
+        with open("scripts/skip-videos.txt") as f:
+            return {line.split("#")[0].strip() for line in f if line.split("#")[0].strip()}
+    except FileNotFoundError:
+        return set()
+
+
 def is_best_guess_episode(title: str) -> bool:
     """Accept any video whose title contains 'Best Guess Live' (case-insensitive)."""
     return "best guess live" in (title or "").lower()
@@ -258,11 +267,13 @@ def main():
             sys.exit(0)
 
         imported_dates = get_imported_dates()
+        skip_ids = load_skip_ids()
         pending = [
             (vid, title, dt, format_archive_date(dt))
             for vid, title, dt in videos
             if format_archive_date(dt) not in imported_dates
             and is_best_guess_episode(title)
+            and vid not in skip_ids
         ]
 
         if not pending:
