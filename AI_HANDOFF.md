@@ -8,6 +8,7 @@ Last updated: 2026-04-28
 
 ## Latest Known Implementation Commit
 
+- `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
 - `fbb8b4a` - Reformat all Dec/Jan/Feb/Mar transcripts to match established Results format
 
@@ -29,6 +30,7 @@ Last updated: 2026-04-28
 - **Clue lines** in transcript sections now render as left-bordered callout blocks consistently across all episode formats. Pattern matches "Clue N:" and "Clue number N:" (spelled or numeric) on any line regardless of speaker attribution.
 - **All transcripts reformatted** (commits `8b3c0b9`, `fbb8b4a`): All episodes (Dec 2025 through Apr 2026) now use consistent Results section format — speaker reveal line + null-speaker "Clue 5→1" breakdowns from games.json + null-speaker winner announcement. 21 episodes lack a speaker-attributed reveal (source had none) and fall back to a null-speaker constructed line. Clue callout formatting (indented border blocks) now applies only in Results sections, not Round sections.
 - **Beta notice** added to Transcripts page header (commit `d1a30c9`): yellow banner noting formatting is still being updated.
+- **Codex validation 2026-04-28**: `AGENTS.md` now matches the canonical `Round 1 Results` / `Round 2 Results` section tags. The cancelled Thursday, April 9, 2026 transcript now keeps the same six-section shell as playable episodes with `secretItems: []` and `rounds: []`; the game/meta records use an empty `secretItem` and `format: "v2"`. Validation passed for JSON parsing, inline script parsing, regenerated `games-meta.json`, v2 winner totals, distinct medal clues, and all 101 transcript section schemas. Browser smoke passed on `http://127.0.0.1:5173/` for Home, Transcripts, and Stats with no console errors; the Avg Payout Per Winner by Clue chart renders the Clue 5 bar visibly on its log scale.
 
 ## Daily Update Workflow
 

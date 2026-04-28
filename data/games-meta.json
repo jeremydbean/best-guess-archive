@@ -181,10 +181,10 @@
   },
   {
     "date": "Thursday, April 9, 2026",
-    "secretItem": "(No Game)",
+    "secretItem": "",
     "pot": 0,
     "host": "Howie Mandel",
-    "format": "v1",
+    "format": "v2",
     "totalWinners": 0,
     "clueCount": 0,
     "note": "Game was cancelled"

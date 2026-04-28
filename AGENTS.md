@@ -92,9 +92,9 @@ with open('data/games-meta.json', 'w') as f:
 Build a new transcript object with:
 - `date`, `host`, `secretItems` (array of both round answers)
 - `rounds` array (one object per round with round number, secretItem, host, pot, format, clues list)
-- `sections` array: exactly 6 sections in order: `Intro`, `Round 1`, `Round 1 Reveal`, `Round 2`, `Round 2 Reveal`, `Outro`
+- `sections` array: exactly 6 sections in order: `Intro`, `Round 1`, `Round 1 Results`, `Round 2`, `Round 2 Results`, `Outro`
 
-Split the TRANSCRIPT dialogue into these sections by looking for round start/reveal cues. Each section has `title` and `lines` array; each line has `speaker` (string or null) and `text`.
+Split the TRANSCRIPT dialogue into these sections by looking for round start/results cues. Each section has `tag` and `lines` array; each line has `speaker` (string or null) and `text`.
 
 Append the new entry to the END of the `transcripts.json` array.
 
@@ -117,7 +117,7 @@ If the paste says `CANCELLED`, create one stub game:
   "note": "No game played."
 }
 ```
-Also add a transcript entry with empty round content and `secretItems: []`.
+Also add a transcript entry with empty round content, `secretItems: []`, `rounds: []`, and the same six canonical section tags used by playable episodes.
 
 ### Validation Checks
 

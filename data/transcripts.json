@@ -22164,19 +22164,8 @@
   {
     "date": "Thursday, April 9, 2026",
     "host": "Howie Mandel",
-    "secretItems": [
-      "(No Game)"
-    ],
-    "rounds": [
-      {
-        "round": 1,
-        "secretItem": "(No Game)",
-        "host": "Howie Mandel",
-        "pot": 0,
-        "format": "v1",
-        "clues": []
-      }
-    ],
+    "secretItems": [],
+    "rounds": [],
     "sections": [
       {
         "tag": "Intro",
@@ -22274,6 +22263,22 @@
             "text": "Um, something good. Eric got my back. People might be getting in. All right, there might be some good stuff happening right now. We\u2019re going to find out a little bit more. Yeah, yeah, yeah, no worries."
           }
         ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": []
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": []
+      },
+      {
+        "tag": "Round 2",
+        "lines": []
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": []
       },
       {
         "tag": "Outro",

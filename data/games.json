@@ -1074,9 +1074,9 @@
   {
     "date": "Thursday, April 9, 2026",
     "pot": 0,
-    "format": "v1",
+    "format": "v2",
     "host": "Howie Mandel",
-    "secretItem": "(No Game)",
+    "secretItem": "",
     "clues": [],
     "goldClue": 0,
     "silverClue": 0,
