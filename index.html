@@ -391,11 +391,12 @@ document.addEventListener('focusout', function(e) {
     <p>Fan-made archive. Not affiliated with Netflix or Best Guess Live.</p>
     <div class="flex items-center gap-4">
       <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-slate-500" id="status-indicator"></span>
-        <span id="data-source-status">Loading...</span>
-        <a href="?health=1" title="Data health" class="inline-flex items-center justify-center w-5 h-5 rounded-full text-slate-700 hover:text-slate-300 hover:bg-slate-800 transition" aria-label="Open data health panel">
-          <span class="material-symbols-outlined" style="font-size:14px">monitoring</span>
-        </a>
+        <button type="button" id="health-toggle-btn" onclick="app.toggleDataHealth()" title="Data health" aria-label="Open data health panel"
+          class="flex items-center gap-1.5 rounded-full border border-transparent px-2.5 py-1 text-xs text-slate-500 hover:text-slate-200 hover:border-slate-600 transition">
+          <span class="w-2 h-2 rounded-full bg-slate-500 shrink-0" id="status-indicator"></span>
+          <span id="data-source-status">Loading...</span>
+          <span class="material-symbols-outlined" style="font-size:13px">monitoring</span>
+        </button>
       </div>
     </div>
   </div>
@@ -1494,12 +1495,12 @@ class App {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       this.games = await res.json();
       this._normalizeGames(this.games);
-      document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full bg-green-500';
-      document.getElementById('data-source-status').innerText = `${this._getPlayableGames().length} rounds loaded`;
+      document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full shrink-0 bg-green-400';
+      document.getElementById('data-source-status').innerText = `${this._getPlayableGames().length} rounds`;
     } catch (err) {
       console.error('Could not load games-meta.json:', err);
-      document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full bg-red-500';
-      document.getElementById('data-source-status').innerText = `Data load failed: ${err.message}`;
+      document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full shrink-0 bg-red-500';
+      document.getElementById('data-source-status').innerText = `Data load failed`;
     }
     this.setView('home');
     this._ensureTranscriptsLoaded();
@@ -1828,24 +1829,39 @@ class App {
     if (latestDate) this.openTranscriptDate(latestDate);
   }
 
-  _showHealthPanel() {
-    try {
-      return new URLSearchParams(window.location.search).get('health') === '1';
-    } catch (e) {
-      return false;
+  toggleDataHealth() {
+    if (this._activeView !== 'home') { this.setView('home'); }
+    const panel = document.getElementById('data-health-panel');
+    if (!panel) return;
+    if (panel.classList.contains('hidden')) {
+      panel.classList.remove('hidden');
+      this._renderDataHealthContent();
+      setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+    } else {
+      panel.classList.add('hidden');
     }
   }
 
   renderDataHealth() {
+    // Update footer button appearance; re-fill panel if it's already open.
+    const playable = this._getPlayableGames().length;
+    const btn = document.getElementById('health-toggle-btn');
+    const dot = document.getElementById('status-indicator');
+    const status = document.getElementById('data-source-status');
+    if (status) status.innerText = `${playable} rounds`;
+    if (dot) dot.className = 'w-2 h-2 rounded-full shrink-0 ' + (this._fullGamesLoaded ? 'bg-green-400' : 'bg-slate-500');
     const panel = document.getElementById('data-health-panel');
-    if (!panel || !this._showHealthPanel()) return;
-    panel.classList.remove('hidden');
+    if (panel && !panel.classList.contains('hidden')) this._renderDataHealthContent();
+  }
+
+  _renderDataHealthContent() {
     if (!this._fullGamesLoaded) {
-      this._ensureFullGamesLoaded().then(() => this.renderDataHealth()).catch(err => this._showDataLoadError(err));
+      this._ensureFullGamesLoaded().then(() => this._renderDataHealthContent()).catch(err => this._showDataLoadError(err));
       return;
     }
     const statusEl = document.getElementById('data-health-status');
     const summaryEl = document.getElementById('data-health-summary');
+    const playableRounds = this._getPlayableGames().length;
     const dates = new Set(this.games.map(g => g.date));
     const transcriptDates = new Set((this.transcripts || []).map(t => t.date));
     const missingTranscripts = [...dates].filter(date => !transcriptDates.has(date));
@@ -1869,7 +1885,7 @@ class App {
     if (summaryEl) {
       summaryEl.innerHTML = `
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
-          <div class="rounded-lg border border-slate-700 bg-slate-950/35 p-3"><div class="text-xs text-slate-500 uppercase font-bold">Rounds</div><div class="text-xl font-bold text-white">${this.games.length}</div></div>
+          <div class="rounded-lg border border-slate-700 bg-slate-950/35 p-3"><div class="text-xs text-slate-500 uppercase font-bold">Playable Rounds</div><div class="text-xl font-bold text-white">${playableRounds}</div></div>
           <div class="rounded-lg border border-slate-700 bg-slate-950/35 p-3"><div class="text-xs text-slate-500 uppercase font-bold">Dates</div><div class="text-xl font-bold text-white">${dates.size}</div></div>
           <div class="rounded-lg border border-slate-700 bg-slate-950/35 p-3"><div class="text-xs text-slate-500 uppercase font-bold">Transcripts</div><div class="text-xl font-bold text-white">${this.transcripts.length || '...'}</div></div>
           <div class="rounded-lg border border-slate-700 bg-slate-950/35 p-3"><div class="text-xs text-slate-500 uppercase font-bold">Bonus Rounds</div><div class="text-xl font-bold text-white">${this.games.filter(g => g.bonus).length}</div></div>
