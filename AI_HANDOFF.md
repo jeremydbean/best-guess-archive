@@ -8,7 +8,7 @@ Last updated: 2026-04-28
 
 ## Latest Known Implementation Commit
 
-- Current commit - Simplify footer health popup
+- Current commit - Split footer round count and health indicator
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -44,6 +44,7 @@ Last updated: 2026-04-28
 - **UI declutter 2026-04-28**: Latest Game card resized to match the Tip Jar (`max-w-md`, centered vertical layout). Special Bonus block in details modal restyled to match the Episode transcript label pattern (small uppercase pink "Special Bonus" header + pink card_giftcard icon + bold pink title + neutral description). Database table no longer shows the per-row bonus or transcript icon buttons — only the Details visibility button remains. K-pop Demon Hunters bonus description trimmed to remove the stale "Last week's $5 Netflix Shop vouchers expire..." sentence.
 - **Footer health popup polish 2026-04-28**: Footer playable-round status stays green once metadata loads, and the data health panel is now a closable fixed popup instead of an embedded Home section. `?health=1` opens the same popup.
 - **Simplified footer health popup 2026-04-28**: Footer health affordance now reads as quiet green status text (`200 rounds`) rather than a visible button. Data Health popup no longer includes copy prompt/audit buttons and has explicit safe padding/width so content is not clipped on mobile.
+- **Footer health indicator split 2026-04-28**: Footer round count is plain white text again, with a separate small circular health button beside it. The indicator is green for clean, yellow for issues, red for load failure, and opens the Data Health popup.
 
 ## Daily Update Workflow
 

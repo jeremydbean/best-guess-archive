@@ -391,10 +391,10 @@ document.addEventListener('focusout', function(e) {
     <p>Fan-made archive. Not affiliated with Netflix or Best Guess Live.</p>
     <div class="flex items-center gap-4">
       <div class="flex items-center gap-2">
+        <span id="data-source-status" class="whitespace-nowrap text-sm font-normal text-white">Loading...</span>
         <button type="button" id="health-toggle-btn" onclick="app.toggleDataHealth()" title="Data health" aria-label="Open data health panel"
-          class="inline-flex items-center gap-2 px-1 py-1 text-sm font-bold text-green-300 hover:text-green-100 transition">
+          class="inline-flex h-7 w-7 items-center justify-center rounded-full border border-green-500/30 bg-green-950/30 text-green-300 hover:border-green-400/60 hover:text-green-100 transition">
           <span class="w-2 h-2 rounded-full bg-green-400 shrink-0 shadow-sm shadow-green-400/50" id="status-indicator"></span>
-          <span id="data-source-status" class="whitespace-nowrap" style="color:#86efac">Loading...</span>
         </button>
       </div>
     </div>
@@ -1492,12 +1492,12 @@ class App {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       this.games = await res.json();
       this._normalizeGames(this.games);
-      document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full shrink-0 bg-green-400 shadow-sm shadow-green-400/50';
       document.getElementById('data-source-status').innerText = `${this._getPlayableGames().length} rounds`;
+      this._setHealthIndicatorState('clean');
     } catch (err) {
       console.error('Could not load games-meta.json:', err);
-      document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full shrink-0 bg-red-500';
       document.getElementById('data-source-status').innerText = `Data load failed`;
+      this._setHealthIndicatorState('error');
     }
     this.setView('home');
     if (new URLSearchParams(window.location.search).get('health') === '1') {
@@ -1523,9 +1523,8 @@ class App {
   _showDataLoadError(err) {
     console.error('Could not load games.json:', err);
     const statusEl = document.getElementById('data-source-status');
-    const indicatorEl = document.getElementById('status-indicator');
     if (statusEl) statusEl.innerText = `Data load failed: ${err.message}`;
-    if (indicatorEl) indicatorEl.className = 'w-2 h-2 rounded-full shrink-0 bg-red-500';
+    this._setHealthIndicatorState('error');
   }
 
   setClueDuration(value) {
@@ -1846,12 +1845,45 @@ class App {
   renderDataHealth() {
     // Update footer button appearance; re-fill panel if it's already open.
     const playable = this._getPlayableGames().length;
-    const dot = document.getElementById('status-indicator');
     const status = document.getElementById('data-source-status');
     if (status) status.innerText = `${playable} rounds`;
-    if (dot) dot.className = `w-2 h-2 rounded-full shrink-0 ${playable ? 'bg-green-400 shadow-sm shadow-green-400/50' : 'bg-slate-500'}`;
+    this._setHealthIndicatorState(playable ? 'clean' : 'unknown');
     const panel = document.getElementById('data-health-panel');
     if (panel && !panel.classList.contains('hidden')) this._renderDataHealthContent();
+  }
+
+  _setHealthIndicatorState(state) {
+    const dot = document.getElementById('status-indicator');
+    const btn = document.getElementById('health-toggle-btn');
+    const states = {
+      clean: {
+        dot: 'bg-green-400 shadow-sm shadow-green-400/50',
+        btn: 'border-green-500/30 bg-green-950/30 text-green-300 hover:border-green-400/60 hover:text-green-100',
+        title: 'Data health: looks clean'
+      },
+      issue: {
+        dot: 'bg-yellow-400 shadow-sm shadow-yellow-400/50',
+        btn: 'border-yellow-500/40 bg-yellow-950/30 text-yellow-300 hover:border-yellow-400/70 hover:text-yellow-100',
+        title: 'Data health: issues found'
+      },
+      error: {
+        dot: 'bg-red-500 shadow-sm shadow-red-500/50',
+        btn: 'border-red-500/40 bg-red-950/30 text-red-300 hover:border-red-400/70 hover:text-red-100',
+        title: 'Data health: load failed'
+      },
+      unknown: {
+        dot: 'bg-slate-500',
+        btn: 'border-slate-600/40 bg-slate-950/30 text-slate-400 hover:border-slate-500 hover:text-slate-200',
+        title: 'Data health'
+      }
+    };
+    const config = states[state] || states.unknown;
+    if (dot) dot.className = `w-2 h-2 rounded-full shrink-0 ${config.dot}`;
+    if (btn) {
+      btn.className = `inline-flex h-7 w-7 items-center justify-center rounded-full border transition ${config.btn}`;
+      btn.title = config.title;
+      btn.setAttribute('aria-label', `${config.title}. Open data health panel`);
+    }
   }
 
   _renderDataHealthContent() {
@@ -1878,6 +1910,7 @@ class App {
       return bonusRounds > 0 && bonusRounds < rounds.length;
     });
     const issueCount = missingTranscripts.length + duplicateTranscriptDates.length + sectionIssues.length + partialBonusDates.length;
+    this._setHealthIndicatorState(issueCount ? 'issue' : 'clean');
     if (statusEl) {
       statusEl.innerText = issueCount ? `${issueCount} issue${issueCount === 1 ? '' : 's'} found` : 'Looks clean';
       statusEl.className = `text-white font-display text-3xl font-bold leading-none ${issueCount ? 'text-yellow-300' : 'text-green-300'}`;
