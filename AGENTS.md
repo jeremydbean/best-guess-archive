@@ -41,6 +41,11 @@ git pull --rebase origin main
 
 ## Daily Game Import Procedure
 
+Preferred path for raw transcript imports:
+- Save the raw dump as `incoming/YYYY-MM-DD.txt`.
+- Use `docs/DAILY_IMPORT_PROMPT.md` as the agent prompt/checklist.
+- Use `docs/IMPORT_REPORT_TEMPLATE.md` when a fuller import report is useful.
+
 When the user pastes a `=== DAILY GAME UPDATE ===` block, do the following in order:
 
 ### 1. Parse the paste
@@ -61,6 +66,7 @@ Medal emoji in the `guesses` field: append ` 🥇` after the number for gold clu
 `winnerPayout` is typically `"$7,500.00"` (full pot to gold winners in v2).
 
 `bonus` field: only include if SPECIAL PROMO section is present.
+If a promo applies to the whole episode, add the same `bonus` object to both round objects.
 
 ### 3. Update data/games.json
 
@@ -101,6 +107,7 @@ Append the new entry to the END of the `transcripts.json` array.
 ### 6. Commit all changes
 
 ```bash
+npm run audit
 git add data/games.json data/games-meta.json data/transcripts.json
 git commit -m "Import [DATE]: [ROUND1_ANSWER] and [ROUND2_ANSWER]"
 git push -u origin main
@@ -122,6 +129,7 @@ Also add a transcript entry with empty round content, `secretItems: []`, `rounds
 ### Validation Checks
 
 Before committing, verify:
+- `npm run audit` passes with 0 errors.
 - Both games have exactly 5 clues.
 - `totalWinners` == `goldWinners` + `silverWinners` + `bronzeWinners`.
 - Gold/silver/bronze clue numbers are distinct integers 1–5.

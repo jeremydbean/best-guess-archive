@@ -206,6 +206,28 @@
     padding: 0 1px;
     font-style: normal;
   }
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 999px;
+    border: 1px solid rgba(71,85,105,0.82);
+    background: rgba(15,23,42,0.68);
+    color: #cbd5e1;
+    padding: 0.45rem 0.78rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    transition: color .16s, background .16s, border-color .16s;
+  }
+  .filter-chip:hover,
+  .filter-chip.active {
+    border-color: rgba(96,165,250,0.68);
+    background: rgba(37,99,235,0.22);
+    color: #fff;
+  }
+  .filter-chip .material-symbols-outlined {
+    font-size: 1rem;
+  }
   @media (max-width: 600px) {
     #play-game-layout { max-width: 100vw !important; }
     /* No sticky here — the flex column already positions these correctly.
@@ -397,6 +419,44 @@ document.addEventListener('focusout', function(e) {
         <div class="text-5xl md:text-6xl font-bold text-[#ffbb39] font-display leading-none" id="total-winners-display">...</div>
       </div>
     </div>
+    <div id="latest-episode-card" class="home-stat-panel rounded-2xl border border-[rgba(112,127,172,0.22)] p-5 md:p-6 text-left hidden">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div>
+          <div class="home-stat-label text-xs mb-2">Latest Episode</div>
+          <div id="latest-episode-date" class="text-white font-display text-3xl font-bold leading-none">...</div>
+          <div id="latest-episode-items" class="mt-2 text-blue-300 text-sm font-bold">...</div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button class="btn-primary inline-flex items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-bold" onclick="app.openLatestDatabase()">
+            <span class="material-symbols-outlined text-base">database</span>
+            Database
+          </button>
+          <button class="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-400/35 bg-blue-950/35 px-4 py-3 text-sm font-bold text-blue-100 hover:bg-blue-900/55 transition" onclick="app.openLatestTranscript()">
+            <span class="material-symbols-outlined text-base">article</span>
+            Transcript
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="data-health-panel" class="home-stat-panel rounded-2xl border border-green-500/25 p-5 md:p-6 text-left hidden">
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+        <div>
+          <div class="home-stat-label text-xs mb-2 text-green-300">Data Health</div>
+          <div id="data-health-status" class="text-white font-display text-3xl font-bold leading-none">Checking...</div>
+          <div id="data-health-summary" class="mt-2 text-slate-400 text-sm">Load with <span class="font-mono">?health=1</span> to show this panel.</div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-2">
+          <button class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-slate-950/50 px-3 py-2 text-xs font-bold text-slate-200 hover:border-blue-400/50 transition" onclick="app.copyDailyImportPrompt()">
+            <span class="material-symbols-outlined text-sm">content_copy</span>
+            Copy Import Prompt
+          </button>
+          <button class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-slate-950/50 px-3 py-2 text-xs font-bold text-slate-200 hover:border-blue-400/50 transition" onclick="app.copyAuditCommand()">
+            <span class="material-symbols-outlined text-sm">terminal</span>
+            Copy Audit Command
+          </button>
+        </div>
+      </div>
+    </div>
 <!-- How to Play Modal Template -->
 <template id="how-to-play-modal">
   <div class="space-y-6">
@@ -547,6 +607,29 @@ document.addEventListener('focusout', function(e) {
         class="w-full bg-slate-800 border border-slate-700 rounded-full py-2 pl-10 pr-4 text-white focus:outline-none focus:border-blue-500"
         placeholder="Search item, date, host, clue, or winner name...">
     </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-2" id="db-filter-chips">
+    <button class="filter-chip active" data-db-filter="all" onclick="app.setDatabaseQuickFilter('all')">
+      <span class="material-symbols-outlined">select_all</span> All
+    </button>
+    <button class="filter-chip" data-db-filter="bonus" onclick="app.setDatabaseQuickFilter('bonus')">
+      <span class="material-symbols-outlined">redeem</span> Bonus
+    </button>
+    <button class="filter-chip" data-db-filter="transcript" onclick="app.setDatabaseQuickFilter('transcript')">
+      <span class="material-symbols-outlined">article</span> Has Transcript
+    </button>
+    <button class="filter-chip" data-db-filter="v2" onclick="app.setDatabaseQuickFilter('v2')">
+      <span class="material-symbols-outlined">military_tech</span> V2 Rules
+    </button>
+    <button class="filter-chip" data-db-filter="solo" onclick="app.setDatabaseQuickFilter('solo')">
+      <span class="material-symbols-outlined">person</span> Solo Win
+    </button>
+    <button class="filter-chip" data-db-filter="howie" onclick="app.setDatabaseQuickFilter('howie')">
+      <span class="material-symbols-outlined">mic</span> Howie
+    </button>
+    <button class="filter-chip" data-db-filter="hunter" onclick="app.setDatabaseQuickFilter('hunter')">
+      <span class="material-symbols-outlined">mic_external_on</span> Hunter
+    </button>
   </div>
   <style>
     /* Responsive database table container */
@@ -1141,6 +1224,7 @@ class App {
     this.currentClueIndex = 0;
     this.timer = null;
     this._dbSort = { key: 'date', dir: 'desc' };
+    this._dbQuickFilter = 'all';
     this._fullGamesLoaded = false;
     this._fullGamesLoading = null;
     this.transcripts = [];
@@ -1161,6 +1245,7 @@ class App {
     this._statsChartsVersion = '';
     this._statsChartObserver = null;
     this._statsChartLoadPromise = null;
+    this._latestDate = '';
     this.init();
   }
 
@@ -1191,6 +1276,7 @@ class App {
       nodes.search = document.getElementById('db-search');
       nodes.count = document.getElementById('db-count-display');
       nodes.body = document.getElementById('db-table-body');
+      nodes.filters = document.getElementById('db-filter-chips');
     } else if (name === 'stats') {
       nodes.refresh = document.getElementById('refresh-stats-btn');
       nodes.kpis = document.getElementById('stats-kpi-grid');
@@ -1251,6 +1337,8 @@ class App {
       g.host,
       g.winnerNames,
       g.wrongGuesses,
+      g.bonus?.title,
+      g.bonus?.desc,
       ...clues.map(c => c.text)
     ].filter(Boolean).join('\n').toLowerCase();
 
@@ -1286,15 +1374,32 @@ class App {
   }
 
   _getFilteredGames(filter, sort) {
-    const filterKey = `${this._dataVersion}|${sort.key}|${sort.dir}|${filter}`;
+    const quickFilter = this._dbQuickFilter || 'all';
+    const filterKey = `${this._dataVersion}|${sort.key}|${sort.dir}|${filter}|${quickFilter}|${this._transcriptsLoaded ? 't1' : 't0'}`;
     if (this._dbFilteredCache.has(filterKey)) return this._dbFilteredCache.get(filterKey);
 
-    const filtered = filter
-      ? this._getSortedGames(sort).filter(g => this._getGameMeta(g).searchText.includes(filter))
-      : this._getSortedGames(sort);
+    const filtered = this._getSortedGames(sort).filter(g => {
+      if (filter && !this._getGameMeta(g).searchText.includes(filter)) return false;
+      return this._passesDatabaseQuickFilter(g, quickFilter);
+    });
 
     this._dbFilteredCache.set(filterKey, filtered);
     return filtered;
+  }
+
+  _transcriptDateSet() {
+    return new Set((this.transcripts || []).map(t => t.date));
+  }
+
+  _passesDatabaseQuickFilter(g, filter) {
+    if (!filter || filter === 'all') return true;
+    if (filter === 'bonus') return !!g.bonus;
+    if (filter === 'transcript') return this._transcriptDateSet().has(g.date);
+    if (filter === 'v2') return g.format === 'v2';
+    if (filter === 'solo') return Number(g.totalWinners || 0) === 1;
+    if (filter === 'howie') return String(g.host || '').toLowerCase().includes('howie');
+    if (filter === 'hunter') return String(g.host || '').toLowerCase().includes('hunter');
+    return true;
   }
 
   _teardownStatsCharts() {
@@ -1422,6 +1527,9 @@ class App {
         this._transcriptsLoaded = true;
         this._transcriptsError = null;
         this._transcriptsLoading = null;
+        this._dbFilteredCache.clear();
+        if (this._activeView === 'database') this.renderDatabase();
+        if (this._activeView === 'home') this.renderDataHealth();
       })
       .catch(err => {
         console.error('Could not load transcripts.json:', err);
@@ -1646,8 +1754,114 @@ class App {
       if (m) this._animateHomeStat(m, totalPot, v => '$' + v.toLocaleString(), 900);
       if (g) this._animateHomeStat(g, uniqueDatesCount, v => v.toLocaleString(), 700);
       if (w) this._animateHomeStat(w, totalWinners, v => v.toLocaleString(), 850);
+      this.renderLatestEpisodeCard();
+      this.renderDataHealth();
       });
     });
+  }
+
+  _latestEpisodeDate() {
+    const dates = [...new Set(this.games.map(g => g.date).filter(Boolean))];
+    return dates.sort((a, b) => this._compareArchiveDates(b, a))[0] || '';
+  }
+
+  renderLatestEpisodeCard() {
+    const card = document.getElementById('latest-episode-card');
+    if (!card || !this.games.length) return;
+    const latestDate = this._latestEpisodeDate();
+    this._latestDate = latestDate;
+    const rounds = this.games.filter(g => g.date === latestDate && this._isPlayableGame(g));
+    const dateEl = document.getElementById('latest-episode-date');
+    const itemsEl = document.getElementById('latest-episode-items');
+    if (dateEl) dateEl.innerText = latestDate || 'No episodes yet';
+    if (itemsEl) itemsEl.innerText = rounds.length ? rounds.map(g => g.secretItem).join(' / ') : 'No game played';
+    card.classList.remove('hidden');
+  }
+
+  openLatestDatabase() {
+    const latestDate = this._latestDate || this._latestEpisodeDate();
+    this.setView('database');
+    setTimeout(() => {
+      const search = document.getElementById('db-search');
+      if (search && latestDate) {
+        search.value = latestDate;
+        this.renderDatabase();
+      }
+    }, 0);
+  }
+
+  openLatestTranscript() {
+    const latestDate = this._latestDate || this._latestEpisodeDate();
+    if (latestDate) this.openTranscriptDate(latestDate);
+  }
+
+  _showHealthPanel() {
+    try {
+      return new URLSearchParams(window.location.search).get('health') === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  renderDataHealth() {
+    const panel = document.getElementById('data-health-panel');
+    if (!panel || !this._showHealthPanel()) return;
+    panel.classList.remove('hidden');
+    if (!this._fullGamesLoaded) {
+      this._ensureFullGamesLoaded().then(() => this.renderDataHealth()).catch(err => this._showDataLoadError(err));
+      return;
+    }
+    const statusEl = document.getElementById('data-health-status');
+    const summaryEl = document.getElementById('data-health-summary');
+    const dates = new Set(this.games.map(g => g.date));
+    const transcriptDates = new Set((this.transcripts || []).map(t => t.date));
+    const missingTranscripts = [...dates].filter(date => !transcriptDates.has(date));
+    const duplicateTranscriptDates = (this.transcripts || [])
+      .map(t => t.date)
+      .filter((date, index, arr) => arr.indexOf(date) !== index);
+    const sectionIssues = (this.transcripts || []).filter(t => {
+      const tags = (t.sections || []).map(s => s.tag).join('|');
+      return tags !== 'Intro|Round 1|Round 1 Results|Round 2|Round 2 Results|Outro';
+    });
+    const partialBonusDates = [...dates].filter(date => {
+      const rounds = this.games.filter(g => g.date === date && this._isPlayableGame(g));
+      const bonusRounds = rounds.filter(g => g.bonus).length;
+      return bonusRounds > 0 && bonusRounds < rounds.length;
+    });
+    const issueCount = missingTranscripts.length + duplicateTranscriptDates.length + sectionIssues.length + partialBonusDates.length;
+    if (statusEl) {
+      statusEl.innerText = issueCount ? `${issueCount} issue${issueCount === 1 ? '' : 's'} found` : 'Looks clean';
+      statusEl.className = `text-white font-display text-3xl font-bold leading-none ${issueCount ? 'text-yellow-300' : 'text-green-300'}`;
+    }
+    if (summaryEl) {
+      summaryEl.innerHTML = `
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
+          <div class="rounded-lg border border-slate-700 bg-slate-950/35 p-3"><div class="text-xs text-slate-500 uppercase font-bold">Rounds</div><div class="text-xl font-bold text-white">${this.games.length}</div></div>
+          <div class="rounded-lg border border-slate-700 bg-slate-950/35 p-3"><div class="text-xs text-slate-500 uppercase font-bold">Dates</div><div class="text-xl font-bold text-white">${dates.size}</div></div>
+          <div class="rounded-lg border border-slate-700 bg-slate-950/35 p-3"><div class="text-xs text-slate-500 uppercase font-bold">Transcripts</div><div class="text-xl font-bold text-white">${this.transcripts.length || '...'}</div></div>
+          <div class="rounded-lg border border-slate-700 bg-slate-950/35 p-3"><div class="text-xs text-slate-500 uppercase font-bold">Bonus Rounds</div><div class="text-xl font-bold text-white">${this.games.filter(g => g.bonus).length}</div></div>
+        </div>
+        <div class="mt-3 text-xs text-slate-400">
+          Missing transcripts: ${missingTranscripts.length} · Duplicate transcript dates: ${duplicateTranscriptDates.length} · Section issues: ${sectionIssues.length} · Partial-day bonuses: ${partialBonusDates.length}
+        </div>`;
+    }
+  }
+
+  _copyText(text, label) {
+    const done = () => alert(`${label} copied.`);
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(() => window.prompt(`Copy ${label}:`, text));
+    } else {
+      window.prompt(`Copy ${label}:`, text);
+    }
+  }
+
+  copyDailyImportPrompt() {
+    this._copyText('Use docs/DAILY_IMPORT_PROMPT.md with the raw transcript in incoming/YYYY-MM-DD.txt. Then run npm run audit, commit on main, and push origin main.', 'Daily import prompt');
+  }
+
+  copyAuditCommand() {
+    this._copyText('npm run audit', 'Audit command');
   }
 
   _safeExternalUrl(value, fallback) {
@@ -2191,10 +2405,13 @@ class App {
         </div>`;
 
     const hostHl = this._highlight(g.host || '—', query).replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson');
+    const sameDayGames = this.games.filter(x => x.date === g.date && !this._isStubGame(x));
+    const roundNumber = Math.max(1, sameDayGames.findIndex(x => x.secretItem === g.secretItem) + 1);
     const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
       <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
       <td class="px-1 py-1 font-semibold text-white align-middle" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;">
         <span style="white-space:nowrap;">${hl(g.secretItem)}</span>
+        ${g.bonus ? `<div class="mt-1"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-blue-900/40 text-blue-300 border border-blue-500/35 px-1.5 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">redeem</span>Bonus</span></div>` : ''}
         ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${hl(g.note)}</span></div>` : ''}
       </td>
       <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${g.pot.toLocaleString()}</td>
@@ -2205,6 +2422,9 @@ class App {
       <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
       <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${hostHl}</td>
       <td class="px-1 py-1 text-right align-middle" style="position:sticky;right:0;background:#0f172a;">
+        <button onclick="app.openTranscriptDate('${esc(g.date)}', 'Round ${roundNumber}')" class="inline-flex items-center justify-center rounded-full border border-slate-500/25 bg-slate-900/55 text-slate-300 hover:text-blue-100 hover:border-blue-300/40 hover:bg-slate-900/75 transition mr-1" title="Open transcript" style="padding:4px;">
+          <span class="material-symbols-outlined" style="font-size:18px;">article</span>
+        </button>
         <button onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="inline-flex items-center justify-center rounded-full border border-blue-400/25 bg-slate-900/55 text-blue-300 hover:text-blue-100 hover:border-blue-300/40 hover:bg-slate-900/75 transition" title="View details" style="padding:4px;">
           <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
         </button>
@@ -2220,7 +2440,14 @@ class App {
     const filter = (nodes.search?.value || '').toLowerCase().trim();
     const sort = this._dbSort || { key: 'date', dir: 'desc' };
     const filtered = this._getFilteredGames(filter, sort);
-    if (nodes.count) nodes.count.innerText = `Showing ${filtered.length} of ${this.games.length} games`;
+    const quickFilter = this._dbQuickFilter || 'all';
+    const filterLabel = quickFilter !== 'all' ? ` · ${quickFilter}` : '';
+    if (nodes.count) nodes.count.innerText = `Showing ${filtered.length} of ${this.games.length} games${filterLabel}`;
+    if (nodes.filters) {
+      nodes.filters.querySelectorAll('[data-db-filter]').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.dbFilter === quickFilter);
+      });
+    }
     if (nodes.body) nodes.body.innerHTML = filtered.map(g => this._renderDatabaseRow(g, filter)).join('');
     requestAnimationFrame(() => {
       if (typeof window.setupDatabaseScrollControls === 'function') {
@@ -2237,6 +2464,16 @@ class App {
       this._dbFilterTimer = null;
       this.renderDatabase();
     }, 100);
+  }
+
+  setDatabaseQuickFilter(filter) {
+    this._dbQuickFilter = filter || 'all';
+    this._dbFilteredCache.clear();
+    if (this._dbQuickFilter === 'transcript' && !this._transcriptsLoaded) {
+      this._ensureTranscriptsLoaded().then(() => this.renderDatabase());
+      return;
+    }
+    this.renderDatabase();
   }
 
   sortDatabase(key) {

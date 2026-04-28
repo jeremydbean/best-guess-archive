@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "audit": "node tools/audit-data.mjs",
+    "audit:json": "node tools/audit-data.mjs --json"
+  },
+  "devDependencies": {}
+}

@@ -8,6 +8,7 @@ Last updated: 2026-04-28
 
 ## Latest Known Implementation Commit
 
+- Current commit - Add import audit tooling and UI shortcuts
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
 - `fbb8b4a` - Reformat all Dec/Jan/Feb/Mar transcripts to match established Results format
@@ -33,10 +34,13 @@ Last updated: 2026-04-28
 - **Codex validation 2026-04-28**: `AGENTS.md` now matches the canonical `Round 1 Results` / `Round 2 Results` section tags. The cancelled Thursday, April 9, 2026 transcript now keeps the same six-section shell as playable episodes with `secretItems: []` and `rounds: []`; the game/meta records use an empty `secretItem` and `format: "v2"`. Validation passed for JSON parsing, inline script parsing, regenerated `games-meta.json`, v2 winner totals, distinct medal clues, and all 101 transcript section schemas. Browser smoke passed on `http://127.0.0.1:5173/` for Home, Transcripts, and Stats with no console errors; the Avg Payout Per Winner by Clue chart renders the Clue 5 bar visibly on its log scale.
 - **Codex UI update 2026-04-28**: The April 27 Netflix Shop K-pop Demon Hunters glass voucher bonus is now attached to both TOOTHPICK and WILLY WONKA so both database detail modals display it. Database detail modals now show a full "Episode transcript" action that opens the selected date's transcript and jumps to the matching round. The Transcripts page sidebar/detail layout was tightened with stronger episode cards, section jump buttons, top-level database detail links, and sticky desktop navigation.
 - **Transcript consistency audit 2026-04-28**: All 101 transcripts match the 101 game dates, use the canonical six-section order, have consistent `secretItems`/`rounds` metadata against `games.json`, and include expected result clue text under loose punctuation matching. Cleaned remaining escaped HTML entities in transcript text (`&amp;` → `&`) so M&M, S&P, and H&M render correctly.
+- **Import/UI quality-of-life update 2026-04-28**: Added `npm run audit` via `tools/audit-data.mjs`, an `incoming/` raw transcript drop folder, and `docs/DAILY_IMPORT.md`, `docs/DAILY_IMPORT_PROMPT.md`, and `docs/IMPORT_REPORT_TEMPLATE.md`. Home now has Latest Episode shortcuts and an optional `?health=1` data-health panel with copy buttons for the import prompt/audit command. Database rows now show bonus badges, transcript action icons, and quick-filter chips for bonus, transcripts, v2 rules, solo wins, and host.
 
 ## Daily Update Workflow
 
 Every episode day, paste the following block to Claude or Codex. Claude/Codex will update `data/games.json`, `data/games-meta.json`, `data/transcripts.json`, and any special promo fields, then commit and push to `main`.
+
+Preferred no-preformat path: put the raw transcript at `incoming/YYYY-MM-DD.txt` and use `docs/DAILY_IMPORT_PROMPT.md`. Before every import commit, run `npm run audit` and fix every error.
 
 ### How to Prepare the Paste Block
 
@@ -239,6 +243,7 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 - **games-meta.json**: Lightweight (36KB) loaded on init for home stats. Full `games.json` lazy-loads when user first visits Database or Stats.
 - **Chart.js**: Injected dynamically on first Stats page visit only.
 - **filterDatabase**: Debounced 150ms.
+- **Data audit**: `npm run audit` validates JSON, inline scripts, generated meta, v2 winner totals, bonus coverage, transcript schemas, transcript/game alignment, result clue text, and escaped HTML entities.
 - **_homeStatsCache**: Invalidated when full games.json loads or refreshStats() runs.
 
 ## Things Worth Double-Checking After Future Edits
