@@ -64,6 +64,9 @@ const regeneratedMeta = games.map(g => {
     totalWinners: g.totalWinners || 0,
     clueCount: (g.clues || []).length
   };
+  if (g.goldClue) entry.goldClue = g.goldClue;
+  if (g.silverClue) entry.silverClue = g.silverClue;
+  if (g.bronzeClue) entry.bronzeClue = g.bronzeClue;
   if (g.note) entry.note = g.note;
   return entry;
 });
