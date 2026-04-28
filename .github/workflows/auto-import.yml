@@ -22,30 +22,30 @@ jobs:
           fetch-depth: 0
 
       - name: Install Python deps
-        shell: bash
         run: pip install youtube-transcript-api anthropic
 
       - name: Run auto-import
-        shell: bash
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
         run: |
-          if [ -n "${{ github.event.inputs.video_id }}" ]; then
-            python scripts/auto-import.py --video-id="${{ github.event.inputs.video_id }}"
-          else
+          $videoId = "${{ github.event.inputs.video_id }}"
+          if ($videoId -ne "") {
+            python scripts/auto-import.py --video-id="$videoId"
+          } else {
             python scripts/auto-import.py
-          fi
+          }
 
       - name: Commit and push if data changed
-        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          if git diff --cached --quiet; then
-            echo "Nothing to commit — no new episode data."
-          else
-            git commit -m "Auto-import episode $(date -u +%Y-%m-%d) [skip ci]"
+          git diff --cached --quiet
+          if ($LASTEXITCODE -ne 0) {
+            $date = (Get-Date).ToUniversalTime().ToString("yyyy-MM-dd")
+            git commit -m "Auto-import episode $date [skip ci]"
             git push origin main
-          fi
+          } else {
+            Write-Host "Nothing to commit — no new episode data."
+          }
