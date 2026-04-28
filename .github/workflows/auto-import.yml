@@ -1,0 +1,60 @@
+name: Auto-import Best Guess Live episode
+
+on:
+  schedule:
+    # Run Tue–Sat at 13:00 UTC (9am Eastern) — the morning after weekday episodes air
+    - cron: "0 13 * * 2-6"
+  workflow_dispatch:
+    inputs:
+      video_id:
+        description: "YouTube video ID (leave blank to auto-detect from RSS)"
+        required: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Node deps
+        run: npm ci
+
+      - name: Install Python deps
+        run: pip install youtube-transcript-api anthropic
+
+      - name: Run auto-import
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.video_id }}" ]; then
+            python scripts/auto-import.py --video-id="${{ github.event.inputs.video_id }}"
+          else
+            python scripts/auto-import.py
+          fi
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Nothing to commit — no new episode data."
+          else
+            git commit -m "Auto-import episode $(date -u +%Y-%m-%d) [skip ci]"
+            git push origin main
+          fi
