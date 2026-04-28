@@ -49,3 +49,16 @@ jobs:
           } else {
             Write-Host "Nothing to commit — no new episode data."
           }
+
+      - name: Send success email
+        if: success()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          to: ${{ secrets.MAIL_USERNAME }}
+          from: Best Guess Archive
+          subject: "BGL auto-import succeeded"
+          body: "Episode imported successfully. View the run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
