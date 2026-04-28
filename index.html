@@ -810,7 +810,7 @@ document.addEventListener('focusout', function(e) {
             <th class="px-4 py-2 text-center cursor-pointer hover:text-white" onclick="app.sortDatabase('winners')">Winners</th>
             <th class="px-4 py-2">Payouts</th>
             <th class="px-4 py-2">Host</th>
-            <th class="px-2 py-2 text-center" title="Bonus" aria-label="Bonus">
+            <th class="px-2 py-2 text-center" title="Bonus" aria-label="Bonus" style="position:sticky;right:58px;background:#0f172a;z-index:21;">
               <span class="material-symbols-outlined" style="font-size:15px">redeem</span>
             </th>
             <th class="px-4 py-2 text-right" style="position:sticky;right:0;background:#0f172a;z-index:21;">Details</th>
@@ -2478,8 +2478,8 @@ class App {
       <td class="px-2 py-1 align-middle">${winnersHtml}</td>
       <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
       <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${hostHl}</td>
-      <td class="px-2 py-1 text-center align-middle">
-        ${g.bonus ? `<span class="inline-flex items-center justify-center rounded-full border border-blue-500/35 bg-blue-900/40 text-blue-300 w-7 h-7" title="${esc(g.bonus.title || 'Bonus')}"><span class="material-symbols-outlined" style="font-size:16px">redeem</span></span>` : ''}
+      <td class="px-2 py-1 text-center align-middle" style="position:sticky;right:58px;background:#0f172a;z-index:20;">
+        ${g.bonus ? `<button type="button" onclick="app.showBonusDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="inline-flex items-center justify-center rounded-full border border-pink-400/60 bg-pink-950/55 text-pink-200 hover:bg-pink-900/70 hover:text-white hover:border-pink-300 transition w-8 h-8 shadow-sm shadow-pink-950/30" title="Open bonus details: ${esc(g.bonus.title || 'Bonus')}"><span class="material-symbols-outlined" style="font-size:19px;line-height:1">card_giftcard</span></button>` : ''}
       </td>
       <td class="px-1 py-1 text-right align-middle" style="position:sticky;right:0;background:#0f172a;">
         <button onclick="app.openTranscriptDate('${esc(g.date)}', 'Round ${roundNumber}')" class="inline-flex items-center justify-center rounded-full border border-slate-500/25 bg-slate-900/55 text-slate-300 hover:text-blue-100 hover:border-blue-300/40 hover:bg-slate-900/75 transition mr-1" title="Open transcript" style="padding:4px;">
@@ -2553,6 +2553,10 @@ class App {
     this.showDetails(button?.dataset?.date || '', button?.dataset?.item || '');
   }
 
+  showBonusDetailsFromButton(button) {
+    this.showDetails(button?.dataset?.date || '', button?.dataset?.item || '', true);
+  }
+
   openDatabaseDetailsFromButton(button) {
     const date = button?.dataset?.date || '';
     const item = button?.dataset?.item || '';
@@ -2562,7 +2566,7 @@ class App {
       .catch(err => this._showDataLoadError(err));
   }
 
-  showDetails(date, item) {
+  showDetails(date, item, focusBonus = false) {
     const g = this.games.find(x => x.date === date && x.secretItem === item);
     if (!g) return;
     document.getElementById('modal-backdrop').classList.remove('hidden');
@@ -2639,12 +2643,15 @@ class App {
           <span class="font-bold text-white">Winners:</span> ${esc((g.winnerNames || 'None listed').toUpperCase())}
         </div>
         ${transcriptAction}
-        ${bonus ? `<div class='mt-6 bg-blue-900/20 border border-blue-400/30 rounded-lg p-4 text-left max-w-xl mx-auto'><span class='font-bold text-blue-300 block mb-1'>Special Bonus: ${esc(bonus.title)}</span><span class='text-blue-100 text-sm'>${bonus.desc}</span></div>` : ''}
+        ${bonus ? `<div id="modal-bonus-section" class='mt-6 ${focusBonus ? 'bg-pink-950/35 border-pink-400/70 shadow-lg shadow-pink-950/40' : 'bg-blue-900/20 border-blue-400/30'} border rounded-lg p-4 text-left max-w-xl mx-auto'><span class='font-bold ${focusBonus ? 'text-pink-200' : 'text-blue-300'} block mb-1'>Special Bonus: ${esc(bonus.title)}</span><span class='${focusBonus ? 'text-pink-50' : 'text-blue-100'} text-sm'>${bonus.desc}</span></div>` : ''}
       </div>
       <div class="bg-slate-900/50 rounded-xl p-2 mb-6 border border-white/5">${cluesHtml}</div>
       <div class="text-sm text-slate-400 bg-red-900/10 border border-red-500/20 p-4 rounded-lg">
         <span class="font-bold text-red-400 block mb-1">Common Wrong Guesses:</span> ${esc(g.wrongGuesses || 'N/A')}
       </div>`;
+    if (focusBonus && bonus) {
+      setTimeout(() => document.getElementById('modal-bonus-section')?.scrollIntoView({ block: 'center', behavior: 'smooth' }), 0);
+    }
   }
 
   closeModal() { document.getElementById('modal-backdrop').classList.add('hidden'); }
