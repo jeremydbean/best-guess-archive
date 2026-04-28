@@ -72,6 +72,14 @@ def get_imported_dates() -> set:
         return set()
 
 
+SPECIAL_EPISODE_RE = re.compile(r"\b(EXTRA|RECAP|BONUS|BEHIND[ -]THE[ -]SCENES|TRAILER|PREVIEW)\b", re.IGNORECASE)
+
+
+def is_regular_episode(title: str) -> bool:
+    """Skip EXTRA/recap/bonus videos — auto-import only handles regular two-round episodes."""
+    return not SPECIAL_EPISODE_RE.search(title or "")
+
+
 def fetch_transcript(video_id: str) -> str:
     """
     Fetch the YouTube auto-caption transcript and return it as plain text.
@@ -79,7 +87,9 @@ def fetch_transcript(video_id: str) -> str:
     Chunks are joined into sentences; [Music] / [Applause] tags are stripped.
     HTML entities are unescaped so the audit's escaped-entity check doesn't fire.
     """
-    chunks = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
+    ytt_api = YouTubeTranscriptApi()
+    fetched = ytt_api.fetch(video_id, languages=["en"])
+    chunks = fetched.to_raw_data()  # [{text, start, duration}, ...]
     noise = re.compile(r"^\s*\[.*?\]\s*$", re.IGNORECASE)
     lines = []
     buf = []
@@ -237,10 +247,11 @@ def main():
             (vid, title, dt, format_archive_date(dt))
             for vid, title, dt in videos
             if format_archive_date(dt) not in imported_dates
+            and is_regular_episode(title)
         ]
 
         if not pending:
-            print("No new episodes found.")
+            print("No new regular episodes found (EXTRA/recap/bonus videos are skipped).")
             sys.exit(0)
 
         video_id, video_title, _dt, episode_date = pending[0]  # oldest first
