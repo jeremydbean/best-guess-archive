@@ -799,6 +799,9 @@ document.addEventListener('focusout', function(e) {
           <tr>
             <th class="px-4 py-2 cursor-pointer hover:text-white db-col-date" onclick="app.sortDatabase('date')">Date</th>
             <th class="px-4 py-2">Secret Item</th>
+            <th class="px-2 py-2 text-center" title="Bonus" aria-label="Bonus">
+              <span class="material-symbols-outlined" style="font-size:15px">redeem</span>
+            </th>
             <th class="px-4 py-2 cursor-pointer hover:text-white" onclick="app.sortDatabase('pot')">Pot</th>
             <th class="px-4 py-2">Clue 1</th>
             <th class="px-4 py-2">Clue 2</th>
@@ -2409,7 +2412,7 @@ class App {
     if (meta.isStub) {
       const html = `<tr class="border-b border-red-900/40 bg-red-950/20">
         <td class="pl-4 pr-1 py-4 text-slate-400 font-mono text-xs db-col-date" title="${esc(g.date)}">${esc(g.date)}</td>
-        <td colspan="13" class="px-4 py-4">
+        <td colspan="14" class="px-4 py-4">
           <span class="inline-flex items-center gap-2 text-sm font-bold text-red-400">
             <span class="material-symbols-outlined" style="font-size:18px">cancel</span>
             ${esc(g.note)} — no episode aired
@@ -2466,8 +2469,10 @@ class App {
       <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
       <td class="px-1 py-1 font-semibold text-white align-middle" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;">
         <span style="white-space:nowrap;">${hl(g.secretItem)}</span>
-        ${g.bonus ? `<div class="mt-1"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-blue-900/40 text-blue-300 border border-blue-500/35 px-1.5 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">redeem</span>Bonus</span></div>` : ''}
         ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${hl(g.note)}</span></div>` : ''}
+      </td>
+      <td class="px-2 py-1 text-center align-middle">
+        ${g.bonus ? `<span class="inline-flex items-center justify-center rounded-full border border-blue-500/35 bg-blue-900/40 text-blue-300 w-7 h-7" title="${esc(g.bonus.title || 'Bonus')}"><span class="material-symbols-outlined" style="font-size:16px">redeem</span></span>` : ''}
       </td>
       <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${g.pot.toLocaleString()}</td>
       ${clueCells}
