@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install Python deps
-        run: python -m pip install youtube-transcript-api anthropic
+        run: python -m pip install youtube-transcript-api anthropic tzdata
 
       - name: Run auto-import
         env:
