@@ -236,7 +236,7 @@ def apply_import(data: dict) -> bool:
 
 
 def run(cmd: list[str]) -> subprocess.CompletedProcess:
-    return subprocess.run(cmd, capture_output=True, text=True)
+    return subprocess.run(" ".join(cmd), capture_output=True, text=True, shell=True)
 
 
 def main():
@@ -331,7 +331,7 @@ def main():
     if result.returncode != 0:
         print(result.stderr)
         print("Audit failed — reverting data/ changes.")
-        run(["git", "checkout", "data/"])
+        subprocess.run("git checkout data/", shell=True)
         sys.exit(1)
 
     print("Import complete.")
