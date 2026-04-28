@@ -364,6 +364,9 @@ document.addEventListener('focusout', function(e) {
       <div class="flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-slate-500" id="status-indicator"></span>
         <span id="data-source-status">Loading...</span>
+        <a href="?health=1" title="Data health" class="inline-flex items-center justify-center w-5 h-5 rounded-full text-slate-700 hover:text-slate-300 hover:bg-slate-800 transition" aria-label="Open data health panel">
+          <span class="material-symbols-outlined" style="font-size:14px">monitoring</span>
+        </a>
       </div>
     </div>
   </div>
@@ -419,12 +422,19 @@ document.addEventListener('focusout', function(e) {
         <div class="text-5xl md:text-6xl font-bold text-[#ffbb39] font-display leading-none" id="total-winners-display">...</div>
       </div>
     </div>
-    <div id="latest-episode-card" class="home-stat-panel rounded-2xl border border-[rgba(112,127,172,0.22)] p-5 md:p-6 text-left hidden">
-      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-        <div>
-          <div class="home-stat-label text-xs mb-2">Latest Episode</div>
-          <div id="latest-episode-date" class="text-white font-display text-3xl font-bold leading-none">...</div>
-          <div id="latest-episode-items" class="mt-2 text-blue-300 text-sm font-bold">...</div>
+    <div id="latest-episode-card" class="relative overflow-hidden rounded-2xl border border-blue-400/25 bg-gradient-to-br from-slate-900/95 via-slate-900/82 to-blue-950/55 p-5 md:p-6 text-left shadow-2xl shadow-blue-950/20 hidden">
+      <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-300/60 to-transparent"></div>
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 relative">
+        <div class="flex items-start gap-4">
+          <div class="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-blue-400/30 bg-blue-500/10 text-blue-200">
+            <span class="material-symbols-outlined">live_tv</span>
+          </div>
+          <div>
+            <div class="home-stat-label text-xs mb-2 text-blue-200">Latest Game</div>
+            <div id="latest-episode-date" class="text-white font-display text-3xl md:text-4xl font-bold leading-none">...</div>
+            <div id="latest-episode-items" class="mt-2 text-[#ffbb39] text-base md:text-lg font-black tracking-wide">...</div>
+            <div id="latest-episode-meta" class="mt-2 text-xs text-slate-400">Newest archive entry</div>
+          </div>
         </div>
         <div class="flex flex-col sm:flex-row gap-3">
           <button class="btn-primary inline-flex items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-bold" onclick="app.openLatestDatabase()">
@@ -878,24 +888,6 @@ document.addEventListener('focusout', function(e) {
     .transcript-episode-button.is-active {
       border-left-color: #60a5fa;
       background: linear-gradient(90deg, rgba(37,99,235,0.24), rgba(15,23,42,0.72));
-    }
-    .transcript-section-jump {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      border-radius: 999px;
-      border: 1px solid rgba(71,85,105,0.8);
-      background: rgba(15,23,42,0.7);
-      padding: 0.35rem 0.7rem;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: #cbd5e1;
-      transition: border-color 0.16s, color 0.16s, background 0.16s;
-    }
-    .transcript-section-jump:hover {
-      border-color: rgba(96,165,250,0.65);
-      background: rgba(30,41,59,0.85);
-      color: #fff;
     }
   </style>
   <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
@@ -1480,7 +1472,7 @@ class App {
       this.games = await res.json();
       this._normalizeGames(this.games);
       document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full bg-green-500';
-      document.getElementById('data-source-status').innerText = `${this.games.length} rounds loaded`;
+      document.getElementById('data-source-status').innerText = `${this._getPlayableGames().length} rounds loaded`;
     } catch (err) {
       console.error('Could not load games-meta.json:', err);
       document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full bg-red-500';
@@ -1773,8 +1765,14 @@ class App {
     const rounds = this.games.filter(g => g.date === latestDate && this._isPlayableGame(g));
     const dateEl = document.getElementById('latest-episode-date');
     const itemsEl = document.getElementById('latest-episode-items');
+    const metaEl = document.getElementById('latest-episode-meta');
     if (dateEl) dateEl.innerText = latestDate || 'No episodes yet';
     if (itemsEl) itemsEl.innerText = rounds.length ? rounds.map(g => g.secretItem).join(' / ') : 'No game played';
+    if (metaEl) {
+      const hostText = [...new Set(rounds.map(g => g.host).filter(Boolean))].join(', ') || 'Host unknown';
+      const winnerTotal = rounds.reduce((sum, g) => sum + Number(g.totalWinners || 0), 0);
+      metaEl.innerText = rounds.length ? `${hostText} · ${rounds.length} rounds · ${winnerTotal.toLocaleString()} winners` : 'Cancelled episode';
+    }
     card.classList.remove('hidden');
   }
 
@@ -2723,15 +2721,6 @@ class App {
         `).join('')
       : '<span class="text-xs text-slate-500">No matching database entry found for this transcript date.</span>';
     const lineCount = (transcript.sections || []).reduce((sum, section) => sum + (section.lines || []).length, 0);
-    const sectionButtons = (transcript.sections || [])
-      .filter(section => (section.lines || []).length)
-      .map(section => {
-        const tag = section.tag || 'Transcript';
-        return `<button type="button" class="transcript-section-jump" onclick="document.getElementById('${this._transcriptSectionId(tag)}')?.scrollIntoView({ behavior: 'smooth', block: 'start' })">
-          <span class="material-symbols-outlined text-sm">arrow_downward</span>
-          ${esc(tag)}
-        </button>`;
-      }).join('');
 
     nodes.detail.innerHTML = `
       <div class="mb-6 border-b border-slate-700/60 pb-4">
@@ -2752,7 +2741,6 @@ class App {
           </span>
           ${roundChipsHtml}
         </div>
-        ${sectionButtons ? `<div class="mt-4 flex flex-wrap gap-2">${sectionButtons}</div>` : ''}
       </div>
       <div class="transcript-sections">
         ${(transcript.sections || []).filter(s => (s.lines || []).length).map(section => {
