@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install Python deps
-        run: py -m pip install youtube-transcript-api anthropic
+        run: python -m pip install youtube-transcript-api anthropic
 
       - name: Run auto-import
         env:
@@ -31,9 +31,9 @@ jobs:
         run: |
           $videoId = "${{ github.event.inputs.video_id }}"
           if ($videoId -ne "") {
-            py scripts/auto-import.py --video-id="$videoId"
+            python scripts/auto-import.py --video-id="$videoId"
           } else {
-            py scripts/auto-import.py
+            python scripts/auto-import.py
           }
 
       - name: Commit and push if data changed
