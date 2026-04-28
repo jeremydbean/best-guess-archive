@@ -254,11 +254,22 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Parse but don't write files")
     args = parser.parse_args()
 
+    imported_dates = get_imported_dates()
+
     if args.video_id:
         video_id = args.video_id
         episode_date = None
         video_title = f"https://youtu.be/{video_id}"
-        print(f"Processing specified video: {video_id}")
+        # Resolve date from RSS so we can check if already imported
+        for vid, title, dt in fetch_rss_videos():
+            if vid == video_id:
+                episode_date = format_archive_date(dt)
+                video_title = title
+                break
+        if episode_date and episode_date in imported_dates:
+            print(f"{episode_date} is already in the archive. No API credits used.")
+            sys.exit(0)
+        episodes_to_import = [(video_id, video_title, None, episode_date)]
     else:
         print("Fetching RSS feed…")
         videos = fetch_rss_videos()
@@ -266,7 +277,6 @@ def main():
             print("No videos found in RSS feed.")
             sys.exit(0)
 
-        imported_dates = get_imported_dates()
         skip_ids = load_skip_ids()
         pending = [
             (vid, title, dt, format_archive_date(dt))
@@ -277,59 +287,67 @@ def main():
         ]
 
         if not pending:
-            print("No new Best Guess Live episodes found.")
+            # No new videos — exits before any API call.
+            print("No new Best Guess Live episodes found. No API credits used.")
             sys.exit(0)
 
-        video_id, video_title, _dt, episode_date = pending[-1]  # newest unimported
-        print(f"New episode: {episode_date} — {video_title}")
-        if len(pending) > 1:
-            others = [f"{ed} ({vid})" for vid, _t, _dt, ed in pending[:-1]]
-            print(f"Note: {len(pending) - 1} older unimported episode(s) skipped — "
-                  f"use the workflow_dispatch video_id input to backfill: {', '.join(others)}")
+        print(f"Found {len(pending)} episode(s) to import.")
+        # Process oldest-first so a late upload is caught the next day
+        # alongside the new episode without manual backfill.
+        episodes_to_import = pending
 
-    print(f"Fetching transcript for {video_id}…")
-    try:
-        transcript_text = fetch_transcript(video_id)
-    except Exception as exc:
-        print(f"Transcript fetch failed: {exc}")
-        sys.exit(1)
+    any_imported = False
+    for video_id, video_title, _dt, episode_date in episodes_to_import:
+        print(f"\n--- {episode_date} — {video_title} ---")
 
-    print(f"Transcript: {len(transcript_text):,} chars / {len(transcript_text.splitlines())} lines")
+        print(f"Fetching transcript for {video_id}…")
+        try:
+            transcript_text = fetch_transcript(video_id)
+        except Exception as exc:
+            print(f"Transcript fetch failed: {exc}")
+            sys.exit(1)
 
-    # If we didn't get the date from RSS, look it up now
-    if not episode_date:
-        for vid, _title, dt in fetch_rss_videos():
-            if vid == video_id:
-                episode_date = format_archive_date(dt)
-                break
+        print(f"Transcript: {len(transcript_text):,} chars / {len(transcript_text.splitlines())} lines")
+
         if not episode_date:
-            episode_date = "unknown"
+            for vid, _title, dt in fetch_rss_videos():
+                if vid == video_id:
+                    episode_date = format_archive_date(dt)
+                    break
+            if not episode_date:
+                episode_date = "unknown"
 
-    print("Calling Claude API…")
-    try:
-        data = call_claude(transcript_text, episode_date, video_title)
-    except json.JSONDecodeError as exc:
-        print(f"Claude returned invalid JSON: {exc}")
-        sys.exit(1)
-    except Exception as exc:
-        print(f"Claude API error: {exc}")
-        sys.exit(1)
+        print("Calling Claude API…")
+        try:
+            data = call_claude(transcript_text, episode_date, video_title)
+        except json.JSONDecodeError as exc:
+            print(f"Claude returned invalid JSON: {exc}")
+            sys.exit(1)
+        except Exception as exc:
+            print(f"Claude API error: {exc}")
+            sys.exit(1)
 
-    print(f"Episode date: {data.get('episode_date')}")
-    print(f"Cancelled:    {data.get('cancelled', False)}")
-    for g in data.get("games", []):
-        print(f"  Round: {g.get('secretItem')} — {g.get('totalWinners')} winners")
+        print(f"Episode date: {data.get('episode_date')}")
+        print(f"Cancelled:    {data.get('cancelled', False)}")
+        for g in data.get("games", []):
+            print(f"  Round: {g.get('secretItem')} — {g.get('totalWinners')} winners")
+
+        if args.dry_run:
+            print("\n--- DRY RUN OUTPUT ---")
+            print(json.dumps(data, indent=2))
+            continue
+
+        applied = apply_import(data)
+        if applied:
+            any_imported = True
 
     if args.dry_run:
-        print("\n--- DRY RUN OUTPUT ---")
-        print(json.dumps(data, indent=2))
         sys.exit(0)
 
-    applied = apply_import(data)
-    if not applied:
+    if not any_imported:
         sys.exit(0)
 
-    print("Running audit:fix…")
+    print("\nRunning audit:fix…")
     result = run(["npm", "run", "audit:fix"])
     print(result.stdout.strip())
     if result.returncode != 0:
@@ -345,7 +363,7 @@ def main():
         subprocess.run("git checkout data/", shell=True)
         sys.exit(1)
 
-    print("Import complete.")
+    print("All imports complete.")
 
 
 if __name__ == "__main__":
