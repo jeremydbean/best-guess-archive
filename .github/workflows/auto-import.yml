@@ -12,29 +12,21 @@ on:
 
 jobs:
   import:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       contents: write
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "24"
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
       - name: Install Python deps
+        shell: bash
         run: pip install youtube-transcript-api anthropic
 
       - name: Run auto-import
+        shell: bash
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
@@ -46,6 +38,7 @@ jobs:
           fi
 
       - name: Commit and push if data changed
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
