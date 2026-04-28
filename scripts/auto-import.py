@@ -83,9 +83,27 @@ def fetch_transcript(video_id: str) -> str:
 
     Chunks are joined into sentences; [Music] / [Applause] tags are stripped.
     HTML entities are unescaped so the audit's escaped-entity check doesn't fire.
+
+    If YOUTUBE_COOKIES env var is set (Netscape-format cookie file contents),
+    it's written to a temp file and passed to the API — needed when running on
+    cloud-provider IPs that YouTube blocks for unauthenticated requests.
     """
-    ytt_api = YouTubeTranscriptApi()
-    fetched = ytt_api.fetch(video_id, languages=["en"])
+    cookie_file = None
+    cookie_path = None
+    cookies_env = os.environ.get("YOUTUBE_COOKIES", "").strip()
+    if cookies_env:
+        import tempfile
+        cookie_file = tempfile.NamedTemporaryFile(mode="w", suffix=".txt", delete=False)
+        cookie_file.write(cookies_env)
+        cookie_file.close()
+        cookie_path = cookie_file.name
+
+    try:
+        ytt_api = YouTubeTranscriptApi(cookie_path=cookie_path) if cookie_path else YouTubeTranscriptApi()
+        fetched = ytt_api.fetch(video_id, languages=["en"])
+    finally:
+        if cookie_path:
+            os.unlink(cookie_path)
     chunks = fetched.to_raw_data()  # [{text, start, duration}, ...]
     noise = re.compile(r"^\s*\[.*?\]\s*$", re.IGNORECASE)
     lines = []
