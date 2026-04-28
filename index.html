@@ -392,15 +392,42 @@ document.addEventListener('focusout', function(e) {
     <div class="flex items-center gap-4">
       <div class="flex items-center gap-2">
         <button type="button" id="health-toggle-btn" onclick="app.toggleDataHealth()" title="Data health" aria-label="Open data health panel"
-          class="flex items-center gap-1.5 rounded-full border border-transparent px-2.5 py-1 text-xs text-slate-500 hover:text-slate-200 hover:border-slate-600 transition">
-          <span class="w-2 h-2 rounded-full bg-slate-500 shrink-0" id="status-indicator"></span>
-          <span id="data-source-status">Loading...</span>
-          <span class="material-symbols-outlined" style="font-size:13px">monitoring</span>
+          class="inline-flex items-center gap-2 rounded-lg border border-green-500/20 bg-green-950/20 px-3 py-1.5 text-xs font-bold text-green-300 hover:text-green-100 hover:border-green-400/50 transition">
+          <span class="w-2 h-2 rounded-full bg-green-400 shrink-0 shadow-sm shadow-green-400/50" id="status-indicator"></span>
+          <span id="data-source-status" class="whitespace-nowrap" style="color:#86efac">Loading...</span>
+          <span class="material-symbols-outlined shrink-0" style="font-size:15px;line-height:1">monitoring</span>
         </button>
       </div>
     </div>
   </div>
 </footer>
+
+<!-- Data Health Popup -->
+<div id="data-health-panel" class="fixed inset-0 z-[60] hidden flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm" onclick="if (event.target === this) app.toggleDataHealth(false)">
+  <div class="home-stat-panel relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl border border-green-500/30 p-5 text-left shadow-2xl shadow-black/40 md:p-6">
+    <button type="button" onclick="app.toggleDataHealth(false)" aria-label="Close data health panel"
+      class="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 bg-slate-950/60 text-slate-300 hover:border-green-400/50 hover:text-white transition">
+      <span class="material-symbols-outlined" style="font-size:18px">close</span>
+    </button>
+    <div class="flex flex-col gap-4 pr-10 lg:flex-row lg:items-start lg:justify-between">
+      <div>
+        <div class="home-stat-label text-xs mb-2 text-green-300">Data Health</div>
+        <div id="data-health-status" class="text-white font-display text-3xl font-bold leading-none">Checking...</div>
+        <div id="data-health-summary" class="mt-2 text-slate-400 text-sm">Open data health to run checks.</div>
+      </div>
+      <div class="flex flex-col gap-2 sm:flex-row">
+        <button class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-slate-950/50 px-3 py-2 text-xs font-bold text-slate-200 hover:border-blue-400/50 transition" onclick="app.copyDailyImportPrompt()">
+          <span class="material-symbols-outlined text-sm">content_copy</span>
+          Copy Import Prompt
+        </button>
+        <button class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-slate-950/50 px-3 py-2 text-xs font-bold text-slate-200 hover:border-blue-400/50 transition" onclick="app.copyAuditCommand()">
+          <span class="material-symbols-outlined text-sm">terminal</span>
+          Copy Audit Command
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ==================== TEMPLATES ==================== -->
 
@@ -470,25 +497,6 @@ document.addEventListener('focusout', function(e) {
           <span class="material-symbols-outlined text-base">article</span>
           Transcript
         </button>
-      </div>
-    </div>
-    <div id="data-health-panel" class="home-stat-panel rounded-2xl border border-green-500/25 p-5 md:p-6 text-left hidden">
-      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
-        <div>
-          <div class="home-stat-label text-xs mb-2 text-green-300">Data Health</div>
-          <div id="data-health-status" class="text-white font-display text-3xl font-bold leading-none">Checking...</div>
-          <div id="data-health-summary" class="mt-2 text-slate-400 text-sm">Load with <span class="font-mono">?health=1</span> to show this panel.</div>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-2">
-          <button class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-slate-950/50 px-3 py-2 text-xs font-bold text-slate-200 hover:border-blue-400/50 transition" onclick="app.copyDailyImportPrompt()">
-            <span class="material-symbols-outlined text-sm">content_copy</span>
-            Copy Import Prompt
-          </button>
-          <button class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-slate-950/50 px-3 py-2 text-xs font-bold text-slate-200 hover:border-blue-400/50 transition" onclick="app.copyAuditCommand()">
-            <span class="material-symbols-outlined text-sm">terminal</span>
-            Copy Audit Command
-          </button>
-        </div>
       </div>
     </div>
 <!-- How to Play Modal Template -->
@@ -1495,7 +1503,7 @@ class App {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       this.games = await res.json();
       this._normalizeGames(this.games);
-      document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full shrink-0 bg-green-400';
+      document.getElementById('status-indicator').className = 'w-2 h-2 rounded-full shrink-0 bg-green-400 shadow-sm shadow-green-400/50';
       document.getElementById('data-source-status').innerText = `${this._getPlayableGames().length} rounds`;
     } catch (err) {
       console.error('Could not load games-meta.json:', err);
@@ -1503,6 +1511,9 @@ class App {
       document.getElementById('data-source-status').innerText = `Data load failed`;
     }
     this.setView('home');
+    if (new URLSearchParams(window.location.search).get('health') === '1') {
+      setTimeout(() => this.toggleDataHealth(true), 0);
+    }
     this._ensureTranscriptsLoaded();
   }
 
@@ -1525,7 +1536,7 @@ class App {
     const statusEl = document.getElementById('data-source-status');
     const indicatorEl = document.getElementById('status-indicator');
     if (statusEl) statusEl.innerText = `Data load failed: ${err.message}`;
-    if (indicatorEl) indicatorEl.className = 'w-2 h-2 rounded-full bg-red-500';
+    if (indicatorEl) indicatorEl.className = 'w-2 h-2 rounded-full shrink-0 bg-red-500';
   }
 
   setClueDuration(value) {
@@ -1829,27 +1840,27 @@ class App {
     if (latestDate) this.openTranscriptDate(latestDate);
   }
 
-  toggleDataHealth() {
-    if (this._activeView !== 'home') { this.setView('home'); }
+  toggleDataHealth(forceOpen) {
     const panel = document.getElementById('data-health-panel');
     if (!panel) return;
-    if (panel.classList.contains('hidden')) {
+    const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : panel.classList.contains('hidden');
+    if (shouldOpen) {
       panel.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
       this._renderDataHealthContent();
-      setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
     } else {
       panel.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
     }
   }
 
   renderDataHealth() {
     // Update footer button appearance; re-fill panel if it's already open.
     const playable = this._getPlayableGames().length;
-    const btn = document.getElementById('health-toggle-btn');
     const dot = document.getElementById('status-indicator');
     const status = document.getElementById('data-source-status');
     if (status) status.innerText = `${playable} rounds`;
-    if (dot) dot.className = 'w-2 h-2 rounded-full shrink-0 ' + (this._fullGamesLoaded ? 'bg-green-400' : 'bg-slate-500');
+    if (dot) dot.className = `w-2 h-2 rounded-full shrink-0 ${playable ? 'bg-green-400 shadow-sm shadow-green-400/50' : 'bg-slate-500'}`;
     const panel = document.getElementById('data-health-panel');
     if (panel && !panel.classList.contains('hidden')) this._renderDataHealthContent();
   }
