@@ -40,6 +40,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          $changes = git status --porcelain data/
+          if (-not $changes) {
+            Write-Host "Nothing to commit — no new episode data."
+            exit 0
+          }
+          git stash push -m "auto-import data" -- data/
+          git pull --rebase origin main
+          git stash pop
+          npm run audit:fix
+          npm run audit
           git add data/
           git diff --cached --quiet
           if ($LASTEXITCODE -ne 0) {

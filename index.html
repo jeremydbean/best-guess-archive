@@ -2584,6 +2584,7 @@ class App {
     const esc = (v) => this._escapeHtml(v);
 
     const bonus = g.bonus || null;
+    const bonusDesc = bonus ? this._sanitizeBonusDesc(bonus.desc) : '';
 
     const cluesHtml = g.clues.map((c, i) => {
       let e = c.explanation || '';
@@ -2660,7 +2661,7 @@ class App {
             <span class="material-symbols-outlined text-pink-400" style="font-size:20px;line-height:1.4">card_giftcard</span>
             <div class="text-base font-bold text-pink-200 leading-snug">${esc(bonus.title)}</div>
           </div>
-          <div class="mt-2 text-sm text-slate-200 leading-relaxed">${bonus.desc}</div>
+          <div class="mt-2 text-sm text-slate-200 leading-relaxed">${bonusDesc}</div>
         </div>` : ''}
       </div>
       <div class="bg-slate-900/50 rounded-xl p-2 mb-6 border border-white/5">${cluesHtml}</div>
@@ -3348,6 +3349,21 @@ class App {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#39;');
+  }
+
+  _sanitizeBonusDesc(value) {
+    const allowed = [];
+    const withTokens = String(value ?? '').replace(/<\/?(?:br|b|strong)\s*\/?>/gi, tag => {
+      const normalized = /^<br/i.test(tag) ? '<br>' : tag.toLowerCase().replace(/\s+/g, '');
+      const token = `__BONUS_TAG_${allowed.length}__`;
+      allowed.push(normalized);
+      return token;
+    });
+    let escaped = this._escapeHtml(withTokens);
+    allowed.forEach((tag, index) => {
+      escaped = escaped.replace(`__BONUS_TAG_${index}__`, tag);
+    });
+    return escaped;
   }
 
   _highlight(rawText, query) {

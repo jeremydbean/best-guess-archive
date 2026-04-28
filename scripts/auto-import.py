@@ -16,7 +16,8 @@ import subprocess
 import sys
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 import anthropic
 from youtube_transcript_api import YouTubeTranscriptApi
@@ -27,6 +28,9 @@ MONTH_NAMES = [
     "July", "August", "September", "October", "November", "December",
 ]
 WEEKDAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+EXPECTED_SECTIONS = ["Intro", "Round 1", "Round 1 Results", "Round 2", "Round 2 Results", "Outro"]
+ALLOWED_BONUS_TAG_RE = re.compile(r"</?(?:br|b|strong)\s*/?>", re.IGNORECASE)
+ANY_HTML_TAG_RE = re.compile(r"<[^>]+>")
 
 
 def fetch_rss_videos():
@@ -50,14 +54,11 @@ def fetch_rss_videos():
     return videos
 
 
-def to_eastern_date(dt: datetime) -> datetime:
-    """Shift UTC datetime to approximate US Eastern date (EDT = UTC-4)."""
-    return dt - timedelta(hours=4)
-
-
 def format_archive_date(dt: datetime) -> str:
     """Convert a datetime to 'Weekday, Month D, YYYY' archive format."""
-    local = to_eastern_date(dt)
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    local = dt.astimezone(ZoneInfo("America/New_York"))
     weekday = WEEKDAY_NAMES[local.weekday()]
     month = MONTH_NAMES[local.month - 1]
     return f"{weekday}, {month} {local.day}, {local.year}"
@@ -209,6 +210,99 @@ Respond with JSON only."""
     return json.loads(raw)
 
 
+def loose(value) -> str:
+    """Normalize answer strings for cross-file comparison."""
+    return re.sub(r"[^A-Z0-9]+", "", str(value or "").upper())
+
+
+def validate_bonus_html(desc: str, context: str) -> None:
+    """Allow only the tiny formatting subset the app intentionally renders."""
+    for tag in ANY_HTML_TAG_RE.findall(str(desc or "")):
+        if not ALLOWED_BONUS_TAG_RE.fullmatch(tag):
+            raise ValueError(f"{context} contains unsupported HTML tag: {tag}")
+
+
+def validate_import_data(data: dict, expected_date: str | None) -> None:
+    """Reject malformed Claude output before writing any archive files."""
+    if not isinstance(data, dict):
+        raise ValueError("Claude output must be a JSON object.")
+
+    transcript = data.get("transcript")
+    games = data.get("games")
+    episode_date = data.get("episode_date")
+    cancelled = bool(data.get("cancelled", False))
+
+    if not isinstance(transcript, dict):
+        raise ValueError("transcript must be an object.")
+    if not isinstance(games, list):
+        raise ValueError("games must be an array.")
+    if expected_date and expected_date != "unknown" and episode_date != expected_date:
+        raise ValueError(f"episode_date {episode_date!r} does not match expected date {expected_date!r}.")
+    if transcript.get("date") != episode_date:
+        raise ValueError("transcript.date must match episode_date.")
+
+    sections = transcript.get("sections")
+    if not isinstance(sections, list) or [s.get("tag") for s in sections] != EXPECTED_SECTIONS:
+        raise ValueError("transcript.sections must use the canonical six-section order.")
+    for section in sections:
+        lines = section.get("lines")
+        if not isinstance(lines, list):
+            raise ValueError(f"Transcript section {section.get('tag')!r} lines must be an array.")
+        for line in lines:
+            if not isinstance(line, dict) or "speaker" not in line or "text" not in line:
+                raise ValueError("Each transcript line must contain speaker and text keys.")
+
+    if cancelled:
+        if games:
+            raise ValueError("Cancelled episodes must not include playable games.")
+        if transcript.get("secretItems") != [] or transcript.get("rounds") != []:
+            raise ValueError("Cancelled transcript must have empty secretItems and rounds arrays.")
+        return
+
+    if len(games) != 2:
+        raise ValueError(f"Playable episodes must include exactly 2 games, got {len(games)}.")
+    secret_items = []
+    for index, game in enumerate(games, start=1):
+        if game.get("date") != episode_date:
+            raise ValueError(f"Game {index} date must match episode_date.")
+        secret_item = game.get("secretItem")
+        if not secret_item:
+            raise ValueError(f"Game {index} is missing secretItem.")
+        secret_items.append(secret_item)
+        clues = game.get("clues")
+        if not isinstance(clues, list) or len(clues) != 5:
+            raise ValueError(f"Game {index} must have exactly 5 clues.")
+        for clue_index, clue in enumerate(clues, start=1):
+            if not isinstance(clue, dict) or not clue.get("text"):
+                raise ValueError(f"Game {index} clue {clue_index} is missing text.")
+            if not str(clue.get("explanation") or "").strip():
+                raise ValueError(f"Game {index} clue {clue_index} is missing explanation.")
+        if game.get("format") == "v2":
+            medal_clues = [int(game.get(k) or 0) for k in ("goldClue", "silverClue", "bronzeClue")]
+            if any(n < 1 or n > 5 for n in medal_clues) or len(set(medal_clues)) != 3:
+                raise ValueError(f"Game {index} v2 medal clue numbers must be distinct values 1-5.")
+            winner_sum = sum(int(game.get(k) or 0) for k in ("goldWinners", "silverWinners", "bronzeWinners"))
+            if winner_sum != int(game.get("totalWinners") or 0):
+                raise ValueError(f"Game {index} totalWinners must equal medal winner sum.")
+        bonus = game.get("bonus")
+        if bonus:
+            if not isinstance(bonus, dict) or not bonus.get("title") or not bonus.get("desc"):
+                raise ValueError(f"Game {index} bonus must include title and desc.")
+            validate_bonus_html(bonus.get("desc", ""), f"Game {index} bonus.desc")
+
+    transcript_items = transcript.get("secretItems")
+    transcript_rounds = transcript.get("rounds")
+    if not isinstance(transcript_items, list) or [loose(x) for x in transcript_items] != [loose(x) for x in secret_items]:
+        raise ValueError("transcript.secretItems must match the two game secret items in order.")
+    if not isinstance(transcript_rounds, list) or len(transcript_rounds) != 2:
+        raise ValueError("transcript.rounds must contain exactly 2 rounds.")
+    for index, round_data in enumerate(transcript_rounds, start=1):
+        if int(round_data.get("round") or 0) != index:
+            raise ValueError(f"transcript.rounds[{index - 1}].round must be {index}.")
+        if loose(round_data.get("secretItem")) != loose(secret_items[index - 1]):
+            raise ValueError(f"transcript round {index} secretItem must match game {index}.")
+
+
 def apply_import(data: dict) -> bool:
     """
     Write parsed episode data into games.json and transcripts.json.
@@ -325,6 +419,12 @@ def main():
             sys.exit(1)
         except Exception as exc:
             print(f"Claude API error: {exc}")
+            sys.exit(1)
+
+        try:
+            validate_import_data(data, episode_date)
+        except ValueError as exc:
+            print(f"Claude output failed validation: {exc}")
             sys.exit(1)
 
         print(f"Episode date: {data.get('episode_date')}")

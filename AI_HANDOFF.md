@@ -8,7 +8,7 @@ Last updated: 2026-04-28
 
 ## Latest Known Implementation Commit
 
-- Current commit - Split footer round count and health indicator
+- Current commit - Harden automated import workflow
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -46,6 +46,7 @@ Last updated: 2026-04-28
 - **Simplified footer health popup 2026-04-28**: Footer health affordance now reads as quiet green status text (`200 rounds`) rather than a visible button. Data Health popup no longer includes copy prompt/audit buttons and has explicit safe padding/width so content is not clipped on mobile.
 - **Footer health indicator split 2026-04-28**: Footer round count is plain white text again, with a separate small circular health button beside it. The indicator is green for clean, yellow for issues, red for load failure, and opens the Data Health popup.
 - **Data health count cleanup 2026-04-28**: Data Health popup shows Playable Rounds, Game Dates, and Transcripts only; the Bonus Rounds card was removed.
+- **Automated import hardening 2026-04-28**: `scripts/auto-import.py` now validates Claude JSON before writing data, uses real `America/New_York` timezone conversion, rejects unsupported bonus HTML, and the frontend sanitizes bonus descriptions to an allowlist. The GitHub workflow rebases and reruns audit/fix before committing imported data.
 
 ## Daily Update Workflow
 
