@@ -2,8 +2,8 @@ name: Auto-import Best Guess Live episode
 
 on:
   schedule:
-    # Run Tue–Sat at 13:00 UTC (9am Eastern) — the morning after weekday episodes air
-    - cron: "0 13 * * 2-6"
+    - cron: "45 1 * * 2-6"  # 9:45pm EDT (Mar–Nov) — Tue–Sat in UTC
+    - cron: "45 2 * * 2-6"  # 9:45pm EST (Nov–Mar) — second trigger is a no-op if already imported
   workflow_dispatch:
     inputs:
       video_id:
