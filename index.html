@@ -2569,6 +2569,7 @@ class App {
     const body = nodes.body;
     if (!body || body._clueTooltipBound) return;
     body._clueTooltipBound = true;
+    let tooltipTimer = null;
 
     const getTooltip = () => {
       let tooltip = document.getElementById('db-clue-tooltip');
@@ -2609,14 +2610,26 @@ class App {
       tooltip.classList.add('is-visible');
     };
 
+    const scheduleTooltip = (source, event) => {
+      if (tooltipTimer) clearTimeout(tooltipTimer);
+      tooltipTimer = setTimeout(() => {
+        tooltipTimer = null;
+        showTooltip(source, event);
+      }, 220);
+    };
+
     const hideTooltip = () => {
+      if (tooltipTimer) {
+        clearTimeout(tooltipTimer);
+        tooltipTimer = null;
+      }
       const tooltip = document.getElementById('db-clue-tooltip');
       if (tooltip) tooltip.classList.remove('is-visible');
     };
 
     body.addEventListener('mouseover', event => {
       const source = event.target.closest('[data-clue-tooltip]');
-      if (source && body.contains(source)) showTooltip(source, event);
+      if (source && body.contains(source)) scheduleTooltip(source, event);
     });
     body.addEventListener('mousemove', event => {
       const source = event.target.closest('[data-clue-tooltip]');
