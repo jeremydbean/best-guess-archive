@@ -8,7 +8,7 @@ Last updated: 2026-04-28
 
 ## Latest Known Implementation Commit
 
-- Current commit - Harden automated import workflow
+- Current commit - Harden YouTube auto-import fallback
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -47,6 +47,7 @@ Last updated: 2026-04-28
 - **Footer health indicator split 2026-04-28**: Footer round count is plain white text again, with a separate small circular health button beside it. The indicator is green for clean, yellow for issues, red for load failure, and opens the Data Health popup.
 - **Data health count cleanup 2026-04-28**: Data Health popup shows Playable Rounds, Game Dates, and Transcripts only; the Bonus Rounds card was removed.
 - **Automated import hardening 2026-04-28**: `scripts/auto-import.py` now validates Claude JSON before writing data, uses real `America/New_York` timezone conversion, rejects unsupported bonus HTML, and the frontend sanitizes bonus descriptions to an allowlist. The GitHub workflow rebases and reruns audit/fix before committing imported data.
+- **YouTube auto-import fallback 2026-04-28**: The Chris S YouTube RSS feed can return 404 even while the channel page works. `scripts/auto-import.py` now falls back to scraping the channel videos page and extracting the archive date from titles like `Best Guess Live (April 28, 2026)`. The workflow installs Python `tzdata`, and the script also has a DST-aware Eastern-time fallback for Windows runners without IANA timezone data.
 
 ## Daily Update Workflow
 

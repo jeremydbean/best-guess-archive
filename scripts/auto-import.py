@@ -14,15 +14,18 @@ import os
 import re
 import subprocess
 import sys
+import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
-from zoneinfo import ZoneInfo
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 import anthropic
 from youtube_transcript_api import YouTubeTranscriptApi
 
-CHANNEL_RSS = "https://www.youtube.com/feeds/videos.xml?channel_id=UCcJVrF8GextFm229zgllU4w"
+CHANNEL_ID = "UCcJVrF8GextFm229zgllU4w"
+CHANNEL_RSS = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
+CHANNEL_VIDEOS_URL = f"https://www.youtube.com/channel/{CHANNEL_ID}/videos"
 MONTH_NAMES = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December",
@@ -31,12 +34,111 @@ WEEKDAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturd
 EXPECTED_SECTIONS = ["Intro", "Round 1", "Round 1 Results", "Round 2", "Round 2 Results", "Outro"]
 ALLOWED_BONUS_TAG_RE = re.compile(r"</?(?:br|b|strong)\s*/?>", re.IGNORECASE)
 ANY_HTML_TAG_RE = re.compile(r"<[^>]+>")
+TITLE_DATE_RE = re.compile(
+    r"\(([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})\)"
+)
+
+
+def fetch_url(url: str) -> bytes:
+    """Fetch YouTube pages with a browser-like user agent."""
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0 Safari/537.36"
+            )
+        },
+    )
+    with urllib.request.urlopen(request, timeout=15) as resp:
+        return resp.read()
+
+
+def decode_json_text(value: str) -> str:
+    """Decode a JSON string fragment captured from YouTube's page data."""
+    try:
+        return json.loads(f'"{value}"')
+    except json.JSONDecodeError:
+        return html.unescape(value)
+
+
+def archive_datetime_from_title(title: str) -> datetime | None:
+    """Extract dates from titles like 'Best Guess Live (April 28, 2026)'."""
+    match = TITLE_DATE_RE.search(title or "")
+    if not match:
+        return None
+    month_name, day, year = match.groups()
+    try:
+        month = MONTH_NAMES.index(month_name) + 1
+    except ValueError:
+        return None
+    # Noon UTC keeps the calendar date stable after Eastern conversion.
+    return datetime(int(year), month, int(day), 12, tzinfo=timezone.utc)
+
+
+def fetch_channel_page_videos():
+    """
+    Return videos from the channel page when YouTube's RSS feed is unavailable.
+
+    The Chris S channel titles include the show date, so this fallback can still
+    produce stable archive dates without spending Claude/API credits first.
+    """
+    html_text = fetch_url(CHANNEL_VIDEOS_URL).decode("utf-8", errors="replace")
+    videos = []
+    seen = set()
+
+    renderer_re = re.compile(
+        r'"videoRenderer":\{"videoId":"([^"]+)".{0,6000}?'
+        r'"title":\{"runs":\[\{"text":"((?:\\.|[^"\\])*)"',
+        re.DOTALL,
+    )
+    for match in renderer_re.finditer(html_text):
+        video_id = match.group(1)
+        title = decode_json_text(match.group(2))
+        published_dt = archive_datetime_from_title(title)
+        if not published_dt or video_id in seen:
+            continue
+        seen.add(video_id)
+        videos.append((video_id, title, published_dt))
+
+    title_re = re.compile(r'"title":\{"runs":\[\{"text":"((?:\\.|[^"\\])*)"')
+    for match in title_re.finditer(html_text):
+        title = decode_json_text(match.group(1))
+        published_dt = archive_datetime_from_title(title)
+        if not published_dt:
+            continue
+        window = html_text[max(0, match.start() - 1500):match.end() + 2500]
+        video_matches = list(re.finditer(r'"videoId":"([^"]+)"', window))
+        video_match = min(
+            video_matches,
+            key=lambda m: abs((max(0, match.start() - 1500) + m.start()) - match.start()),
+            default=None,
+        )
+        if not video_match:
+            continue
+        video_id = video_match.group(1)
+        if video_id in seen:
+            continue
+        seen.add(video_id)
+        videos.append((video_id, title, published_dt))
+    videos.sort(key=lambda v: v[2])  # oldest first
+    return videos
 
 
 def fetch_rss_videos():
     """Return list of (video_id, title, published_dt) sorted oldest-first."""
-    with urllib.request.urlopen(CHANNEL_RSS, timeout=15) as resp:
-        xml_data = resp.read()
+    try:
+        xml_data = fetch_url(CHANNEL_RSS)
+    except urllib.error.HTTPError as exc:
+        print(f"RSS feed unavailable ({exc.code}); falling back to channel page.")
+        videos = []
+        for attempt in range(1, 4):
+            videos = fetch_channel_page_videos()
+            if videos:
+                return videos
+            print(f"Channel page fallback returned no videos (attempt {attempt}/3).")
+        return videos
     root = ET.fromstring(xml_data)
     ns = {
         "atom": "http://www.w3.org/2005/Atom",
@@ -54,11 +156,45 @@ def fetch_rss_videos():
     return videos
 
 
+def fetch_video_metadata(video_id: str) -> tuple[str, datetime | None]:
+    """Return (title, published_dt) from a video page when RSS cannot be used."""
+    page = fetch_url(f"https://www.youtube.com/watch?v={video_id}").decode("utf-8", errors="replace")
+    title_match = re.search(r'"title":"((?:\\.|[^"\\])*)"', page)
+    title = decode_json_text(title_match.group(1)) if title_match else f"https://youtu.be/{video_id}"
+    publish_match = re.search(r'"(?:publishDate|uploadDate)":"([^"]+)"', page)
+    if publish_match:
+        return title, datetime.fromisoformat(publish_match.group(1))
+    return title, archive_datetime_from_title(title)
+
+
+def us_eastern_fallback(dt: datetime) -> datetime:
+    """DST-aware Eastern conversion for Windows Python without tzdata installed."""
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    utc = dt.astimezone(timezone.utc)
+    year = utc.year
+
+    march_1 = datetime(year, 3, 1, tzinfo=timezone.utc)
+    first_sunday_march = 1 + ((6 - march_1.weekday()) % 7)
+    second_sunday_march = first_sunday_march + 7
+    dst_start_utc = datetime(year, 3, second_sunday_march, 7, tzinfo=timezone.utc)
+
+    nov_1 = datetime(year, 11, 1, tzinfo=timezone.utc)
+    first_sunday_nov = 1 + ((6 - nov_1.weekday()) % 7)
+    dst_end_utc = datetime(year, 11, first_sunday_nov, 6, tzinfo=timezone.utc)
+
+    offset_hours = -4 if dst_start_utc <= utc < dst_end_utc else -5
+    return utc + timedelta(hours=offset_hours)
+
+
 def format_archive_date(dt: datetime) -> str:
     """Convert a datetime to 'Weekday, Month D, YYYY' archive format."""
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
-    local = dt.astimezone(ZoneInfo("America/New_York"))
+    try:
+        local = dt.astimezone(ZoneInfo("America/New_York"))
+    except ZoneInfoNotFoundError:
+        local = us_eastern_fallback(dt)
     weekday = WEEKDAY_NAMES[local.weekday()]
     month = MONTH_NAMES[local.month - 1]
     return f"{weekday}, {month} {local.day}, {local.year}"
@@ -354,12 +490,16 @@ def main():
         video_id = args.video_id
         episode_date = None
         video_title = f"https://youtu.be/{video_id}"
-        # Resolve date from RSS so we can check if already imported
+        # Resolve date from RSS/channel listing so we can check if already imported.
         for vid, title, dt in fetch_rss_videos():
             if vid == video_id:
                 episode_date = format_archive_date(dt)
                 video_title = title
                 break
+        if not episode_date:
+            video_title, published_dt = fetch_video_metadata(video_id)
+            if published_dt:
+                episode_date = format_archive_date(published_dt)
         if episode_date and episode_date in imported_dates:
             print(f"{episode_date} is already in the archive. No API credits used.")
             sys.exit(0)
