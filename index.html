@@ -759,6 +759,30 @@ document.addEventListener('focusout', function(e) {
       line-height: 1;
       letter-spacing: 0;
     }
+    .db-clue-tooltip {
+      cursor: help;
+    }
+    .db-clue-tooltip-popover {
+      position: fixed;
+      z-index: 500;
+      max-width: min(28rem, calc(100vw - 2rem));
+      pointer-events: none;
+      border: 1px solid rgba(96,165,250,0.36);
+      border-radius: 0.75rem;
+      background: rgba(15,23,42,0.98);
+      box-shadow: 0 18px 38px rgba(2,6,23,0.42);
+      color: #e2e8f0;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      padding: 0.75rem 0.85rem;
+      opacity: 0;
+      transform: translateY(2px);
+      transition: opacity 0.06s ease, transform 0.06s ease;
+    }
+    .db-clue-tooltip-popover.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
     @media (min-width: 768px) {
       .db-side-scroll-button { display: flex; }
     }
@@ -2466,7 +2490,7 @@ class App {
       }
       const clueTitle = explanation ? `Clue ${i + 1}: ${explanation}` : `Clue ${i + 1}: No explanation recorded.`;
       return `<td class="px-4 py-3 align-middle" style="min-width:200px">
-        <div title="${esc(clueTitle)}" class="font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${hl(clueMeta.clue.text)}</div>
+        <div data-clue-tooltip="${esc(clueTitle)}" tabindex="0" class="db-clue-tooltip font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${hl(clueMeta.clue.text)}</div>
         <div class="text-xs font-mono mt-0.5 flex items-center flex-wrap gap-x-1"><span class="text-green-500">${clueMeta.correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${clueMeta.guesses.toLocaleString()}</span><span class="text-slate-600"> (${clueMeta.pct}%)${(isV2 && medal) ? `&nbsp;<span class="ml-1 text-sm whitespace-nowrap">${medal}</span>` : ''}</span></div>
       </td>`;
     }).join('');
@@ -2532,10 +2556,83 @@ class App {
       });
     }
     if (nodes.body) nodes.body.innerHTML = filtered.map(g => this._renderDatabaseRow(g, filter)).join('');
+    this._setupDatabaseClueTooltips();
     requestAnimationFrame(() => {
       if (typeof window.setupDatabaseScrollControls === 'function') {
         window.setupDatabaseScrollControls();
       }
+    });
+  }
+
+  _setupDatabaseClueTooltips() {
+    const nodes = this._getViewNodes('database');
+    const body = nodes.body;
+    if (!body || body._clueTooltipBound) return;
+    body._clueTooltipBound = true;
+
+    const getTooltip = () => {
+      let tooltip = document.getElementById('db-clue-tooltip');
+      if (!tooltip) {
+        tooltip = document.createElement('div');
+        tooltip.id = 'db-clue-tooltip';
+        tooltip.className = 'db-clue-tooltip-popover';
+        document.body.appendChild(tooltip);
+      }
+      return tooltip;
+    };
+
+    const positionTooltip = (source, event) => {
+      const tooltip = getTooltip();
+      const offset = 14;
+      let x = event?.clientX ?? 0;
+      let y = event?.clientY ?? 0;
+      if (!x && !y && source) {
+        const rect = source.getBoundingClientRect();
+        x = rect.left;
+        y = rect.bottom;
+      }
+      tooltip.style.left = `${x + offset}px`;
+      tooltip.style.top = `${y + offset}px`;
+      const rect = tooltip.getBoundingClientRect();
+      const maxX = window.innerWidth - rect.width - 12;
+      const maxY = window.innerHeight - rect.height - 12;
+      tooltip.style.left = `${Math.max(12, Math.min(x + offset, maxX))}px`;
+      tooltip.style.top = `${Math.max(12, Math.min(y + offset, maxY))}px`;
+    };
+
+    const showTooltip = (source, event) => {
+      const text = source?.dataset?.clueTooltip;
+      if (!text) return;
+      const tooltip = getTooltip();
+      tooltip.textContent = text;
+      positionTooltip(source, event);
+      tooltip.classList.add('is-visible');
+    };
+
+    const hideTooltip = () => {
+      const tooltip = document.getElementById('db-clue-tooltip');
+      if (tooltip) tooltip.classList.remove('is-visible');
+    };
+
+    body.addEventListener('mouseover', event => {
+      const source = event.target.closest('[data-clue-tooltip]');
+      if (source && body.contains(source)) showTooltip(source, event);
+    });
+    body.addEventListener('mousemove', event => {
+      const source = event.target.closest('[data-clue-tooltip]');
+      if (source && body.contains(source)) positionTooltip(source, event);
+    });
+    body.addEventListener('mouseout', event => {
+      const source = event.target.closest('[data-clue-tooltip]');
+      if (!source || source.contains(event.relatedTarget)) return;
+      hideTooltip();
+    });
+    body.addEventListener('focusin', event => {
+      const source = event.target.closest('[data-clue-tooltip]');
+      if (source && body.contains(source)) showTooltip(source, null);
+    });
+    body.addEventListener('focusout', event => {
+      if (event.target.closest('[data-clue-tooltip]')) hideTooltip();
     });
   }
 
