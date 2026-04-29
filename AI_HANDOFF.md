@@ -8,7 +8,7 @@ Last updated: 2026-04-28
 
 ## Latest Known Implementation Commit
 
-- Current commit - Declutter database details modal
+- Current commit - Add database clue explanation hover text
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -49,6 +49,7 @@ Last updated: 2026-04-28
 - **Automated import hardening 2026-04-28**: `scripts/auto-import.py` now validates Claude JSON before writing data, uses real `America/New_York` timezone conversion, rejects unsupported bonus HTML, and the frontend sanitizes bonus descriptions to an allowlist. The GitHub workflow rebases and reruns audit/fix before committing imported data.
 - **YouTube auto-import fallback 2026-04-28**: The Chris S YouTube RSS feed can return 404 even while the channel page works. `scripts/auto-import.py` now falls back to scraping the channel videos page and extracting the archive date from titles like `Best Guess Live (April 28, 2026)`. The workflow installs Python `tzdata`, and the script also has a DST-aware Eastern-time fallback for Windows runners without IANA timezone data.
 - **Database details declutter 2026-04-29**: The database details modal now uses a compact stat grid for pot/host/paid winners/format, short `G`/`S`/`B` clue indicators instead of long medal labels, a smaller transcript action, a tighter bonus block, and collapsed common wrong guesses.
+- **Database clue hover 2026-04-29**: Clue text in the Database table now exposes the host explanation via native hover tooltip (`title`) without changing the visible table layout.
 
 ## Daily Update Workflow
 
