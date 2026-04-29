@@ -235,28 +235,6 @@
     padding: 0 1px;
     font-style: normal;
   }
-  .filter-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    border-radius: 999px;
-    border: 1px solid rgba(71,85,105,0.82);
-    background: rgba(15,23,42,0.68);
-    color: #cbd5e1;
-    padding: 0.45rem 0.78rem;
-    font-size: 0.75rem;
-    font-weight: 800;
-    transition: color .16s, background .16s, border-color .16s;
-  }
-  .filter-chip:hover,
-  .filter-chip.active {
-    border-color: rgba(96,165,250,0.68);
-    background: rgba(37,99,235,0.22);
-    color: #fff;
-  }
-  .filter-chip .material-symbols-outlined {
-    font-size: 1rem;
-  }
   @media (max-width: 600px) {
     #play-game-layout { max-width: 100vw !important; }
     /* No sticky here — the flex column already positions these correctly.
@@ -639,29 +617,6 @@ document.addEventListener('focusout', function(e) {
         placeholder="Search item, date, host, clue, or winner name...">
     </div>
   </div>
-  <div class="flex flex-wrap items-center gap-2" id="db-filter-chips">
-    <button class="filter-chip active" data-db-filter="all" onclick="app.setDatabaseQuickFilter('all')">
-      <span class="material-symbols-outlined">select_all</span> All
-    </button>
-    <button class="filter-chip" data-db-filter="bonus" onclick="app.setDatabaseQuickFilter('bonus')">
-      <span class="material-symbols-outlined">redeem</span> Bonus
-    </button>
-    <button class="filter-chip" data-db-filter="transcript" onclick="app.setDatabaseQuickFilter('transcript')">
-      <span class="material-symbols-outlined">article</span> Has Transcript
-    </button>
-    <button class="filter-chip" data-db-filter="v2" onclick="app.setDatabaseQuickFilter('v2')">
-      <span class="material-symbols-outlined">military_tech</span> V2 Rules
-    </button>
-    <button class="filter-chip" data-db-filter="solo" onclick="app.setDatabaseQuickFilter('solo')">
-      <span class="material-symbols-outlined">person</span> Solo Win
-    </button>
-    <button class="filter-chip" data-db-filter="howie" onclick="app.setDatabaseQuickFilter('howie')">
-      <span class="material-symbols-outlined">mic</span> Howie
-    </button>
-    <button class="filter-chip" data-db-filter="hunter" onclick="app.setDatabaseQuickFilter('hunter')">
-      <span class="material-symbols-outlined">mic_external_on</span> Hunter
-    </button>
-  </div>
   <style>
     /* Responsive database table container */
     .db-responsive-container {
@@ -783,6 +738,48 @@ document.addEventListener('focusout', function(e) {
       opacity: 1;
       transform: translateY(0);
     }
+    .db-details-head,
+    .db-details-cell {
+      position: sticky;
+      right: 0;
+      border-left: 1px solid rgba(96,165,250,0.16);
+      box-shadow: -12px 0 22px rgba(15,23,42,0.28);
+    }
+    .db-details-head {
+      z-index: 21;
+      background: linear-gradient(90deg, rgba(15,23,42,0.72), #0f172a 28%);
+    }
+    .db-details-cell {
+      background: linear-gradient(90deg, rgba(15,23,42,0.74), #0f172a 30%);
+    }
+    .db-details-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      min-width: 4.75rem;
+      border: 1px solid rgba(96,165,250,0.34);
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(30,64,175,0.42), rgba(15,23,42,0.86));
+      color: #bfdbfe;
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      padding: 0.38rem 0.62rem;
+      text-transform: uppercase;
+      transition: border-color 0.16s, color 0.16s, background 0.16s, transform 0.16s;
+    }
+    .db-details-button:hover,
+    .db-details-button:focus-visible {
+      border-color: rgba(147,197,253,0.72);
+      background: linear-gradient(180deg, rgba(37,99,235,0.58), rgba(30,41,59,0.92));
+      color: #eff6ff;
+      outline: none;
+      transform: translateY(-1px);
+    }
+    .db-details-button .material-symbols-outlined {
+      font-size: 1rem;
+    }
     @media (min-width: 768px) {
       .db-side-scroll-button { display: flex; }
     }
@@ -810,7 +807,7 @@ document.addEventListener('focusout', function(e) {
             <th class="px-4 py-2 text-center cursor-pointer hover:text-white" onclick="app.sortDatabase('winners')">Winners</th>
             <th class="px-4 py-2">Payouts</th>
             <th class="px-4 py-2">Host</th>
-            <th class="px-4 py-2 text-right" style="position:sticky;right:0;background:#0f172a;z-index:21;">Details</th>
+            <th class="db-details-head px-4 py-2 text-center">Details</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-700/50" id="db-table-body"></tbody>
@@ -1261,7 +1258,6 @@ class App {
     this.currentClueIndex = 0;
     this.timer = null;
     this._dbSort = { key: 'date', dir: 'desc' };
-    this._dbQuickFilter = 'all';
     this._fullGamesLoaded = false;
     this._fullGamesLoading = null;
     this.transcripts = [];
@@ -1313,7 +1309,6 @@ class App {
       nodes.search = document.getElementById('db-search');
       nodes.count = document.getElementById('db-count-display');
       nodes.body = document.getElementById('db-table-body');
-      nodes.filters = document.getElementById('db-filter-chips');
     } else if (name === 'stats') {
       nodes.refresh = document.getElementById('refresh-stats-btn');
       nodes.kpis = document.getElementById('stats-kpi-grid');
@@ -1411,32 +1406,13 @@ class App {
   }
 
   _getFilteredGames(filter, sort) {
-    const quickFilter = this._dbQuickFilter || 'all';
-    const filterKey = `${this._dataVersion}|${sort.key}|${sort.dir}|${filter}|${quickFilter}|${this._transcriptsLoaded ? 't1' : 't0'}`;
+    const filterKey = `${this._dataVersion}|${sort.key}|${sort.dir}|${filter}`;
     if (this._dbFilteredCache.has(filterKey)) return this._dbFilteredCache.get(filterKey);
 
-    const filtered = this._getSortedGames(sort).filter(g => {
-      if (filter && !this._getGameMeta(g).searchText.includes(filter)) return false;
-      return this._passesDatabaseQuickFilter(g, quickFilter);
-    });
+    const filtered = this._getSortedGames(sort).filter(g => !filter || this._getGameMeta(g).searchText.includes(filter));
 
     this._dbFilteredCache.set(filterKey, filtered);
     return filtered;
-  }
-
-  _transcriptDateSet() {
-    return new Set((this.transcripts || []).map(t => t.date));
-  }
-
-  _passesDatabaseQuickFilter(g, filter) {
-    if (!filter || filter === 'all') return true;
-    if (filter === 'bonus') return !!g.bonus;
-    if (filter === 'transcript') return this._transcriptDateSet().has(g.date);
-    if (filter === 'v2') return g.format === 'v2';
-    if (filter === 'solo') return Number(g.totalWinners || 0) === 1;
-    if (filter === 'howie') return String(g.host || '').toLowerCase().includes('howie');
-    if (filter === 'hunter') return String(g.host || '').toLowerCase().includes('hunter');
-    return true;
   }
 
   _teardownStatsCharts() {
@@ -2531,9 +2507,10 @@ class App {
       <td class="px-2 py-1 align-middle">${winnersHtml}</td>
       <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
       <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${hostHl}</td>
-      <td class="px-1 py-1 text-right align-middle" style="position:sticky;right:0;background:#0f172a;">
-        <button onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="inline-flex items-center justify-center rounded-full border border-blue-400/25 bg-slate-900/55 text-blue-300 hover:text-blue-100 hover:border-blue-300/40 hover:bg-slate-900/75 transition" title="View details" style="padding:4px;">
-          <span class="material-symbols-outlined" style="font-size:18px;">visibility</span>
+      <td class="db-details-cell px-3 py-2 text-center align-middle">
+        <button onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="db-details-button" title="View ${esc(g.secretItem)} details">
+          <span class="material-symbols-outlined">visibility</span>
+          <span>View</span>
         </button>
       </td>
     </tr>`;
@@ -2547,14 +2524,7 @@ class App {
     const filter = (nodes.search?.value || '').toLowerCase().trim();
     const sort = this._dbSort || { key: 'date', dir: 'desc' };
     const filtered = this._getFilteredGames(filter, sort);
-    const quickFilter = this._dbQuickFilter || 'all';
-    const filterLabel = quickFilter !== 'all' ? ` · ${quickFilter}` : '';
-    if (nodes.count) nodes.count.innerText = `Showing ${filtered.length} of ${this.games.length} games${filterLabel}`;
-    if (nodes.filters) {
-      nodes.filters.querySelectorAll('[data-db-filter]').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.dbFilter === quickFilter);
-      });
-    }
+    if (nodes.count) nodes.count.innerText = `Showing ${filtered.length} of ${this.games.length} games`;
     if (nodes.body) nodes.body.innerHTML = filtered.map(g => this._renderDatabaseRow(g, filter)).join('');
     this._setupDatabaseClueTooltips();
     requestAnimationFrame(() => {
@@ -2657,16 +2627,6 @@ class App {
       this._dbFilterTimer = null;
       this.renderDatabase();
     }, 100);
-  }
-
-  setDatabaseQuickFilter(filter) {
-    this._dbQuickFilter = filter || 'all';
-    this._dbFilteredCache.clear();
-    if (this._dbQuickFilter === 'transcript' && !this._transcriptsLoaded) {
-      this._ensureTranscriptsLoaded().then(() => this.renderDatabase());
-      return;
-    }
-    this.renderDatabase();
   }
 
   sortDatabase(key) {
