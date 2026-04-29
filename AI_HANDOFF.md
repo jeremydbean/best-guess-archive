@@ -1,6 +1,6 @@
 # AI Handoff
 
-Last updated: 2026-04-28
+Last updated: 2026-04-29
 
 ## Current Branch
 
@@ -8,7 +8,7 @@ Last updated: 2026-04-28
 
 ## Latest Known Implementation Commit
 
-- Current commit - Soften database details modal styling
+- Current commit - Tuck details transcript link
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -53,6 +53,7 @@ Last updated: 2026-04-28
 - **Fast database clue hover 2026-04-29**: Native browser clue tooltips were too slow, so the Database table now uses one floating custom tooltip for clue explanations. It appears quickly on hover/focus and does not change the normal spreadsheet layout.
 - **Database cleanup 2026-04-29**: Removed the Database quick-filter chip row and unused quick-filter code paths. The sticky Details column is now a polished action lane with a clearer `View` pill button.
 - **Database details styling 2026-04-29**: Rolled back the box-heavy details modal header. It now uses centered title text, compact metadata chips, and lightweight medal summary pills closer to the original modal style.
+- **Details transcript action 2026-04-29**: The details modal transcript link is intentionally a quiet text-size action so it does not overpower or unbalance the winners line.
 
 ## Daily Update Workflow
 

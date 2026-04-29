@@ -2707,8 +2707,8 @@ class App {
     const transcriptTarget = `Round ${roundNumber}`;
     const transcriptButton = !this._isStubGame(g)
       ? `<button type="button" onclick="app.openTranscriptDate('${esc(g.date)}', '${esc(transcriptTarget)}')"
-            class="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-400/35 bg-blue-950/40 px-3 py-2 text-sm font-bold text-blue-100 hover:border-blue-300/60 hover:bg-blue-900/55 transition">
-            <span class="material-symbols-outlined text-base">article</span>
+            class="inline-flex items-center justify-center gap-1.5 rounded-md border border-blue-400/20 bg-blue-950/20 px-2 py-1 text-xs font-bold text-blue-200 hover:border-blue-300/45 hover:bg-blue-900/35 transition">
+            <span class="material-symbols-outlined" style="font-size:14px;line-height:1">article</span>
             Transcript
           </button>`
       : '';
@@ -2729,7 +2729,7 @@ class App {
         </div>
         ${medalSummary}
 
-        <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
           ${g.winnerNames ? `<div class="text-xs text-slate-400">
             <span class="font-black uppercase tracking-wider text-slate-500">Winners</span>
             <span class="ml-2 text-slate-200">${esc(g.winnerNames)}</span>
