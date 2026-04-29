@@ -2594,30 +2594,47 @@ class App {
       const isSilver = g.format === 'v2' && n === g.silverClue;
       const isBronze = g.format === 'v2' && n === g.bronzeClue;
       const isClassicWin = g.format !== 'v2' && n === Number(g.winningClue || g.goldClue);
-      const badge = isGold   ? '<span class="text-xs font-bold text-yellow-400 bg-yellow-900/30 px-2 py-1 rounded">🥇 Gold Winner Clue</span>'
-                  : isSilver ? '<span class="text-xs font-bold text-slate-300 bg-slate-700/50 px-2 py-1 rounded">🥈 Silver Winner Clue</span>'
-                  : isBronze ? '<span class="text-xs font-bold text-orange-400 bg-orange-900/30 px-2 py-1 rounded">🥉 Bronze Winner Clue</span>'
-                  : isClassicWin ? '<span class="text-xs font-bold text-yellow-400 bg-yellow-900/30 px-2 py-1 rounded">★ Winning Clue</span>' : '';
-      return `<div class="mb-6 pb-6 border-b border-slate-700 last:border-0 ${isClassicWin ? 'bg-yellow-900/10 border-yellow-400/30' : ''}">
-        <div class="flex flex-wrap justify-between items-center mb-2 gap-2">
-          <span class="text-xs font-bold ${isClassicWin ? 'text-yellow-400 bg-yellow-900/30 border border-yellow-400/40' : 'text-blue-400 bg-blue-900/30'} px-2 py-1 rounded">Clue ${n}</span>
-          ${badge}
-          <span class="text-xs text-slate-500 ml-auto">${esc(c.correct)} correct / ${esc(c.guesses)} guesses</span>
+      const medal = isGold ? { label: 'G', name: 'Gold', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
+                  : isSilver ? { label: 'S', name: 'Silver', cls: 'border-slate-400/45 bg-slate-700/45 text-slate-100' }
+                  : isBronze ? { label: 'B', name: 'Bronze', cls: 'border-orange-400/50 bg-orange-900/35 text-orange-200' }
+                  : isClassicWin ? { label: 'W', name: 'Winner', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
+                  : null;
+      const medalPill = medal
+        ? `<span title="${medal.name} clue" class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border ${medal.cls} text-[11px] font-black">${medal.label}</span>`
+        : '';
+      return `<div class="border-b border-slate-800/80 px-1 py-4 last:border-0 ${isClassicWin ? 'rounded-lg bg-yellow-900/10' : ''}">
+        <div class="flex flex-wrap items-center gap-2 text-xs">
+          <span class="font-black uppercase tracking-wider text-blue-300">Clue ${n}</span>
+          ${medalPill}
+          <span class="ml-auto text-slate-500">${esc(c.correct)} right / ${esc(c.guesses)} guesses</span>
         </div>
-        <p class="text-xl font-medium mb-3 ${isClassicWin ? 'text-yellow-200' : 'text-white'}">"${esc(c.text)}"</p>
-        <div class="bg-slate-800 p-3 rounded-lg"><p class="text-sm text-slate-400 italic">"${e ? esc(e) : 'No explanation recorded.'}"</p></div>
+        <p class="mt-2 text-lg font-bold leading-snug ${isClassicWin ? 'text-yellow-100' : 'text-white'}">"${esc(c.text)}"</p>
+        <p class="mt-2 text-sm leading-relaxed text-slate-400">${e ? esc(e) : 'No explanation recorded.'}</p>
       </div>`;
     }).join('');
 
     const fmt2 = n => Number(n).toFixed(2);
     const medalSummary = g.format === 'v2'
-      ? `<div class="flex justify-center gap-2 mt-4 flex-wrap">
-          <span class="bg-yellow-900/30 text-yellow-400 border border-yellow-600/30 px-3 py-1 rounded-full text-xs font-bold">🥇 Clue ${g.goldClue} · ${Number(g.goldWinners).toLocaleString()} winners · $${fmt2(g.goldPayout)} each</span>
-          <span class="bg-slate-700/30 text-slate-300 border border-slate-600/30 px-3 py-1 rounded-full text-xs font-bold">🥈 Clue ${g.silverClue} · ${Number(g.silverWinners).toLocaleString()} winners · $${fmt2(g.silverPayout)} each</span>
-          <span class="bg-orange-900/30 text-orange-400 border border-orange-600/30 px-3 py-1 rounded-full text-xs font-bold">🥉 Clue ${g.bronzeClue} · ${Number(g.bronzeWinners).toLocaleString()} winners · $${fmt2(g.bronzePayout)} each</span>
+      ? `<div class="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-3">
+          <div class="rounded-lg border border-yellow-400/25 bg-yellow-950/20 p-3">
+            <div class="text-[10px] font-black uppercase tracking-wider text-yellow-300">Gold · Clue ${g.goldClue}</div>
+            <div class="mt-1 text-sm font-bold text-white">${Number(g.goldWinners).toLocaleString()} winners</div>
+            <div class="text-xs text-slate-400">$${fmt2(g.goldPayout)} each</div>
+          </div>
+          <div class="rounded-lg border border-slate-500/25 bg-slate-800/35 p-3">
+            <div class="text-[10px] font-black uppercase tracking-wider text-slate-300">Silver · Clue ${g.silverClue}</div>
+            <div class="mt-1 text-sm font-bold text-white">${Number(g.silverWinners).toLocaleString()} winners</div>
+            <div class="text-xs text-slate-400">$${fmt2(g.silverPayout)} each</div>
+          </div>
+          <div class="rounded-lg border border-orange-400/25 bg-orange-950/20 p-3">
+            <div class="text-[10px] font-black uppercase tracking-wider text-orange-300">Bronze · Clue ${g.bronzeClue}</div>
+            <div class="mt-1 text-sm font-bold text-white">${Number(g.bronzeWinners).toLocaleString()} winners</div>
+            <div class="text-xs text-slate-400">$${fmt2(g.bronzePayout)} each</div>
+          </div>
         </div>`
-      : `<div class="flex justify-center mt-4">
-          <span class="bg-blue-900/30 text-blue-400 border border-blue-600/30 px-3 py-1 rounded-full text-sm font-bold">Won on Clue ${g.winningClue || g.goldClue} · ${(g.totalWinners).toLocaleString()} winners · ${esc(g.winnerPayout)}</span>
+      : `<div class="mt-5 rounded-lg border border-blue-400/25 bg-blue-950/20 p-3 text-sm">
+          <span class="font-black uppercase tracking-wider text-blue-300">Winning clue ${g.winningClue || g.goldClue}</span>
+          <span class="ml-2 text-slate-200">${(g.totalWinners).toLocaleString()} winners · ${esc(g.winnerPayout)}</span>
         </div>`;
 
     const sameDayGames = this.games.filter(x => x.date === g.date && !this._isStubGame(x));
@@ -2625,49 +2642,65 @@ class App {
     const transcriptTarget = `Round ${roundNumber}`;
     const transcriptButton = !this._isStubGame(g)
       ? `<button type="button" onclick="app.openTranscriptDate('${esc(g.date)}', '${esc(transcriptTarget)}')"
-            class="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-bold text-white hover:bg-blue-500 transition">
+            class="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-400/35 bg-blue-950/40 px-3 py-2 text-sm font-bold text-blue-100 hover:border-blue-300/60 hover:bg-blue-900/55 transition">
             <span class="material-symbols-outlined text-base">article</span>
-            Open Transcript
+            Transcript
           </button>`
       : '';
     const transcriptAction = transcriptButton
-      ? `<div class="mt-5 rounded-lg border border-blue-400/25 bg-blue-950/25 p-4 text-left max-w-xl mx-auto">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <div>
-              <div class="text-xs uppercase tracking-widest text-blue-300 font-bold mb-1">Episode transcript</div>
-              <div class="text-sm text-slate-200">Read the full ${esc(g.date)} transcript, starting at ${esc(transcriptTarget)} for ${esc(g.secretItem)}.</div>
-            </div>
-            ${transcriptButton}
-          </div>
-        </div>`
+      ? transcriptButton
       : '';
 
     document.getElementById('modal-content').innerHTML = `
-      <div class="text-center mb-8">
-        <div class="text-xs text-slate-500 uppercase tracking-widest mb-2">${esc(g.date)}</div>
-        <h2 class="text-4xl font-display font-bold text-white">${esc(g.secretItem)}</h2>
-        <div class="flex justify-center items-center gap-2 mt-4 flex-wrap">
-          <span class="inline-flex items-center gap-1 bg-green-900/30 text-green-400 border border-green-500/30 px-3 py-1 rounded-full text-sm font-bold">$${g.pot.toLocaleString()}</span>
-          <span class="inline-flex items-center gap-1 bg-purple-900/30 text-purple-400 border border-purple-500/30 px-3 py-1 rounded-full text-sm font-bold">${esc(g.host)}</span>
+      <div class="mb-6">
+        <div class="pr-8">
+          <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
+          <h2 class="mt-1 text-3xl font-display font-bold leading-tight text-white">${esc(g.secretItem)}</h2>
+        </div>
+
+        <div class="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
+          <div class="rounded-lg border border-slate-700/70 bg-slate-950/35 p-3">
+            <div class="text-[10px] font-black uppercase tracking-wider text-slate-500">Pot</div>
+            <div class="mt-1 font-bold text-green-300">$${g.pot.toLocaleString()}</div>
+          </div>
+          <div class="rounded-lg border border-slate-700/70 bg-slate-950/35 p-3">
+            <div class="text-[10px] font-black uppercase tracking-wider text-slate-500">Host</div>
+            <div class="mt-1 truncate font-bold text-slate-100">${esc(g.host)}</div>
+          </div>
+          <div class="rounded-lg border border-slate-700/70 bg-slate-950/35 p-3">
+            <div class="text-[10px] font-black uppercase tracking-wider text-slate-500">Paid Winners</div>
+            <div class="mt-1 font-bold text-slate-100">${Number(g.totalWinners || 0).toLocaleString()}</div>
+          </div>
+          <div class="rounded-lg border border-slate-700/70 bg-slate-950/35 p-3">
+            <div class="text-[10px] font-black uppercase tracking-wider text-slate-500">Format</div>
+            <div class="mt-1 font-bold uppercase text-slate-100">${esc(g.format || 'classic')}</div>
+          </div>
         </div>
         ${medalSummary}
-        <div class="mt-4 text-xs text-slate-400 border-t border-slate-700 pt-3">
-          <span class="font-bold text-white">Winners:</span> ${esc((g.winnerNames || 'None listed').toUpperCase())}
+
+        <div class="mt-4 flex flex-wrap items-center gap-2">
+          ${transcriptAction}
+          ${g.winnerNames ? `<div class="min-w-0 flex-1 rounded-lg border border-slate-700/70 bg-slate-950/30 px-3 py-2 text-xs text-slate-400">
+            <span class="font-black uppercase tracking-wider text-slate-500">Winners</span>
+            <span class="ml-2 text-slate-200">${esc(g.winnerNames)}</span>
+          </div>` : ''}
         </div>
-        ${transcriptAction}
-        ${bonus ? `<div id="modal-bonus-section" class="mt-5 rounded-lg border border-pink-400/30 bg-pink-950/20 p-4 text-left max-w-xl mx-auto${focusBonus ? ' ring-2 ring-pink-400/60 shadow-lg shadow-pink-950/40' : ''}">
-          <div class="text-xs uppercase tracking-widest text-pink-300 font-bold mb-1">Special Bonus</div>
-          <div class="flex items-start gap-2">
-            <span class="material-symbols-outlined text-pink-400" style="font-size:20px;line-height:1.4">card_giftcard</span>
-            <div class="text-base font-bold text-pink-200 leading-snug">${esc(bonus.title)}</div>
+        ${bonus ? `<div id="modal-bonus-section" class="mt-4 rounded-lg border border-pink-400/25 bg-pink-950/15 p-3 text-left${focusBonus ? ' ring-2 ring-pink-400/60 shadow-lg shadow-pink-950/40' : ''}">
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined mt-0.5 text-pink-300" style="font-size:20px;line-height:1">card_giftcard</span>
+            <div class="min-w-0">
+              <div class="text-[10px] font-black uppercase tracking-wider text-pink-300">Special Bonus</div>
+              <div class="text-sm font-bold text-pink-100">${esc(bonus.title)}</div>
+              <div class="mt-1 text-sm leading-relaxed text-slate-300">${bonusDesc}</div>
+            </div>
           </div>
-          <div class="mt-2 text-sm text-slate-200 leading-relaxed">${bonusDesc}</div>
         </div>` : ''}
       </div>
-      <div class="bg-slate-900/50 rounded-xl p-2 mb-6 border border-white/5">${cluesHtml}</div>
-      <div class="text-sm text-slate-400 bg-red-900/10 border border-red-500/20 p-4 rounded-lg">
-        <span class="font-bold text-red-400 block mb-1">Common Wrong Guesses:</span> ${esc(g.wrongGuesses || 'N/A')}
-      </div>`;
+      <div class="mb-4 rounded-xl border border-white/5 bg-slate-900/35 px-4 py-2">${cluesHtml}</div>
+      <details class="rounded-lg border border-red-500/15 bg-red-950/10 px-4 py-3 text-sm text-slate-400">
+        <summary class="cursor-pointer text-xs font-black uppercase tracking-wider text-red-300">Common wrong guesses</summary>
+        <div class="mt-2">${esc(g.wrongGuesses || 'N/A')}</div>
+      </details>`;
     if (focusBonus && bonus) {
       setTimeout(() => document.getElementById('modal-bonus-section')?.scrollIntoView({ block: 'center', behavior: 'smooth' }), 0);
     }
