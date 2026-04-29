@@ -8,7 +8,7 @@ Last updated: 2026-04-29
 
 ## Latest Known Implementation Commit
 
-- Current commit - Add v1 winner result badge
+- Current commit - Tighten result screen layout
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -60,6 +60,7 @@ Last updated: 2026-04-29
 - **Details bonus disclosure 2026-04-29**: Special Bonus in the details modal is a native collapsible disclosure with the gift/title in the summary; Common wrong guesses is a plain always-visible block.
 - **Simulated result screens 2026-04-29**: Play-mode end screens now use original generated `assets/result/` artwork for Best Guess Archive gold/silver/bronze medals plus Good Job/Good Try emblems, with a mobile game-style top result screen and archive stats below.
 - **V1 simulated win screen 2026-04-29**: Classic/pre-medal wins use `assets/result/emblem-v1-winner.png`, a wide generated "You're a Winner" marquee with orange-to-purple end-screen background. V2 wins continue to use medal-specific result art.
+- **Result layout polish 2026-04-29**: Simulated end screens use `dvh`, smaller responsive emblem/text sizing, a scroll cue for archive stats, and payout formatting with exactly two cents.
 
 ## Daily Update Workflow
 
