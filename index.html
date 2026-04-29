@@ -2693,26 +2693,13 @@ class App {
 
     const fmt2 = n => Number(n).toFixed(2);
     const medalSummary = g.format === 'v2'
-      ? `<div class="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <div class="rounded-lg border border-yellow-400/25 bg-yellow-950/20 p-3">
-            <div class="text-[10px] font-black uppercase tracking-wider text-yellow-300">Gold · Clue ${g.goldClue}</div>
-            <div class="mt-1 text-sm font-bold text-white">${Number(g.goldWinners).toLocaleString()} winners</div>
-            <div class="text-xs text-slate-400">$${fmt2(g.goldPayout)} each</div>
-          </div>
-          <div class="rounded-lg border border-slate-500/25 bg-slate-800/35 p-3">
-            <div class="text-[10px] font-black uppercase tracking-wider text-slate-300">Silver · Clue ${g.silverClue}</div>
-            <div class="mt-1 text-sm font-bold text-white">${Number(g.silverWinners).toLocaleString()} winners</div>
-            <div class="text-xs text-slate-400">$${fmt2(g.silverPayout)} each</div>
-          </div>
-          <div class="rounded-lg border border-orange-400/25 bg-orange-950/20 p-3">
-            <div class="text-[10px] font-black uppercase tracking-wider text-orange-300">Bronze · Clue ${g.bronzeClue}</div>
-            <div class="mt-1 text-sm font-bold text-white">${Number(g.bronzeWinners).toLocaleString()} winners</div>
-            <div class="text-xs text-slate-400">$${fmt2(g.bronzePayout)} each</div>
-          </div>
+      ? `<div class="mt-4 flex flex-wrap justify-center gap-2">
+          <span class="rounded-full border border-yellow-500/30 bg-yellow-950/25 px-3 py-1 text-xs font-bold text-yellow-300">🥇 Clue ${g.goldClue} · ${Number(g.goldWinners).toLocaleString()} · $${fmt2(g.goldPayout)}</span>
+          <span class="rounded-full border border-slate-500/30 bg-slate-800/35 px-3 py-1 text-xs font-bold text-slate-200">🥈 Clue ${g.silverClue} · ${Number(g.silverWinners).toLocaleString()} · $${fmt2(g.silverPayout)}</span>
+          <span class="rounded-full border border-orange-500/30 bg-orange-950/25 px-3 py-1 text-xs font-bold text-orange-300">🥉 Clue ${g.bronzeClue} · ${Number(g.bronzeWinners).toLocaleString()} · $${fmt2(g.bronzePayout)}</span>
         </div>`
-      : `<div class="mt-5 rounded-lg border border-blue-400/25 bg-blue-950/20 p-3 text-sm">
-          <span class="font-black uppercase tracking-wider text-blue-300">Winning clue ${g.winningClue || g.goldClue}</span>
-          <span class="ml-2 text-slate-200">${(g.totalWinners).toLocaleString()} winners · ${esc(g.winnerPayout)}</span>
+      : `<div class="mt-4 flex justify-center">
+          <span class="rounded-full border border-blue-500/30 bg-blue-950/25 px-3 py-1 text-sm font-bold text-blue-300">Won on Clue ${g.winningClue || g.goldClue} · ${(g.totalWinners).toLocaleString()} winners · ${esc(g.winnerPayout)}</span>
         </div>`;
 
     const sameDayGames = this.games.filter(x => x.date === g.date && !this._isStubGame(x));
@@ -2730,38 +2717,24 @@ class App {
       : '';
 
     document.getElementById('modal-content').innerHTML = `
-      <div class="mb-6">
-        <div class="pr-8">
-          <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
-          <h2 class="mt-1 text-3xl font-display font-bold leading-tight text-white">${esc(g.secretItem)}</h2>
-        </div>
+      <div class="mb-8 text-center">
+        <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
+        <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${esc(g.secretItem)}</h2>
 
-        <div class="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
-          <div class="rounded-lg border border-slate-700/70 bg-slate-950/35 p-3">
-            <div class="text-[10px] font-black uppercase tracking-wider text-slate-500">Pot</div>
-            <div class="mt-1 font-bold text-green-300">$${g.pot.toLocaleString()}</div>
-          </div>
-          <div class="rounded-lg border border-slate-700/70 bg-slate-950/35 p-3">
-            <div class="text-[10px] font-black uppercase tracking-wider text-slate-500">Host</div>
-            <div class="mt-1 truncate font-bold text-slate-100">${esc(g.host)}</div>
-          </div>
-          <div class="rounded-lg border border-slate-700/70 bg-slate-950/35 p-3">
-            <div class="text-[10px] font-black uppercase tracking-wider text-slate-500">Paid Winners</div>
-            <div class="mt-1 font-bold text-slate-100">${Number(g.totalWinners || 0).toLocaleString()}</div>
-          </div>
-          <div class="rounded-lg border border-slate-700/70 bg-slate-950/35 p-3">
-            <div class="text-[10px] font-black uppercase tracking-wider text-slate-500">Format</div>
-            <div class="mt-1 font-bold uppercase text-slate-100">${esc(g.format || 'classic')}</div>
-          </div>
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+          <span class="inline-flex items-center rounded-full border border-green-500/30 bg-green-950/25 px-3 py-1 text-sm font-bold text-green-300">$${g.pot.toLocaleString()}</span>
+          <span class="inline-flex items-center rounded-full border border-blue-400/25 bg-blue-950/20 px-3 py-1 text-sm font-bold text-blue-200">${esc(g.host)}</span>
+          <span class="inline-flex items-center rounded-full border border-slate-600/40 bg-slate-900/45 px-3 py-1 text-sm font-bold text-slate-200">${Number(g.totalWinners || 0).toLocaleString()} winners</span>
+          <span class="inline-flex items-center rounded-full border border-slate-600/40 bg-slate-900/45 px-3 py-1 text-xs font-black uppercase tracking-wider text-slate-300">${esc(g.format || 'classic')}</span>
         </div>
         ${medalSummary}
 
-        <div class="mt-4 flex flex-wrap items-center gap-2">
-          ${transcriptAction}
-          ${g.winnerNames ? `<div class="min-w-0 flex-1 rounded-lg border border-slate-700/70 bg-slate-950/30 px-3 py-2 text-xs text-slate-400">
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+          ${g.winnerNames ? `<div class="text-xs text-slate-400">
             <span class="font-black uppercase tracking-wider text-slate-500">Winners</span>
             <span class="ml-2 text-slate-200">${esc(g.winnerNames)}</span>
           </div>` : ''}
+          ${transcriptAction}
         </div>
         ${bonus ? `<div id="modal-bonus-section" class="mt-4 rounded-lg border border-pink-400/25 bg-pink-950/15 p-3 text-left${focusBonus ? ' ring-2 ring-pink-400/60 shadow-lg shadow-pink-950/40' : ''}">
           <div class="flex items-start gap-3">
