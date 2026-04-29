@@ -25837,5 +25837,271 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, April 28, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "BRUNO MARS",
+      "TAXI"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "BRUNO MARS",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "BIG SINGLES IN DOUBLES",
+          "RED ROCK, BEER BLOCK",
+          "UNDENIABLE OUT-OF-THIS-WORLD TRACK STAR",
+          "NOTED FOR ILLUSIONS OF GOLD AND A STINK IN THE CITY",
+          "OMG! THE CLUES' FIRST LETTERS SPELL HIS FIRST NAME"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "TAXI",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "SHORT-TERM LEASE",
+          "NOW SHARES ITS SHARE OF SHARES",
+          "CONVERTS MILES TO METERS",
+          "OFTEN YELLOW WITH A GREEN TIP",
+          "HAIL FOLLOWED BY FAIR CONDITIONS"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Intro Voice",
+            "text": "Come on, everybody, we're live. Get the party going on time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live! I am your host Hunter March, and I gotta say I love working this job. Most people spend their time figuring out how to make more money. Me, I am just trying to figure out how to give it away."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "As always, we have $15,000 on the line tonight. Each episode has two rounds, each round has one puzzle, and each puzzle has gold, silver, and bronze winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round we load our crystal ball with a secret item. I give five clues, and after each clue you get 20 seconds to submit one best guess for the round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answers on the earliest clue split the gold prize, correct answers on the second earliest clue split silver, and correct answers on the third earliest clue split bronze."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is worth $7,500. Let us load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here is your first clue: BIG SINGLES IN DOUBLES."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses came in including the two-dollar bill and tennis."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: RED ROCK, BEER BLOCK."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included Utah, dice, and Wendy's."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: UNDENIABLE OUT-OF-THIS-WORLD TRACK STAR."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included Sonic and Thomas the Tank Engine."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: NOTED FOR ILLUSIONS OF GOLD AND A STINK IN THE CITY."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One guess was smelly magician, but some people were starting to figure it out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: OMG! THE CLUES' FIRST LETTERS SPELL HIS FIRST NAME."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up. Let us find out what was inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was Bruno Mars."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"OMG! THE CLUES' FIRST LETTERS SPELL HIS FIRST NAME.\" The first letters of each clue are B R U N O. 4,891 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"NOTED FOR ILLUSIONS OF GOLD AND A STINK IN THE CITY.\" Illusions of gold points to \"24K Magic,\" and stink in the city points to \"Uptown Funk.\" 106 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"UNDENIABLE OUT-OF-THIS-WORLD TRACK STAR.\" He is a star on musical tracks, and he is out of this world like the planet Mars. 56 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"RED ROCK, BEER BLOCK.\" Red Rock is Mars, beer is brew, and block is no. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"BIG SINGLES IN DOUBLES.\" A lot of his big hits are duets. 2 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 2 winners at $1,500.00 each. Silver (Clue 2): 1 winner at $2,500.00. Bronze (Clue 3): 56 winners at $35.71 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Marvin Wags and Perfect cloak, who won gold, and congratulations to all silver and bronze winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Fan Appreciation continues with another way to win: everyone who answers correctly on the second puzzle, on any clue, receives a voucher for a K-pop Demon Hunters glass from the Netflix Shop worth $24.95. You only pay for shipping."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round two is worth $7,500, with the same prize pots: $3,000 for gold, $2,500 for silver, and $2,000 for bronze. Let us load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: SHORT-TERM LEASE."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included life and revolving door."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: NOW SHARES ITS SHARE OF SHARES."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included pager and IPO."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: CONVERTS MILES TO METERS."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included ruler and European person."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: OFTEN YELLOW WITH A GREEN TIP."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included sponge, banana, and pencil."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: HAIL FOLLOWED BY FAIR CONDITIONS."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up. Let us find out what was inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was a taxi."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"HAIL FOLLOWED BY FAIR CONDITIONS.\" You hail the taxi and then they start charging a fare. 2,456 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"OFTEN YELLOW WITH A GREEN TIP.\" The classic taxi color is yellow, and the classic color for a cash tip is green. 1,135 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"CONVERTS MILES TO METERS.\" A taxi converts miles driven to a charge on the taxi meter. 203 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"NOW SHARES ITS SHARE OF SHARES.\" A taxi now competes with rideshare apps for its share of the rideshare market. 11 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"SHORT-TERM LEASE.\" You hire a taxi service for usually a short time. 4 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 4 winners at $750.00 each. Silver (Clue 2): 11 winners at $227.00 each. Bronze (Clue 3): 203 winners at $10.00 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Gothic Countess, Ferrell, Cyborg, Mr. and Larry Bird, and to all silver and bronze winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone who picked up the correct answer also earned the K-pop Demon Hunters glass voucher."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for this episode of Best Guess Live. Congratulations to all of our winners, including everyone who picked up the voucher for the K-pop Demon Hunters glass."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you did not grab one tonight, we are doing this all week, so you have three more chances. We're here every weekday at 8 Eastern, 5 Pacific. Come back tomorrow and do not forget to bring your best guess. Good night."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "MOST SUBMITTED WRONG GUESSES: Puzzle 1: TENNIS, USAIN BOLT, MARS, BASEBALL, LAS VEGAS"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Puzzle 2: PENCIL, AIRBNB, UBER, BANANA, TORNADO"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -8,7 +8,7 @@ Last updated: 2026-04-28
 
 ## Latest Known Implementation Commit
 
-- Current commit - Harden YouTube auto-import fallback
+- Current commit - Import Apr 28, 2026 episode
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -23,9 +23,9 @@ Last updated: 2026-04-28
 - **Admin panel removed**: All game/transcript updates are now done by AI agents (Claude/Codex) directly editing the data files and committing. See "Daily Update Workflow" below.
 - **Bonus/promo data migrated**: `bonusMap` moved from hardcoded JS in `index.html` to a `bonus: {title, desc}` field on each game in `games.json`. Rendering code reads `g.bonus` directly. `bonus.desc` may contain safe HTML (`<br>` and `<b>` tags).
 - **Scripts cleaned up**: `scripts/` directory removed entirely; `import_transcripts_from_docx.py`, `admin-panel-archive.js`, and `KindaCharming's Best Guess Live Show Transcripts.docx` are gone. Recover from git history if ever needed.
-- Latest imported episode: Monday, April 27, 2026 with TOOTHPICK and WILLY WONKA. Transcript reformatted to canonical Results layout (1-line-per-clue 5→1 + combined medal summary line).
-- 101 total game days (100 playable + 1 cancelled: Thursday, April 9, 2026).
-- 201 game objects in `data/games.json` (most dates have two rounds).
+- Latest imported episode: Tuesday, April 28, 2026 with BRUNO MARS and TAXI. Fan Appreciation K-pop Demon Hunters glass voucher bonus is attached to both rounds; v2 `totalWinners` reflects paid medal winners (`goldWinners + silverWinners + bronzeWinners`).
+- 102 total game days (101 playable + 1 cancelled: Thursday, April 9, 2026).
+- 203 game objects in `data/games.json` (most dates have two rounds).
 - **Transcripts reimported** from `Best_Guess_Live_Clean_Readable_Transcripts.docx` (uploaded to repo root). All 100 transcripts use games.json as canonical source for rounds/clues/host/pot/format. Section tags now read "Round 1 Results" / "Round 2 Results" (previously "Reveal").
 - **Jan 1-14 transcripts fixed**: These episodes had no Heading2 section markers in the docx. A heuristic state machine now splits them into 6 sections using phrase triggers ("crystal ball reveals", "correct answer was", etc.) and space-normalized secret-item matching. All 10 episodes are now fully populated.
 - **Mobile transcript layout fixed**: episode list max-height reduced from 32rem to 9rem on mobile; tapping an episode smooth-scrolls to the transcript detail panel. Desktop still uses 32rem two-column layout.

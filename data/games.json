@@ -10898,5 +10898,117 @@
       "title": "Netflix Shop K-pop Demon Hunters Glass Voucher",
       "desc": "All week, everyone who answers correctly on the second puzzle receives a voucher for a K-pop Demon Hunters glass from the Netflix Shop, valued at $24.95. You qualify by submitting a correct answer by Clue 5 in Round 2, regardless of cash winnings."
     }
+  },
+  {
+    "date": "Tuesday, April 28, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BRUNO MARS",
+    "clues": [
+      {
+        "text": "BIG SINGLES IN DOUBLES",
+        "correct": "2",
+        "guesses": "6,730",
+        "explanation": "A lot of his big hits are duets."
+      },
+      {
+        "text": "RED ROCK, BEER BLOCK",
+        "correct": "1",
+        "guesses": "3,388",
+        "explanation": "Red Rock is Mars, beer is brew, and block is no."
+      },
+      {
+        "text": "UNDENIABLE OUT-OF-THIS-WORLD TRACK STAR",
+        "correct": "56",
+        "guesses": "6,198",
+        "explanation": "He is a star on musical tracks, and he is out of this world like the planet Mars."
+      },
+      {
+        "text": "NOTED FOR ILLUSIONS OF GOLD AND A STINK IN THE CITY",
+        "correct": "106",
+        "guesses": "4,576",
+        "explanation": "Illusions of gold points to \"24K Magic,\" and stink in the city points to \"Uptown Funk.\""
+      },
+      {
+        "text": "OMG! THE CLUES' FIRST LETTERS SPELL HIS FIRST NAME",
+        "correct": "4,891",
+        "guesses": "7,096",
+        "explanation": "The first letters of each clue are B R U N O."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 2,
+    "silverWinners": 1,
+    "bronzeWinners": 56,
+    "totalWinners": 59,
+    "goldPayout": 1500,
+    "silverPayout": 2500,
+    "bronzePayout": 35.71,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Marvin Wags, Perfect cloak",
+    "wrongGuesses": "TENNIS, USAIN BOLT, MARS, BASEBALL, LAS VEGAS",
+    "bonus": {
+      "title": "Netflix Shop K-pop Demon Hunters Glass Voucher",
+      "desc": "Everyone who answers correctly on the second puzzle, on any clue, receives a voucher for a K-pop Demon Hunters glass from the Netflix Shop, valued at $24.95. The winner only needs to pay for shipping."
+    }
+  },
+  {
+    "date": "Tuesday, April 28, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TAXI",
+    "clues": [
+      {
+        "text": "SHORT-TERM LEASE",
+        "correct": "4",
+        "guesses": "3,457",
+        "explanation": "You hire a taxi service for usually a short time."
+      },
+      {
+        "text": "NOW SHARES ITS SHARE OF SHARES",
+        "correct": "11",
+        "guesses": "7,282",
+        "explanation": "A taxi now competes with rideshare apps for its share of the rideshare market."
+      },
+      {
+        "text": "CONVERTS MILES TO METERS",
+        "correct": "203",
+        "guesses": "5,853",
+        "explanation": "A taxi converts miles driven to a charge on the taxi meter."
+      },
+      {
+        "text": "OFTEN YELLOW WITH A GREEN TIP",
+        "correct": "1,135",
+        "guesses": "5,327",
+        "explanation": "The classic taxi color is yellow, and the classic color for a cash tip is green."
+      },
+      {
+        "text": "HAIL FOLLOWED BY FAIR CONDITIONS",
+        "correct": "2,456",
+        "guesses": "7,822",
+        "explanation": "You hail the taxi and then they start charging a fare."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 4,
+    "silverWinners": 11,
+    "bronzeWinners": 203,
+    "totalWinners": 218,
+    "goldPayout": 750,
+    "silverPayout": 227,
+    "bronzePayout": 10,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Gothic Countess, Ferrell, Cyborg, Mr. and Larry Bird",
+    "wrongGuesses": "PENCIL, AIRBNB, UBER, BANANA, TORNADO",
+    "bonus": {
+      "title": "Netflix Shop K-pop Demon Hunters Glass Voucher",
+      "desc": "Everyone who answers correctly on the second puzzle, on any clue, receives a voucher for a K-pop Demon Hunters glass from the Netflix Shop, valued at $24.95. The winner only needs to pay for shipping."
+    }
   }
 ]
