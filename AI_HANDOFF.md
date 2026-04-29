@@ -8,7 +8,7 @@ Last updated: 2026-04-29
 
 ## Latest Known Implementation Commit
 
-- Current commit - Fix wrong-answer result screen
+- Current commit - Center result answer pill
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -62,6 +62,7 @@ Last updated: 2026-04-29
 - **V1 simulated win screen 2026-04-29**: Classic/pre-medal wins use `assets/result/emblem-v1-winner.png`, a wide generated "You're a Winner" marquee with orange-to-purple end-screen background. V2 wins continue to use medal-specific result art.
 - **Result layout polish 2026-04-29**: Simulated end screens use `dvh`, smaller responsive emblem/text sizing, a scroll cue for archive stats, and payout formatting with exactly two cents.
 - **Wrong-answer result screen 2026-04-29**: Misses intentionally use a blue stage background, CSS `GOOD TRY!` sign, red-X guessed-answer pill, separate Correct Answer block, and no payout pill. Do not reuse silver/medal art for this state.
+- **Result answer/result art cleanup 2026-04-29**: Result screens no longer show the player-count pill. The guessed/answer pill uses explicit green-check/red-X icon classes, payout pills are smaller with more spacing, and generated result PNGs were rematted to remove faint rectangular background boxes.
 
 ## Daily Update Workflow
 
