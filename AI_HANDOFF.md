@@ -8,7 +8,7 @@ Last updated: 2026-04-29
 
 ## Latest Known Implementation Commit
 
-- Current commit - Align result screen copy
+- Current commit - Match Good Try result text
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -65,6 +65,7 @@ Last updated: 2026-04-29
 - **Result answer/result art cleanup 2026-04-29**: Result screens no longer show the player-count pill. The guessed/answer pill uses explicit green-check/red-X icon classes, payout pills are smaller with more spacing, and generated result PNGs were rematted to remove faint rectangular background boxes.
 - **Result emblem positioning 2026-04-29**: V1 winner art is nudged slightly left; Good Job and Good Try states have larger/lower emblem sizing so they do not inherit the smaller medal scale.
 - **Result copy alignment 2026-04-29**: Result headline/subhead copy follows screenshot text by state. Gold says "were one of the fastest players"; Good Job says `The main primary correct answer is "ANSWER".`; wrong answers show a separate Correct Answer block. Payout pill is only shown for actual winning states.
+- **Good Try text 2026-04-29**: Wrong-answer result text mirrors the screenshot copy: `NOT QUITE`, `That wasn’t the correct answer, but every attempt makes you better.`, and literal `CORRECT ANSWER:` above the uppercase answer.
 
 ## Daily Update Workflow
 

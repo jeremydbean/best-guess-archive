@@ -2716,7 +2716,7 @@ class App {
       subhead = `The main primary correct answer is "${resultAnswerText}".`;
     } else if (won === false) {
       headline = 'NOT QUITE!';
-      subhead = "That wasn't the correct answer, but every attempt makes you better.";
+      subhead = "That wasn’t the correct answer, but every attempt makes you better.";
     }
     document.getElementById('result-title').innerText = headline;
     document.getElementById('result-message').innerText = subhead;
@@ -2724,7 +2724,7 @@ class App {
     if (correctAnswerEl) {
       correctAnswerEl.style.display = won === false ? 'block' : 'none';
       correctAnswerEl.innerHTML = won === false
-        ? `<span class="bgl-correct-answer-label">Correct Answer:</span><span class="bgl-correct-answer-value">${esc(resultAnswerText)}</span>`
+        ? `<span class="bgl-correct-answer-label">CORRECT ANSWER:</span><span class="bgl-correct-answer-value">${esc(resultAnswerText)}</span>`
         : '';
     }
     const payoutEl = document.getElementById('result-payout');
