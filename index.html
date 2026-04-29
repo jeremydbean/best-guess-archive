@@ -2600,7 +2600,7 @@ class App {
                   : isClassicWin ? { label: 'W', name: 'Winner', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
                   : null;
       const medalPill = medal
-        ? `<span title="${medal.name} clue" class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border ${medal.cls} text-[11px] font-black">${medal.label}</span>`
+        ? `<span title="${medal.name} clue" class="text-base leading-none">${medal.label}</span>`
         : '';
       return `<div class="border-b border-slate-800/80 px-1 py-4 last:border-0 ${isClassicWin ? 'rounded-lg bg-yellow-900/10' : ''}">
         <div class="flex flex-wrap items-center gap-2 text-xs">
