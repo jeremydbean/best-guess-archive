@@ -2712,10 +2712,6 @@ class App {
             Transcript
           </button>`
       : '';
-    const transcriptAction = transcriptButton
-      ? transcriptButton
-      : '';
-
     document.getElementById('modal-content').innerHTML = `
       <div class="mb-8 text-center">
         <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
@@ -2734,7 +2730,6 @@ class App {
             <span class="font-black uppercase tracking-wider text-slate-500">Winners</span>
             <span class="ml-2 text-slate-200">${esc(g.winnerNames)}</span>
           </div>` : ''}
-          ${transcriptAction}
         </div>
         ${bonus ? `<div id="modal-bonus-section" class="mt-4 rounded-lg border border-pink-400/25 bg-pink-950/15 p-3 text-left${focusBonus ? ' ring-2 ring-pink-400/60 shadow-lg shadow-pink-950/40' : ''}">
           <div class="flex items-start gap-3">
@@ -2748,6 +2743,7 @@ class App {
         </div>` : ''}
       </div>
       <div class="mb-4 rounded-xl border border-white/5 bg-slate-900/35 px-4 py-2">${cluesHtml}</div>
+      ${transcriptButton ? `<div class="mb-4 flex justify-center">${transcriptButton}</div>` : ''}
       <details class="rounded-lg border border-red-500/15 bg-red-950/10 px-4 py-3 text-sm text-slate-400">
         <summary class="cursor-pointer text-xs font-black uppercase tracking-wider text-red-300">Common wrong guesses</summary>
         <div class="mt-2">${esc(g.wrongGuesses || 'N/A')}</div>
