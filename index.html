@@ -2594,9 +2594,9 @@ class App {
       const isSilver = g.format === 'v2' && n === g.silverClue;
       const isBronze = g.format === 'v2' && n === g.bronzeClue;
       const isClassicWin = g.format !== 'v2' && n === Number(g.winningClue || g.goldClue);
-      const medal = isGold ? { label: 'G', name: 'Gold', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
-                  : isSilver ? { label: 'S', name: 'Silver', cls: 'border-slate-400/45 bg-slate-700/45 text-slate-100' }
-                  : isBronze ? { label: 'B', name: 'Bronze', cls: 'border-orange-400/50 bg-orange-900/35 text-orange-200' }
+      const medal = isGold ? { label: '🥇', name: 'Gold', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
+                  : isSilver ? { label: '🥈', name: 'Silver', cls: 'border-slate-400/45 bg-slate-700/45 text-slate-100' }
+                  : isBronze ? { label: '🥉', name: 'Bronze', cls: 'border-orange-400/50 bg-orange-900/35 text-orange-200' }
                   : isClassicWin ? { label: 'W', name: 'Winner', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
                   : null;
       const medalPill = medal
