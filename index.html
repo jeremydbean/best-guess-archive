@@ -2693,13 +2693,13 @@ class App {
 
     const fmt2 = n => Number(n).toFixed(2);
     const medalSummary = g.format === 'v2'
-      ? `<div class="mt-4 flex flex-wrap justify-center gap-2">
-          <span class="rounded-full border border-yellow-500/30 bg-yellow-950/25 px-3 py-1 text-xs font-bold text-yellow-300">🥇 Clue ${g.goldClue} · ${Number(g.goldWinners).toLocaleString()} · $${fmt2(g.goldPayout)}</span>
-          <span class="rounded-full border border-slate-500/30 bg-slate-800/35 px-3 py-1 text-xs font-bold text-slate-200">🥈 Clue ${g.silverClue} · ${Number(g.silverWinners).toLocaleString()} · $${fmt2(g.silverPayout)}</span>
-          <span class="rounded-full border border-orange-500/30 bg-orange-950/25 px-3 py-1 text-xs font-bold text-orange-300">🥉 Clue ${g.bronzeClue} · ${Number(g.bronzeWinners).toLocaleString()} · $${fmt2(g.bronzePayout)}</span>
+      ? `<div class="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs font-bold">
+          <span class="text-yellow-300">🥇 Clue ${g.goldClue} · ${Number(g.goldWinners).toLocaleString()} · $${fmt2(g.goldPayout)}</span>
+          <span class="text-slate-200">🥈 Clue ${g.silverClue} · ${Number(g.silverWinners).toLocaleString()} · $${fmt2(g.silverPayout)}</span>
+          <span class="text-orange-300">🥉 Clue ${g.bronzeClue} · ${Number(g.bronzeWinners).toLocaleString()} · $${fmt2(g.bronzePayout)}</span>
         </div>`
       : `<div class="mt-4 flex justify-center">
-          <span class="rounded-full border border-blue-500/30 bg-blue-950/25 px-3 py-1 text-sm font-bold text-blue-300">Won on Clue ${g.winningClue || g.goldClue} · ${(g.totalWinners).toLocaleString()} winners · ${esc(g.winnerPayout)}</span>
+          <span class="text-sm font-bold text-blue-300">Won on Clue ${g.winningClue || g.goldClue} · ${(g.totalWinners).toLocaleString()} winners · ${esc(g.winnerPayout)}</span>
         </div>`;
 
     const sameDayGames = this.games.filter(x => x.date === g.date && !this._isStubGame(x));
@@ -2721,11 +2721,11 @@ class App {
         <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
         <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${esc(g.secretItem)}</h2>
 
-        <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
-          <span class="inline-flex items-center rounded-full border border-green-500/30 bg-green-950/25 px-3 py-1 text-sm font-bold text-green-300">$${g.pot.toLocaleString()}</span>
-          <span class="inline-flex items-center rounded-full border border-blue-400/25 bg-blue-950/20 px-3 py-1 text-sm font-bold text-blue-200">${esc(g.host)}</span>
-          <span class="inline-flex items-center rounded-full border border-slate-600/40 bg-slate-900/45 px-3 py-1 text-sm font-bold text-slate-200">${Number(g.totalWinners || 0).toLocaleString()} winners</span>
-          <span class="inline-flex items-center rounded-full border border-slate-600/40 bg-slate-900/45 px-3 py-1 text-xs font-black uppercase tracking-wider text-slate-300">${esc(g.format || 'classic')}</span>
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm">
+          <span class="font-bold text-green-300">$${g.pot.toLocaleString()}</span>
+          <span class="font-bold text-blue-200">${esc(g.host)}</span>
+          <span class="font-bold text-slate-200">${Number(g.totalWinners || 0).toLocaleString()} winners</span>
+          <span class="text-xs font-black uppercase tracking-wider text-slate-400">${esc(g.format || 'classic')}</span>
         </div>
         ${medalSummary}
 
