@@ -2680,14 +2680,16 @@ class App {
       const medalPill = medal
         ? `<span title="${medal.name} clue" class="text-base leading-none">${medal.label}</span>`
         : '';
-      return `<div class="border-b border-slate-800/80 px-1 py-4 last:border-0 ${isClassicWin ? 'rounded-lg bg-yellow-900/10' : ''}">
-        <div class="flex flex-wrap items-center gap-2 text-xs">
-          <span class="font-black uppercase tracking-wider text-blue-300">Clue ${n}</span>
-          ${medalPill}
-          <span class="ml-auto text-slate-500">${esc(c.correct)} right / ${esc(c.guesses)} guesses</span>
+      return `<div class="border-b border-slate-800/80 px-2 py-6 sm:px-3 last:border-0 ${isClassicWin ? 'rounded-lg bg-yellow-900/10' : ''}">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
+          <span class="inline-flex items-center gap-2">
+            <span class="font-black uppercase tracking-wider text-blue-300">Clue ${n}</span>
+            ${medalPill}
+          </span>
+          <span class="text-slate-500 sm:ml-auto">${esc(c.correct)} right / ${esc(c.guesses)} guesses</span>
         </div>
-        <p class="mt-2 text-lg font-bold leading-snug ${isClassicWin ? 'text-yellow-100' : 'text-white'}">"${esc(c.text)}"</p>
-        <p class="mt-2 text-sm leading-relaxed text-slate-400">${e ? esc(e) : 'No explanation recorded.'}</p>
+        <p class="mt-4 text-lg font-bold leading-relaxed ${isClassicWin ? 'text-yellow-100' : 'text-white'}">"${esc(c.text)}"</p>
+        <p class="mt-3 text-sm leading-7 text-slate-400">${e ? esc(e) : 'No explanation recorded.'}</p>
       </div>`;
     }).join('');
 
@@ -2742,7 +2744,7 @@ class App {
           </div>
         </div>` : ''}
       </div>
-      <div class="mb-4 rounded-xl border border-white/5 bg-slate-900/35 px-4 py-2">${cluesHtml}</div>
+      <div class="mb-5 rounded-xl border border-white/5 bg-slate-900/35 px-4 py-3 sm:px-5">${cluesHtml}</div>
       ${transcriptButton ? `<div class="mb-4 flex justify-center">${transcriptButton}</div>` : ''}
       <details class="rounded-lg border border-red-500/15 bg-red-950/10 px-4 py-3 text-sm text-slate-400">
         <summary class="cursor-pointer text-xs font-black uppercase tracking-wider text-red-300">Common wrong guesses</summary>

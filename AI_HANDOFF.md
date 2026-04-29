@@ -8,7 +8,7 @@ Last updated: 2026-04-29
 
 ## Latest Known Implementation Commit
 
-- Current commit - Loosen details header spacing
+- Current commit - Add clue detail breathing room
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -55,6 +55,7 @@ Last updated: 2026-04-29
 - **Database details styling 2026-04-29**: Rolled back the box-heavy details modal header. It now uses centered title text, compact metadata chips, and lightweight medal summary pills closer to the original modal style.
 - **Details transcript action 2026-04-29**: The details modal transcript link is intentionally a quiet text-size action placed below the clue explanations so it does not crowd the winners line.
 - **Details header spacing 2026-04-29**: The pot/host/winners/format row and medal payout row use wider wrap gaps so the compact header stays readable without reintroducing boxed stat cards.
+- **Details clue spacing 2026-04-29**: Clue rows in the database details modal use larger internal padding and bigger vertical gaps between clue number/counts, clue text, and host explanation. Keep future modal edits generous with padding.
 
 ## Daily Update Workflow
 
