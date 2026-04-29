@@ -8,7 +8,7 @@ Last updated: 2026-04-29
 
 ## Latest Known Implementation Commit
 
-- Current commit - Optically center result emblems
+- Current commit - Align result screen copy
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
@@ -64,6 +64,7 @@ Last updated: 2026-04-29
 - **Wrong-answer result screen 2026-04-29**: Misses intentionally use a blue stage background, CSS `GOOD TRY!` sign, red-X guessed-answer pill, separate Correct Answer block, and no payout pill. Do not reuse silver/medal art for this state.
 - **Result answer/result art cleanup 2026-04-29**: Result screens no longer show the player-count pill. The guessed/answer pill uses explicit green-check/red-X icon classes, payout pills are smaller with more spacing, and generated result PNGs were rematted to remove faint rectangular background boxes.
 - **Result emblem positioning 2026-04-29**: V1 winner art is nudged slightly left; Good Job and Good Try states have larger/lower emblem sizing so they do not inherit the smaller medal scale.
+- **Result copy alignment 2026-04-29**: Result headline/subhead copy follows screenshot text by state. Gold says "were one of the fastest players"; Good Job says `The main primary correct answer is "ANSWER".`; wrong answers show a separate Correct Answer block. Payout pill is only shown for actual winning states.
 
 ## Daily Update Workflow
 

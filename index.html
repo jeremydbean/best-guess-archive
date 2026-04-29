@@ -2657,10 +2657,11 @@ class App {
     const isClose = won === 'close';
     const esc = (v) => this._escapeHtml(v);
     const g = this.currentGame;
+    const resultAnswerText = String(g.secretItem || '').toUpperCase();
     const mood = won === true ? (medal || 'v1win') : isClose ? 'close' : 'wrong';
     resultEl.className = `bgl-result-screen fade-in result-${mood}`;
     const guessedAnswer = this.lastGuess && this.lastGuess.trim() ? this.lastGuess.trim() : '(none)';
-    document.getElementById('result-answer').innerText = won === false ? guessedAnswer : g.secretItem;
+    document.getElementById('result-answer').innerText = won === false ? guessedAnswer.toUpperCase() : resultAnswerText;
     const answerIcon = document.getElementById('result-answer-icon');
     answerIcon.innerText = won === false ? 'close' : 'check';
     answerIcon.className = `material-symbols-outlined bgl-answer-icon ${won === false ? 'is-wrong' : 'is-right'}`;
@@ -2703,7 +2704,7 @@ class App {
       subhead = 'You answered correctly and were one of the fastest players!';
     } else if (won === true && medal === 'gold') {
       headline = 'CONGRATULATIONS!';
-      subhead = 'Gold! You answered correctly and took the top spot!';
+      subhead = 'Gold! You answered correctly and were one of the fastest players!';
     } else if (won === true && medal === 'silver') {
       headline = 'GREAT JOB!';
       subhead = 'Silver! You answered correctly and just missed the top spot!';
@@ -2712,7 +2713,7 @@ class App {
       subhead = 'Bronze! You answered correctly and made it onto the podium!';
     } else if (isClose) {
       headline = 'YOU WERE RIGHT!';
-      subhead = `The main primary correct answer is "${g.secretItem}".`;
+      subhead = `The main primary correct answer is "${resultAnswerText}".`;
     } else if (won === false) {
       headline = 'NOT QUITE!';
       subhead = "That wasn't the correct answer, but every attempt makes you better.";
@@ -2723,12 +2724,12 @@ class App {
     if (correctAnswerEl) {
       correctAnswerEl.style.display = won === false ? 'block' : 'none';
       correctAnswerEl.innerHTML = won === false
-        ? `<span class="bgl-correct-answer-label">Correct Answer:</span><span class="bgl-correct-answer-value">${esc(g.secretItem)}</span>`
+        ? `<span class="bgl-correct-answer-label">Correct Answer:</span><span class="bgl-correct-answer-value">${esc(resultAnswerText)}</span>`
         : '';
     }
     const payoutEl = document.getElementById('result-payout');
     payoutEl.innerText = `$${Number(amount || 0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}`;
-    payoutEl.style.display = won === false ? 'none' : 'inline-flex';
+    payoutEl.style.display = won === true ? 'inline-flex' : 'none';
     document.getElementById('result-archive-message').innerHTML = esc(message);
 
     const fmt = s => Number(s).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
