@@ -2733,23 +2733,27 @@ class App {
             <span class="ml-2 text-slate-200">${esc(g.winnerNames)}</span>
           </div>` : ''}
         </div>
-        ${bonus ? `<div id="modal-bonus-section" class="mt-4 rounded-lg border border-pink-400/25 bg-pink-950/15 p-3 text-left${focusBonus ? ' ring-2 ring-pink-400/60 shadow-lg shadow-pink-950/40' : ''}">
-          <div class="flex items-start gap-3">
-            <span class="material-symbols-outlined mt-0.5 text-pink-300" style="font-size:20px;line-height:1">card_giftcard</span>
-            <div class="min-w-0">
-              <div class="text-[10px] font-black uppercase tracking-wider text-pink-300">Special Bonus</div>
-              <div class="text-sm font-bold text-pink-100">${esc(bonus.title)}</div>
-              <div class="mt-1 text-sm leading-relaxed text-slate-300">${bonusDesc}</div>
-            </div>
+        ${bonus ? `<details id="modal-bonus-section" ${focusBonus ? 'open' : ''} class="mt-4 rounded-lg border border-pink-400/25 bg-pink-950/15 p-3 text-left${focusBonus ? ' ring-2 ring-pink-400/60 shadow-lg shadow-pink-950/40' : ''}">
+          <summary class="cursor-pointer list-inside text-pink-100">
+            <span class="inline-flex items-center gap-3 align-middle">
+              <span class="material-symbols-outlined text-pink-300" style="font-size:20px;line-height:1">card_giftcard</span>
+              <span class="min-w-0">
+                <span class="block text-[10px] font-black uppercase tracking-wider text-pink-300">Special Bonus</span>
+                <span class="block text-sm font-bold text-pink-100">${esc(bonus.title)}</span>
+              </span>
+            </span>
+          </summary>
+          <div class="mt-3 pl-7 text-sm leading-relaxed text-slate-300">
+            ${bonusDesc}
           </div>
-        </div>` : ''}
+        </details>` : ''}
       </div>
       <div class="mb-5 rounded-xl border border-white/5 bg-slate-900/35 px-4 py-3 sm:px-5">${cluesHtml}</div>
       ${transcriptButton ? `<div class="mb-4 flex justify-center">${transcriptButton}</div>` : ''}
-      <details class="rounded-lg border border-red-500/15 bg-red-950/10 px-4 py-3 text-sm text-slate-400">
-        <summary class="cursor-pointer text-xs font-black uppercase tracking-wider text-red-300">Common wrong guesses</summary>
+      <div class="rounded-lg border border-red-500/15 bg-red-950/10 px-4 py-3 text-sm text-slate-400">
+        <div class="text-xs font-black uppercase tracking-wider text-red-300">Common wrong guesses</div>
         <div class="mt-2">${esc(g.wrongGuesses || 'N/A')}</div>
-      </details>`;
+      </div>`;
     if (focusBonus && bonus) {
       setTimeout(() => document.getElementById('modal-bonus-section')?.scrollIntoView({ block: 'center', behavior: 'smooth' }), 0);
     }
