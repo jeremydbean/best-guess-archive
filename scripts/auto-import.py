@@ -493,6 +493,15 @@ def run(cmd: list[str]) -> subprocess.CompletedProcess:
     return subprocess.run(resolved, capture_output=True, text=True, shell=False)
 
 
+def restore_data_files() -> subprocess.CompletedProcess:
+    return subprocess.run(
+        ["git", "checkout", "--", "data/games.json", "data/games-meta.json", "data/transcripts.json"],
+        capture_output=True,
+        text=True,
+        shell=False,
+    )
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--video-id", help="Specific YouTube video ID to import")
@@ -615,7 +624,9 @@ def main():
     if result.returncode != 0:
         print(result.stderr)
         print("Audit failed — reverting data/ changes.")
-        subprocess.run("git checkout data/", shell=True)
+        restore_result = restore_data_files()
+        if restore_result.returncode != 0:
+            print(restore_result.stderr)
         sys.exit(1)
 
     print("All imports complete.")
