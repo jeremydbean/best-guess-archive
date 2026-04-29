@@ -139,9 +139,9 @@
     --result-bottom: #071026;
   }
   .bgl-result-screen.result-wrong {
-    --result-top: #3e5267;
-    --result-mid: #1f2d3b;
-    --result-bottom: #100b18;
+    --result-top: #32b8ff;
+    --result-mid: #0c4baa;
+    --result-bottom: #030a1e;
   }
   .bgl-result-topbar,
   .bgl-result-content,
@@ -237,8 +237,12 @@
     width: min(13rem, 48vw);
   }
   .result-wrong .bgl-result-medallion {
-    background:
-      radial-gradient(circle at 50% 25%, rgba(255,255,255,0.76), rgba(96,105,120,0.64) 32%, rgba(31,41,55,0.98) 78%);
+    width: min(16rem, 62vw);
+    aspect-ratio: auto;
+    margin-top: clamp(2rem, 7vh, 3.5rem);
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
   .bgl-logo-text {
     font-family: 'Barlow Condensed', sans-serif;
@@ -264,6 +268,32 @@
     font-size: 0.43em;
     letter-spacing: 0.16em;
   }
+  .result-wrong .bgl-logo-text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    font-family: Inter, sans-serif;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: 0;
+  }
+  .bgl-good-text {
+    color: #e7edf4;
+    font-size: clamp(3.6rem, 14vw, 6rem);
+    text-shadow: 0 5px 0 rgba(7,22,46,0.34), 0 12px 22px rgba(0,0,0,0.3);
+  }
+  .bgl-try-panel {
+    display: inline-block;
+    margin-top: -0.15rem;
+    border: 2px solid rgba(221,241,255,0.8);
+    border-radius: 0.42rem;
+    background: linear-gradient(180deg, #49d8ff 0%, #138dff 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), 0 8px 18px rgba(0,0,0,0.28);
+    color: #f8fbff;
+    font-size: clamp(2.45rem, 10vw, 4.15rem);
+    padding: 0.18rem 1rem 0.35rem;
+  }
   .bgl-answer-pill {
     display: inline-flex;
     align-items: center;
@@ -285,6 +315,10 @@
   .result-close .bgl-answer-pill {
     background: #f8fafc;
     color: #166b4a;
+  }
+  .result-wrong .bgl-answer-pill {
+    background: #f8fafc;
+    color: #ef426f;
   }
   .bgl-payout-pill {
     display: inline-flex;
@@ -312,12 +346,36 @@
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.56), 0 14px 34px rgba(16,92,255,0.34);
   }
   #result-title {
-    font-size: clamp(2rem, 7vw, 3rem);
+    font-family: Inter, sans-serif;
+    font-size: clamp(1.7rem, 5.7vw, 2.65rem);
+    font-weight: 900;
     line-height: 1.02;
+    letter-spacing: 0;
   }
   #result-message {
-    font-size: clamp(1.1rem, 4.2vw, 1.55rem);
+    font-family: Inter, sans-serif;
+    font-size: clamp(1rem, 3.7vw, 1.42rem);
     line-height: 1.45;
+  }
+  .bgl-correct-answer {
+    display: none;
+    margin-top: 1.75rem;
+    font-family: Inter, sans-serif;
+    color: #fff;
+  }
+  .bgl-correct-answer-label {
+    display: block;
+    font-size: clamp(0.95rem, 3.4vw, 1.25rem);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .bgl-correct-answer-value {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: clamp(2rem, 8vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.08;
+    text-transform: uppercase;
   }
   .bgl-scroll-cue {
     color: rgba(226,232,240,0.72);
@@ -846,6 +904,7 @@ document.addEventListener('focusout', function(e) {
       </div>
       <h2 class="mt-6 font-display font-bold uppercase tracking-wide text-white" id="result-title"></h2>
       <p class="mt-3 max-w-xl text-white" id="result-message"></p>
+      <div class="bgl-correct-answer" id="result-correct-answer"></div>
       <div class="bgl-payout-pill mt-8" id="result-payout">$0.00</div>
       <button class="bgl-continue-button mt-10 text-xl font-medium text-white" onclick="app.startRandomGame()">Continue</button>
       <div class="bgl-scroll-cue mt-4">Scroll for archive stats</div>
@@ -2595,7 +2654,8 @@ class App {
       sum + (parseInt(String(c.guesses || '0').replace(/[^0-9]/g, ''), 10) || 0), 0
     );
     document.getElementById('result-player-count').innerText = totalGuessesForRound.toLocaleString();
-    document.getElementById('result-answer').innerText = g.secretItem;
+    const guessedAnswer = this.lastGuess && this.lastGuess.trim() ? this.lastGuess.trim() : '(none)';
+    document.getElementById('result-answer').innerText = won === false ? guessedAnswer : g.secretItem;
     const answerIcon = document.getElementById('result-answer-icon');
     answerIcon.innerText = won === false ? 'close' : 'check';
     answerIcon.className = `material-symbols-outlined rounded-full p-0.5 text-sm text-white ${won === false ? 'bg-red-500/80' : 'bg-slate-500/80'}`;
@@ -2608,8 +2668,7 @@ class App {
       silver: 'assets/result/medal-silver.png',
       bronze: 'assets/result/medal-bronze.png',
       v1win: 'assets/result/emblem-v1-winner.png',
-      close: 'assets/result/emblem-good-job.png',
-      wrong: 'assets/result/emblem-good-try.png'
+      close: 'assets/result/emblem-good-job.png'
     };
     const emblemSrc = emblemMap[mood] || '';
     if (emblemEl && medallionEl) {
@@ -2629,7 +2688,7 @@ class App {
     } else if (isClose) {
       iconEl.innerHTML = '<span>GOOD</span><br><span>JOB!</span>';
     } else {
-      iconEl.innerHTML = '<span>BEST</span><br><span>GUESS</span><span class="archive">ARCHIVE</span>';
+      iconEl.innerHTML = '<span class="bgl-good-text">GOOD</span><span class="bgl-try-panel">TRY!</span>';
     }
 
     let headline = 'WELL DONE!';
@@ -2651,11 +2710,20 @@ class App {
       subhead = `The main primary correct answer is "${g.secretItem}".`;
     } else if (won === false) {
       headline = 'NOT QUITE!';
-      subhead = `The main primary correct answer is "${g.secretItem}".`;
+      subhead = "That wasn't the correct answer, but every attempt makes you better.";
     }
     document.getElementById('result-title').innerText = headline;
     document.getElementById('result-message').innerText = subhead;
-    document.getElementById('result-payout').innerText = `$${Number(amount || 0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}`;
+    const correctAnswerEl = document.getElementById('result-correct-answer');
+    if (correctAnswerEl) {
+      correctAnswerEl.style.display = won === false ? 'block' : 'none';
+      correctAnswerEl.innerHTML = won === false
+        ? `<span class="bgl-correct-answer-label">Correct Answer:</span><span class="bgl-correct-answer-value">${esc(g.secretItem)}</span>`
+        : '';
+    }
+    const payoutEl = document.getElementById('result-payout');
+    payoutEl.innerText = `$${Number(amount || 0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}`;
+    payoutEl.style.display = won === false ? 'none' : 'inline-flex';
     document.getElementById('result-archive-message').innerHTML = esc(message);
 
     const fmt = s => Number(s).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
