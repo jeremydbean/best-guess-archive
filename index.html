@@ -184,6 +184,7 @@
   .result-v1win .bgl-result-medallion.has-image {
     width: min(29rem, 88vw);
     margin-top: clamp(2rem, 7vh, 4rem);
+    transform: translateX(-1.4%);
   }
   .bgl-result-emblem {
     display: none;
@@ -229,15 +230,18 @@
     color: #f8fafc;
   }
   .result-close .bgl-result-medallion.has-image {
-    width: min(13rem, 48vw);
+    width: min(18rem, 64vw);
+    margin-top: clamp(2.6rem, 9vh, 4.8rem);
+    transform: translateX(-0.5%);
   }
   .result-wrong .bgl-result-medallion {
-    width: min(16rem, 62vw);
+    width: min(19rem, 68vw);
     aspect-ratio: auto;
-    margin-top: clamp(2rem, 7vh, 3.5rem);
+    margin-top: clamp(2.8rem, 9vh, 4.8rem);
     background: transparent;
     border: 0;
     box-shadow: none;
+    transform: translateX(-0.8%);
   }
   .bgl-logo-text {
     font-family: 'Barlow Condensed', sans-serif;
@@ -394,8 +398,9 @@
   }
   @media (max-height: 740px) {
     .bgl-result-medallion.has-image { width: min(14.5rem, 54vw); margin-top: 0.75rem; }
-    .result-v1win .bgl-result-medallion.has-image { width: min(25rem, 86vw); margin-top: 1.4rem; }
-    .result-close .bgl-result-medallion.has-image { width: min(11.5rem, 44vw); }
+    .result-v1win .bgl-result-medallion.has-image { width: min(25rem, 86vw); margin-top: 1.4rem; transform: translateX(-1.4%); }
+    .result-close .bgl-result-medallion.has-image { width: min(16rem, 58vw); margin-top: 1.8rem; transform: translateX(-0.5%); }
+    .result-wrong .bgl-result-medallion { width: min(16.5rem, 62vw); margin-top: 1.8rem; transform: translateX(-0.8%); }
     .bgl-answer-pill { padding: 0.45rem 1rem; }
     .bgl-payout-pill { padding: 0.7rem 1.8rem; }
     .bgl-continue-button { padding: 0.85rem 1rem; }
