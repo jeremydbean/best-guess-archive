@@ -12,6 +12,7 @@ import html
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import urllib.error
@@ -475,7 +476,21 @@ def apply_import(data: dict) -> bool:
 
 
 def run(cmd: list[str]) -> subprocess.CompletedProcess:
-    return subprocess.run(" ".join(cmd), capture_output=True, text=True, shell=True)
+    resolved = cmd[:]
+    executable = shutil.which(cmd[0])
+    if executable:
+        resolved[0] = executable
+    else:
+        return subprocess.CompletedProcess(
+            args=cmd,
+            returncode=127,
+            stdout="",
+            stderr=(
+                f"Required command not found: {cmd[0]}. "
+                "Install Node.js/npm or ensure actions/setup-node ran before auto-import."
+            ),
+        )
+    return subprocess.run(resolved, capture_output=True, text=True, shell=False)
 
 
 def main():

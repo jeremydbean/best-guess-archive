@@ -21,6 +21,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
       - name: Install Python deps
         run: python -m pip install youtube-transcript-api anthropic tzdata
 
