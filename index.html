@@ -121,10 +121,11 @@
     pointer-events: none;
   }
   .bgl-result-screen.result-gold,
-  .bgl-result-screen.result-bronze {
+  .bgl-result-screen.result-bronze,
+  .bgl-result-screen.result-v1win {
     --result-top: #f8a544;
-    --result-mid: #7a3c12;
-    --result-bottom: #190700;
+    --result-mid: #693526;
+    --result-bottom: #12001e;
   }
   .bgl-result-screen.result-silver {
     --result-top: #e3f0f8;
@@ -178,6 +179,10 @@
     background: transparent;
     border: 0;
     box-shadow: none;
+  }
+  .result-v1win .bgl-result-medallion.has-image {
+    width: min(35rem, 92vw);
+    margin-top: 4.5rem;
   }
   .bgl-result-emblem {
     display: none;
@@ -2553,7 +2558,7 @@ class App {
     const isClose = won === 'close';
     const esc = (v) => this._escapeHtml(v);
     const g = this.currentGame;
-    const mood = won === true ? (medal || 'gold') : isClose ? 'close' : 'wrong';
+    const mood = won === true ? (medal || 'v1win') : isClose ? 'close' : 'wrong';
     resultEl.className = `bgl-result-screen fade-in result-${mood}`;
     const totalGuessesForRound = g.clues.reduce((sum, c) =>
       sum + (parseInt(String(c.guesses || '0').replace(/[^0-9]/g, ''), 10) || 0), 0
@@ -2571,6 +2576,7 @@ class App {
       gold: 'assets/result/medal-gold.png',
       silver: 'assets/result/medal-silver.png',
       bronze: 'assets/result/medal-bronze.png',
+      v1win: 'assets/result/emblem-v1-winner.png',
       close: 'assets/result/emblem-good-job.png',
       wrong: 'assets/result/emblem-good-try.png'
     };
@@ -2578,7 +2584,7 @@ class App {
     if (emblemEl && medallionEl) {
       if (emblemSrc) {
         emblemEl.src = emblemSrc;
-        emblemEl.alt = mood === 'close' ? 'Good job Best Guess Archive emblem' : `${mood} Best Guess Archive medal`;
+        emblemEl.alt = mood === 'v1win' ? 'You are a winner Best Guess Archive emblem' : mood === 'close' ? 'Good job Best Guess Archive emblem' : `${mood} Best Guess Archive medal`;
         medallionEl.className = 'bgl-result-medallion has-image';
       } else {
         emblemEl.removeAttribute('src');
@@ -2597,7 +2603,10 @@ class App {
 
     let headline = 'WELL DONE!';
     let subhead = 'You answered correctly and won the round!';
-    if (won === true && medal === 'gold') {
+    if (won === true && !medal) {
+      headline = 'CONGRATULATIONS!';
+      subhead = 'You answered correctly and were one of the fastest players!';
+    } else if (won === true && medal === 'gold') {
       headline = 'CONGRATULATIONS!';
       subhead = 'Gold! You answered correctly and took the top spot!';
     } else if (won === true && medal === 'silver') {
