@@ -26103,5 +26103,271 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Wednesday, April 29, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "BROKEN HEART",
+      "TAMBOURINE"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "BROKEN HEART",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "NOT A HAPPY ENDING",
+          "LITERALLY NOT LITERAL",
+          "THE PUMP BURST",
+          "YOUR CARDIOLOGIST CAN'T HELP YOU",
+          "BEYOND SAD, OH GEE, USE THE EMOJI"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "TAMBOURINE",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "A FIRM HANDSHAKE",
+          "ROUND AND ROUND",
+          "SLAP-HAPPY",
+          "OFTEN USED BY HIPPIES",
+          "AN INSTRUMENT THAT IS MOSTLY CYMBALIC"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Intro Voice",
+            "text": "Come on, everybody, we're live. Get the party going on time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live! I am your host Hunter March. This show is a partnership: I bring the clues, you bring the guesses, and Netflix is financing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Tonight, $15,000 is in play. Each episode has two rounds, each round has one puzzle, and each puzzle has gold, silver, and bronze winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round we load our crystal ball with a secret item. I give five clues, and after each clue you get 20 seconds to submit one best guess for the round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answers on the earliest clue split gold, correct answers on the second earliest clue split silver, and correct answers on the third earliest clue split bronze."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is worth $7,500. Let us load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: NOT A HAPPY ENDING."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included Happy Gilmore and Bambi."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: LITERALLY NOT LITERAL."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A guess was audio book."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: THE PUMP BURST."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included Ember and Smashing Pumpkins."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: YOUR CARDIOLOGIST CAN'T HELP YOU."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included sprinkler and the tin man."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: BEYOND SAD, OH GEE, USE THE EMOJI."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up. Let us find out what was inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was broken heart."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"BEYOND SAD, OH GEE, USE THE EMOJI.\" When you are beyond sad, your heart is broken, and you might use the broken heart emoji. 3,657 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"YOUR CARDIOLOGIST CAN'T HELP YOU.\" It may feel like you need a cardiologist, but they cannot actually fix a broken heart. 5,015 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"THE PUMP BURST.\" Your heart is a pump, and burst means broken. 274 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"LITERALLY NOT LITERAL.\" Your heart is not literally broken, even if it does feel that way. 14 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"NOT A HAPPY ENDING.\" If you have a broken heart, usually that is not from the happiest of endings. 3 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 3 winners at $1,000.00 each. Silver (Clue 2): 14 winners at $178.57 each. Bronze (Clue 3): 274 winners at $7.30 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Still Cabin 352, Yoda Man, and Grouchy Dad Oscar, who won gold, and congratulations to all silver and bronze winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone who answers correctly on the second puzzle will receive a K-Pop Demon Hunters blasting glass from the Netflix Shop, valued at $24.95. Winners must pay for shipping and redeem the voucher before it expires."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round two is worth $7,500, with the same prize pots: $3,000 for gold, $2,500 for silver, and $2,000 for bronze. Let us load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: A FIRM HANDSHAKE."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included deal and Superman."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: ROUND AND ROUND."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included binoculars and blender."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: SLAP-HAPPY."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included Ring Around the Rosie and electric bass."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: OFTEN USED BY HIPPIES."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guesses included peace and groovy."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: AN INSTRUMENT THAT IS MOSTLY CYMBALIC."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up. Let us find out what was inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was tambourine."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"AN INSTRUMENT THAT IS MOSTLY CYMBALIC.\" It is a percussion instrument with strong cymbal vibes. 2,562 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"OFTEN USED BY HIPPIES.\" You often smack them against your hip as the way to play that instrument. 628 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"SLAP-HAPPY.\" Slapping the tambourine creates joyful music. 124 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"ROUND AND ROUND.\" Tambourines are round, and so are the jingles in them. 66 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"A FIRM HANDSHAKE.\" You grip the tambourine firmly in your hand and you shake it. 5 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 5 winners at $600.00 each. Silver (Clue 2): 66 winners at $37.00 each. Bronze (Clue 3): 124 winners at $16.00 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Positive duo, big book, Bigwig Bree, Sneet 25, and to all silver and bronze winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone who got the second puzzle correct also earned the K-Pop Demon Hunters glass voucher."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That is it for this episode of Best Guess Live. Congratulations to all the winners, including everyone who picked up the K-Pop Demon Hunters glass."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you did not grab one tonight, come back tomorrow for another chance. We are here every weekday at 8 Eastern, 5 Pacific. Bye bye."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "MOST SUBMITTED WRONG GUESSES: Puzzle 1: HEART ATTACK, DIVORCE, CRYING, DEATH, HEART"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Puzzle 2: CYMBALS, PEACE SIGN, HIGH FIVE, BOXING, ARM WRESTLING"
+          }
+        ]
+      }
+    ]
   }
 ]

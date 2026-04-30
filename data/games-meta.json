@@ -2076,5 +2076,29 @@
     "goldClue": 1,
     "silverClue": 2,
     "bronzeClue": 3
+  },
+  {
+    "date": "Wednesday, April 29, 2026",
+    "secretItem": "BROKEN HEART",
+    "pot": 7500,
+    "host": "Hunter March",
+    "format": "v2",
+    "totalWinners": 291,
+    "clueCount": 5,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3
+  },
+  {
+    "date": "Wednesday, April 29, 2026",
+    "secretItem": "TAMBOURINE",
+    "pot": 7500,
+    "host": "Hunter March",
+    "format": "v2",
+    "totalWinners": 195,
+    "clueCount": 5,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3
   }
 ]

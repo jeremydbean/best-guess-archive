@@ -11010,5 +11010,117 @@
       "title": "Netflix Shop K-pop Demon Hunters Glass Voucher",
       "desc": "Everyone who answers correctly on the second puzzle, on any clue, receives a voucher for a K-pop Demon Hunters glass from the Netflix Shop, valued at $24.95. The winner only needs to pay for shipping."
     }
+  },
+  {
+    "date": "Wednesday, April 29, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BROKEN HEART",
+    "clues": [
+      {
+        "text": "NOT A HAPPY ENDING",
+        "correct": "3",
+        "guesses": "2,770",
+        "explanation": "If you have a broken heart, usually that's not from the happiest of endings."
+      },
+      {
+        "text": "LITERALLY NOT LITERAL",
+        "correct": "14",
+        "guesses": "3,416",
+        "explanation": "Your heart isn't literally broken, even if it does feel that way."
+      },
+      {
+        "text": "THE PUMP BURST",
+        "correct": "274",
+        "guesses": "4,878",
+        "explanation": "Your heart is a pump, and burst means broken."
+      },
+      {
+        "text": "YOUR CARDIOLOGIST CAN'T HELP YOU",
+        "correct": "5,015",
+        "guesses": "12,120",
+        "explanation": "It may feel like you need a cardiologist, but they can't actually fix a broken heart."
+      },
+      {
+        "text": "BEYOND SAD, OH GEE, USE THE EMOJI",
+        "correct": "3,657",
+        "guesses": "6,668",
+        "explanation": "When you're beyond sad, your heart's broken, and you might use the broken heart emoji."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 3,
+    "silverWinners": 14,
+    "bronzeWinners": 274,
+    "totalWinners": 291,
+    "goldPayout": 1000,
+    "silverPayout": 178.57,
+    "bronzePayout": 7.3,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Still Cabin 352, Yoda Man, Grouchy Dad Oscar",
+    "wrongGuesses": "HEART ATTACK, DIVORCE, CRYING, DEATH, HEART",
+    "bonus": {
+      "title": "K-Pop Demon Hunters Glass",
+      "desc": "Everyone who answers correctly on the second puzzle will receive a K-Pop Demon Hunters blasting glass from the Netflix Shop, valued at $24.95. Winners must pay for shipping and redeem the voucher before it expires."
+    }
+  },
+  {
+    "date": "Wednesday, April 29, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TAMBOURINE",
+    "clues": [
+      {
+        "text": "A FIRM HANDSHAKE",
+        "correct": "5",
+        "guesses": "5,300",
+        "explanation": "You grip the tambourine firmly in your hand and you shake it."
+      },
+      {
+        "text": "ROUND AND ROUND",
+        "correct": "66",
+        "guesses": "7,156",
+        "explanation": "Tambourines are round, and so are the jingles in them."
+      },
+      {
+        "text": "SLAP-HAPPY",
+        "correct": "124",
+        "guesses": "7,362",
+        "explanation": "Slapping the tambourine creates joyful music."
+      },
+      {
+        "text": "OFTEN USED BY HIPPIES",
+        "correct": "628",
+        "guesses": "4,619",
+        "explanation": "You often smack them against your hip as the way to play that instrument."
+      },
+      {
+        "text": "AN INSTRUMENT THAT IS MOSTLY CYMBALIC",
+        "correct": "2,562",
+        "guesses": "7,985",
+        "explanation": "It is a percussion instrument with strong cymbal vibes."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 5,
+    "silverWinners": 66,
+    "bronzeWinners": 124,
+    "totalWinners": 195,
+    "goldPayout": 600,
+    "silverPayout": 37,
+    "bronzePayout": 16,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Positive duo, big book, Bigwig Bree, Sneet 25",
+    "wrongGuesses": "CYMBALS, PEACE SIGN, HIGH FIVE, BOXING, ARM WRESTLING",
+    "bonus": {
+      "title": "K-Pop Demon Hunters Glass",
+      "desc": "Everyone who answers correctly on the second puzzle will receive a K-Pop Demon Hunters blasting glass from the Netflix Shop, valued at $24.95. Winners must pay for shipping and redeem the voucher before it expires."
+    }
   }
 ]
