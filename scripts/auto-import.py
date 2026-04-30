@@ -330,12 +330,17 @@ Video title: {video_title}
 7. Do NOT include HTML entities in text — use plain Unicode.
 8. If a bonus/promo is announced for the week, add bonus:{{"title":"...","desc":"..."}}
    to BOTH game entries.
+9. PRESERVE ALL BANTER VERBATIM. Do not summarize or condense the host's commentary.
+   Include every spoken line: jokes, time countdowns, guesser callouts (with their
+   usernames and wrong guesses), tangents, and transitions between clues. Each
+   distinct thought or sentence should be its own transcript line. The goal is a
+   word-for-word record of what was said, not a summary.
 
 Respond with JSON only."""
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
-        max_tokens=8192,
+        max_tokens=32768,
         system=system_prompt,
         messages=[{"role": "user", "content": user_prompt}],
     )
