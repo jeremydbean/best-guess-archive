@@ -2296,7 +2296,13 @@ class App {
   }
 
   copyGeminiPrompt(btn) {
-    const p = `You are processing a Best Guess Live episode (Netflix game show, two rounds). You will receive a raw transcript and screenshots of the on-screen clue cards and popular wrong guesses screens.
+    const p = `This is your instruction set for an upcoming task. Do not process anything yet. Reply only with "Ready — send the transcript and screenshots." and wait for my next message, which will contain the raw transcript and screenshots to process.
+
+---
+
+You are processing a Best Guess Live episode (Netflix game show, two rounds). I will provide a raw transcript and screenshots of the on-screen clue cards and popular wrong guesses screens in my next message.
+
+Use today's date for the \`date\` field unless I explicitly specify a different date in my follow-up message.
 
 Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wrongGuesses\`, \`transcript\`.
 
