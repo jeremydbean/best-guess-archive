@@ -202,10 +202,10 @@ def format_archive_date(dt: datetime) -> str:
 
 
 def get_imported_dates() -> set:
-    """Return the set of dates already present in transcripts.json."""
+    """Return dates already present in games.json."""
     try:
-        with open("data/transcripts.json") as f:
-            return {t["date"] for t in json.load(f)}
+        with open("data/games.json") as f:
+            return {g["date"] for g in json.load(f)}
     except (FileNotFoundError, json.JSONDecodeError):
         return set()
 
@@ -270,19 +270,16 @@ def fetch_transcript(video_id: str) -> str:
 
 def call_claude(transcript_text: str, episode_date: str, video_title: str) -> dict:
     """
-    Send the transcript to Claude and get back structured episode data.
+    Send the transcript to Claude and get back structured game data only.
 
-    Returns a dict with keys: episode_date, cancelled, games, transcript.
+    Returns a dict with keys: episode_date, cancelled, games.
+    Transcript stub is generated separately by build_stub_transcript().
     """
     client = anthropic.Anthropic()
 
     with open("data/games.json") as f:
         all_games = json.load(f)
     schema_games = json.dumps(all_games[-4:], indent=2)
-
-    with open("data/transcripts.json") as f:
-        all_transcripts = json.load(f)
-    schema_transcript = json.dumps(all_transcripts[-1], indent=2)
 
     system_prompt = (
         "You are a data extractor for the Best Guess Live game show archive.\n"
@@ -295,14 +292,12 @@ def call_claude(transcript_text: str, episode_date: str, video_title: str) -> di
         "{\n"
         '  "episode_date": "Weekday, Month D, YYYY",\n'
         '  "cancelled": false,\n'
-        '  "games": [...],\n'
-        '  "transcript": {...}\n'
+        '  "games": [...]\n'
         "}\n\n"
-        "If the episode was cancelled, set cancelled=true, games=[], "
-        "and populate transcript with a stub (secretItems:[], rounds:[])."
+        "If the episode was cancelled, set cancelled=true and games=[]."
     )
 
-    user_prompt = f"""Import this Best Guess Live episode.
+    user_prompt = f"""Import this Best Guess Live episode. Extract game data only — no transcript needed.
 
 Episode date: {episode_date}
 Video title: {video_title}
@@ -313,49 +308,24 @@ Video title: {video_title}
 --- GAMES SCHEMA (last 4 entries from games.json) ---
 {schema_games}
 
---- TRANSCRIPT SCHEMA (last entry from transcripts.json) ---
-{schema_transcript}
-
 --- EXTRACTION RULES ---
-1. Extract both rounds. Each game entry must match the games.json schema.
+1. Extract both rounds. Each game entry must match the games.json schema exactly.
 2. For v2 format: include goldClue, silverClue, bronzeClue (clue numbers 1–5),
    goldWinners, silverWinners, bronzeWinners, goldPayout, silverPayout, bronzePayout.
    totalWinners = goldWinners + silverWinners + bronzeWinners.
    winnerPayout = formatted pot string e.g. "$7,500.00".
-3. The transcript must have exactly these six sections in order:
-   Intro, Round 1, Round 1 Results, Round 2, Round 2 Results, Outro.
-4. transcript.secretItems = [round1Item, round2Item].
-5. transcript.rounds = [{{"round":1,"secretItem":"..."}},{{"round":2,"secretItem":"..."}}].
-6. Each transcript line: {{"speaker": "Name or null", "text": "..."}}
-7. Do NOT include HTML entities in text — use plain Unicode.
-8. If a bonus/promo is announced for the week, add bonus:{{"title":"...","desc":"..."}}
+3. Each game must include: date, secretItem, host, format, clues (5 items each with
+   text in ALL CAPS, explanation, clue number, correct count), all medal fields,
+   winnerNames, popularWrongGuesses.
+4. Do NOT include HTML entities in text — use plain Unicode.
+5. If a bonus/promo is announced for the week, add bonus:{{"title":"...","desc":"..."}}
    to BOTH game entries.
-9. PRESERVE ALL BANTER VERBATIM. Do not summarize or condense the host's commentary.
-   Include every spoken line: jokes, time countdowns, guesser callouts (with their
-   usernames and wrong guesses), tangents, and transitions between clues. Each
-   distinct thought or sentence should be its own transcript line. The goal is a
-   word-for-word record of what was said, not a summary.
-10. CANONICAL RESULTS SECTION FORMAT: Each "Round N Results" section must include,
-    in this order:
-    a. Speaker-attributed reveal line (host announces the secret item — verbatim).
-    b. Any verbatim host transition/banter lines that come before the recap.
-    c. Five null-speaker per-clue recap lines, in REVERSE order (Clue 5 → Clue 1):
-         {{"speaker": null, "text": "Clue 5: \\"<EXACT CLUE TEXT>.\\" <explanation>. <N> got it right."}}
-       Use the exact clue text from games.json (uppercase). Use a clean explanation
-       (1 sentence). The "<N> got it right" count must match the game's clue.correct.
-    d. One null-speaker medal payout summary line in this exact format:
-         {{"speaker": null, "text": "Gold (Clue X): A winners at $G.GG each. Silver (Clue Y): B winners at $S.SS each. Bronze (Clue Z): C winners at $B.BB each."}}
-       Use "1 winner" (singular) when count is 1, otherwise "N winners". Drop
-       "each" when there is exactly one winner.
-    e. Then continue with the host's verbatim banter (congratulations, winner
-       names, bonus announcements, transitions to next round) as speaker-attributed
-       lines.
 
 Respond with JSON only."""
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
-        max_tokens=32768,
+        max_tokens=8192,
         system=system_prompt,
         messages=[{"role": "user", "content": user_prompt}],
     )
@@ -384,48 +354,27 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
     if not isinstance(data, dict):
         raise ValueError("Claude output must be a JSON object.")
 
-    transcript = data.get("transcript")
     games = data.get("games")
     episode_date = data.get("episode_date")
     cancelled = bool(data.get("cancelled", False))
 
-    if not isinstance(transcript, dict):
-        raise ValueError("transcript must be an object.")
     if not isinstance(games, list):
         raise ValueError("games must be an array.")
     if expected_date and expected_date != "unknown" and episode_date != expected_date:
         raise ValueError(f"episode_date {episode_date!r} does not match expected date {expected_date!r}.")
-    if transcript.get("date") != episode_date:
-        raise ValueError("transcript.date must match episode_date.")
-
-    sections = transcript.get("sections")
-    if not isinstance(sections, list) or [s.get("tag") for s in sections] != EXPECTED_SECTIONS:
-        raise ValueError("transcript.sections must use the canonical six-section order.")
-    for section in sections:
-        lines = section.get("lines")
-        if not isinstance(lines, list):
-            raise ValueError(f"Transcript section {section.get('tag')!r} lines must be an array.")
-        for line in lines:
-            if not isinstance(line, dict) or "speaker" not in line or "text" not in line:
-                raise ValueError("Each transcript line must contain speaker and text keys.")
 
     if cancelled:
         if games:
             raise ValueError("Cancelled episodes must not include playable games.")
-        if transcript.get("secretItems") != [] or transcript.get("rounds") != []:
-            raise ValueError("Cancelled transcript must have empty secretItems and rounds arrays.")
         return
 
     if len(games) != 2:
         raise ValueError(f"Playable episodes must include exactly 2 games, got {len(games)}.")
-    secret_items = []
     for index, game in enumerate(games, start=1):
         if game.get("date") != episode_date:
             raise ValueError(f"Game {index} date must match episode_date.")
-        secret_item = game.get("secretItem")
-        if not secret_item:
+        if not game.get("secretItem"):
             raise ValueError(f"Game {index} is missing secretItem.")
-        secret_items.append(secret_item)
         clues = game.get("clues")
         if not isinstance(clues, list) or len(clues) != 5:
             raise ValueError(f"Game {index} must have exactly 5 clues.")
@@ -447,17 +396,25 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
                 raise ValueError(f"Game {index} bonus must include title and desc.")
             validate_bonus_html(bonus.get("desc", ""), f"Game {index} bonus.desc")
 
-    transcript_items = transcript.get("secretItems")
-    transcript_rounds = transcript.get("rounds")
-    if not isinstance(transcript_items, list) or [loose(x) for x in transcript_items] != [loose(x) for x in secret_items]:
-        raise ValueError("transcript.secretItems must match the two game secret items in order.")
-    if not isinstance(transcript_rounds, list) or len(transcript_rounds) != 2:
-        raise ValueError("transcript.rounds must contain exactly 2 rounds.")
-    for index, round_data in enumerate(transcript_rounds, start=1):
-        if int(round_data.get("round") or 0) != index:
-            raise ValueError(f"transcript.rounds[{index - 1}].round must be {index}.")
-        if loose(round_data.get("secretItem")) != loose(secret_items[index - 1]):
-            raise ValueError(f"transcript round {index} secretItem must match game {index}.")
+
+def build_stub_transcript(episode_date: str, games: list) -> dict:
+    """Build a placeholder transcript entry when full transcript import is deferred."""
+    secret_items = [g.get("secretItem", "") for g in games]
+    rounds = [{"round": i + 1, "secretItem": item} for i, item in enumerate(secret_items)]
+    note = "Transcript not yet imported." if games else "Episode cancelled — no playable games."
+    return {
+        "date": episode_date,
+        "secretItems": secret_items,
+        "rounds": rounds,
+        "sections": [
+            {"tag": "Intro", "lines": [{"speaker": None, "text": note}]},
+            {"tag": "Round 1", "lines": []},
+            {"tag": "Round 1 Results", "lines": []},
+            {"tag": "Round 2", "lines": []},
+            {"tag": "Round 2 Results", "lines": []},
+            {"tag": "Outro", "lines": []},
+        ],
+    }
 
 
 def apply_import(data: dict) -> bool:
@@ -475,15 +432,17 @@ def apply_import(data: dict) -> bool:
         g for g in data["games"]
         if (g["date"], g.get("secretItem")) not in existing_keys
     ]
-    if not new_games and data["transcript"]["date"] in {t["date"] for t in transcripts}:
+    episode_date = data["episode_date"]
+    existing_transcript_dates = {t["date"] for t in transcripts}
+
+    if not new_games and episode_date in existing_transcript_dates:
         print("Episode already present in data files — nothing to do.")
         return False
 
     games.extend(new_games)
 
-    existing_transcript_dates = {t["date"] for t in transcripts}
-    if data["transcript"]["date"] not in existing_transcript_dates:
-        transcripts.append(data["transcript"])
+    if episode_date not in existing_transcript_dates:
+        transcripts.append(build_stub_transcript(episode_date, data.get("games", [])))
 
     with open("data/games.json", "w") as f:
         json.dump(games, f, indent=2)
