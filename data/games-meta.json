@@ -2100,29 +2100,5 @@
     "goldClue": 1,
     "silverClue": 2,
     "bronzeClue": 3
-  },
-  {
-    "date": "Thursday, April 30, 2026",
-    "secretItem": "THE WAVE",
-    "pot": 7500,
-    "host": "Howie Mandel",
-    "format": "v2",
-    "totalWinners": 238,
-    "clueCount": 5,
-    "goldClue": 1,
-    "silverClue": 2,
-    "bronzeClue": 3
-  },
-  {
-    "date": "Thursday, April 30, 2026",
-    "secretItem": "SPIDER-MAN",
-    "pot": 7500,
-    "host": "Howie Mandel",
-    "format": "v2",
-    "totalWinners": 229,
-    "clueCount": 5,
-    "goldClue": 1,
-    "silverClue": 2,
-    "bronzeClue": 3
   }
 ]
