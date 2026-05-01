@@ -398,22 +398,62 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
 
 
 def build_stub_transcript(episode_date: str, games: list) -> dict:
-    """Build a placeholder transcript entry when full transcript import is deferred."""
+    """Build a placeholder transcript with clue recap lines populated in Results sections."""
+
+    def _winner_int(val) -> int:
+        return int(str(val).replace(",", ""))
+
+    def _medal_part(label: str, clue_num: int, count: int, payout) -> str:
+        amount = f"${float(payout):,.2f}"
+        if count == 1:
+            return f"{label} (Clue {clue_num}): 1 winner at {amount}"
+        return f"{label} (Clue {clue_num}): {count} winners at {amount} each"
+
+    def _results_lines(game: dict) -> list:
+        clues = game.get("clues", [])
+        lines = []
+        for i in range(len(clues) - 1, -1, -1):  # Clue 5 → Clue 1
+            clue = clues[i]
+            clue_num = i + 1
+            lines.append({
+                "speaker": None,
+                "text": (
+                    f'Clue {clue_num}: "{clue.get("text", "")}." '
+                    f'{clue.get("explanation", "")} '
+                    f'{clue.get("correct", "?")} got it right.'
+                ),
+            })
+        gc = int(game.get("goldClue", 1))
+        sc = int(game.get("silverClue", 2))
+        bc = int(game.get("bronzeClue", 3))
+        summary = ". ".join([
+            _medal_part("Gold",   gc, _winner_int(game.get("goldWinners",   0)), game.get("goldPayout",   0)),
+            _medal_part("Silver", sc, _winner_int(game.get("silverWinners", 0)), game.get("silverPayout", 0)),
+            _medal_part("Bronze", bc, _winner_int(game.get("bronzeWinners", 0)), game.get("bronzePayout", 0)),
+        ]) + "."
+        lines.append({"speaker": None, "text": summary})
+        return lines
+
     secret_items = [g.get("secretItem", "") for g in games]
     rounds = [{"round": i + 1, "secretItem": item} for i, item in enumerate(secret_items)]
     note = "Transcript not yet imported." if games else "Episode cancelled — no playable games."
+
+    sections = [{"tag": "Intro", "lines": [{"speaker": None, "text": note}]}]
+    for tag in ["Round 1", "Round 1 Results", "Round 2", "Round 2 Results"]:
+        if "Results" in tag:
+            idx = 0 if "1" in tag else 1
+            game = games[idx] if idx < len(games) else None
+            lines = _results_lines(game) if game else []
+        else:
+            lines = []
+        sections.append({"tag": tag, "lines": lines})
+    sections.append({"tag": "Outro", "lines": []})
+
     return {
         "date": episode_date,
         "secretItems": secret_items,
         "rounds": rounds,
-        "sections": [
-            {"tag": "Intro", "lines": [{"speaker": None, "text": note}]},
-            {"tag": "Round 1", "lines": []},
-            {"tag": "Round 1 Results", "lines": []},
-            {"tag": "Round 2", "lines": []},
-            {"tag": "Round 2 Results", "lines": []},
-            {"tag": "Outro", "lines": []},
-        ],
+        "sections": sections,
     }
 
 
