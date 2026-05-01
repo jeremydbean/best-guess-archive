@@ -11137,7 +11137,7 @@
         "explanation": "The wave creates highs and lows. That's the whole stadium. That's the peak. That's the valley."
       },
       {
-        "text": "A STANDUP ROUTINE",
+        "text": "A STAND UP ROUTINE",
         "correct": "60",
         "guesses": "4,944",
         "explanation": "You stand up when it's your turn. That's how you make the wave. The routine is you stand up."
@@ -11149,7 +11149,7 @@
         "explanation": "The wave makes its way around the entire stadium and then back to you."
       },
       {
-        "text": "IN SYNC STADIUM TOUR",
+        "text": "'NSYNC STADIUM TOUR",
         "correct": "317",
         "guesses": "3,162",
         "explanation": "The entire stadium, you got to be in sync."
@@ -11172,11 +11172,11 @@
     "silverPayout": 41.66,
     "bronzePayout": 12.26,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "Boss GL, Neo Minor 3, Jazzy Annex 293, Waldo 117, Mac and Cheese 497",
+    "winnerNames": "Boss GL, Neo Minor 3, Jazzy Annex 293, Waldo 117, Mac and Cheese 0497",
     "wrongGuesses": "HIGH SCHOOL, AIRLINE FOOD, SURFING, KARMA, THE FLU, THE MOON, SUPER BOWL HALFTIME SHOW",
     "bonus": {
-      "title": "Netflix Shop K-pop Demon Hunters Glass Voucher",
-      "desc": "Everyone who answers correctly on the second puzzle receives a voucher for a K-pop Demon Hunters glass from the Netflix Shop, valued at $24.95. Winners only need to pay for shipping."
+      "title": "K-Pop Demon Hunters Glass",
+      "desc": "All correct Round 2 answers win a <b>K-Pop Demon Hunters glass</b> from the Netflix Shop (worth $24.95, shipping only)."
     }
   },
   {
@@ -11226,13 +11226,13 @@
     "totalWinners": 229,
     "goldPayout": 3000,
     "silverPayout": 500,
-    "bronzePayout": 8.97,
+    "bronzePayout": 8.96,
     "winnerPayout": "$7,500.00",
     "winnerNames": "Gloomy Bed 90007",
     "wrongGuesses": "BIG MOUTH BILLY BASS, APPETIZERS, GLUE, GO DADDY, DARTH VADER, ZORO",
     "bonus": {
-      "title": "Netflix Shop K-pop Demon Hunters Glass Voucher",
-      "desc": "Everyone who answers correctly on the second puzzle receives a voucher for a K-pop Demon Hunters glass from the Netflix Shop, valued at $24.95. Winners only need to pay for shipping."
+      "title": "K-Pop Demon Hunters Glass",
+      "desc": "All correct Round 2 answers win a <b>K-Pop Demon Hunters glass</b> from the Netflix Shop (worth $24.95, shipping only)."
     }
   }
 ]
