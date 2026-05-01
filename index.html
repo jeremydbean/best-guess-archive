@@ -709,6 +709,16 @@ document.addEventListener('focusout', function(e) {
         <div id="data-health-status" class="text-white font-display text-3xl font-bold leading-none">Checking...</div>
         <div id="data-health-summary" class="mt-2 text-slate-400 text-sm">Open data health to run checks.</div>
       </div>
+      <div class="mt-6 pt-5 border-t border-slate-700/50">
+        <div class="flex items-center justify-between mb-2">
+          <div class="home-stat-label text-xs text-green-300">Gemini Import Prompt</div>
+          <button onclick="app.copyGeminiPrompt(this)" class="inline-flex items-center gap-1 text-xs px-3 py-1 rounded-lg border border-slate-600 text-slate-300 hover:border-green-400/50 hover:text-white transition">
+            <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+            Copy
+          </button>
+        </div>
+        <div class="text-xs text-slate-400">Paste into Gemini with raw transcript + screenshots to get exact clue text, wrong guesses, and a formatted transcript ready to import.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2283,6 +2293,89 @@ class App {
 
   copyAuditCommand() {
     this._copyText('npm run audit:fix && npm run audit', 'Audit command');
+  }
+
+  copyGeminiPrompt(btn) {
+    const p = `You are processing a Best Guess Live episode (Netflix game show, two rounds). You will receive a raw transcript and screenshots of the on-screen clue cards and popular wrong guesses screens.
+
+Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wrongGuesses\`, \`transcript\`.
+
+**\`date\`**: \`"Weekday, Month D, YYYY"\`. Use today's date unless explicitly stated otherwise.
+
+**\`clues\`**: Exact text from screenshots only — ALL CAPS as shown on screen. Clue 1 is the hardest (shown first), Clue 5 is easiest (shown last).
+\`\`\`json
+"clues": {
+  "round1": [
+    {"number": 1, "text": "EXACT SCREEN TEXT"},
+    {"number": 2, "text": "..."},
+    {"number": 3, "text": "..."},
+    {"number": 4, "text": "..."},
+    {"number": 5, "text": "..."}
+  ],
+  "round2": [ ...same structure... ]
+}
+\`\`\`
+
+**\`wrongGuesses\`**: Popular wrong guesses shown on screen after each reveal. From screenshots only — do not invent.
+\`\`\`json
+"wrongGuesses": {
+  "round1": ["WRONG GUESS", "WRONG GUESS", "..."],
+  "round2": ["WRONG GUESS", "..."]
+}
+\`\`\`
+
+**\`transcript\`**: Full verbatim transcript.
+\`\`\`json
+"transcript": {
+  "date": "same as above",
+  "secretItems": ["ROUND 1 ANSWER", "ROUND 2 ANSWER"],
+  "rounds": [
+    {"round": 1, "secretItem": "ROUND 1 ANSWER"},
+    {"round": 2, "secretItem": "ROUND 2 ANSWER"}
+  ],
+  "sections": [
+    {"tag": "Intro",           "lines": [...]},
+    {"tag": "Round 1",         "lines": [...]},
+    {"tag": "Round 1 Results", "lines": [...]},
+    {"tag": "Round 2",         "lines": [...]},
+    {"tag": "Round 2 Results", "lines": [...]},
+    {"tag": "Outro",           "lines": [...]}
+  ]
+}
+\`\`\`
+
+**Line format**: \`{"speaker": "Host Name", "text": "exact words"}\` for spoken lines. \`{"speaker": null, "text": "..."}\` only for the structured lines described below. Host is "Howie Mandel" or "Hunter March" — use consistently throughout.
+
+**Results sections** must follow this exact order every time:
+1. Attributed reveal line(s) — host announces the answer
+2. Attributed transition banter
+3. Five null-speaker clue recap lines, **Clue 5 → Clue 1** (reverse order):
+   \`{"speaker": null, "text": "Clue N: \\"EXACT SCREEN TEXT.\\" One-sentence explanation from host. N got it right."}\`
+   Use the exact ALL CAPS clue text from screenshots in recap lines, not what was spoken.
+4. One null-speaker medal summary line:
+   \`{"speaker": null, "text": "Gold (Clue X): N winners at $X.XX each. Silver (Clue Y): N winners at $X.XX each. Bronze (Clue Z): N winners at $X.XX each."}\`
+   When a medal has exactly 1 winner: \`"1 winner at $X.XX"\` — no "each".
+5. Remaining attributed banter — congratulations, winner names, transitions
+
+**Outro**: Append these two null-speaker lines at the very end:
+\`{"speaker": null, "text": "Popular wrong guesses, Round 1: [GUESS, GUESS, ...]"}\`
+\`{"speaker": null, "text": "Popular wrong guesses, Round 2: [GUESS, GUESS, ...]"}\`
+
+**Rules**:
+- One sentence per line. Never paraphrase — exact words only.
+- Clue text in recap lines must come from screenshots, not audio.
+- Do not add lines that weren't spoken. Do not merge sentences.
+- Output JSON only. No markdown fences. No commentary before or after.`;
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(p).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px">check</span> Copied';
+        btn.classList.add('text-green-400', 'border-green-500/50');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('text-green-400', 'border-green-500/50'); }, 2000);
+      }).catch(() => window.prompt('Copy Gemini prompt:', p));
+    } else {
+      window.prompt('Copy Gemini prompt:', p);
+    }
   }
 
   _safeExternalUrl(value, fallback) {
