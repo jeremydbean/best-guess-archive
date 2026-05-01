@@ -3181,7 +3181,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
             <span class="font-black uppercase tracking-wider text-blue-300">Clue ${n}</span>
             ${medalPill}
           </span>
-          <span class="text-slate-500 sm:ml-auto">${esc(c.correct)} right / ${esc(c.guesses)} guesses</span>
+          <span class="text-slate-500 ml-auto">${esc(c.correct)} right / ${esc(c.guesses)} guesses</span>
         </div>
         <p class="mt-4 text-lg font-bold leading-relaxed ${isClassicWin ? 'text-yellow-100' : 'text-white'}">"${esc(c.text)}"</p>
         <p class="mt-3 text-sm leading-7 text-slate-400">${e ? esc(e) : 'No explanation recorded.'}</p>
