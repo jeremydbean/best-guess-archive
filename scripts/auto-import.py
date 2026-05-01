@@ -330,6 +330,12 @@ Respond with JSON only."""
         messages=[{"role": "user", "content": user_prompt}],
     )
 
+    usage = response.usage
+    input_tok = usage.input_tokens
+    output_tok = usage.output_tokens
+    cost = (input_tok * 3.00 + output_tok * 15.00) / 1_000_000
+    print(f"Tokens — input: {input_tok:,}  output: {output_tok:,}  estimated cost: ${cost:.4f}")
+
     raw = response.content[0].text.strip()
     # Strip accidental markdown fences
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
