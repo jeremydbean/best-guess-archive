@@ -26557,5 +26557,103 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, April 30, 2026",
+    "secretItems": [
+      "THE WAVE",
+      "SPIDER-MAN"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "THE WAVE"
+      },
+      {
+        "round": 2,
+        "secretItem": "SPIDER-MAN"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Transcript not yet imported."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": []
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Clue 5: \"THE MOTION OF THE OCEAN IS THE NOTION.\" Waves are the motion of the ocean. We're trying to create a human ocean when we do the wave at a stadium. 1,918 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"IN SYNC STADIUM TOUR.\" The entire stadium, you got to be in sync. 317 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"WHAT GOES AROUND COMES AROUND.\" The wave makes its way around the entire stadium and then back to you. 163 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"A STANDUP ROUTINE.\" You stand up when it's your turn. That's how you make the wave. The routine is you stand up. 60 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"PEAKS AND VALLEYS.\" The wave creates highs and lows. That's the whole stadium. That's the peak. That's the valley. 15 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 15 winners at $200.00 each. Silver (Clue 2): 60 winners at $41.66 each. Bronze (Clue 3): 163 winners at $12.26 each."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": []
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Clue 5: \"HERO FROM A COMIC BOOK KNOWN FOR HIS ARACHNID LOOK.\" That is Spider-Man. Arachnophobia. Arachnid look. That's Spider-Man. 6,666 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"THE MASKED SWINGER.\" Spider-Man wears a mask and swings from building to building. 2,129 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"DIGITAL WEB DEVELOPER.\" When Spider-Man makes webs, he makes the gesture with his fingers. 223 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"A LITTLE BIT AT FIRST.\" Getting that little bite by that little spider starts the story of Spider-Man. He was a little bit and then he turned into Spider-Man. 5 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"TACKY WALL DECOR.\" Spider-Man hangs on walls. He sticks to the walls. He is like wall decor there. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1 winner at $3,000.00. Silver (Clue 2): 5 winners at $500.00 each. Bronze (Clue 3): 223 winners at $8.97 each."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": []
+      }
+    ]
   }
 ]

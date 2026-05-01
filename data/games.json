@@ -11122,5 +11122,117 @@
       "title": "K-Pop Demon Hunters Glass",
       "desc": "Everyone who answers correctly on the second puzzle will receive a K-Pop Demon Hunters glass from the Netflix Shop, valued at $24.95. Winners must pay for shipping and redeem the voucher before it expires."
     }
+  },
+  {
+    "date": "Thursday, April 30, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "THE WAVE",
+    "clues": [
+      {
+        "text": "PEAKS AND VALLEYS",
+        "correct": "15",
+        "guesses": "6,341",
+        "explanation": "The wave creates highs and lows. That's the whole stadium. That's the peak. That's the valley."
+      },
+      {
+        "text": "A STANDUP ROUTINE",
+        "correct": "60",
+        "guesses": "4,944",
+        "explanation": "You stand up when it's your turn. That's how you make the wave. The routine is you stand up."
+      },
+      {
+        "text": "WHAT GOES AROUND COMES AROUND",
+        "correct": "163",
+        "guesses": "8,569",
+        "explanation": "The wave makes its way around the entire stadium and then back to you."
+      },
+      {
+        "text": "IN SYNC STADIUM TOUR",
+        "correct": "317",
+        "guesses": "3,162",
+        "explanation": "The entire stadium, you got to be in sync."
+      },
+      {
+        "text": "THE MOTION OF THE OCEAN IS THE NOTION",
+        "correct": "1,918",
+        "guesses": "6,870",
+        "explanation": "Waves are the motion of the ocean. We're trying to create a human ocean when we do the wave at a stadium."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 15,
+    "silverWinners": 60,
+    "bronzeWinners": 163,
+    "totalWinners": 238,
+    "goldPayout": 200,
+    "silverPayout": 41.66,
+    "bronzePayout": 12.26,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Boss GL, Neo Minor 3, Jazzy Annex 293, Waldo 117, Mac and Cheese 497",
+    "wrongGuesses": "HIGH SCHOOL, AIRLINE FOOD, SURFING, KARMA, THE FLU, THE MOON, SUPER BOWL HALFTIME SHOW",
+    "bonus": {
+      "title": "Netflix Shop K-pop Demon Hunters Glass Voucher",
+      "desc": "Everyone who answers correctly on the second puzzle receives a voucher for a K-pop Demon Hunters glass from the Netflix Shop, valued at $24.95. Winners only need to pay for shipping."
+    }
+  },
+  {
+    "date": "Thursday, April 30, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "SPIDER-MAN",
+    "clues": [
+      {
+        "text": "TACKY WALL DECOR",
+        "correct": "1",
+        "guesses": "6,730",
+        "explanation": "Spider-Man hangs on walls. He sticks to the walls. He is like wall decor there."
+      },
+      {
+        "text": "A LITTLE BIT AT FIRST",
+        "correct": "5",
+        "guesses": "5,531",
+        "explanation": "Getting that little bite by that little spider starts the story of Spider-Man. He was a little bit and then he turned into Spider-Man."
+      },
+      {
+        "text": "DIGITAL WEB DEVELOPER",
+        "correct": "223",
+        "guesses": "6,560",
+        "explanation": "When Spider-Man makes webs, he makes the gesture with his fingers."
+      },
+      {
+        "text": "THE MASKED SWINGER",
+        "correct": "2,129",
+        "guesses": "5,210",
+        "explanation": "Spider-Man wears a mask and swings from building to building."
+      },
+      {
+        "text": "HERO FROM A COMIC BOOK KNOWN FOR HIS ARACHNID LOOK",
+        "correct": "6,666",
+        "guesses": "7,753",
+        "explanation": "That is Spider-Man. Arachnophobia. Arachnid look. That's Spider-Man."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 5,
+    "bronzeWinners": 223,
+    "totalWinners": 229,
+    "goldPayout": 3000,
+    "silverPayout": 500,
+    "bronzePayout": 8.97,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Gloomy Bed 90007",
+    "wrongGuesses": "BIG MOUTH BILLY BASS, APPETIZERS, GLUE, GO DADDY, DARTH VADER, ZORO",
+    "bonus": {
+      "title": "Netflix Shop K-pop Demon Hunters Glass Voucher",
+      "desc": "Everyone who answers correctly on the second puzzle receives a voucher for a K-pop Demon Hunters glass from the Netflix Shop, valued at $24.95. Winners only need to pay for shipping."
+    }
   }
 ]
