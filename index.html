@@ -3167,13 +3167,13 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       const isSilver = g.format === 'v2' && n === g.silverClue;
       const isBronze = g.format === 'v2' && n === g.bronzeClue;
       const isClassicWin = g.format !== 'v2' && n === Number(g.winningClue || g.goldClue);
-      const medal = isGold ? { label: '🥇', name: 'Gold', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
-                  : isSilver ? { label: '🥈', name: 'Silver', cls: 'border-slate-400/45 bg-slate-700/45 text-slate-100' }
-                  : isBronze ? { label: '🥉', name: 'Bronze', cls: 'border-orange-400/50 bg-orange-900/35 text-orange-200' }
-                  : isClassicWin ? { label: 'W', name: 'Winner', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
+      const medal = isGold ? { name: 'Gold', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
+                  : isSilver ? { name: 'Silver', cls: 'border-slate-400/45 bg-slate-700/45 text-slate-100' }
+                  : isBronze ? { name: 'Bronze', cls: 'border-orange-400/50 bg-orange-900/35 text-orange-200' }
+                  : isClassicWin ? { name: 'Winner', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
                   : null;
       const medalPill = medal
-        ? `<span title="${medal.name} clue" class="text-base leading-none">${medal.label}</span>`
+        ? `<span title="${medal.name} clue" class="text-[10px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded border ${medal.cls}">${medal.name}</span>`
         : '';
       return `<div class="border-b border-slate-800/80 px-2 py-6 sm:px-3 last:border-0 ${isClassicWin ? 'rounded-lg bg-yellow-900/10' : ''}">
         <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
