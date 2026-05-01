@@ -335,6 +335,21 @@ Video title: {video_title}
    usernames and wrong guesses), tangents, and transitions between clues. Each
    distinct thought or sentence should be its own transcript line. The goal is a
    word-for-word record of what was said, not a summary.
+10. CANONICAL RESULTS SECTION FORMAT: Each "Round N Results" section must include,
+    in this order:
+    a. Speaker-attributed reveal line (host announces the secret item — verbatim).
+    b. Any verbatim host transition/banter lines that come before the recap.
+    c. Five null-speaker per-clue recap lines, in REVERSE order (Clue 5 → Clue 1):
+         {{"speaker": null, "text": "Clue 5: \\"<EXACT CLUE TEXT>.\\" <explanation>. <N> got it right."}}
+       Use the exact clue text from games.json (uppercase). Use a clean explanation
+       (1 sentence). The "<N> got it right" count must match the game's clue.correct.
+    d. One null-speaker medal payout summary line in this exact format:
+         {{"speaker": null, "text": "Gold (Clue X): A winners at $G.GG each. Silver (Clue Y): B winners at $S.SS each. Bronze (Clue Z): C winners at $B.BB each."}}
+       Use "1 winner" (singular) when count is 1, otherwise "N winners". Drop
+       "each" when there is exactly one winner.
+    e. Then continue with the host's verbatim banter (congratulations, winner
+       names, bonus announcements, transitions to next round) as speaker-attributed
+       lines.
 
 Respond with JSON only."""
 
