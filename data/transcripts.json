@@ -26560,6 +26560,7 @@
   },
   {
     "date": "Thursday, April 30, 2026",
+    "host": "Howie Mandel",
     "secretItems": [
       "THE WAVE",
       "SPIDER-MAN"
@@ -26567,11 +26568,31 @@
     "rounds": [
       {
         "round": 1,
-        "secretItem": "THE WAVE"
+        "secretItem": "THE WAVE",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "PEAKS AND VALLEYS",
+          "A STAND UP ROUTINE",
+          "WHAT GOES AROUND COMES AROUND",
+          "'NSYNC STADIUM TOUR",
+          "THE MOTION OF THE OCEAN IS THE NOTION"
+        ]
       },
       {
         "round": 2,
-        "secretItem": "SPIDER-MAN"
+        "secretItem": "SPIDER-MAN",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "TACKY WALL DECOR",
+          "A LITTLE BIT AT FIRST",
+          "DIGITAL WEB DEVELOPER",
+          "THE MASKED SWINGER",
+          "HERO FROM A COMIC BOOK KNOWN FOR HIS ARACHNID LOOK"
+        ]
       }
     ],
     "sections": [
@@ -26579,80 +26600,219 @@
         "tag": "Intro",
         "lines": [
           {
-            "speaker": null,
-            "text": "Transcript not yet imported."
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live! I'm your host, Howie Mandel. I have to say, I'm welcoming... we have a streak, a player streak from Mama of Three Crazies. This is your fourth time in a row playing! And Ancient Storm 257, you've returned 16 times! This is addictive. And we got some new players too, but start a streak!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I want to tell you something; I'm giving you a little BTS, behind the scenes. Our artisanal clues are meticulously picked by a team of puzzle makers, aged for five years in a climate-controlled oak barrel, and then decanted for 90 minutes. And tonight's clues have a hint of cedar with a touch of vanilla with a heavy finish of $15,000!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "In the world of clues, I'm a sommelier. Okay, so let's pour out a nice glass of rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds. Each round has one puzzle. Each puzzle has three sets of winners: Gold, Silver, and Bronze. Before each round, we're going to load our crystal ball with a secret item. It could be absolutely anything. Then I'm going to give you five clues. But remember, the clues\u2014they're riddles, people! They're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "After each clue, you get 20 seconds to submit an answer. But you only get one best guess per round\u2014not one per clue, one per round. So make sure you're confident before you lock it in. It's got to be the exact answer, and we're not going to accept typos. Bottom line: you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the Gold prize pot of $3,000. Everyone that locks in a correct answer on the second earliest clue will split the Silver pot of $2,500. And everyone that gets it on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So, if you give a correct answer on one of the three earliest clues, you will win. And if you're the only one to give a correct answer on one of those clues, you take the whole pot for that medal."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Don't forget, if possible, take a video of you and your friends or family playing Best Guess Live and send it to us or post it on your socials with #BestGuessLive. Enough talk! Let's win some money. Round 1 is worth $7,500. Load that crystal ball right now!"
           }
         ]
       },
       {
         "tag": "Round 1",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, we're about to find out what is in the crystal ball. You know how we do that; I give you clues. I'm going to start with the first clue: PEAKS AND VALLEYS. 20 seconds on the clock right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock is counting down. Remember, the earlier you get it right, the better chance you have of winning more money. All right, answers are coming in. People are taking a shot. We have almost 15 guesses just on this first clue. Time is up!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Somebody said \"High School.\" Those are PEAKS AND VALLEYS; things were up and down. For me, it was one long valley that I never finished or got through."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your second clue: A STAND UP ROUTINE. The clock starts now. 20 seconds. 6,300 people guessed on that first one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "With 5 seconds left on the clock, guesses are coming in. Scarlet Wizard 31 said \"Airline Food.\" About A Win 67 said \"Surfing.\" That makes sense. What's the deal with... oh, STAND UP ROUTINE, \"What's the deal?\" Thank you. Apparently, I'm the only one in the room that's closed-captioned."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your third clue: WHAT GOES AROUND COMES AROUND. The clock starts now. 20 seconds on the clock. We already have over 11,000 guesses in and counting. Over 30,000 players are right here. Time is up!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yummy Waffle said \"Karma.\" Prickly Table said \"The Flu,\" which is ultimately the best STAND UP ROUTINE anybody can do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your fourth clue: 'NSYNC STADIUM TOUR. The clock starts now. 5 seconds left on the clock. Over 20,000 submitted guesses already. Spiffy Queen 83 said \"The Moon.\" Sprinkled Mountain 50 said \"Super Bowl Halftime Show.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Final clue! Your fifth clue: THE MOTION OF THE OCEAN IS THE NOTION. The clock starts now. 3 seconds, 2 seconds, 1 second. Time is up! And we have almost 30,000 submitted guesses on this first round for $7,500. Let us find out what is in that crystal ball."
+          }
+        ]
       },
       {
         "tag": "Round 1 Results",
         "lines": [
           {
-            "speaker": null,
-            "text": "Clue 5: \"THE MOTION OF THE OCEAN IS THE NOTION.\" Waves are the motion of the ocean. We're trying to create a human ocean when we do the wave at a stadium. 1,918 got it right."
+            "speaker": "Howie Mandel",
+            "text": "Open that ball right now! THE WAVE! The stadium wave! It's THE WAVE, people! You can't do THE WAVE alone."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking the money."
           },
           {
             "speaker": null,
-            "text": "Clue 4: \"'NSYNC STADIUM TOUR.\" The entire stadium, you got to be in sync. 317 got it right."
+            "text": "Clue 5: \"THE MOTION OF THE OCEAN IS THE NOTION.\" Waves are the motion of the ocean; doing the wave recreates a human ocean in the stadium. 1,918 got it right."
           },
           {
             "speaker": null,
-            "text": "Clue 3: \"WHAT GOES AROUND COMES AROUND.\" The wave makes its way around the entire stadium and then back to you. 163 got it right."
+            "text": "Clue 4: \"'NSYNC STADIUM TOUR.\" The entire stadium has to be in sync to execute the wave. 317 got it right."
           },
           {
             "speaker": null,
-            "text": "Clue 2: \"A STAND UP ROUTINE.\" You stand up when it's your turn. That's how you make the wave. The routine is you stand up. 60 got it right."
+            "text": "Clue 3: \"WHAT GOES AROUND COMES AROUND.\" The wave travels all the way around the stadium and comes back to where it started. 163 got it right."
           },
           {
             "speaker": null,
-            "text": "Clue 1: \"PEAKS AND VALLEYS.\" The wave creates highs and lows. That's the whole stadium. That's the peak. That's the valley. 15 got it right."
+            "text": "Clue 2: \"A STAND UP ROUTINE.\" You stand up when it's your turn \u2014 that's the routine of doing the wave. 60 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"PEAKS AND VALLEYS.\" The wave creates peaks (when people stand) and valleys (when they sit) across the stadium. 15 got it right."
           },
           {
             "speaker": null,
             "text": "Gold (Clue 1): 15 winners at $200.00 each. Silver (Clue 2): 60 winners at $41.66 each. Bronze (Clue 3): 163 winners at $12.26 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to our best guessers: Boss GL, Neo Minor 3, Jazzy Annex 293, Waldo 117, and Mac and Cheese 0497!"
           }
         ]
       },
       {
         "tag": "Round 2",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's day four of our giveaway of the K-pop Demon Hunters glass from the Netflix Shop. Everyone who answers correctly on our second puzzle coming up is getting this for free."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One last thing: Rob on Discord wants us to wish his wife Amber a happy birthday. No! Rob, I think you should go out and do something nice for her; don't rely on us. But this next game is in honor of Amber's birthday."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round 2, where $7,500 is up for grabs! Load that crystal ball. Here's your first clue: TACKY WALL DECOR. The clock starts now. What could it be?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5 seconds left. Frojo Joe 6000 said \"Big Mouth Billy Bass.\" You know, I have one of those. Is that TACKY WALL DECOR? My wife loves it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's the second clue: A LITTLE BIT AT FIRST. The clock starts now. We already have over 7,000 submitted answers. Almost 32,000 people playing right now. Time is up!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sulky Cactus 101 says \"Appetizers.\" Super Dupe 22 said \"Glue.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue 3: DIGITAL WEB DEVELOPER. The clock starts now. 10 seconds left. Guesses are streaming in faster than I could even think of. Rowdy Scooby 94 said \"GoDaddy.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is clue 4: THE MASKED SWINGER. Clock starts now. I think that one gives it away. 2 seconds left. Time is up. Harry Martian said \"Darth Vader.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Final clue! Final chance to guess! HERO FROM A COMIC BOOK KNOWN FOR HIS ARACHNID LOOK. Clock starts now. Put in a guess, people, because you could win that Netflix cup! Time is up. 6,000 guesses on that last one. Mary Nearer 389 says \"Zorro.\""
+          }
+        ]
       },
       {
         "tag": "Round 2 Results",
         "lines": [
           {
-            "speaker": null,
-            "text": "Clue 5: \"HERO FROM A COMIC BOOK KNOWN FOR HIS ARACHNID LOOK.\" That is Spider-Man. Arachnophobia. Arachnid look. That's Spider-Man. 6,666 got it right."
+            "speaker": "Howie Mandel",
+            "text": "What could it be? Carl, open the ball! SPIDER-MAN! It's SPIDER-MAN!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit."
           },
           {
             "speaker": null,
-            "text": "Clue 4: \"THE MASKED SWINGER.\" Spider-Man wears a mask and swings from building to building. 2,129 got it right."
+            "text": "Clue 5: \"HERO FROM A COMIC BOOK KNOWN FOR HIS ARACHNID LOOK.\" Spider-Man is a Marvel comic book hero whose appearance is based on the arachnid (spider). 6,666 got it right."
           },
           {
             "speaker": null,
-            "text": "Clue 3: \"DIGITAL WEB DEVELOPER.\" When Spider-Man makes webs, he makes the gesture with his fingers. 223 got it right."
+            "text": "Clue 4: \"THE MASKED SWINGER.\" Spider-Man wears a mask and swings from building to building on his webs. 2,129 got it right."
           },
           {
             "speaker": null,
-            "text": "Clue 2: \"A LITTLE BIT AT FIRST.\" Getting that little bite by that little spider starts the story of Spider-Man. He was a little bit and then he turned into Spider-Man. 5 got it right."
+            "text": "Clue 3: \"DIGITAL WEB DEVELOPER.\" Spider-Man uses his fingers (digits) to shoot webs, making him a digital web developer. 223 got it right."
           },
           {
             "speaker": null,
-            "text": "Clue 1: \"TACKY WALL DECOR.\" Spider-Man hangs on walls. He sticks to the walls. He is like wall decor there. 1 got it right."
+            "text": "Clue 2: \"A LITTLE BIT AT FIRST.\" Spider-Man's origin story begins with a small bite from a radioactive spider. 5 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"TACKY WALL DECOR.\" Spider-Man clings to walls, making him literally like wall decor. 1 got it right."
           },
           {
             "speaker": null,
             "text": "Gold (Clue 1): 1 winner at $3,000.00. Silver (Clue 2): 5 winners at $500.00 each. Bronze (Clue 3): 223 winners at $8.96 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One best guesser is taking $3,000 for the Gold: Gloomy Bed 90007! Our Silver winners, there are five at $500 each. There are 223 Bronze winners at $8.96 a piece."
           }
         ]
       },
       {
         "tag": "Outro",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's it for this episode! Congratulations to all of our winners, including everyone who picked up a voucher for the K-pop Demon Hunters glass. Come back tomorrow and bring your best guess!"
+          },
+          {
+            "speaker": null,
+            "text": "MOST SUBMITTED WRONG GUESSES: Puzzle 1: WAVES, JUSTIN TIMBERLAKE, STOCK MARKET, ROLLER COASTER, CAROUSEL"
+          },
+          {
+            "speaker": null,
+            "text": "Puzzle 2: WALLPAPER, SPIDER, SPIDER WEB, POSTER, WALL PAPER"
+          }
+        ]
       }
     ]
   }
