@@ -2372,6 +2372,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
         btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px">check</span> Copied';
         btn.classList.add('text-green-400', 'border-green-500/50');
         setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('text-green-400', 'border-green-500/50'); }, 2000);
+        window.open('https://gemini.google.com', '_blank');
       }).catch(() => window.prompt('Copy Gemini prompt:', p));
     } else {
       window.prompt('Copy Gemini prompt:', p);
