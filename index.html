@@ -390,11 +390,36 @@
     text-transform: uppercase;
   }
   .bgl-scroll-cue {
-    color: rgba(226,232,240,0.72);
-    font-size: 0.72rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    color: rgba(226,232,240,0.5);
+    font-size: 0.6rem;
     font-weight: 800;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
+    animation: scrollCueBob 2.2s ease-in-out infinite;
+    pointer-events: none;
+    user-select: none;
+  }
+  @keyframes scrollCueBob {
+    0%, 100% { transform: translateY(0);   opacity: 0.5; }
+    50%       { transform: translateY(6px); opacity: 0.85; }
+  }
+  /* Mobile scroll-snap: hero page snaps, stats feel like a second page */
+  @media (max-width: 640px) {
+    html:has(#game-state-result:not(.hidden)) {
+      scroll-snap-type: y mandatory;
+    }
+    html:has(#game-state-result:not(.hidden)) .bgl-result-topbar {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    }
+    html:has(#game-state-result:not(.hidden)) .bgl-result-details {
+      scroll-snap-align: start;
+      min-height: 100dvh;
+    }
   }
   @media (max-height: 740px) {
     .bgl-result-medallion.has-image { width: min(14.5rem, 54vw); margin-top: 0.75rem; }
@@ -926,7 +951,10 @@ document.addEventListener('focusout', function(e) {
       <div class="bgl-correct-answer" id="result-correct-answer"></div>
       <div class="bgl-payout-pill mt-10" id="result-payout">$0.00</div>
       <button class="bgl-continue-button mt-10 text-xl font-medium text-white" onclick="app.startRandomGame()">Continue</button>
-      <div class="bgl-scroll-cue mt-4">Scroll for archive stats</div>
+      <div class="bgl-scroll-cue mt-6">
+        <span>Archive Stats</span>
+        <span class="material-symbols-outlined" style="font-size:24px">keyboard_arrow_down</span>
+      </div>
     </div>
   </div>
   <div class="bgl-result-details px-4 pb-20 pt-8">
