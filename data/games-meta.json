@@ -2124,5 +2124,29 @@
     "goldClue": 1,
     "silverClue": 2,
     "bronzeClue": 3
+  },
+  {
+    "date": "Friday, May 1, 2026",
+    "secretItem": "ZOOM",
+    "pot": 7500,
+    "host": "Hunter March",
+    "format": "v2",
+    "totalWinners": 532,
+    "clueCount": 5,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3
+  },
+  {
+    "date": "Friday, May 1, 2026",
+    "secretItem": "JUMPING JACKS",
+    "pot": 7500,
+    "host": "Hunter March",
+    "format": "v2",
+    "totalWinners": 148,
+    "clueCount": 5,
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4
   }
 ]

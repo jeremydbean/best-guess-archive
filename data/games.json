@@ -11234,5 +11234,113 @@
       "title": "K-Pop Demon Hunters Glass",
       "desc": "All correct Round 2 answers win a <b>K-Pop Demon Hunters glass</b> from the Netflix Shop (worth $24.95, shipping only)."
     }
+  },
+  {
+    "date": "Friday, May 1, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "ZOOM",
+    "clues": [
+      {
+        "text": "WE ARE GATHERED HERE TODAY",
+        "correct": "1",
+        "guesses": "0",
+        "explanation": "Zoom brings groups of people together in one virtual space."
+      },
+      {
+        "text": "UP CLOSE AND PERSONAL",
+        "correct": "30",
+        "guesses": "0",
+        "explanation": "Zoom means to get in close, and the app lets you interact up close with people far away."
+      },
+      {
+        "text": "SOUNDS FAST...AND IT IS!",
+        "correct": "501",
+        "guesses": "0",
+        "explanation": "Zoom is the sound of going fast, and the app itself streams video in real time."
+      },
+      {
+        "text": "OFTEN PERSECUTED WHEN MUTED",
+        "correct": "841",
+        "guesses": "0",
+        "explanation": "On Zoom, forgetting you're on mute and getting called out is a universal experience."
+      },
+      {
+        "text": "ONLINE MEET-AND-GREET WITH BACKGROUNDS THAT CHEAT",
+        "correct": "2,886",
+        "guesses": "0",
+        "explanation": "Many people use fake virtual backgrounds on Zoom calls."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 30,
+    "bronzeWinners": 501,
+    "totalWinners": 532,
+    "goldPayout": 3000,
+    "silverPayout": 83.33,
+    "bronzePayout": 3.99,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "WEDDING, FUNERAL, CHURCH, SPEED DATING, PRINCE"
+  },
+  {
+    "date": "Friday, May 1, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "JUMPING JACKS",
+    "clues": [
+      {
+        "text": "BACK TO BASICS",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "Jumping jacks are one of the most fundamental, basic exercises."
+      },
+      {
+        "text": "ALL AT ONCE",
+        "correct": "8",
+        "guesses": "0",
+        "explanation": "Jumping jacks engage the whole body \u2014 arms and legs all moving at once."
+      },
+      {
+        "text": "SYNCHRONIZED TRIMMING EVENT",
+        "correct": "3",
+        "guesses": "0",
+        "explanation": "The arms and legs move in a synchronized scissors-like motion that trims and tones the body."
+      },
+      {
+        "text": "NICHOLSON HAD HIS UPS AND DOWNS",
+        "correct": "137",
+        "guesses": "0",
+        "explanation": "Jack Nicholson \u2014 \"Jack\" = jumping jacks, and \"ups and downs\" = the jumping motion."
+      },
+      {
+        "text": "IF A SNOW ANGEL DID STAND UP",
+        "correct": "717",
+        "guesses": "0",
+        "explanation": "The arm-and-leg motion of a jumping jack looks just like making a snow angel, but standing upright."
+      }
+    ],
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 8,
+    "silverWinners": 3,
+    "bronzeWinners": 137,
+    "totalWinners": 148,
+    "goldPayout": 375,
+    "silverPayout": 833.33,
+    "bronzePayout": 14.59,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "SNOWMAN, GOLF, SHAVING, THE SHINING, ALPHABET",
+    "bonus": {
+      "title": "K-Pop Demon Hunters Glass",
+      "desc": "Last day! All correct Round 2 answers win a <b>K-Pop Demon Hunters glass</b> from the Netflix Shop (worth $24.95, shipping only)."
+    }
   }
 ]

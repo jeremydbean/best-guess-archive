@@ -26815,5 +26815,251 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Friday, May 1, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "ZOOM",
+      "JUMPING JACKS"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "ZOOM",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "WE ARE GATHERED HERE TODAY",
+          "UP CLOSE AND PERSONAL",
+          "SOUNDS FAST...AND IT IS!",
+          "OFTEN PERSECUTED WHEN MUTED",
+          "ONLINE MEET-AND-GREET WITH BACKGROUNDS THAT CHEAT"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "JUMPING JACKS",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "BACK TO BASICS",
+          "ALL AT ONCE",
+          "SYNCHRONIZED TRIMMING EVENT",
+          "NICHOLSON HAD HIS UPS AND DOWNS",
+          "IF A SNOW ANGEL DID STAND UP"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Come on, everybody, we're live. Get the party going on time. Looking in the mirror like three, two, one \u2014 I'm ready. Baby, I'ma have some fun doing it 'cause I want to."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live! I am your host, Hunter March. It's a brand new month, and today is a brand new chance for your twitchy thumb to make decisions your brain did not sign off on. That's Best Guess Live, baby."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We've got fifteen thousand dollars to give away tonight. New month, same rules \u2014 here they are."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds. Each round has one puzzle. Each puzzle has three sets of winners: Gold, Silver, Bronze \u2014 did it, nailed it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before we begin, we're gonna load our crystal ball with a secret item. It could be anything. Then I'll give you five clues, but remember the clues are written like riddles \u2014 they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you get twenty seconds to submit an answer, but you only get one best guess per round \u2014 not one per clue, one per round \u2014 so make sure you're confident before you lock it in. It has to be the exact answer, and we do not accept typos. Bottom line: you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the Gold prize pot of three thousand dollars. Everyone that locks in a correct answer on the second earliest clue will split the Silver pot of two thousand five hundred dollars. And everyone that gets it right on the third earliest clue will split the Bronze pot of two thousand dollars \u2014 usually a couple bucks, but hey, a win's a win, baby."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So if you give a correct answer on one of the three earliest clues, you'll win. And if you are the only one to give a correct answer on one of those clues, you'll take the whole pot for that medal \u2014 a lot of moolah, baby."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't forget: if possible, take a video of you and your friends playing Best Guess Live \u2014 we love seeing it. Send it to us with the hashtag #BestGuessLive, at Hunter March, at Netflix Games. Your mom can celebrate your win. Let her be proud of you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk. Let's win some money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is worth seven thousand five hundred dollars. Let's load the crystal ball. There it is \u2014 that's the only thing standing between you and a really great weekend with lots of extra cash to spend."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: WE ARE GATHERED HERE TODAY. Twenty seconds on the clock, starts now. We are gathered here today \u2014 okay, I'm thinking about it with you because I forgot what the answer is, so this is like I'm playing with you. Five seconds left \u2014 what could it be? All right, over four thousand guesses. Soggy Sofa said 'mosh pit' \u2014 they do have to be gathered there for that, but it feels less like 'we are gathered here today.'"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: UP CLOSE AND PERSONAL. Your second twenty seconds starts now. Up close and personal \u2014 it still could be mosh pit, and it's literally the most mosh-pit-y second clue I've ever seen. Time's up. Backwards Jump said 'prostate exam' \u2014 I feel like 'we are gathered here today' is more than just you and your doctor. Harry Starfish said 'elevator' \u2014 so this is a very weird puzzle so far."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: SOUNDS FAST...AND IT IS! Twenty seconds on the clock, starts now. Sounds fast, and it is. Good luck. Time's up. Talkative Wombat said 'fast forward' \u2014 yeah, it does sound fast and it literally is fast. Maybe clue number four will narrow it down."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: OFTEN PERSECUTED WHEN MUTED. Twenty seconds on the clock, starts now. Often persecuted when muted \u2014 usually we save the rhymes for clue five, but May's a whole new thing, baby. When we said May was going to be different, we meant it. Five seconds left. Time's up. Spacey Quesadilla says 'loud chewer' \u2014 but I feel like that's the least time they're persecuted is when they're muted. Okay, you've got one more guess left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: ONLINE MEET-AND-GREET WITH BACKGROUNDS THAT CHEAT. Twenty seconds on the clock, starts now. Rhyming on four and five \u2014 special day. Eleven seconds left \u2014 we think mosh pit is out; I haven't heard of an online mosh pit. Time's up. That is your fifth and final clue."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was Zoom. There we go \u2014 Zoom! We've all seen it, we've all used it. The question is: who got it right, and how do the clues fit? Let's find out right now."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"ONLINE MEET-AND-GREET WITH BACKGROUNDS THAT CHEAT.\" Many people use fake virtual backgrounds on Zoom calls. 2,886 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"OFTEN PERSECUTED WHEN MUTED.\" On Zoom, forgetting you're on mute and getting called out for it is a universal experience. 841 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"SOUNDS FAST...AND IT IS!\" Zoom is the sound of going fast, and the app itself streams video in real time. 501 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"UP CLOSE AND PERSONAL.\" Zoom means to get in close, and the app lets you interact up close with people far away. 30 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"WE ARE GATHERED HERE TODAY.\" Zoom brings groups of people together in one virtual space. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1 winner at $3,000.00. Silver (Clue 2): 30 winners at $83.33 each. Bronze (Clue 3): 501 winners at $3.99 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, if you are that one person \u2014 of course send us a message. Let us know that you won. And if you took a video, we'd love to see it."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Really good job, everybody. My stylist was telling me to button this up right now \u2014 she was adamant behind the camera. Oh yeah, way better. Anyway, big congrats."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Today is your last chance to grab the K-Pop Demon Hunters glass from the Netflix Shop. Everyone who guesses correctly on puzzle two gets a free one \u2014 all you do is pay for shipping."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A big shout to Iris and Athena \u2014 hello! They play every single day. Brambles on Discord asked us to give them some love tonight: shout out to my kids. That parent deserves whatever they ask for. Eat your vegetables. Keep playing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's move on to round two \u2014 seven thousand five hundred dollars up for grabs. Prize pots are the same: three thousand for gold, two thousand five hundred for silver, two thousand for bronze. Let's load the crystal ball. This is it, people \u2014 your last chance to win some money for your weekend."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here's your first clue: BACK TO BASICS. Twenty seconds on the clock, starts now. Congratulations again to our one player who won three thousand dollars \u2014 a lot of money. And everyone who won eighty-three dollars, that's dinner this weekend. Our four-dollar winners, that's some dinner. Time's up. Clano from Fort Worth, Texas said 'army.' Buttery Friends said 'caveman' \u2014 way back to basics, that's about as back to basics as it gets."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: ALL AT ONCE. Twenty seconds on the clock, starts now. Back to basics, all at once \u2014 nearly thirty-one thousand players playing Friday night! You guys are here partying with me, and I love it. Time's up. Green Chopper said 'flash mob' \u2014 all at once, yes, back to basics... I don't know if a flash mob was ever the basic version of anything. Dino Nugget from Long Beach, California said 'Jenga' \u2014 it definitely falls all at once, and technically it's back to basics. But let's look at clue three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: SYNCHRONIZED TRIMMING EVENT. Twenty seconds on the clock, starts now. Back to basics, all at once, synchronized trimming event. Frozen Combo said 'Uno' \u2014 I guess because you're trimming your deck down. Spilling Alarm said 'rock, paper, scissors' \u2014 back to basics, all at once, trimming event \u2014 that's pretty good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: NICHOLSON HAD HIS UPS AND DOWNS. Twenty seconds on the clock, starts now. Back to basics, all at once, synchronized trimming event \u2014 which really threw me for a big loop \u2014 and Nicholson had his ups and downs. Nicholson \u2014 not Nickelson, don't go that direction. Time's up. Creepy Button said 'The Shining' \u2014 Nicholson really did have some ups and downs in The Shining."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five, your fifth and final clue \u2014 good luck everybody: IF A SNOW ANGEL DID STAND UP. Your final twenty seconds starts now. Back to basics, all at once, synchronized trimming event, Nicholson had his ups and downs, if a snow angel did stand up \u2014 I don't think it would be very funny, personally. Time's up."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The answer was jumping jacks. This was apparently a very hard one \u2014 I'll tell you right now, not a lot of people got it right. So if you were one of the few that did, hold on to your seats, peeps."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"IF A SNOW ANGEL DID STAND UP.\" The arm-and-leg motion of a jumping jack looks just like making a snow angel, but standing upright. 717 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"NICHOLSON HAD HIS UPS AND DOWNS.\" Jack Nicholson \u2014 \"Jack\" = jumping jacks, and \"ups and downs\" = the jumping motion. 137 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"SYNCHRONIZED TRIMMING EVENT.\" The arms and legs move in a synchronized scissors-like motion that trims and tones the body. 3 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"ALL AT ONCE.\" Jumping jacks engage the whole body \u2014 arms and legs all moving at once. 8 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"BACK TO BASICS.\" Jumping jacks are one of the most fundamental, basic exercises. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 8 winners at $375.00 each. Silver (Clue 3): 3 winners at $833.33 each. Bronze (Clue 4): 137 winners at $14.59 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done, everybody."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for this episode of Best Guess Live. Congratulations again to all of our winners, including everyone who grabbed the voucher for the K-Pop Demon Hunters glass \u2014 last day, hope you enjoy it. We're here every weekday at eight Eastern, five Pacific. Have a great weekend, come back Monday, and don't forget to bring your best guess!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses \u2014 Round 1: WEDDING, FUNERAL, CHURCH, SPEED DATING, PRINCE"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses \u2014 Round 2: SNOWMAN, GOLF, SHAVING, THE SHINING, ALPHABET"
+          }
+        ]
+      }
+    ]
   }
 ]
