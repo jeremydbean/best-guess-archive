@@ -1471,6 +1471,24 @@ document.addEventListener('focusout', function(e) {
     </div>
   </div>
 
+  <!-- v2 Medal Tier Averages -->
+  <div class="glass-panel p-6 rounded-xl">
+    <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <span class="material-symbols-outlined text-yellow-400">emoji_events</span> v2 Medal Tier Averages
+    </h3>
+    <p class="text-xs text-slate-400 mb-4">Average winners and individual payout per medal tier, across all v2 rounds since the new format launched.</p>
+    <div id="stats-medal-averages" class="grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
+  </div>
+
+  <!-- Most Reused Clue Text -->
+  <div class="glass-panel p-6 rounded-xl">
+    <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <span class="material-symbols-outlined text-cyan-400">repeat</span> Most Reused Clue Text
+    </h3>
+    <p class="text-xs text-slate-400 mb-4">Clue phrases that have appeared in more than one episode, with which puzzles they came from.</p>
+    <ul class="space-y-3" id="stats-reused-clues"></ul>
+  </div>
+
   <!-- Breakdown (legacy compact grid) -->
   <div class="glass-panel p-8 rounded-xl">
     <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-2">Quick Breakdown</h3>
@@ -1706,6 +1724,8 @@ class App {
       nodes.chartAvgWinners = document.getElementById('chart-avg-winners-clue');
       nodes.chartPotDist = document.getElementById('chart-pot-dist');
       nodes.chartPayoutClue = document.getElementById('chart-payout-clue');
+      nodes.medalAverages = document.getElementById('stats-medal-averages');
+      nodes.reusedClues = document.getElementById('stats-reused-clues');
     } else if (name === 'transcripts') {
       nodes.search = document.getElementById('transcript-search');
       nodes.count = document.getElementById('transcript-count');
@@ -3623,6 +3643,29 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
         }
       });
     });
+    const v2GamesList = games.filter(g => g.format === 'v2');
+    const v2Count = v2GamesList.length;
+    const medalAvgs = v2Count ? {
+      gold:   { avgWinners: v2GamesList.reduce((s, g) => s + (Number(g.goldWinners)   || 0), 0) / v2Count, avgPayout: v2GamesList.reduce((s, g) => s + (Number(g.goldPayout)   || 0), 0) / v2Count },
+      silver: { avgWinners: v2GamesList.reduce((s, g) => s + (Number(g.silverWinners) || 0), 0) / v2Count, avgPayout: v2GamesList.reduce((s, g) => s + (Number(g.silverPayout) || 0), 0) / v2Count },
+      bronze: { avgWinners: v2GamesList.reduce((s, g) => s + (Number(g.bronzeWinners) || 0), 0) / v2Count, avgPayout: v2GamesList.reduce((s, g) => s + (Number(g.bronzePayout) || 0), 0) / v2Count },
+      roundCount: v2Count
+    } : null;
+    const clueFreqMap = {};
+    games.forEach(g => {
+      (g.clues || []).forEach((c, i) => {
+        const text = (c.text || '').trim();
+        if (!text) return;
+        if (!clueFreqMap[text]) clueFreqMap[text] = [];
+        clueFreqMap[text].push({ game: g, clueNum: i + 1 });
+      });
+    });
+    const reusedClues = Object.entries(clueFreqMap)
+      .filter(([, entries]) => entries.length > 1)
+      .sort((a, b) => b[1].length - a[1].length)
+      .slice(0, 15)
+      .map(([text, entries]) => ({ text, count: entries.length, entries }));
+
     const records = [
       {icon:'monetization_on', color:'text-yellow-400', label:'Biggest Single Pot', val:'$' + biggestPot.pot.toLocaleString(), sub: biggestPot.secretItem + ' · ' + biggestPot.date},
       {icon:'arrow_downward', color:'text-slate-400', label:'Lowest Amount Won', val: lowestWonEntry ? '$' + lowestWonEntry.r.amt.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : 'N/A', sub: lowestWonEntry ? (lowestWonEntry.r.tier ? lowestWonEntry.r.tier + ' · ' : '') + lowestWonEntry.g.secretItem + ' · ' + lowestWonEntry.g.date : ''},
@@ -3684,6 +3727,8 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       fewestEntries,
       bigPayouts,
       quickBreakdown,
+      medalAvgs,
+      reusedClues,
       charts: {
         sortedByDate,
         timeLabels,
@@ -3919,6 +3964,43 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     if (nodes.statPot) nodes.statPot.innerText = '$' + stats.quickBreakdown.totalPot.toLocaleString();
     if (nodes.statAvgWinners) nodes.statAvgWinners.innerText = stats.quickBreakdown.avgWinners.toLocaleString();
     if (nodes.statAvgClue) nodes.statAvgClue.innerText = 'C' + stats.quickBreakdown.avgClue;
+    if (nodes.medalAverages && stats.medalAvgs) {
+      const ma = stats.medalAvgs;
+      const fmtPayout = n => '$' + Number(n).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const fmtWinners = n => (Math.round(n * 10) / 10).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+      const tiers = [
+        { name: 'Gold',   emoji: '🥇', color: 'text-yellow-400',  border: 'border-yellow-400/30',  bg: 'bg-yellow-900/10',  d: ma.gold   },
+        { name: 'Silver', emoji: '🥈', color: 'text-slate-200',   border: 'border-slate-400/30',   bg: 'bg-slate-800/30',   d: ma.silver },
+        { name: 'Bronze', emoji: '🥉', color: 'text-orange-400',  border: 'border-orange-400/30',  bg: 'bg-orange-900/10',  d: ma.bronze }
+      ];
+      nodes.medalAverages.innerHTML = tiers.map(t => `
+        <div class="rounded-lg border ${t.border} ${t.bg} p-5 text-center">
+          <div class="text-sm font-bold ${t.color} mb-3">${t.emoji} ${esc(t.name)}</div>
+          <div class="flex justify-around gap-4">
+            <div>
+              <div class="text-2xl font-bold text-white">${fmtWinners(t.d.avgWinners)}</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider mt-0.5">Avg Winners</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-green-400">${fmtPayout(t.d.avgPayout)}</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider mt-0.5">Avg Per Winner</div>
+            </div>
+          </div>
+        </div>`).join('') +
+        `<div class="sm:col-span-3 text-xs text-slate-500 text-center">Based on ${ma.roundCount.toLocaleString()} v2 rounds</div>`;
+    }
+    if (nodes.reusedClues) {
+      nodes.reusedClues.innerHTML = stats.reusedClues.length
+        ? stats.reusedClues.map(({ text, count, entries }) => `
+            <li class="border-b border-slate-800/60 pb-3 last:border-0">
+              <div class="flex items-start justify-between gap-3">
+                <span class="text-sm font-medium text-white leading-snug">"${esc(text)}"</span>
+                <span class="shrink-0 text-xs font-bold text-cyan-300 bg-cyan-900/30 border border-cyan-400/20 px-2 py-0.5 rounded-full whitespace-nowrap">${count}×</span>
+              </div>
+              <div class="text-xs text-slate-500 mt-1 leading-relaxed">${entries.map(e => `${esc(e.game.secretItem)} (C${e.clueNum}) · ${esc(e.game.date)}`).join(' &nbsp;&middot;&nbsp; ')}</div>
+            </li>`).join('')
+        : '<li class="text-sm text-slate-400">No clue texts have been reused yet.</li>';
+    }
     this._queueStatsCharts(stats);
     return;
   }
