@@ -3561,16 +3561,17 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       else if (g.pot <= 25000) potBuckets['$15-25K'] += 1;
       else potBuckets['$50K+'] += 1;
     });
-    const payoutByClue = {1:[],2:[],3:[],4:[],5:[]};
+    const payoutByClue = {1:{prize:0,winners:0},2:{prize:0,winners:0},3:{prize:0,winners:0},4:{prize:0,winners:0},5:{prize:0,winners:0}};
     games.forEach(g => {
       const wc = Number(g.winningClue || g.goldClue);
       if (wc < 1 || wc > 5) return;
       const payout = g.format === 'v2' ? Number(g.goldPayout || 0) : this._parseMoneyString(g.winnerPayout);
-      if (payout > 0) payoutByClue[wc].push(payout);
+      const w = Number(g.totalWinners || g.goldWinners || 0);
+      if (payout > 0 && w > 0) { payoutByClue[wc].prize += payout * w; payoutByClue[wc].winners += w; }
     });
     const avgPayoutByClue = [1,2,3,4,5].map(n => {
-      const values = payoutByClue[n];
-      return values.length ? Math.round(values.reduce((a, b) => a + b, 0) / values.length) : 0;
+      const { prize, winners } = payoutByClue[n];
+      return winners ? Math.round(prize / winners) : 0;
     });
     const hostMap = {};
     games.forEach(g => {
