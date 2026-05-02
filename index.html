@@ -3645,11 +3645,13 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     });
     const v2GamesList = games.filter(g => g.format === 'v2');
     const v2Count = v2GamesList.length;
+    const _v2sum = (key) => v2GamesList.reduce((s, g) => s + (Number(g[key]) || 0), 0);
+    const goldTW = _v2sum('goldWinners'), silverTW = _v2sum('silverWinners'), bronzeTW = _v2sum('bronzeWinners');
     const medalAvgs = v2Count ? {
-      gold:   { avgWinners: v2GamesList.reduce((s, g) => s + (Number(g.goldWinners)   || 0), 0) / v2Count, avgPayout: v2GamesList.reduce((s, g) => s + (Number(g.goldPayout)   || 0), 0) / v2Count },
-      silver: { avgWinners: v2GamesList.reduce((s, g) => s + (Number(g.silverWinners) || 0), 0) / v2Count, avgPayout: v2GamesList.reduce((s, g) => s + (Number(g.silverPayout) || 0), 0) / v2Count },
-      bronze: { avgWinners: v2GamesList.reduce((s, g) => s + (Number(g.bronzeWinners) || 0), 0) / v2Count, avgPayout: v2GamesList.reduce((s, g) => s + (Number(g.bronzePayout) || 0), 0) / v2Count },
-      roundCount: v2Count
+      gold:   { avgWinners: goldTW   / v2Count, avgPayout: goldTW   ? v2GamesList.reduce((s, g) => s + (Number(g.goldWinners)   || 0) * (Number(g.goldPayout)   || 0), 0) / goldTW   : 0 },
+      silver: { avgWinners: silverTW / v2Count, avgPayout: silverTW ? v2GamesList.reduce((s, g) => s + (Number(g.silverWinners) || 0) * (Number(g.silverPayout) || 0), 0) / silverTW : 0 },
+      bronze: { avgWinners: bronzeTW / v2Count, avgPayout: bronzeTW ? v2GamesList.reduce((s, g) => s + (Number(g.bronzeWinners) || 0) * (Number(g.bronzePayout) || 0), 0) / bronzeTW : 0 },
+      roundCount: v2Count, totalWinners: { gold: goldTW, silver: silverTW, bronze: bronzeTW }
     } : null;
     const clueFreqMap = {};
     games.forEach(g => {
@@ -3974,20 +3976,20 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
         { name: 'BRONZE', topBorder: 'border-t-orange-500',  labelCls: 'text-orange-400',  payoutCls: 'text-orange-300',  d: ma.bronze }
       ];
       nodes.medalAverages.innerHTML = tiers.map(t => `
-        <div class="rounded-xl border border-slate-700/50 border-t-4 ${t.topBorder} bg-slate-900/60 p-5">
-          <div class="text-xs font-black uppercase tracking-widest ${t.labelCls} mb-4">${esc(t.name)}</div>
-          <div class="space-y-3">
+        <div class="rounded-xl border border-slate-700/50 border-t-4 ${t.topBorder} bg-slate-900/60 px-6 pt-5 pb-6">
+          <div class="text-xs font-black uppercase tracking-widest ${t.labelCls} mb-5">${esc(t.name)}</div>
+          <div class="space-y-4">
             <div>
               <div class="text-3xl font-bold text-white leading-none">${fmtWinners(t.d.avgWinners)}</div>
-              <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Avg Winners per Round</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider mt-1.5">Avg Winners per Round</div>
             </div>
-            <div class="border-t border-slate-700/60 pt-3">
+            <div class="border-t border-slate-700/60 pt-4">
               <div class="text-2xl font-bold ${t.payoutCls} leading-none">${fmtPayout(t.d.avgPayout)}</div>
-              <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Avg Payout per Winner</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider mt-1.5">Typical Payout per Winner</div>
             </div>
           </div>
         </div>`).join('') +
-        `<div class="sm:col-span-3 text-xs text-slate-600 text-center pt-1">Across ${ma.roundCount.toLocaleString()} v2 rounds</div>`;
+        `<div class="sm:col-span-3 text-xs text-slate-600 text-center pt-1">Across ${ma.roundCount.toLocaleString()} v2 rounds · ${ma.totalWinners.gold.toLocaleString()} gold, ${ma.totalWinners.silver.toLocaleString()} silver, ${ma.totalWinners.bronze.toLocaleString()} bronze winners total</div>`;
     }
     if (nodes.reusedClues) {
       nodes.reusedClues.innerHTML = stats.reusedClues.length
