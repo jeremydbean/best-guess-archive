@@ -3967,27 +3967,27 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     if (nodes.medalAverages && stats.medalAvgs) {
       const ma = stats.medalAvgs;
       const fmtPayout = n => '$' + Number(n).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      const fmtWinners = n => (Math.round(n * 10) / 10).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+      const fmtWinners = n => Math.round(n).toLocaleString();
       const tiers = [
-        { name: 'Gold',   emoji: '🥇', color: 'text-yellow-400',  border: 'border-yellow-400/30',  bg: 'bg-yellow-900/10',  d: ma.gold   },
-        { name: 'Silver', emoji: '🥈', color: 'text-slate-200',   border: 'border-slate-400/30',   bg: 'bg-slate-800/30',   d: ma.silver },
-        { name: 'Bronze', emoji: '🥉', color: 'text-orange-400',  border: 'border-orange-400/30',  bg: 'bg-orange-900/10',  d: ma.bronze }
+        { name: 'GOLD',   topBorder: 'border-t-yellow-400',  labelCls: 'text-yellow-400',  payoutCls: 'text-yellow-300',  d: ma.gold   },
+        { name: 'SILVER', topBorder: 'border-t-slate-400',   labelCls: 'text-slate-300',   payoutCls: 'text-slate-200',   d: ma.silver },
+        { name: 'BRONZE', topBorder: 'border-t-orange-500',  labelCls: 'text-orange-400',  payoutCls: 'text-orange-300',  d: ma.bronze }
       ];
       nodes.medalAverages.innerHTML = tiers.map(t => `
-        <div class="rounded-lg border ${t.border} ${t.bg} p-5 text-center">
-          <div class="text-sm font-bold ${t.color} mb-3">${t.emoji} ${esc(t.name)}</div>
-          <div class="flex justify-around gap-4">
+        <div class="rounded-xl border border-slate-700/50 border-t-4 ${t.topBorder} bg-slate-900/60 p-5">
+          <div class="text-xs font-black uppercase tracking-widest ${t.labelCls} mb-4">${esc(t.name)}</div>
+          <div class="space-y-3">
             <div>
-              <div class="text-2xl font-bold text-white">${fmtWinners(t.d.avgWinners)}</div>
-              <div class="text-xs text-slate-500 uppercase tracking-wider mt-0.5">Avg Winners</div>
+              <div class="text-3xl font-bold text-white leading-none">${fmtWinners(t.d.avgWinners)}</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Avg Winners per Round</div>
             </div>
-            <div>
-              <div class="text-2xl font-bold text-green-400">${fmtPayout(t.d.avgPayout)}</div>
-              <div class="text-xs text-slate-500 uppercase tracking-wider mt-0.5">Avg Per Winner</div>
+            <div class="border-t border-slate-700/60 pt-3">
+              <div class="text-2xl font-bold ${t.payoutCls} leading-none">${fmtPayout(t.d.avgPayout)}</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Avg Payout per Winner</div>
             </div>
           </div>
         </div>`).join('') +
-        `<div class="sm:col-span-3 text-xs text-slate-500 text-center">Based on ${ma.roundCount.toLocaleString()} v2 rounds</div>`;
+        `<div class="sm:col-span-3 text-xs text-slate-600 text-center pt-1">Across ${ma.roundCount.toLocaleString()} v2 rounds</div>`;
     }
     if (nodes.reusedClues) {
       nodes.reusedClues.innerHTML = stats.reusedClues.length
