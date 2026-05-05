@@ -11285,7 +11285,11 @@
     "bronzePayout": 3.99,
     "winnerPayout": "$7,500.00",
     "winnerNames": "",
-    "wrongGuesses": "WEDDING, FUNERAL, CHURCH, SPEED DATING, PRINCE"
+    "wrongGuesses": "WEDDING, FUNERAL, CHURCH, SPEED DATING, PRINCE",
+    "bonus": {
+      "title": "K-Pop Demon Hunters Glass",
+      "desc": "Last day! All correct Round 2 answers win a <b>K-Pop Demon Hunters glass</b> from the Netflix Shop (worth $24.95, shipping only)."
+    }
   },
   {
     "date": "Friday, May 1, 2026",

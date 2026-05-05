@@ -281,6 +281,7 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 
 - GitHub Pages reflects the newest commit on `main`.
 - Latest manual import completed: Wednesday, April 29, 2026 (`BROKEN HEART`, `TAMBOURINE`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
+- Friday, May 1, 2026 bonus metadata is attached to both `ZOOM` and `JUMPING JACKS`; audit should have 0 warnings.
 - Desktop database arrows remain visible and clickable while scrolling.
 - Home KPI counters do not cause layout shift.
 - Database details modal shows bonus section for promo dates; verify `g.bonus` is present in games.json and the title is escaped, desc is trusted HTML.
