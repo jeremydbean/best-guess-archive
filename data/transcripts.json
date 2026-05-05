@@ -27066,13 +27066,13 @@
     "date": "Monday, May 4, 2026",
     "host": "Hunter March",
     "secretItems": [
-      "BATTERIES",
+      "BATTERY",
       "LIGHTHOUSE"
     ],
     "rounds": [
       {
         "round": 1,
-        "secretItem": "BATTERIES",
+        "secretItem": "BATTERY",
         "host": "Hunter March",
         "pot": 7500,
         "format": "v2",

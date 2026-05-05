@@ -2151,7 +2151,7 @@
   },
   {
     "date": "Monday, May 4, 2026",
-    "secretItem": "BATTERIES",
+    "secretItem": "BATTERY",
     "pot": 7500,
     "host": "Hunter March",
     "format": "v2",

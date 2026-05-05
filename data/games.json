@@ -11348,31 +11348,31 @@
     "pot": 7500,
     "format": "v2",
     "host": "Hunter March",
-    "secretItem": "BATTERIES",
+    "secretItem": "BATTERY",
     "clues": [
       {
         "text": "SINGLES MEETUP",
         "correct": "3",
         "guesses": "0",
-        "explanation": "Batteries come in singles \u2014 and in a device, they literally meet each other."
+        "explanation": "A battery comes in singles \u2014 and in a device, they literally meet each other."
       },
       {
         "text": "NON-ORGANIC JUICE DISPENSER",
         "correct": "75",
         "guesses": "0",
-        "explanation": "A battery provides power for your device. Do not squeeze your batteries trying to get juice out of them."
+        "explanation": "A battery provides power for your device. Do not squeeze your a battery trying to get juice out of them."
       },
       {
         "text": "OFTEN TRAVELS IN A PACK",
         "correct": "512",
         "guesses": "0",
-        "explanation": "You usually buy batteries in a pack."
+        "explanation": "Batteries usually come in a pack."
       },
       {
         "text": "HAS ITS PLUSES AND MINUSES",
         "correct": "3929",
         "guesses": "0",
-        "explanation": "Batteries have a negative and a positive side."
+        "explanation": "A battery has a negative and a positive side."
       },
       {
         "text": "DAH NAH NAH NAH NAH NAH - CHARGE!",
