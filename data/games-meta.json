@@ -2148,5 +2148,29 @@
     "goldClue": 2,
     "silverClue": 3,
     "bronzeClue": 4
+  },
+  {
+    "date": "Monday, May 4, 2026",
+    "secretItem": "BATTERIES",
+    "pot": 7500,
+    "host": "Hunter March",
+    "format": "v2",
+    "totalWinners": 590,
+    "clueCount": 5,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3
+  },
+  {
+    "date": "Monday, May 4, 2026",
+    "secretItem": "LIGHTHOUSE",
+    "pot": 7500,
+    "host": "Hunter March",
+    "format": "v2",
+    "totalWinners": 1915,
+    "clueCount": 5,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3
   }
 ]

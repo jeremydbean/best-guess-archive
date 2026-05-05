@@ -11342,5 +11342,109 @@
       "title": "K-Pop Demon Hunters Glass",
       "desc": "Last day! All correct Round 2 answers win a <b>K-Pop Demon Hunters glass</b> from the Netflix Shop (worth $24.95, shipping only)."
     }
+  },
+  {
+    "date": "Monday, May 4, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BATTERIES",
+    "clues": [
+      {
+        "text": "SINGLES MEETUP",
+        "correct": "3",
+        "guesses": "0",
+        "explanation": "Batteries come in singles \u2014 and in a device, they literally meet each other."
+      },
+      {
+        "text": "NON-ORGANIC JUICE DISPENSER",
+        "correct": "75",
+        "guesses": "0",
+        "explanation": "A battery provides power for your device. Do not squeeze your batteries trying to get juice out of them."
+      },
+      {
+        "text": "OFTEN TRAVELS IN A PACK",
+        "correct": "512",
+        "guesses": "0",
+        "explanation": "You usually buy batteries in a pack."
+      },
+      {
+        "text": "HAS ITS PLUSES AND MINUSES",
+        "correct": "3929",
+        "guesses": "0",
+        "explanation": "Batteries have a negative and a positive side."
+      },
+      {
+        "text": "DAH NAH NAH NAH NAH NAH - CHARGE!",
+        "correct": "1365",
+        "guesses": "0",
+        "explanation": "That's what a battery does \u2014 it charges."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 3,
+    "silverWinners": 75,
+    "bronzeWinners": 512,
+    "totalWinners": 590,
+    "goldPayout": 1000.0,
+    "silverPayout": 33.33,
+    "bronzePayout": 3.9,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Og Winter Murphy Turfie, Khaki Runner 28",
+    "wrongGuesses": "WALLET, BAR, CAPRI SUN, SPEED DATING, JUICE BOX"
+  },
+  {
+    "date": "Monday, May 4, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "LIGHTHOUSE",
+    "clues": [
+      {
+        "text": "SENDS MIXED SIGNALS",
+        "correct": "13",
+        "guesses": "0",
+        "explanation": "A lighthouse guides boats into harbor and also keeps them away from the perilous land \u2014 mixed signals."
+      },
+      {
+        "text": "MOSTLY WORKS NIGHTS",
+        "correct": "695",
+        "guesses": "0",
+        "explanation": "You usually don't need a lighthouse during the day \u2014 and if you do, that is bad news for your boat."
+      },
+      {
+        "text": "EXPERIENCED TRAVEL GUIDE",
+        "correct": "1207",
+        "guesses": "0",
+        "explanation": "Lighthouses are generally old and weathered, and help guide experienced travelers safely to land."
+      },
+      {
+        "text": "HIGH AND LOW-TECH NAVIGATION SYSTEM",
+        "correct": "462",
+        "guesses": "0",
+        "explanation": "Lighthouses are high in the air, and they have been around long before GPS was invented."
+      },
+      {
+        "text": "FLASHY BEACHFRONT HOME",
+        "correct": "1929",
+        "guesses": "0",
+        "explanation": "It's found near the shore, its whole job is to flash a light, and 'home' is a house \u2014 lighthouse."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 13,
+    "silverWinners": 695,
+    "bronzeWinners": 1207,
+    "totalWinners": 1915,
+    "goldPayout": 230.76,
+    "silverPayout": 3.59,
+    "bronzePayout": 1.65,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Gusty Onion, Mate, Musty Mommy, Boudicca's Revenge",
+    "wrongGuesses": "GPS, RADIO, STARS, SATELLITE, HEADLIGHTS"
   }
 ]
