@@ -11405,7 +11405,7 @@
       {
         "text": "SENDS MIXED SIGNALS",
         "correct": "13",
-        "guesses": "0",
+        "guesses": "6,256",
         "explanation": "A lighthouse guides boats into harbor and also keeps them away from the perilous land \u2014 mixed signals."
       },
       {
@@ -11429,7 +11429,7 @@
       {
         "text": "FLASHY BEACHFRONT HOME",
         "correct": "1929",
-        "guesses": "0",
+        "guesses": "3,247",
         "explanation": "It's found near the shore, its whole job is to flash a light, and 'home' is a house \u2014 lighthouse."
       }
     ],
