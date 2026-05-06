@@ -27299,5 +27299,231 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, May 5, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "HIGH FIVE",
+      "MAYONNAISE"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "HIGH FIVE",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "OVEREXTENDED CREDIT",
+          "NOBODY WANTS TO HANG OUT",
+          "QUINTET OF SOPRANOS",
+          "HAPPENS MORE AFTER A SCORE",
+          "TOP 10 HIT THAT REALLY SLAPS"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "MAYONNAISE",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "OFTEN MIXED UP",
+          "FREQUENTLY GETS PUT ON HOLD",
+          "ESTEEMED CLUB MEMBER",
+          "WHAT'S THE SPREAD?",
+          "A DOLLOP IS VALID TO MAKE TUNA SALAD"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live! Hello — how's it going? I am Hunter March, and happy Cinco de Mayo! Or, well, we could say Quince de Mayo, because we're giving away fifteen thousand dollars as per usual."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "To celebrate the holiday, here are the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds. Each round has one puzzle. Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round we're going to load our crystal ball with a secret item — it could be anything. Then I'll give you five clues, but remember the clues are written like riddles; they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue you get twenty seconds to submit an answer, but you only get one best guess per round — not one per clue, one per round — so make sure you're confident before you lock it in. It has to be the exact answer, and we do not accept typos. Bottom line: you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars — a lot of money. The second earliest clue splits the silver pot of twenty-five hundred — still a lot of money. The third earliest clue splits the bronze pot of two thousand — which is still a lot of money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you're the only one to give a correct answer on one of those clues, you take the whole pot for that medal."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't forget — if possible, take a video of you and your friends playing Best Guess Live. Maybe you're having a party right now — great time to film it. Send us the video with the hashtag #BestGuessLive at Netflix Games, at Hunter March. We love seeing it. Enough talk. Let's win some money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is worth seven thousand five hundred dollars. Let's load the crystal ball — ooh, fancy. Okay, let's get right into it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: OVEREXTENDED CREDIT. Twenty seconds on the clock, starts now. A lot of you might have just gotten flashbacks. Good luck. Time's up. Mrs. Crazy House said 'I owe you' — the contractual IOU. Befuddled Nate said 'my MasterCard' — if the answer is MasterCard, you lost because you put 'my MasterCard.' That is so funny, and it explains why you are in financial trouble."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: NOBODY WANTS TO HANG OUT. Twenty seconds on the clock, starts now. Time's up. Ham Sandwich said 'a window' — what a crazy clue that would have been for a window. Oh my gosh, you guys are dark today."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: QUINTET OF SOPRANOS. Twenty seconds on the clock, starts now. Thirty thousand players in here right now trying to get to seven thousand five hundred dollars. Unicorn Jerky 138 said 'NSYNC' — five, in sync. Pretty good. Cuddly Soybean said 'detention' — quintet of sopranos, nobody wants to hang out... detention. Maybe more for that. Clue four is going to narrow this down."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: HAPPENS MORE AFTER A SCORE. Twenty seconds on the clock, starts now. Time's up. Official Flex God said 'cheer' — yes, you cheer after a score, and sopranos maybe because they're cheering the whole time. Jimmy Gem 16 said 'seven years ago' — four score and seven years ago, happens after a score. Really good — you're smart, and also not that smart."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five, your fifth and final clue: TOP 10 HIT THAT REALLY SLAPS. Twenty seconds on the clock, starts now. I am telling you, that really slaps. Overextended credit, nobody wants to hang out, quintet of sopranos, happens more after a score, top ten hit that really slaps. Time's up — let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was HIGH FIVE. I think I gave you guys a couple of those during the puzzle. Who figured it out — who saw through my façade of fives? Let's take a look at all the clues to find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"TOP 10 HIT THAT REALLY SLAPS.\" Your five fingers plus another five fingers slap up top. 1,507 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"HAPPENS MORE AFTER A SCORE.\" Fans and athletes high five in sports after points are scored. 1,456 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"QUINTET OF SOPRANOS.\" A quintet is five, and sopranos sing high. 583 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"NOBODY WANTS TO HANG OUT.\" No one wants to go for a high five and be left hanging. 55 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"OVEREXTENDED CREDIT.\" You raise your arm over your head and extend it to give props. 32 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 32 winners at $93.75 each. Silver (Clue 2): 55 winners at $45.00 each. Bronze (Clue 3): 583 winners at $3.43 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Coco Moose 94, Polish Thunder, Slick Wick, Kayla Rahey — a bunch of gold guessers. Congrats. And we've got fifty-five silvers for forty-five bucks each, and a bunch of bronzes for three dollars and forty-three cents. Congratulations to all of our winners on round one."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Let's just keep this rollin' — I know you guys have big plans tonight. Seven thousand five hundred dollars up for grabs for round two. Prize spots are the same: three thousand for gold, twenty-five hundred for silver, two thousand for bronze. Let's load the crystal ball. Over thirty-two thousand people playing — here is your first clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: OFTEN MIXED UP. Twenty seconds on the clock, starts now. Often mixed up — I'm mixed up too. I'm playing the game with you. Do I know the answer? Yes. Do I forget? Yes. Time's up. Energetic Void said 'Sir Mix-a-Lot' — that is often mixed up. Good guess. Clue number two might get us closer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: FREQUENTLY GETS PUT ON HOLD. Twenty seconds on the clock, starts now. Often mixed up, frequently gets put on hold. Time's up. Biscuits Triscuits 63 said 'baby koala' — notoriously, they have the hardest time with customer service. Hardy Ravioli 155 from Demonte, Indiana said 'mail' — you used to put your mail on hold. Is that a thing? I've just been letting it stack up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: ESTEEMED CLUB MEMBER. Twenty seconds on the clock, starts now. I'm a big club guy myself — and if I were, the answer is definitely not me. Time's up. Sconebrain said 'a nine iron' — frequently put on hold, I'd say that's one of the more frequently used clubs. Brucey Brucey 0509 said 'DJ' — esteemed club member, they hold the music, they're often mixed up. DJ is actually a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: WHAT'S THE SPREAD? Twenty seconds on the clock, starts now. I am really trying to make DJ work for 'what's the spread' — maybe it's like the spread of the dial, the bass, the treble. I don't know, I'm trying to help you out. Time's up. Gothic Manila 247 said 'poker' — definitely a spread in gambling. Monk Dunk 2 said 'man spread' — it's a good guess. I don't think it's a good thing and they should stop. But it is a good guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five, your fifth and final clue: A DOLLOP IS VALID TO MAKE TUNA SALAD. The rhymes are back, baby! Twenty seconds on the clock, starts now. Listen — I think you guys are getting it. And regardless, celebrate today because it's Cinco de Mayo. Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Oh ho — yeah, the answer was mayo. Mayonnaise. In fact, this might have been the only day where the answer was on screen for a lot of the episode. Let's take a look at the clues to find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"A DOLLOP IS VALID TO MAKE TUNA SALAD.\" A dollop of mayo is used to make tuna salad. 4,364 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"WHAT'S THE SPREAD?\" Mayo is a spread — you spread it on your bread. 1,210 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"ESTEEMED CLUB MEMBER.\" Mayo is the classic ingredient of a club sandwich. 285 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"FREQUENTLY GETS PUT ON HOLD.\" People often say \"Hold the mayo.\" 108 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"OFTEN MIXED UP.\" Mayo is commonly mixed into other foods. 151 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 151 winners at $19.86 each. Silver (Clue 2): 108 winners at $23.15 each. Bronze (Clue 3): 285 winners at $7.02 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We've got Grim, Doctor Perry Falls, Silence is Lost, Cosmic Genius — I'm surprised that person hasn't won more. First time I'm seeing them and yet they're a genius of the entire cosmos. A hundred and eight silver winners, two hundred and eighty-five bronze winners — a bunch of you get to go celebrate tonight. I hope you guys have a great time. Be safe, have fun this weekend, whatever your plans are. Be smart about it."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for tonight's Best Guess Live. Congratulations again to all of our winners. We hope you all have a very festive and fun Cinco de Mayo. We're here every weekday at eight Eastern, five Pacific. Come back tomorrow, and don't forget to bring your best guess!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses — Round 1: CHEER, MARIACHI BAND, PIÑATA, MARIACHI, DEBT"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses — Round 2: MARGARITA, GUACAMOLE, SALAD, TWINS, SALSA"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -11450,5 +11450,109 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Gusty Onion, Mate, Musty Mommy, Boudicca's Revenge",
     "wrongGuesses": "GPS, RADIO, STARS, SATELLITE, HEADLIGHTS"
+  },
+  {
+    "date": "Tuesday, May 5, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "HIGH FIVE",
+    "clues": [
+      {
+        "text": "OVEREXTENDED CREDIT",
+        "correct": "32",
+        "guesses": "0",
+        "explanation": "You raise your arm over your head and extend it to give props."
+      },
+      {
+        "text": "NOBODY WANTS TO HANG OUT",
+        "correct": "55",
+        "guesses": "0",
+        "explanation": "No one wants to go for a high five and be left hanging."
+      },
+      {
+        "text": "QUINTET OF SOPRANOS",
+        "correct": "583",
+        "guesses": "0",
+        "explanation": "A quintet is five, and sopranos sing high."
+      },
+      {
+        "text": "HAPPENS MORE AFTER A SCORE",
+        "correct": "1456",
+        "guesses": "0",
+        "explanation": "Fans and athletes high five in sports after points are scored."
+      },
+      {
+        "text": "TOP 10 HIT THAT REALLY SLAPS",
+        "correct": "1507",
+        "guesses": "0",
+        "explanation": "Your five fingers plus another five fingers slap up top."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 32,
+    "silverWinners": 55,
+    "bronzeWinners": 583,
+    "totalWinners": 670,
+    "goldPayout": 93.75,
+    "silverPayout": 45.0,
+    "bronzePayout": 3.43,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Coco Moose 94, Polish Thunder, Slick Wick, Kayla Rahey",
+    "wrongGuesses": "CHEER, MARIACHI BAND, PI\u00d1ATA, MARIACHI, DEBT"
+  },
+  {
+    "date": "Tuesday, May 5, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MAYONNAISE",
+    "clues": [
+      {
+        "text": "OFTEN MIXED UP",
+        "correct": "151",
+        "guesses": "0",
+        "explanation": "Mayo is commonly mixed into other foods."
+      },
+      {
+        "text": "FREQUENTLY GETS PUT ON HOLD",
+        "correct": "108",
+        "guesses": "0",
+        "explanation": "People often say \"Hold the mayo.\""
+      },
+      {
+        "text": "ESTEEMED CLUB MEMBER",
+        "correct": "285",
+        "guesses": "0",
+        "explanation": "Mayo is the classic ingredient of a club sandwich."
+      },
+      {
+        "text": "WHAT'S THE SPREAD?",
+        "correct": "1210",
+        "guesses": "0",
+        "explanation": "Mayo is a spread \u2014 you spread it on your bread."
+      },
+      {
+        "text": "A DOLLOP IS VALID TO MAKE TUNA SALAD",
+        "correct": "4364",
+        "guesses": "0",
+        "explanation": "A dollop of mayo is used to make tuna salad."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 151,
+    "silverWinners": 108,
+    "bronzeWinners": 285,
+    "totalWinners": 544,
+    "goldPayout": 19.86,
+    "silverPayout": 23.15,
+    "bronzePayout": 7.02,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Grim, Doctor Perry Falls, Silence is Lost, Cosmic Genius",
+    "wrongGuesses": "MARGARITA, GUACAMOLE, SALAD, TWINS, SALSA"
   }
 ]
