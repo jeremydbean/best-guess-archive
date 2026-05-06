@@ -2355,15 +2355,15 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 
 **\`date\`**: \`"Weekday, Month D, YYYY"\`. Use today's date unless explicitly stated otherwise.
 
-**\`clues\`**: Exact text from screenshots only — ALL CAPS as shown on screen. Clue 1 is the hardest (shown first), Clue 5 is easiest (shown last).
+**\`clues\`**: Exact text from screenshots only — ALL CAPS as shown on screen. Clue 1 is the hardest (shown first), Clue 5 is easiest (shown last). Also populate \`correct\` (number who answered correctly on that clue) and \`guesses\` (total guesses submitted on that clue) from the results screenshots — use comma-formatted strings exactly as shown on screen (e.g. \`"3,281"\`).
 \`\`\`json
 "clues": {
   "round1": [
-    {"number": 1, "text": "EXACT SCREEN TEXT"},
-    {"number": 2, "text": "..."},
-    {"number": 3, "text": "..."},
-    {"number": 4, "text": "..."},
-    {"number": 5, "text": "..."}
+    {"number": 1, "text": "EXACT SCREEN TEXT", "correct": "N", "guesses": "N,NNN"},
+    {"number": 2, "text": "...", "correct": "N", "guesses": "N,NNN"},
+    {"number": 3, "text": "...", "correct": "N", "guesses": "N,NNN"},
+    {"number": 4, "text": "...", "correct": "N", "guesses": "N,NNN"},
+    {"number": 5, "text": "...", "correct": "N", "guesses": "N,NNN"}
   ],
   "round2": [ ...same structure... ]
 }
