@@ -2464,7 +2464,8 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 
   // Tip jar modal — opens from nav button
   openTipJar() {
-    const { cashapp: cashApp, paypal } = this._tipDefaults();
+    const cashApp = 'https://cash.app/$JeremyBean';
+    const paypal  = 'https://paypal.me/KindaCharming';
     const esc = (v) => this._escapeHtml(v);
     document.getElementById('modal-backdrop').classList.remove('hidden');
     document.getElementById('modal-content').innerHTML = `
