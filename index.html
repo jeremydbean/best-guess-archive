@@ -2051,8 +2051,7 @@ class App {
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
     if (name === 'home') {
-      this.renderHomeStats(); 
-      this._applyTipLinks();
+      this.renderHomeStats();
       // --- Fix: Rebind How to Play button event ---
       setTimeout(() => {
         const btn = document.querySelector('button[onclick*="openHowToPlay"]');
