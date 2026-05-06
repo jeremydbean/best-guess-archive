@@ -1483,7 +1483,8 @@ document.addEventListener('focusout', function(e) {
       <span class="material-symbols-outlined text-yellow-400">emoji_events</span> v2 Medal Tier Averages
     </h3>
     <p class="text-xs text-slate-400 mb-4">Average winners and individual payout per medal tier, across all v2 rounds since the new format launched.</p>
-    <div id="stats-medal-averages" class="grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
+    <div id="stats-medal-averages" class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-2"></div>
+    <div id="stats-medal-footer" class="text-xs text-slate-500 text-center mt-1"></div>
   </div>
 
   <!-- Most Reused Clue Text -->
@@ -1731,6 +1732,7 @@ class App {
       nodes.chartPotDist = document.getElementById('chart-pot-dist');
       nodes.chartPayoutClue = document.getElementById('chart-payout-clue');
       nodes.medalAverages = document.getElementById('stats-medal-averages');
+      nodes.medalFooter = document.getElementById('stats-medal-footer');
       nodes.reusedClues = document.getElementById('stats-reused-clues');
     } else if (name === 'transcripts') {
       nodes.search = document.getElementById('transcript-search');
@@ -3983,7 +3985,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
         { name: 'BRONZE', topBorder: 'border-t-orange-500',  labelCls: 'text-orange-400',  payoutCls: 'text-orange-300',  d: ma.bronze }
       ];
       nodes.medalAverages.innerHTML = tiers.map(t => `
-        <div class="rounded-xl border-l border-r border-b border-slate-700/50 border-t-4 ${t.topBorder} bg-slate-900/60 px-6 pt-10 pb-6">
+        <div class="glass-panel rounded-xl border-t-4 ${t.topBorder} px-6 pb-6 pt-12">
           <div class="text-xs font-black uppercase tracking-widest ${t.labelCls} mb-5">${esc(t.name)}</div>
           <div class="space-y-4">
             <div>
@@ -3995,8 +3997,8 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
               <div class="text-xs text-slate-500 uppercase tracking-wider mt-1.5">Typical Payout per Winner</div>
             </div>
           </div>
-        </div>`).join('') +
-        `<div class="sm:col-span-3 text-xs text-slate-600 text-center pt-1">Across ${ma.roundCount.toLocaleString()} v2 rounds · ${ma.totalWinners.gold.toLocaleString()} gold, ${ma.totalWinners.silver.toLocaleString()} silver, ${ma.totalWinners.bronze.toLocaleString()} bronze winners total</div>`;
+        </div>`).join('');
+      if (nodes.medalFooter) nodes.medalFooter.textContent = `Across ${ma.roundCount.toLocaleString()} v2 rounds · ${ma.totalWinners.gold.toLocaleString()} gold, ${ma.totalWinners.silver.toLocaleString()} silver, ${ma.totalWinners.bronze.toLocaleString()} bronze winners total`;
     }
     if (nodes.reusedClues) {
       nodes.reusedClues.innerHTML = stats.reusedClues.length
