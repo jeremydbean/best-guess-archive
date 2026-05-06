@@ -3980,12 +3980,12 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       const fmtPayout = n => '$' + Number(n).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
       const fmtWinners = n => Math.round(n).toLocaleString();
       const tiers = [
-        { name: 'GOLD',   topBorder: 'border-t-yellow-400',  labelCls: 'text-yellow-400',  payoutCls: 'text-yellow-300',  d: ma.gold   },
-        { name: 'SILVER', topBorder: 'border-t-slate-400',   labelCls: 'text-slate-300',   payoutCls: 'text-slate-200',   d: ma.silver },
-        { name: 'BRONZE', topBorder: 'border-t-orange-500',  labelCls: 'text-orange-400',  payoutCls: 'text-orange-300',  d: ma.bronze }
+        { name: 'GOLD',   topColor: '#facc15', labelCls: 'text-yellow-400',  payoutCls: 'text-yellow-300',  d: ma.gold   },
+        { name: 'SILVER', topColor: '#94a3b8', labelCls: 'text-slate-300',   payoutCls: 'text-slate-200',   d: ma.silver },
+        { name: 'BRONZE', topColor: '#f97316', labelCls: 'text-orange-400',  payoutCls: 'text-orange-300',  d: ma.bronze }
       ];
       nodes.medalAverages.innerHTML = tiers.map(t => `
-        <div class="glass-panel rounded-xl border-t-4 ${t.topBorder} px-6 pb-6 pt-12">
+        <div class="glass-panel rounded-xl px-6 pb-6" style="border-top: 4px solid ${t.topColor}; padding-top: 3rem;">
           <div class="text-xs font-black uppercase tracking-widest ${t.labelCls} mb-5">${esc(t.name)}</div>
           <div class="space-y-4">
             <div>
