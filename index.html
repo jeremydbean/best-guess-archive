@@ -149,6 +149,7 @@
   .host-cartoon-art.is-low-left { --host-x: 49%; --host-y: 61%; --host-scale: 0.99; }
   .host-cartoon-layer.is-low-right,
   .host-cartoon-art.is-low-right { --host-x: 51%; --host-y: 61%; --host-scale: 0.99; }
+  .host-cartoon-art.is-howie-belly { --host-y: 53%; }
   @media (max-width: 640px) {
     .host-cartoon-art {
       width: var(--host-w, min(88vw, 27.5rem));
@@ -2586,6 +2587,15 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     return String(s || '').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g, '');
   }
 
+  _getAcceptedAnswers(game) {
+    const answer = this._normalizeAnswer(game?.secretItem);
+    const accepted = new Set([answer]);
+    if (game?.date === 'Tuesday, May 5, 2026' && answer === 'mayonnaise') {
+      accepted.add('mayo');
+    }
+    return accepted;
+  }
+
   _pickHostCartoon(hostName) {
     const host = String(hostName || '').toLowerCase();
     const hostSets = [];
@@ -2652,7 +2662,8 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       return;
     }
     layer.className = `host-cartoon-layer ${cartoon.placement}`;
-    layer.innerHTML = `<img class="host-cartoon-art ${cartoon.placement}" src="${this._escapeHtml(cartoon.src)}" alt="">`;
+    const variantClass = cartoon.src.includes('howie-mandel-belly-hoodie') ? ' is-howie-belly' : '';
+    layer.innerHTML = `<img class="host-cartoon-art ${cartoon.placement}${variantClass}" src="${this._escapeHtml(cartoon.src)}" alt="">`;
   }
 
   async startRandomGame() {
@@ -2876,13 +2887,13 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       if (!input) return;
 
       const guess  = this._normalizeAnswer(input);
-      const answer = this._normalizeAnswer(this.currentGame.secretItem);
+      const acceptedAnswers = this._getAcceptedAnswers(this.currentGame);
       inputEl.disabled = true;
       inputEl.value = '';
       // Store the user's guess for summary
       this.lastGuess = input;
 
-      if (guess === answer) {
+      if (acceptedAnswers.has(guess)) {
         this.clearTimers();
         const n = this.currentClueIndex + 1;
         const g = this.currentGame;
