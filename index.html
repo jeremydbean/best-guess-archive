@@ -88,9 +88,77 @@
     background-attachment: fixed;
   }
   /* Make play layout transparent so the body background shows through */
-  body.in-play #play-game-layout { background: transparent; }
-  body.in-play #play-top-bar { background: transparent; }
+  body.in-play #play-game-layout {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+  }
+  body.in-play #play-top-bar {
+    position: relative;
+    z-index: 3;
+    background: linear-gradient(180deg, rgba(2,6,22,0.66), rgba(2,6,22,0.22) 72%, transparent);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.95), 0 0 18px rgba(0,0,0,0.75);
+  }
+  body.in-play #clue-stack,
+  body.in-play #timer-row,
+  body.in-play #input-container { position: relative; z-index: 2; }
   body.in-play #input-container { background: rgba(2,6,22,0.85) !important; backdrop-filter: blur(10px); }
+  .host-cartoon-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .host-cartoon-layer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: transparent;
+  }
+  .host-cartoon-art {
+    position: absolute;
+    left: var(--host-x, 50%);
+    top: var(--host-y, 59%);
+    width: var(--host-w, min(62vw, 31rem));
+    max-width: 100vw;
+    transform: translate(-50%, -50%) scale(var(--host-scale, 1));
+    opacity: 1;
+    filter: drop-shadow(0 1.3rem 2.8rem rgba(0,0,0,0.58)) saturate(1.06) contrast(1.02);
+  }
+  .play-ready-panel {
+    position: relative;
+    z-index: 3;
+    padding: 1rem 1rem 1.15rem;
+    border-radius: 1.5rem;
+    background: radial-gradient(circle at 50% 0%, rgba(15,23,42,0.72), rgba(2,6,22,0.86) 70%);
+    box-shadow: 0 1.25rem 3rem rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.12);
+    backdrop-filter: blur(6px);
+  }
+  .play-ready-label {
+    color: rgba(255,255,255,0.92);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.95), 0 0 18px rgba(0,0,0,0.88);
+  }
+  .host-cartoon-layer.is-left,
+  .host-cartoon-art.is-left { --host-x: 49%; --host-y: 59%; --host-scale: 1; }
+  .host-cartoon-layer.is-center,
+  .host-cartoon-art.is-center { --host-x: 50%; --host-y: 58%; --host-scale: 1.01; }
+  .host-cartoon-layer.is-right,
+  .host-cartoon-art.is-right { --host-x: 51%; --host-y: 59%; --host-scale: 1; }
+  .host-cartoon-layer.is-low-left,
+  .host-cartoon-art.is-low-left { --host-x: 49%; --host-y: 61%; --host-scale: 0.99; }
+  .host-cartoon-layer.is-low-right,
+  .host-cartoon-art.is-low-right { --host-x: 51%; --host-y: 61%; --host-scale: 0.99; }
+  @media (max-width: 640px) {
+    .host-cartoon-art {
+      width: var(--host-w, min(88vw, 27.5rem));
+      opacity: 1;
+    }
+    .host-cartoon-art.is-left,
+    .host-cartoon-art.is-low-left { --host-x: 48%; }
+    .host-cartoon-art.is-right,
+    .host-cartoon-art.is-low-right { --host-x: 52%; }
+  }
   .bgl-result-screen {
     position: relative;
     min-height: 100vh;
@@ -887,6 +955,8 @@ document.addEventListener('focusout', function(e) {
       <span class="material-symbols-outlined" style="font-size:20px;line-height:1">group</span>
     </div>
   </div>
+
+  <div class="host-cartoon-layer" id="host-cartoon-layer" aria-hidden="true"></div>
 
   <!-- Clue stack — all clues, chronological: clue 1 at the bottom, newest clue at the top.
        flex-col-reverse pins items at the bottom and renders the LAST DOM child at the visual top. -->
@@ -2516,6 +2586,67 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     return String(s || '').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g, '');
   }
 
+  _pickHostCartoon(hostName) {
+    const host = String(hostName || '').toLowerCase();
+    const hostSets = [];
+    if (host.includes('howie') && host.includes('alexa')) {
+      hostSets.push([
+        'assets/hosts/generated/howie-mandel-alexa-bliss-duo.png'
+      ]);
+    }
+    if (host.includes('howie') && host.includes('austin')) {
+      hostSets.push([
+        'assets/hosts/generated/howie-mandel-austin-show-duo.png'
+      ]);
+    }
+    if (host.includes('jade') || host.includes('catapa') || host.includes('catta')) {
+      hostSets.push([
+        'assets/hosts/generated/jade-catapa-black-top.png'
+      ]);
+    }
+    if (host.includes('hunter')) {
+      hostSets.push([
+        'assets/hosts/generated/hunter-march-black-game.png',
+        'assets/hosts/generated/hunter-march-gold-game.png',
+        'assets/hosts/generated/hunter-march-tux.png',
+        'assets/hosts/generated/hunter-march-dark-blazer.png'
+      ]);
+    }
+    if (!hostSets.length && (host.includes('howie') || host.includes('mandel') || host.includes('handel'))) {
+      hostSets.push([
+        'assets/hosts/generated/howie-mandel-black-game.png',
+        'assets/hosts/generated/howie-mandel-leather.png',
+        'assets/hosts/generated/howie-mandel-chef-denim.png',
+        'assets/hosts/generated/howie-mandel-belly-hoodie.png'
+      ]);
+    }
+    if (host.includes('anthony') || host.includes('anderson')) {
+      hostSets.push([
+        'assets/hosts/generated/anthony-anderson-brown-game.png'
+      ]);
+    }
+    if (!hostSets.length) return null;
+    const set = hostSets[Math.floor(Math.random() * hostSets.length)];
+    const placements = ['is-left', 'is-center', 'is-right', 'is-low-left', 'is-low-right'];
+    return {
+      src: set[Math.floor(Math.random() * set.length)],
+      placement: placements[Math.floor(Math.random() * placements.length)]
+    };
+  }
+
+  _renderHostCartoon() {
+    const layer = document.getElementById('host-cartoon-layer');
+    if (!layer) return;
+    const cartoon = this._pickHostCartoon(this.currentGame?.host);
+    if (!cartoon) {
+      layer.className = 'host-cartoon-layer';
+      layer.innerHTML = '';
+      return;
+    }
+    layer.className = `host-cartoon-layer ${cartoon.placement}`;
+    layer.innerHTML = `<img class="host-cartoon-art ${cartoon.placement}" src="${this._escapeHtml(cartoon.src)}" alt="">`;
+  }
+
   async startRandomGame() {
     this.clearTimers();
     // Play needs the full clues array; init only loads games-meta.json.
@@ -2537,6 +2668,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     this.currentGame = playableGames[idx];
     this.currentClueIndex = 0;
     this.gameStarted = false;
+    this._renderHostCartoon();
 
     document.getElementById('game-date').innerText = this.currentGame.date;
 
@@ -2565,12 +2697,14 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     const stackEl = document.getElementById('clue-stack');
     if (stackEl) {
       stackEl.innerHTML = `
-        <div class="flex flex-col items-center justify-center space-y-6 w-full h-full pb-8">
-          <div class="text-slate-400 font-medium text-lg tracking-widest uppercase">Ready to play?</div>
+        <div class="flex flex-col items-center justify-center w-full h-full pb-8">
+          <div class="play-ready-panel flex flex-col items-center gap-5">
+          <div class="play-ready-label font-display font-bold text-2xl md:text-3xl tracking-widest uppercase">Ready to play?</div>
           <button class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-bold text-xl md:text-2xl flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_40px_rgba(37,99,235,0.6)] transition transform hover:scale-105" onclick="app.startGameplay()">
             <span class="material-symbols-outlined text-3xl">play_circle</span>
             START GAME
           </button>
+          </div>
         </div>
       `;
     }
