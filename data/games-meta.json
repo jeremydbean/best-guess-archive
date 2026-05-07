@@ -2220,5 +2220,29 @@
     "goldClue": 1,
     "silverClue": 2,
     "bronzeClue": 3
+  },
+  {
+    "date": "Thursday, May 7, 2026",
+    "secretItem": "COTTON CANDY",
+    "pot": 7500,
+    "host": "Hunter March",
+    "format": "v2",
+    "totalWinners": 1374,
+    "clueCount": 5,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3
+  },
+  {
+    "date": "Thursday, May 7, 2026",
+    "secretItem": "KNOT",
+    "pot": 7500,
+    "host": "Hunter March",
+    "format": "v2",
+    "totalWinners": 1766,
+    "clueCount": 5,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3
   }
 ]
