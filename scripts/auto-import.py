@@ -152,7 +152,11 @@ def fetch_rss_videos():
         published_str = entry.findtext("atom:published", namespaces=ns) or ""
         if video_id and published_str:
             published_dt = datetime.fromisoformat(published_str.replace("Z", "+00:00"))
-            videos.append((video_id, title, published_dt))
+            # Prefer the air date embedded in the title (e.g. "Best Guess Live (May 6, 2026)")
+            # over the RSS publish date, which is often the following morning.
+            title_dt = archive_datetime_from_title(title)
+            episode_dt = title_dt if title_dt else published_dt
+            videos.append((video_id, title, episode_dt))
     videos.sort(key=lambda v: v[2])  # oldest first
     return videos
 
@@ -491,10 +495,10 @@ def apply_import(data: dict) -> bool:
         transcripts.append(build_stub_transcript(episode_date, data.get("games", [])))
 
     with open("data/games.json", "w", encoding="utf-8") as f:
-        json.dump(games, f, indent=2)
+        json.dump(games, f, indent=2, ensure_ascii=False)
         f.write("\n")
     with open("data/transcripts.json", "w", encoding="utf-8") as f:
-        json.dump(transcripts, f, indent=2)
+        json.dump(transcripts, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
     return True
