@@ -204,7 +204,7 @@ def format_archive_date(dt: datetime) -> str:
 def get_imported_dates() -> set:
     """Return dates already present in games.json."""
     try:
-        with open("data/games.json") as f:
+        with open("data/games.json", encoding="utf-8") as f:
             return {g["date"] for g in json.load(f)}
     except (FileNotFoundError, json.JSONDecodeError):
         return set()
@@ -213,7 +213,7 @@ def get_imported_dates() -> set:
 def load_skip_ids() -> set:
     """Load manually excluded video IDs from scripts/skip-videos.txt."""
     try:
-        with open("scripts/skip-videos.txt") as f:
+        with open("scripts/skip-videos.txt", encoding="utf-8") as f:
             return {line.split("#")[0].strip() for line in f if line.split("#")[0].strip()}
     except FileNotFoundError:
         return set()
@@ -277,7 +277,7 @@ def call_claude(transcript_text: str, episode_date: str, video_title: str) -> di
     """
     client = anthropic.Anthropic()
 
-    with open("data/games.json") as f:
+    with open("data/games.json", encoding="utf-8") as f:
         all_games = json.load(f)
     schema_games = json.dumps(all_games[-4:], indent=2)
 
@@ -468,9 +468,9 @@ def apply_import(data: dict) -> bool:
     Write parsed episode data into games.json and transcripts.json.
     Returns True if anything was written.
     """
-    with open("data/games.json") as f:
+    with open("data/games.json", encoding="utf-8") as f:
         games = json.load(f)
-    with open("data/transcripts.json") as f:
+    with open("data/transcripts.json", encoding="utf-8") as f:
         transcripts = json.load(f)
 
     existing_keys = {(g["date"], g.get("secretItem")) for g in games}
@@ -490,10 +490,10 @@ def apply_import(data: dict) -> bool:
     if episode_date not in existing_transcript_dates:
         transcripts.append(build_stub_transcript(episode_date, data.get("games", [])))
 
-    with open("data/games.json", "w") as f:
+    with open("data/games.json", "w", encoding="utf-8") as f:
         json.dump(games, f, indent=2)
         f.write("\n")
-    with open("data/transcripts.json", "w") as f:
+    with open("data/transcripts.json", "w", encoding="utf-8") as f:
         json.dump(transcripts, f, indent=2)
         f.write("\n")
 
