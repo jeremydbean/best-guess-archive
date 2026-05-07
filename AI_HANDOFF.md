@@ -1,6 +1,6 @@
 # AI Handoff
 
-Last updated: 2026-04-29
+Last updated: 2026-05-07
 
 ## Current Branch
 
@@ -8,13 +8,20 @@ Last updated: 2026-04-29
 
 ## Latest Known Implementation Commit
 
-- Current commit - Match Good Try result text
+- Current commit - Year-based data sharding (games-2025.json, games-2026.json)
 - `bc0a690` - Bonus indicator opens highlighted details
 - `e47f7e4` - Reformat April 27 transcript to canonical Results layout
 - `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
 - `fbb8b4a` - Reformat all Dec/Jan/Feb/Mar transcripts to match established Results format
 
 ## Current State
+
+- **Year-based data sharding**: `data/games.json` has been split into per-year shard files — `data/games-2025.json` (36 games) and `data/games-2026.json` (179+ games). `data/games.json` is kept as a read-only backup but is **no longer authoritative**. All tooling reads from and writes to the year shards.
+  - `data/games-meta.json` is now a `{years: [...], games: [...]}` object instead of a bare array. `years` lists the available shard years. `games` is the lightweight meta array used by the home page.
+  - `tools/audit-data.mjs` reads from all `data/games-YYYY.json` shards (scanning the directory), regenerates `games-meta.json` as the `{years, games}` object.
+  - `scripts/auto-import.py` writes new games to the correct `data/games-YYYY.json` shard based on the episode year. If a new-year shard does not exist it is created automatically.
+  - `index.html` `init()` parses the new meta format; `_ensureFullGamesLoaded()` fetches all year shards in parallel; `refreshStats()` also loads from shards. A `_availableYears` property drives which shards to fetch; falls back to `['2025','2026']` if meta load failed.
+  - When a brand-new year starts: auto-import creates `data/games-YYYY.json` automatically; `npm run audit:fix` adds the new year to `games-meta.json`; no manual steps needed.
 
 - GitHub Pages publishes from `main`.
 - Main-only workflow is in effect. Do not create branches; remove stale non-main branches after confirming their commits are already represented on `main`.
@@ -23,9 +30,9 @@ Last updated: 2026-04-29
 - **Admin panel removed**: All game/transcript updates are now done by AI agents (Claude/Codex) directly editing the data files and committing. See "Daily Update Workflow" below.
 - **Bonus/promo data migrated**: `bonusMap` moved from hardcoded JS in `index.html` to a `bonus: {title, desc}` field on each game in `games.json`. Rendering code reads `g.bonus` directly. `bonus.desc` may contain safe HTML (`<br>` and `<b>` tags).
 - **Scripts cleaned up**: `scripts/` directory removed entirely; `import_transcripts_from_docx.py`, `admin-panel-archive.js`, and `KindaCharming's Best Guess Live Show Transcripts.docx` are gone. Recover from git history if ever needed.
-- Latest imported episode: Tuesday, April 28, 2026 with BRUNO MARS and TAXI. Fan Appreciation K-pop Demon Hunters glass voucher bonus is attached to both rounds; v2 `totalWinners` reflects paid medal winners (`goldWinners + silverWinners + bronzeWinners`).
-- 102 total game days (101 playable + 1 cancelled: Thursday, April 9, 2026).
-- 203 game objects in `data/games.json` (most dates have two rounds).
+- Latest imported episode: Wednesday, May 6, 2026 with COTTON CANDY and KNOT.
+- 108 total game days (107 playable + 1 cancelled: Thursday, April 9, 2026).
+- 215 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 179).
 - **Transcripts reimported** from `Best_Guess_Live_Clean_Readable_Transcripts.docx` (uploaded to repo root). All 100 transcripts use games.json as canonical source for rounds/clues/host/pot/format. Section tags now read "Round 1 Results" / "Round 2 Results" (previously "Reveal").
 - **Jan 1-14 transcripts fixed**: These episodes had no Heading2 section markers in the docx. A heuristic state machine now splits them into 6 sections using phrase triggers ("crystal ball reveals", "correct answer was", etc.) and space-normalized secret-item matching. All 10 episodes are now fully populated.
 - **Mobile transcript layout fixed**: episode list max-height reduced from 32rem to 9rem on mobile; tapping an episode smooth-scrolls to the transcript detail panel. Desktop still uses 32rem two-column layout.
@@ -69,7 +76,9 @@ Last updated: 2026-04-29
 
 ## Daily Update Workflow
 
-Every episode day, paste the following block to Claude or Codex. Claude/Codex will update `data/games.json`, `data/games-meta.json`, `data/transcripts.json`, and any special promo fields, then commit and push to `main`.
+Every episode day, paste the following block to Claude or Codex. Claude/Codex will update the appropriate `data/games-YYYY.json` year shard, `data/games-meta.json`, `data/transcripts.json`, and any special promo fields, then commit and push to `main`.
+
+**Important**: Append new game entries to the END of the correct year shard (`data/games-2026.json` for 2026 games, etc.), not to `data/games.json`. Run `npm run audit:fix` after editing any shard to keep `games-meta.json` in sync.
 
 Preferred no-preformat path: put the raw transcript at `incoming/YYYY-MM-DD.txt` and use `docs/DAILY_IMPORT_PROMPT.md`. Before every import commit, run `npm run audit:fix`, then `npm run audit`, and fix every error.
 
@@ -182,8 +191,8 @@ Description: [full text including how-to-qualify. May use <br> and <b> tags.]
 ### What Claude/Codex Does with the Paste
 
 1. Parses the paste into two game objects (one per round).
-2. Appends them to `data/games.json` (most recent dates go at the end — the database sorts descending by date at render time).
-3. Runs `npm run audit:fix` to rebuild `data/games-meta.json` from the full `games.json`.
+2. Appends them to the correct `data/games-YYYY.json` year shard (e.g. `data/games-2026.json`). The database sorts descending by date at render time.
+3. Runs `npm run audit:fix` to rebuild `data/games-meta.json` from all year shards.
 4. Adds a new transcript entry to `data/transcripts.json` with all six canonical sections (Intro, Round 1, Round 1 Results, Round 2, Round 2 Results, Outro) and the round metadata.
 5. Commits all changed files to `main` and pushes.
 
@@ -271,11 +280,11 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 ## Performance Architecture
 
 - **Tailwind**: Static `tailwind.css` (33KB prebuilt). If new Tailwind classes are added to index.html, regenerate with: `npx tailwindcss@3 -i tailwind-input.css -o tailwind.css --minify`
-- **games-meta.json**: Lightweight (36KB) loaded on init for home stats. Full `games.json` lazy-loads when user first visits Database or Stats.
+- **games-meta.json**: Lightweight `{years, games}` object loaded on init for home stats. Year shards (`games-2025.json`, `games-2026.json`, …) lazy-load in parallel when the user first visits Database or Stats. No monolithic `games.json` download.
 - **Chart.js**: Injected dynamically on first Stats page visit only.
 - **filterDatabase**: Debounced 150ms.
 - **Data audit**: `npm run audit:fix` regenerates `games-meta.json`; `npm run audit` validates JSON, inline scripts, generated meta, archive dates, payout values, missing clue explanations, v2 winner totals, bonus coverage, transcript schemas, transcript/game alignment, result clue text, and escaped HTML entities.
-- **_homeStatsCache**: Invalidated when full games.json loads or refreshStats() runs.
+- **_homeStatsCache**: Invalidated when year shards finish loading or refreshStats() runs.
 
 ## Things Worth Double-Checking After Future Edits
 
@@ -287,7 +296,7 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 - Database details modal shows bonus section for promo dates; verify `g.bonus` is present in games.json and the title is escaped, desc is trusted HTML.
 - Play feature (`startRandomGame`) awaits full games.json load before starting.
 - Stats charts render all 5 canvases; Clue 5 bar in "Avg Payout Per Winner by Clue" shows `Avg payout: $2`.
-- `npm run audit:fix` regenerates `data/games-meta.json` from `data/games.json` after every import.
+- `npm run audit:fix` regenerates `data/games-meta.json` from all year shards after every import.
 - Transcripts: search finds new date, shows host/chips/sections, database detail buttons work.
 
 ## Working Agreement

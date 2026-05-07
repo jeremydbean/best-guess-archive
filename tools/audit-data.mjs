@@ -16,8 +16,18 @@ const loose = value => String(value || '')
   .replace(/[^A-Z0-9]+/gi, '')
   .toUpperCase();
 
-const games = readJson('data/games.json');
-let meta = readJson('data/games-meta.json');
+// Load games from year shards; fall back to games.json if shards are absent.
+const yearShardFiles = fs.readdirSync('data').filter(f => /^games-\d{4}\.json$/.test(f)).sort();
+let games;
+if (yearShardFiles.length > 0) {
+  games = yearShardFiles.flatMap(f => readJson(`data/${f}`));
+} else {
+  games = readJson('data/games.json');
+}
+
+let metaRaw = readJson('data/games-meta.json');
+// Support both old bare-array format and new {years, games} object format.
+let meta = Array.isArray(metaRaw) ? metaRaw : (metaRaw.games || []);
 const transcripts = readJson('data/transcripts.json');
 const issues = [];
 const fixes = [];
@@ -71,14 +81,19 @@ const regeneratedMeta = games.map(g => {
   return entry;
 });
 
+const years = [...new Set(games.map(g => String(g.date || '').split(' ').pop()))].filter(Boolean).sort();
 if (JSON.stringify(regeneratedMeta) !== JSON.stringify(meta)) {
   if (shouldFix) {
-    writeJson('data/games-meta.json', regeneratedMeta);
+    writeJson('data/games-meta.json', { years, games: regeneratedMeta });
     meta = regeneratedMeta;
     fixes.push({ code: 'meta-regenerated', path: 'data/games-meta.json' });
   } else {
-    error('meta-mismatch', 'data/games-meta.json is out of sync with data/games.json. Run `npm run audit:fix` to regenerate it.');
+    error('meta-mismatch', 'data/games-meta.json is out of sync with year shards. Run `npm run audit:fix` to regenerate it.');
   }
+} else if (shouldFix && !Array.isArray(metaRaw) && JSON.stringify(metaRaw.years) !== JSON.stringify(years)) {
+  // years array changed (new year shard added) even though games list matched
+  writeJson('data/games-meta.json', { years, games: regeneratedMeta });
+  fixes.push({ code: 'meta-years-updated', path: 'data/games-meta.json' });
 }
 
 const html = fs.readFileSync('index.html', 'utf8');

@@ -1731,6 +1731,7 @@ class App {
     this.currentClueIndex = 0;
     this.timer = null;
     this._dbSort = { key: 'date', dir: 'desc' };
+    this._availableYears = null;
     this._fullGamesLoaded = false;
     this._fullGamesLoading = null;
     this.transcripts = [];
@@ -1966,7 +1967,15 @@ class App {
     try {
       const res = await fetch('./data/games-meta.json?v=' + Date.now());
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      this.games = await res.json();
+      const metaData = await res.json();
+      // Support both old bare-array format and new {years, games} object format.
+      if (Array.isArray(metaData)) {
+        this.games = metaData;
+        this._availableYears = null;
+      } else {
+        this._availableYears = metaData.years || [];
+        this.games = metaData.games || [];
+      }
       this._normalizeGames(this.games);
       document.getElementById('data-source-status').innerText = `${this._getPlayableGames().length} rounds`;
       this._setHealthIndicatorState('clean');
@@ -1985,14 +1994,18 @@ class App {
   _ensureFullGamesLoaded() {
     if (this._fullGamesLoaded) return Promise.resolve();
     if (this._fullGamesLoading) return this._fullGamesLoading;
-    this._fullGamesLoading = fetch('./data/games.json')
-      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then(data => {
-        this.games = data;
-        this._normalizeGames(this.games);
-        this._fullGamesLoaded = true;
-      })
-      .finally(() => { this._fullGamesLoading = null; });
+    const years = this._availableYears && this._availableYears.length > 0
+      ? this._availableYears
+      : ['2025', '2026'];
+    this._fullGamesLoading = Promise.all(
+      years.map(y => fetch(`./data/games-${y}.json`)
+        .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      )
+    ).then(chunks => {
+      this.games = chunks.flat();
+      this._normalizeGames(this.games);
+      this._fullGamesLoaded = true;
+    }).finally(() => { this._fullGamesLoading = null; });
     return this._fullGamesLoading;
   }
 
@@ -4175,9 +4188,18 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 
   async refreshStats() {
     try {
-      const res = await fetch('data/games.json?_=' + Date.now());
-      if (!res.ok) throw new Error('Failed to fetch games.json');
-      this.games = await res.json();
+      const metaRes = await fetch('data/games-meta.json?_=' + Date.now());
+      if (!metaRes.ok) throw new Error(`Failed to fetch games-meta.json: HTTP ${metaRes.status}`);
+      const metaData = await metaRes.json();
+      const years = Array.isArray(metaData) ? null : (metaData.years || []);
+      const activeYears = years && years.length > 0 ? years : ['2025', '2026'];
+      const chunks = await Promise.all(
+        activeYears.map(y => fetch(`data/games-${y}.json?_=` + Date.now())
+          .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+        )
+      );
+      this._availableYears = activeYears;
+      this.games = chunks.flat();
       this._normalizeGames(this.games);
       this._fullGamesLoaded = true;
       this._fullGamesLoading = null;

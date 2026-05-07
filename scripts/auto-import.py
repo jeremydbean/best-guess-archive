@@ -207,7 +207,19 @@ def format_archive_date(dt: datetime) -> str:
 
 
 def get_imported_dates() -> set:
-    """Return dates already present in games.json."""
+    """Return dates already present across all year shards (falls back to games.json)."""
+    dates: set = set()
+    import glob
+    shard_files = sorted(glob.glob("data/games-[0-9][0-9][0-9][0-9].json"))
+    if shard_files:
+        for path in shard_files:
+            try:
+                with open(path, encoding="utf-8") as f:
+                    dates.update(g["date"] for g in json.load(f))
+            except (FileNotFoundError, json.JSONDecodeError):
+                pass
+        return dates
+    # Fallback: monolithic games.json (pre-sharding installs)
     try:
         with open("data/games.json", encoding="utf-8") as f:
             return {g["date"] for g in json.load(f)}
@@ -479,34 +491,55 @@ def build_stub_transcript(episode_date: str, games: list, video_id: str = "") ->
 
 def apply_import(data: dict, video_id: str = "") -> bool:
     """
-    Write parsed episode data into games.json and transcripts.json.
+    Write parsed episode data into the appropriate year shard and transcripts.json.
+    Falls back to monolithic games.json if no year shards exist yet.
     Returns True if anything was written.
     """
-    with open("data/games.json", encoding="utf-8") as f:
-        games = json.load(f)
+    import glob
+
+    episode_date = data["episode_date"]
+    year = episode_date.split()[-1]
+    shard_path = f"data/games-{year}.json"
+
+    # Load existing games from the target year shard (or games.json fallback)
+    use_shards = bool(glob.glob("data/games-[0-9][0-9][0-9][0-9].json"))
+    if use_shards:
+        try:
+            with open(shard_path, encoding="utf-8") as f:
+                year_games = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            year_games = []
+    else:
+        with open("data/games.json", encoding="utf-8") as f:
+            year_games = json.load(f)
+
     with open("data/transcripts.json", encoding="utf-8") as f:
         transcripts = json.load(f)
 
-    existing_keys = {(g["date"], g.get("secretItem")) for g in games}
+    existing_keys = {(g["date"], g.get("secretItem")) for g in year_games}
     new_games = [
         g for g in data["games"]
         if (g["date"], g.get("secretItem")) not in existing_keys
     ]
-    episode_date = data["episode_date"]
     existing_transcript_dates = {t["date"] for t in transcripts}
 
     if not new_games and episode_date in existing_transcript_dates:
         print("Episode already present in data files — nothing to do.")
         return False
 
-    games.extend(new_games)
+    year_games.extend(new_games)
 
     if episode_date not in existing_transcript_dates:
         transcripts.append(build_stub_transcript(episode_date, data.get("games", []), video_id=video_id))
 
-    with open("data/games.json", "w", encoding="utf-8") as f:
-        json.dump(games, f, indent=2, ensure_ascii=False)
-        f.write("\n")
+    if use_shards:
+        with open(shard_path, "w", encoding="utf-8") as f:
+            json.dump(year_games, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+    else:
+        with open("data/games.json", "w", encoding="utf-8") as f:
+            json.dump(year_games, f, indent=2, ensure_ascii=False)
+            f.write("\n")
     with open("data/transcripts.json", "w", encoding="utf-8") as f:
         json.dump(transcripts, f, indent=2, ensure_ascii=False)
         f.write("\n")
@@ -532,9 +565,17 @@ def run(cmd: list[str]) -> subprocess.CompletedProcess:
     return subprocess.run(resolved, capture_output=True, text=True, shell=False)
 
 
-def restore_data_files() -> subprocess.CompletedProcess:
+def restore_data_files(year: str | None = None) -> subprocess.CompletedProcess:
+    import glob
+    use_shards = bool(glob.glob("data/games-[0-9][0-9][0-9][0-9].json"))
+    if use_shards and year:
+        files = [f"data/games-{year}.json", "data/games-meta.json", "data/transcripts.json"]
+    elif use_shards:
+        files = sorted(glob.glob("data/games-[0-9][0-9][0-9][0-9].json")) + ["data/games-meta.json", "data/transcripts.json"]
+    else:
+        files = ["data/games.json", "data/games-meta.json", "data/transcripts.json"]
     return subprocess.run(
-        ["git", "checkout", "--", "data/games.json", "data/games-meta.json", "data/transcripts.json"],
+        ["git", "checkout", "--"] + files,
         capture_output=True,
         text=True,
         shell=False,
