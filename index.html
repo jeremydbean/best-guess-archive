@@ -3170,7 +3170,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       const clueTitle = explanation ? `Clue ${i + 1}: ${explanation}` : `Clue ${i + 1}: No explanation recorded.`;
       return `<td class="px-4 py-3 align-middle" style="min-width:200px">
         <div data-clue-tooltip="${esc(clueTitle)}" tabindex="0" class="db-clue-tooltip font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${hl(clueMeta.clue.text)}</div>
-        <div class="font-mono mt-0.5 leading-snug whitespace-nowrap" style="font-size:10px"><span class="text-green-500">${clueMeta.correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${clueMeta.guesses.toLocaleString()}</span><span class="text-slate-500"> (${clueMeta.pct}%)</span>${(isV2 && medal) ? `&nbsp;<span style="font-size:12px">${medal}</span>` : ''}</div>
+        <div class="font-mono mt-0.5 leading-snug whitespace-nowrap" style="font-size:10px"><span class="text-green-500">${clueMeta.correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${clueMeta.guesses.toLocaleString()}</span><span class="text-slate-500"> (${clueMeta.pct}%)</span>${(isV2 && medal) ? `&nbsp;<span style="font-size:15px">${medal}</span>` : ''}</div>
       </td>`;
     }).join('');
 
