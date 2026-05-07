@@ -3676,6 +3676,8 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     const uniqueDates = [...new Set(games.map(g => g.date))];
     const totalGames = new Set(this.games.map(g => g.date)).size;
     const totalRounds = games.length;
+    const v1Rounds = games.filter(g => g.format !== 'v2').length;
+    const v2Rounds = games.filter(g => g.format === 'v2').length;
     const today = new Date();
     const v2Dates = [...new Set(games.filter(g => g.format === 'v2').map(g => g.date))].sort((a, b) => this._compareArchiveDates(a, b));
     const firstV2Date = v2Dates.length ? this._archiveDateObject(v2Dates[0]) : null;
@@ -3876,6 +3878,8 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       kpis: [
         {label:'Total Games', val: totalGames.toLocaleString(), color:'text-blue-400', icon:'sports_esports'},
         {label:'Total Rounds', val: totalRounds.toLocaleString(), color:'text-blue-400', icon:'casino'},
+        {label:'v1 Rounds', val: v1Rounds.toLocaleString(), color:'text-slate-300', icon:'casino'},
+        {label:'v2 Rounds', val: v2Rounds.toLocaleString(), color:'text-yellow-400', icon:'workspace_premium'},
         {label:'Days Since New Rules Launch', val: daysSinceNewRules.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
         {label:'Days Since Launch', val: daysSinceLaunch.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
         {label:'Total Paid Out', val:'$' + totalPot.toLocaleString(), color:'text-green-400', icon:'payments'},
