@@ -11554,5 +11554,109 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Grim, Doctor Perry Falls, Silence is Lost, Cosmic Genius",
     "wrongGuesses": "MARGARITA, GUACAMOLE, SALAD, TWINS, SALSA"
+  },
+  {
+    "date": "Wednesday, May 6, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "COTTON CANDY",
+    "clues": [
+      {
+        "text": "LIKE A MAGIC TRICK",
+        "correct": "35",
+        "guesses": "3,013",
+        "explanation": "Cotton candy magically appears on a wand."
+      },
+      {
+        "text": "HIGH THREAD COUNT",
+        "correct": "60",
+        "guesses": "6,340",
+        "explanation": "Cotton candy is made up of a bunch of tiny threads of sugar."
+      },
+      {
+        "text": "FAIR FARE",
+        "correct": "1279",
+        "guesses": "6,694",
+        "explanation": "Fair as in a carnival, and fare as in food."
+      },
+      {
+        "text": "TAKE IT FOR A SPIN",
+        "correct": "1807",
+        "guesses": "7,389",
+        "explanation": "Cotton candy is made by spinning sugar."
+      },
+      {
+        "text": "SWEET AND TASTY CLOUD YOU SHARE WITH A CROWD",
+        "correct": "8641",
+        "guesses": "9,291",
+        "explanation": "It looks like a cloud and is easy to pull apart and share."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 35,
+    "silverWinners": 60,
+    "bronzeWinners": 1279,
+    "totalWinners": 1374,
+    "goldPayout": 85.71,
+    "silverPayout": 40.0,
+    "bronzePayout": 1.56,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Soul, Love Bug, Sketchy Schmitty, K Two Golden",
+    "wrongGuesses": "FERRIS WHEEL, SHEETS, MAGIC CARPET, SHEET, SILK"
+  },
+  {
+    "date": "Wednesday, May 6, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "KNOT",
+    "clues": [
+      {
+        "text": "NOT EASY WITH ONE HAND",
+        "correct": "14",
+        "guesses": "7,035",
+        "explanation": "Tying a knot is almost impossible with one hand."
+      },
+      {
+        "text": "NOT A STRAIGHT LINE",
+        "correct": "108",
+        "guesses": "4,616",
+        "explanation": "A knot has many twists and turns."
+      },
+      {
+        "text": "NOT ALWAYS SIMPLE TO GET OUT OF",
+        "correct": "1644",
+        "guesses": "9,163",
+        "explanation": "There is nothing more frustrating than a knot you cannot untie."
+      },
+      {
+        "text": "NOT FUN WHEN IT COMES UNDONE",
+        "correct": "1639",
+        "guesses": "7,398",
+        "explanation": "When a shoelace knot comes undone unexpectedly, it's not fun."
+      },
+      {
+        "text": "NOT SPELLED WITH A K",
+        "correct": "1448",
+        "guesses": "3,730",
+        "explanation": "Spell it out — K-N-O-T. The word 'knot' starts with a K, but 'not' does not."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 14,
+    "silverWinners": 108,
+    "bronzeWinners": 1644,
+    "totalWinners": 1766,
+    "goldPayout": 214.28,
+    "silverPayout": 23.0,
+    "bronzePayout": 1.21,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "M Thrilla One, Steel Ron Four Twelve, Simple Daylight, Gold Dracan, Quirky Scoop 147",
+    "wrongGuesses": "CLAPPING, JUGGLING, STRAIGHT JACKET, ZIPPER, CLAP"
   }
 ]
