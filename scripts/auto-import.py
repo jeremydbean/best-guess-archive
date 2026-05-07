@@ -10,6 +10,7 @@ Usage:
 import argparse
 import html
 import json
+import math
 import os
 import re
 import shutil
@@ -318,9 +319,14 @@ Video title: {video_title}
    goldWinners, silverWinners, bronzeWinners, goldPayout, silverPayout, bronzePayout.
    totalWinners = goldWinners + silverWinners + bronzeWinners.
    winnerPayout = formatted pot string e.g. "$7,500.00".
-3. Each game must include: date, secretItem, host, format, clues (5 items each with
-   text in ALL CAPS, explanation, clue number, correct count), all medal fields,
-   winnerNames, popularWrongGuesses.
+3. Each game must include: date, pot (integer prize pool e.g. 7500), secretItem, host,
+   format, all medal fields, winnerNames, wrongGuesses (comma-separated string of
+   popular wrong guesses shown on screen).
+   clues must be an array of 5 objects, each with:
+     text (ALL CAPS exactly as shown), explanation, number (1–5),
+     correct (number who answered correctly, comma-formatted string e.g. "1,279"),
+     guesses (total guesses submitted that clue, comma-formatted string e.g. "6,694").
+   Extract correct and guesses from the results section where Hunter reads them aloud.
 4. Do NOT include HTML entities in text — use plain Unicode.
 5. If a bonus/promo is announced for the week, add bonus:{{"title":"...","desc":"..."}}
    to BOTH game entries.
@@ -407,7 +413,7 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
             validate_bonus_html(bonus.get("desc", ""), f"Game {index} bonus.desc")
 
 
-def build_stub_transcript(episode_date: str, games: list) -> dict:
+def build_stub_transcript(episode_date: str, games: list, video_id: str = "") -> dict:
     """Build a placeholder transcript with clue recap lines populated in Results sections."""
 
     def _winner_int(val) -> int:
@@ -446,7 +452,11 @@ def build_stub_transcript(episode_date: str, games: list) -> dict:
 
     secret_items = [g.get("secretItem", "") for g in games]
     rounds = [{"round": i + 1, "secretItem": item} for i, item in enumerate(secret_items)]
-    note = "Transcript not yet imported." if games else "Episode cancelled — no playable games."
+    if games:
+        yt_link = f" Watch the episode: https://www.youtube.com/watch?v={video_id}" if video_id else ""
+        note = f"Transcript not yet imported.{yt_link}"
+    else:
+        note = "Episode cancelled — no playable games."
 
     sections = [{"tag": "Intro", "lines": [{"speaker": None, "text": note}]}]
     for tag in ["Round 1", "Round 1 Results", "Round 2", "Round 2 Results"]:
@@ -467,7 +477,7 @@ def build_stub_transcript(episode_date: str, games: list) -> dict:
     }
 
 
-def apply_import(data: dict) -> bool:
+def apply_import(data: dict, video_id: str = "") -> bool:
     """
     Write parsed episode data into games.json and transcripts.json.
     Returns True if anything was written.
@@ -492,7 +502,7 @@ def apply_import(data: dict) -> bool:
     games.extend(new_games)
 
     if episode_date not in existing_transcript_dates:
-        transcripts.append(build_stub_transcript(episode_date, data.get("games", [])))
+        transcripts.append(build_stub_transcript(episode_date, data.get("games", []), video_id=video_id))
 
     with open("data/games.json", "w", encoding="utf-8") as f:
         json.dump(games, f, indent=2, ensure_ascii=False)
@@ -620,6 +630,15 @@ def main():
             print(f"Claude output failed validation: {exc}")
             sys.exit(1)
 
+        # Recalculate v2 payouts using floor rounding (pot / winners, truncated to cents)
+        _MEDAL_POTS = {"gold": 3000, "silver": 2500, "bronze": 2000}
+        for game in data.get("games", []):
+            if game.get("format") == "v2":
+                for tier in ("gold", "silver", "bronze"):
+                    winners = int(str(game.get(f"{tier}Winners") or 0).replace(",", ""))
+                    if winners > 0:
+                        game[f"{tier}Payout"] = math.floor(_MEDAL_POTS[tier] / winners * 100) / 100
+
         print(f"Episode date: {data.get('episode_date')}")
         print(f"Cancelled:    {data.get('cancelled', False)}")
         for g in data.get("games", []):
@@ -630,7 +649,7 @@ def main():
             print(json.dumps(data, indent=2))
             continue
 
-        applied = apply_import(data)
+        applied = apply_import(data, video_id=video_id)
         if applied:
             any_imported = True
 
