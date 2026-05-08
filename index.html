@@ -3470,6 +3470,9 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
             <span class="text-xs font-black uppercase tracking-wider text-yellow-300">Note</span>
           </div>
           <div class="text-sm leading-relaxed text-yellow-100/80">${esc(g.adminNote)}</div>
+          ${g.adminNoteUrl ? `<a href="${esc(g.adminNoteUrl)}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-yellow-300 hover:text-yellow-100 transition">
+            <span class="material-symbols-outlined" style="font-size:13px;line-height:1">open_in_new</span>Official rules ↗
+          </a>` : ''}
         </div>` : ''}
         ${bonus ? `<details id="modal-bonus-section" ${focusBonus ? 'open' : ''} class="mt-4 rounded-lg border border-pink-400/25 bg-pink-950/15 p-3 text-left${focusBonus ? ' ring-2 ring-pink-400/60 shadow-lg shadow-pink-950/40' : ''}">
           <summary class="cursor-pointer list-inside text-pink-100">
