@@ -3199,21 +3199,20 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 
     // Detect bronze-pot-redistribution: no bronze winner + adminNote set
     const bronzeRedist = isV2 && g.adminNote && !(g.bronzeWinners > 0) && !(g.bronzePayout > 0);
-    let goldTip = '', silverTip = '', bronzeTip = '', estPrefix = '';
+    let goldTip = '', silverTip = '', bronzeTip = '';
     if (bronzeRedist) {
       const totalElig = (g.goldWinners || 0) + (g.silverWinners || 0);
       const bronzeExtra = totalElig > 0 ? Math.floor(2000 / totalElig * 100) / 100 : 0;
       const goldBase   = (g.goldWinners   || 0) > 0 ? Math.floor(3000 / g.goldWinners   * 100) / 100 : 0;
       const silverBase = (g.silverWinners || 0) > 0 ? Math.floor(2500 / g.silverWinners * 100) / 100 : 0;
-      goldTip   = `Estimated: base $${goldBase.toFixed(2)} (gold pot ÷ ${(g.goldWinners||0).toLocaleString()} winners) + ~$${bronzeExtra.toFixed(2)} bronze share`;
-      silverTip = `Estimated: base $${silverBase.toFixed(2)} (silver pot ÷ ${(g.silverWinners||0).toLocaleString()} winners) + ~$${bronzeExtra.toFixed(2)} bronze share`;
-      bronzeTip = `No bronze winner — $2,000 bronze pot assumed split among ${totalElig.toLocaleString()} gold+silver winners (~$${bronzeExtra.toFixed(2)} each)`;
-      estPrefix = '~';
+      goldTip   = `Base $${goldBase.toFixed(2)} (gold pot ÷ ${(g.goldWinners||0).toLocaleString()} winners) + $${bronzeExtra.toFixed(2)} redistributed bronze share. Per official rules: no bronze winners → bronze pot redistributed to gold & silver.`;
+      silverTip = `Base $${silverBase.toFixed(2)} (silver pot ÷ ${(g.silverWinners||0).toLocaleString()} winners) + $${bronzeExtra.toFixed(2)} redistributed bronze share. Per official rules: no bronze winners → bronze pot redistributed to gold & silver.`;
+      bronzeTip = `No bronze winner — per official rules, the $2,000 bronze pot was redistributed to all ${totalElig.toLocaleString()} gold+silver winners ($${bronzeExtra.toFixed(2)} each added to their payout).`;
     }
     const payoutsHtml = isV2
       ? `<div class="text-xs font-mono space-y-0.5" style="min-width:150px">
-          <div${goldTip   ? ` title="${esc(goldTip)}"   style="cursor:help"` : ''}>🥇 <span class="text-yellow-400">${estPrefix}${fmtMoney(g.goldPayout)}</span></div>
-          <div${silverTip ? ` title="${esc(silverTip)}" style="cursor:help"` : ''}>🥈 <span class="text-slate-300">${estPrefix}${fmtMoney(g.silverPayout)}</span></div>
+          <div${goldTip   ? ` title="${esc(goldTip)}"   style="cursor:help"` : ''}>🥇 <span class="text-yellow-400">${fmtMoney(g.goldPayout)}</span></div>
+          <div${silverTip ? ` title="${esc(silverTip)}" style="cursor:help"` : ''}>🥈 <span class="text-slate-300">${fmtMoney(g.silverPayout)}</span></div>
           <div${bronzeTip ? ` title="${esc(bronzeTip)}" style="cursor:help"` : ''}>🥉 <span class="text-amber-600">${bronzeRedist ? '—' : fmtMoney(g.bronzePayout)}</span></div>
           <div class="border-t border-slate-700 pt-0.5 text-green-400 whitespace-nowrap">${esc(g.winnerPayout || '')} total</div>
         </div>`
