@@ -641,54 +641,53 @@
   .fade-in { animation: fadeIn .5s ease-out; }
   @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
   .timer-bar { height:4px; background:linear-gradient(90deg,#22c55e,#eab308,#ef4444); width:100%; transform-origin:left; }
-  .time-up-panel {
+  #timer-row.is-time-up #main-timer-track {
     display: none;
+  }
+  #timer-row.is-time-up #main-timer-shell {
+    min-height: 5rem;
+    border: 2px solid rgba(255,255,255,.15);
+    background:
+      linear-gradient(rgba(255,255,255,.055) 50%, rgba(0,0,0,.045) 50%),
+      linear-gradient(180deg, rgba(148,163,184,.52), rgba(71,85,105,.5)) !important;
+    background-size: 100% 4px, 100% 100% !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.22),
+      inset 0 -2px 10px rgba(0,0,0,.28),
+      0 2px 12px rgba(0,0,0,.35) !important;
+  }
+  #timer-row.is-time-up #main-timer-text {
+    min-width: 0;
+    width: 100%;
     text-align: center;
-  }
-  #input-container.is-time-up .time-up-panel {
-    display: block;
-  }
-  #input-container.is-time-up #guess-entry-row {
-    display: none;
   }
   .time-up-title {
     color: #fff;
     font-family: var(--font-display);
     font-weight: 900;
-    font-size: 1.45rem;
+    font-size: 1rem;
     line-height: 1;
     letter-spacing: .01em;
     text-transform: uppercase;
     text-shadow: 0 2px 4px rgba(0,0,0,.75);
   }
   .time-up-wait {
-    margin-top: .75rem;
-    min-height: 4.75rem;
-    border-radius: .9rem;
-    border: 2px solid rgba(255,255,255,.15);
-    background:
-      linear-gradient(rgba(255,255,255,.055) 50%, rgba(0,0,0,.045) 50%),
-      linear-gradient(180deg, rgba(148,163,184,.52), rgba(71,85,105,.5));
-    background-size: 100% 4px, 100% 100%;
-    box-shadow:
-      inset 0 1px 0 rgba(255,255,255,.22),
-      inset 0 -2px 10px rgba(0,0,0,.28),
-      0 2px 12px rgba(0,0,0,.35);
+    margin-top: .35rem;
     color: rgba(255,255,255,.88);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .65rem;
+    gap: .45rem;
     font-family: var(--font-display);
-    font-size: 1.05rem;
+    font-size: .9rem;
     font-weight: 800;
     letter-spacing: .01em;
     text-transform: uppercase;
     text-shadow: 0 1px 2px rgba(0,0,0,.8);
   }
   .time-up-wait-dot {
-    width: 1.45rem;
-    height: 1.45rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 999px;
     background: #ef3b5d;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 0 10px rgba(239,59,93,.45);
@@ -1018,8 +1017,8 @@ document.addEventListener('focusout', function(e) {
 
   <!-- Timer row — transparent grey pill wrapping the orange bar + countdown -->
   <div class="flex-shrink-0 px-3 pt-1 pb-2" id="timer-row" style="display:none">
-    <div class="flex items-center gap-3 rounded-xl px-3 py-2" style="background:rgba(255,255,255,0.12); backdrop-filter:blur(6px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 8px rgba(0,0,0,0.35)">
-      <div class="flex-grow h-2.5 rounded-full overflow-hidden" style="background:rgba(0,0,0,0.4); box-shadow: inset 0 1px 2px rgba(0,0,0,0.5)">
+    <div id="main-timer-shell" class="flex items-center gap-3 rounded-xl px-3 py-2" style="background:rgba(255,255,255,0.12); backdrop-filter:blur(6px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 8px rgba(0,0,0,0.35)">
+      <div id="main-timer-track" class="flex-grow h-2.5 rounded-full overflow-hidden" style="background:rgba(0,0,0,0.4); box-shadow: inset 0 1px 2px rgba(0,0,0,0.5)">
         <div id="main-timer-bar" class="h-full" style="background: linear-gradient(90deg, #f97316 0%, #fb923c 40%, #fbbf24 100%); box-shadow: 0 0 8px rgba(251,146,60,0.7); width:100%"></div>
       </div>
       <div id="main-timer-text" class="text-white font-bold font-display text-xl md:text-2xl tabular-nums leading-none min-w-[2.25rem] text-right" style="text-shadow: 0 1px 2px rgba(0,0,0,0.6)">0</div>
@@ -1028,13 +1027,6 @@ document.addEventListener('focusout', function(e) {
 
   <!-- Input bar — always at bottom, part of normal flow (not fixed) -->
   <div class="flex-shrink-0 border-t border-white/10 bg-slate-900 px-3 pt-3 pb-4" id="input-container" style="padding-bottom: max(1rem, env(safe-area-inset-bottom))">
-    <div id="time-up-panel" class="time-up-panel mb-3" aria-live="polite">
-      <div class="time-up-title">Time's Up</div>
-      <div class="time-up-wait">
-        <span class="time-up-wait-dot" aria-hidden="true"></span>
-        <span>Waiting for next clue...</span>
-      </div>
-    </div>
     <div id="guess-entry-row" class="relative mb-2">
       <input autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="go"
         id="guess-input" type="text"
@@ -2667,9 +2659,11 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
   setGuessingState(state) {
     this.acceptingGuesses = state === 'open';
     const container = document.getElementById('input-container');
+    const timerRow = document.getElementById('timer-row');
     const inputEl = document.getElementById('guess-input');
     const buttonEl = document.getElementById('guess-submit-button');
     if (container) container.classList.toggle('is-time-up', state === 'timeup');
+    if (timerRow) timerRow.classList.toggle('is-time-up', state === 'timeup');
     if (inputEl) {
       inputEl.disabled = state !== 'open';
       if (state === 'timeup') inputEl.blur();
@@ -2949,14 +2943,20 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       } else {
         clearInterval(this._clueInterval);
         this.setGuessingState('timeup');
-        // Waiting phase — grey out the timer and show a "Time's Up" state below.
+        // Waiting phase: the timer itself becomes the disabled "Time's Up" state.
         barEl.style.transition = 'none';
         barEl.style.width = '100%';
         barEl.style.background = 'rgba(148,163,184,0.35)';
         barEl.style.boxShadow = 'none';
 
         if (textEl) {
-          textEl.innerHTML = "<span class=\"text-[10px] md:text-xs text-white/70 font-display font-bold uppercase tracking-widest whitespace-nowrap\">Time's Up</span>";
+          textEl.innerHTML = `
+            <div class="time-up-title">Time's Up</div>
+            <div class="time-up-wait">
+              <span class="time-up-wait-dot" aria-hidden="true"></span>
+              <span>Waiting for next clue...</span>
+            </div>
+          `;
         }
 
         this._delayTimeout = setTimeout(() => {
