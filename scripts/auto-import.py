@@ -294,8 +294,16 @@ def call_claude(transcript_text: str, episode_date: str, video_title: str) -> di
     """
     client = anthropic.Anthropic()
 
-    with open("data/games.json", encoding="utf-8") as f:
-        all_games = json.load(f)
+    import glob as _glob
+    shard_files = sorted(_glob.glob("data/games-[0-9][0-9][0-9][0-9].json"))
+    if shard_files:
+        all_games = []
+        for path in shard_files:
+            with open(path, encoding="utf-8") as f:
+                all_games.extend(json.load(f))
+    else:
+        with open("data/games.json", encoding="utf-8") as f:
+            all_games = json.load(f)
     schema_games = json.dumps(all_games[-4:], indent=2)
 
     system_prompt = (
@@ -342,6 +350,11 @@ Video title: {video_title}
 4. Do NOT include HTML entities in text — use plain Unicode.
 5. If a bonus/promo is announced for the week, add bonus:{{"title":"...","desc":"..."}}
    to BOTH game entries.
+6. If a medal tier had no winners (e.g., the host says "nobody won bronze today"),
+   set that tier's winners=0 and payout=0. Do NOT inflate gold/silver payouts to
+   reflect redistribution — the script recalculates redistribution amounts per
+   official rules automatically. totalWinners must still equal the sum of medal
+   winner counts (e.g., goldWinners + silverWinners + 0 if bronze had none).
 
 Respond with JSON only."""
 
@@ -671,14 +684,42 @@ def main():
             print(f"Claude output failed validation: {exc}")
             sys.exit(1)
 
-        # Recalculate v2 payouts using floor rounding (pot / winners, truncated to cents)
+        # Recalculate v2 payouts with floor rounding, accounting for redistribution.
+        # Per official rules, a tier with no winners has its pot redistributed to the
+        # nearest higher tier with winners (bronze → silver+gold; silver → gold;
+        # bronze cascades up to gold if silver is also empty). If no higher tier
+        # has winners, the pot stays unclaimed.
         _MEDAL_POTS = {"gold": 3000, "silver": 2500, "bronze": 2000}
         for game in data.get("games", []):
-            if game.get("format") == "v2":
-                for tier in ("gold", "silver", "bronze"):
-                    winners = int(str(game.get(f"{tier}Winners") or 0).replace(",", ""))
-                    if winners > 0:
-                        game[f"{tier}Payout"] = math.floor(_MEDAL_POTS[tier] / winners * 100) / 100
+            if game.get("format") != "v2":
+                continue
+            def _w(tier):
+                return int(str(game.get(f"{tier}Winners") or 0).replace(",", ""))
+            g_w, s_w, b_w = _w("gold"), _w("silver"), _w("bronze")
+            bronze_share = 0.0
+            silver_share = 0.0
+            if b_w == 0:
+                # Bronze pot redistributes to (gold + silver) winners, or just gold if silver is also empty
+                eligible = g_w if s_w == 0 else g_w + s_w
+                if eligible > 0:
+                    bronze_share = math.floor(_MEDAL_POTS["bronze"] / eligible * 100) / 100
+            if s_w == 0 and g_w > 0:
+                silver_share = math.floor(_MEDAL_POTS["silver"] / g_w * 100) / 100
+            if g_w > 0:
+                base = math.floor(_MEDAL_POTS["gold"] / g_w * 100) / 100
+                game["goldPayout"] = round(base + bronze_share + silver_share, 2)
+            else:
+                game["goldPayout"] = 0
+            if s_w > 0:
+                base = math.floor(_MEDAL_POTS["silver"] / s_w * 100) / 100
+                # Silver receives bronze cascade only if silver itself has winners + bronze is empty
+                game["silverPayout"] = round(base + (bronze_share if b_w == 0 else 0.0), 2)
+            else:
+                game["silverPayout"] = 0
+            if b_w > 0:
+                game["bronzePayout"] = math.floor(_MEDAL_POTS["bronze"] / b_w * 100) / 100
+            else:
+                game["bronzePayout"] = 0
 
         print(f"Episode date: {data.get('episode_date')}")
         print(f"Cancelled:    {data.get('cancelled', False)}")
