@@ -1558,6 +1558,15 @@ document.addEventListener('focusout', function(e) {
     <div id="stats-medal-footer" class="text-xs text-slate-500 text-center mt-1"></div>
   </div>
 
+  <!-- Prize Pool Redistribution -->
+  <div class="glass-panel p-6 rounded-xl">
+    <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <span class="material-symbols-outlined text-yellow-300">warning</span> Prize Pool Redistribution
+    </h3>
+    <p class="text-xs text-slate-400 mb-4">v2 episodes where a medal tier had no winners, triggering pot redistribution per official rules.</p>
+    <div id="stats-redistrib" class="grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
+  </div>
+
   <!-- Most Reused Clue Text -->
   <div class="glass-panel p-6 rounded-xl">
     <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
@@ -1805,6 +1814,7 @@ class App {
       nodes.chartPayoutClue = document.getElementById('chart-payout-clue');
       nodes.medalAverages = document.getElementById('stats-medal-averages');
       nodes.medalFooter = document.getElementById('stats-medal-footer');
+      nodes.redistrib = document.getElementById('stats-redistrib');
       nodes.reusedClues = document.getElementById('stats-reused-clues');
     } else if (name === 'transcripts') {
       nodes.search = document.getElementById('transcript-search');
@@ -2921,10 +2931,16 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
             this.endGame(true, `🥇 Gold! You matched ${Number(goldWinners).toLocaleString()} real gold winner${goldWinners != 1 ? 's' : ''} on Clue ${goldClue}. You'd be winner #${(Number(goldWinners)+1).toLocaleString()}!`, share, 'gold');
           } else if (silverClue && n === silverClue) {
             const share = 2500 / (Number(silverWinners) + 1);
-            this.endGame(true, `🥈 Silver! You matched ${Number(silverWinners).toLocaleString()} silver winner${silverWinners != 1 ? 's' : ''} on Clue ${silverClue}. You'd share the $2,500 silver pot!`, share, 'silver');
+            const silverMsg = Number(silverWinners) === 0
+              ? `🥈 Silver! Nobody else won silver on Clue ${silverClue} — you'd have been the only winner, claiming the entire $2,500 silver pot!`
+              : `🥈 Silver! You matched ${Number(silverWinners).toLocaleString()} real silver winner${silverWinners != 1 ? 's' : ''} on Clue ${silverClue}. You'd share the $2,500 silver pot!`;
+            this.endGame(true, silverMsg, share, 'silver');
           } else if (bronzeClue && n === bronzeClue) {
             const share = 2000 / (Number(bronzeWinners) + 1);
-            this.endGame(true, `🥉 Bronze! You matched ${Number(bronzeWinners).toLocaleString()} bronze winner${bronzeWinners != 1 ? 's' : ''} on Clue ${bronzeClue}. You'd share the $2,000 bronze pot!`, share, 'bronze');
+            const bronzeMsg = Number(bronzeWinners) === 0
+              ? `🥉 Bronze! Nobody else won bronze on Clue ${bronzeClue} — you'd have been the only winner, claiming the entire $2,000 bronze pot!`
+              : `🥉 Bronze! You matched ${Number(bronzeWinners).toLocaleString()} bronze winner${bronzeWinners != 1 ? 's' : ''} on Clue ${bronzeClue}. You'd share the $2,000 bronze pot!`;
+            this.endGame(true, bronzeMsg, share, 'bronze');
           } else if (n < lastMedalClue) {
             this.endGame('close', `You were right, but a little too late! You guessed on Clue ${n}, but the medal clues were ${goldClue} (🥇 gold)${silverClue ? ', ' + silverClue + ' (🥈 silver)' : ''}${bronzeClue ? ', ' + bronzeClue + ' (🥉 bronze)' : ''}. Hold off until a medal clue next time!`);
           } else {
@@ -3074,12 +3090,12 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
           <span class="text-white">${Number(g.goldWinners).toLocaleString()} winner${g.goldWinners != 1 ? 's' : ''} · $${fmt(g.goldPayout)} each</span>
         </div>
         <div class="flex justify-between border-b border-white/5 pb-2">
-          <span class="text-slate-300 font-bold">🥈 Silver — Clue ${g.silverClue}</span>
-          <span class="text-white">${Number(g.silverWinners).toLocaleString()} winner${g.silverWinners != 1 ? 's' : ''} · $${fmt(g.silverPayout)} each</span>
+          <span class="${Number(g.silverWinners) > 0 ? 'text-slate-300' : 'text-slate-600'} font-bold">🥈 Silver — Clue ${g.silverClue}</span>
+          <span class="text-white">${Number(g.silverWinners) > 0 ? `${Number(g.silverWinners).toLocaleString()} winner${g.silverWinners != 1 ? 's' : ''} · $${fmt(g.silverPayout)} each` : 'No winners — pot redistributed'}</span>
         </div>
         <div class="flex justify-between border-b border-white/5 pb-2">
-          <span class="text-orange-400 font-bold">🥉 Bronze — Clue ${g.bronzeClue}</span>
-          <span class="text-white">${Number(g.bronzeWinners).toLocaleString()} winner${g.bronzeWinners != 1 ? 's' : ''} · $${fmt(g.bronzePayout)} each</span>
+          <span class="${Number(g.bronzeWinners) > 0 ? 'text-orange-400' : 'text-slate-600'} font-bold">🥉 Bronze — Clue ${g.bronzeClue}</span>
+          <span class="text-white">${Number(g.bronzeWinners) > 0 ? `${Number(g.bronzeWinners).toLocaleString()} winner${g.bronzeWinners != 1 ? 's' : ''} · $${fmt(g.bronzePayout)} each` : 'No winners — pot redistributed'}</span>
         </div>
         <div class="flex justify-between border-b border-white/5 pb-2">
           <span class="text-slate-400">Total Winners</span>
@@ -3197,22 +3213,38 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
         </div>`
       : `<div class="text-center font-mono text-slate-300">${totalW.toLocaleString()}</div>`;
 
-    // Detect bronze-pot-redistribution: no bronze winner + adminNote set
-    const bronzeRedist = isV2 && g.adminNote && !(g.bronzeWinners > 0) && !(g.bronzePayout > 0);
+    // Detect redistribution scenarios: per official rules, a tier with no winners
+    // has its pot redistributed to the tier above (bronze→silver or gold, silver→gold).
+    const bronzeRedist = isV2 && g.bronzeClue && !(g.bronzeWinners > 0);
+    const silverRedist = isV2 && g.silverClue && !(g.silverWinners > 0);
     let goldTip = '', silverTip = '', bronzeTip = '';
-    if (bronzeRedist) {
-      const totalElig = (g.goldWinners || 0) + (g.silverWinners || 0);
-      const bronzeExtra = totalElig > 0 ? Math.floor(2000 / totalElig * 100) / 100 : 0;
-      const goldBase   = (g.goldWinners   || 0) > 0 ? Math.floor(3000 / g.goldWinners   * 100) / 100 : 0;
-      const silverBase = (g.silverWinners || 0) > 0 ? Math.floor(2500 / g.silverWinners * 100) / 100 : 0;
-      goldTip   = `Base $${goldBase.toFixed(2)} (gold pot ÷ ${(g.goldWinners||0).toLocaleString()} winners) + $${bronzeExtra.toFixed(2)} redistributed bronze share. Per official rules: no bronze winners → bronze pot redistributed to gold & silver.`;
-      silverTip = `Base $${silverBase.toFixed(2)} (silver pot ÷ ${(g.silverWinners||0).toLocaleString()} winners) + $${bronzeExtra.toFixed(2)} redistributed bronze share. Per official rules: no bronze winners → bronze pot redistributed to gold & silver.`;
-      bronzeTip = `No bronze winner — per official rules, the $2,000 bronze pot was redistributed to all ${totalElig.toLocaleString()} gold+silver winners ($${bronzeExtra.toFixed(2)} each added to their payout).`;
+    if (isV2 && (bronzeRedist || silverRedist)) {
+      const gW = g.goldWinners || 0;
+      const sW = g.silverWinners || 0;
+      const goldBase   = gW > 0 ? Math.floor(3000 / gW * 100) / 100 : 0;
+      const silverBase = sW > 0 ? Math.floor(2500 / sW * 100) / 100 : 0;
+      // Bronze cascades to silver+gold unless silver is also empty, in which case bronze goes to gold only
+      const bronzeEligible = (bronzeRedist && !silverRedist) ? gW + sW : gW;
+      const bronzeExtra = (bronzeRedist && bronzeEligible > 0) ? Math.floor(2000 / bronzeEligible * 100) / 100 : 0;
+      const silverExtra = (silverRedist && gW > 0) ? Math.floor(2500 / gW * 100) / 100 : 0;
+      const goldParts = [];
+      if (bronzeRedist) goldParts.push(`$${bronzeExtra.toFixed(2)} bronze redistribution`);
+      if (silverRedist) goldParts.push(`$${silverExtra.toFixed(2)} silver redistribution`);
+      goldTip = `Base $${goldBase.toFixed(2)} (gold pot ÷ ${gW.toLocaleString()} winners) + ${goldParts.join(' + ')}. Per official rules.`;
+      if (bronzeRedist && !silverRedist) {
+        silverTip = `Base $${silverBase.toFixed(2)} (silver pot ÷ ${sW.toLocaleString()} winners) + $${bronzeExtra.toFixed(2)} bronze redistribution. Per official rules.`;
+        bronzeTip = `No bronze winner — per official rules, the $2,000 bronze pot was redistributed to all ${(gW + sW).toLocaleString()} gold+silver winners ($${bronzeExtra.toFixed(2)} each added to their payout).`;
+      } else if (silverRedist && !bronzeRedist) {
+        silverTip = `No silver winner — per official rules, the $2,500 silver pot was redistributed to all ${gW.toLocaleString()} gold winners ($${silverExtra.toFixed(2)} each added to their payout).`;
+      } else {
+        silverTip = `No silver winner — per official rules, the $2,500 silver pot was redistributed to all ${gW.toLocaleString()} gold winners ($${silverExtra.toFixed(2)} each). Bronze pot also redistributed to gold ($${bronzeExtra.toFixed(2)} each).`;
+        bronzeTip = `No bronze winner — per official rules, the $2,000 bronze pot cascaded up to all ${gW.toLocaleString()} gold winners ($${bronzeExtra.toFixed(2)} each), since silver also had no winners.`;
+      }
     }
     const payoutsHtml = isV2
       ? `<div class="text-xs font-mono space-y-0.5" style="min-width:150px">
           <div${goldTip   ? ` title="${esc(goldTip)}"   style="cursor:help"` : ''}>🥇 <span class="text-yellow-400">${fmtMoney(g.goldPayout)}</span></div>
-          <div${silverTip ? ` title="${esc(silverTip)}" style="cursor:help"` : ''}>🥈 <span class="text-slate-300">${fmtMoney(g.silverPayout)}</span></div>
+          <div${silverTip ? ` title="${esc(silverTip)}" style="cursor:help"` : ''}>🥈 <span class="text-slate-300">${silverRedist ? '—' : fmtMoney(g.silverPayout)}</span></div>
           <div${bronzeTip ? ` title="${esc(bronzeTip)}" style="cursor:help"` : ''}>🥉 <span class="text-amber-600">${bronzeRedist ? '—' : fmtMoney(g.bronzePayout)}</span></div>
           <div class="border-t border-slate-700 pt-0.5 text-green-400 whitespace-nowrap">${esc(g.winnerPayout || '')} total</div>
         </div>`
@@ -3422,13 +3454,20 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     }).join('');
 
     const fmt2 = n => Number(n).toFixed(2);
-    const bronzeRow = g.bronzeClue
-      ? `<span class="text-orange-300">🥉 Clue ${g.bronzeClue} · ${Number(g.bronzeWinners).toLocaleString()} · $${fmt2(g.bronzePayout)}</span>`
-      : `<span class="text-orange-300/35">🥉 No bronze winner</span>`;
+    const silverRow = !g.silverClue
+      ? `<span class="text-slate-500/50">🥈 No silver tier</span>`
+      : Number(g.silverWinners) > 0
+        ? `<span class="text-slate-200">🥈 Clue ${g.silverClue} · ${Number(g.silverWinners).toLocaleString()} · $${fmt2(g.silverPayout)}</span>`
+        : `<span class="text-slate-500/50">🥈 Clue ${g.silverClue} · no winners (pot redistributed)</span>`;
+    const bronzeRow = !g.bronzeClue
+      ? `<span class="text-orange-300/30">🥉 No bronze tier</span>`
+      : Number(g.bronzeWinners) > 0
+        ? `<span class="text-orange-300">🥉 Clue ${g.bronzeClue} · ${Number(g.bronzeWinners).toLocaleString()} · $${fmt2(g.bronzePayout)}</span>`
+        : `<span class="text-orange-300/30">🥉 Clue ${g.bronzeClue} · no winners (pot redistributed)</span>`;
     const medalSummary = g.format === 'v2'
       ? `<div class="mt-5 flex flex-wrap justify-center text-xs font-bold" style="column-gap:2rem;row-gap:.65rem;line-height:1.75">
           <span class="text-yellow-300">🥇 Clue ${g.goldClue} · ${Number(g.goldWinners).toLocaleString()} · $${fmt2(g.goldPayout)}</span>
-          <span class="text-slate-200">🥈 Clue ${g.silverClue} · ${Number(g.silverWinners).toLocaleString()} · $${fmt2(g.silverPayout)}</span>
+          ${silverRow}
           ${bronzeRow}
         </div>`
       : `<div class="mt-4 flex justify-center">
@@ -3855,6 +3894,12 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       bronze: { avgWinners: bronzeTW / v2Count, avgPayout: bronzeTW ? v2GamesList.reduce((s, g) => s + (Number(g.bronzeWinners) || 0) * (Number(g.bronzePayout) || 0), 0) / bronzeTW : 0 },
       roundCount: v2Count, totalWinners: { gold: goldTW, silver: silverTW, bronze: bronzeTW }
     } : null;
+    const redistStats = v2Count ? {
+      noGold:   v2GamesList.filter(g => !(g.goldWinners   > 0)).length,
+      noSilver: v2GamesList.filter(g => !(g.silverWinners > 0)).length,
+      noBronze: v2GamesList.filter(g => !(g.bronzeWinners > 0)).length,
+      roundCount: v2Count
+    } : null;
     const clueFreqMap = {};
     games.forEach(g => {
       (g.clues || []).forEach((c, i) => {
@@ -3934,6 +3979,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       bigPayouts,
       quickBreakdown,
       medalAvgs,
+      redistStats,
       reusedClues,
       charts: {
         sortedByDate,
@@ -4194,6 +4240,19 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
           </div>
         </div>`).join('');
       if (nodes.medalFooter) nodes.medalFooter.textContent = `Across ${ma.roundCount.toLocaleString()} v2 rounds · ${ma.totalWinners.gold.toLocaleString()} gold, ${ma.totalWinners.silver.toLocaleString()} silver, ${ma.totalWinners.bronze.toLocaleString()} bronze winners total`;
+    }
+    if (nodes.redistrib && stats.redistStats) {
+      const rs = stats.redistStats;
+      nodes.redistrib.innerHTML = [
+        { label: 'No Gold Winners',   count: rs.noGold,   cls: 'text-yellow-400', sub: 'entire pot unclaimed' },
+        { label: 'No Silver Winners', count: rs.noSilver, cls: 'text-slate-300',  sub: 'silver pot redistributed to gold' },
+        { label: 'No Bronze Winners', count: rs.noBronze, cls: 'text-orange-400', sub: 'bronze pot redistributed up' }
+      ].map(t => `
+        <div class="bg-slate-800/50 rounded-lg px-4 py-4 border border-slate-700/30 text-center">
+          <div class="text-3xl font-bold ${t.cls} leading-none">${t.count}</div>
+          <div class="text-xs font-bold ${t.cls} uppercase tracking-wider mt-2">${esc(t.label)}</div>
+          <div class="text-xs text-slate-500 mt-1">${esc(t.sub)}</div>
+        </div>`).join('');
     }
     if (nodes.reusedClues) {
       nodes.reusedClues.innerHTML = stats.reusedClues.length
