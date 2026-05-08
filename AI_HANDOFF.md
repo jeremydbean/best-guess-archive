@@ -16,35 +16,37 @@ Last updated: 2026-05-07
 
 ## Current State
 
-- **Year-based data sharding**: `data/games.json` has been split into per-year shard files — `data/games-2025.json` (36 games) and `data/games-2026.json` (179+ games). `data/games.json` is kept as a read-only backup but is **no longer authoritative**. All tooling reads from and writes to the year shards.
+- **Year-based data sharding**: `data/games.json` has been split into per-year shard files — `data/games-2025.json` (36 games) and `data/games-2026.json` (181+ games). `data/games.json` is kept as a read-only backup but is **no longer authoritative**. All tooling reads from and writes to the year shards.
   - `data/games-meta.json` is now a `{years: [...], games: [...]}` object instead of a bare array. `years` lists the available shard years. `games` is the lightweight meta array used by the home page.
   - `tools/audit-data.mjs` reads from all `data/games-YYYY.json` shards (scanning the directory), regenerates `games-meta.json` as the `{years, games}` object.
   - `scripts/auto-import.py` writes new games to the correct `data/games-YYYY.json` shard based on the episode year. If a new-year shard does not exist it is created automatically.
   - `index.html` `init()` parses the new meta format; `_ensureFullGamesLoaded()` fetches all year shards in parallel; `refreshStats()` also loads from shards. A `_availableYears` property drives which shards to fetch; falls back to `['2025','2026']` if meta load failed.
   - When a brand-new year starts: auto-import creates `data/games-YYYY.json` automatically; `npm run audit:fix` adds the new year to `games-meta.json`; no manual steps needed.
+- **No-winner medal tiers / redistribution**: Every playable round still has exactly five clue objects. For v2 rounds where a silver or bronze tier has no winners, keep the data literal: the empty tier has `0` winners and `0` payout, and its medal clue field should be omitted or `0`. Do not invent a medal clue. Empty tiers cascade from the bottom upward, so bronze can be empty by itself, or silver and bronze can both be empty. The app/importer calculate official redistribution display from the winner counts. Example: May 7 `SPARKLER` has gold on Clue 4, silver on Clue 5, no bronze, `bronzeWinners: 0`, no `bronzeClue`, and bronze pot redistributed into the shown gold/silver payouts.
+- **No-winner validation hardening 2026-05-07**: `scripts/auto-import.py` now accepts empty silver/bronze tiers only when their medal clue field is omitted or `0`, while still requiring all five clue objects. `tools/audit-data.mjs` enforces the same shape and verifies v2 payout math including official redistribution, so bad imports cannot make Play award a nonexistent medal tier.
 
 - GitHub Pages publishes from `main`.
 - Main-only workflow is in effect. Do not create branches; remove stale non-main branches after confirming their commits are already represented on `main`.
 - Database side arrows are working on desktop.
 - Home page KPI counters animate on load without layout shift.
 - **Admin panel removed**: All game/transcript updates are now done by AI agents (Claude/Codex) directly editing the data files and committing. See "Daily Update Workflow" below.
-- **Bonus/promo data migrated**: `bonusMap` moved from hardcoded JS in `index.html` to a `bonus: {title, desc}` field on each game in `games.json`. Rendering code reads `g.bonus` directly. `bonus.desc` may contain safe HTML (`<br>` and `<b>` tags).
-- **Scripts cleaned up**: `scripts/` directory removed entirely; `import_transcripts_from_docx.py`, `admin-panel-archive.js`, and `KindaCharming's Best Guess Live Show Transcripts.docx` are gone. Recover from git history if ever needed.
-- Latest imported episode: Wednesday, May 6, 2026 with COTTON CANDY and KNOT.
-- 108 total game days (107 playable + 1 cancelled: Thursday, April 9, 2026).
-- 215 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 179).
-- **Transcripts reimported** from `Best_Guess_Live_Clean_Readable_Transcripts.docx` (uploaded to repo root). All 100 transcripts use games.json as canonical source for rounds/clues/host/pot/format. Section tags now read "Round 1 Results" / "Round 2 Results" (previously "Reveal").
+- **Bonus/promo data migrated**: `bonusMap` moved from hardcoded JS in `index.html` to a `bonus: {title, desc}` field on each game in the year shards. Rendering code reads `g.bonus` directly. `bonus.desc` may contain safe HTML (`<br>` and `<b>` tags).
+- **Scripts cleaned up**: Legacy docx/admin importer scripts are gone; current automation lives in `scripts/auto-import.py`, with a few one-off historical cleanup scripts still present.
+- Latest imported episode: Thursday, May 7, 2026 with SPARKLER and MINIBAR.
+- 109 total game days (108 playable + 1 cancelled: Thursday, April 9, 2026).
+- 217 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 181).
+- **Transcripts reimported** from `Best_Guess_Live_Clean_Readable_Transcripts.docx` (uploaded to repo root). All 100 transcripts use the game data as canonical source for rounds/clues/host/pot/format. Section tags now read "Round 1 Results" / "Round 2 Results" (previously "Reveal").
 - **Jan 1-14 transcripts fixed**: These episodes had no Heading2 section markers in the docx. A heuristic state machine now splits them into 6 sections using phrase triggers ("crystal ball reveals", "correct answer was", etc.) and space-normalized secret-item matching. All 10 episodes are now fully populated.
 - **Mobile transcript layout fixed**: episode list max-height reduced from 32rem to 9rem on mobile; tapping an episode smooth-scrolls to the transcript detail panel. Desktop still uses 32rem two-column layout.
 - **Clue lines** in transcript sections now render as left-bordered callout blocks consistently across all episode formats. Pattern matches "Clue N:" and "Clue number N:" (spelled or numeric) on any line regardless of speaker attribution.
-- **All transcripts reformatted** (commits `8b3c0b9`, `fbb8b4a`): All episodes (Dec 2025 through Apr 2026) now use consistent Results section format — speaker reveal line + null-speaker "Clue 5→1" breakdowns from games.json + null-speaker winner announcement. 21 episodes lack a speaker-attributed reveal (source had none) and fall back to a null-speaker constructed line. Clue callout formatting (indented border blocks) now applies only in Results sections, not Round sections.
+- **All transcripts reformatted** (commits `8b3c0b9`, `fbb8b4a`): All episodes (Dec 2025 through Apr 2026) now use consistent Results section format — speaker reveal line + null-speaker "Clue 5→1" breakdowns from game data + null-speaker winner announcement. 21 episodes lack a speaker-attributed reveal (source had none) and fall back to a null-speaker constructed line. Clue callout formatting (indented border blocks) now applies only in Results sections, not Round sections.
 - **Beta notice** added to Transcripts page header (commit `d1a30c9`): yellow banner noting formatting is still being updated.
 - **Codex validation 2026-04-28**: `AGENTS.md` now matches the canonical `Round 1 Results` / `Round 2 Results` section tags. The cancelled Thursday, April 9, 2026 transcript now keeps the same six-section shell as playable episodes with `secretItems: []` and `rounds: []`; the game/meta records use an empty `secretItem` and `format: "v2"`. Validation passed for JSON parsing, inline script parsing, regenerated `games-meta.json`, v2 winner totals, distinct medal clues, and all 101 transcript section schemas. Browser smoke passed on `http://127.0.0.1:5173/` for Home, Transcripts, and Stats with no console errors; the Avg Payout Per Winner by Clue chart renders the Clue 5 bar visibly on its log scale.
 - **Codex UI update 2026-04-28**: The April 27 Netflix Shop K-pop Demon Hunters glass voucher bonus is now attached to both TOOTHPICK and WILLY WONKA so both database detail modals display it. Database detail modals now show a full "Episode transcript" action that opens the selected date's transcript and jumps to the matching round. The Transcripts page sidebar/detail layout was tightened with stronger episode cards, section jump buttons, top-level database detail links, and sticky desktop navigation.
-- **Transcript consistency audit 2026-04-28**: All 101 transcripts match the 101 game dates, use the canonical six-section order, have consistent `secretItems`/`rounds` metadata against `games.json`, and include expected result clue text under loose punctuation matching. Cleaned remaining escaped HTML entities in transcript text (`&amp;` → `&`) so M&M, S&P, and H&M render correctly.
+- **Transcript consistency audit 2026-04-28**: All 101 transcripts match the 101 game dates, use the canonical six-section order, have consistent `secretItems`/`rounds` metadata against game data, and include expected result clue text under loose punctuation matching. Cleaned remaining escaped HTML entities in transcript text (`&amp;` → `&`) so M&M, S&P, and H&M render correctly.
 - **Import/UI quality-of-life update 2026-04-28**: Added `npm run audit` via `tools/audit-data.mjs`, an `incoming/` raw transcript drop folder, and `docs/DAILY_IMPORT.md`, `docs/DAILY_IMPORT_PROMPT.md`, and `docs/IMPORT_REPORT_TEMPLATE.md`. Home now has Latest Episode shortcuts and an optional `?health=1` data-health panel with copy buttons for the import prompt/audit command. Database rows now show bonus badges, transcript action icons, and quick-filter chips for bonus, transcripts, v2 rules, solo wins, and host.
 - **Footer/latest/health polish 2026-04-28**: Footer status now counts playable rounds only, excluding cancelled games. The health panel remains behind `?health=1` and has a discreet footer icon link. Latest Game card is more polished with host/round/winner metadata. Transcript section jump buttons were removed to keep the transcript header quieter.
-- **Audit self-healing update 2026-04-28**: `npm run audit:fix` regenerates `data/games-meta.json` from `data/games.json`; `npm run audit` now also validates archive date format/weekday, missing clue explanations, and non-negative numeric payout fields.
+- **Audit self-healing update 2026-04-28**: `npm run audit:fix` regenerates `data/games-meta.json` from all year shards; `npm run audit` now also validates archive date format/weekday, missing clue explanations, and non-negative numeric payout fields.
 - **Latest game card layout fix 2026-04-28**: Home hero has bottom padding again, and the latest game card is explicitly full-width/max-width with safer text wrapping, extra inner gutters, and tip-jar-sized action buttons so the card/text does not get clipped on mobile-width screens.
 - **Latest game medal clue chips 2026-04-28**: The Latest Game card now shows compact medal clue indicators like `R1 🥇1 🥈2 🥉3`. `games-meta.json` now includes `goldClue`, `silverClue`, and `bronzeClue`, regenerated by `npm run audit:fix`, so the home page can show this without loading full `games.json`.
 - **Database bonus indicator 2026-04-28**: Bonus rounds use a pink sticky present icon immediately left of the Details column. Clicking it opens the round details modal and scrolls/highlights the bonus block.
@@ -210,7 +212,7 @@ CANCELLED - No game played
 
 Agent writes one stub game object with `note` field and no `clues` array.
 
-## games.json Schema
+## Year Shard Game Schema
 
 Each game object:
 ```json
@@ -242,6 +244,8 @@ Each game object:
 ```
 
 Medal emoji in `guesses` field: append ` 🥇` / ` 🥈` / ` 🥉` after the number for the gold/silver/bronze clue respectively.
+
+If a silver or bronze tier had no winners, keep all five clue objects, set that medal tier's winners and payout to `0`, and omit that tier's medal clue field or set it to `0`. Empty tiers cascade from the bottom upward: bronze can be empty by itself, or silver and bronze can both be empty. `totalWinners` is always the actual sum of `goldWinners + silverWinners + bronzeWinners`.
 
 `bonus` is optional — only include when there's a special promo for that day.
 
@@ -293,8 +297,8 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 - Friday, May 1, 2026 bonus metadata is attached to both `ZOOM` and `JUMPING JACKS`; audit should have 0 warnings.
 - Desktop database arrows remain visible and clickable while scrolling.
 - Home KPI counters do not cause layout shift.
-- Database details modal shows bonus section for promo dates; verify `g.bonus` is present in games.json and the title is escaped, desc is trusted HTML.
-- Play feature (`startRandomGame`) awaits full games.json load before starting.
+- Database details modal shows bonus section for promo dates; verify `g.bonus` is present in the year shard and the title is escaped, desc is trusted HTML.
+- Play feature (`startRandomGame`) awaits full year-shard load before starting.
 - Stats charts render all 5 canvases; Clue 5 bar in "Avg Payout Per Winner by Clue" shows `Avg payout: $2`.
 - `npm run audit:fix` regenerates `data/games-meta.json` from all year shards after every import.
 - Transcripts: search finds new date, shows host/chips/sections, database detail buttons work.

@@ -64,6 +64,31 @@ function validatePayoutValue(value, field, context = {}) {
   }
 }
 
+const floorCents = value => Math.floor(Number(value || 0) * 100) / 100;
+const moneyMatches = (actual, expected) => Math.abs(Number(actual || 0) - Number(expected || 0)) < 0.005;
+
+function expectedV2Payouts(game) {
+  const goldWinners = Number(game.goldWinners || 0);
+  const silverWinners = Number(game.silverWinners || 0);
+  const bronzeWinners = Number(game.bronzeWinners || 0);
+  let bronzeShare = 0;
+  let silverShare = 0;
+
+  if (bronzeWinners === 0) {
+    const bronzeRecipients = silverWinners === 0 ? goldWinners : goldWinners + silverWinners;
+    if (bronzeRecipients > 0) bronzeShare = floorCents(2000 / bronzeRecipients);
+  }
+  if (silverWinners === 0 && goldWinners > 0) {
+    silverShare = floorCents(2500 / goldWinners);
+  }
+
+  return {
+    goldPayout: goldWinners > 0 ? Number((floorCents(3000 / goldWinners) + bronzeShare + silverShare).toFixed(2)) : 0,
+    silverPayout: silverWinners > 0 ? Number((floorCents(2500 / silverWinners) + (bronzeWinners === 0 ? bronzeShare : 0)).toFixed(2)) : 0,
+    bronzePayout: bronzeWinners > 0 ? floorCents(2000 / bronzeWinners) : 0
+  };
+}
+
 const regeneratedMeta = games.map(g => {
   const entry = {
     date: g.date,
@@ -131,12 +156,37 @@ for (const [index, g] of games.entries()) {
     if (winnerSum !== Number(g.totalWinners || 0)) {
       error('v2-winner-total', 'v2 totalWinners does not equal medal winner sum', { index, date: g.date, secretItem: g.secretItem, winnerSum, totalWinners: g.totalWinners });
     }
-    const medalClues = [g.goldClue, g.silverClue, g.bronzeClue].map(Number).filter(Boolean);
+    if (Number(g.silverWinners || 0) > 0 && Number(g.goldWinners || 0) === 0) {
+      error('v2-medal-tier-order', 'v2 game cannot have silver winners without gold winners', { index, date: g.date, secretItem: g.secretItem });
+    }
+    if (Number(g.bronzeWinners || 0) > 0 && Number(g.silverWinners || 0) === 0) {
+      error('v2-medal-tier-order', 'v2 game cannot have bronze winners when silver has no winners', { index, date: g.date, secretItem: g.secretItem });
+    }
+    const medalClues = [];
+    for (const tier of ['gold', 'silver', 'bronze']) {
+      const winners = Number(g[`${tier}Winners`] || 0);
+      const clue = Number(g[`${tier}Clue`] || 0);
+      if (winners > 0) {
+        if (clue < 1 || clue > 5) {
+          error('v2-medal-clue-range', 'v2 medal clue must be between 1 and 5 when that medal tier has winners', { index, date: g.date, secretItem: g.secretItem, tier, winners, clue });
+        } else {
+          medalClues.push(clue);
+        }
+      } else if (clue !== 0) {
+        error('v2-empty-tier-clue', 'v2 medal clue must be omitted or 0 when that medal tier has no winners', { index, date: g.date, secretItem: g.secretItem, tier, clue });
+      }
+    }
     if (new Set(medalClues).size !== medalClues.length) {
       error('v2-medal-clues', 'v2 medal clue numbers are not distinct', { index, date: g.date, secretItem: g.secretItem, medalClues });
     }
     for (const field of ['goldPayout', 'silverPayout', 'bronzePayout']) {
       validatePayoutValue(g[field], field, { index, date: g.date, secretItem: g.secretItem });
+    }
+    const expectedPayouts = expectedV2Payouts(g);
+    for (const field of ['goldPayout', 'silverPayout', 'bronzePayout']) {
+      if (!moneyMatches(g[field], expectedPayouts[field])) {
+        error('v2-payout-math', 'v2 payout does not match base pot plus no-winner redistribution math', { index, date: g.date, secretItem: g.secretItem, field, actual: g[field], expected: expectedPayouts[field] });
+      }
     }
   }
   if (g.bonus && (!g.bonus.title || !g.bonus.desc)) {

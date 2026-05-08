@@ -61,26 +61,28 @@ Extract from the paste:
 
 Use the schema in `AI_HANDOFF.md`. Always `format: "v2"` and `pot: 7500` unless the user specifies otherwise.
 
-Medal emoji in the `guesses` field: append ` 🥇` after the number for gold clue, ` 🥈` for silver, ` 🥉` for bronze. Non-winner clues have no emoji.
+Medal emoji in the `guesses` field: append ` 🥇` after the number for the gold clue, ` 🥈` for the silver clue, and ` 🥉` for the bronze clue. Non-winner clues have no emoji. Every playable round still has exactly five clue objects. If a tier had no winners, set that tier's winner count and payout to `0`; omit that tier's medal clue field or set it to `0`.
 
-`winnerPayout` is typically `"$7,500.00"` (full pot to gold winners in v2).
+`winnerPayout` is typically `"$7,500.00"` for v2 rounds. Do not change it to a per-tier amount when a silver or bronze pool is redistributed.
+
+No-winner redistribution rule: empty medal tiers cascade from the bottom upward. If bronze has no winners, set `bronzeWinners: 0`, `bronzePayout: 0`, and no `bronzeClue` medal field; the $2,000 bronze pool is redistributed upward by the importer/app logic. If silver has no winners, bronze must also have no winners; set both empty tiers to `0` and omit both medal clue fields. In that case both pools cascade to gold. `totalWinners` must still equal the sum of actual winner counts.
 
 `bonus` field: only include if SPECIAL PROMO section is present.
 If a promo applies to the whole episode, add the same `bonus` object to both round objects.
 
-### 3. Update data/games.json
+### 3. Update the year shard
 
-Append the two new game objects to the END of the array. Do not prepend.
+Append the two new game objects to the END of the correct `data/games-YYYY.json` array. Do not prepend. `data/games.json` is a stale backup and is not authoritative.
 
 ### 4. Regenerate data/games-meta.json
 
-Run the audit fixer after editing `data/games.json`:
+Run the audit fixer after editing a year shard:
 
 ```bash
 npm run audit:fix
 ```
 
-This rewrites `data/games-meta.json` from `data/games.json` and keeps the home-page stats in sync.
+This rewrites `data/games-meta.json` from all year shards and keeps the home-page stats in sync.
 
 ### 5. Add transcript entry to data/transcripts.json
 
@@ -98,7 +100,7 @@ Append the new entry to the END of the `transcripts.json` array.
 ```bash
 npm run audit:fix
 npm run audit
-git add data/games.json data/games-meta.json data/transcripts.json
+git add data/games-YYYY.json data/games-meta.json data/transcripts.json
 git commit -m "Import [DATE]: [ROUND1_ANSWER] and [ROUND2_ANSWER]"
 git push -u origin main
 ```
@@ -123,6 +125,6 @@ Before committing, verify:
 - `npm run audit` passes with 0 errors.
 - Both games have exactly 5 clues.
 - `totalWinners` == `goldWinners` + `silverWinners` + `bronzeWinners`.
-- Gold/silver/bronze clue numbers are distinct integers 1–5.
+- Gold/silver/bronze medal clue numbers are distinct integers 1–5 for tiers with winners. Tiers with no winners may omit that medal clue field or use `0`. This does not change the five clue objects in the round.
 - New transcript has exactly 6 sections in the correct order.
-- `data/games-meta.json` entry count matches `data/games.json` entry count.
+- `data/games-meta.json` entry count matches the combined year-shard game count.

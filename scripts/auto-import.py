@@ -330,12 +330,12 @@ Video title: {video_title}
 --- RAW TRANSCRIPT ---
 {transcript_text}
 
---- GAMES SCHEMA (last 4 entries from games.json) ---
+--- GAMES SCHEMA (last 4 entries from current year shard) ---
 {schema_games}
 
 --- EXTRACTION RULES ---
-1. Extract both rounds. Each game entry must match the games.json schema exactly.
-2. For v2 format: include goldClue, silverClue, bronzeClue (clue numbers 1–5),
+1. Extract both rounds. Each game entry must match the year-shard game schema exactly.
+2. For v2 format: include goldClue, silverClue, bronzeClue (clue numbers 1–5 when that tier had winners),
    goldWinners, silverWinners, bronzeWinners, goldPayout, silverPayout, bronzePayout.
    totalWinners = goldWinners + silverWinners + bronzeWinners.
    winnerPayout = formatted pot string e.g. "$7,500.00".
@@ -350,11 +350,12 @@ Video title: {video_title}
 4. Do NOT include HTML entities in text — use plain Unicode.
 5. If a bonus/promo is announced for the week, add bonus:{{"title":"...","desc":"..."}}
    to BOTH game entries.
-6. If a medal tier had no winners (e.g., the host says "nobody won bronze today"),
-   set that tier's winners=0 and payout=0. Do NOT inflate gold/silver payouts to
-   reflect redistribution — the script recalculates redistribution amounts per
-   official rules automatically. totalWinners must still equal the sum of medal
-   winner counts (e.g., goldWinners + silverWinners + 0 if bronze had none).
+6. Every playable round has exactly 5 clue objects. If a medal tier had no winners
+   (e.g., the host says "nobody won bronze today"), set that tier's winners=0 and
+   payout=0, and omit that tier's medal clue field or set it to 0.
+   Do NOT inflate gold/silver payouts to reflect redistribution — the script recalculates
+   redistribution amounts per official rules automatically. totalWinners must still equal
+   the sum of medal winner counts (e.g., goldWinners + silverWinners + 0 if bronze had none).
 
 Respond with JSON only."""
 
@@ -425,12 +426,25 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
             if not str(clue.get("explanation") or "").strip():
                 raise ValueError(f"Game {index} clue {clue_index} is missing explanation.")
         if game.get("format") == "v2":
-            medal_clues = [int(game.get(k) or 0) for k in ("goldClue", "silverClue", "bronzeClue")]
-            if any(n < 1 or n > 5 for n in medal_clues) or len(set(medal_clues)) != 3:
-                raise ValueError(f"Game {index} v2 medal clue numbers must be distinct values 1-5.")
             winner_sum = sum(int(game.get(k) or 0) for k in ("goldWinners", "silverWinners", "bronzeWinners"))
             if winner_sum != int(game.get("totalWinners") or 0):
                 raise ValueError(f"Game {index} totalWinners must equal medal winner sum.")
+            if int(game.get("silverWinners") or 0) > 0 and int(game.get("goldWinners") or 0) == 0:
+                raise ValueError(f"Game {index} cannot have silver winners without gold winners.")
+            if int(game.get("bronzeWinners") or 0) > 0 and int(game.get("silverWinners") or 0) == 0:
+                raise ValueError(f"Game {index} cannot have bronze winners when silver has no winners.")
+            medal_clues = []
+            for tier in ("gold", "silver", "bronze"):
+                winners = int(game.get(f"{tier}Winners") or 0)
+                clue = int(game.get(f"{tier}Clue") or 0)
+                if winners > 0:
+                    if clue < 1 or clue > 5:
+                        raise ValueError(f"Game {index} {tier}Clue must be 1-5 when {tier} has winners.")
+                    medal_clues.append(clue)
+                elif clue not in (0,):
+                    raise ValueError(f"Game {index} {tier}Clue medal field must be omitted or 0 when {tier} has no winners.")
+            if len(set(medal_clues)) != len(medal_clues):
+                raise ValueError(f"Game {index} v2 medal clue numbers must be distinct for tiers with winners.")
         bonus = game.get("bonus")
         if bonus:
             if not isinstance(bonus, dict) or not bonus.get("title") or not bonus.get("desc"):
@@ -445,6 +459,10 @@ def build_stub_transcript(episode_date: str, games: list, video_id: str = "") ->
         return int(str(val).replace(",", ""))
 
     def _medal_part(label: str, clue_num: int, count: int, payout) -> str:
+        if count == 0:
+            if clue_num:
+                return f"{label} (Clue {clue_num}): no winners — pot redistributed"
+            return f"{label}: no winners — pot redistributed"
         amount = f"${float(payout):,.2f}"
         if count == 1:
             return f"{label} (Clue {clue_num}): 1 winner at {amount}"
@@ -464,9 +482,9 @@ def build_stub_transcript(episode_date: str, games: list, video_id: str = "") ->
                     f'{clue.get("correct", "?")} got it right.'
                 ),
             })
-        gc = int(game.get("goldClue", 1))
-        sc = int(game.get("silverClue", 2))
-        bc = int(game.get("bronzeClue", 3))
+        gc = int(game.get("goldClue") or 0)
+        sc = int(game.get("silverClue") or 0)
+        bc = int(game.get("bronzeClue") or 0)
         summary = ". ".join([
             _medal_part("Gold",   gc, _winner_int(game.get("goldWinners",   0)), game.get("goldPayout",   0)),
             _medal_part("Silver", sc, _winner_int(game.get("silverWinners", 0)), game.get("silverPayout", 0)),

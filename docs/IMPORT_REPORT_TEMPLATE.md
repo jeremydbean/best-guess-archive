@@ -6,7 +6,7 @@ Secret items:
 
 ## Files Changed
 
-- `data/games.json`
+- `data/games-YYYY.json`
 - `data/games-meta.json`
 - `data/transcripts.json`
 
