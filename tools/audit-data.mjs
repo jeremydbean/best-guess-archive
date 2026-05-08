@@ -64,6 +64,22 @@ function validatePayoutValue(value, field, context = {}) {
   }
 }
 
+function parseCountValue(value) {
+  if (value == null || value === '') return NaN;
+  const digits = String(value).replace(/[^\d]/g, '');
+  return digits ? Number(digits) : NaN;
+}
+
+function validateCountValue(value, field, context = {}, options = {}) {
+  if (value == null || value === '') return NaN;
+  if (options.allowLegacyUnknown && /^(?:N|N\/A|A \/ N\/A|\?|-)$/.test(String(value).trim())) return NaN;
+  const numeric = parseCountValue(value);
+  if (!Number.isInteger(numeric) || numeric < 0) {
+    error('count-value', 'Count field must be a non-negative integer', { field, value, ...context });
+  }
+  return numeric;
+}
+
 const floorCents = value => Math.floor(Number(value || 0) * 100) / 100;
 const moneyMatches = (actual, expected) => Math.abs(Number(actual || 0) - Number(expected || 0)) < 0.005;
 
@@ -146,6 +162,13 @@ for (const [index, g] of games.entries()) {
   }
   if (!isStub && Array.isArray(g.clues)) {
     g.clues.forEach((clue, clueIndex) => {
+      const expectedNumber = clueIndex + 1;
+      const clueNumber = validateCountValue(clue.number ?? expectedNumber, 'number', { index, date: g.date, secretItem: g.secretItem, clue: expectedNumber });
+      if (clueNumber !== expectedNumber) {
+        error('clue-number', 'Playable clue number is out of order', { index, date: g.date, secretItem: g.secretItem, clue: expectedNumber, actual: clue.number });
+      }
+      validateCountValue(clue.correct, 'correct', { index, date: g.date, secretItem: g.secretItem, clue: expectedNumber }, { allowLegacyUnknown: true });
+      validateCountValue(clue.guesses, 'guesses', { index, date: g.date, secretItem: g.secretItem, clue: expectedNumber }, { allowLegacyUnknown: true });
       if (!String(clue.explanation || '').trim()) {
         warn('missing-explanation', 'Playable clue is missing an explanation', { index, date: g.date, secretItem: g.secretItem, clue: clueIndex + 1 });
       }
@@ -178,6 +201,12 @@ for (const [index, g] of games.entries()) {
     }
     if (new Set(medalClues).size !== medalClues.length) {
       error('v2-medal-clues', 'v2 medal clue numbers are not distinct', { index, date: g.date, secretItem: g.secretItem, medalClues });
+    }
+    if (JSON.stringify(medalClues) !== JSON.stringify([...medalClues].sort((a, b) => a - b))) {
+      error('v2-medal-clue-order', 'v2 medal clue numbers must be ordered earliest-to-latest: gold, silver, bronze', { index, date: g.date, secretItem: g.secretItem, medalClues });
+    }
+    if (g.winnerPayout !== '$7,500.00') {
+      error('v2-winner-payout', 'v2 winnerPayout must remain the full round pot string "$7,500.00"', { index, date: g.date, secretItem: g.secretItem, winnerPayout: g.winnerPayout });
     }
     for (const field of ['goldPayout', 'silverPayout', 'bronzePayout']) {
       validatePayoutValue(g[field], field, { index, date: g.date, secretItem: g.secretItem });

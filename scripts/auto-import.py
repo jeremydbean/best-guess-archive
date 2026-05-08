@@ -39,6 +39,11 @@ ANY_HTML_TAG_RE = re.compile(r"<[^>]+>")
 TITLE_DATE_RE = re.compile(
     r"\(([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})\)"
 )
+ARCHIVE_DATE_RE = re.compile(
+    r"^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), "
+    r"(January|February|March|April|May|June|July|August|September|October|November|December) "
+    r"(\d{1,2}), (\d{4})$"
+)
 
 
 def fetch_url(url: str) -> bytes:
@@ -132,16 +137,29 @@ def fetch_rss_videos():
     """Return list of (video_id, title, published_dt) sorted oldest-first."""
     try:
         xml_data = fetch_url(CHANNEL_RSS)
-    except urllib.error.HTTPError as exc:
-        print(f"RSS feed unavailable ({exc.code}); falling back to channel page.")
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as exc:
+        reason = getattr(exc, "code", None) or getattr(exc, "reason", None) or exc
+        print(f"RSS feed unavailable ({reason}); falling back to channel page.")
         videos = []
         for attempt in range(1, 4):
-            videos = fetch_channel_page_videos()
+            try:
+                videos = fetch_channel_page_videos()
+            except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as fallback_exc:
+                print(f"Channel page fallback failed ({fallback_exc}) (attempt {attempt}/3).")
+                videos = []
             if videos:
                 return videos
             print(f"Channel page fallback returned no videos (attempt {attempt}/3).")
         return videos
-    root = ET.fromstring(xml_data)
+    try:
+        root = ET.fromstring(xml_data)
+    except ET.ParseError as exc:
+        print(f"RSS feed XML was malformed ({exc}); falling back to channel page.")
+        try:
+            return fetch_channel_page_videos()
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as fallback_exc:
+            print(f"Channel page fallback failed ({fallback_exc}).")
+            return []
     ns = {
         "atom": "http://www.w3.org/2005/Atom",
         "yt": "http://www.youtube.com/xml/schemas/2015",
@@ -167,10 +185,17 @@ def fetch_video_metadata(video_id: str) -> tuple[str, datetime | None]:
     page = fetch_url(f"https://www.youtube.com/watch?v={video_id}").decode("utf-8", errors="replace")
     title_match = re.search(r'"title":"((?:\\.|[^"\\])*)"', page)
     title = decode_json_text(title_match.group(1)) if title_match else f"https://youtu.be/{video_id}"
+    title_dt = archive_datetime_from_title(title)
+    if title_dt:
+        return title, title_dt
     publish_match = re.search(r'"(?:publishDate|uploadDate)":"([^"]+)"', page)
     if publish_match:
-        return title, datetime.fromisoformat(publish_match.group(1))
-    return title, archive_datetime_from_title(title)
+        raw_date = publish_match.group(1)
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", raw_date):
+            year, month, day = map(int, raw_date.split("-"))
+            return title, datetime(year, month, day, 12, tzinfo=timezone.utc)
+        return title, datetime.fromisoformat(raw_date)
+    return title, None
 
 
 def us_eastern_fallback(dt: datetime) -> datetime:
@@ -391,6 +416,34 @@ def validate_bonus_html(desc: str, context: str) -> None:
             raise ValueError(f"{context} contains unsupported HTML tag: {tag}")
 
 
+def parse_count(value, context: str, *, allow_empty: bool = False) -> int:
+    """Parse non-negative integer fields that Claude may return as numbers or comma strings."""
+    if value is None or value == "":
+        if allow_empty:
+            return 0
+        raise ValueError(f"{context} is required.")
+    if isinstance(value, bool):
+        raise ValueError(f"{context} must be a non-negative integer, got boolean.")
+    raw = str(value).strip().replace(",", "")
+    if not re.fullmatch(r"\d+", raw):
+        raise ValueError(f"{context} must be a non-negative integer, got {value!r}.")
+    return int(raw)
+
+
+def parse_money(value, context: str, *, allow_empty: bool = False) -> float:
+    """Parse non-negative money/decimal fields that Claude may return as numbers or '$1,234.56'."""
+    if value is None or value == "":
+        if allow_empty:
+            return 0.0
+        raise ValueError(f"{context} is required.")
+    if isinstance(value, bool):
+        raise ValueError(f"{context} must be a non-negative number, got boolean.")
+    raw = str(value).strip().replace("$", "").replace(",", "")
+    if not re.fullmatch(r"\d+(?:\.\d+)?", raw):
+        raise ValueError(f"{context} must be a non-negative number, got {value!r}.")
+    return float(raw)
+
+
 def validate_import_data(data: dict, expected_date: str | None) -> None:
     """Reject malformed Claude output before writing any archive files."""
     if not isinstance(data, dict):
@@ -402,6 +455,8 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
 
     if not isinstance(games, list):
         raise ValueError("games must be an array.")
+    if not isinstance(episode_date, str) or not ARCHIVE_DATE_RE.fullmatch(episode_date):
+        raise ValueError(f"episode_date must use 'Weekday, Month D, YYYY' format, got {episode_date!r}.")
     if expected_date and expected_date != "unknown" and episode_date != expected_date:
         raise ValueError(f"episode_date {episode_date!r} does not match expected date {expected_date!r}.")
 
@@ -417,34 +472,56 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
             raise ValueError(f"Game {index} date must match episode_date.")
         if not game.get("secretItem"):
             raise ValueError(f"Game {index} is missing secretItem.")
+        if not str(game.get("host") or "").strip():
+            raise ValueError(f"Game {index} is missing host.")
+        if parse_count(game.get("pot"), f"Game {index} pot") <= 0:
+            raise ValueError(f"Game {index} pot must be greater than 0.")
+        if game.get("format") != "v2":
+            raise ValueError(f"Game {index} format must be 'v2' for auto-imported episodes.")
+        if "wrongGuesses" not in game:
+            raise ValueError(f"Game {index} is missing wrongGuesses.")
         clues = game.get("clues")
         if not isinstance(clues, list) or len(clues) != 5:
             raise ValueError(f"Game {index} must have exactly 5 clues.")
         for clue_index, clue in enumerate(clues, start=1):
             if not isinstance(clue, dict) or not clue.get("text"):
                 raise ValueError(f"Game {index} clue {clue_index} is missing text.")
+            clue_number = parse_count(clue.get("number", clue_index), f"Game {index} clue {clue_index} number")
+            if clue_number != clue_index:
+                raise ValueError(f"Game {index} clue {clue_index} number must be {clue_index}.")
+            parse_count(clue.get("correct"), f"Game {index} clue {clue_index} correct")
+            parse_count(clue.get("guesses"), f"Game {index} clue {clue_index} guesses")
             if not str(clue.get("explanation") or "").strip():
                 raise ValueError(f"Game {index} clue {clue_index} is missing explanation.")
-        if game.get("format") == "v2":
-            winner_sum = sum(int(game.get(k) or 0) for k in ("goldWinners", "silverWinners", "bronzeWinners"))
-            if winner_sum != int(game.get("totalWinners") or 0):
-                raise ValueError(f"Game {index} totalWinners must equal medal winner sum.")
-            if int(game.get("silverWinners") or 0) > 0 and int(game.get("goldWinners") or 0) == 0:
-                raise ValueError(f"Game {index} cannot have silver winners without gold winners.")
-            if int(game.get("bronzeWinners") or 0) > 0 and int(game.get("silverWinners") or 0) == 0:
-                raise ValueError(f"Game {index} cannot have bronze winners when silver has no winners.")
-            medal_clues = []
-            for tier in ("gold", "silver", "bronze"):
-                winners = int(game.get(f"{tier}Winners") or 0)
-                clue = int(game.get(f"{tier}Clue") or 0)
-                if winners > 0:
-                    if clue < 1 or clue > 5:
-                        raise ValueError(f"Game {index} {tier}Clue must be 1-5 when {tier} has winners.")
-                    medal_clues.append(clue)
-                elif clue not in (0,):
-                    raise ValueError(f"Game {index} {tier}Clue medal field must be omitted or 0 when {tier} has no winners.")
-            if len(set(medal_clues)) != len(medal_clues):
-                raise ValueError(f"Game {index} v2 medal clue numbers must be distinct for tiers with winners.")
+        gold_winners = parse_count(game.get("goldWinners"), f"Game {index} goldWinners", allow_empty=True)
+        silver_winners = parse_count(game.get("silverWinners"), f"Game {index} silverWinners", allow_empty=True)
+        bronze_winners = parse_count(game.get("bronzeWinners"), f"Game {index} bronzeWinners", allow_empty=True)
+        total_winners = parse_count(game.get("totalWinners"), f"Game {index} totalWinners")
+        winner_sum = gold_winners + silver_winners + bronze_winners
+        if winner_sum != total_winners:
+            raise ValueError(f"Game {index} totalWinners must equal medal winner sum.")
+        if silver_winners > 0 and gold_winners == 0:
+            raise ValueError(f"Game {index} cannot have silver winners without gold winners.")
+        if bronze_winners > 0 and silver_winners == 0:
+            raise ValueError(f"Game {index} cannot have bronze winners when silver has no winners.")
+        medal_clues = []
+        for tier in ("gold", "silver", "bronze"):
+            winners = parse_count(game.get(f"{tier}Winners"), f"Game {index} {tier}Winners", allow_empty=True)
+            clue = parse_count(game.get(f"{tier}Clue"), f"Game {index} {tier}Clue", allow_empty=True)
+            if winners > 0:
+                if clue < 1 or clue > 5:
+                    raise ValueError(f"Game {index} {tier}Clue must be 1-5 when {tier} has winners.")
+                medal_clues.append(clue)
+            elif clue not in (0,):
+                raise ValueError(f"Game {index} {tier}Clue medal field must be omitted or 0 when {tier} has no winners.")
+        if len(set(medal_clues)) != len(medal_clues):
+            raise ValueError(f"Game {index} v2 medal clue numbers must be distinct for tiers with winners.")
+        if medal_clues != sorted(medal_clues):
+            raise ValueError(f"Game {index} v2 medal clues must be ordered earliest-to-latest: gold, silver, bronze.")
+        for tier in ("gold", "silver", "bronze"):
+            parse_money(game.get(f"{tier}Payout"), f"Game {index} {tier}Payout", allow_empty=True)
+        if game.get("winnerPayout") != "$7,500.00":
+            raise ValueError(f"Game {index} winnerPayout must be '$7,500.00' for v2 rounds.")
         bonus = game.get("bonus")
         if bonus:
             if not isinstance(bonus, dict) or not bonus.get("title") or not bonus.get("desc"):
