@@ -9731,8 +9731,9 @@
         "number": 1,
         "text": "DROPS WEIGHT QUICKLY",
         "correct": 0,
-        "guesses": 0,
-        "explanation": "Once you light one, it disappears very quickly."
+        "guesses": 5306,
+        "explanation": "Once you light one, it disappears very quickly.",
+        "guessesEstimated": true
       },
       {
         "number": 2,
