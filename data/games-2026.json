@@ -6357,7 +6357,7 @@
         "explanation": "Earth Shattering Breakthrough - \"Well, a rose bush literally breaks through the earth as it emerges from the soil.\""
       },
       {
-        "text": "EXTRA SENSORY PERCEPTION",
+        "text": "EXTRASENSORY PERCEPTION",
         "correct": "18",
         "guesses": "11,563",
         "explanation": "Extra Sensory Perception - \"It smells beautiful, it looks beautiful, and of course feels good on the pedals... a lot of sensory perception going on.\""
@@ -9706,5 +9706,120 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "M Thrilla One, Steel Ron Four Twelve, Simple Daylight, Gold Dracan, Quirky Scoop 147",
     "wrongGuesses": "CLAPPING, JUGGLING, STRAIGHT JACKET, ZIPPER, CLAP"
+  },
+  {
+    "date": "Thursday, May 7, 2026",
+    "secretItem": "SPARKLER",
+    "host": "Hunter March",
+    "format": "v2",
+    "pot": 7500,
+    "goldClue": 4,
+    "silverClue": 5,
+    "goldWinners": 15,
+    "silverWinners": 2975,
+    "bronzeWinners": 0,
+    "totalWinners": 2990,
+    "goldPayout": 200.66,
+    "silverPayout": 1.5,
+    "bronzePayout": 0,
+    "winnerPayout": "$200.66",
+    "winnerNames": "",
+    "wrongGuesses": "JENGA, MIND, THIRD EYE, MINI FRIDGE, ATM, SIXTH SENSE",
+    "adminNote": "Technical difficulties during this episode. No bronze winner was recorded for Round 1 — the $2,000 bronze pot is assumed split among all 2,990 gold and silver winners (~$0.66 each). Payouts shown are estimates pending official confirmation.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "DROPS WEIGHT QUICKLY",
+        "correct": 0,
+        "guesses": 0,
+        "explanation": "Once you light one, it disappears very quickly."
+      },
+      {
+        "number": 2,
+        "text": "DANGEROUS LEARNING, NO CURVE",
+        "correct": 0,
+        "guesses": 5573,
+        "explanation": "They can be dangerous, but we give them to our kids to play with."
+      },
+      {
+        "number": 3,
+        "text": "A SHOW OF HANDS",
+        "correct": 0,
+        "guesses": 6938,
+        "explanation": "It’s a show you put on right from the palm of your hand."
+      },
+      {
+        "number": 4,
+        "text": "SHEDS LIGHT ON A SPECIAL OCCASION",
+        "correct": 15,
+        "guesses": 3870,
+        "explanation": "Sparklers literally shed light, and you usually use them on special occasions like the Fourth of July."
+      },
+      {
+        "number": 5,
+        "text": "A HANDHELD PYRO THAT KIDS LIKE TO GYRO",
+        "correct": 2975,
+        "guesses": 5889,
+        "explanation": "Kids love to wave them around in circles."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, May 7, 2026",
+    "secretItem": "MINIBAR",
+    "host": "Hunter March",
+    "format": "v2",
+    "pot": 7500,
+    "goldClue": 3,
+    "silverClue": 4,
+    "bronzeClue": 5,
+    "goldWinners": 3,
+    "silverWinners": 25,
+    "bronzeWinners": 3197,
+    "totalWinners": 3225,
+    "goldPayout": 1000.0,
+    "silverPayout": 100.0,
+    "bronzePayout": 0.62,
+    "winnerPayout": "$1,000.00",
+    "winnerNames": "Machine Ray, Cool Editor",
+    "wrongGuesses": "VENDING MACHINE",
+    "adminNote": "Technical difficulties disrupted this episode. The Round 2 wrong guesses list is incomplete due to tech issues — only VENDING MACHINE confirmed.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "EXTRASENSORY PERCEPTION",
+        "correct": 0,
+        "guesses": 1613,
+        "explanation": "They often have sensors that perceive when you take something out of it."
+      },
+      {
+        "number": 2,
+        "text": "ALWAYS OPEN BUT NEVER OPEN",
+        "correct": 0,
+        "guesses": 8917,
+        "explanation": "It is always available to you, but it almost always costs money, and a lot of people for that reason never open it."
+      },
+      {
+        "number": 3,
+        "text": "A DOWNSIZED STOCK MARKET",
+        "correct": 3,
+        "guesses": 3887,
+        "explanation": "Well, a mini market that is always full of miniature-sized stock."
+      },
+      {
+        "number": 4,
+        "text": "AUTOMATICALLY BILLED AND QUICKLY REFILLED",
+        "correct": 25,
+        "guesses": 4894,
+        "explanation": "They are automatically billed when items are removed and quickly refilled by staff."
+      },
+      {
+        "number": 5,
+        "text": "SUITE TINY FRIDGE, WITH PRICES MORE THAN A SMIDGE",
+        "correct": 3197,
+        "guesses": 8265,
+        "explanation": "Mini bars often found in hotel suites and tend to be quite expensive."
+      }
+    ]
   }
 ]

@@ -2225,6 +2225,29 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Thursday, May 7, 2026",
+      "secretItem": "SPARKLER",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 2990,
+      "clueCount": 5,
+      "goldClue": 4,
+      "silverClue": 5
+    },
+    {
+      "date": "Thursday, May 7, 2026",
+      "secretItem": "MINIBAR",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 3225,
+      "clueCount": 5,
+      "goldClue": 3,
+      "silverClue": 4,
+      "bronzeClue": 5
     }
   ]
 }

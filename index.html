@@ -3410,11 +3410,14 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     }).join('');
 
     const fmt2 = n => Number(n).toFixed(2);
+    const bronzeRow = g.bronzeClue
+      ? `<span class="text-orange-300">🥉 Clue ${g.bronzeClue} · ${Number(g.bronzeWinners).toLocaleString()} · $${fmt2(g.bronzePayout)}</span>`
+      : `<span class="text-orange-300/35">🥉 No bronze winner</span>`;
     const medalSummary = g.format === 'v2'
       ? `<div class="mt-5 flex flex-wrap justify-center text-xs font-bold" style="column-gap:2rem;row-gap:.65rem;line-height:1.75">
           <span class="text-yellow-300">🥇 Clue ${g.goldClue} · ${Number(g.goldWinners).toLocaleString()} · $${fmt2(g.goldPayout)}</span>
           <span class="text-slate-200">🥈 Clue ${g.silverClue} · ${Number(g.silverWinners).toLocaleString()} · $${fmt2(g.silverPayout)}</span>
-          <span class="text-orange-300">🥉 Clue ${g.bronzeClue} · ${Number(g.bronzeWinners).toLocaleString()} · $${fmt2(g.bronzePayout)}</span>
+          ${bronzeRow}
         </div>`
       : `<div class="mt-4 flex justify-center">
           <span class="text-sm font-bold text-blue-300">Won on Clue ${g.winningClue || g.goldClue} · ${(g.totalWinners).toLocaleString()} winners · ${esc(g.winnerPayout)}</span>
@@ -3449,6 +3452,13 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
             <span class="ml-2 text-slate-200">${esc(g.winnerNames)}</span>
           </div>` : ''}
         </div>
+        ${g.adminNote ? `<div class="mt-4 rounded-lg border border-yellow-400/30 bg-yellow-900/15 px-3 py-3 text-left">
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="material-symbols-outlined text-yellow-300" style="font-size:15px;line-height:1">warning</span>
+            <span class="text-xs font-black uppercase tracking-wider text-yellow-300">Note</span>
+          </div>
+          <div class="text-sm leading-relaxed text-yellow-100/80">${esc(g.adminNote)}</div>
+        </div>` : ''}
         ${bonus ? `<details id="modal-bonus-section" ${focusBonus ? 'open' : ''} class="mt-4 rounded-lg border border-pink-400/25 bg-pink-950/15 p-3 text-left${focusBonus ? ' ring-2 ring-pink-400/60 shadow-lg shadow-pink-950/40' : ''}">
           <summary class="cursor-pointer list-inside text-pink-100">
             <span class="inline-flex items-center gap-3 align-middle">
