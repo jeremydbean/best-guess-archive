@@ -3471,6 +3471,38 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
           <span class="text-sm font-bold text-blue-300">Won on Clue ${g.winningClue || g.goldClue} · ${(g.totalWinners).toLocaleString()} winners · ${esc(g.winnerPayout)}</span>
         </div>`;
 
+    let redistributionHtml = '';
+    if (g.format === 'v2' && (!(Number(g.silverWinners) > 0) || !(Number(g.bronzeWinners) > 0))) {
+      const floorCents = value => Math.floor(Number(value || 0) * 100) / 100;
+      const gW = Number(g.goldWinners || 0);
+      const sW = Number(g.silverWinners || 0);
+      const silverEmpty = !(sW > 0);
+      const bronzeEmpty = !(Number(g.bronzeWinners) > 0);
+      const lines = [];
+      if (silverEmpty && gW > 0) {
+        const silverExtra = floorCents(2500 / gW);
+        lines.push(`No silver winners: the $2,500 silver pool redistributed to ${gW.toLocaleString()} gold winner${gW === 1 ? '' : 's'}, adding $${silverExtra.toFixed(2)} each.`);
+      }
+      if (bronzeEmpty) {
+        const recipients = silverEmpty ? gW : gW + sW;
+        const bronzeExtra = recipients > 0 ? floorCents(2000 / recipients) : 0;
+        const recipientLabel = silverEmpty ? 'gold' : 'gold and silver';
+        lines.push(`No bronze winners: the $2,000 bronze pool redistributed to ${recipients.toLocaleString()} ${recipientLabel} winner${recipients === 1 ? '' : 's'}, adding $${bronzeExtra.toFixed(2)} each.`);
+      }
+      if (lines.length) {
+        redistributionHtml = `<div class="mt-4 rounded-lg border border-cyan-400/20 bg-cyan-950/15 px-3 py-3 text-left">
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="material-symbols-outlined text-cyan-300" style="font-size:15px;line-height:1">balance</span>
+            <span class="text-xs font-black uppercase tracking-wider text-cyan-300">Prize redistribution</span>
+          </div>
+          <div class="space-y-1 text-sm leading-relaxed text-cyan-50/80">${lines.map(line => `<p>${esc(line)}</p>`).join('')}</div>
+          <a href="https://games-netflix.helpshift.com/hc/en/41-best-guess-live/faq/1858-how-does-the-new-prizing-model-work/" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-1 text-xs font-bold text-cyan-300 hover:text-cyan-100 transition">
+            <span class="material-symbols-outlined" style="font-size:13px;line-height:1">open_in_new</span>Official rules
+          </a>
+        </div>`;
+      }
+    }
+
     const sameDayGames = this.games.filter(x => x.date === g.date && !this._isStubGame(x));
     const roundNumber = Math.max(1, sameDayGames.findIndex(x => x.secretItem === g.secretItem) + 1);
     const transcriptTarget = `Round ${roundNumber}`;
@@ -3510,6 +3542,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
             <span class="material-symbols-outlined" style="font-size:13px;line-height:1">open_in_new</span>Official rules ↗
           </a>` : ''}
         </div>` : ''}
+        ${redistributionHtml}
         ${bonus ? `<details id="modal-bonus-section" ${focusBonus ? 'open' : ''} class="mt-4 rounded-lg border border-pink-400/25 bg-pink-950/15 p-3 text-left${focusBonus ? ' ring-2 ring-pink-400/60 shadow-lg shadow-pink-950/40' : ''}">
           <summary class="cursor-pointer list-inside text-pink-100">
             <span class="inline-flex items-center gap-3 align-middle">

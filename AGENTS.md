@@ -67,6 +67,8 @@ Medal emoji in the `guesses` field: append ` 🥇` after the number for the gold
 
 No-winner redistribution rule: empty medal tiers cascade from the bottom upward. If bronze has no winners, set `bronzeWinners: 0`, `bronzePayout: 0`, and no `bronzeClue` medal field; the $2,000 bronze pool is redistributed upward by the importer/app logic. If silver has no winners, bronze must also have no winners; set both empty tiers to `0` and omit both medal clue fields. In that case both pools cascade to gold. `totalWinners` must still equal the sum of actual winner counts.
 
+Do not add `adminNote` just to explain standard no-winner redistribution. The app generates that explanation automatically from the winner counts. Use `adminNote` only for unrelated data-quality notes.
+
 `bonus` field: only include if SPECIAL PROMO section is present.
 If a promo applies to the whole episode, add the same `bonus` object to both round objects.
 

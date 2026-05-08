@@ -28,7 +28,7 @@ Tasks:
    `Intro`, `Round 1`, `Round 1 Results`, `Round 2`, `Round 2 Results`, `Outro`.
 6. Keep transcript lines shaped as `{ "speaker": string_or_null, "text": string }`.
 7. If a promo/bonus applies to the episode, add the same `bonus: { "title", "desc" }` object to both round objects unless the transcript clearly says it only applies to one round.
-8. If silver or bronze had no winners, keep all five clue objects and record that medal tier with `0` winners and `0` payout. Omit that tier's medal clue field or set it to `0`; do not invent a medal clue number and do not move later winners into that tier. Empty medal tiers cascade from the bottom upward, so silver cannot be empty while bronze has winners. The archive handles official redistribution separately.
+8. If silver or bronze had no winners, keep all five clue objects and record that medal tier with `0` winners and `0` payout. Omit that tier's medal clue field or set it to `0`; do not invent a medal clue number and do not move later winners into that tier. Empty medal tiers cascade from the bottom upward, so silver cannot be empty while bronze has winners. The archive handles official redistribution separately, so do not add an `adminNote` just to explain standard redistribution.
 9. Run `npm run audit` one final time and fix every error before committing.
 10. Commit directly on `main` and push to `origin/main`. Do not create a branch.
 

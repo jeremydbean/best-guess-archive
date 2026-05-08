@@ -9725,7 +9725,6 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "",
     "wrongGuesses": "JENGA, MIND, THIRD EYE, MINI FRIDGE, ATM, SIXTH SENSE",
-    "adminNote": "This episode experienced technical difficulties. For Round 1, no players won bronze — per the official Best Guess Live rules, when a prize pool has no winners it is redistributed to the pool above, so the $2,000 bronze pot was added to gold and silver payouts ($0.66 each). Gold: $200.66 · Silver: $1.50.",
     "clues": [
       {
         "number": 1,
@@ -9763,8 +9762,7 @@
         "guesses": 5889,
         "explanation": "Kids love to wave them around in circles."
       }
-    ],
-    "adminNoteUrl": "https://games-netflix.helpshift.com/hc/en/41-best-guess-live/faq/1858-how-does-the-new-prizing-model-work/"
+    ]
   },
   {
     "date": "Thursday, May 7, 2026",
