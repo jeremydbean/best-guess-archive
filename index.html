@@ -641,6 +641,59 @@
   .fade-in { animation: fadeIn .5s ease-out; }
   @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
   .timer-bar { height:4px; background:linear-gradient(90deg,#22c55e,#eab308,#ef4444); width:100%; transform-origin:left; }
+  .time-up-panel {
+    display: none;
+    text-align: center;
+  }
+  #input-container.is-time-up .time-up-panel {
+    display: block;
+  }
+  #input-container.is-time-up #guess-entry-row {
+    display: none;
+  }
+  .time-up-title {
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.45rem;
+    line-height: 1;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0,0,0,.75);
+  }
+  .time-up-wait {
+    margin-top: .75rem;
+    min-height: 4.75rem;
+    border-radius: .9rem;
+    border: 2px solid rgba(255,255,255,.15);
+    background:
+      linear-gradient(rgba(255,255,255,.055) 50%, rgba(0,0,0,.045) 50%),
+      linear-gradient(180deg, rgba(148,163,184,.52), rgba(71,85,105,.5));
+    background-size: 100% 4px, 100% 100%;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.22),
+      inset 0 -2px 10px rgba(0,0,0,.28),
+      0 2px 12px rgba(0,0,0,.35);
+    color: rgba(255,255,255,.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .65rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0,0,0,.8);
+  }
+  .time-up-wait-dot {
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 999px;
+    background: #ef3b5d;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 0 10px rgba(239,59,93,.45);
+    flex: 0 0 auto;
+  }
   .clue-stack-enter { animation: slideIn .4s cubic-bezier(.16,1,.3,1); }
   @keyframes slideIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
   .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
@@ -975,13 +1028,20 @@ document.addEventListener('focusout', function(e) {
 
   <!-- Input bar — always at bottom, part of normal flow (not fixed) -->
   <div class="flex-shrink-0 border-t border-white/10 bg-slate-900 px-3 pt-3 pb-4" id="input-container" style="padding-bottom: max(1rem, env(safe-area-inset-bottom))">
-    <div class="relative mb-2">
+    <div id="time-up-panel" class="time-up-panel mb-3" aria-live="polite">
+      <div class="time-up-title">Time's Up</div>
+      <div class="time-up-wait">
+        <span class="time-up-wait-dot" aria-hidden="true"></span>
+        <span>Waiting for next clue...</span>
+      </div>
+    </div>
+    <div id="guess-entry-row" class="relative mb-2">
       <input autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="go"
         id="guess-input" type="text"
         class="w-full bg-slate-800 border border-slate-600 rounded-lg py-3 pl-4 pr-28 text-base text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
         placeholder="Your best guess..."
         onkeydown="if(event.key==='Enter') app.submitGuess()">
-      <button class="absolute right-2 top-1.5 bottom-1.5 bg-green-600 hover:bg-green-500 text-white font-bold px-4 rounded text-sm transition flex items-center gap-1" onclick="app.submitGuess()">
+      <button id="guess-submit-button" class="absolute right-2 top-1.5 bottom-1.5 bg-green-600 hover:bg-green-500 disabled:bg-slate-600 disabled:text-slate-300 disabled:cursor-not-allowed text-white font-bold px-4 rounded text-sm transition flex items-center gap-1" onclick="app.submitGuess()">
         <span class="material-symbols-outlined" style="font-size:16px;line-height:1">check</span> LOCK IN
       </button>
     </div>
@@ -1738,6 +1798,7 @@ class App {
     this.games = [];
     this.currentGame = null;
     this.currentClueIndex = 0;
+    this.acceptingGuesses = false;
     this.timer = null;
     this._dbSort = { key: 'date', dir: 'desc' };
     this._availableYears = null;
@@ -2603,6 +2664,19 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     if (this._delayTimeout) clearTimeout(this._delayTimeout);
   }
 
+  setGuessingState(state) {
+    this.acceptingGuesses = state === 'open';
+    const container = document.getElementById('input-container');
+    const inputEl = document.getElementById('guess-input');
+    const buttonEl = document.getElementById('guess-submit-button');
+    if (container) container.classList.toggle('is-time-up', state === 'timeup');
+    if (inputEl) {
+      inputEl.disabled = state !== 'open';
+      if (state === 'timeup') inputEl.blur();
+    }
+    if (buttonEl) buttonEl.disabled = state !== 'open';
+  }
+
   // Case-insensitive comparison helper that also strips spaces, punctuation, and any
   // Unicode injected by mobile keyboards. NFKD decomposes accented chars and ligatures;
   // [^a-z0-9] then removes the leftover combining marks along with everything else.
@@ -2710,6 +2784,8 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     this.currentGame = playableGames[idx];
     this.currentClueIndex = 0;
     this.gameStarted = false;
+    this.lastGuess = '';
+    this.setGuessingState('closed');
     this._renderHostCartoon();
 
     document.getElementById('game-date').innerText = this.currentGame.date;
@@ -2733,7 +2809,6 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
     const inputEl = document.getElementById('guess-input');
     if (inputEl) {
       inputEl.value = '';
-      inputEl.disabled = true;
     }
 
     const stackEl = document.getElementById('clue-stack');
@@ -2754,13 +2829,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 
   startGameplay() {
     this.gameStarted = true;
-    const inputEl = document.getElementById('guess-input');
-    if (inputEl) {
-      inputEl.disabled = false;
-      // setTimeout defers focus to the next tick, which is required on iOS Safari
-      // for programmatic .focus() to reliably open the soft keyboard.
-      setTimeout(() => inputEl.focus(), 0);
-    }
+    this.setGuessingState('closed');
     this.renderGameLoop();
   }
 
@@ -2771,6 +2840,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 
   renderGameLoop() {
     this.clearTimers();
+    this.setGuessingState('closed');
     const g = this.currentGame;
     const ci = this.currentClueIndex;
 
@@ -2837,6 +2907,11 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       const text = document.getElementById(`text-state-${ci}`);
       if (loading) loading.classList.add('hidden');
       if (text) text.classList.remove('hidden');
+      this.setGuessingState('open');
+      const inputEl = document.getElementById('guess-input');
+      // setTimeout defers focus to the next tick, which is required on iOS Safari
+      // for programmatic .focus() to reliably open the soft keyboard.
+      if (inputEl) setTimeout(() => inputEl.focus(), 0);
       this.runClueTimer(
         clueSecs,
         document.getElementById('main-timer-bar'),
@@ -2873,15 +2948,15 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
         if (textEl) textEl.innerText = remaining;
       } else {
         clearInterval(this._clueInterval);
-        // Waiting phase — grey out the bar (no animation) and swap the countdown
-        // number for a clean "WAITING 5s..." indicator. Pill stays untouched.
+        this.setGuessingState('timeup');
+        // Waiting phase — grey out the timer and show a "Time's Up" state below.
         barEl.style.transition = 'none';
         barEl.style.width = '100%';
         barEl.style.background = 'rgba(148,163,184,0.35)';
         barEl.style.boxShadow = 'none';
 
         if (textEl) {
-          textEl.innerHTML = '<span class="text-[10px] md:text-xs text-[#FFA300] font-display font-bold uppercase tracking-widest animate-pulse whitespace-nowrap">Waiting 5s...</span>';
+          textEl.innerHTML = "<span class=\"text-[10px] md:text-xs text-white/70 font-display font-bold uppercase tracking-widest whitespace-nowrap\">Time's Up</span>";
         }
 
         this._delayTimeout = setTimeout(() => {
@@ -2904,6 +2979,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 
     submitGuess() {
       if (!this.gameStarted) return;
+      if (!this.acceptingGuesses) return;
       const inputEl = document.getElementById('guess-input');
       if (!inputEl) return;
       const input = inputEl.value.trim();
@@ -2911,7 +2987,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 
       const guess  = this._normalizeAnswer(input);
       const acceptedAnswers = this._getAcceptedAnswers(this.currentGame);
-      inputEl.disabled = true;
+      this.setGuessingState('closed');
       inputEl.value = '';
       // Store the user's guess for summary
       this.lastGuess = input;
