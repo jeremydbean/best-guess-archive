@@ -3193,7 +3193,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
           <div>🥇 <span class="font-mono text-yellow-400">${(g.goldWinners || 0).toLocaleString()}</span></div>
           <div>🥈 <span class="font-mono text-slate-300">${(g.silverWinners || 0).toLocaleString()}</span></div>
           <div>🥉 <span class="font-mono text-amber-600">${(g.bronzeWinners || 0).toLocaleString()}</span></div>
-          <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono">${totalW.toLocaleString()} total</div>
+          <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono whitespace-nowrap">${totalW.toLocaleString()} total</div>
         </div>`
       : `<div class="text-center font-mono text-slate-300">${totalW.toLocaleString()}</div>`;
 
@@ -3215,7 +3215,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
           <div${goldTip   ? ` title="${esc(goldTip)}"   style="cursor:help"` : ''}>🥇 <span class="text-yellow-400">${estPrefix}${fmtMoney(g.goldPayout)}</span></div>
           <div${silverTip ? ` title="${esc(silverTip)}" style="cursor:help"` : ''}>🥈 <span class="text-slate-300">${estPrefix}${fmtMoney(g.silverPayout)}</span></div>
           <div${bronzeTip ? ` title="${esc(bronzeTip)}" style="cursor:help"` : ''}>🥉 <span class="text-amber-600">${bronzeRedist ? '—' : fmtMoney(g.bronzePayout)}</span></div>
-          <div class="border-t border-slate-700 pt-0.5 text-green-400">${esc(g.winnerPayout || '')} total</div>
+          <div class="border-t border-slate-700 pt-0.5 text-green-400 whitespace-nowrap">${esc(g.winnerPayout || '')} total</div>
         </div>`
       : `<div class="font-mono" style="min-width:110px">
           <span class="text-green-400">${esc(g.winnerPayout || '—')}</span>
