@@ -2819,6 +2819,8 @@ Rules:
         'assets/hosts/generated/howie-mandel-leather.png',
         'assets/hosts/generated/howie-mandel-chef-denim.png',
         'assets/hosts/generated/howie-mandel-belly-hoodie.png',
+        'assets/hosts/generated/howie-mandel-belly-side-left.png',
+        'assets/hosts/generated/howie-mandel-belly-side-right.png',
         'assets/hosts/generated/howie-mandel-navy-bomber.png',
         'assets/hosts/generated/howie-mandel-denim-hoodie.png'
       ]);
@@ -2847,7 +2849,7 @@ Rules:
       return;
     }
     layer.className = `host-cartoon-layer ${cartoon.placement}`;
-    const variantClass = cartoon.src.includes('howie-mandel-belly-hoodie') ? ' is-howie-belly' : '';
+    const variantClass = cartoon.src.includes('howie-mandel-belly') ? ' is-howie-belly' : '';
     layer.innerHTML = `<img class="host-cartoon-art ${cartoon.placement}${variantClass}" src="${this._escapeHtml(cartoon.src)}" alt="">`;
   }
 
