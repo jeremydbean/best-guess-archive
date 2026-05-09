@@ -1,6 +1,6 @@
 # AI Handoff
 
-Last updated: 2026-05-07
+Last updated: 2026-05-08
 
 ## Current Branch
 
@@ -26,6 +26,7 @@ Last updated: 2026-05-07
 - **Standard redistribution UI 2026-05-07**: No-winner medal tiers are now rendered as a normal generated "Prize redistribution" block in Database details, based on winner counts. Do not add one-off `adminNote` text for standard no-bronze/no-silver rounds. Reserve `adminNote` for unrelated data-quality notes, such as incomplete wrong guesses due to technical issues.
 - **No-winner validation hardening 2026-05-07**: `scripts/auto-import.py` now accepts empty silver/bronze tiers only when their medal clue field is omitted or `0`, while still requiring all five clue objects. `tools/audit-data.mjs` enforces the same shape and verifies v2 payout math including official redistribution, so bad imports cannot make Play award a nonexistent medal tier.
 - **Auto-import bug check 2026-05-08**: `scripts/auto-import.py` now catches URL/time-out/XML RSS failures before falling back to the channel page, prefers title dates for manual video imports, treats date-only publish metadata as noon UTC to avoid previous-day Eastern drift, and validates Claude output more strictly before writing: archive date shape, v2 format, host/pot/wrongGuesses, clue numbers, numeric correct/guess counts, medal tier order, winner totals, payouts, and full-pot `winnerPayout`. `tools/audit-data.mjs` mirrors the new clue-number, count-shape, medal-order, and v2 `winnerPayout` checks while tolerating legacy unknown count strings in old data.
+- **Hybrid rules beginning Monday, May 11, 2026**: Round 1 stays `format: "v2"` tiered gold/silver/bronze. Round 2 returns to `format: "v1"` classic mode, where only the earliest clue with correct answers splits the full $7,500 pot. `scripts/auto-import.py`, `docs/DAILY_IMPORT.md`, `docs/DAILY_IMPORT_PROMPT.md`, `docs/PLAUD_AUDIO_PROMPT.md`, `AGENTS.md`, the in-app Gemini/Plaud copy prompts, and `tools/audit-data.mjs` have been updated for this. In the Database, classic v1 winning clues are now marked with the same 🥇 clue indicator used for v2 instead of a yellow highlighted clue box.
 
 - GitHub Pages publishes from `main`.
 - Main-only workflow is in effect. Do not create branches; remove stale non-main branches after confirming their commits are already represented on `main`.
@@ -34,9 +35,9 @@ Last updated: 2026-05-07
 - **Admin panel removed**: All game/transcript updates are now done by AI agents (Claude/Codex) directly editing the data files and committing. See "Daily Update Workflow" below.
 - **Bonus/promo data migrated**: `bonusMap` moved from hardcoded JS in `index.html` to a `bonus: {title, desc}` field on each game in the year shards. Rendering code reads `g.bonus` directly. `bonus.desc` may contain safe HTML (`<br>` and `<b>` tags).
 - **Scripts cleaned up**: Legacy docx/admin importer scripts are gone; current automation lives in `scripts/auto-import.py`, with a few one-off historical cleanup scripts still present.
-- Latest imported episode: Thursday, May 7, 2026 with SPARKLER and MINIBAR.
-- 109 total game days (108 playable + 1 cancelled: Thursday, April 9, 2026).
-- 217 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 181).
+- Latest imported episode: Friday, May 8, 2026 with LEBRON JAMES and YODELING.
+- 110 total game days (109 playable + 1 cancelled: Thursday, April 9, 2026).
+- 219 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 183).
 - **Transcripts reimported** from `Best_Guess_Live_Clean_Readable_Transcripts.docx` (uploaded to repo root). All 100 transcripts use the game data as canonical source for rounds/clues/host/pot/format. Section tags now read "Round 1 Results" / "Round 2 Results" (previously "Reveal").
 - **Jan 1-14 transcripts fixed**: These episodes had no Heading2 section markers in the docx. A heuristic state machine now splits them into 6 sections using phrase triggers ("crystal ball reveals", "correct answer was", etc.) and space-normalized secret-item matching. All 10 episodes are now fully populated.
 - **Mobile transcript layout fixed**: episode list max-height reduced from 32rem to 9rem on mobile; tapping an episode smooth-scrolls to the transcript detail panel. Desktop still uses 32rem two-column layout.
@@ -90,57 +91,7 @@ Preferred no-preformat path: put the raw transcript at `incoming/YYYY-MM-DD.txt`
 
 **Step 1 — Get structured transcript from Gemini/Plaud:**
 
-Feed the raw Plaud/YouTube transcript to Gemini with this prompt:
-
-```
-You are formatting a raw Best Guess Live show transcript into a strict structured template. Follow these rules exactly:
-
-1. Find the DATE of the episode (usually said at the start).
-2. Find the HOST name(s).
-3. For EACH ROUND (there are always two rounds):
-   a. Find the SECRET ITEM (the answer) — revealed at the end of the round.
-   b. Extract exactly 5 CLUES in order. Each clue is a short all-caps phrase read on screen. Copy them verbatim (verify spelling from video if needed).
-   c. For each clue, write one sentence EXPLANATION of why it points to the secret item.
-   d. Extract the CORRECT count and TOTAL GUESSES for each clue — the hosts announce these numbers aloud. Also extract Gold/Silver/Bronze winner counts and payouts, total winners, winner names (up to 4), and wrong guesses shown on screen.
-4. Format all dialogue as a transcript with speaker labels. Use "HOST:" for the main host, "GUEST:" for any co-host/guest, and "RECAP:" for any recap narrator voice. No invented speakers.
-5. Output NOTHING except the template below.
-
-OUTPUT THIS EXACT TEMPLATE (fill in the [brackets]):
-
-DATE: [Full date, e.g. "Friday, April 25, 2026"]
-HOST: [Full host name(s), comma-separated if multiple]
-
-ROUND 1
-Secret Item: [THE ANSWER IN ALL CAPS]
-Clue 1: [CLUE TEXT IN ALL CAPS] | Correct: [n] | Guesses: [n,nnn]
-Clue 2: [CLUE TEXT IN ALL CAPS] | Correct: [n] | Guesses: [n,nnn]
-Clue 3: [CLUE TEXT IN ALL CAPS] | Correct: [n] | Guesses: [n,nnn]
-Clue 4: [CLUE TEXT IN ALL CAPS] | Correct: [n] | Guesses: [n,nnn]
-Clue 5: [CLUE TEXT IN ALL CAPS] | Correct: [n] | Guesses: [n,nnn]
-
-Gold Clue: [1-5]   Gold Winners: [n]   Gold Payout: $[n,nnn.nn]
-Silver Clue: [1-5] Silver Winners: [n] Silver Payout: $[n.nn]
-Bronze Clue: [1-5] Bronze Winners: [n] Bronze Payout: $[n.nn]
-Total Winners: [n]
-Winner Names: [Name1, Name2, Name3, Name4]
-Wrong Guesses: [WORD1, WORD2, WORD3]
-
-Clue 1 Explanation: [One sentence explaining why this clue points to the secret item]
-Clue 2 Explanation: [One sentence]
-Clue 3 Explanation: [One sentence]
-Clue 4 Explanation: [One sentence]
-Clue 5 Explanation: [One sentence]
-
-ROUND 2
-[same structure as Round 1]
-
-TRANSCRIPT
-[Full labeled dialogue from start to finish:
-HOST: line
-GUEST: line
-RECAP: line
-Lines with no clear speaker: just the text with no label.]
-```
+For audio-only Plaud output, use `docs/PLAUD_AUDIO_PROMPT.md` or the hidden Data Health popup's "Plaud Audio Prompt" copy button. For screenshot-backed cleanup, use the hidden Data Health popup's "Gemini Import Prompt" copy button. The in-app prompt already accounts for the Monday, May 11, 2026 hybrid rule: Round 1 v2 tiered, Round 2 v1 classic.
 
 **Step 2 — Paste to Claude/Codex in this format:**
 
@@ -176,7 +127,8 @@ Clue 4 Explanation: [from Gemini output]
 Clue 5 Explanation: [from Gemini output]
 
 --- ROUND 2 ---
-[same structure as Round 1]
+[Before Monday, May 11, 2026: same structure as Round 1 unless the show says otherwise.
+Starting Monday, May 11, 2026: use Format: v1 classic mode, include Winning Clue, Winner Count, Winner Payout, Total Winners, winner names, wrong guesses, and all five clue/explanation lines. Keep Gold Clue equal to Winning Clue for compatibility, and set medal winner/payout fields to 0.]
 
 --- SPECIAL PROMO (omit section if none) ---
 Title: [e.g. Netflix Shop Voucher]
@@ -187,8 +139,8 @@ Description: [full text including how-to-qualify. May use <br> and <b> tags.]
 ```
 
 **Notes:**
-- All games from late April 2026 onward use `format: v2` with a $7,500 pot per round. Use `format: v1` only if the show announces a return to the old variable-pot format.
-- `winnerPayout` is computed as: `$${(7500).toFixed(2)}` unless payout is split (most rounds have one payout winner who receives the full pot). Actually it should be whichever payout value shown on screen. For v2 it's typically `"$7,500.00"` if there was a gold winner, otherwise N/A.
+- For episodes before Monday, May 11, 2026, both rounds are normally `format: v2` unless the show says otherwise. Starting Monday, May 11, 2026, the standard import is hybrid: Round 1 is `format: "v2"` tiered gold/silver/bronze, and Round 2 is `format: "v1"` classic mode.
+- For v2, `winnerPayout` stays the full round pot string, normally `"$7,500.00"`, and medal payouts go in `goldPayout`, `silverPayout`, and `bronzePayout`. For v1 classic, set `winningClue`, `winnerCount`, `totalWinners`, and `winnerPayout` to the per-winner share of the full pot; keep `goldClue` equal to `winningClue` for compatibility.
 - `bonus.desc` may contain `<br>` and `<b>` tags; they are rendered as HTML in the modal. Keep descriptions clean and avoid other HTML tags.
 - Clue text on-screen uses all caps and may include punctuation; verify spelling from the video still frame if Gemini misheard a word.
 
@@ -289,13 +241,13 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 - **games-meta.json**: Lightweight `{years, games}` object loaded on init for home stats. Year shards (`games-2025.json`, `games-2026.json`, …) lazy-load in parallel when the user first visits Database or Stats. No monolithic `games.json` download.
 - **Chart.js**: Injected dynamically on first Stats page visit only.
 - **filterDatabase**: Debounced 150ms.
-- **Data audit**: `npm run audit:fix` regenerates `games-meta.json`; `npm run audit` validates JSON, inline scripts, generated meta, archive dates, payout values, missing clue explanations, v2 winner totals, bonus coverage, transcript schemas, transcript/game alignment, result clue text, and escaped HTML entities.
+- **Data audit**: `npm run audit:fix` regenerates `games-meta.json`; `npm run audit` validates JSON, inline scripts, generated meta, archive dates, payout values, missing clue explanations, v2 winner totals/payout math, v1 classic winning-clue shape, hybrid format order from May 11 onward, bonus coverage, transcript schemas, transcript/game alignment, result clue text, and escaped HTML entities.
 - **_homeStatsCache**: Invalidated when year shards finish loading or refreshStats() runs.
 
 ## Things Worth Double-Checking After Future Edits
 
 - GitHub Pages reflects the newest commit on `main`.
-- Latest manual import completed: Wednesday, April 29, 2026 (`BROKEN HEART`, `TAMBOURINE`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
+- Latest manual import completed: Friday, May 8, 2026 (`LEBRON JAMES`, `YODELING`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
 - Friday, May 1, 2026 bonus metadata is attached to both `ZOOM` and `JUMPING JACKS`; audit should have 0 warnings.
 - Desktop database arrows remain visible and clickable while scrolling.
 - Home KPI counters do not cause layout shift.

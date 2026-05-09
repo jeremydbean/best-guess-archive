@@ -59,11 +59,13 @@ Extract from the paste:
 
 ### 2. Build two game objects (one per round)
 
-Use the schema in `AI_HANDOFF.md`. Always `format: "v2"` and `pot: 7500` unless the user specifies otherwise.
+Use the schema in `AI_HANDOFF.md`. Use `pot: 7500` unless the user specifies otherwise. For episodes before Monday, May 11, 2026, both rounds are normally `format: "v2"` unless the episode says otherwise. Starting Monday, May 11, 2026, the standard format is hybrid: Round 1 is `format: "v2"` tiered gold/silver/bronze, and Round 2 is `format: "v1"` classic mode.
 
 Medal emoji in the `guesses` field: append ` 🥇` after the number for the gold clue, ` 🥈` for the silver clue, and ` 🥉` for the bronze clue. Non-winner clues have no emoji. Every playable round still has exactly five clue objects. If a tier had no winners, set that tier's winner count and payout to `0`; omit that tier's medal clue field or set it to `0`.
 
 `winnerPayout` is typically `"$7,500.00"` for v2 rounds. Do not change it to a per-tier amount when a silver or bronze pool is redistributed.
+
+For Round 2 classic mode, set `winningClue` to the earliest clue with correct answers, set `winnerCount` and `totalWinners` to that clue's correct count, and set `winnerPayout` to the per-winner share of the full round pot. Keep `goldClue` equal to `winningClue` for compatibility, and set `goldWinners`, `silverWinners`, `bronzeWinners`, `goldPayout`, `silverPayout`, and `bronzePayout` to `0`.
 
 No-winner redistribution rule: empty medal tiers cascade from the bottom upward. If bronze has no winners, set `bronzeWinners: 0`, `bronzePayout: 0`, and no `bronzeClue` medal field; the $2,000 bronze pool is redistributed upward by the importer/app logic. If silver has no winners, bronze must also have no winners; set both empty tiers to `0` and omit both medal clue fields. In that case both pools cascade to gold. `totalWinners` must still equal the sum of actual winner counts.
 

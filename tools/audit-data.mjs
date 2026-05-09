@@ -56,6 +56,13 @@ function validateArchiveDate(date, context = {}) {
   }
 }
 
+function archiveDateValue(date) {
+  const match = String(date || '').match(datePattern);
+  if (!match) return 0;
+  const [, , month, dayRaw, yearRaw] = match;
+  return (Number(yearRaw) * 10000) + ((monthNames.indexOf(month) + 1) * 100) + Number(dayRaw);
+}
+
 function validatePayoutValue(value, field, context = {}) {
   if (value == null || value === '') return;
   const numeric = Number(String(value).replace(/[$,]/g, ''));
@@ -217,6 +224,36 @@ for (const [index, g] of games.entries()) {
         error('v2-payout-math', 'v2 payout does not match base pot plus no-winner redistribution math', { index, date: g.date, secretItem: g.secretItem, field, actual: g[field], expected: expectedPayouts[field] });
       }
     }
+  } else if (!isStub) {
+    if (g.format !== 'v1') {
+      error('format-value', 'Playable game format must be "v1" or "v2"', { index, date: g.date, secretItem: g.secretItem, format: g.format });
+    }
+    const winningClue = validateCountValue(g.winningClue ?? g.goldClue, 'winningClue', { index, date: g.date, secretItem: g.secretItem });
+    if (winningClue < 1 || winningClue > 5) {
+      error('v1-winning-clue-range', 'v1 winningClue must be between 1 and 5', { index, date: g.date, secretItem: g.secretItem, winningClue });
+    }
+    const goldClue = validateCountValue(g.goldClue ?? winningClue, 'goldClue', { index, date: g.date, secretItem: g.secretItem });
+    if (Number.isFinite(goldClue) && Number.isFinite(winningClue) && goldClue !== winningClue) {
+      error('v1-gold-clue', 'v1 goldClue should match winningClue for compatibility', { index, date: g.date, secretItem: g.secretItem, winningClue, goldClue });
+    }
+    const totalWinners = validateCountValue(g.totalWinners, 'totalWinners', { index, date: g.date, secretItem: g.secretItem });
+    const winnerCount = validateCountValue(g.winnerCount ?? g.totalWinners, 'winnerCount', { index, date: g.date, secretItem: g.secretItem });
+    if (Number.isFinite(totalWinners) && Number.isFinite(winnerCount) && totalWinners !== winnerCount) {
+      error('v1-winner-total', 'v1 winnerCount must equal totalWinners', { index, date: g.date, secretItem: g.secretItem, totalWinners, winnerCount });
+    }
+    if (Number.isFinite(winningClue) && Array.isArray(g.clues) && g.clues[winningClue - 1]) {
+      const correctOnWinningClue = validateCountValue(g.clues[winningClue - 1].correct, 'correct', { index, date: g.date, secretItem: g.secretItem, clue: winningClue }, { allowLegacyUnknown: true });
+      if (Number.isFinite(correctOnWinningClue) && Number.isFinite(totalWinners) && correctOnWinningClue !== totalWinners) {
+        error('v1-winning-clue-count', 'v1 totalWinners must equal the correct count on winningClue', { index, date: g.date, secretItem: g.secretItem, winningClue, correctOnWinningClue, totalWinners });
+      }
+      for (let clueIndex = 0; clueIndex < winningClue - 1; clueIndex += 1) {
+        const earlierCorrect = validateCountValue(g.clues[clueIndex].correct, 'correct', { index, date: g.date, secretItem: g.secretItem, clue: clueIndex + 1 }, { allowLegacyUnknown: true });
+        if (Number.isFinite(earlierCorrect) && earlierCorrect !== 0) {
+          error('v1-earliest-winning-clue', 'v1 winningClue must be the earliest clue with correct answers', { index, date: g.date, secretItem: g.secretItem, winningClue, earlierClue: clueIndex + 1, earlierCorrect });
+        }
+      }
+    }
+    validatePayoutValue(g.winnerPayout, 'winnerPayout', { index, date: g.date, secretItem: g.secretItem });
   }
   if (g.bonus && (!g.bonus.title || !g.bonus.desc)) {
     warn('bonus-shape', 'Bonus entry is missing title or desc', { index, date: g.date, secretItem: g.secretItem });
@@ -224,6 +261,12 @@ for (const [index, g] of games.entries()) {
 }
 
 for (const [date, rounds] of playableByDate.entries()) {
+  if (archiveDateValue(date) >= archiveDateValue('Monday, May 11, 2026')) {
+    const formats = rounds.map(g => g.format);
+    if (formats.length === 2 && JSON.stringify(formats) !== JSON.stringify(['v2', 'v1'])) {
+      error('hybrid-format-order', 'Episodes starting Monday, May 11, 2026 should import as Round 1 v2 and Round 2 v1 classic unless the broadcast says otherwise', { date, formats });
+    }
+  }
   const bonusRounds = rounds.filter(g => g.bonus).length;
   if (bonusRounds > 0 && bonusRounds < rounds.length) {
     warn('partial-day-bonus', 'Only some rounds on this date have bonus metadata', { date, bonusRounds, playableRounds: rounds.length });

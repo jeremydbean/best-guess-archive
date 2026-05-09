@@ -17,7 +17,9 @@ Tasks:
    - secret item
    - 5 clues in order
    - correct count and total guesses for each clue
+   - format (`v2` tiered or `v1` classic)
    - gold/silver/bronze clue numbers, winner counts, and payouts for v2 games
+   - winning clue, winner count, and per-winner payout for v1 classic games
    - total winners
    - winner names
    - common wrong guesses
@@ -29,8 +31,11 @@ Tasks:
 6. Keep transcript lines shaped as `{ "speaker": string_or_null, "text": string }`.
 7. If a promo/bonus applies to the episode, add the same `bonus: { "title", "desc" }` object to both round objects unless the transcript clearly says it only applies to one round.
 8. If silver or bronze had no winners, keep all five clue objects and record that medal tier with `0` winners and `0` payout. Omit that tier's medal clue field or set it to `0`; do not invent a medal clue number and do not move later winners into that tier. Empty medal tiers cascade from the bottom upward, so silver cannot be empty while bronze has winners. The archive handles official redistribution separately, so do not add an `adminNote` just to explain standard redistribution.
-9. Run `npm run audit` one final time and fix every error before committing.
-10. Commit directly on `main` and push to `origin/main`. Do not create a branch.
+9. Starting Monday, May 11, 2026, use the hybrid rules unless the episode states otherwise:
+   - Round 1: `format: "v2"` tiered gold/silver/bronze.
+   - Round 2: `format: "v1"` classic mode. Set `winningClue` to the earliest clue with correct answers, `winnerCount` and `totalWinners` to that clue's correct count, and `winnerPayout` to the per-winner share of the full $7,500 pot. Set medal winner/payout fields to `0`, with `goldClue` equal to `winningClue` for compatibility and `silverClue`/`bronzeClue` set to `0`.
+10. Run `npm run audit` one final time and fix every error before committing.
+11. Commit directly on `main` and push to `origin/main`. Do not create a branch.
 
 After finishing, report:
 - commit hash

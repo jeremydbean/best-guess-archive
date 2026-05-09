@@ -875,6 +875,16 @@ document.addEventListener('focusout', function(e) {
         </div>
         <div class="text-xs text-slate-400">Paste into Gemini with raw transcript + screenshots to get exact clue text, wrong guesses, and a formatted transcript ready to import.</div>
       </div>
+      <div class="mt-5 pt-5 border-t border-slate-700/50">
+        <div class="flex items-center justify-between mb-2">
+          <div class="home-stat-label text-xs text-green-300">Plaud Audio Prompt</div>
+          <button onclick="app.copyPlaudPrompt(this)" class="inline-flex items-center gap-1 text-xs px-3 py-1 rounded-lg border border-slate-600 text-slate-300 hover:border-green-400/50 hover:text-white transition">
+            <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
+            Copy
+          </button>
+        </div>
+        <div class="text-xs text-slate-400">Use with an audio-only transcript to produce the structured text that Gemini/Codex can import cleanly.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2520,6 +2530,8 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 
 **\`date\`**: \`"Weekday, Month D, YYYY"\`. Use today's date unless explicitly stated otherwise.
 
+**Format/prizing**: Starting Monday, May 11, 2026, the standard show format is hybrid unless the episode explicitly says otherwise: Round 1 is current tiered v2 (Gold/Silver/Bronze), and Round 2 is classic v1 where only the earliest clue with correct answers splits the full $7,500 pot. Episodes before that are usually both v2 unless the show says otherwise. In classic v1, do not create Silver/Bronze winners; identify the single winning clue as the earliest clue with any correct answers, the winner count as that clue's correct count, and the payout as $7,500 divided among those winners.
+
 **\`clues\`**: Exact text from screenshots only — ALL CAPS as shown on screen. Clue 1 is the hardest (shown first), Clue 5 is easiest (shown last). Also populate \`correct\` (number who answered correctly on that clue) and \`guesses\` (total guesses submitted on that clue) from the results screenshots — use comma-formatted strings exactly as shown on screen (e.g. \`"3,281"\`).
 \`\`\`json
 "clues": {
@@ -2573,6 +2585,9 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 4. One null-speaker medal summary line:
    \`{"speaker": null, "text": "Gold (Clue X): N winners at $X.XX each. Silver (Clue Y): N winners at $X.XX each. Bronze (Clue Z): N winners at $X.XX each."}\`
    When a medal has exactly 1 winner: \`"1 winner at $X.XX"\` — no "each".
+   For a classic v1 result section, use one null-speaker classic summary line instead:
+   \`{"speaker": null, "text": "Classic mode (Clue X): N winners at $X.XX each."}\`
+   When classic mode has exactly 1 winner: \`"1 winner at $X.XX"\` — no "each".
 5. Remaining attributed banter — congratulations, winner names, transitions
 
 **Outro**: Append these two null-speaker lines at the very end:
@@ -2582,6 +2597,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 **Rules**:
 - One sentence per line. Never paraphrase — exact words only.
 - Clue text in recap lines must come from screenshots, not audio.
+- For hybrid episodes from Monday, May 11, 2026 onward, Round 1 should have a Gold/Silver/Bronze summary and Round 2 should have the Classic mode summary unless the episode explicitly announces different rules.
 - Do not add lines that weren't spoken. Do not merge sentences.
 - Output JSON only. No markdown fences. No commentary before or after.`;
     if (navigator.clipboard?.writeText) {
@@ -2594,6 +2610,73 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       }).catch(() => window.prompt('Copy Gemini prompt:', p));
     } else {
       window.prompt('Copy Gemini prompt:', p);
+    }
+  }
+
+  copyPlaudPrompt(btn) {
+    const p = `You are transcribing a Best Guess Live episode for structured archival import. This is a Netflix game show: two rounds, each with five clues revealed one at a time, players guess a secret item, then a crystal ball opens to reveal the answer and prize payouts.
+
+Output in this exact structure:
+
+DATE: [Weekday, Month D, YYYY — use today's date unless stated otherwise]
+HOST: [Howie Mandel or Hunter March and/or guest hosts who identify themselves by name]
+ROUND 1 ANSWER: [secret item revealed when crystal ball opens]
+ROUND 2 ANSWER: [secret item revealed when crystal ball opens]
+ROUND 1 FORMAT: [v2 tiered unless the episode says otherwise]
+ROUND 2 FORMAT: [Before Monday, May 11, 2026 usually v2 tiered. Starting Monday, May 11, 2026 use v1 classic unless the episode says otherwise.]
+
+---
+
+[INTRO]
+Host Name: [verbatim sentence]
+Host Name: [verbatim sentence]
+
+[ROUND 1]
+Host Name: [verbatim sentence]
+
+[ROUND 1 RESULTS]
+Host Name: [verbatim sentence]
+CLUE COUNTS: Clue 5: [N] correct / [N] total guesses | Clue 4: [N] correct / [N] total guesses | Clue 3: [N] correct / [N] total guesses | Clue 2: [N] correct / [N] total guesses | Clue 1: [N] correct / [N] total guesses
+WINNER DATA: Gold [N] winner(s) at $[X] each | Silver [N] winner(s) at $[X] each | Bronze [N] winner(s) at $[X] each
+WINNER NAMES: [all names read aloud]
+
+[ROUND 2]
+Host Name: [verbatim sentence]
+
+[ROUND 2 RESULTS]
+Host Name: [verbatim sentence]
+CLUE COUNTS: Clue 5: [N] correct / [N] total guesses | Clue 4: [N] correct / [N] total guesses | Clue 3: [N] correct / [N] total guesses | Clue 2: [N] correct / [N] total guesses | Clue 1: [N] correct / [N] total guesses
+WINNER DATA V2: Gold [N] winner(s) at $[X] each | Silver [N] winner(s) at $[X] each | Bronze [N] winner(s) at $[X] each
+WINNER DATA V1 CLASSIC: Winning Clue [1-5] | Winner Count [N] | Winner Payout $[X] each | Total Pot $7,500
+WINNER NAMES: [all names read aloud]
+
+[OUTRO]
+Host Name: [verbatim sentence]
+BONUS PRIZE: [exact description and price if a weekly bonus prize is announced, otherwise omit]
+
+---
+
+Rules:
+- Every spoken sentence is its own labeled line. One sentence per line. Never merge or paraphrase.
+- Include every joke, tangent, time countdown, and transition — nothing skipped.
+- When the host calls out a player's wrong guess, capture it: Host Name: "[Username] said [guess]."
+- In Results sections, capture the host's explanation for each clue exactly as spoken before the CLUE COUNTS line.
+- Capture payout amounts and winner names exactly as announced. If the host says "each" or "a piece," note it.
+- Use the full host name on every line: "Howie Mandel" or "Hunter March."
+- Infer clue spelling as best as possible from audio only. If spelling or punctuation is uncertain, add [?] immediately after the uncertain word or phrase.
+- Do not include any information that is not spoken aloud. If popular wrong guesses, clue wording, counts, or payouts are not spoken clearly, write [not spoken] or [unclear] rather than guessing.
+- Starting Monday, May 11, 2026, Round 2 is classic mode unless the episode says otherwise: only the earliest clue with any correct answers wins, and those winners split the full $7,500 pot. In that case fill WINNER DATA V1 CLASSIC and leave WINNER DATA V2 as "not applicable."
+- For v2 tiered rounds, fill WINNER DATA V2 and leave WINNER DATA V1 CLASSIC as "not applicable."
+- If a silver or bronze v2 tier has no winners, write 0 winners at $0 and keep all five clue counts.`;
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(p).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px">check</span> Copied';
+        btn.classList.add('text-green-400', 'border-green-500/50');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('text-green-400', 'border-green-500/50'); }, 2000);
+      }).catch(() => window.prompt('Copy Plaud prompt:', p));
+    } else {
+      window.prompt('Copy Plaud prompt:', p);
     }
   }
 
@@ -3262,14 +3345,18 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
 
     const isV2 = g.format === 'v2';
     const medalMap = {};
-    if (g.goldClue) medalMap[Number(g.goldClue)] = '🥇';
-    if (isV2 && g.silverClue) medalMap[Number(g.silverClue)] = (medalMap[Number(g.silverClue)] || '') + '🥈';
-    if (isV2 && g.bronzeClue) medalMap[Number(g.bronzeClue)] = (medalMap[Number(g.bronzeClue)] || '') + '🥉';
+    const classicWinningClue = Number(g.winningClue || g.goldClue || 0);
+    if (isV2) {
+      if (g.goldClue) medalMap[Number(g.goldClue)] = '🥇';
+      if (g.silverClue) medalMap[Number(g.silverClue)] = (medalMap[Number(g.silverClue)] || '') + '🥈';
+      if (g.bronzeClue) medalMap[Number(g.bronzeClue)] = (medalMap[Number(g.bronzeClue)] || '') + '🥉';
+    } else if (classicWinningClue) {
+      medalMap[classicWinningClue] = '🥇';
+    }
 
     const clueCells = Array.from({ length: 5 }, (_, i) => {
       const clueMeta = meta.clueStats[i];
       const medal = medalMap[i + 1] || '';
-      const isWinning = (i + 1) === meta.winningClueNum;
       if (!clueMeta) return `<td class="px-4 py-3 text-slate-700 text-center align-middle">—</td>`;
       let explanation = clueMeta.clue.explanation || '';
       if (explanation.includes(' - "')) {
@@ -3280,8 +3367,8 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       }
       const clueTitle = explanation ? `Clue ${i + 1}: ${explanation}` : `Clue ${i + 1}: No explanation recorded.`;
       return `<td class="px-4 py-3 align-middle" style="min-width:200px">
-        <div data-clue-tooltip="${esc(clueTitle)}" tabindex="0" class="db-clue-tooltip font-medium ${isWinning && !isV2 ? 'bg-yellow-900/30 border border-yellow-400/40 rounded px-1 py-0.5 shadow-sm text-yellow-300' : 'text-slate-200'} leading-snug">${hl(clueMeta.clue.text)}</div>
-        <div class="font-mono mt-0.5 leading-snug whitespace-nowrap" style="font-size:10px"><span class="text-green-500">${clueMeta.correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${clueMeta.guesses.toLocaleString()}</span>${clueMeta.clue.guessesEstimated ? `<span title="Estimated: clue 1 guess count not captured; derived so total matches Round 2 (${clueMeta.guesses.toLocaleString()} = ${(27576).toLocaleString()} − known clues)" style="cursor:help" class="text-yellow-500">*</span>` : ''}<span class="text-slate-500"> (${clueMeta.pct}%)</span>${(isV2 && medal) ? `&nbsp;<span style="font-size:15px">${medal}</span>` : ''}</div>
+        <div data-clue-tooltip="${esc(clueTitle)}" tabindex="0" class="db-clue-tooltip font-medium text-slate-200 leading-snug">${hl(clueMeta.clue.text)}</div>
+        <div class="font-mono mt-0.5 leading-snug whitespace-nowrap" style="font-size:10px"><span class="text-green-500">${clueMeta.correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${clueMeta.guesses.toLocaleString()}</span>${clueMeta.clue.guessesEstimated ? `<span title="Estimated: clue 1 guess count not captured; derived so total matches Round 2 (${clueMeta.guesses.toLocaleString()} = ${(27576).toLocaleString()} − known clues)" style="cursor:help" class="text-yellow-500">*</span>` : ''}<span class="text-slate-500"> (${clueMeta.pct}%)</span>${medal ? `&nbsp;<span style="font-size:15px">${medal}</span>` : ''}</div>
       </td>`;
     }).join('');
 
@@ -3518,12 +3605,12 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
       const medal = isGold ? { name: 'Gold', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
                   : isSilver ? { name: 'Silver', cls: 'border-slate-400/45 bg-slate-700/45 text-slate-100' }
                   : isBronze ? { name: 'Bronze', cls: 'border-orange-400/50 bg-orange-900/35 text-orange-200' }
-                  : isClassicWin ? { name: 'Winner', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
+                  : isClassicWin ? { name: 'Gold', cls: 'border-yellow-400/50 bg-yellow-900/35 text-yellow-200' }
                   : null;
       const medalPill = medal
         ? `<span title="${medal.name} clue" class="text-[10px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded border ${medal.cls}">${medal.name}</span>`
         : '';
-      return `<div class="border-b border-slate-800/80 px-2 py-6 sm:px-3 last:border-0 ${isClassicWin ? 'rounded-lg bg-yellow-900/10' : ''}">
+      return `<div class="border-b border-slate-800/80 px-2 py-6 sm:px-3 last:border-0">
         <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
           <span class="inline-flex items-center gap-2">
             <span class="font-black uppercase tracking-wider text-blue-300">Clue ${n}</span>
@@ -3531,7 +3618,7 @@ Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wro
           </span>
           <span class="text-slate-500 ml-auto">${esc(c.correct)} right / ${esc(c.guesses)} guesses</span>
         </div>
-        <p class="mt-4 text-lg font-bold leading-relaxed ${isClassicWin ? 'text-yellow-100' : 'text-white'}">"${esc(c.text)}"</p>
+        <p class="mt-4 text-lg font-bold leading-relaxed text-white">"${esc(c.text)}"</p>
         <p class="mt-3 text-sm leading-7 text-slate-400">${e ? esc(e) : 'No explanation recorded.'}</p>
       </div>`;
     }).join('');

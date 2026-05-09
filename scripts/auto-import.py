@@ -46,6 +46,15 @@ ARCHIVE_DATE_RE = re.compile(
 )
 
 
+def archive_date_sort_key(date_str: str) -> tuple[int, int, int]:
+    """Return a sortable YYYY,MM,DD tuple for archive dates."""
+    match = ARCHIVE_DATE_RE.fullmatch(str(date_str or ""))
+    if not match:
+        return (0, 0, 0)
+    _weekday, month_name, day, year = match.groups()
+    return (int(year), MONTH_NAMES.index(month_name) + 1, int(day))
+
+
 def fetch_url(url: str) -> bytes:
     """Fetch YouTube pages with a browser-like user agent."""
     request = urllib.request.Request(
@@ -336,7 +345,9 @@ def call_claude(transcript_text: str, episode_date: str, video_title: str) -> di
         "Best Guess Live is a daily Netflix interactive game show. Each episode has two rounds.\n"
         "In each round, viewers guess a secret item from five clues revealed one at a time.\n"
         "In v2 format, gold/silver/bronze winners get separate payouts based on which clue "
-        "they first answered correctly (gold = earliest = highest payout).\n\n"
+        "they first answered correctly (gold = earliest = highest payout). In v1 classic "
+        "format, the full round pot is split only among players who answered correctly on "
+        "the earliest clue that had any correct answers.\n\n"
         "Respond with valid JSON ONLY — no markdown, no explanation, no code fences.\n"
         "The JSON must have exactly this top-level structure:\n"
         "{\n"
@@ -360,11 +371,18 @@ Video title: {video_title}
 
 --- EXTRACTION RULES ---
 1. Extract both rounds. Each game entry must match the year-shard game schema exactly.
+   For episodes starting Monday, May 11, 2026, Round 1 is v2 tiered and Round 2 is
+   v1 classic unless the show explicitly says otherwise.
 2. For v2 format: include goldClue, silverClue, bronzeClue (clue numbers 1–5 when that tier had winners),
    goldWinners, silverWinners, bronzeWinners, goldPayout, silverPayout, bronzePayout.
    totalWinners = goldWinners + silverWinners + bronzeWinners.
    winnerPayout = formatted pot string e.g. "$7,500.00".
-3. Each game must include: date, pot (integer prize pool e.g. 7500), secretItem, host,
+3. For v1 classic format: set format="v1", include winningClue, goldClue equal to
+   winningClue for compatibility, winnerCount, totalWinners, and winnerPayout as the
+   per-winner payout shown/derived from the full pot. Set gold/silver/bronze winner
+   counts and payouts to 0 and silverClue/bronzeClue to 0. The classic winners are
+   only the correct answers on the earliest clue with any correct answers.
+4. Each game must include: date, pot (integer prize pool e.g. 7500), secretItem, host,
    format, all medal fields, winnerNames, wrongGuesses (comma-separated string of
    popular wrong guesses shown on screen).
    clues must be an array of 5 objects, each with:
@@ -372,10 +390,10 @@ Video title: {video_title}
      correct (number who answered correctly, comma-formatted string e.g. "1,279"),
      guesses (total guesses submitted that clue, comma-formatted string e.g. "6,694").
    Extract correct and guesses from the results section where Hunter reads them aloud.
-4. Do NOT include HTML entities in text — use plain Unicode.
-5. If a bonus/promo is announced for the week, add bonus:{{"title":"...","desc":"..."}}
+5. Do NOT include HTML entities in text — use plain Unicode.
+6. If a bonus/promo is announced for the week, add bonus:{{"title":"...","desc":"..."}}
    to BOTH game entries.
-6. Every playable round has exactly 5 clue objects. If a medal tier had no winners
+7. Every playable round has exactly 5 clue objects. If a v2 medal tier had no winners
    (e.g., the host says "nobody won bronze today"), set that tier's winners=0 and
    payout=0, and omit that tier's medal clue field or set it to 0.
    Do NOT inflate gold/silver payouts to reflect redistribution — the script recalculates
@@ -467,6 +485,13 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
 
     if len(games) != 2:
         raise ValueError(f"Playable episodes must include exactly 2 games, got {len(games)}.")
+    if archive_date_sort_key(episode_date) >= archive_date_sort_key("Monday, May 11, 2026"):
+        formats = [game.get("format") for game in games]
+        if formats != ["v2", "v1"]:
+            raise ValueError(
+                "Hybrid episodes starting Monday, May 11, 2026 must import as "
+                "Round 1 format='v2' and Round 2 format='v1'."
+            )
     for index, game in enumerate(games, start=1):
         if game.get("date") != episode_date:
             raise ValueError(f"Game {index} date must match episode_date.")
@@ -476,8 +501,9 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
             raise ValueError(f"Game {index} is missing host.")
         if parse_count(game.get("pot"), f"Game {index} pot") <= 0:
             raise ValueError(f"Game {index} pot must be greater than 0.")
-        if game.get("format") != "v2":
-            raise ValueError(f"Game {index} format must be 'v2' for auto-imported episodes.")
+        game_format = game.get("format")
+        if game_format not in ("v1", "v2"):
+            raise ValueError(f"Game {index} format must be 'v1' or 'v2', got {game_format!r}.")
         if "wrongGuesses" not in game:
             raise ValueError(f"Game {index} is missing wrongGuesses.")
         clues = game.get("clues")
@@ -493,35 +519,62 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
             parse_count(clue.get("guesses"), f"Game {index} clue {clue_index} guesses")
             if not str(clue.get("explanation") or "").strip():
                 raise ValueError(f"Game {index} clue {clue_index} is missing explanation.")
-        gold_winners = parse_count(game.get("goldWinners"), f"Game {index} goldWinners", allow_empty=True)
-        silver_winners = parse_count(game.get("silverWinners"), f"Game {index} silverWinners", allow_empty=True)
-        bronze_winners = parse_count(game.get("bronzeWinners"), f"Game {index} bronzeWinners", allow_empty=True)
         total_winners = parse_count(game.get("totalWinners"), f"Game {index} totalWinners")
-        winner_sum = gold_winners + silver_winners + bronze_winners
-        if winner_sum != total_winners:
-            raise ValueError(f"Game {index} totalWinners must equal medal winner sum.")
-        if silver_winners > 0 and gold_winners == 0:
-            raise ValueError(f"Game {index} cannot have silver winners without gold winners.")
-        if bronze_winners > 0 and silver_winners == 0:
-            raise ValueError(f"Game {index} cannot have bronze winners when silver has no winners.")
-        medal_clues = []
-        for tier in ("gold", "silver", "bronze"):
-            winners = parse_count(game.get(f"{tier}Winners"), f"Game {index} {tier}Winners", allow_empty=True)
-            clue = parse_count(game.get(f"{tier}Clue"), f"Game {index} {tier}Clue", allow_empty=True)
-            if winners > 0:
-                if clue < 1 or clue > 5:
-                    raise ValueError(f"Game {index} {tier}Clue must be 1-5 when {tier} has winners.")
-                medal_clues.append(clue)
-            elif clue not in (0,):
-                raise ValueError(f"Game {index} {tier}Clue medal field must be omitted or 0 when {tier} has no winners.")
-        if len(set(medal_clues)) != len(medal_clues):
-            raise ValueError(f"Game {index} v2 medal clue numbers must be distinct for tiers with winners.")
-        if medal_clues != sorted(medal_clues):
-            raise ValueError(f"Game {index} v2 medal clues must be ordered earliest-to-latest: gold, silver, bronze.")
-        for tier in ("gold", "silver", "bronze"):
-            parse_money(game.get(f"{tier}Payout"), f"Game {index} {tier}Payout", allow_empty=True)
-        if game.get("winnerPayout") != "$7,500.00":
-            raise ValueError(f"Game {index} winnerPayout must be '$7,500.00' for v2 rounds.")
+        if game_format == "v2":
+            gold_winners = parse_count(game.get("goldWinners"), f"Game {index} goldWinners", allow_empty=True)
+            silver_winners = parse_count(game.get("silverWinners"), f"Game {index} silverWinners", allow_empty=True)
+            bronze_winners = parse_count(game.get("bronzeWinners"), f"Game {index} bronzeWinners", allow_empty=True)
+            winner_sum = gold_winners + silver_winners + bronze_winners
+            if winner_sum != total_winners:
+                raise ValueError(f"Game {index} totalWinners must equal medal winner sum.")
+            if silver_winners > 0 and gold_winners == 0:
+                raise ValueError(f"Game {index} cannot have silver winners without gold winners.")
+            if bronze_winners > 0 and silver_winners == 0:
+                raise ValueError(f"Game {index} cannot have bronze winners when silver has no winners.")
+            medal_clues = []
+            for tier in ("gold", "silver", "bronze"):
+                winners = parse_count(game.get(f"{tier}Winners"), f"Game {index} {tier}Winners", allow_empty=True)
+                clue = parse_count(game.get(f"{tier}Clue"), f"Game {index} {tier}Clue", allow_empty=True)
+                if winners > 0:
+                    if clue < 1 or clue > 5:
+                        raise ValueError(f"Game {index} {tier}Clue must be 1-5 when {tier} has winners.")
+                    medal_clues.append(clue)
+                elif clue not in (0,):
+                    raise ValueError(f"Game {index} {tier}Clue medal field must be omitted or 0 when {tier} has no winners.")
+            if len(set(medal_clues)) != len(medal_clues):
+                raise ValueError(f"Game {index} v2 medal clue numbers must be distinct for tiers with winners.")
+            if medal_clues != sorted(medal_clues):
+                raise ValueError(f"Game {index} v2 medal clues must be ordered earliest-to-latest: gold, silver, bronze.")
+            for tier in ("gold", "silver", "bronze"):
+                parse_money(game.get(f"{tier}Payout"), f"Game {index} {tier}Payout", allow_empty=True)
+            if game.get("winnerPayout") != "$7,500.00":
+                raise ValueError(f"Game {index} winnerPayout must be '$7,500.00' for v2 rounds.")
+        else:
+            winning_clue = parse_count(game.get("winningClue") or game.get("goldClue"), f"Game {index} winningClue")
+            if winning_clue < 1 or winning_clue > 5:
+                raise ValueError(f"Game {index} winningClue must be between 1 and 5 for classic rounds.")
+            gold_clue = parse_count(game.get("goldClue", winning_clue), f"Game {index} goldClue", allow_empty=True)
+            if gold_clue and gold_clue != winning_clue:
+                raise ValueError(f"Game {index} goldClue must match winningClue for classic rounds.")
+            for tier in ("gold", "silver", "bronze"):
+                winners = parse_count(game.get(f"{tier}Winners", 0), f"Game {index} {tier}Winners", allow_empty=True)
+                payout = parse_money(game.get(f"{tier}Payout", 0), f"Game {index} {tier}Payout", allow_empty=True)
+                if winners != 0 or payout != 0:
+                    raise ValueError(f"Game {index} classic rounds must keep {tier} medal winners/payout at 0.")
+                if tier != "gold":
+                    clue = parse_count(game.get(f"{tier}Clue", 0), f"Game {index} {tier}Clue", allow_empty=True)
+                    if clue != 0:
+                        raise ValueError(f"Game {index} classic rounds must keep {tier}Clue at 0.")
+            winner_count = parse_count(game.get("winnerCount", total_winners), f"Game {index} winnerCount", allow_empty=True)
+            if winner_count != total_winners:
+                raise ValueError(f"Game {index} winnerCount must equal totalWinners for classic rounds.")
+            correct_on_winning_clue = parse_count(clues[winning_clue - 1].get("correct"), f"Game {index} winning clue correct")
+            if correct_on_winning_clue != total_winners:
+                raise ValueError(f"Game {index} classic totalWinners must equal correct count on winningClue.")
+            for earlier in clues[:winning_clue - 1]:
+                if parse_count(earlier.get("correct"), f"Game {index} pre-winning clue correct", allow_empty=True) != 0:
+                    raise ValueError(f"Game {index} classic winningClue must be the earliest clue with correct answers.")
+            parse_money(game.get("winnerPayout"), f"Game {index} winnerPayout")
         bonus = game.get("bonus")
         if bonus:
             if not isinstance(bonus, dict) or not bonus.get("title") or not bonus.get("desc"):
@@ -559,14 +612,21 @@ def build_stub_transcript(episode_date: str, games: list, video_id: str = "") ->
                     f'{clue.get("correct", "?")} got it right.'
                 ),
             })
-        gc = int(game.get("goldClue") or 0)
-        sc = int(game.get("silverClue") or 0)
-        bc = int(game.get("bronzeClue") or 0)
-        summary = ". ".join([
-            _medal_part("Gold",   gc, _winner_int(game.get("goldWinners",   0)), game.get("goldPayout",   0)),
-            _medal_part("Silver", sc, _winner_int(game.get("silverWinners", 0)), game.get("silverPayout", 0)),
-            _medal_part("Bronze", bc, _winner_int(game.get("bronzeWinners", 0)), game.get("bronzePayout", 0)),
-        ]) + "."
+        if game.get("format") == "v2":
+            gc = int(game.get("goldClue") or 0)
+            sc = int(game.get("silverClue") or 0)
+            bc = int(game.get("bronzeClue") or 0)
+            summary = ". ".join([
+                _medal_part("Gold",   gc, _winner_int(game.get("goldWinners",   0)), game.get("goldPayout",   0)),
+                _medal_part("Silver", sc, _winner_int(game.get("silverWinners", 0)), game.get("silverPayout", 0)),
+                _medal_part("Bronze", bc, _winner_int(game.get("bronzeWinners", 0)), game.get("bronzePayout", 0)),
+            ]) + "."
+        else:
+            winning_clue = int(game.get("winningClue") or game.get("goldClue") or 0)
+            winners = _winner_int(game.get("totalWinners", game.get("winnerCount", 0)))
+            payout = game.get("winnerPayout", "$0.00")
+            winner_word = "winner" if winners == 1 else "winners"
+            summary = f"Classic mode (Clue {winning_clue}): {winners:,} {winner_word} at {payout} each."
         lines.append({"speaker": None, "text": summary})
         return lines
 
