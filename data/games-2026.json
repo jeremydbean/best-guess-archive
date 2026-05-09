@@ -9821,5 +9821,119 @@
         "explanation": "Mini bars often found in hotel suites and tend to be quite expensive."
       }
     ]
+  },
+  {
+    "date": "Friday, May 8, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "LEBRON JAMES",
+    "clues": [
+      {
+        "number": 1,
+        "text": "DRAMATICALLY MOVING",
+        "correct": 0,
+        "guesses": "5,516",
+        "explanation": "LeBron creates drama whenever he moves between teams."
+      },
+      {
+        "number": 2,
+        "text": "SUPREME COURT DECISIONS",
+        "correct": "38",
+        "guesses": "5,497",
+        "explanation": "LeBron makes supreme decisions on the basketball court."
+      },
+      {
+        "number": 3,
+        "text": "WAS 23 BEFORE HE TURNED 6",
+        "correct": "1,568",
+        "guesses": "7,698",
+        "explanation": "LeBron wore number 23 before switching to number 6."
+      },
+      {
+        "number": 4,
+        "text": "LE BRAINS ARE ONLY HALF OF IT",
+        "correct": "3,295",
+        "guesses": "5,449",
+        "explanation": "LeBron is a play on brawn, the other half of the phrase brains and brawn."
+      },
+      {
+        "number": 5,
+        "text": "L.A. KING WHO DOESN'T PLAY HOCKEY",
+        "correct": "2,235",
+        "guesses": "3,900",
+        "explanation": "He is known as King James and plays in Los Angeles for the Lakers, not the L.A. Kings."
+      }
+    ],
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 38,
+    "silverWinners": 1568,
+    "bronzeWinners": 3295,
+    "totalWinners": 4901,
+    "goldPayout": 78.94,
+    "silverPayout": 1.59,
+    "bronzePayout": 0.6,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "MICHAEL JORDAN, BASKETBALL, TENNIS, MICHEAL JORDAN, MIME"
+  },
+  {
+    "date": "Friday, May 8, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "YODELING",
+    "clues": [
+      {
+        "number": 1,
+        "text": "HEY! HE! WHO?",
+        "correct": "575",
+        "guesses": "4,295",
+        "explanation": "The clue mimics the sounds made while yodeling."
+      },
+      {
+        "number": 2,
+        "text": "CLIFF NOTES",
+        "correct": "1,859",
+        "guesses": "6,530",
+        "explanation": "Yodeling is associated with musical notes sung from mountain cliffs."
+      },
+      {
+        "number": 3,
+        "text": "ICONIC SWISS AIR LINES",
+        "correct": "2,060",
+        "guesses": "5,972",
+        "explanation": "Yodeling is strongly associated with Switzerland, and the sounds are sung as lines out in the air."
+      },
+      {
+        "number": 4,
+        "text": "A SOUND FOUND IN THE SOUND OF MUSIC",
+        "correct": "3,102",
+        "guesses": "6,468",
+        "explanation": "The Sound of Music features a famous yodeling song."
+      },
+      {
+        "number": 5,
+        "text": "HERE'S A CLUE, HERE'S A CLUE, HERE'S A CLUE HOO HOO!",
+        "correct": "2,706",
+        "guesses": "4,871",
+        "explanation": "Howie demonstrated the yodeling sound in the clue itself."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 575,
+    "silverWinners": 1859,
+    "bronzeWinners": 2060,
+    "totalWinners": 4494,
+    "goldPayout": 5.21,
+    "silverPayout": 1.34,
+    "bronzePayout": 0.97,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Love Bug Bell, Memos Forty One, The Bailiff, Bona Fide Manner 255",
+    "wrongGuesses": "MICHAEL JACKSON, OWL, ALPS, CHEERS, DO RE MI"
   }
 ]

@@ -28373,5 +28373,239 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Friday, May 8, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "LEBRON JAMES",
+      "YODELING"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "LEBRON JAMES",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "DRAMATICALLY MOVING",
+          "SUPREME COURT DECISIONS",
+          "WAS 23 BEFORE HE TURNED 6",
+          "LE BRAINS ARE ONLY HALF OF IT",
+          "L.A. KING WHO DOESN'T PLAY HOCKEY"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "YODELING",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "HEY! HE! WHO?",
+          "CLIFF NOTES",
+          "ICONIC SWISS AIR LINES",
+          "A SOUND FOUND IN THE SOUND OF MUSIC",
+          "HERE'S A CLUE, HERE'S A CLUE, HERE'S A CLUE HOO HOO!"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That was Gwen, who sings our theme song. Welcome to Best Guess Live. I am your host, Howie Mandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before we start, as many of you know, last night we had some technical difficulties during the episode. It is a live show and you never know what is going to happen, but the team is on it and everything is up and running again today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tonight we have two new puzzles with fifteen thousand dollars on the line. Before the rules, Howie shares a fan video from Steve Schmitty Schmidt in Missoula, Montana, who won gold on the cotton candy puzzle a few days earlier."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds. Each round has one puzzle. Each puzzle has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, we load the crystal ball with a secret item. It could be anything. Then I give five clues, written like riddles to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "After each clue, you get twenty seconds to submit an answer, but you only get one best guess per round, not one per clue. It has to be the exact answer, and typos are not accepted."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The earliest correct answers split the gold prize pot of three thousand dollars, the second earliest correct clue splits twenty-five hundred dollars, and the third earliest splits two thousand dollars. If you are the only one on a medal clue, you take that whole pot."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "If possible, take a video of you, your friends, your dog, or your family playing Best Guess Live and post it with hashtag BestGuessLive. Enough talk. Let us win some money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one is worth seventy-five hundred dollars. Neil loads the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number one: DRAMATICALLY MOVING. Twenty seconds on the clock starts now. Time is up. Hangry Hippos guessed Metamucil, and Stubbly Biceps 892 guessed dancing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number two: SUPREME COURT DECISIONS. Twenty seconds on the clock starts now. Time is up. Groggy Doohickey guessed Judge Judy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number three: WAS 23 BEFORE HE TURNED 6. Twenty seconds on the clock starts now. Snarky Ferrell 22 guessed Benjamin Button."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number four: LE BRAINS ARE ONLY HALF OF IT. The clock starts now. Time is up. Bubbling Kettle guessed smartwatch."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number five: L.A. KING WHO DOESN'T PLAY HOCKEY. The clock starts now. The clue list is repeated, and time runs out."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "The crystal ball opens. It is LeBron James."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"L.A. KING WHO DOESN'T PLAY HOCKEY.\" He is known as King James and plays in Los Angeles for the Lakers, not the L.A. Kings. 2,235 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"LE BRAINS ARE ONLY HALF OF IT.\" LeBron is a play on brawn, the other half of the phrase brains and brawn. 3,295 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"WAS 23 BEFORE HE TURNED 6.\" LeBron wore jersey number 23 before wearing number 6. 1,568 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"SUPREME COURT DECISIONS.\" LeBron makes supreme decisions on the basketball court. 38 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"DRAMATICALLY MOVING.\" LeBron creates drama whenever he moves between teams. None got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 38 winners at $78.94 each. Silver (Clue 3): 1,568 winners at $1.59 each. Bronze (Clue 4): 3,295 winners at $0.60 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Over five thousand winners in round one. Howie says he loves more winners and congratulates everyone who took home cash on puzzle one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Starting Monday, Best Guess Live will bring back classic puzzle pricing for the second round: the first round stays tiered with gold, silver, and bronze payouts, and the second round becomes a classic puzzle where the earliest correct clue splits the full seventy-five hundred dollar pot."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round two has seven thousand five hundred dollars up for grabs. Prize pots are the same: three thousand for gold, twenty-five hundred for silver, and two thousand for bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number one: HEY! HE! WHO? Twenty seconds on the clock. Lopsided Malarkey guessed an old man."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number two: CLIFF NOTES. The clock starts now. Crumbling Wallet 06 guessed no diving, and Magbag 127 guessed Tarzan."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number three: ICONIC SWISS AIR LINES. The clock starts now. Squishy Umbrella guessed cuckoo clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number four: A SOUND FOUND IN THE SOUND OF MUSIC. Twenty seconds. Howie says this one should make it easy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number five: HERE'S A CLUE, HERE'S A CLUE, HERE'S A CLUE HOO HOO! Howie says he is giving it away and repeats the earlier clues."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "The crystal ball opens. The answer is yodeling."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"HERE'S A CLUE, HERE'S A CLUE, HERE'S A CLUE HOO HOO!\" Howie demonstrated the yodeling sound in the clue itself. 2,706 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"A SOUND FOUND IN THE SOUND OF MUSIC.\" The Sound of Music features a famous yodeling song. 3,102 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"ICONIC SWISS AIR LINES.\" Yodeling is associated with Switzerland, and the sounds are sung as lines out in the air. 2,060 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"CLIFF NOTES.\" These are musical notes famously sung from mountain cliffs. 1,859 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"HEY! HE! WHO?\" The first clue mimics the sounds made while yodeling. 575 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 575 winners at $5.21 each. Silver (Clue 2): 1,859 winners at $1.34 each. Bronze (Clue 3): 2,060 winners at $0.97 each."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Howie says there were almost nine thousand winners today and thanks the players."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The big gold guessers named are Love Bug Bell, Memos Forty One, The Bailiff, and Bona Fide Manner 255."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is it for this episode of Best Guess Live. Congratulations again to all our winners. We are here every weekday at eight Eastern, five Pacific. Come back Monday, and do not forget to bring your best guess. Good night."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: MICHAEL JORDAN, BASKETBALL, TENNIS, MICHEAL JORDAN, MIME."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: MICHAEL JACKSON, OWL, ALPS, CHEERS, DO RE MI."
+          }
+        ]
+      }
+    ]
   }
 ]

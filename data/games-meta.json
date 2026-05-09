@@ -2248,6 +2248,30 @@
       "goldClue": 3,
       "silverClue": 4,
       "bronzeClue": 5
+    },
+    {
+      "date": "Friday, May 8, 2026",
+      "secretItem": "LEBRON JAMES",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 4901,
+      "clueCount": 5,
+      "goldClue": 2,
+      "silverClue": 3,
+      "bronzeClue": 4
+    },
+    {
+      "date": "Friday, May 8, 2026",
+      "secretItem": "YODELING",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 4494,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
