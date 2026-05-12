@@ -6,6 +6,16 @@ Last updated: 2026-05-12
 
 - `main`
 
+## ⚠️ Push Workflow — Read Before Committing
+
+`git push origin main` **always fails with 403** in CCR/web sessions. Permanent, unfixable via credentials. Do NOT try MCP `push_files` — it burns the user's API rate limit.
+
+**Correct workflow every session:**
+1. Commit on local `main` as normal
+2. `git push -u origin <session-branch>` (branch name is in the session-level instructions)
+3. `git reset --hard origin/main`
+4. GitHub Actions (`.github/workflows/merge-claude-branch.yml`) auto-merges `claude/*` → `main` → GitHub Pages updates
+
 ## Latest Known Implementation Commit
 
 - Current commit - Year-based data sharding (games-2025.json, games-2026.json)

@@ -2,8 +2,24 @@
 
 Use `AGENTS.md` as the source of truth for repository workflow.
 
-**The CCR system blocks direct pushes to `main`. Always push to the session-specified feature branch instead.**
-Session-level instructions specifying a branch (e.g. `claude/some-branch`) must be followed — push to that branch. It will auto-merge to `main` for GitHub Pages.
+## ⚠️ Critical: How Pushing Works in CCR Sessions
+
+**`git push origin main` will ALWAYS fail with HTTP 403 in Claude Code Remote (web) sessions.**
+This is a permanent system-level block — not a credential problem. Do NOT waste time trying
+different tokens, OAuth keys, or credential helpers. It cannot be fixed.
+
+**The correct push workflow:**
+1. Commit work locally on `main` as normal
+2. Push to the session feature branch: `git push -u origin <session-branch>`
+3. Reset local main to remote: `git reset --hard origin/main`
+4. GitHub Actions auto-merges `claude/*` branches to `main` → GitHub Pages updates
+
+**Never use MCP `push_files` as a workaround** — it exhausts the user's API rate limit.
+
+The session branch name is in the session-level instructions at the top of the conversation
+(e.g. `claude/code-review-improvements-TImSY`).
+
+---
 
 Before editing:
 
@@ -16,5 +32,6 @@ After editing:
 
 - update `AI_HANDOFF.md`
 - commit on `main`
-- push to the session feature branch (e.g. `git push -u origin claude/some-branch`)
-- clean up stale non-main branches only after confirming their work is already on `main`
+- push to the session feature branch: `git push -u origin <session-branch-from-instructions>`
+- reset local main: `git reset --hard origin/main`
+- GitHub Actions handles the merge to `main` automatically
