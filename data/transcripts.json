@@ -28611,18 +28611,8 @@
   {
     "date": "Monday, May 11, 2026",
     "secretItems": [
-      "Sidewalk",
-      "The Star-Spangled Banner"
-    ],
-    "rounds": [
-      {
-        "round": 1,
-        "secretItem": "Sidewalk"
-      },
-      {
-        "round": 2,
-        "secretItem": "The Star-Spangled Banner"
-      }
+      "SIDEWALK",
+      "THE STAR-SPANGLED BANNER"
     ],
     "sections": [
       {
@@ -28634,7 +28624,19 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "I am your host, Howie Mandel."
+            "text": "I am your host."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Howie Mandel, please sit down."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sit down."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Every day, standing ovation."
           },
           {
             "speaker": "Howie Mandel",
@@ -28642,15 +28644,35 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "We are bringing our classic puzzle mode back, where everyone who answers correctly on the earliest clue splits the entire seven thousand five hundred dollars."
+            "text": "We're bringing out classic puzzle mode back where everyone who answers correctly on the earliest clues splits the entire seven thousand five hundred dollars."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "That is going to be our second round today."
+            "text": "Well, don't get too excited yet because that's going to be our second round today."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "For the first round, we are going to play our tiered puzzle with payouts on three separate clues, which means more winners."
+            "text": "And it could lead to some real big money wins."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And for the first round, we're going to play our tiered puzzle with payouts on three separate clues, which means more winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The point is, you have more ways to play and more ways to win a piece of fifteen thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So let's get started."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here are the rules."
           },
           {
             "speaker": "Howie Mandel",
@@ -28658,15 +28680,43 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "In round one, we are playing a tiered puzzle which has three sets of winners: gold, silver, and bronze."
+            "text": "In round one, we're playing a tiered puzzle which has three sets of winners: gold, silver, and bronze."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Before each round, we load a crystal ball with a secret item, and then I give you five clues."
+            "text": "Before each round, we're going to load a crystal ball with a secret item, absolutely anything, and then I am going to give you five clues."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "After each clue, you get twenty seconds to submit an answer, but you only get one best guess per round."
+            "text": "But remember, the clues they're like riddles, people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And after each clue, you'll get twenty seconds on our clock to submit an answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you only get one best guess per round, not one per clue, one per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident when you lock it in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It has to be the exact answer and we don't accept typos."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bottom line, you want to be fast."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you gotta be right."
           },
           {
             "speaker": "Howie Mandel",
@@ -28678,7 +28728,15 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Everyone that gets it on the third earliest clue will split the bronze pot of two thousand dollars."
+            "text": "And everyone that gets it in the third earliest clue will split the bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So, if you give a correct answer one of the three earliest clues, you win."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And, if you're the only one to give a correct answer one of those clues, you take that whole pot for that medal."
           },
           {
             "speaker": "Howie Mandel",
@@ -28686,7 +28744,7 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Let us win some money."
+            "text": "Let's win some money!"
           }
         ]
       },
@@ -28695,7 +28753,11 @@
         "lines": [
           {
             "speaker": "Howie Mandel",
-            "text": "Round one is worth seven thousand five hundred dollars."
+            "text": "Round one, okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, this one's worth seven thousand five hundred dollars."
           },
           {
             "speaker": "Howie Mandel",
@@ -28703,27 +28765,275 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Here is your first clue: BY THE WAY."
+            "text": "The ball is being loaded as we speak."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Clueboo007 said, I quit."
+            "text": "The ball is now loaded."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Here is your second clue: USUALLY STARTS WITH A MIXER."
+            "text": "Thanks again, Neil."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Here is your third clue: MAY POSE RISKS TO MATERNAL SPINE HEALTH."
+            "text": "Here's your first clue."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Here is your fourth clue: NO CAR? STEP ON IT!"
+            "text": "By the way, and I'm putting twenty seconds on the clock starting right now."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Here is your final clue: PAVED PATH NEAR THE STREET WHERE YOU USE YOUR FEET."
+            "text": "The first clue was by the way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Nice number of you started the game."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "30,000 people are here right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Our first-time players."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five, three, two, one seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And almost two thousand answers submitted."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "clueboo007 said, \"I quit.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "By the way, I quit."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love that, and Dogwater Five said a bridge."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "By the way, you don't understand."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, it doesn't matter."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You should have quit anyway."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your second clue: usually starts with a mixer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thank you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That was your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Seventy-five hundred dollars up for grabs."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue was, by the way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ten seconds are left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Focus people usually starts with a mixer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Over thirty five hundred people took a guess on that first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, uh, horned polygon nine seventy two said taco."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "By the way, we're gonna have a mixer and we're going to have a taco."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Slam dunk me, four one four said playing cards."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, usually starts with a mixer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "By the way, here's your third clue: may pose risks to maternal spine health."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue was by the way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Second clue was usually starts with a mixer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ten seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your third clue is may pose risks to maternal spine health."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow, almost ten thousand answers already submitted."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Set a pic, always starts with \"by the way.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "By the way, hop up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's have a little mixer first, and then I'm going to carry you to the end of this thing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No car, step on it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The one, by the way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Second clue usually starts with a mixer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Third clue, they pose risks to maternal spine health, and with five seconds left on the clock for this one, no car, step on it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sierra Dawn said a doormat."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Aquanet eighty four said foot."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "By the way, and Somber Annex eight thirty two said a bus."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, time is up and now the final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Final chance to guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Paved path near the street where you use your feet."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's not even a riddle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's here it is, people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It really is all right, by the way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Usually starts with a mixer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They pose risks to maternal spine health."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No car, step on it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And your final clue, and the time is all up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Paved path near the street where you use your feet."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Want to find out what's in the crystal ball?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thank you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The excitement level here is crazy."
           },
           {
             "speaker": "Howie Mandel",
@@ -28732,6 +29042,26 @@
           {
             "speaker": "Howie Mandel",
             "text": "Sidewalk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sidewalk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, it was sidewalk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
           }
         ]
       },
@@ -28744,7 +29074,191 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Let us take a look at how the clues fit and find out who is taking the money."
+            "text": "Your fifth clue was paved path near the street where you use your feet."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You need me to explain this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You walk along this paved path, the sidewalk by the street."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Seven thousand one hundred and eighty of you guessed it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five thousand five hundred and fifty-seven got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't want to be negative, but two thousand got it wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, so anyway, here is clue number four."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No car, step on it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, if you don't have a car, you got to step on the sidewalk, people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Six thousand four hundred and twenty-eight of you guessed, one thousand one hundred and fifteen of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number three may pose risks for the maternal spine health."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You get this?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did you play this?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I played this so many times."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Step on a crack, break your mother's back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm sorry."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Where else can you play that but a sidewalk?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Where have you ever done that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's the only place you can do that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So, um, all right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ten thousand three hundred guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One thousand one fifteen of you were correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's a good one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is a good one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number two usually starts with a mixer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Does that not make sense?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Most sidewalks are made of concrete, which is a mix of cement and water."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But there's a cement mixer, shows up, pours the concrete, and then ta-da!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You have a sidewalk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Six thousand one hundred and six people guessed."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four hundred and ninety-seven of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did anybody get the riddle before this?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're about to find out clue number one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "By the way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Way means road and a sidewalk is by it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know, by the roadway, by the you know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "By the way, I'm over here breaking my mother's back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3520 guesses on this first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "258 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love this!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's the new gold!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what that means?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That means 258 of our best guessers are gold."
           },
           {
             "speaker": null,
@@ -28752,7 +29266,7 @@
           },
           {
             "speaker": null,
-            "text": "Clue 4: \"NO CAR? STEP ON IT!\" If you do not have a car, you have to step on the sidewalk. 1,115 got it right."
+            "text": "Clue 4: \"NO CAR? STEP ON IT!\" If you don't have a car, you got to step on the sidewalk. 1,115 got it right."
           },
           {
             "speaker": null,
@@ -28769,18 +29283,6 @@
           {
             "speaker": null,
             "text": "Gold (Clue 1): 258 winners at $11.62 each. Silver (Clue 2): 497 winners at $5.03 each. Bronze (Clue 3): 1,115 winners at $1.79 each."
-          },
-          {
-            "speaker": "Howie Mandel",
-            "text": "That means two hundred fifty-eight of our best guessers are gold."
-          },
-          {
-            "speaker": "Howie Mandel",
-            "text": "I love when there is a ton of winners."
-          },
-          {
-            "speaker": "Howie Mandel",
-            "text": "Congratulations to everyone who took home some cash on the first puzzle."
           }
         ]
       },
@@ -28789,23 +29291,83 @@
         "lines": [
           {
             "speaker": "Howie Mandel",
-            "text": "This is where we are going to switch it up."
+            "text": "Splitting, you're each getting eleven dollars and sixty-two cents."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "It is the return of our classic puzzle in round two."
+            "text": "Congratulations, local cloak pastel rogue forty six."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Everyone who submits a correct answer on the earliest clue will split the entire prize pot."
+            "text": "I am not going to mention all two hundred and fifty of you."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "There are not three tiers anymore."
+            "text": "In silver, four hundred and ninety seven of you are each getting five dollars and three cents."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "This is big money round two."
+            "text": "And in bronze, one thousand one hundred and fifteen of you are getting a dollar seventy nine."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And I am so excited!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love when there is a ton of winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I would take a coupon, congratulations to everyone who took home some cash on the first puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, this where we're going to switch it up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This where this week starts to get a little special, a lot of you asked for it and now you're going to get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We listen, we give, we're givers here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's the return of our classic puzzle in round two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And just like with our first puzzle, you get five clues twenty seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You can only guess once, but in this round, the winner takes all for seventy-five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let me explain it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, so everyone who submits a correct answer on the earliest clue will split the entire prize pot."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There's not three tiers anymore."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And if you're the only one to get it right on the earliest clue, all that money is yours."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So enough talk, let's win some money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is big money round two!"
           },
           {
             "speaker": "Howie Mandel",
@@ -28813,31 +29375,311 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Here is your first clue: WE KNOW YOU KNOW."
+            "text": "Load that crystal ball, Neil."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Here is the second clue: STARTS WITH O."
+            "text": "He likes what I mentioned."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Here is your third clue: RISE AND SHINE."
+            "text": "Here it is, it's being loaded as we speak."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Here is clue number four: PRE-GAME KARAOKE."
+            "text": "I'm waiting for the first clue, and here we go."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Here is your final clue: AMERICANS SING THIS SONG O'ER AND O'ER AGAIN."
+            "text": "We know you know."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Open that ball, Neil."
+            "text": "We know you know."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "That is The Star-Spangled Banner."
+            "text": "Okay, uh, twenty seconds are on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Start it now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, a lot of people playing today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Isn't that great?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You are making, yeah, we're going up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "More people are joining us."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "More fun, more people, more winners, more money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'd love to see more people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tell a friend, tell a neighbor, join us."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Two seconds left on the clock on the first clue, and over three thousand guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A loud venom twenty nine said, \"a wink.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We know you know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wink."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, you know, we know you know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I get it all right, and buttered noodle three said, \"psychic.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I guess, and we know that the psychic knows."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is the second clue: Starts with O."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We know you know, it starts with O."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Already over six thousand submitted answers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "People are vigorous."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This could be big money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're about to find out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Three seconds left on the clock, one zero."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow, slippy dippy sixteen said Ohio."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We know you know Ohio."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "French unicorn eighty nine said, \"Botox.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We know you know, even though you can't wink cause you got Botox."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, I am alone."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sometimes you just got to make one person laugh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's only me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here is your third clue: Rise and shine, and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue, we know you know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Second clue, it starts with an O."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And this final clue with ten seconds on the clock is rise and shine."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A lot of guesses coming in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost twelve thousand guesses so far."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, fourteen thousand guesses so far."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Fancy T194 said, \"Owl.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We know you know, and if you don't know just ask."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Who is it, Al?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm a dad, and these are my jokes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, okay, uh, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh oh, somebody said orange juice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hot breath one forty three said orange juice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know, you know starts with an O."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Rise and shine, it's in the morning."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is clue number four: Pregame karaoke, and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We know you know, Oh, it starts with an O, rise and shine, and, pregame karaoke."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Got it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You got four seconds, three, two, one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Doc Walker thirty seven said, \"Jock jams.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What is that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tell me what that is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Athletic music in the nineties?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, I didn't know that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "For me, a jock jam was when I put it on backwards."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright, we're here, oh, my jock is jammed, I can't walk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, no idea."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here's your final clue, people: Americans sing this song over and over again."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There you go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Handing it right to ya."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Twenty seconds on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We know you know, starts with an O, rise and shine, pre-game karaoke, and Americans sing this over and over."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did you hear what I said?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost four thousand guesses on that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, let's find out what's in the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Boom up in that ball, Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is the Star-Spangled Banner."
           }
         ]
       },
@@ -28850,19 +29692,159 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "The correct answer is The Star-Spangled Banner."
+            "text": "The correct answer is \"The Star-Spangled Banner.\""
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Let us take a look at how the clues fit and find out who is taking the money."
+            "text": "Okay, let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, clue number five: AMERICANS SING THIS SONG O'ER AND O'ER AGAIN."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's the American national anthem with the flag waving."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "O'er the land of the free, O'er the land."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How do you say that line?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How do they sing that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, end of the free."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, six thousand five hundred and twenty seven guesses, four thousand forty six of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pretty good, all right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clue number four, PRE-GAME KARAOKE."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's your opportunity to sing along before the game starts."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's when you do it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We happen to be doing it at the end, but we're not right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, so, uh, three thousand one hundred and sixty-three of you guessed eight hundred and thirty got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number three was RISE AND SHINE."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You rise to your feet and shine in your vocal performance like they just did."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Only two of them were standing, but you are supposed to rise and you are supposed to shine."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, seven thousand four hundred and ninety five guesses, two hundred and thirty six of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "STARTS WITH O."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What is the first lyric of this?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Go ahead, what is it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can you see?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did you hear it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, oh! Starts with an O."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, five thousand eight hundred and fifty-six guesses, one hundred and forty-six of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Remember, this is seventy five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're not playing Gold, silver, and bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're only playing one bar of this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's see if anybody got it earlier, now we know you know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Come on, everybody knows the national anthem."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Even if you don't know all the words, you know the national anthem, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So we know you know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Six thousand nine hundred and ninety-eight of you guessed, and you know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You don't know, nobody knew."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a zero, which means one hundred and forty-six of you are splitting seven thousand five hundred."
           },
           {
             "speaker": null,
-            "text": "Clue 5: \"AMERICANS SING THIS SONG O'ER AND O'ER AGAIN.\" It is the American national anthem with the flag waving. 4,046 got it right."
+            "text": "Clue 5: \"AMERICANS SING THIS SONG O'ER AND O'ER AGAIN.\" It's the American national anthem with the flag waving. 4,046 got it right."
           },
           {
             "speaker": null,
-            "text": "Clue 4: \"PRE-GAME KARAOKE.\" It is your opportunity to sing along before the game starts. 830 got it right."
+            "text": "Clue 4: \"PRE-GAME KARAOKE.\" It's your opportunity to sing along before the game starts. 830 got it right."
           },
           {
             "speaker": null,
@@ -28870,11 +29852,11 @@
           },
           {
             "speaker": null,
-            "text": "Clue 2: \"STARTS WITH O.\" The song starts with O say can you see. 146 got it right."
+            "text": "Clue 2: \"STARTS WITH O.\" Oh, say can you see — starts with O. 146 got it right."
           },
           {
             "speaker": null,
-            "text": "Clue 1: \"WE KNOW YOU KNOW.\" Even if you do not know all the words, you know the national anthem. 0 got it right."
+            "text": "Clue 1: \"WE KNOW YOU KNOW.\" Even if you don't know all the words, you know the national anthem. 0 got it right."
           },
           {
             "speaker": null,
@@ -28882,15 +29864,19 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Each of you is getting fifty-one dollars and thirty-six cents."
+            "text": "Each of you is getting fifty one dollars and thirty six cents."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Congratulations to Doc H 1966, Dip 5196, Zach W 3131, and Civil Shredder 936."
+            "text": "Congratulations to Doc H 1966, Dip 5196, Zach W 3131, Civil Shredder 936."
           },
           {
             "speaker": "Howie Mandel",
-            "text": "We had big winners today."
+            "text": "I don't want to name you all, but we had big winners today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We have a lot of winners today, it's a good day."
           }
         ]
       },
@@ -28911,20 +29897,59 @@
           },
           {
             "speaker": "Howie Mandel",
-            "text": "Do not forget to bring your best guess."
+            "text": "And don't forget to bring your best guess."
           },
           {
             "speaker": "Howie Mandel",
             "text": "Good night, everybody."
           },
           {
-            "speaker": null,
-            "text": "Popular wrong guesses, Round 1: [EPIDURAL, PREGNANCY, SKATEBOARD, CEMENT, SIDE WALK]"
+            "speaker": "Howie Mandel",
+            "text": "I'm gonna, I want to leave, but I can't find the sidewalk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, there it is."
           },
           {
             "speaker": null,
-            "text": "Popular wrong guesses, Round 2: [ORANGE JUICE, OBVIOUS, YAWN, SECRET, OPINION]"
+            "text": "Popular wrong guesses, Round 1: EPIDURAL, PREGNANCY, SKATEBOARD, CEMENT, SIDE WALK."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: ORANGE JUICE, OBVIOUS, YAWN, SECRET, OPINION."
           }
+        ]
+      }
+    ],
+    "host": "Howie Mandel",
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "SIDEWALK",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "BY THE WAY",
+          "USUALLY STARTS WITH A MIXER",
+          "MAY POSE RISKS TO MATERNAL SPINE HEALTH",
+          "NO CAR? STEP ON IT!",
+          "PAVED PATH NEAR THE STREET WHERE YOU USE YOUR FEET"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "THE STAR-SPANGLED BANNER",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v1",
+        "clues": [
+          "WE KNOW YOU KNOW",
+          "STARTS WITH O",
+          "RISE AND SHINE",
+          "PRE-GAME KARAOKE",
+          "AMERICANS SING THIS SONG O'ER AND O'ER AGAIN"
         ]
       }
     ]

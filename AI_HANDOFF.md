@@ -1,6 +1,6 @@
 # AI Handoff
 
-Last updated: 2026-05-08
+Last updated: 2026-05-12
 
 ## Current Branch
 
@@ -35,7 +35,7 @@ Last updated: 2026-05-08
 - **Admin panel removed**: All game/transcript updates are now done by AI agents (Claude/Codex) directly editing the data files and committing. See "Daily Update Workflow" below.
 - **Bonus/promo data migrated**: `bonusMap` moved from hardcoded JS in `index.html` to a `bonus: {title, desc}` field on each game in the year shards. Rendering code reads `g.bonus` directly. `bonus.desc` may contain safe HTML (`<br>` and `<b>` tags).
 - **Scripts cleaned up**: Legacy docx/admin importer scripts are gone; current automation lives in `scripts/auto-import.py`, with a few one-off historical cleanup scripts still present.
-- Latest imported episode: Monday, May 11, 2026 with SIDEWALK and THE STAR-SPANGLED BANNER.
+- Latest imported episode: Monday, May 11, 2026 with SIDEWALK (Round 1, v2) and THE STAR-SPANGLED BANNER (Round 2, v1 classic). This is the first hybrid episode.
 - 111 total game days (110 playable + 1 cancelled: Thursday, April 9, 2026).
 - 221 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 185).
 - **Transcripts reimported** from `Best_Guess_Live_Clean_Readable_Transcripts.docx` (uploaded to repo root). All 100 transcripts use the game data as canonical source for rounds/clues/host/pot/format. Section tags now read "Round 1 Results" / "Round 2 Results" (previously "Reveal").
