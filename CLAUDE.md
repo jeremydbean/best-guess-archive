@@ -16,5 +16,9 @@ After editing:
 
 - update `AI_HANDOFF.md`
 - commit on `main`
-- push to `origin/main`
+- attempt to push to `origin/main`
+- **If `git push origin main` fails with "Branch 'main' is protected"**: The CCR (Claude Code Remote) system blocks direct AI agent pushes to main. In this case:
+  - Create and push to the session-specified feature branch (from session instructions, e.g. `claude/code-review-improvements-TImSY`)
+  - Notify the user that the work is on the feature branch and ready for merge
+  - The user can merge it themselves or the repo owner can review and merge
 - clean up stale non-main branches only after confirming their work is already on `main`
