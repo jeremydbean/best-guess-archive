@@ -35,9 +35,9 @@ Last updated: 2026-05-08
 - **Admin panel removed**: All game/transcript updates are now done by AI agents (Claude/Codex) directly editing the data files and committing. See "Daily Update Workflow" below.
 - **Bonus/promo data migrated**: `bonusMap` moved from hardcoded JS in `index.html` to a `bonus: {title, desc}` field on each game in the year shards. Rendering code reads `g.bonus` directly. `bonus.desc` may contain safe HTML (`<br>` and `<b>` tags).
 - **Scripts cleaned up**: Legacy docx/admin importer scripts are gone; current automation lives in `scripts/auto-import.py`, with a few one-off historical cleanup scripts still present.
-- Latest imported episode: Friday, May 8, 2026 with LEBRON JAMES and YODELING.
-- 110 total game days (109 playable + 1 cancelled: Thursday, April 9, 2026).
-- 219 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 183).
+- Latest imported episode: Monday, May 11, 2026 with SIDEWALK and THE STAR-SPANGLED BANNER.
+- 111 total game days (110 playable + 1 cancelled: Thursday, April 9, 2026).
+- 221 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 185).
 - **Transcripts reimported** from `Best_Guess_Live_Clean_Readable_Transcripts.docx` (uploaded to repo root). All 100 transcripts use the game data as canonical source for rounds/clues/host/pot/format. Section tags now read "Round 1 Results" / "Round 2 Results" (previously "Reveal").
 - **Jan 1-14 transcripts fixed**: These episodes had no Heading2 section markers in the docx. A heuristic state machine now splits them into 6 sections using phrase triggers ("crystal ball reveals", "correct answer was", etc.) and space-normalized secret-item matching. All 10 episodes are now fully populated.
 - **Mobile transcript layout fixed**: episode list max-height reduced from 32rem to 9rem on mobile; tapping an episode smooth-scrolls to the transcript detail panel. Desktop still uses 32rem two-column layout.
@@ -247,7 +247,7 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 ## Things Worth Double-Checking After Future Edits
 
 - GitHub Pages reflects the newest commit on `main`.
-- Latest manual import completed: Friday, May 8, 2026 (`LEBRON JAMES`, `YODELING`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
+- Latest manual import completed: Monday, May 11, 2026 (`SIDEWALK`, `THE STAR-SPANGLED BANNER`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
 - Friday, May 1, 2026 bonus metadata is attached to both `ZOOM` and `JUMPING JACKS`; audit should have 0 warnings.
 - Desktop database arrows remain visible and clickable while scrolling.
 - Home KPI counters do not cause layout shift.

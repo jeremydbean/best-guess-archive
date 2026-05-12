@@ -9935,5 +9935,121 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Love Bug Bell, Memos Forty One, The Bailiff, Bona Fide Manner 255",
     "wrongGuesses": "MICHAEL JACKSON, OWL, ALPS, CHEERS, DO RE MI"
+  },
+  {
+    "date": "Monday, May 11, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "SIDEWALK",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BY THE WAY",
+        "correct": "258",
+        "guesses": "3,520",
+        "explanation": "Way means road, and a sidewalk is by it."
+      },
+      {
+        "number": 2,
+        "text": "USUALLY STARTS WITH A MIXER",
+        "correct": "497",
+        "guesses": "6,106",
+        "explanation": "Most sidewalks are made of concrete, which starts with a cement mixer."
+      },
+      {
+        "number": 3,
+        "text": "MAY POSE RISKS TO MATERNAL SPINE HEALTH",
+        "correct": "1,115",
+        "guesses": "10,302",
+        "explanation": "Step on a crack, break your mother's back is played on sidewalks."
+      },
+      {
+        "number": 4,
+        "text": "NO CAR? STEP ON IT!",
+        "correct": "1,115",
+        "guesses": "6,428",
+        "explanation": "If you do not have a car, you step on the sidewalk."
+      },
+      {
+        "number": 5,
+        "text": "PAVED PATH NEAR THE STREET WHERE YOU USE YOUR FEET",
+        "correct": "5,557",
+        "guesses": "7,180",
+        "explanation": "A sidewalk is a paved path near the street where you walk."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 258,
+    "silverWinners": 497,
+    "bronzeWinners": 1115,
+    "totalWinners": 1870,
+    "goldPayout": 11.62,
+    "silverPayout": 5.03,
+    "bronzePayout": 1.79,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Local Cloak, Pastel Rogue 46",
+    "wrongGuesses": "EPIDURAL, PREGNANCY, SKATEBOARD, CEMENT, SIDE WALK"
+  },
+  {
+    "date": "Monday, May 11, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Howie Mandel",
+    "secretItem": "THE STAR-SPANGLED BANNER",
+    "clues": [
+      {
+        "number": 1,
+        "text": "WE KNOW YOU KNOW",
+        "correct": "0",
+        "guesses": "6,998",
+        "explanation": "Even if you do not know all the words, you know the national anthem."
+      },
+      {
+        "number": 2,
+        "text": "STARTS WITH O",
+        "correct": "146",
+        "guesses": "5,856",
+        "explanation": "The song starts with the lyric \"O say can you see.\""
+      },
+      {
+        "number": 3,
+        "text": "RISE AND SHINE",
+        "correct": "236",
+        "guesses": "7,495",
+        "explanation": "You rise to your feet and shine in your vocal performance."
+      },
+      {
+        "number": 4,
+        "text": "PRE-GAME KARAOKE",
+        "correct": "830",
+        "guesses": "3,163",
+        "explanation": "It is often sung before games start."
+      },
+      {
+        "number": 5,
+        "text": "AMERICANS SING THIS SONG O'ER AND O'ER AGAIN",
+        "correct": "4,046",
+        "guesses": "6,527",
+        "explanation": "Americans sing this national anthem again and again."
+      }
+    ],
+    "winningClue": 2,
+    "goldClue": 2,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 146,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 146,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$51.36",
+    "winnerNames": "Doc H 1966, Dip 5196, Zach W 3131, Civil Shredder 936",
+    "wrongGuesses": "ORANGE JUICE, OBVIOUS, YAWN, SECRET, OPINION"
   }
 ]

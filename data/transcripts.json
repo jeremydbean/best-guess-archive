@@ -28607,5 +28607,326 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Monday, May 11, 2026",
+    "secretItems": [
+      "Sidewalk",
+      "The Star-Spangled Banner"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "Sidewalk"
+      },
+      {
+        "round": 2,
+        "secretItem": "The Star-Spangled Banner"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am your host, Howie Mandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Today is a very big day."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We are bringing our classic puzzle mode back, where everyone who answers correctly on the earliest clue splits the entire seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is going to be our second round today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "For the first round, we are going to play our tiered puzzle with payouts on three separate clues, which means more winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds, and each round has one puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "In round one, we are playing a tiered puzzle which has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, we load a crystal ball with a secret item, and then I give you five clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "After each clue, you get twenty seconds to submit an answer, but you only get one best guess per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in the correct answer on the earliest clue will split the gold prize pot of three thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of two thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that gets it on the third earliest clue will split the bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough talk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let us win some money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one is worth seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Load that ball now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your first clue: BY THE WAY."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clueboo007 said, I quit."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your second clue: USUALLY STARTS WITH A MIXER."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your third clue: MAY POSE RISKS TO MATERNAL SPINE HEALTH."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your fourth clue: NO CAR? STEP ON IT!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your final clue: PAVED PATH NEAR THE STREET WHERE YOU USE YOUR FEET."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sidewalk."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sidewalk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let us take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"PAVED PATH NEAR THE STREET WHERE YOU USE YOUR FEET.\" You walk along this paved path, the sidewalk by the street. 5,557 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"NO CAR? STEP ON IT!\" If you do not have a car, you have to step on the sidewalk. 1,115 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"MAY POSE RISKS TO MATERNAL SPINE HEALTH.\" Step on a crack, break your mother's back. 1,115 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"USUALLY STARTS WITH A MIXER.\" Most sidewalks are made of concrete, which is a mix of cement and water. 497 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"BY THE WAY.\" Way means road and a sidewalk is by it. 258 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 258 winners at $11.62 each. Silver (Clue 2): 497 winners at $5.03 each. Bronze (Clue 3): 1,115 winners at $1.79 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That means two hundred fifty-eight of our best guessers are gold."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love when there is a ton of winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to everyone who took home some cash on the first puzzle."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is where we are going to switch it up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is the return of our classic puzzle in round two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone who submits a correct answer on the earliest clue will split the entire prize pot."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There are not three tiers anymore."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is big money round two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your first clue: WE KNOW YOU KNOW."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is the second clue: STARTS WITH O."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your third clue: RISE AND SHINE."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is clue number four: PRE-GAME KARAOKE."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your final clue: AMERICANS SING THIS SONG O'ER AND O'ER AGAIN."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open that ball, Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is The Star-Spangled Banner."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "The Star-Spangled Banner."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The correct answer is The Star-Spangled Banner."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let us take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"AMERICANS SING THIS SONG O'ER AND O'ER AGAIN.\" It is the American national anthem with the flag waving. 4,046 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"PRE-GAME KARAOKE.\" It is your opportunity to sing along before the game starts. 830 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"RISE AND SHINE.\" You rise to your feet and shine in your vocal performance. 236 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"STARTS WITH O.\" The song starts with O say can you see. 146 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"WE KNOW YOU KNOW.\" Even if you do not know all the words, you know the national anthem. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Classic mode (Clue 2): 146 winners at $51.36 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each of you is getting fifty-one dollars and thirty-six cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to Doc H 1966, Dip 5196, Zach W 3131, and Civil Shredder 936."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We had big winners today."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all our winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We are here every weekday at eight Eastern, five Pacific, so come back tomorrow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Do not forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good night, everybody."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [EPIDURAL, PREGNANCY, SKATEBOARD, CEMENT, SIDE WALK]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [ORANGE JUICE, OBVIOUS, YAWN, SECRET, OPINION]"
+          }
+        ]
+      }
+    ]
   }
 ]

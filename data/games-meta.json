@@ -2272,6 +2272,28 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Monday, May 11, 2026",
+      "secretItem": "SIDEWALK",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 1870,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, May 11, 2026",
+      "secretItem": "THE STAR-SPANGLED BANNER",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v1",
+      "totalWinners": 146,
+      "clueCount": 5,
+      "goldClue": 2
     }
   ]
 }
