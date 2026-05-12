@@ -2526,33 +2526,92 @@ You are processing a Best Guess Live episode (Netflix game show, two rounds). I 
 
 Use today's date for the \`date\` field unless I explicitly specify a different date in my follow-up message.
 
-Output a single JSON object with four top-level keys: \`date\`, \`clues\`, \`wrongGuesses\`, \`transcript\`.
+Output a single JSON object with these top-level keys: \`date\`, \`rounds\`, \`transcript\`, and optionally \`bonus\`. Output JSON only. No markdown fences. No commentary before or after.
 
 **\`date\`**: \`"Weekday, Month D, YYYY"\`. Use today's date unless explicitly stated otherwise.
 
-**Format/prizing**: Starting Monday, May 11, 2026, the standard show format is hybrid unless the episode explicitly says otherwise: Round 1 is current tiered v2 (Gold/Silver/Bronze), and Round 2 is classic v1 where only the earliest clue with correct answers splits the full $7,500 pot. Episodes before that are usually both v2 unless the show says otherwise. In classic v1, do not create Silver/Bronze winners; identify the single winning clue as the earliest clue with any correct answers, the winner count as that clue's correct count, and the payout as $7,500 divided among those winners.
+**Format/prizing**: Starting Monday, May 11, 2026, the standard show format is hybrid unless the episode explicitly says otherwise: Round 1 is tiered v2 (Gold/Silver/Bronze), Round 2 is classic v1 where only the earliest clue with correct answers splits the full $7,500 pot. Episodes before May 11, 2026 are usually both v2 unless the show says otherwise. In classic v1, do not create Silver/Bronze winners; identify the single winning clue as the earliest clue with any correct answers, the winner count as that clue's correct count, and the payout as $7,500 divided among those winners (round to nearest cent).
 
-**\`clues\`**: Exact text from screenshots only — ALL CAPS as shown on screen. Clue 1 is the hardest (shown first), Clue 5 is easiest (shown last). Also populate \`correct\` (number who answered correctly on that clue) and \`guesses\` (total guesses submitted on that clue) from the results screenshots — use comma-formatted strings exactly as shown on screen (e.g. \`"3,281"\`).
+**\`rounds\`**: An object with \`round1\` and \`round2\`. Each contains all structured game data for that round.
+
+v2 (tiered Gold/Silver/Bronze) shape:
 \`\`\`json
-"clues": {
-  "round1": [
-    {"number": 1, "text": "EXACT SCREEN TEXT", "correct": "N", "guesses": "N,NNN"},
-    {"number": 2, "text": "...", "correct": "N", "guesses": "N,NNN"},
-    {"number": 3, "text": "...", "correct": "N", "guesses": "N,NNN"},
-    {"number": 4, "text": "...", "correct": "N", "guesses": "N,NNN"},
-    {"number": 5, "text": "...", "correct": "N", "guesses": "N,NNN"}
+"round1": {
+  "secretItem": "ANSWER IN ALL CAPS",
+  "host": "Howie Mandel",
+  "format": "v2",
+  "clues": [
+    {"number": 1, "text": "EXACT SCREEN TEXT", "correct": "N", "guesses": "N,NNN", "explanation": "One sentence from host explaining the connection."},
+    {"number": 2, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
+    {"number": 3, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
+    {"number": 4, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
+    {"number": 5, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."}
   ],
-  "round2": [ ...same structure... ]
+  "goldClue": 1,
+  "silverClue": 2,
+  "bronzeClue": 3,
+  "goldWinners": 123,
+  "silverWinners": 456,
+  "bronzeWinners": 789,
+  "totalWinners": 1368,
+  "goldPayout": 60.98,
+  "silverPayout": 16.45,
+  "bronzePayout": 9.51,
+  "winnerPayout": "$7,500.00",
+  "winnerNames": "Name1, Name2, Name3",
+  "wrongGuesses": "WORD1, WORD2, WORD3"
 }
 \`\`\`
 
-**\`wrongGuesses\`**: Popular wrong guesses shown on screen after each reveal. From screenshots only — do not invent.
+v1 (classic mode) shape:
 \`\`\`json
-"wrongGuesses": {
-  "round1": ["WRONG GUESS", "WRONG GUESS", "..."],
-  "round2": ["WRONG GUESS", "..."]
+"round2": {
+  "secretItem": "ANSWER IN ALL CAPS",
+  "host": "Howie Mandel",
+  "format": "v1",
+  "clues": [
+    {"number": 1, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
+    {"number": 2, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
+    {"number": 3, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
+    {"number": 4, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
+    {"number": 5, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."}
+  ],
+  "winningClue": 2,
+  "goldClue": 2,
+  "silverClue": 0,
+  "bronzeClue": 0,
+  "winnerCount": 146,
+  "goldWinners": 0,
+  "silverWinners": 0,
+  "bronzeWinners": 0,
+  "totalWinners": 146,
+  "goldPayout": 0,
+  "silverPayout": 0,
+  "bronzePayout": 0,
+  "winnerPayout": "$51.36",
+  "winnerNames": "Name1, Name2",
+  "wrongGuesses": "WORD1, WORD2"
 }
 \`\`\`
+
+**Field rules:**
+- \`clues[].text\`: exact ALL CAPS text from screenshots only — never from audio
+- \`clues[].correct\`: exact number string from results screenshots (e.g. \`"146"\`)
+- \`clues[].guesses\`: exact comma-formatted string from results screenshots (e.g. \`"6,998"\`)
+- \`clues[].explanation\`: one sentence summarizing the host's explanation of why this clue points to the answer; write it in present tense (e.g. "A sidewalk is a paved path near the street.")
+- \`goldClue\`, \`silverClue\`, \`bronzeClue\`: clue number 1–5 from the results screenshots showing payout tiers. If a tier had no winners, use \`0\` and set its winners and payout to \`0\`. Empty tiers cascade from the bottom: bronze can be empty alone, or silver+bronze both empty. Silver cannot be empty while bronze has winners.
+- \`goldWinners\`, \`silverWinners\`, \`bronzeWinners\`: winner counts per tier. \`totalWinners\` must equal their sum.
+- \`goldPayout\`, \`silverPayout\`, \`bronzePayout\`: numeric dollar amount per winner (e.g. \`60.98\`), from screenshots.
+- \`winnerPayout\`: always \`"$7,500.00"\` for v2 rounds; per-winner share string for v1 (e.g. \`"$51.36"\`).
+- \`winnerNames\`: comma-separated string of winner names as announced by the host. Use \`""\` if none announced.
+- \`wrongGuesses\`: comma-separated ALL CAPS string from screenshots only. Use \`""\` if none shown.
+- For v1: set \`goldClue\` equal to \`winningClue\`; set \`silverClue\`, \`bronzeClue\` to \`0\`; set all medal winner/payout fields to \`0\`.
+
+**\`bonus\`** (optional): include only if the episode announces a special promo or bonus prize.
+\`\`\`json
+"bonus": {"title": "Promo Name", "desc": "Full description. May use <br> and <b> tags for line breaks and bold."}
+\`\`\`
+Omit \`bonus\` entirely if there is no promo.
 
 **\`transcript\`**: Full verbatim transcript.
 \`\`\`json
