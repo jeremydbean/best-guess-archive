@@ -13,6 +13,9 @@ on:
 jobs:
   import:
     runs-on: self-hosted
+    concurrency:
+      group: auto-import-best-guess-live
+      cancel-in-progress: false
     permissions:
       contents: write
 
@@ -25,10 +28,44 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Skip duplicate DST schedule
+        if: github.event_name == 'schedule'
+        shell: pwsh
+        run: |
+          $utcNow = (Get-Date).ToUniversalTime()
+          try {
+            $easternTz = [TimeZoneInfo]::FindSystemTimeZoneById("Eastern Standard Time")
+          } catch {
+            $easternTz = [TimeZoneInfo]::FindSystemTimeZoneById("America/New_York")
+          }
+          $easternNow = [TimeZoneInfo]::ConvertTimeFromUtc($utcNow, $easternTz)
+          if ($easternNow.Hour -ne 9) {
+            Write-Host "Skipping duplicate DST schedule. Local Eastern time is $($easternNow.ToString('yyyy-MM-dd HH:mm'))."
+            "AUTO_IMPORT_SKIP=true" >> $env:GITHUB_ENV
+            exit 0
+          }
+
+      - name: Preflight main push access
+        if: env.AUTO_IMPORT_SKIP != 'true'
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+          git push --dry-run origin HEAD:main
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "Cannot push to origin/main. Stopping before any Claude API call."
+            exit 1
+          }
+
       - name: Install Python deps
+        if: env.AUTO_IMPORT_SKIP != 'true'
         run: py -m pip install youtube-transcript-api anthropic tzdata
 
       - name: Run auto-import
+        if: env.AUTO_IMPORT_SKIP != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.BGL_SCHEDULER_CLAUDE }}
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
@@ -37,10 +74,11 @@ jobs:
           if ($videoId -ne "") {
             py scripts/auto-import.py --video-id="$videoId"
           } else {
-            py scripts/auto-import.py
+            py scripts/auto-import.py --max-episodes=1
           }
 
       - name: Commit and push if data changed
+        if: env.AUTO_IMPORT_SKIP != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

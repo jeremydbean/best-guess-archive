@@ -754,6 +754,12 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--video-id", help="Specific YouTube video ID to import")
     parser.add_argument("--dry-run", action="store_true", help="Parse but don't write files")
+    parser.add_argument(
+        "--max-episodes",
+        type=int,
+        default=0,
+        help="Maximum pending episodes to process in this run; 0 means no limit.",
+    )
     args = parser.parse_args()
 
     imported_dates = get_imported_dates()
@@ -796,6 +802,13 @@ def main():
             # No new videos — exits before any API call.
             print("No new Best Guess Live episodes found. No API credits used.")
             sys.exit(0)
+
+        if args.max_episodes and len(pending) > args.max_episodes:
+            print(
+                f"Found {len(pending)} pending episode(s); processing the oldest "
+                f"{args.max_episodes} this run to cap API spend."
+            )
+            pending = pending[:args.max_episodes]
 
         print(f"Found {len(pending)} episode(s) to import.")
         # Process oldest-first so a late upload is caught the next day

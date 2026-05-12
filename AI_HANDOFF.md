@@ -14,7 +14,7 @@ Last updated: 2026-05-12
 1. Commit on local `main` as normal
 2. `git push -u origin <session-branch>` (branch name is in the session-level instructions)
 3. `git reset --hard origin/main`
-4. GitHub Actions (`.github/workflows/merge-claude-branch.yml`) auto-merges `claude/*` → `main` → GitHub Pages updates
+4. GitHub Actions (`.github/workflows/merge-claude-branch.yml`) auto-merges `claude/*` → `main`, deletes the session branch, and GitHub Pages updates
 
 ## Latest Known Implementation Commit
 
@@ -36,6 +36,7 @@ Last updated: 2026-05-12
 - **Standard redistribution UI 2026-05-07**: No-winner medal tiers are now rendered as a normal generated "Prize redistribution" block in Database details, based on winner counts. Do not add one-off `adminNote` text for standard no-bronze/no-silver rounds. Reserve `adminNote` for unrelated data-quality notes, such as incomplete wrong guesses due to technical issues.
 - **No-winner validation hardening 2026-05-07**: `scripts/auto-import.py` now accepts empty silver/bronze tiers only when their medal clue field is omitted or `0`, while still requiring all five clue objects. `tools/audit-data.mjs` enforces the same shape and verifies v2 payout math including official redistribution, so bad imports cannot make Play award a nonexistent medal tier.
 - **Auto-import bug check 2026-05-08**: `scripts/auto-import.py` now catches URL/time-out/XML RSS failures before falling back to the channel page, prefers title dates for manual video imports, treats date-only publish metadata as noon UTC to avoid previous-day Eastern drift, and validates Claude output more strictly before writing: archive date shape, v2 format, host/pot/wrongGuesses, clue numbers, numeric correct/guess counts, medal tier order, winner totals, payouts, and full-pot `winnerPayout`. `tools/audit-data.mjs` mirrors the new clue-number, count-shape, medal-order, and v2 `winnerPayout` checks while tolerating legacy unknown count strings in old data.
+- **Auto-import cost guard 2026-05-12**: `.github/workflows/auto-import.yml` now runs a cheap `git push --dry-run origin HEAD:main` preflight before installing Python dependencies or calling Claude. If GitHub cannot accept a main push, the job stops before spending Anthropic API tokens. The workflow also skips the duplicate DST schedule when the Eastern hour is not 9, uses workflow concurrency, and passes `--max-episodes=1` so a backlog cannot spend multiple Claude calls in one scheduled run.
 - **Hybrid rules beginning Monday, May 11, 2026**: Round 1 stays `format: "v2"` tiered gold/silver/bronze. Round 2 returns to `format: "v1"` classic mode, where only the earliest clue with correct answers splits the full $7,500 pot. `scripts/auto-import.py`, `docs/DAILY_IMPORT.md`, `docs/DAILY_IMPORT_PROMPT.md`, `docs/PLAUD_AUDIO_PROMPT.md`, `AGENTS.md`, the in-app Gemini/Plaud copy prompts, and `tools/audit-data.mjs` have been updated for this. In the Database, classic v1 winning clues are now marked with the same 🥇 clue indicator used for v2 instead of a yellow highlighted clue box.
 
 - GitHub Pages publishes from `main`.

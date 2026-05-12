@@ -8,6 +8,9 @@ on:
 jobs:
   merge:
     runs-on: ubuntu-latest
+    concurrency:
+      group: merge-${{ github.ref_name }}
+      cancel-in-progress: false
     permissions:
       contents: write
     steps:
@@ -23,3 +26,4 @@ jobs:
           git checkout main
           git merge --no-ff origin/${{ github.ref_name }} -m "Auto-merge ${{ github.ref_name }} into main"
           git push origin main
+          git push origin --delete ${{ github.ref_name }}

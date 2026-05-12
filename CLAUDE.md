@@ -12,7 +12,7 @@ different tokens, OAuth keys, or credential helpers. It cannot be fixed.
 1. Commit work locally on `main` as normal
 2. Push to the session feature branch: `git push -u origin <session-branch>`
 3. Reset local main to remote: `git reset --hard origin/main`
-4. GitHub Actions auto-merges `claude/*` branches to `main` → GitHub Pages updates
+4. GitHub Actions auto-merges `claude/*` branches to `main`, deletes the session branch, and GitHub Pages updates
 
 **Never use MCP `push_files` as a workaround** — it exhausts the user's API rate limit.
 
@@ -35,3 +35,4 @@ After editing:
 - push to the session feature branch: `git push -u origin <session-branch-from-instructions>`
 - reset local main: `git reset --hard origin/main`
 - GitHub Actions handles the merge to `main` automatically
+- the merge workflow deletes the session branch after a successful merge
