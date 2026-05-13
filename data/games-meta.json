@@ -2294,6 +2294,28 @@
       "totalWinners": 146,
       "clueCount": 5,
       "goldClue": 2
+    },
+    {
+      "date": "Tuesday, May 12, 2026",
+      "secretItem": "BLACKJACK",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 333,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 3,
+      "bronzeClue": 4
+    },
+    {
+      "date": "Tuesday, May 12, 2026",
+      "secretItem": "MARGARITA",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v1",
+      "totalWinners": 1,
+      "clueCount": 5,
+      "goldClue": 1
     }
   ]
 }
