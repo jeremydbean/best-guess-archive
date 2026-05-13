@@ -1649,6 +1649,15 @@ document.addEventListener('focusout', function(e) {
     <ul class="space-y-3" id="stats-reused-clues"></ul>
   </div>
 
+  <!-- Most Popular Wrong Guesses -->
+  <div class="glass-panel p-6 rounded-xl">
+    <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <span class="material-symbols-outlined text-red-400">cancel</span> Most Popular Wrong Guesses
+    </h3>
+    <p class="text-xs text-slate-400 mb-4">The most common wrong answers submitted across all episodes.</p>
+    <ol class="space-y-2" id="stats-wrong-guesses"></ol>
+  </div>
+
   <!-- Breakdown (legacy compact grid) -->
   <div class="glass-panel p-8 rounded-xl">
     <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-2">Quick Breakdown</h3>
@@ -1890,6 +1899,7 @@ class App {
       nodes.medalFooter = document.getElementById('stats-medal-footer');
       nodes.redistrib = document.getElementById('stats-redistrib');
       nodes.reusedClues = document.getElementById('stats-reused-clues');
+      nodes.wrongGuesses = document.getElementById('stats-wrong-guesses');
     } else if (name === 'transcripts') {
       nodes.search = document.getElementById('transcript-search');
       nodes.count = document.getElementById('transcript-count');
@@ -4174,6 +4184,18 @@ Rules:
       .sort((a, b) => b[1].length - a[1].length)
       .slice(0, 15)
       .map(([text, entries]) => ({ text, count: entries.length, entries }));
+    const wrongGuessMap = {};
+    games.forEach(g => {
+      if (!g.wrongGuesses) return;
+      g.wrongGuesses.split(',').forEach(w => {
+        const guess = w.trim().toUpperCase();
+        if (guess) wrongGuessMap[guess] = (wrongGuessMap[guess] || 0) + 1;
+      });
+    });
+    const topWrongGuesses = Object.entries(wrongGuessMap)
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .slice(0, 10)
+      .map(([guess, count]) => ({ guess, count }));
 
     const records = [
       {icon:'monetization_on', color:'text-yellow-400', label:'Biggest Single Pot', val:'$' + biggestPot.pot.toLocaleString(), sub: biggestPot.secretItem + ' · ' + biggestPot.date},
@@ -4241,6 +4263,7 @@ Rules:
       medalAvgs,
       redistStats,
       reusedClues,
+      topWrongGuesses,
       charts: {
         sortedByDate,
         timeLabels,
@@ -4525,6 +4548,16 @@ Rules:
               <div class="text-xs text-slate-500 mt-1 leading-relaxed">${entries.map(e => `${esc(e.game.secretItem)} (C${e.clueNum}) · ${esc(e.game.date)}`).join(' &nbsp;&middot;&nbsp; ')}</div>
             </li>`).join('')
         : '<li class="text-sm text-slate-400">No clue texts have been reused yet.</li>';
+    }
+    if (nodes.wrongGuesses) {
+      nodes.wrongGuesses.innerHTML = stats.topWrongGuesses.length
+        ? stats.topWrongGuesses.map(({ guess, count }, i) => `
+            <li class="flex items-center gap-3 border-b border-slate-800/60 pb-2 last:border-0">
+              <span class="text-xs font-bold text-slate-500 w-5 text-right shrink-0">${i + 1}</span>
+              <span class="text-sm font-bold text-white flex-1">${esc(guess)}</span>
+              <span class="shrink-0 text-xs font-bold text-red-300 bg-red-900/30 border border-red-400/20 px-2 py-0.5 rounded-full whitespace-nowrap">${count}×</span>
+            </li>`).join('')
+        : '<li class="text-sm text-slate-400">No wrong guess data available.</li>';
     }
     this._queueStatsCharts(stats);
     return;
