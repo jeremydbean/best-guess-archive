@@ -29953,5 +29953,222 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, May 12, 2026",
+    "host": "Hunter March",
+    "secretItems": ["BLACKJACK", "MARGARITA"],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "BLACKJACK",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "TOTALLY SUSPENSEFUL",
+          "BALANCING ACT THAT AFFECTS YOUR BALANCE",
+          "CAN DO THE SPLITS",
+          "SHOULD I STAY OR SHOULD I GO NOW?",
+          "AN ACE AND A FACE PUT YOU IN A GOOD PLACE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "MARGARITA",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v1",
+        "clues": [
+          "FEATURES EDGY MATERIAL",
+          "NAMESAKE OF A WASTEFUL CITY",
+          "SHOWS UP WHEN THE CHIPS ARE DOWN",
+          "CALL IN THE RELIEF PITCHER",
+          "THIS COCKTAIL'S SUBLIME WITH TEQUILA, TRIPLE SEC & LIME"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {"speaker": "Hunter March", "text": "Classic, where it's winner takes all."},
+          {"speaker": "Hunter March", "text": "If you like more winners, we got you covered."},
+          {"speaker": "Hunter March", "text": "If you like bigger prizes, we got you covered too."},
+          {"speaker": "Hunter March", "text": "If you like no winners and small prizes, you're in the wrong place."},
+          {"speaker": "Hunter March", "text": "You should go somewhere else."},
+          {"speaker": "Hunter March", "text": "And if you really like hearing me read the rules, well, you're in luck!"},
+          {"speaker": "Hunter March", "text": "No!"},
+          {"speaker": "Hunter March", "text": "I thought you guys liked more of the rules."},
+          {"speaker": "Hunter March", "text": "No no this is for them not for you."},
+          {"speaker": "Hunter March", "text": "Each episode of Best Guess Live has two rounds."},
+          {"speaker": "Hunter March", "text": "Each round has one puzzle."},
+          {"speaker": "Hunter March", "text": "Round one will be a tiered puzzle, which has three sets of winners: gold, silver, and bronze."},
+          {"speaker": "Hunter March", "text": "Before each round we're going to load our crystal ball with a secret item."},
+          {"speaker": "Hunter March", "text": "It could be anything!"},
+          {"speaker": "Hunter March", "text": "Then I'll give you five clues, but remember the clues are written like riddles; they're meant to make you think."},
+          {"speaker": "Hunter March", "text": "After each clue you'll get twenty seconds to submit an answer, but you only get one Best Guess per round—not one per clue—one per round!"},
+          {"speaker": "Hunter March", "text": "So make sure you're confident before you lock it in at half time!"},
+          {"speaker": "Hunter March", "text": "Be the exact answer, and we don't accept typos."},
+          {"speaker": "Hunter March", "text": "Bottom line, you want to be fast, but you have to be right."},
+          {"speaker": "Hunter March", "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars."},
+          {"speaker": "Hunter March", "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver prize of two thousand five hundred dollars, And everyone that gets it right on the third earliest clue will split the bronze pot of two thousand dollars."},
+          {"speaker": "Hunter March", "text": "So if you give a correct answer on one of the three earliest clues, you win."},
+          {"speaker": "Hunter March", "text": "And, if you are the only one to give a correct answer on one of those clues, you take the whole pot for that medal."},
+          {"speaker": "Hunter March", "text": "Enough talk, let's win some money!"}
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {"speaker": "Hunter March", "text": "All right, round one is worth seven thousand five hundred dollars."},
+          {"speaker": "Hunter March", "text": "Let us load the crystal ball."},
+          {"speaker": "Hunter March", "text": "Okay, I am rooting for you guys so much right now."},
+          {"speaker": "Hunter March", "text": "I want you to win!"},
+          {"speaker": "Hunter March", "text": "Okay, clue number one: totally suspenseful."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Totally suspenseful."},
+          {"speaker": "Hunter March", "text": "By the way, a lot of people were in suspense as to whether or not Gary, who I was rooting for the other night, would ever actually win an episode of Best Guess Live."},
+          {"speaker": "Hunter March", "text": "Well, I got good news for you."},
+          {"speaker": "Hunter March", "text": "Gary won!"},
+          {"speaker": "Hunter March", "text": "Ninety something cents!"},
+          {"speaker": "Hunter March", "text": "Don't worry about that part."},
+          {"speaker": "Hunter March", "text": "He won."},
+          {"speaker": "Hunter March", "text": "That's all that matters."},
+          {"speaker": "Hunter March", "text": "Time's up."},
+          {"speaker": "Hunter March", "text": "Okay, totally suspenseful."},
+          {"speaker": "Hunter March", "text": "Clue number two: Balancing act that affects your balance."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "I've been told I say balancing weird balance."},
+          {"speaker": "Hunter March", "text": "Do I say weird balance?"},
+          {"speaker": "Hunter March", "text": "I say like bia."},
+          {"speaker": "Hunter March", "text": "Well, now I'm doing it."},
+          {"speaker": "Hunter March", "text": "Now i'm doing it intentionally."},
+          {"speaker": "Hunter March", "text": "Balance."},
+          {"speaker": "Hunter March", "text": "You want to keep your balance."},
+          {"speaker": "Hunter March", "text": "That's a tricky path, okay?"},
+          {"speaker": "Hunter March", "text": "Two seconds left."},
+          {"speaker": "Hunter March", "text": "Time is up."},
+          {"speaker": "Hunter March", "text": "Balancing act that affects your balance, uh, \"Crafty cassia said tightrope.\""},
+          {"speaker": "Hunter March", "text": "Clue number three will enlighten us: Can do the splits!"},
+          {"speaker": "Hunter March", "text": "All right, twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Can do the splits!"},
+          {"speaker": "Hunter March", "text": "Time's up."},
+          {"speaker": "Hunter March", "text": "Okay, can do the splits."},
+          {"speaker": "Hunter March", "text": "Should I stay or should I go now?"},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Should I stay or should I go now?"},
+          {"speaker": "Hunter March", "text": "Don't think singing it is gonna necessarily affect anything."},
+          {"speaker": "Hunter March", "text": "Either way, I am not a great singer, so we'll hold off on that regardless."},
+          {"speaker": "Hunter March", "text": "Five seconds, three, two, one."},
+          {"speaker": "Hunter March", "text": "It's like I say to my legs all the time: \"Should I stay or should I go now?\""},
+          {"speaker": "Hunter March", "text": "Time's up!"},
+          {"speaker": "Hunter March", "text": "Your last clue, clue number five."},
+          {"speaker": "Hunter March", "text": "Good luck."},
+          {"speaker": "Hunter March", "text": "It's an ace and a face put you in a good place."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock, your final twenty seconds for this first puzzle start now."},
+          {"speaker": "Hunter March", "text": "An ace and a face put you in a good place."},
+          {"speaker": "Hunter March", "text": "Time's up!"},
+          {"speaker": "Hunter March", "text": "That's your five clues, your five chances to get a correct answer."},
+          {"speaker": "Hunter March", "text": "Let us find out what is inside the crystal ball!"},
+          {"speaker": "Hunter March", "text": "Correct answer was."},
+          {"speaker": "Hunter March", "text": "Blackjack!"}
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {"speaker": "Hunter March", "text": "Yes, blackjack."},
+          {"speaker": "Hunter March", "text": "Something I am not good at for some reason."},
+          {"speaker": "Hunter March", "text": "I can never win blackjack, but maybe some of you did."},
+          {"speaker": "Hunter March", "text": "Let's take a look at the clues and find out who's taking home the money."},
+          {"speaker": null, "text": "Clue 5: \"AN ACE AND A FACE PUT YOU IN A GOOD PLACE.\" An ace and a face card total twenty-one, which is the goal of the game. 2,937 got it right."},
+          {"speaker": null, "text": "Clue 4: \"SHOULD I STAY OR SHOULD I GO NOW?\" Players must decide whether to stay with their current cards or hit for another. 201 got it right."},
+          {"speaker": null, "text": "Clue 3: \"CAN DO THE SPLITS.\" Players can split their cards into two different hands in certain situations. 130 got it right."},
+          {"speaker": null, "text": "Clue 2: \"BALANCING ACT THAT AFFECTS YOUR BALANCE.\" Players balance card totals to reach twenty-one, which impacts their cash balance. 0 got it right."},
+          {"speaker": null, "text": "Clue 1: \"TOTALLY SUSPENSEFUL.\" The game involves suspense regarding your card total and the dealer's hand. 2 got it right."},
+          {"speaker": null, "text": "Gold (Clue 1): 2 winners at $1,500.00 each. Silver (Clue 3): 130 winners at $19.23 each. Bronze (Clue 4): 201 winners at $10.00 each."},
+          {"speaker": "Hunter March", "text": "TMM 130 and Fresh Kwo!"}
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {"speaker": "Hunter March", "text": "Uh, good job, good job everybody."},
+          {"speaker": "Hunter March", "text": "Let's go to round two which means we're switching things up."},
+          {"speaker": "Hunter March", "text": "We're playing Best Guess Live Classic."},
+          {"speaker": "Hunter March", "text": "Just like with our tiered puzzles you get five clues, 20 seconds and you can only guess once."},
+          {"speaker": "Hunter March", "text": "But in this round for those of you that are new winner takes all for $7500."},
+          {"speaker": "Hunter March", "text": "With that being said, Everyone who submits the correct answer on the earliest clue will split the entire prize pot."},
+          {"speaker": "Hunter March", "text": "If you're the only one to get it right on the earliest clue, the money is yours."},
+          {"speaker": "Hunter March", "text": "Round two, seven thousand five hundred dollars."},
+          {"speaker": "Hunter March", "text": "Let's load the crystal ball!"},
+          {"speaker": "Hunter March", "text": "All right."},
+          {"speaker": "Hunter March", "text": "Good luck everybody."},
+          {"speaker": "Hunter March", "text": "Seven thousand five hundred dollars on the line."},
+          {"speaker": "Hunter March", "text": "Here's your first clue: Features edgy material!"},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now!"},
+          {"speaker": "Hunter March", "text": "Features edgy material."},
+          {"speaker": "Hunter March", "text": "Time!"},
+          {"speaker": "Hunter March", "text": "Features edgy material."},
+          {"speaker": "Hunter March", "text": "Uh okay, let's go to clue number two."},
+          {"speaker": "Hunter March", "text": "Namesake of a wasteful city."},
+          {"speaker": "Hunter March", "text": "Twenty seconds starts now."},
+          {"speaker": "Hunter March", "text": "Namesake of a wasteful city we've got features edgy material."},
+          {"speaker": "Hunter March", "text": "Namesake of a wasteful city."},
+          {"speaker": "Hunter March", "text": "Clue number two: namesake of a wasteful city."},
+          {"speaker": "Hunter March", "text": "Time!"},
+          {"speaker": "Hunter March", "text": "Okay, clue number three: shows up when the chips are down."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Kind of reminds me of the first puzzle: features edgy material, namesake of a wasteful city: shows up when the chips are down."},
+          {"speaker": "Hunter March", "text": "Shows up when the chips."},
+          {"speaker": "Hunter March", "text": "Seven thousand five hundred dollars on the line."},
+          {"speaker": "Hunter March", "text": "Time!"},
+          {"speaker": "Hunter March", "text": "Clue number four: Call in the relief pitcher."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Features edgy material, namesake of a wasteful city shows up when the chips are down."},
+          {"speaker": "Hunter March", "text": "Call in the relief pitcher."},
+          {"speaker": "Hunter March", "text": "Three seconds left."},
+          {"speaker": "Hunter March", "text": "Time!"},
+          {"speaker": "Hunter March", "text": "Uh, call in the relief pitcher."},
+          {"speaker": "Hunter March", "text": "Clue number five, Your last clue for puzzle number two, a chance at seventy-five hundred dollars, relies on you."},
+          {"speaker": "Hunter March", "text": "This cocktail sublime with tequila, triple sec and lime."},
+          {"speaker": "Hunter March", "text": "Twenty seconds starts now."},
+          {"speaker": "Hunter March", "text": "Twenty seventy five hundred dollars on the line."},
+          {"speaker": "Hunter March", "text": "Time!"},
+          {"speaker": "Hunter March", "text": "Let us find out what was inside the crystal ball."},
+          {"speaker": "Hunter March", "text": "The correct answer was a margarita!"},
+          {"speaker": "Hunter March", "text": "Margarita!"}
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {"speaker": "Hunter March", "text": "Okay, it's a good good answer."},
+          {"speaker": "Hunter March", "text": "The question is did anyone find this good answer?"},
+          {"speaker": "Hunter March", "text": "Let's take a look at how the clues have been fighting, who's taking home the money?"},
+          {"speaker": null, "text": "Clue 5: \"THIS COCKTAIL'S SUBLIME WITH TEQUILA, TRIPLE SEC & LIME.\" These are the literal ingredients of a margarita cocktail. 4,890 got it right."},
+          {"speaker": null, "text": "Clue 4: \"CALL IN THE RELIEF PITCHER.\" Margaritas are often served in a pitcher and provide refreshing relief. 182 got it right."},
+          {"speaker": null, "text": "Clue 3: \"SHOWS UP WHEN THE CHIPS ARE DOWN.\" Margaritas are often served with chips and salsa. 3 got it right."},
+          {"speaker": null, "text": "Clue 2: \"NAMESAKE OF A WASTEFUL CITY.\" The song Margaritaville mentions wasting away again in the namesake city. 1 got it right."},
+          {"speaker": null, "text": "Clue 1: \"FEATURES EDGY MATERIAL.\" Margaritas often have a salt rim on the edge of the glass. 1 got it right."},
+          {"speaker": null, "text": "Classic mode (Clue 1): 1 winner at $7,500."},
+          {"speaker": "Speaker 2", "text": "Whoa D Blade, good on ya!"},
+          {"speaker": "Hunter March", "text": "I hope you enjoy riding your motorcycle home, D Blade, with that money."},
+          {"speaker": "Hunter March", "text": "D Blade eighty three"}
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {"speaker": "Hunter March", "text": "Anyway, that's it for this episode of Best Guess Live."},
+          {"speaker": "Hunter March", "text": "Congratulations specifically to D Blade."},
+          {"speaker": "Hunter March", "text": "We're here every weekday at eight Eastern five Pacific."},
+          {"speaker": "Hunter March", "text": "Come back tomorrow and don't forget to bring your best guess later, D Blade."},
+          {"speaker": null, "text": "Popular wrong guesses, Round 1: POKER, TIGHTROPE, TIGHT ROPE, GYMNASTICS, BALANCE BEAM."},
+          {"speaker": null, "text": "Popular wrong guesses, Round 2: LAS VEGAS, SIN CITY, VEGAS, KNIFE, POKER."}
+        ]
+      }
+    ]
   }
 ]

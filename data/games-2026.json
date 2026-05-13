@@ -10051,5 +10051,61 @@
     "winnerPayout": "$51.36",
     "winnerNames": "Doc H 1966, Dip 5196, Zach W 3131, Civil Shredder 936",
     "wrongGuesses": "ORANGE JUICE, OBVIOUS, YAWN, SECRET, OPINION"
+  },
+  {
+    "date": "Tuesday, May 12, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BLACKJACK",
+    "clues": [
+      {"number": 1, "text": "TOTALLY SUSPENSEFUL", "correct": "2", "guesses": "5,186 🥇", "explanation": "The game involves suspense regarding your card total and the dealer's hand."},
+      {"number": 2, "text": "BALANCING ACT THAT AFFECTS YOUR BALANCE", "correct": "0", "guesses": "7,998", "explanation": "Players balance card totals to reach twenty-one, which impacts their cash balance."},
+      {"number": 3, "text": "CAN DO THE SPLITS", "correct": "130", "guesses": "7,542 🥈", "explanation": "Players can split their cards into two different hands in certain situations."},
+      {"number": 4, "text": "SHOULD I STAY OR SHOULD I GO NOW?", "correct": "201", "guesses": "3,302 🥉", "explanation": "Players must decide whether to stay with their current cards or hit for another."},
+      {"number": 5, "text": "AN ACE AND A FACE PUT YOU IN A GOOD PLACE", "correct": "2,937", "guesses": "6,017", "explanation": "An ace and a face card total twenty-one, which is the goal of the game."}
+    ],
+    "goldClue": 1,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 2,
+    "silverWinners": 130,
+    "bronzeWinners": 201,
+    "totalWinners": 333,
+    "goldPayout": 1500.00,
+    "silverPayout": 19.23,
+    "bronzePayout": 9.95,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "TMM 130, Fresh Kwo!",
+    "wrongGuesses": "POKER, TIGHTROPE, TIGHT ROPE, GYMNASTICS, BALANCE BEAM"
+  },
+  {
+    "date": "Tuesday, May 12, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Hunter March",
+    "secretItem": "MARGARITA",
+    "clues": [
+      {"number": 1, "text": "FEATURES EDGY MATERIAL", "correct": "1", "guesses": "8,244 🥇", "explanation": "Margaritas often have a salt rim on the edge of the glass."},
+      {"number": 2, "text": "NAMESAKE OF A WASTEFUL CITY", "correct": "1", "guesses": "4,005", "explanation": "The song Margaritaville mentions wasting away again in the namesake city."},
+      {"number": 3, "text": "SHOWS UP WHEN THE CHIPS ARE DOWN", "correct": "3", "guesses": "6,083", "explanation": "Margaritas are often served with chips and salsa."},
+      {"number": 4, "text": "CALL IN THE RELIEF PITCHER", "correct": "182", "guesses": "3,197", "explanation": "Margaritas are often served in a pitcher and provide refreshing relief."},
+      {"number": 5, "text": "THIS COCKTAIL'S SUBLIME WITH TEQUILA, TRIPLE SEC & LIME", "correct": "4,890", "guesses": "6,963", "explanation": "These are the literal ingredients of a margarita cocktail."}
+    ],
+    "winningClue": 1,
+    "goldClue": 1,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 1,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 1,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "D Blade eighty three",
+    "wrongGuesses": "LAS VEGAS, SIN CITY, VEGAS, KNIFE, POKER"
   }
 ]
