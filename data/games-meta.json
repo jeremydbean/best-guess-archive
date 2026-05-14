@@ -2316,6 +2316,28 @@
       "totalWinners": 1,
       "clueCount": 5,
       "goldClue": 1
+    },
+    {
+      "date": "Thursday, May 14, 2026",
+      "secretItem": "DOG PARK",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 3821,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Thursday, May 14, 2026",
+      "secretItem": "POCKET",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v1",
+      "totalWinners": 1,
+      "clueCount": 5,
+      "goldClue": 1
     }
   ]
 }

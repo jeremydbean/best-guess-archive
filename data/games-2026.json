@@ -10107,5 +10107,63 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "D Blade eighty three",
     "wrongGuesses": "LAS VEGAS, SIN CITY, VEGAS, KNIFE, POKER"
+  },
+  {
+    "date": "Thursday, May 14, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "DOG PARK",
+    "clues": [
+      {"number": 1, "text": "WATCH YOUR STEP", "correct": "6", "guesses": "5,376 🥇", "explanation": "There are many things on the ground at a dog park that you do not want to step in."},
+      {"number": 2, "text": "THE GRASS ISN'T ALWAYS GREENER", "correct": "194", "guesses": "4,561 🥈", "explanation": "Dog parks are grassy areas where the grass often struggles to stay green."},
+      {"number": 3, "text": "SPOT TO SPOT SPOT", "correct": "3,621", "guesses": "10,313 🥉", "explanation": "Spot is a common name for a dog found at a dog park."},
+      {"number": 4, "text": "WHERE BOXERS EXERCISE AND LAB COATS GET DIRTY", "correct": "2,098", "guesses": "4,631", "explanation": "Boxers and Labs are dog breeds that exercise and get dirty at the park."},
+      {"number": 5, "text": "PLAY AREA WITH OODLES OF POODLES AND GOLDENDOODLES", "correct": "4,105", "guesses": "5,396", "explanation": "Poodles and Goldendoodles are popular dog breeds commonly seen at a dog park."}
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 6,
+    "silverWinners": 194,
+    "bronzeWinners": 3621,
+    "totalWinners": 3821,
+    "goldPayout": 500.00,
+    "silverPayout": 12.88,
+    "bronzePayout": 0.55,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Thumper, JJ Karate, Kit Caitlin, Fuzzy Wig Three One One, Kopaz Eclair Twenty Six",
+    "wrongGuesses": "DOG POOP, GYM, ESCALATOR, FITBIT, PARK",
+    "bonus": {"title": "Perfect Match", "desc": "Reality stars from the Netflix universe and beyond are in one villa trying to find their perfect match.<br><br>Season four kicks off tonight on Netflix."}
+  },
+  {
+    "date": "Thursday, May 14, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Howie Mandel",
+    "secretItem": "POCKET",
+    "clues": [
+      {"number": 1, "text": "OPEN TWENTY-FOUR SEVEN", "correct": "1", "guesses": "8,656 🥇", "explanation": "A pocket is always open even when clothes are not being worn."},
+      {"number": 2, "text": "TAKEOUT IS AN OPTION", "correct": "3", "guesses": "7,929", "explanation": "You have the option to take items out of your pocket."},
+      {"number": 3, "text": "LOVES HOLDING HANDS", "correct": "65", "guesses": "3,888", "explanation": "Pockets are comfortable places for people to put their hands."},
+      {"number": 4, "text": "THE STREET THIEF'S TOP PICK", "correct": "1,063", "guesses": "4,888", "explanation": "Pickpockets are street thieves who specifically target pockets."},
+      {"number": 5, "text": "POUCH ON YOUR CLOTHES WHERE YOUR PEN OR PHONE GOES", "correct": "4,561", "guesses": "5,303", "explanation": "Pockets are pouches in clothing used to store items like pens and phones."}
+    ],
+    "winningClue": 1,
+    "goldClue": 1,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 1,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 1,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Tenisha's gonna win",
+    "wrongGuesses": "711, GAS STATION, WALLET, ATM, CASINO",
+    "bonus": {"title": "Perfect Match", "desc": "Reality stars from the Netflix universe and beyond are in one villa trying to find their perfect match.<br><br>Season four kicks off tonight on Netflix."}
   }
 ]
