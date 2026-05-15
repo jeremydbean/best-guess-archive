@@ -2338,6 +2338,28 @@
       "totalWinners": 1,
       "clueCount": 5,
       "goldClue": 1
+    },
+    {
+      "date": "Thursday, May 14, 2026",
+      "secretItem": "A CALENDAR",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 319,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Thursday, May 14, 2026",
+      "secretItem": "A BOOMERANG",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v1",
+      "totalWinners": 560,
+      "clueCount": 5,
+      "goldClue": 1
     }
   ]
 }

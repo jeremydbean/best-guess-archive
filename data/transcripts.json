@@ -30424,5 +30424,173 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, May 14, 2026",
+    "host": "Hunter March",
+    "secretItems": ["A CALENDAR", "A BOOMERANG"],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "A CALENDAR",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "CONSISTENTLY IRREGULAR",
+          "SOLD BY THE DOZEN",
+          "LOVES TO HANG OUT FROM TIME TO TIME",
+          "YOUR DAYS ARE NUMBERED!",
+          "GIVES YOU A CHANCE TO SEE YOUR MONTH AT A GLANCE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "A BOOMERANG",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v1",
+        "clues": [
+          "ICONIC COMEBACK TOUR",
+          "A REVOLUTIONARY INVENTION",
+          "FROM DOWN UNDER TO UP ABOVE",
+          "RETURN TO SENDER",
+          "THROW IT AND IT FLIPS BACK AS A GNAREMOOB"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {"speaker": "Hunter March", "text": "Come on, everybody, we're live."},
+          {"speaker": "Hunter March", "text": "Get the party going on time."},
+          {"speaker": "Hunter March", "text": "Okay, anyway, I am your host Hunter March."},
+          {"speaker": "Hunter March", "text": "Yesterday, for those of you that tuned in, was a perfect example of why we love giving you two types of games."},
+          {"speaker": "Hunter March", "text": "In our first round with the tiered pricing, we had three thousand eight hundred and twenty one winners."},
+          {"speaker": "Hunter March", "text": "Congratulations!"},
+          {"speaker": "Hunter March", "text": "And then in our second round, our classic pricing one winner took home seven thousand five hundred dollars!"},
+          {"speaker": "Hunter March", "text": "Honestly, it was the best of both worlds: a lot of winners and one really big win."},
+          {"speaker": "Hunter March", "text": "And last night's big winner Tanisha gonna win earned that money the right way."},
+          {"speaker": "Hunter March", "text": "They previously played one hundred and sixty nine games."},
+          {"speaker": "Hunter March", "text": "And in that time have only won once before, and it was for fifty one cents."},
+          {"speaker": "Hunter March", "text": "So, they have technically won seven thousand five hundred and fifty-one cents playing this game."},
+          {"speaker": "Hunter March", "text": "Persistence pays off."},
+          {"speaker": "Hunter March", "text": "Congratulations again."},
+          {"speaker": "Hunter March", "text": "I hope we have the same kind of night tonight because we're serving up the combo platter yet again."},
+          {"speaker": "Hunter March", "text": "We're playing a tiered game in round one and then a classic one winner take all game in round two."},
+          {"speaker": "Hunter March", "text": "Each episode of Best Guess Live has two rounds."},
+          {"speaker": "Hunter March", "text": "Each round has one puzzle."},
+          {"speaker": "Hunter March", "text": "Round one will be a tiered puzzle which has three sets of winners: gold, silver, and bronze."},
+          {"speaker": "Hunter March", "text": "Before each round, we're going to load our crystal ball with a secret item."},
+          {"speaker": "Hunter March", "text": "It could be anything."},
+          {"speaker": "Hunter March", "text": "Then I'll give you five clues, but remember the clues are like riddles; they're meant to make you think."},
+          {"speaker": "Hunter March", "text": "After each clue you'll get twenty seconds to submit an answer, but you only get one best guess per round, not one per clue, one per round."},
+          {"speaker": "Hunter March", "text": "Make sure you're confident before you lock it in."},
+          {"speaker": "Hunter March", "text": "It has to be the exact answer, and we do not accept typos."},
+          {"speaker": "Hunter March", "text": "Bottom line, you want to be fast, but you have to be right."},
+          {"speaker": "Hunter March", "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars."},
+          {"speaker": "Hunter March", "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of two thousand five hundred."},
+          {"speaker": "Hunter March", "text": "And everyone that gets it on the third earliest clue will split the bronze pot of two thousand dollars."},
+          {"speaker": "Hunter March", "text": "So if you give a correct answer on one of those three earliest clues, you win."},
+          {"speaker": "Hunter March", "text": "And, if you are the only one to give a correct answer on one of those clues, you take the whole pot for that medal."}
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {"speaker": "Hunter March", "text": "Enough talk, let's win some money!"},
+          {"speaker": "Hunter March", "text": "Round one is worth seven thousand five hundred dollars."},
+          {"speaker": "Hunter March", "text": "Let us load the crystal ball."},
+          {"speaker": "Hunter March", "text": "Here is your first clue: consistently irregular."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Time's up."},
+          {"speaker": "Hunter March", "text": "Clue number two: sold by the dozen."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Clue number two: sold by the dozen."},
+          {"speaker": "Hunter March", "text": "Clue number three: loves to hang out from time to time."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Time's up."},
+          {"speaker": "Hunter March", "text": "Clue number three: loves to hang out from time to time."},
+          {"speaker": "Hunter March", "text": "Clue number four: your days are numbered."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Time's up."},
+          {"speaker": "Hunter March", "text": "Clue number four: your days are numbered."},
+          {"speaker": "Hunter March", "text": "One last chance to get in your guess."},
+          {"speaker": "Hunter March", "text": "Clue number five is gives you a chance to see your month at a glance."},
+          {"speaker": "Hunter March", "text": "Twenty seconds, your final twenty seconds for this first puzzle starts now."},
+          {"speaker": "Hunter March", "text": "Time's up."},
+          {"speaker": "Hunter March", "text": "Gives you a chance to see your month at a glance."}
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {"speaker": "Hunter March", "text": "Correct answer was: A calendar!"},
+          {"speaker": "Hunter March", "text": "The question is, did anyone get it right in time to take home some money?"},
+          {"speaker": null, "text": "Clue 5: \"GIVES YOU A CHANCE TO SEE YOUR MONTH AT A GLANCE.\" Calendars let you look ahead at your plans. 3,895 got it right."},
+          {"speaker": null, "text": "Clue 4: \"YOUR DAYS ARE NUMBERED!\" Calendars' days have numbers. 4,400 got it right."},
+          {"speaker": null, "text": "Clue 3: \"LOVES TO HANG OUT FROM TIME TO TIME.\" Calendars are often hung and are all about time. 257 got it right."},
+          {"speaker": null, "text": "Clue 2: \"SOLD BY THE DOZEN.\" There are twelve months in a calendar year. 43 got it right."},
+          {"speaker": null, "text": "Clue 1: \"CONSISTENTLY IRREGULAR.\" The dates fall on different days of the week from year to year. 19 got it right."},
+          {"speaker": null, "text": "Gold (Clue 1): 19 winners at $157.89 each. Silver (Clue 2): 43 winners at $58.13 each. Bronze (Clue 3): 257 winners at $7.78 each."},
+          {"speaker": "Hunter March", "text": "Congratulations to Hailstorm Seven, Zoe James, Trinchess, Remote Coach Eight Seven, Nine, Lily Bud and fourteen more people."},
+          {"speaker": "Hunter March", "text": "Congratulations, that's a lot of money."}
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {"speaker": "Hunter March", "text": "But again, as promised, we're playing a classic puzzle now for round number two."},
+          {"speaker": "Hunter March", "text": "But in this round, winner takes all."},
+          {"speaker": "Hunter March", "text": "So everyone who submits a correct answer on the earliest clue will split the entire prize pot."},
+          {"speaker": "Hunter March", "text": "Round two is worth seven thousand five hundred dollars."},
+          {"speaker": "Hunter March", "text": "Let us load the crystal ball."},
+          {"speaker": "Hunter March", "text": "Clue number one is iconic comeback tour, twenty seconds starts now."},
+          {"speaker": "Hunter March", "text": "Time is up."},
+          {"speaker": "Hunter March", "text": "Clue number one: iconic comeback tour."},
+          {"speaker": "Hunter March", "text": "Let's go to clue number two."},
+          {"speaker": "Hunter March", "text": "A revolutionary invention."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Time is up."},
+          {"speaker": "Hunter March", "text": "Clue number three: from down under to up above."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Time is up."},
+          {"speaker": "Hunter March", "text": "Clue number four: return to sender."},
+          {"speaker": "Hunter March", "text": "Twenty seconds starts now."},
+          {"speaker": "Hunter March", "text": "Time is up."},
+          {"speaker": "Hunter March", "text": "We got one more clue: throw it and it flips back as a naraboo."},
+          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
+          {"speaker": "Hunter March", "text": "Time's up."},
+          {"speaker": "Hunter March", "text": "Ladies and gentlemen, that's all five clues."}
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {"speaker": "Hunter March", "text": "The correct answer was: A boomerang!"},
+          {"speaker": "Hunter March", "text": "Let's take a look at how the clues fit and find out who's taking home the money."},
+          {"speaker": null, "text": "Clue 5: \"THROW IT AND IT FLIPS BACK AS A GNAREMOOB.\" A boomerang spelled backwards is a gnaremoob. 2,841 got it right."},
+          {"speaker": null, "text": "Clue 4: \"RETURN TO SENDER.\" Boomerangs come back to the person who threw them. 1,847 got it right."},
+          {"speaker": null, "text": "Clue 3: \"FROM DOWN UNDER TO UP ABOVE.\" Boomerangs are from Australia and can fly above your head. 1,918 got it right."},
+          {"speaker": null, "text": "Clue 2: \"A REVOLUTIONARY INVENTION.\" Boomerangs spin around rapidly. 1,776 got it right."},
+          {"speaker": null, "text": "Clue 1: \"ICONIC COMEBACK TOUR.\" Boomerangs come back to the thrower. 560 got it right."},
+          {"speaker": null, "text": "Classic mode (Clue 1): 560 winners at $13.39 each."},
+          {"speaker": "Hunter March", "text": "Miranda two three one nine, Rainbow Fox, Giovanni's mom, Babu friend, Glow Street and five hundred and fifty-five more of you."},
+          {"speaker": "Hunter March", "text": "Congratulations!"}
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {"speaker": "Hunter March", "text": "That's it for this episode of Best Guess Live."},
+          {"speaker": "Hunter March", "text": "We're here every weekday eight Eastern five Pacific."},
+          {"speaker": "Hunter March", "text": "Like a boomerang, come back tomorrow and don't forget to bring your best guess."},
+          {"speaker": "Hunter March", "text": "Bye bye."},
+          {"speaker": null, "text": "Popular wrong guesses, Round 1: EGGS, CLOCK, ROSES, WEATHER, MONTHS."},
+          {"speaker": null, "text": "Popular wrong guesses, Round 2: BACKSTREET BOYS, YOYO, MAIL, WHEEL, MICHAEL JACKSON."}
+        ]
+      }
+    ]
   }
 ]
