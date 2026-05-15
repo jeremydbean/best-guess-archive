@@ -10165,5 +10165,61 @@
     "winnerNames": "Tenisha's gonna win",
     "wrongGuesses": "711, GAS STATION, WALLET, ATM, CASINO",
     "bonus": {"title": "Perfect Match", "desc": "Reality stars from the Netflix universe and beyond are in one villa trying to find their perfect match.<br><br>Season four kicks off tonight on Netflix."}
+  },
+  {
+    "date": "Thursday, May 14, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "A CALENDAR",
+    "clues": [
+      {"number": 1, "text": "CONSISTENTLY IRREGULAR", "correct": "19", "guesses": "3,621 🥇", "explanation": "The dates fall on different days of the week from year to year."},
+      {"number": 2, "text": "SOLD BY THE DOZEN", "correct": "43", "guesses": "7,985 🥈", "explanation": "There are twelve months in a calendar year."},
+      {"number": 3, "text": "LOVES TO HANG OUT FROM TIME TO TIME", "correct": "257", "guesses": "6,119 🥉", "explanation": "Calendars are often hung and are all about time."},
+      {"number": 4, "text": "YOUR DAYS ARE NUMBERED!", "correct": "4,400", "guesses": "7,255", "explanation": "Calendars' days have numbers."},
+      {"number": 5, "text": "GIVES YOU A CHANCE TO SEE YOUR MONTH AT A GLANCE", "correct": "3,895", "guesses": "4,806", "explanation": "Calendars let you look ahead at your plans."}
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 19,
+    "silverWinners": 43,
+    "bronzeWinners": 257,
+    "totalWinners": 319,
+    "goldPayout": 157.89,
+    "silverPayout": 58.13,
+    "bronzePayout": 7.78,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Hailstorm Seven, Zoe James, Trinchess, Remote Coach Eight Seven, Nine, Lily Bud",
+    "wrongGuesses": "EGGS, CLOCK, ROSES, WEATHER, MONTHS"
+  },
+  {
+    "date": "Thursday, May 14, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Hunter March",
+    "secretItem": "A BOOMERANG",
+    "clues": [
+      {"number": 1, "text": "ICONIC COMEBACK TOUR", "correct": "560", "guesses": "6,915 🥇", "explanation": "Boomerangs come back to the thrower."},
+      {"number": 2, "text": "A REVOLUTIONARY INVENTION", "correct": "1,776", "guesses": "7,109", "explanation": "Boomerangs spin around rapidly."},
+      {"number": 3, "text": "FROM DOWN UNDER TO UP ABOVE", "correct": "1,918", "guesses": "6,336", "explanation": "Boomerangs are from Australia and can fly above your head."},
+      {"number": 4, "text": "RETURN TO SENDER", "correct": "1,847", "guesses": "4,922", "explanation": "Boomerangs come back to the person who threw them."},
+      {"number": 5, "text": "THROW IT AND IT FLIPS BACK AS A GNAREMOOB", "correct": "2,841", "guesses": "3,644", "explanation": "A boomerang spelled backwards is a gnaremoob."}
+    ],
+    "winningClue": 1,
+    "goldClue": 1,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 560,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 560,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$13.39",
+    "winnerNames": "Miranda two three one nine, Rainbow Fox, Giovanni's mom, Babu friend, Glow Street",
+    "wrongGuesses": "BACKSTREET BOYS, YOYO, MAIL, WHEEL, MICHAEL JACKSON"
   }
 ]
