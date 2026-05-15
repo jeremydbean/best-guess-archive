@@ -10171,7 +10171,7 @@
     "pot": 7500,
     "format": "v2",
     "host": "Hunter March",
-    "secretItem": "A CALENDAR",
+    "secretItem": "CALENDAR",
     "clues": [
       {"number": 1, "text": "CONSISTENTLY IRREGULAR", "correct": "19", "guesses": "3,621 🥇", "explanation": "The dates fall on different days of the week from year to year."},
       {"number": 2, "text": "SOLD BY THE DOZEN", "correct": "43", "guesses": "7,985 🥈", "explanation": "There are twelve months in a calendar year."},
@@ -10198,7 +10198,7 @@
     "pot": 7500,
     "format": "v1",
     "host": "Hunter March",
-    "secretItem": "A BOOMERANG",
+    "secretItem": "BOOMERANG",
     "clues": [
       {"number": 1, "text": "ICONIC COMEBACK TOUR", "correct": "560", "guesses": "6,915 🥇", "explanation": "Boomerangs come back to the thrower."},
       {"number": 2, "text": "A REVOLUTIONARY INVENTION", "correct": "1,776", "guesses": "7,109", "explanation": "Boomerangs spin around rapidly."},

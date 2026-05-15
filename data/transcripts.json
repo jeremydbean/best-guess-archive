@@ -30428,11 +30428,11 @@
   {
     "date": "Thursday, May 14, 2026",
     "host": "Hunter March",
-    "secretItems": ["A CALENDAR", "A BOOMERANG"],
+    "secretItems": ["CALENDAR", "BOOMERANG"],
     "rounds": [
       {
         "round": 1,
-        "secretItem": "A CALENDAR",
+        "secretItem": "CALENDAR",
         "host": "Hunter March",
         "pot": 7500,
         "format": "v2",
@@ -30446,7 +30446,7 @@
       },
       {
         "round": 2,
-        "secretItem": "A BOOMERANG",
+        "secretItem": "BOOMERANG",
         "host": "Hunter March",
         "pot": 7500,
         "format": "v1",
