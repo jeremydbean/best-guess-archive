@@ -10059,11 +10059,41 @@
     "host": "Hunter March",
     "secretItem": "BLACKJACK",
     "clues": [
-      {"number": 1, "text": "TOTALLY SUSPENSEFUL", "correct": "2", "guesses": "5,186 🥇", "explanation": "The game involves suspense regarding your card total and the dealer's hand."},
-      {"number": 2, "text": "BALANCING ACT THAT AFFECTS YOUR BALANCE", "correct": "0", "guesses": "7,998", "explanation": "Players balance card totals to reach twenty-one, which impacts their cash balance."},
-      {"number": 3, "text": "CAN DO THE SPLITS", "correct": "130", "guesses": "7,542 🥈", "explanation": "Players can split their cards into two different hands in certain situations."},
-      {"number": 4, "text": "SHOULD I STAY OR SHOULD I GO NOW?", "correct": "201", "guesses": "3,302 🥉", "explanation": "Players must decide whether to stay with their current cards or hit for another."},
-      {"number": 5, "text": "AN ACE AND A FACE PUT YOU IN A GOOD PLACE", "correct": "2,937", "guesses": "6,017", "explanation": "An ace and a face card total twenty-one, which is the goal of the game."}
+      {
+        "number": 1,
+        "text": "TOTALLY SUSPENSEFUL",
+        "correct": "2",
+        "guesses": "5,186 🥇",
+        "explanation": "The game involves suspense regarding your card total and the dealer's hand."
+      },
+      {
+        "number": 2,
+        "text": "BALANCING ACT THAT AFFECTS YOUR BALANCE",
+        "correct": "0",
+        "guesses": "7,998",
+        "explanation": "Players balance card totals to reach twenty-one, which impacts their cash balance."
+      },
+      {
+        "number": 3,
+        "text": "CAN DO THE SPLITS",
+        "correct": "130",
+        "guesses": "7,542 🥈",
+        "explanation": "Players can split their cards into two different hands in certain situations."
+      },
+      {
+        "number": 4,
+        "text": "SHOULD I STAY OR SHOULD I GO NOW?",
+        "correct": "201",
+        "guesses": "3,302 🥉",
+        "explanation": "Players must decide whether to stay with their current cards or hit for another."
+      },
+      {
+        "number": 5,
+        "text": "AN ACE AND A FACE PUT YOU IN A GOOD PLACE",
+        "correct": "2,937",
+        "guesses": "6,017",
+        "explanation": "An ace and a face card total twenty-one, which is the goal of the game."
+      }
     ],
     "goldClue": 1,
     "silverClue": 3,
@@ -10072,7 +10102,7 @@
     "silverWinners": 130,
     "bronzeWinners": 201,
     "totalWinners": 333,
-    "goldPayout": 1500.00,
+    "goldPayout": 1500.0,
     "silverPayout": 19.23,
     "bronzePayout": 9.95,
     "winnerPayout": "$7,500.00",
@@ -10086,11 +10116,41 @@
     "host": "Hunter March",
     "secretItem": "MARGARITA",
     "clues": [
-      {"number": 1, "text": "FEATURES EDGY MATERIAL", "correct": "1", "guesses": "8,244 🥇", "explanation": "Margaritas often have a salt rim on the edge of the glass."},
-      {"number": 2, "text": "NAMESAKE OF A WASTEFUL CITY", "correct": "1", "guesses": "4,005", "explanation": "The song Margaritaville mentions wasting away again in the namesake city."},
-      {"number": 3, "text": "SHOWS UP WHEN THE CHIPS ARE DOWN", "correct": "3", "guesses": "6,083", "explanation": "Margaritas are often served with chips and salsa."},
-      {"number": 4, "text": "CALL IN THE RELIEF PITCHER", "correct": "182", "guesses": "3,197", "explanation": "Margaritas are often served in a pitcher and provide refreshing relief."},
-      {"number": 5, "text": "THIS COCKTAIL'S SUBLIME WITH TEQUILA, TRIPLE SEC & LIME", "correct": "4,890", "guesses": "6,963", "explanation": "These are the literal ingredients of a margarita cocktail."}
+      {
+        "number": 1,
+        "text": "FEATURES EDGY MATERIAL",
+        "correct": "1",
+        "guesses": "8,244 🥇",
+        "explanation": "Margaritas often have a salt rim on the edge of the glass."
+      },
+      {
+        "number": 2,
+        "text": "NAMESAKE OF A WASTEFUL CITY",
+        "correct": "1",
+        "guesses": "4,005",
+        "explanation": "The song Margaritaville mentions wasting away again in the namesake city."
+      },
+      {
+        "number": 3,
+        "text": "SHOWS UP WHEN THE CHIPS ARE DOWN",
+        "correct": "3",
+        "guesses": "6,083",
+        "explanation": "Margaritas are often served with chips and salsa."
+      },
+      {
+        "number": 4,
+        "text": "CALL IN THE RELIEF PITCHER",
+        "correct": "182",
+        "guesses": "3,197",
+        "explanation": "Margaritas are often served in a pitcher and provide refreshing relief."
+      },
+      {
+        "number": 5,
+        "text": "THIS COCKTAIL'S SUBLIME WITH TEQUILA, TRIPLE SEC & LIME",
+        "correct": "4,890",
+        "guesses": "6,963",
+        "explanation": "These are the literal ingredients of a margarita cocktail."
+      }
     ],
     "winningClue": 1,
     "goldClue": 1,
@@ -10115,11 +10175,41 @@
     "host": "Howie Mandel",
     "secretItem": "DOG PARK",
     "clues": [
-      {"number": 1, "text": "WATCH YOUR STEP", "correct": "6", "guesses": "5,376 🥇", "explanation": "There are many things on the ground at a dog park that you do not want to step in."},
-      {"number": 2, "text": "THE GRASS ISN'T ALWAYS GREENER", "correct": "194", "guesses": "4,561 🥈", "explanation": "Dog parks are grassy areas where the grass often struggles to stay green."},
-      {"number": 3, "text": "SPOT TO SPOT SPOT", "correct": "3,621", "guesses": "10,313 🥉", "explanation": "Spot is a common name for a dog found at a dog park."},
-      {"number": 4, "text": "WHERE BOXERS EXERCISE AND LAB COATS GET DIRTY", "correct": "2,098", "guesses": "4,631", "explanation": "Boxers and Labs are dog breeds that exercise and get dirty at the park."},
-      {"number": 5, "text": "PLAY AREA WITH OODLES OF POODLES AND GOLDENDOODLES", "correct": "4,105", "guesses": "5,396", "explanation": "Poodles and Goldendoodles are popular dog breeds commonly seen at a dog park."}
+      {
+        "number": 1,
+        "text": "WATCH YOUR STEP",
+        "correct": "6",
+        "guesses": "5,376 🥇",
+        "explanation": "There are many things on the ground at a dog park that you do not want to step in."
+      },
+      {
+        "number": 2,
+        "text": "THE GRASS ISN'T ALWAYS GREENER",
+        "correct": "194",
+        "guesses": "4,561 🥈",
+        "explanation": "Dog parks are grassy areas where the grass often struggles to stay green."
+      },
+      {
+        "number": 3,
+        "text": "SPOT TO SPOT SPOT",
+        "correct": "3,621",
+        "guesses": "10,313 🥉",
+        "explanation": "Spot is a common name for a dog found at a dog park."
+      },
+      {
+        "number": 4,
+        "text": "WHERE BOXERS EXERCISE AND LAB COATS GET DIRTY",
+        "correct": "2,098",
+        "guesses": "4,631",
+        "explanation": "Boxers and Labs are dog breeds that exercise and get dirty at the park."
+      },
+      {
+        "number": 5,
+        "text": "PLAY AREA WITH OODLES OF POODLES AND GOLDENDOODLES",
+        "correct": "4,105",
+        "guesses": "5,396",
+        "explanation": "Poodles and Goldendoodles are popular dog breeds commonly seen at a dog park."
+      }
     ],
     "goldClue": 1,
     "silverClue": 2,
@@ -10128,13 +10218,16 @@
     "silverWinners": 194,
     "bronzeWinners": 3621,
     "totalWinners": 3821,
-    "goldPayout": 500.00,
+    "goldPayout": 500.0,
     "silverPayout": 12.88,
     "bronzePayout": 0.55,
     "winnerPayout": "$7,500.00",
     "winnerNames": "Thumper, JJ Karate, Kit Caitlin, Fuzzy Wig Three One One, Kopaz Eclair Twenty Six",
     "wrongGuesses": "DOG POOP, GYM, ESCALATOR, FITBIT, PARK",
-    "bonus": {"title": "Perfect Match", "desc": "Reality stars from the Netflix universe and beyond are in one villa trying to find their perfect match.<br><br>Season four kicks off tonight on Netflix."}
+    "bonus": {
+      "title": "Perfect Match",
+      "desc": "Reality stars from the Netflix universe and beyond are in one villa trying to find their perfect match.<br><br>Season four kicks off tonight on Netflix."
+    }
   },
   {
     "date": "Wednesday, May 13, 2026",
@@ -10143,11 +10236,41 @@
     "host": "Howie Mandel",
     "secretItem": "POCKET",
     "clues": [
-      {"number": 1, "text": "OPEN TWENTY-FOUR SEVEN", "correct": "1", "guesses": "8,656 🥇", "explanation": "A pocket is always open even when clothes are not being worn."},
-      {"number": 2, "text": "TAKEOUT IS AN OPTION", "correct": "3", "guesses": "7,929", "explanation": "You have the option to take items out of your pocket."},
-      {"number": 3, "text": "LOVES HOLDING HANDS", "correct": "65", "guesses": "3,888", "explanation": "Pockets are comfortable places for people to put their hands."},
-      {"number": 4, "text": "THE STREET THIEF'S TOP PICK", "correct": "1,063", "guesses": "4,888", "explanation": "Pickpockets are street thieves who specifically target pockets."},
-      {"number": 5, "text": "POUCH ON YOUR CLOTHES WHERE YOUR PEN OR PHONE GOES", "correct": "4,561", "guesses": "5,303", "explanation": "Pockets are pouches in clothing used to store items like pens and phones."}
+      {
+        "number": 1,
+        "text": "OPEN TWENTY-FOUR SEVEN",
+        "correct": "1",
+        "guesses": "8,656 🥇",
+        "explanation": "A pocket is always open even when clothes are not being worn."
+      },
+      {
+        "number": 2,
+        "text": "TAKEOUT IS AN OPTION",
+        "correct": "3",
+        "guesses": "7,929",
+        "explanation": "You have the option to take items out of your pocket."
+      },
+      {
+        "number": 3,
+        "text": "LOVES HOLDING HANDS",
+        "correct": "65",
+        "guesses": "3,888",
+        "explanation": "Pockets are comfortable places for people to put their hands."
+      },
+      {
+        "number": 4,
+        "text": "THE STREET THIEF'S TOP PICK",
+        "correct": "1,063",
+        "guesses": "4,888",
+        "explanation": "Pickpockets are street thieves who specifically target pockets."
+      },
+      {
+        "number": 5,
+        "text": "POUCH ON YOUR CLOTHES WHERE YOUR PEN OR PHONE GOES",
+        "correct": "4,561",
+        "guesses": "5,303",
+        "explanation": "Pockets are pouches in clothing used to store items like pens and phones."
+      }
     ],
     "winningClue": 1,
     "goldClue": 1,
@@ -10164,7 +10287,10 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Tenisha's gonna win",
     "wrongGuesses": "711, GAS STATION, WALLET, ATM, CASINO",
-    "bonus": {"title": "Perfect Match", "desc": "Reality stars from the Netflix universe and beyond are in one villa trying to find their perfect match.<br><br>Season four kicks off tonight on Netflix."}
+    "bonus": {
+      "title": "Perfect Match",
+      "desc": "Reality stars from the Netflix universe and beyond are in one villa trying to find their perfect match.<br><br>Season four kicks off tonight on Netflix."
+    }
   },
   {
     "date": "Thursday, May 14, 2026",
@@ -10173,11 +10299,41 @@
     "host": "Hunter March",
     "secretItem": "CALENDAR",
     "clues": [
-      {"number": 1, "text": "CONSISTENTLY IRREGULAR", "correct": "19", "guesses": "3,621 🥇", "explanation": "The dates fall on different days of the week from year to year."},
-      {"number": 2, "text": "SOLD BY THE DOZEN", "correct": "43", "guesses": "7,985 🥈", "explanation": "There are twelve months in a calendar year."},
-      {"number": 3, "text": "LOVES TO HANG OUT FROM TIME TO TIME", "correct": "257", "guesses": "6,119 🥉", "explanation": "Calendars are often hung and are all about time."},
-      {"number": 4, "text": "YOUR DAYS ARE NUMBERED!", "correct": "4,400", "guesses": "7,255", "explanation": "Calendars' days have numbers."},
-      {"number": 5, "text": "GIVES YOU A CHANCE TO SEE YOUR MONTH AT A GLANCE", "correct": "3,895", "guesses": "4,806", "explanation": "Calendars let you look ahead at your plans."}
+      {
+        "number": 1,
+        "text": "CONSISTENTLY IRREGULAR",
+        "correct": "19",
+        "guesses": "3,621 🥇",
+        "explanation": "The dates fall on different days of the week from year to year."
+      },
+      {
+        "number": 2,
+        "text": "SOLD BY THE DOZEN",
+        "correct": "43",
+        "guesses": "7,985 🥈",
+        "explanation": "There are twelve months in a calendar year."
+      },
+      {
+        "number": 3,
+        "text": "LOVES TO HANG OUT FROM TIME TO TIME",
+        "correct": "257",
+        "guesses": "6,119 🥉",
+        "explanation": "Calendars are often hung and are all about time."
+      },
+      {
+        "number": 4,
+        "text": "YOUR DAYS ARE NUMBERED!",
+        "correct": "4,400",
+        "guesses": "7,255",
+        "explanation": "Calendars' days have numbers."
+      },
+      {
+        "number": 5,
+        "text": "GIVES YOU A CHANCE TO SEE YOUR MONTH AT A GLANCE",
+        "correct": "3,895",
+        "guesses": "4,806",
+        "explanation": "Calendars let you look ahead at your plans."
+      }
     ],
     "goldClue": 1,
     "silverClue": 2,
@@ -10200,11 +10356,41 @@
     "host": "Hunter March",
     "secretItem": "BOOMERANG",
     "clues": [
-      {"number": 1, "text": "ICONIC COMEBACK TOUR", "correct": "560", "guesses": "6,915 🥇", "explanation": "Boomerangs come back to the thrower."},
-      {"number": 2, "text": "A REVOLUTIONARY INVENTION", "correct": "1,776", "guesses": "7,109", "explanation": "Boomerangs spin around rapidly."},
-      {"number": 3, "text": "FROM DOWN UNDER TO UP ABOVE", "correct": "1,918", "guesses": "6,336", "explanation": "Boomerangs are from Australia and can fly above your head."},
-      {"number": 4, "text": "RETURN TO SENDER", "correct": "1,847", "guesses": "4,922", "explanation": "Boomerangs come back to the person who threw them."},
-      {"number": 5, "text": "THROW IT AND IT FLIPS BACK AS A GNAREMOOB", "correct": "2,841", "guesses": "3,644", "explanation": "A boomerang spelled backwards is a gnaremoob."}
+      {
+        "number": 1,
+        "text": "ICONIC COMEBACK TOUR",
+        "correct": "560",
+        "guesses": "6,915 🥇",
+        "explanation": "Boomerangs come back to the thrower."
+      },
+      {
+        "number": 2,
+        "text": "A REVOLUTIONARY INVENTION",
+        "correct": "1,776",
+        "guesses": "7,109",
+        "explanation": "Boomerangs spin around rapidly."
+      },
+      {
+        "number": 3,
+        "text": "FROM DOWN UNDER TO UP ABOVE",
+        "correct": "1,918",
+        "guesses": "6,336",
+        "explanation": "Boomerangs are from Australia and can fly above your head."
+      },
+      {
+        "number": 4,
+        "text": "RETURN TO SENDER",
+        "correct": "1,847",
+        "guesses": "4,922",
+        "explanation": "Boomerangs come back to the person who threw them."
+      },
+      {
+        "number": 5,
+        "text": "THROW IT AND IT FLIPS BACK AS A GNAREMOOB",
+        "correct": "2,841",
+        "guesses": "3,644",
+        "explanation": "A boomerang spelled backwards is a gnaremoob."
+      }
     ],
     "winningClue": 1,
     "goldClue": 1,
@@ -10221,5 +10407,129 @@
     "winnerPayout": "$13.39",
     "winnerNames": "Miranda two three one nine, Rainbow Fox, Giovanni's mom, Babu friend, Glow Street",
     "wrongGuesses": "BACKSTREET BOYS, YOYO, MAIL, WHEEL, MICHAEL JACKSON"
+  },
+  {
+    "date": "Friday, May 15, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TETRIS",
+    "clues": [
+      {
+        "number": 1,
+        "text": "DROP EVERYTHING",
+        "correct": "14",
+        "guesses": "3,260 🥇",
+        "explanation": "Pieces fall from the top to the bottom so everything drops."
+      },
+      {
+        "number": 2,
+        "text": "ALWAYS FAILING UPWARD",
+        "correct": "30",
+        "guesses": "4,656 🥈",
+        "explanation": "The closer a player gets to the top of the board, the closer they are to losing."
+      },
+      {
+        "number": 3,
+        "text": "ADD TO SUBTRACT",
+        "correct": "83",
+        "guesses": "5,295 🥉",
+        "explanation": "Filling a row completely clears and subtracts that row from the board."
+      },
+      {
+        "number": 4,
+        "text": "YOU HAVE TO TAKE AN L TO DO WELL",
+        "correct": "151",
+        "guesses": "3,563",
+        "explanation": "There are many L-shaped blocks that fall during the game."
+      },
+      {
+        "number": 5,
+        "text": "BLOCKS FALL AND MINGLE TO A CATCHY RUSSIAN JINGLE",
+        "correct": "3,201",
+        "guesses": "6,345",
+        "explanation": "The game was invented in Russia and has an iconic jingle."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 14,
+    "silverWinners": 30,
+    "bronzeWinners": 83,
+    "totalWinners": 127,
+    "goldPayout": 214.28,
+    "silverPayout": 83.33,
+    "bronzePayout": 24.09,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "King Nar, I Parker, Dilly Dally, Radder Two",
+    "wrongGuesses": "GRAVITY, JENGA, GOLF, ELEVATOR, FIRE",
+    "bonus": {
+      "title": "Ronda Rousey vs. Gina Carano",
+      "desc": "Live from the Intuit Dome in Los Angeles, Netflix's first ever live MMA event. Main card starts at 9 PM Eastern / 6 PM Pacific tomorrow night."
+    }
+  },
+  {
+    "date": "Friday, May 15, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Hunter March",
+    "secretItem": "VACATION",
+    "clues": [
+      {
+        "number": 1,
+        "text": "TAKE IT AWAY",
+        "correct": "16",
+        "guesses": "5,740 🥇",
+        "explanation": "Most people take their vacation away from home."
+      },
+      {
+        "number": 2,
+        "text": "A BOOK WE ALL LOVE",
+        "correct": "87",
+        "guesses": "4,565",
+        "explanation": "Everyone loves to book a vacation."
+      },
+      {
+        "number": 3,
+        "text": "GOING OUT OF BUSINESS",
+        "correct": "162",
+        "guesses": "4,751",
+        "explanation": "You leave business behind when going on vacation."
+      },
+      {
+        "number": 4,
+        "text": "O YOU HAVE TO REARRANGE THE VATICAN",
+        "correct": "656",
+        "guesses": "3,232",
+        "explanation": "The word vacation is an anagram of Vatican plus the letter O."
+      },
+      {
+        "number": 5,
+        "text": "A BREAK FROM THE GRIND WHERE YOU CAN UNWIND",
+        "correct": "2,264",
+        "guesses": "4,838",
+        "explanation": "A vacation is a relaxing time away from work."
+      }
+    ],
+    "winningClue": 1,
+    "goldClue": 1,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 16,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 16,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$468.75",
+    "winnerNames": "Katie3313, Alexander Taylor, Antidodo, Bizarre Bobcat two sixty seven, Nitwit Nincompoop",
+    "wrongGuesses": "BIBLE, CHECKBOOK, FACEBOOK, THE BIBLE, GARBAGE",
+    "bonus": {
+      "title": "Ronda Rousey vs. Gina Carano",
+      "desc": "Live from the Intuit Dome in Los Angeles, Netflix's first ever live MMA event. Main card starts at 9 PM Eastern / 6 PM Pacific tomorrow night."
+    }
   }
 ]

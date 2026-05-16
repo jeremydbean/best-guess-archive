@@ -29957,7 +29957,10 @@
   {
     "date": "Tuesday, May 12, 2026",
     "host": "Hunter March",
-    "secretItems": ["BLACKJACK", "MARGARITA"],
+    "secretItems": [
+      "BLACKJACK",
+      "MARGARITA"
+    ],
     "rounds": [
       {
         "round": 1,
@@ -29992,181 +29995,631 @@
       {
         "tag": "Intro",
         "lines": [
-          {"speaker": "Hunter March", "text": "Classic, where it's winner takes all."},
-          {"speaker": "Hunter March", "text": "If you like more winners, we got you covered."},
-          {"speaker": "Hunter March", "text": "If you like bigger prizes, we got you covered too."},
-          {"speaker": "Hunter March", "text": "If you like no winners and small prizes, you're in the wrong place."},
-          {"speaker": "Hunter March", "text": "You should go somewhere else."},
-          {"speaker": "Hunter March", "text": "And if you really like hearing me read the rules, well, you're in luck!"},
-          {"speaker": "Hunter March", "text": "No!"},
-          {"speaker": "Hunter March", "text": "I thought you guys liked more of the rules."},
-          {"speaker": "Hunter March", "text": "No no this is for them not for you."},
-          {"speaker": "Hunter March", "text": "Each episode of Best Guess Live has two rounds."},
-          {"speaker": "Hunter March", "text": "Each round has one puzzle."},
-          {"speaker": "Hunter March", "text": "Round one will be a tiered puzzle, which has three sets of winners: gold, silver, and bronze."},
-          {"speaker": "Hunter March", "text": "Before each round we're going to load our crystal ball with a secret item."},
-          {"speaker": "Hunter March", "text": "It could be anything!"},
-          {"speaker": "Hunter March", "text": "Then I'll give you five clues, but remember the clues are written like riddles; they're meant to make you think."},
-          {"speaker": "Hunter March", "text": "After each clue you'll get twenty seconds to submit an answer, but you only get one Best Guess per round—not one per clue—one per round!"},
-          {"speaker": "Hunter March", "text": "So make sure you're confident before you lock it in at half time!"},
-          {"speaker": "Hunter March", "text": "Be the exact answer, and we don't accept typos."},
-          {"speaker": "Hunter March", "text": "Bottom line, you want to be fast, but you have to be right."},
-          {"speaker": "Hunter March", "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars."},
-          {"speaker": "Hunter March", "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver prize of two thousand five hundred dollars, And everyone that gets it right on the third earliest clue will split the bronze pot of two thousand dollars."},
-          {"speaker": "Hunter March", "text": "So if you give a correct answer on one of the three earliest clues, you win."},
-          {"speaker": "Hunter March", "text": "And, if you are the only one to give a correct answer on one of those clues, you take the whole pot for that medal."},
-          {"speaker": "Hunter March", "text": "Enough talk, let's win some money!"}
+          {
+            "speaker": "Hunter March",
+            "text": "Classic, where it's winner takes all."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you like more winners, we got you covered."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you like bigger prizes, we got you covered too."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you like no winners and small prizes, you're in the wrong place."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You should go somewhere else."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And if you really like hearing me read the rules, well, you're in luck!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I thought you guys liked more of the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No no this is for them not for you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one will be a tiered puzzle, which has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round we're going to load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It could be anything!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues, but remember the clues are written like riddles; they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue you'll get twenty seconds to submit an answer, but you only get one Best Guess per round—not one per clue—one per round!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So make sure you're confident before you lock it in at half time!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Be the exact answer, and we don't accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver prize of two thousand five hundred dollars, And everyone that gets it right on the third earliest clue will split the bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So if you give a correct answer on one of the three earliest clues, you win."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And, if you are the only one to give a correct answer on one of those clues, you take the whole pot for that medal."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk, let's win some money!"
+          }
         ]
       },
       {
         "tag": "Round 1",
         "lines": [
-          {"speaker": "Hunter March", "text": "All right, round one is worth seven thousand five hundred dollars."},
-          {"speaker": "Hunter March", "text": "Let us load the crystal ball."},
-          {"speaker": "Hunter March", "text": "Okay, I am rooting for you guys so much right now."},
-          {"speaker": "Hunter March", "text": "I want you to win!"},
-          {"speaker": "Hunter March", "text": "Okay, clue number one: totally suspenseful."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Totally suspenseful."},
-          {"speaker": "Hunter March", "text": "By the way, a lot of people were in suspense as to whether or not Gary, who I was rooting for the other night, would ever actually win an episode of Best Guess Live."},
-          {"speaker": "Hunter March", "text": "Well, I got good news for you."},
-          {"speaker": "Hunter March", "text": "Gary won!"},
-          {"speaker": "Hunter March", "text": "Ninety something cents!"},
-          {"speaker": "Hunter March", "text": "Don't worry about that part."},
-          {"speaker": "Hunter March", "text": "He won."},
-          {"speaker": "Hunter March", "text": "That's all that matters."},
-          {"speaker": "Hunter March", "text": "Time's up."},
-          {"speaker": "Hunter March", "text": "Okay, totally suspenseful."},
-          {"speaker": "Hunter March", "text": "Clue number two: Balancing act that affects your balance."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "I've been told I say balancing weird balance."},
-          {"speaker": "Hunter March", "text": "Do I say weird balance?"},
-          {"speaker": "Hunter March", "text": "I say like bia."},
-          {"speaker": "Hunter March", "text": "Well, now I'm doing it."},
-          {"speaker": "Hunter March", "text": "Now i'm doing it intentionally."},
-          {"speaker": "Hunter March", "text": "Balance."},
-          {"speaker": "Hunter March", "text": "You want to keep your balance."},
-          {"speaker": "Hunter March", "text": "That's a tricky path, okay?"},
-          {"speaker": "Hunter March", "text": "Two seconds left."},
-          {"speaker": "Hunter March", "text": "Time is up."},
-          {"speaker": "Hunter March", "text": "Balancing act that affects your balance, uh, \"Crafty cassia said tightrope.\""},
-          {"speaker": "Hunter March", "text": "Clue number three will enlighten us: Can do the splits!"},
-          {"speaker": "Hunter March", "text": "All right, twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Can do the splits!"},
-          {"speaker": "Hunter March", "text": "Time's up."},
-          {"speaker": "Hunter March", "text": "Okay, can do the splits."},
-          {"speaker": "Hunter March", "text": "Should I stay or should I go now?"},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Should I stay or should I go now?"},
-          {"speaker": "Hunter March", "text": "Don't think singing it is gonna necessarily affect anything."},
-          {"speaker": "Hunter March", "text": "Either way, I am not a great singer, so we'll hold off on that regardless."},
-          {"speaker": "Hunter March", "text": "Five seconds, three, two, one."},
-          {"speaker": "Hunter March", "text": "It's like I say to my legs all the time: \"Should I stay or should I go now?\""},
-          {"speaker": "Hunter March", "text": "Time's up!"},
-          {"speaker": "Hunter March", "text": "Your last clue, clue number five."},
-          {"speaker": "Hunter March", "text": "Good luck."},
-          {"speaker": "Hunter March", "text": "It's an ace and a face put you in a good place."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock, your final twenty seconds for this first puzzle start now."},
-          {"speaker": "Hunter March", "text": "An ace and a face put you in a good place."},
-          {"speaker": "Hunter March", "text": "Time's up!"},
-          {"speaker": "Hunter March", "text": "That's your five clues, your five chances to get a correct answer."},
-          {"speaker": "Hunter March", "text": "Let us find out what is inside the crystal ball!"},
-          {"speaker": "Hunter March", "text": "Correct answer was."},
-          {"speaker": "Hunter March", "text": "Blackjack!"}
+          {
+            "speaker": "Hunter March",
+            "text": "All right, round one is worth seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let us load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, I am rooting for you guys so much right now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I want you to win!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, clue number one: totally suspenseful."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Totally suspenseful."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, a lot of people were in suspense as to whether or not Gary, who I was rooting for the other night, would ever actually win an episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well, I got good news for you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gary won!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ninety something cents!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't worry about that part."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "He won."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's all that matters."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, totally suspenseful."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: Balancing act that affects your balance."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I've been told I say balancing weird balance."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Do I say weird balance?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I say like bia."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well, now I'm doing it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now i'm doing it intentionally."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Balance."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You want to keep your balance."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a tricky path, okay?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Two seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Balancing act that affects your balance, uh, \"Crafty cassia said tightrope.\""
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three will enlighten us: Can do the splits!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Can do the splits!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, can do the splits."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Should I stay or should I go now?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Should I stay or should I go now?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't think singing it is gonna necessarily affect anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Either way, I am not a great singer, so we'll hold off on that regardless."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Five seconds, three, two, one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's like I say to my legs all the time: \"Should I stay or should I go now?\""
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Your last clue, clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good luck."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's an ace and a face put you in a good place."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock, your final twenty seconds for this first puzzle start now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "An ace and a face put you in a good place."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's your five clues, your five chances to get a correct answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let us find out what is inside the crystal ball!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answer was."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Blackjack!"
+          }
         ]
       },
       {
         "tag": "Round 1 Results",
         "lines": [
-          {"speaker": "Hunter March", "text": "Yes, blackjack."},
-          {"speaker": "Hunter March", "text": "Something I am not good at for some reason."},
-          {"speaker": "Hunter March", "text": "I can never win blackjack, but maybe some of you did."},
-          {"speaker": "Hunter March", "text": "Let's take a look at the clues and find out who's taking home the money."},
-          {"speaker": null, "text": "Clue 5: \"AN ACE AND A FACE PUT YOU IN A GOOD PLACE.\" An ace and a face card total twenty-one, which is the goal of the game. 2,937 got it right."},
-          {"speaker": null, "text": "Clue 4: \"SHOULD I STAY OR SHOULD I GO NOW?\" Players must decide whether to stay with their current cards or hit for another. 201 got it right."},
-          {"speaker": null, "text": "Clue 3: \"CAN DO THE SPLITS.\" Players can split their cards into two different hands in certain situations. 130 got it right."},
-          {"speaker": null, "text": "Clue 2: \"BALANCING ACT THAT AFFECTS YOUR BALANCE.\" Players balance card totals to reach twenty-one, which impacts their cash balance. 0 got it right."},
-          {"speaker": null, "text": "Clue 1: \"TOTALLY SUSPENSEFUL.\" The game involves suspense regarding your card total and the dealer's hand. 2 got it right."},
-          {"speaker": null, "text": "Gold (Clue 1): 2 winners at $1,500.00 each. Silver (Clue 3): 130 winners at $19.23 each. Bronze (Clue 4): 201 winners at $10.00 each."},
-          {"speaker": "Hunter March", "text": "TMM 130 and Fresh Kwo!"}
+          {
+            "speaker": "Hunter March",
+            "text": "Yes, blackjack."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Something I am not good at for some reason."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I can never win blackjack, but maybe some of you did."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at the clues and find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"AN ACE AND A FACE PUT YOU IN A GOOD PLACE.\" An ace and a face card total twenty-one, which is the goal of the game. 2,937 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"SHOULD I STAY OR SHOULD I GO NOW?\" Players must decide whether to stay with their current cards or hit for another. 201 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"CAN DO THE SPLITS.\" Players can split their cards into two different hands in certain situations. 130 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"BALANCING ACT THAT AFFECTS YOUR BALANCE.\" Players balance card totals to reach twenty-one, which impacts their cash balance. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"TOTALLY SUSPENSEFUL.\" The game involves suspense regarding your card total and the dealer's hand. 2 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 2 winners at $1,500.00 each. Silver (Clue 3): 130 winners at $19.23 each. Bronze (Clue 4): 201 winners at $10.00 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "TMM 130 and Fresh Kwo!"
+          }
         ]
       },
       {
         "tag": "Round 2",
         "lines": [
-          {"speaker": "Hunter March", "text": "Uh, good job, good job everybody."},
-          {"speaker": "Hunter March", "text": "Let's go to round two which means we're switching things up."},
-          {"speaker": "Hunter March", "text": "We're playing Best Guess Live Classic."},
-          {"speaker": "Hunter March", "text": "Just like with our tiered puzzles you get five clues, 20 seconds and you can only guess once."},
-          {"speaker": "Hunter March", "text": "But in this round for those of you that are new winner takes all for $7500."},
-          {"speaker": "Hunter March", "text": "With that being said, Everyone who submits the correct answer on the earliest clue will split the entire prize pot."},
-          {"speaker": "Hunter March", "text": "If you're the only one to get it right on the earliest clue, the money is yours."},
-          {"speaker": "Hunter March", "text": "Round two, seven thousand five hundred dollars."},
-          {"speaker": "Hunter March", "text": "Let's load the crystal ball!"},
-          {"speaker": "Hunter March", "text": "All right."},
-          {"speaker": "Hunter March", "text": "Good luck everybody."},
-          {"speaker": "Hunter March", "text": "Seven thousand five hundred dollars on the line."},
-          {"speaker": "Hunter March", "text": "Here's your first clue: Features edgy material!"},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now!"},
-          {"speaker": "Hunter March", "text": "Features edgy material."},
-          {"speaker": "Hunter March", "text": "Time!"},
-          {"speaker": "Hunter March", "text": "Features edgy material."},
-          {"speaker": "Hunter March", "text": "Uh okay, let's go to clue number two."},
-          {"speaker": "Hunter March", "text": "Namesake of a wasteful city."},
-          {"speaker": "Hunter March", "text": "Twenty seconds starts now."},
-          {"speaker": "Hunter March", "text": "Namesake of a wasteful city we've got features edgy material."},
-          {"speaker": "Hunter March", "text": "Namesake of a wasteful city."},
-          {"speaker": "Hunter March", "text": "Clue number two: namesake of a wasteful city."},
-          {"speaker": "Hunter March", "text": "Time!"},
-          {"speaker": "Hunter March", "text": "Okay, clue number three: shows up when the chips are down."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Kind of reminds me of the first puzzle: features edgy material, namesake of a wasteful city: shows up when the chips are down."},
-          {"speaker": "Hunter March", "text": "Shows up when the chips."},
-          {"speaker": "Hunter March", "text": "Seven thousand five hundred dollars on the line."},
-          {"speaker": "Hunter March", "text": "Time!"},
-          {"speaker": "Hunter March", "text": "Clue number four: Call in the relief pitcher."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Features edgy material, namesake of a wasteful city shows up when the chips are down."},
-          {"speaker": "Hunter March", "text": "Call in the relief pitcher."},
-          {"speaker": "Hunter March", "text": "Three seconds left."},
-          {"speaker": "Hunter March", "text": "Time!"},
-          {"speaker": "Hunter March", "text": "Uh, call in the relief pitcher."},
-          {"speaker": "Hunter March", "text": "Clue number five, Your last clue for puzzle number two, a chance at seventy-five hundred dollars, relies on you."},
-          {"speaker": "Hunter March", "text": "This cocktail sublime with tequila, triple sec and lime."},
-          {"speaker": "Hunter March", "text": "Twenty seconds starts now."},
-          {"speaker": "Hunter March", "text": "Twenty seventy five hundred dollars on the line."},
-          {"speaker": "Hunter March", "text": "Time!"},
-          {"speaker": "Hunter March", "text": "Let us find out what was inside the crystal ball."},
-          {"speaker": "Hunter March", "text": "The correct answer was a margarita!"},
-          {"speaker": "Hunter March", "text": "Margarita!"}
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, good job, good job everybody."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to round two which means we're switching things up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're playing Best Guess Live Classic."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Just like with our tiered puzzles you get five clues, 20 seconds and you can only guess once."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But in this round for those of you that are new winner takes all for $7500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "With that being said, Everyone who submits the correct answer on the earliest clue will split the entire prize pot."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you're the only one to get it right on the earliest clue, the money is yours."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round two, seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good luck everybody."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Seven thousand five hundred dollars on the line."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here's your first clue: Features edgy material!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Features edgy material."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Features edgy material."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh okay, let's go to clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Namesake of a wasteful city."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Namesake of a wasteful city we've got features edgy material."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Namesake of a wasteful city."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: namesake of a wasteful city."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, clue number three: shows up when the chips are down."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Kind of reminds me of the first puzzle: features edgy material, namesake of a wasteful city: shows up when the chips are down."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Shows up when the chips."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Seven thousand five hundred dollars on the line."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: Call in the relief pitcher."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Features edgy material, namesake of a wasteful city shows up when the chips are down."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Call in the relief pitcher."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Three seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, call in the relief pitcher."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five, Your last clue for puzzle number two, a chance at seventy-five hundred dollars, relies on you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This cocktail sublime with tequila, triple sec and lime."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seventy five hundred dollars on the line."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let us find out what was inside the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was a margarita!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Margarita!"
+          }
         ]
       },
       {
         "tag": "Round 2 Results",
         "lines": [
-          {"speaker": "Hunter March", "text": "Okay, it's a good good answer."},
-          {"speaker": "Hunter March", "text": "The question is did anyone find this good answer?"},
-          {"speaker": "Hunter March", "text": "Let's take a look at how the clues have been fighting, who's taking home the money?"},
-          {"speaker": null, "text": "Clue 5: \"THIS COCKTAIL'S SUBLIME WITH TEQUILA, TRIPLE SEC & LIME.\" These are the literal ingredients of a margarita cocktail. 4,890 got it right."},
-          {"speaker": null, "text": "Clue 4: \"CALL IN THE RELIEF PITCHER.\" Margaritas are often served in a pitcher and provide refreshing relief. 182 got it right."},
-          {"speaker": null, "text": "Clue 3: \"SHOWS UP WHEN THE CHIPS ARE DOWN.\" Margaritas are often served with chips and salsa. 3 got it right."},
-          {"speaker": null, "text": "Clue 2: \"NAMESAKE OF A WASTEFUL CITY.\" The song Margaritaville mentions wasting away again in the namesake city. 1 got it right."},
-          {"speaker": null, "text": "Clue 1: \"FEATURES EDGY MATERIAL.\" Margaritas often have a salt rim on the edge of the glass. 1 got it right."},
-          {"speaker": null, "text": "Classic mode (Clue 1): 1 winner at $7,500."},
-          {"speaker": "Speaker 2", "text": "Whoa D Blade, good on ya!"},
-          {"speaker": "Hunter March", "text": "I hope you enjoy riding your motorcycle home, D Blade, with that money."},
-          {"speaker": "Hunter March", "text": "D Blade eighty three"}
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, it's a good good answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The question is did anyone find this good answer?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues have been fighting, who's taking home the money?"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"THIS COCKTAIL'S SUBLIME WITH TEQUILA, TRIPLE SEC & LIME.\" These are the literal ingredients of a margarita cocktail. 4,890 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"CALL IN THE RELIEF PITCHER.\" Margaritas are often served in a pitcher and provide refreshing relief. 182 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"SHOWS UP WHEN THE CHIPS ARE DOWN.\" Margaritas are often served with chips and salsa. 3 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"NAMESAKE OF A WASTEFUL CITY.\" The song Margaritaville mentions wasting away again in the namesake city. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"FEATURES EDGY MATERIAL.\" Margaritas often have a salt rim on the edge of the glass. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Classic mode (Clue 1): 1 winner at $7,500."
+          },
+          {
+            "speaker": "Speaker 2",
+            "text": "Whoa D Blade, good on ya!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I hope you enjoy riding your motorcycle home, D Blade, with that money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "D Blade eighty three"
+          }
         ]
       },
       {
         "tag": "Outro",
         "lines": [
-          {"speaker": "Hunter March", "text": "Anyway, that's it for this episode of Best Guess Live."},
-          {"speaker": "Hunter March", "text": "Congratulations specifically to D Blade."},
-          {"speaker": "Hunter March", "text": "We're here every weekday at eight Eastern five Pacific."},
-          {"speaker": "Hunter March", "text": "Come back tomorrow and don't forget to bring your best guess later, D Blade."},
-          {"speaker": null, "text": "Popular wrong guesses, Round 1: POKER, TIGHTROPE, TIGHT ROPE, GYMNASTICS, BALANCE BEAM."},
-          {"speaker": null, "text": "Popular wrong guesses, Round 2: LAS VEGAS, SIN CITY, VEGAS, KNIFE, POKER."}
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, that's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations specifically to D Blade."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're here every weekday at eight Eastern five Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow and don't forget to bring your best guess later, D Blade."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: POKER, TIGHTROPE, TIGHT ROPE, GYMNASTICS, BALANCE BEAM."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: LAS VEGAS, SIN CITY, VEGAS, KNIFE, POKER."
+          }
         ]
       }
     ]
@@ -30174,7 +30627,10 @@
   {
     "date": "Wednesday, May 13, 2026",
     "host": "Howie Mandel",
-    "secretItems": ["DOG PARK", "POCKET"],
+    "secretItems": [
+      "DOG PARK",
+      "POCKET"
+    ],
     "rounds": [
       {
         "round": 1,
@@ -30209,218 +30665,779 @@
       {
         "tag": "Intro",
         "lines": [
-          {"speaker": "Howie Mandel", "text": "Welcome to Best Guests Live."},
-          {"speaker": "Howie Mandel", "text": "I'm your host Howie Mandel."},
-          {"speaker": "Howie Mandel", "text": "Thank you."},
-          {"speaker": "Howie Mandel", "text": "A lot of first-timers here."},
-          {"speaker": "Howie Mandel", "text": "Big Body eighty, Regina T one twenty six, and High Def thirty first time players."},
-          {"speaker": "Howie Mandel", "text": "And I think they're going to be long time players."},
-          {"speaker": "Howie Mandel", "text": "You know, I host a lot of shows, and often somebody loses."},
-          {"speaker": "Howie Mandel", "text": "They open the wrong briefcase or they don't make it to the next round."},
-          {"speaker": "Howie Mandel", "text": "That's heartbreaking."},
-          {"speaker": "Howie Mandel", "text": "But this show, this show is the opposite."},
-          {"speaker": "Howie Mandel", "text": "Every single night, a bunch of people leave with more money than they had when they showed up."},
-          {"speaker": "Howie Mandel", "text": "There is no eliminations."},
-          {"speaker": "Howie Mandel", "text": "No sad music."},
-          {"speaker": "Howie Mandel", "text": "They just win."},
-          {"speaker": "Howie Mandel", "text": "That's just one reason why this job is so fun."},
-          {"speaker": "Howie Mandel", "text": "Here is one more, I am giving away fifteen thousand dollars people, and here are the rules."},
-          {"speaker": "Howie Mandel", "text": "Each episode of Best Guess Live has two rounds."},
-          {"speaker": "Howie Mandel", "text": "Each round has one puzzle, and today we're giving you the combo platter."},
-          {"speaker": "Howie Mandel", "text": "Brent doesn't like the combo platter, but I love it."},
-          {"speaker": "Howie Mandel", "text": "We brought back our Classic puzzle for round two, where the entire seventy five hundred goes to only those who answer correctly on the earliest clue."},
-          {"speaker": "Howie Mandel", "text": "But first, round one will be the tiered puzzle which has three sets of winners: gold, silver and bronze like the Olympics."},
-          {"speaker": "Howie Mandel", "text": "Before each round, we're going to load our crystal ball with a secret item."},
-          {"speaker": "Howie Mandel", "text": "It could be absolutely anything that ball fits everything."},
-          {"speaker": "Howie Mandel", "text": "One ball fits all."},
-          {"speaker": "Howie Mandel", "text": "Then I'll give you five clues."},
-          {"speaker": "Howie Mandel", "text": "But remember, the clues are like riddles; they're meant to make you think."},
-          {"speaker": "Howie Mandel", "text": "So after each clue, you're gonna get 20 seconds to submit an answer, but you only get one best guess per round."},
-          {"speaker": "Howie Mandel", "text": "Did you hear me?"},
-          {"speaker": "Howie Mandel", "text": "Not one per clue, one per round people."},
-          {"speaker": "Howie Mandel", "text": "So make sure you're confident before you lock it in."},
-          {"speaker": "Howie Mandel", "text": "It's gotta be the exact answer and we're not gonna accept typos."},
-          {"speaker": "Howie Mandel", "text": "Bottom line, you wanna be fast, but you gotta be right."},
-          {"speaker": "Howie Mandel", "text": "Everyone that locks in the correct answer on the earliest clue will split the gold prize pot of three thousand dollars!"},
-          {"speaker": "Howie Mandel", "text": "I want applause not yeah!"},
-          {"speaker": "Howie Mandel", "text": "Alright, alright, that's enough."},
-          {"speaker": "Howie Mandel", "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of twenty five hundred dollars."},
-          {"speaker": "Howie Mandel", "text": "And everyone that gets it in the third earliest clue will split the bronze pot of two thousand dollars."},
-          {"speaker": "Howie Mandel", "text": "So, if you give the correct answer on one of the three earliest clues you win."},
-          {"speaker": "Howie Mandel", "text": "And, if you're the only one to give a correct answer on one of those clues, you take the whole pot for that medal."},
-          {"speaker": "Howie Mandel", "text": "Enough talk."},
-          {"speaker": "Howie Mandel", "text": "Let's win some money."}
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guests Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm your host Howie Mandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thank you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A lot of first-timers here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Big Body eighty, Regina T one twenty six, and High Def thirty first time players."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And I think they're going to be long time players."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know, I host a lot of shows, and often somebody loses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They open the wrong briefcase or they don't make it to the next round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's heartbreaking."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But this show, this show is the opposite."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Every single night, a bunch of people leave with more money than they had when they showed up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There is no eliminations."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No sad music."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They just win."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's just one reason why this job is so fun."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is one more, I am giving away fifteen thousand dollars people, and here are the rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each round has one puzzle, and today we're giving you the combo platter."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Brent doesn't like the combo platter, but I love it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We brought back our Classic puzzle for round two, where the entire seventy five hundred goes to only those who answer correctly on the earliest clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But first, round one will be the tiered puzzle which has three sets of winners: gold, silver and bronze like the Olympics."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, we're going to load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It could be absolutely anything that ball fits everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One ball fits all."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Then I'll give you five clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But remember, the clues are like riddles; they're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So after each clue, you're gonna get 20 seconds to submit an answer, but you only get one best guess per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did you hear me?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not one per clue, one per round people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's gotta be the exact answer and we're not gonna accept typos."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bottom line, you wanna be fast, but you gotta be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in the correct answer on the earliest clue will split the gold prize pot of three thousand dollars!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I want applause not yeah!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright, alright, that's enough."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of twenty five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it in the third earliest clue will split the bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So, if you give the correct answer on one of the three earliest clues you win."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And, if you're the only one to give a correct answer on one of those clues, you take the whole pot for that medal."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough talk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's win some money."
+          }
         ]
       },
       {
         "tag": "Round 1",
         "lines": [
-          {"speaker": "Howie Mandel", "text": "Round one, seven thousand five hundred dollars."},
-          {"speaker": "Howie Mandel", "text": "Neil, load this ball!"},
-          {"speaker": "Howie Mandel", "text": "There we go."},
-          {"speaker": "Howie Mandel", "text": "I love that."},
-          {"speaker": "Howie Mandel", "text": "You're watching it but I can actually feel the heat."},
-          {"speaker": "Howie Mandel", "text": "That's why it lights up like that."},
-          {"speaker": "Howie Mandel", "text": "Here's your first clue: Watch your step!"},
-          {"speaker": "Howie Mandel", "text": "And the clock starts now!"},
-          {"speaker": "Howie Mandel", "text": "I'm putting twenty seconds on that clock."},
-          {"speaker": "Howie Mandel", "text": "We have a lot more first-time players than usual."},
-          {"speaker": "Howie Mandel", "text": "People are catching on to this thing."},
-          {"speaker": "Howie Mandel", "text": "I love that."},
-          {"speaker": "Howie Mandel", "text": "Big Bang Boom said \"Dirty Dancing.\""},
-          {"speaker": "Howie Mandel", "text": "Watch your step?"},
-          {"speaker": "Howie Mandel", "text": "Horrid put twenty eight said the subway."},
-          {"speaker": "Howie Mandel", "text": "You want to watch your step; you could fall into the tracks."},
-          {"speaker": "Howie Mandel", "text": "Here is your second clue: The grass isn't always greener, and the clock starts now; twenty seconds on that clock."},
-          {"speaker": "Howie Mandel", "text": "The grass isn't always greener."},
-          {"speaker": "Howie Mandel", "text": "Time is up."},
-          {"speaker": "Howie Mandel", "text": "Twenty five people submitted a guess on the second clue."},
-          {"speaker": "Howie Mandel", "text": "Hayat Tori said fall."},
-          {"speaker": "Howie Mandel", "text": "Frothy Mothie four sixty three said Kentucky."},
-          {"speaker": "Howie Mandel", "text": "Here is your third clue: spot to spot spot."},
-          {"speaker": "Howie Mandel", "text": "The clock starts now."},
-          {"speaker": "Howie Mandel", "text": "Watch your step."},
-          {"speaker": "Howie Mandel", "text": "The grass isn't always greener."},
-          {"speaker": "Howie Mandel", "text": "Spot to spot Spot, spot."},
-          {"speaker": "Howie Mandel", "text": "Ten seconds left on the clock."},
-          {"speaker": "Howie Mandel", "text": "Seventy-five hundred dollars."},
-          {"speaker": "Howie Mandel", "text": "\"Wax on, wax off\" said Spotify."},
-          {"speaker": "Howie Mandel", "text": "Here is your fourth clue: where boxers exercise and lab coats get dirty."},
-          {"speaker": "Howie Mandel", "text": "The clock starts now."},
-          {"speaker": "Howie Mandel", "text": "Clue one: watch your step."},
-          {"speaker": "Howie Mandel", "text": "The second one: the grass isn't always greener."},
-          {"speaker": "Howie Mandel", "text": "Clue three: spot to spot, spot."},
-          {"speaker": "Howie Mandel", "text": "Boxers exercise and lab coats get dirty."},
-          {"speaker": "Howie Mandel", "text": "Scary Harry seventy-five said \"Einstein's gym.\""},
-          {"speaker": "Howie Mandel", "text": "All right, fifth clue."},
-          {"speaker": "Howie Mandel", "text": "Play area with oodles of poodles and golden doodles."},
-          {"speaker": "Howie Mandel", "text": "Clock starts now."},
-          {"speaker": "Howie Mandel", "text": "Watch your step, grass isn't always greener."},
-          {"speaker": "Howie Mandel", "text": "Spot to spot, spot where boxers exercise and lab coats get dirty."},
-          {"speaker": "Howie Mandel", "text": "And your final clue with two seconds left on the clock was play area with oodles of poodles and golden doodles."}
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one, seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, load this ball!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There we go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You're watching it but I can actually feel the heat."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's why it lights up like that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your first clue: Watch your step!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm putting twenty seconds on that clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We have a lot more first-time players than usual."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "People are catching on to this thing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Big Bang Boom said \"Dirty Dancing.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Watch your step?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Horrid put twenty eight said the subway."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You want to watch your step; you could fall into the tracks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your second clue: The grass isn't always greener, and the clock starts now; twenty seconds on that clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The grass isn't always greener."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Twenty five people submitted a guess on the second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hayat Tori said fall."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Frothy Mothie four sixty three said Kentucky."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your third clue: spot to spot spot."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Watch your step."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The grass isn't always greener."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Spot to spot Spot, spot."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ten seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Seventy-five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "\"Wax on, wax off\" said Spotify."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your fourth clue: where boxers exercise and lab coats get dirty."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue one: watch your step."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The second one: the grass isn't always greener."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue three: spot to spot, spot."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Boxers exercise and lab coats get dirty."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Scary Harry seventy-five said \"Einstein's gym.\""
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, fifth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Play area with oodles of poodles and golden doodles."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Watch your step, grass isn't always greener."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Spot to spot, spot where boxers exercise and lab coats get dirty."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And your final clue with two seconds left on the clock was play area with oodles of poodles and golden doodles."
+          }
         ]
       },
       {
         "tag": "Round 1 Results",
         "lines": [
-          {"speaker": "Howie Mandel", "text": "Want to find out what is in the crystal ball?"},
-          {"speaker": "Howie Mandel", "text": "Neil, open the ball, please."},
-          {"speaker": "Howie Mandel", "text": "It is a dog park."},
-          {"speaker": "Howie Mandel", "text": "A dog park."},
-          {"speaker": "Howie Mandel", "text": "Anyway, let's take a look at how the clues fit and find out who is taking the money."},
-          {"speaker": null, "text": "Clue 5: \"PLAY AREA WITH OODLES OF POODLES AND GOLDENDOODLES.\" Poodles and Goldendoodles are popular dog breeds commonly seen at a dog park. 4,105 got it right."},
-          {"speaker": null, "text": "Clue 4: \"WHERE BOXERS EXERCISE AND LAB COATS GET DIRTY.\" Boxers and Labs are dog breeds that exercise and get dirty at the park. 2,098 got it right."},
-          {"speaker": null, "text": "Clue 3: \"SPOT TO SPOT SPOT.\" Spot is a common name for a dog found at a dog park. 3,621 got it right."},
-          {"speaker": null, "text": "Clue 2: \"THE GRASS ISN'T ALWAYS GREENER.\" Dog parks are grassy areas where the grass often struggles to stay green. 194 got it right."},
-          {"speaker": null, "text": "Clue 1: \"WATCH YOUR STEP.\" There are many things on the ground at a dog park that you do not want to step in. 6 got it right."},
-          {"speaker": null, "text": "Gold (Clue 1): 6 winners at $500.00 each. Silver (Clue 2): 194 winners at $12.88 each. Bronze (Clue 3): 3,621 winners at $0.55 each."},
-          {"speaker": "Howie Mandel", "text": "Six of you got the gold."},
-          {"speaker": "Howie Mandel", "text": "Six of you are splitting five hundred dollars each."},
-          {"speaker": "Howie Mandel", "text": "One hundred and ninety four of you got the silver, and you're each getting twelve dollars and eighty eight cents."},
-          {"speaker": "Howie Mandel", "text": "And the bronze went to three thousand six hundred twenty one of you, each of you are getting fifty five cents."},
-          {"speaker": "Howie Mandel", "text": "Some of our gold guessers were Thumper, JJ Karate, Kit Caitlin, Fuzzy Wig Three One One, Kopaz Eclair Twenty Six."},
-          {"speaker": "Howie Mandel", "text": "Congratulations to all the winners on this first puzzle."}
+          {
+            "speaker": "Howie Mandel",
+            "text": "Want to find out what is in the crystal ball?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, open the ball, please."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is a dog park."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A dog park."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"PLAY AREA WITH OODLES OF POODLES AND GOLDENDOODLES.\" Poodles and Goldendoodles are popular dog breeds commonly seen at a dog park. 4,105 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"WHERE BOXERS EXERCISE AND LAB COATS GET DIRTY.\" Boxers and Labs are dog breeds that exercise and get dirty at the park. 2,098 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"SPOT TO SPOT SPOT.\" Spot is a common name for a dog found at a dog park. 3,621 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"THE GRASS ISN'T ALWAYS GREENER.\" Dog parks are grassy areas where the grass often struggles to stay green. 194 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"WATCH YOUR STEP.\" There are many things on the ground at a dog park that you do not want to step in. 6 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 6 winners at $500.00 each. Silver (Clue 2): 194 winners at $12.88 each. Bronze (Clue 3): 3,621 winners at $0.55 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Six of you got the gold."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Six of you are splitting five hundred dollars each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One hundred and ninety four of you got the silver, and you're each getting twelve dollars and eighty eight cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the bronze went to three thousand six hundred twenty one of you, each of you are getting fifty five cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Some of our gold guessers were Thumper, JJ Karate, Kit Caitlin, Fuzzy Wig Three One One, Kopaz Eclair Twenty Six."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to all the winners on this first puzzle."
+          }
         ]
       },
       {
         "tag": "Round 2",
         "lines": [
-          {"speaker": "Howie Mandel", "text": "Before we get to round two, a quick word about a show I am told."},
-          {"speaker": "Howie Mandel", "text": "I am not the host of Perfect Match!"},
-          {"speaker": "Howie Mandel", "text": "The name of the show is back with season four kicking off tonight right here on Netflix."},
-          {"speaker": "Howie Mandel", "text": "Reality stars from the Netflix universe and beyond, all in one villa, trying to find the perfect match."},
-          {"speaker": "Howie Mandel", "text": "The title kind of gives that away."},
-          {"speaker": "Howie Mandel", "text": "Duh!"},
-          {"speaker": "Howie Mandel", "text": "It's a really fun show."},
-          {"speaker": "Howie Mandel", "text": "In this season, the producers promised more swaps, more sparks, and more drama."},
-          {"speaker": "Howie Mandel", "text": "Let's play round two."},
-          {"speaker": "Howie Mandel", "text": "And as promised, we're playing classic puzzle best guess live."},
-          {"speaker": "Howie Mandel", "text": "Just like with our tiered puzzle, but you get five clues, twenty seconds, and you can only guess once."},
-          {"speaker": "Howie Mandel", "text": "But in this round, the winner takes all for seven thousand five hundred dollars."},
-          {"speaker": "Howie Mandel", "text": "So everyone who submits a correct answer on the earliest clue will split the entire prize pot."},
-          {"speaker": "Howie Mandel", "text": "And, if you are the only one to get it right on the earliest clue, all that money is yours."},
-          {"speaker": "Howie Mandel", "text": "Round two, seven thousand five hundred dollars."},
-          {"speaker": "Howie Mandel", "text": "Neil, load the ball."},
-          {"speaker": "Howie Mandel", "text": "Here's your first clue: Open twenty-four seven."},
-          {"speaker": "Howie Mandel", "text": "Clock starts now."},
-          {"speaker": "Howie Mandel", "text": "Open twenty four seven."},
-          {"speaker": "Howie Mandel", "text": "Ocean Garden two fifty one says the fridge."},
-          {"speaker": "Howie Mandel", "text": "Okay, here is clue number two."},
-          {"speaker": "Howie Mandel", "text": "Clue number two: takeout is an option."},
-          {"speaker": "Howie Mandel", "text": "Clock starts now."},
-          {"speaker": "Howie Mandel", "text": "Open twenty four seven was the first clue."},
-          {"speaker": "Howie Mandel", "text": "Takeout is an option is second clue."},
-          {"speaker": "Howie Mandel", "text": "Time is up."},
-          {"speaker": "Howie Mandel", "text": "Green Bean Queen said a library book."},
-          {"speaker": "Howie Mandel", "text": "Moo Mary said an ATM."},
-          {"speaker": "Howie Mandel", "text": "Plump Object three fifty-seven said your nose."},
-          {"speaker": "Howie Mandel", "text": "Okay, here's your third clue: loves holding hands."},
-          {"speaker": "Howie Mandel", "text": "Clock starts now."},
-          {"speaker": "Howie Mandel", "text": "First clue was open twenty four seven."},
-          {"speaker": "Howie Mandel", "text": "Second clue is takeout is an option."},
-          {"speaker": "Howie Mandel", "text": "Loves holding hands."},
-          {"speaker": "Howie Mandel", "text": "No comment eight ninety four said a poker player."},
-          {"speaker": "Howie Mandel", "text": "Uh here is your fourth clue."},
-          {"speaker": "Howie Mandel", "text": "The street thief's top pick."},
-          {"speaker": "Howie Mandel", "text": "Clock starts now."},
-          {"speaker": "Howie Mandel", "text": "Open twenty four seven, takeout is an option, loves holding hands."},
-          {"speaker": "Howie Mandel", "text": "And your fourth clue: the street thief's top pick."},
-          {"speaker": "Howie Mandel", "text": "And your time is up now."},
-          {"speaker": "Howie Mandel", "text": "Here is your final clue and final chance: pouch on your clothes where your pen or phone goes."},
-          {"speaker": "Howie Mandel", "text": "And the clock starts now."},
-          {"speaker": "Howie Mandel", "text": "So it's open twenty four seven."},
-          {"speaker": "Howie Mandel", "text": "Takeout is an option."},
-          {"speaker": "Howie Mandel", "text": "Loves holding hands, a street thief's top pick, and the pouch on your clothes where your pen or phone goes."},
-          {"speaker": "Howie Mandel", "text": "Your time is up."}
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before we get to round two, a quick word about a show I am told."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am not the host of Perfect Match!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The name of the show is back with season four kicking off tonight right here on Netflix."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Reality stars from the Netflix universe and beyond, all in one villa, trying to find the perfect match."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The title kind of gives that away."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Duh!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a really fun show."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "In this season, the producers promised more swaps, more sparks, and more drama."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's play round two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And as promised, we're playing classic puzzle best guess live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Just like with our tiered puzzle, but you get five clues, twenty seconds, and you can only guess once."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But in this round, the winner takes all for seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So everyone who submits a correct answer on the earliest clue will split the entire prize pot."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And, if you are the only one to get it right on the earliest clue, all that money is yours."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round two, seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, load the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your first clue: Open twenty-four seven."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open twenty four seven."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ocean Garden two fifty one says the fridge."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here is clue number two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number two: takeout is an option."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open twenty four seven was the first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Takeout is an option is second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Green Bean Queen said a library book."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Moo Mary said an ATM."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Plump Object three fifty-seven said your nose."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your third clue: loves holding hands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue was open twenty four seven."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Second clue is takeout is an option."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Loves holding hands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No comment eight ninety four said a poker player."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh here is your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The street thief's top pick."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open twenty four seven, takeout is an option, loves holding hands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And your fourth clue: the street thief's top pick."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And your time is up now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your final clue and final chance: pouch on your clothes where your pen or phone goes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So it's open twenty four seven."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Takeout is an option."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Loves holding hands, a street thief's top pick, and the pouch on your clothes where your pen or phone goes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your time is up."
+          }
         ]
       },
       {
         "tag": "Round 2 Results",
         "lines": [
-          {"speaker": "Howie Mandel", "text": "We're going to open the ball now and see what it is."},
-          {"speaker": "Howie Mandel", "text": "Neil, open the ball."},
-          {"speaker": "Howie Mandel", "text": "It's your pocket, people."},
-          {"speaker": "Howie Mandel", "text": "Let's take a look at how the clues fit and find out who is taking the money."},
-          {"speaker": null, "text": "Clue 5: \"POUCH ON YOUR CLOTHES WHERE YOUR PEN OR PHONE GOES.\" Pockets are pouches in clothing used to store items like pens and phones. 4,561 got it right."},
-          {"speaker": null, "text": "Clue 4: \"THE STREET THIEF'S TOP PICK.\" Pickpockets are street thieves who specifically target pockets. 1,063 got it right."},
-          {"speaker": null, "text": "Clue 3: \"LOVES HOLDING HANDS.\" Pockets are comfortable places for people to put their hands. 65 got it right."},
-          {"speaker": null, "text": "Clue 2: \"TAKEOUT IS AN OPTION.\" You have the option to take items out of your pocket. 3 got it right."},
-          {"speaker": null, "text": "Clue 1: \"OPEN TWENTY-FOUR SEVEN.\" A pocket is always open even when clothes are not being worn. 1 got it right."},
-          {"speaker": null, "text": "Classic mode (Clue 1): 1 winner at $7,500.00."},
-          {"speaker": "Howie Mandel", "text": "Clue number five: pouch on your clothes where your pen or phone goes."},
-          {"speaker": "Howie Mandel", "text": "Five thousand three hundred and three of you guessed, four thousand five hundred and sixty-one of you got it correct."},
-          {"speaker": "Howie Mandel", "text": "Clue number four: a street thief's top pick."},
-          {"speaker": "Howie Mandel", "text": "What is a street thief?"},
-          {"speaker": "Howie Mandel", "text": "A pickpocket!"},
-          {"speaker": "Howie Mandel", "text": "It's all in the name people!"},
-          {"speaker": "Howie Mandel", "text": "Four thousand eight hundred and eighty-eight guesses, one thousand and sixty-three of you got it correct."},
-          {"speaker": "Howie Mandel", "text": "Clue number three: loves holding hands."},
-          {"speaker": "Howie Mandel", "text": "People put their hands in their pockets, which is comfortable."},
-          {"speaker": "Howie Mandel", "text": "Three thousand eight hundred and eighty-eight of you guessed, sixty-five of you got it correct."},
-          {"speaker": "Howie Mandel", "text": "Takeout is an option."},
-          {"speaker": "Howie Mandel", "text": "You can take things out of your pocket."},
-          {"speaker": "Howie Mandel", "text": "Seven thousand nine hundred and twenty-nine of you guessed, three of you got it correct."},
-          {"speaker": "Howie Mandel", "text": "First clue: Open twenty-four seven."},
-          {"speaker": "Howie Mandel", "text": "Your pocket is always open."},
-          {"speaker": "Howie Mandel", "text": "Eight thousand six hundred and fifty-six of you guessed, one of you got it correct."},
-          {"speaker": "Howie Mandel", "text": "One of you is our golden guesser."},
-          {"speaker": "Howie Mandel", "text": "One person is taking seven thousand five hundred dollars."},
-          {"speaker": "Howie Mandel", "text": "And who is that person?"},
-          {"speaker": "Howie Mandel", "text": "Tenisha's gonna win!"},
-          {"speaker": "Howie Mandel", "text": "That's manifesting."},
-          {"speaker": "Howie Mandel", "text": "When your handle is \"Tenisha's gonna win\" and then Tenisha, you won $7,500."},
-          {"speaker": "Howie Mandel", "text": "Tenisha, we love you."}
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're going to open the ball now and see what it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, open the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's your pocket, people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"POUCH ON YOUR CLOTHES WHERE YOUR PEN OR PHONE GOES.\" Pockets are pouches in clothing used to store items like pens and phones. 4,561 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"THE STREET THIEF'S TOP PICK.\" Pickpockets are street thieves who specifically target pockets. 1,063 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"LOVES HOLDING HANDS.\" Pockets are comfortable places for people to put their hands. 65 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"TAKEOUT IS AN OPTION.\" You have the option to take items out of your pocket. 3 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"OPEN TWENTY-FOUR SEVEN.\" A pocket is always open even when clothes are not being worn. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Classic mode (Clue 1): 1 winner at $7,500.00."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number five: pouch on your clothes where your pen or phone goes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five thousand three hundred and three of you guessed, four thousand five hundred and sixty-one of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number four: a street thief's top pick."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What is a street thief?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A pickpocket!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's all in the name people!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four thousand eight hundred and eighty-eight guesses, one thousand and sixty-three of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number three: loves holding hands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "People put their hands in their pockets, which is comfortable."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Three thousand eight hundred and eighty-eight of you guessed, sixty-five of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Takeout is an option."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You can take things out of your pocket."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Seven thousand nine hundred and twenty-nine of you guessed, three of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue: Open twenty-four seven."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your pocket is always open."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Eight thousand six hundred and fifty-six of you guessed, one of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One of you is our golden guesser."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One person is taking seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And who is that person?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tenisha's gonna win!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's manifesting."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "When your handle is \"Tenisha's gonna win\" and then Tenisha, you won $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tenisha, we love you."
+          }
         ]
       },
       {
         "tag": "Outro",
         "lines": [
-          {"speaker": "Howie Mandel", "text": "That is it for this episode of Best Guess Live."},
-          {"speaker": "Howie Mandel", "text": "Congratulations again to all of our winners."},
-          {"speaker": "Howie Mandel", "text": "We're here every weekday at 8:00 Eastern, 5:00 Pacific so come back tomorrow and don't forget to bring your best guess."},
-          {"speaker": "Howie Mandel", "text": "Good night, everybody."},
-          {"speaker": null, "text": "Popular wrong guesses, Round 1: DOG POOP, GYM, ESCALATOR, FITBIT, PARK."},
-          {"speaker": null, "text": "Popular wrong guesses, Round 2: 711, GAS STATION, WALLET, ATM, CASINO."}
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're here every weekday at 8:00 Eastern, 5:00 Pacific so come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good night, everybody."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: DOG POOP, GYM, ESCALATOR, FITBIT, PARK."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: 711, GAS STATION, WALLET, ATM, CASINO."
+          }
         ]
       }
     ]
@@ -30428,7 +31445,10 @@
   {
     "date": "Thursday, May 14, 2026",
     "host": "Hunter March",
-    "secretItems": ["CALENDAR", "BOOMERANG"],
+    "secretItems": [
+      "CALENDAR",
+      "BOOMERANG"
+    ],
     "rounds": [
       {
         "round": 1,
@@ -30463,132 +31483,1396 @@
       {
         "tag": "Intro",
         "lines": [
-          {"speaker": "Hunter March", "text": "Come on, everybody, we're live."},
-          {"speaker": "Hunter March", "text": "Get the party going on time."},
-          {"speaker": "Hunter March", "text": "Okay, anyway, I am your host Hunter March."},
-          {"speaker": "Hunter March", "text": "Yesterday, for those of you that tuned in, was a perfect example of why we love giving you two types of games."},
-          {"speaker": "Hunter March", "text": "In our first round with the tiered pricing, we had three thousand eight hundred and twenty one winners."},
-          {"speaker": "Hunter March", "text": "Congratulations!"},
-          {"speaker": "Hunter March", "text": "And then in our second round, our classic pricing one winner took home seven thousand five hundred dollars!"},
-          {"speaker": "Hunter March", "text": "Honestly, it was the best of both worlds: a lot of winners and one really big win."},
-          {"speaker": "Hunter March", "text": "And last night's big winner Tanisha gonna win earned that money the right way."},
-          {"speaker": "Hunter March", "text": "They previously played one hundred and sixty nine games."},
-          {"speaker": "Hunter March", "text": "And in that time have only won once before, and it was for fifty one cents."},
-          {"speaker": "Hunter March", "text": "So, they have technically won seven thousand five hundred and fifty-one cents playing this game."},
-          {"speaker": "Hunter March", "text": "Persistence pays off."},
-          {"speaker": "Hunter March", "text": "Congratulations again."},
-          {"speaker": "Hunter March", "text": "I hope we have the same kind of night tonight because we're serving up the combo platter yet again."},
-          {"speaker": "Hunter March", "text": "We're playing a tiered game in round one and then a classic one winner take all game in round two."},
-          {"speaker": "Hunter March", "text": "Each episode of Best Guess Live has two rounds."},
-          {"speaker": "Hunter March", "text": "Each round has one puzzle."},
-          {"speaker": "Hunter March", "text": "Round one will be a tiered puzzle which has three sets of winners: gold, silver, and bronze."},
-          {"speaker": "Hunter March", "text": "Before each round, we're going to load our crystal ball with a secret item."},
-          {"speaker": "Hunter March", "text": "It could be anything."},
-          {"speaker": "Hunter March", "text": "Then I'll give you five clues, but remember the clues are like riddles; they're meant to make you think."},
-          {"speaker": "Hunter March", "text": "After each clue you'll get twenty seconds to submit an answer, but you only get one best guess per round, not one per clue, one per round."},
-          {"speaker": "Hunter March", "text": "Make sure you're confident before you lock it in."},
-          {"speaker": "Hunter March", "text": "It has to be the exact answer, and we do not accept typos."},
-          {"speaker": "Hunter March", "text": "Bottom line, you want to be fast, but you have to be right."},
-          {"speaker": "Hunter March", "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars."},
-          {"speaker": "Hunter March", "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of two thousand five hundred."},
-          {"speaker": "Hunter March", "text": "And everyone that gets it on the third earliest clue will split the bronze pot of two thousand dollars."},
-          {"speaker": "Hunter March", "text": "So if you give a correct answer on one of those three earliest clues, you win."},
-          {"speaker": "Hunter March", "text": "And, if you are the only one to give a correct answer on one of those clues, you take the whole pot for that medal."}
+          {
+            "speaker": "Hunter March",
+            "text": "Come on, everybody, we're live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Get the party going on time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, anyway, I am your host Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yesterday, for those of you that tuned in, was a perfect example of why we love giving you two types of games."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "In our first round with the tiered pricing, we had three thousand eight hundred and twenty one winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then in our second round, our classic pricing one winner took home seven thousand five hundred dollars!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly, it was the best of both worlds: a lot of winners and one really big win."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And last night's big winner Tanisha gonna win earned that money the right way."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They previously played one hundred and sixty nine games."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And in that time have only won once before, and it was for fifty one cents."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So, they have technically won seven thousand five hundred and fifty-one cents playing this game."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Persistence pays off."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I hope we have the same kind of night tonight because we're serving up the combo platter yet again."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're playing a tiered game in round one and then a classic one winner take all game in round two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one will be a tiered puzzle which has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round, we're going to load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues, but remember the clues are like riddles; they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue you'll get twenty seconds to submit an answer, but you only get one best guess per round, not one per clue, one per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer, and we do not accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of two thousand five hundred."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And everyone that gets it on the third earliest clue will split the bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So if you give a correct answer on one of those three earliest clues, you win."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And, if you are the only one to give a correct answer on one of those clues, you take the whole pot for that medal."
+          }
         ]
       },
       {
         "tag": "Round 1",
         "lines": [
-          {"speaker": "Hunter March", "text": "Enough talk, let's win some money!"},
-          {"speaker": "Hunter March", "text": "Round one is worth seven thousand five hundred dollars."},
-          {"speaker": "Hunter March", "text": "Let us load the crystal ball."},
-          {"speaker": "Hunter March", "text": "Here is your first clue: consistently irregular."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Time's up."},
-          {"speaker": "Hunter March", "text": "Clue number two: sold by the dozen."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Clue number two: sold by the dozen."},
-          {"speaker": "Hunter March", "text": "Clue number three: loves to hang out from time to time."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Time's up."},
-          {"speaker": "Hunter March", "text": "Clue number three: loves to hang out from time to time."},
-          {"speaker": "Hunter March", "text": "Clue number four: your days are numbered."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Time's up."},
-          {"speaker": "Hunter March", "text": "Clue number four: your days are numbered."},
-          {"speaker": "Hunter March", "text": "One last chance to get in your guess."},
-          {"speaker": "Hunter March", "text": "Clue number five is gives you a chance to see your month at a glance."},
-          {"speaker": "Hunter March", "text": "Twenty seconds, your final twenty seconds for this first puzzle starts now."},
-          {"speaker": "Hunter March", "text": "Time's up."},
-          {"speaker": "Hunter March", "text": "Gives you a chance to see your month at a glance."}
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk, let's win some money!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is worth seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let us load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here is your first clue: consistently irregular."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: sold by the dozen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: sold by the dozen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: loves to hang out from time to time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: loves to hang out from time to time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: your days are numbered."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: your days are numbered."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One last chance to get in your guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five is gives you a chance to see your month at a glance."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds, your final twenty seconds for this first puzzle starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gives you a chance to see your month at a glance."
+          }
         ]
       },
       {
         "tag": "Round 1 Results",
         "lines": [
-          {"speaker": "Hunter March", "text": "Correct answer was: A calendar!"},
-          {"speaker": "Hunter March", "text": "The question is, did anyone get it right in time to take home some money?"},
-          {"speaker": null, "text": "Clue 5: \"GIVES YOU A CHANCE TO SEE YOUR MONTH AT A GLANCE.\" Calendars let you look ahead at your plans. 3,895 got it right."},
-          {"speaker": null, "text": "Clue 4: \"YOUR DAYS ARE NUMBERED!\" Calendars' days have numbers. 4,400 got it right."},
-          {"speaker": null, "text": "Clue 3: \"LOVES TO HANG OUT FROM TIME TO TIME.\" Calendars are often hung and are all about time. 257 got it right."},
-          {"speaker": null, "text": "Clue 2: \"SOLD BY THE DOZEN.\" There are twelve months in a calendar year. 43 got it right."},
-          {"speaker": null, "text": "Clue 1: \"CONSISTENTLY IRREGULAR.\" The dates fall on different days of the week from year to year. 19 got it right."},
-          {"speaker": null, "text": "Gold (Clue 1): 19 winners at $157.89 each. Silver (Clue 2): 43 winners at $58.13 each. Bronze (Clue 3): 257 winners at $7.78 each."},
-          {"speaker": "Hunter March", "text": "Congratulations to Hailstorm Seven, Zoe James, Trinchess, Remote Coach Eight Seven, Nine, Lily Bud and fourteen more people."},
-          {"speaker": "Hunter March", "text": "Congratulations, that's a lot of money."}
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answer was: A calendar!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The question is, did anyone get it right in time to take home some money?"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"GIVES YOU A CHANCE TO SEE YOUR MONTH AT A GLANCE.\" Calendars let you look ahead at your plans. 3,895 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"YOUR DAYS ARE NUMBERED!\" Calendars' days have numbers. 4,400 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"LOVES TO HANG OUT FROM TIME TO TIME.\" Calendars are often hung and are all about time. 257 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"SOLD BY THE DOZEN.\" There are twelve months in a calendar year. 43 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"CONSISTENTLY IRREGULAR.\" The dates fall on different days of the week from year to year. 19 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 19 winners at $157.89 each. Silver (Clue 2): 43 winners at $58.13 each. Bronze (Clue 3): 257 winners at $7.78 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Hailstorm Seven, Zoe James, Trinchess, Remote Coach Eight Seven, Nine, Lily Bud and fourteen more people."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations, that's a lot of money."
+          }
         ]
       },
       {
         "tag": "Round 2",
         "lines": [
-          {"speaker": "Hunter March", "text": "But again, as promised, we're playing a classic puzzle now for round number two."},
-          {"speaker": "Hunter March", "text": "But in this round, winner takes all."},
-          {"speaker": "Hunter March", "text": "So everyone who submits a correct answer on the earliest clue will split the entire prize pot."},
-          {"speaker": "Hunter March", "text": "Round two is worth seven thousand five hundred dollars."},
-          {"speaker": "Hunter March", "text": "Let us load the crystal ball."},
-          {"speaker": "Hunter March", "text": "Clue number one is iconic comeback tour, twenty seconds starts now."},
-          {"speaker": "Hunter March", "text": "Time is up."},
-          {"speaker": "Hunter March", "text": "Clue number one: iconic comeback tour."},
-          {"speaker": "Hunter March", "text": "Let's go to clue number two."},
-          {"speaker": "Hunter March", "text": "A revolutionary invention."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Time is up."},
-          {"speaker": "Hunter March", "text": "Clue number three: from down under to up above."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Time is up."},
-          {"speaker": "Hunter March", "text": "Clue number four: return to sender."},
-          {"speaker": "Hunter March", "text": "Twenty seconds starts now."},
-          {"speaker": "Hunter March", "text": "Time is up."},
-          {"speaker": "Hunter March", "text": "We got one more clue: throw it and it flips back as a naraboo."},
-          {"speaker": "Hunter March", "text": "Twenty seconds on the clock starts now."},
-          {"speaker": "Hunter March", "text": "Time's up."},
-          {"speaker": "Hunter March", "text": "Ladies and gentlemen, that's all five clues."}
+          {
+            "speaker": "Hunter March",
+            "text": "But again, as promised, we're playing a classic puzzle now for round number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But in this round, winner takes all."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So everyone who submits a correct answer on the earliest clue will split the entire prize pot."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round two is worth seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let us load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one is iconic comeback tour, twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: iconic comeback tour."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A revolutionary invention."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: from down under to up above."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: return to sender."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We got one more clue: throw it and it flips back as a naraboo."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ladies and gentlemen, that's all five clues."
+          }
         ]
       },
       {
         "tag": "Round 2 Results",
         "lines": [
-          {"speaker": "Hunter March", "text": "The correct answer was: A boomerang!"},
-          {"speaker": "Hunter March", "text": "Let's take a look at how the clues fit and find out who's taking home the money."},
-          {"speaker": null, "text": "Clue 5: \"THROW IT AND IT FLIPS BACK AS A GNAREMOOB.\" A boomerang spelled backwards is a gnaremoob. 2,841 got it right."},
-          {"speaker": null, "text": "Clue 4: \"RETURN TO SENDER.\" Boomerangs come back to the person who threw them. 1,847 got it right."},
-          {"speaker": null, "text": "Clue 3: \"FROM DOWN UNDER TO UP ABOVE.\" Boomerangs are from Australia and can fly above your head. 1,918 got it right."},
-          {"speaker": null, "text": "Clue 2: \"A REVOLUTIONARY INVENTION.\" Boomerangs spin around rapidly. 1,776 got it right."},
-          {"speaker": null, "text": "Clue 1: \"ICONIC COMEBACK TOUR.\" Boomerangs come back to the thrower. 560 got it right."},
-          {"speaker": null, "text": "Classic mode (Clue 1): 560 winners at $13.39 each."},
-          {"speaker": "Hunter March", "text": "Miranda two three one nine, Rainbow Fox, Giovanni's mom, Babu friend, Glow Street and five hundred and fifty-five more of you."},
-          {"speaker": "Hunter March", "text": "Congratulations!"}
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was: A boomerang!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues fit and find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"THROW IT AND IT FLIPS BACK AS A GNAREMOOB.\" A boomerang spelled backwards is a gnaremoob. 2,841 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"RETURN TO SENDER.\" Boomerangs come back to the person who threw them. 1,847 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"FROM DOWN UNDER TO UP ABOVE.\" Boomerangs are from Australia and can fly above your head. 1,918 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"A REVOLUTIONARY INVENTION.\" Boomerangs spin around rapidly. 1,776 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"ICONIC COMEBACK TOUR.\" Boomerangs come back to the thrower. 560 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Classic mode (Clue 1): 560 winners at $13.39 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Miranda two three one nine, Rainbow Fox, Giovanni's mom, Babu friend, Glow Street and five hundred and fifty-five more of you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations!"
+          }
         ]
       },
       {
         "tag": "Outro",
         "lines": [
-          {"speaker": "Hunter March", "text": "That's it for this episode of Best Guess Live."},
-          {"speaker": "Hunter March", "text": "We're here every weekday eight Eastern five Pacific."},
-          {"speaker": "Hunter March", "text": "Like a boomerang, come back tomorrow and don't forget to bring your best guess."},
-          {"speaker": "Hunter March", "text": "Bye bye."},
-          {"speaker": null, "text": "Popular wrong guesses, Round 1: EGGS, CLOCK, ROSES, WEATHER, MONTHS."},
-          {"speaker": null, "text": "Popular wrong guesses, Round 2: BACKSTREET BOYS, YOYO, MAIL, WHEEL, MICHAEL JACKSON."}
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're here every weekday eight Eastern five Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Like a boomerang, come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bye bye."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: EGGS, CLOCK, ROSES, WEATHER, MONTHS."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: BACKSTREET BOYS, YOYO, MAIL, WHEEL, MICHAEL JACKSON."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Friday, May 15, 2026",
+    "secretItems": [
+      "TETRIS",
+      "VACATION"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "TETRIS"
+      },
+      {
+        "round": 2,
+        "secretItem": "VACATION"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "I'm ready."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You best guess is live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here I am!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I am in your phone."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I am your host, Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It is a lovely, lovely Friday."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I am cheering for you guys!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "End of the week has been a great week playing combination pricing where round one has gold, silver, and bronze medals and round two is winner take all."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We love bringing you more ways to win and bigger jackpots."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's the best of both worlds like peanut butter and jelly, franks and beans or me and Howie Mandel."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There we go!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Better than a Friday, but no matter how we slice it, we're serving up $15,000 tonight."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here are the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one will be a tiered puzzle which has three sets of winners: gold, silver, bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round we're going to load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now it could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues, but remember, the clues are written like riddles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you'll get twenty seconds to submit an answer, but you only get one best guess per round not one per clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Per round, so make sure you are confident before you lock it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer, and we don't accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line: You want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of two thousand five hundred dollars, and everyone that gets it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "On the third earliest clue, we'll split the bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So if you give a correct answer, one of the three earliest clues, you win."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And, if you are the only one to give a correct answer on one of those earlier clues, well, you take the whole pot for that medal."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's win some money!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Go ladies and gents!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is worth seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, seven thousand five hundred, It's in there somewhere."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And that mystical magicalness is up to you to figure out where it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: Drop everything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Drop everything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Drop everything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Could be a lot of things."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Whatever it is, it's been dropped"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good luck"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Five seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, clue number one: drop everything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is interesting."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ryder put cloud clouds and literally just rain waiting to drop, I think I did not do well in school."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Cherry Street said, uh, cherry steak said klutz drop everything a klutz that's great really specific answer, but a great one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh clue two, we'll see if it holds clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Number two is always failing upward."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Always failing upward."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A klutz?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I feel like it's always kind of falling downward, and then clouds are mostly."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Cloud level again."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I am not great at knowledge."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Always failing upward, okay?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Pinkish jade two twenty said zipper."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly, if you are to fail with the zipper, it is on the way up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is a great and then afterwards you drop everything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Zipper is an interesting answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, Nepo baby leaky plumber, ninety nine used nepo baby as their guess, and I love the commitment to the bit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, clue number three: add to subtract."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, add to subtract."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Do any of these work?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A zipper?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Do you ever add a zipper to subtract?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You add to subtract, no."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Nepo baby, when a nepo baby is added, it subtracts a little bit of our faith in the industry's fairness."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Times up!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, add to subtract."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Trendy doily said Ozempic which has."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's been, I think a lot of people have guessed Ozempic."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The answer is Tetris!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which, by the way, if you guys love Tetris, you can actually play a version of it on Netflix Games."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So go enjoy that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It'll be really fun."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After this, of course."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't get don't get speedy on me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, Let's take a look at how the clues to find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “BLOCKS FALL AND MINGLE TO A CATCHY RUSSIAN JINGLE.” The game was invented in Russia and has an iconic jingle. 3,201 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “YOU HAVE TO TAKE AN L TO DO WELL.” There are many L-shaped blocks that fall during the game. 151 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “ADD TO SUBTRACT.” Filling a row completely clears and subtracts that row from the board. 83 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “ALWAYS FAILING UPWARD.” The closer a player gets to the top of the board, the closer they are to losing. 30 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “DROP EVERYTHING.” Pieces fall from the top to the bottom so everything drops. 14 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 14 winners at $214.28 each. Silver (Clue 2): 30 winners at $83.33 each. Bronze (Clue 3): 83 winners at $24.09 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to our gold guessers: King Nar, I Parker, Dilly Dally, Radder Two and a few more."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations, again, you guys deserved it"
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "before we get to round two I wanted to give you a heads up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "On something big happening on Netflix tomorrow night,"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It is Ronda Rousey versus Gina Carano live from the Intuit Dome here in Los Angeles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's two pioneers of women's MMA."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I gotta do this like Bruce Buffer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hold on, it's two pioneers of women's MMA."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Finally, in the cage together,"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's Rousey's first fight in nearly a decade and Carano's first since two thousand nine."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's Netflix's first ever live MMA event."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Main card starts at nine Eastern and six PM Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't miss it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That was okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't do bad."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I had to give them one of these to get any applause, but that's all right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, Let's play round two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And as promised, we're playing a classic puzzle just like with our tiered puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You get five clues twenty seconds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You can only guess once, but in this round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Winner takes all for seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So everyone who submits a correct answer on the earliest clue will split the entire prize pot."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And, if you are the only one to get it right on the earliest clue, all the money is yours."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round two, seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, come on crystal ball, seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's make this one hard for everybody."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come on let's go!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one take it away!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts down."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And I guess to you guys as well, take it away."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Go ahead, what's your guess?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Seven thousand five hundred dollars is a lot of money to potentially win on a Friday."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which could be a real nice way to spend your Saturday, Sunday."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A little shopping."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Get yourself a matcha and a new sweater."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, take it away."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Take it away Bumpy Putt."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Putt, Moo guy pan."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I assume that is some sort of dish."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is that the name of the little hippo?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Moo dang."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Do not take moo dang away."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Departed twilight said coffee, okay, I see where you guys are going."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two might make this a little more specific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: A book we all love."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Take it away."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We all love."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know if Mu Dang, the little hippo, wrote a book."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But if he did, I think we'd all love it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But again, only one person or only one clue will win money on this time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No tears on this one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is the classic way."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A book we all love."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh Fluke Skywalker said Celebrity Bookshop"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is such a, Such a commitment to the bit for that one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, gorgeous love twenty three from Los Angeles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, a neighbor said wallet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A book we all love."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, Cause you open it up, but take it away."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Maybe that's wallets are easily stolen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Interesting guesses clue, number three is going out of business."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds on the clock starts."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now moo dang is out that guy is not going out of business anytime soon."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now with all the money i've been sending moo, dang."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "My fiancéhad to confiscate my credit cards because of the hundreds of thousands of dollars I've been sending to that little hippo, MooDang."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After this, I'm not doing any more MooDang bits."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So Fake Beard thirty one said Blockbuster Video."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's like going out of business."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Take it away is mean, I said, I don't know why Netflix would."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Take it away, uh, for blockbuster video."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Big money lover."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, good luck."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Said stamps going out of business stamps Are they going out of business?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Post office is not doing great"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh oh,"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh no"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "My mail"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here we go"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four Oh You have to rearrange the Vatican 20 seconds on the clock starts now"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Interesting story."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "About the Vatican."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "When I visited Florence, I went eventually to Vatican City from there."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I went to Florence and Rome."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I went to whatever."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I ended up in the Vatican."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I actually, when I was there, I met Mu Deng"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "He was there in the Sistine Chapel"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It was unbelievable"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Number four, Oh, you have to rearrange the Vatican"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Dig em dude, said new pope."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Isn't that that show with Jude Law, New Pope?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great theme song."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great theme song."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, Marlon eighty eighty said shelves."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's oh, that's what the Vatican they could store so many more knickknacks."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, Clue number five, your fifth and final clue for this puzzle is a break from the grind where you can unwind"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "twenty seconds, your final twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A break from the grind where you can unwind."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A lot of places where you can take a break from the grind, and you can unwind."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "My personal favorite, the zoo."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which zoo?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You know what zoo?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The moo zoo."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The one where I could buy my little moo dang."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue five: A break from the grind where you can unwind, I think a lot of people figured it out, the question is how many?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The answer was vacation."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Vacation."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, vacation was the answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The question is who got it right on what clue?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues fit."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “A BREAK FROM THE GRIND WHERE YOU CAN UNWIND.” Vacation is a relaxing time away. 2,264 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “O YOU HAVE TO REARRANGE THE VATICAN.” Vacation is an anagram of Vatican plus O. 656 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “GOING OUT OF BUSINESS.” You leave business behind on vacation. 162 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “A BOOK WE ALL LOVE.” Everyone loves to book a vacation. 87 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “TAKE IT AWAY.” Most people take their vacation away from home. 16 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Classic mode (Clue 1): 16 winners at $468.75 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Meaning, 16 people literally got a great amount of money to take a small vacation."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "$468.75 are going to Katie3313, Alexander Taylor, Antidodo."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm Antidodo too!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm glad they're gone."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bizarre Bobcat two sixty seven Nitwit Nincompoop."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I am surprised Nitwit Nincompoop won."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, that's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're here every week at eight Eastern five Pacific, so come back Monday and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good night, Mudang."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [GRAVITY, JENGA, GOLF, ELEVATOR, FIRE]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [BIBLE, CHECKBOOK, FACEBOOK, THE BIBLE, GARBAGE]"
+          }
         ]
       }
     ]
