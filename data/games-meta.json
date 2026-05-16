@@ -2360,6 +2360,28 @@
       "totalWinners": 560,
       "clueCount": 5,
       "goldClue": 1
+    },
+    {
+      "date": "Friday, May 15, 2026",
+      "secretItem": "TETRIS",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 127,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Friday, May 15, 2026",
+      "secretItem": "VACATION",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v1",
+      "totalWinners": 16,
+      "clueCount": 5,
+      "goldClue": 1
     }
   ]
 }
