@@ -10531,5 +10531,121 @@
       "title": "Ronda Rousey vs. Gina Carano",
       "desc": "Live from the Intuit Dome in Los Angeles, Netflix's first ever live MMA event. Main card starts at 9 PM Eastern / 6 PM Pacific tomorrow night."
     }
+  },
+  {
+    "date": "Monday, May 18, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TATTOO",
+    "clues": [
+      {
+        "number": 1,
+        "text": "GOTCHA COVERED",
+        "correct": "15",
+        "guesses": "7,115 🥇",
+        "explanation": "Tattoos cover up parts of your skin."
+      },
+      {
+        "number": 2,
+        "text": "OUTCOME OF A GOOD POKER HAND",
+        "correct": "11",
+        "guesses": "5,041 🥈",
+        "explanation": "A tattoo artist needs a steady hand when poking you."
+      },
+      {
+        "number": 3,
+        "text": "GOES BY ITS FIRST THREE LETTERS, ALSO",
+        "correct": "23",
+        "guesses": "4,675 🥉",
+        "explanation": "A tattoo is also commonly referred to by its first three letters as a tat."
+      },
+      {
+        "number": 4,
+        "text": "FOREVER STAMP YOU CAN'T GET AT THE POST OFFICE",
+        "correct": "4,705",
+        "guesses": "6,749",
+        "explanation": "Tattoos are permanent stamps that you cannot get at the post office."
+      },
+      {
+        "number": 5,
+        "text": "BODY PART ART OF AN ANCHOR, ROSE, OR HEART",
+        "correct": "3,496",
+        "guesses": "4,992",
+        "explanation": "Anchors, roses, and hearts are some of the most popular and classic tattoos."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 15,
+    "silverWinners": 11,
+    "bronzeWinners": 23,
+    "totalWinners": 49,
+    "goldPayout": 200.0,
+    "silverPayout": 227.27,
+    "bronzePayout": 86.95,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Roxy Retired Well Not Yet Roxy, Tiffany Twisted, Sean Hall, postal evil monk",
+    "wrongGuesses": "UMBRELLA, INSURANCE, ACE, BLANKET, POT"
+  },
+  {
+    "date": "Monday, May 18, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Hunter March",
+    "secretItem": "RAKE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "PULL IT TOGETHER",
+        "correct": "2",
+        "guesses": "10,876 🥇",
+        "explanation": "Rakes help pull leaves together."
+      },
+      {
+        "number": 2,
+        "text": "MERELY SCRATCHES THE SURFACE",
+        "correct": "114",
+        "guesses": "4,557",
+        "explanation": "Rakes scrape or scratch the surface of the ground."
+      },
+      {
+        "number": 3,
+        "text": "MY WORK IS PILING UP",
+        "correct": "457",
+        "guesses": "501",
+        "explanation": "Raking leaves creates piles of work."
+      },
+      {
+        "number": 4,
+        "text": "FALL CLEARANCE ITEM",
+        "correct": "1,567",
+        "guesses": "4,138",
+        "explanation": "A rake clears fallen leaves during autumn."
+      },
+      {
+        "number": 5,
+        "text": "HELPS THE LANDSCAPER DO THE LANDSCRAPING",
+        "correct": "2,793",
+        "guesses": "4,516",
+        "explanation": "A rake helps a landscaper scrape the ground."
+      }
+    ],
+    "winningClue": 1,
+    "goldClue": 1,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 2,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 2,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$3,750.00",
+    "winnerNames": "vivid griddle two seventy two, stale parade",
+    "wrongGuesses": "ZIPPER, TUG OF WAR, LEAVES, MAGNET, KNOT"
   }
 ]
