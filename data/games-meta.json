@@ -2382,6 +2382,28 @@
       "totalWinners": 16,
       "clueCount": 5,
       "goldClue": 1
+    },
+    {
+      "date": "Monday, May 18, 2026",
+      "secretItem": "TATTOO",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 49,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, May 18, 2026",
+      "secretItem": "RAKE",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v1",
+      "totalWinners": 2,
+      "clueCount": 5,
+      "goldClue": 1
     }
   ]
 }
