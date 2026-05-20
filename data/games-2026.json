@@ -10647,5 +10647,121 @@
     "winnerPayout": "$3,750.00",
     "winnerNames": "vivid griddle two seventy two, stale parade",
     "wrongGuesses": "ZIPPER, TUG OF WAR, LEAVES, MAGNET, KNOT"
+  },
+  {
+    "date": "Tuesday, May 19, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MAGNET",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BRING IT IN...",
+        "correct": "9",
+        "guesses": "6,105 🥇",
+        "explanation": "Magnets also attract depending on which side of the magnet you got."
+      },
+      {
+        "number": 2,
+        "text": "...GET AWAY FROM ME!",
+        "correct": "372",
+        "guesses": "4,294 🥈",
+        "explanation": "Magnets repel sometimes."
+      },
+      {
+        "number": 3,
+        "text": "MAY THE FORCE BE WITH U",
+        "correct": "1,731",
+        "guesses": "6,844 🥉",
+        "explanation": "A magnet has a force and is depicted traditionally as being U-shaped."
+      },
+      {
+        "number": 4,
+        "text": "ALWAYS ATTRACTIVE AT THE GIFT SHOP",
+        "correct": "2,644",
+        "guesses": "5,368",
+        "explanation": "Magnets draw things in and you can often buy the fridge ones at gift shops."
+      },
+      {
+        "number": 5,
+        "text": "POLARIZED METAL THAT ALLOWS FOR MORE FRIDGE-DOOR DECOR",
+        "correct": "5,410",
+        "guesses": "6,032",
+        "explanation": "A magnet is a polarized metal that is stuck to your fridge."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 9,
+    "silverWinners": 372,
+    "bronzeWinners": 1731,
+    "totalWinners": 2112,
+    "goldPayout": 333.33,
+    "silverPayout": 6.72,
+    "bronzePayout": 1.15,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Oopsie Daisy, Not Today, Bra Bra Hammerjaw, War Six Seven Two",
+    "wrongGuesses": "HUG, HUDDLE, UMBRELLA, STAR WARS, FISHING"
+  },
+  {
+    "date": "Tuesday, May 19, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Hunter March",
+    "secretItem": "BAD BUNNY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "MORE THAN WORDS",
+        "correct": "0",
+        "guesses": "9,295",
+        "explanation": "Even if you don't speak Spanish, his music is incredible and music is much louder than words."
+      },
+      {
+        "number": 2,
+        "text": "MAINSTREAM SUCCESS",
+        "correct": "3",
+        "guesses": "7,205 🥇",
+        "explanation": "He has acted and wrestled but his main success is streaming music."
+      },
+      {
+        "number": 3,
+        "text": "DELIVERED A WHOLE LOT OF HALF",
+        "correct": "16",
+        "guesses": "3,280",
+        "explanation": "Bad Bunny performed at the 2026 Super Bowl halftime show."
+      },
+      {
+        "number": 4,
+        "text": "AMAZING PR FOR PR",
+        "correct": "833",
+        "guesses": "2,751",
+        "explanation": "He is a cultural ambassador for Puerto Rico."
+      },
+      {
+        "number": 5,
+        "text": "RASCALLY RABBIT, BUT TUNES NOT TOONS",
+        "correct": "153",
+        "guesses": "4,432",
+        "explanation": "A rascally rabbit is a bad bunny and this one happens to be a musician."
+      }
+    ],
+    "winningClue": 2,
+    "goldClue": 2,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 3,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 3,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$2,500.00",
+    "winnerNames": "Sunny for Days, King Nar Feller Knight",
+    "wrongGuesses": ""
   }
 ]
