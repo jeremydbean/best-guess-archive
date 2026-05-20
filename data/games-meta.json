@@ -2404,6 +2404,28 @@
       "totalWinners": 2,
       "clueCount": 5,
       "goldClue": 1
+    },
+    {
+      "date": "Tuesday, May 19, 2026",
+      "secretItem": "MAGNET",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 2112,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Tuesday, May 19, 2026",
+      "secretItem": "BAD BUNNY",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v1",
+      "totalWinners": 3,
+      "clueCount": 5,
+      "goldClue": 2
     }
   ]
 }
