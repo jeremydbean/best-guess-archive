@@ -34054,5 +34054,482 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Wednesday, May 20, 2026",
+    "secretItems": [
+      "QUARTER",
+      "SNAP"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "QUARTER"
+      },
+      {
+        "round": 2,
+        "secretItem": "SNAP"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Two, one, I'm ready."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm your host Howie Mandel!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thank you! Thank you! Thank you!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're still standing and applauding. You just can't hear it now. I turned the mics down."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One of the things I love about the show is that it gives you something to look forward to every single day."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No matter how rough a day you're having, we're there waiting at the end of each day."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Even if your boss is being mean or the copier breaks or someone ate your lunch out of the office fridge, even though it clearly had your name on it. I'm looking at you, Neil. You know what I'm talking about."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, my point here is we are here for you every weekday no matter what. I hope you appreciate us. Don't let the Neils of the world get you down."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And speaking of things you can always count on, here are some rules. Count on these."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds. Each round has one puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one will be a tiered puzzle which has three sets of winners: gold, silver, and bronze. This is like the Olympics of riddles."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, we're going to load our crystal ball with a secret item. It could be absolutely anything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Then I am going to give you five clues, but remember the clues are riddles — they're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "After each clue, you'll get twenty seconds to submit an answer. But you only get one best guess per round, not one per clue. One per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in. It's got to be the exact answer, and we're not going to accept typos tonight. Is that correct, Neil?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, bottom line: You want to be fast but you got to be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in the answer on the earliest clue will split the gold prize pot of three thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in an answer on the second earliest clue will split the silver pot of two thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it in the third earliest clue will split the bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So if you give a correct answer on one of the three earliest clues, you win."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And, if you are the only one to give a correct answer on one of those clues, you take that whole pot for yourself for that medal."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough talk. No, let's win some money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one, worth seven thousand five hundred dollars. Neil! Load the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Look at Neil, I love watching Neil work. Hey, good work there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, this is seventy-five hundred dollars. Here is your first clue: Made the call. Twenty seconds on the clock."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Feels good, made the call. A lot of people playing tonight. We got a lot of first time gamers. Ten seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five, four, three, two, one. Time is up on that first riddle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "River Apricot Switch Eight Ten said Zoom. Made the call, like a Zoom call. I get it. And Blazing Paddles said bat signal. Wow, that's really specific."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here is the second clue: two pints to the emergency room. And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, you've had two clues so far. One is made the call, the second one is two pints to the emergency room. Ten seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Probably Wrong said twins. Made the call? Two pints to the emergency room? Twins?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pointy Cloud Seven Zero One said type O. Oh, I see what you did there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here's your third clue: catch you on the flip side. And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Twenty seconds on the clock. We have over ten thousand guesses in the game already."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Feisty Franny said a property brother. Which one? They made the call, two pints to the emergency room — I guess when they were kids. And catch you on the flip side because they flip property. I get it. I don't think it's good, but I get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, so here is your fourth clue: if I had five nickels for every right answer. Think about how I said that and what I said. Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Made the call. Two pints to the emergency room. Catch you on the flip side. And if I had five nickels for every right answer — I think a lot of you are going to get it at least on this one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And time is up. Seventeen thousand guesses so far."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Scared Mushroom one ninety eight thinks it's Jack Nicholson. Nickel, five nickels. I am talking about nickels, son."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Megan Payne said rich. If you had five nickels for every right answer, you'd be rich. I don't think you are playing our game. I think you are just bragging about yourself."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and here's your final clue, final chance at seventy-five hundred dollars. Here it is: for a small expense, here's twenty-five cents. And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We always do this on the fifth. We handed it to you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clues were: made the call, two pints to the emergency room, catch you on the flip side, if I had five nickels for every right answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And now time is up. Your final clue was for a small expense, here's twenty-five cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, Neil, show them what's in the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a quarter! It was a quarter, people! It's a quarter!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is an actual quarter that I am holding."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking the seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The fifth clue was for a small expense: here is twenty-five cents. A quarter is worth twenty-five cents — that's a small expense. Four thousand seven hundred and seventy-eight guesses, three thousand and eighty-three of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number four was: if I had five nickels for every right answer. Five nickels is what? The value of a quarter. Five thousand six hundred and thirty-eight guesses, two thousand nine hundred and seventy-six of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number three was: catch you on the flip side. When you watch the NFL, what do they flip? Quarters. Quarters are the classic coin flip: heads or tails. Six thousand ninety-four guesses, five hundred and sixty-one of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number two: two pints to the emergency room. Two pints equals a quart. What is the acronym for the emergency room? ER. Quart-ER! Five thousand six hundred and nine guesses, one hundred and thirty-three of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Made the call was clue one. Back in the old days, if you wanted to go make a call, you had to use a payphone. What did you use in the payphone? A quarter! Four thousand eight hundred and fifty-two guesses, three of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So three of you are splitting three thousand dollars — that's a thousand dollars each. That goes to postal postal vilmonk, rainbow fox thirty three, and tiffany twisted. You each get a thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The silver was 133 of you each getting $18.79, and the bronze was 561 of you each getting $3.56."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “FOR A SMALL EXPENSE, HERE’S 25 CENTS.” A quarter is worth twenty-five cents, which represents a small expense. 3,083 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “IF I HAD FIVE NICKELS FOR EVERY RIGHT ANSWER...” Five nickels is equal to the value of a quarter. 2,976 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “CATCH YOU ON THE FLIP SIDE.” Quarters are the classic coin flipped for heads or tails, such as in the NFL. 561 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “TWO PINTS TO THE EMERGENCY ROOM.” Two pints equals a quart, and the acronym for the emergency room is ER, forming the word quarter. 133 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “MADE THE CALL.” In the old days, you had to use a quarter in a payphone to make a call. 3 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 3 winners at $1,000.00 each. Silver (Clue 2): 133 winners at $18.79 each. Bronze (Clue 3): 561 winners at $3.56 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before we start round two, I just want to remind you that daily puzzles are coming to Best Guess Live app very soon. There'll be a new puzzle every day that you can play on the app anywhere anytime."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Think of it as a way to strengthen your clue-solving muscles. I'll call them clutes. I'm working on my clutes today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now get ready to flex your clutes right now in round two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This time we're playing a classic puzzle. You get five clues, twenty seconds, you can only guess once, but in this round winner takes all for seventy-five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round two is worth seven thousand five hundred dollars. Neil! Load the ball!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your first clue. This is an easy one. And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's the clue. This is an easy one. We put twenty seconds on the clock. That twenty seconds flies by faster than you would think. Remember, think about how it's spelled. You're going to get the right answer, but if you type it in wrong, can't give it to you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four thousand one hundred and twenty-six guesses on that one. Feral Toaster four forty-four said an egg. It's an easy one. And Slick Nick eighty-five said blinking. It's easy. It's an easy one. Anyone can do it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, here is your second clue. It takes two. And the clock starts now, twenty seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is an easy one as the first clue. It takes two is the second clue. Over seven thousand best guesses on clue number one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up on the second clue. Boo with a Kazoo said arm wrestling. Yes, it does take two. It's an easy one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Salmon Yelp five ninety six said tango. I mean it does take two to tango, but it's not easy. I am not a good dancer. I can judge dancing, I can't do it myself."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your third clue: attention-getting press release. And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The first clue was this is an easy one. The second clue is it takes two. And your third clue was attention-getting press release."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow! Over fifteen, almost sixteen thousand submitted answers. Rory Borealis said a remote. And Schmangela said doorbell."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here is your fourth clue: pans from right to left. Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number one was this is an easy one. Clue number two was it takes two. Clue number three attention-getting press release and the fourth clue is pans from right to left."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Three, two, one, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Untitled Visit said extra extra. And Jinxty for Life said an omelet bar. There are pans from right to left, and it's really attention getting — if you want to get a lady's attention, you offer her an omelet."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, here's your final clue and your final chance. Keep time to a bop, without crackle or pop, and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You got it? You got the riddle there? This is an easy one. It takes two. Attention-getting press release. Pans from right to left. And the final clue: keep time to a bop without a crackle or pop."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow, a lot of people guessed. We're ready to find out what is in the crystal ball. Hit it, Neil. Open that ball. Crack that open. Give us the answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is a snap! It's a snap! It's a snap!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know why I kept the quarter. I don't want the quarter, I just want the snap."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The fifth clue: keep time to a bop without crackle or pop — so it's not Rice Krispies. Think about snapping along. Four thousand two hundred and nine people guessed, one thousand seven hundred and thirty-four of you were correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue four: pans from right to left. How do you spell pans? P-A-N-S. And then if you go from right to left, backwards: S-N-A-P. Snap! Come on, people! Two thousand eight hundred and ninety-nine guesses, ninety-three of you guessed it!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Attention-getting press release. You press your fingers together and you release. And if I want to get your attention — it's press and release. Four thousand three hundred and thirty-four guesses, twenty-six of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It takes two. One finger, one thumb — it takes two. Seven thousand two hundred and thirty-one guesses, twelve people typed in snap."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And this is the big one. This is an easy one. It's a snap. How do you say this is easy? You can do it in a snap. That's another way of saying this is easy. Seven thousand one hundred and thirty-seven of you guessed on an easy one. Apparently not so easy, because only one of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One of you is taking seven thousand five hundred dollars, and our best guesser is Dakin sketch."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know who you are, but you're smart. You're taking home seven thousand five hundred dollars."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “KEEP TIME TO A BOP WITHOUT CRACKLE OR POP.” You can keep time to music by snapping along without a crackle or pop sound. 1,734 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “PANS FROM RIGHT TO LEFT.” The word pans spelled backwards from right to left is snap. 93 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “ATTENTION-GETTING PRESS RELEASE.” To snap your fingers, you press them together and release to get someone’s attention. 26 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “IT TAKES TWO.” It takes two fingers, a finger and a thumb, to snap. 12 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “THIS IS AN EASY ONE.” Saying something is an easy one is another way of saying it can be done in a snap. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Classic mode (Clue 1): 1 winner at $7,500.00."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all our winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We are here every weekday at eight Eastern, five Pacific, so come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good night."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Where's the quarter? Where'd I put the quarter? Oh, there it is. Right here. We still have a quarter. Can I keep this as a tip? Hosts don't usually get a tip. Can I have this? Oh my god, I'm a winner too!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [REFEREE, 911, UMPIRE, BLOOD, AMBULANCE]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [TANGO, CLUE, EGG, CAMERA, PUZZLE]"
+          }
+        ]
+      }
+    ]
   }
 ]
