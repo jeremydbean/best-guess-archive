@@ -2426,6 +2426,28 @@
       "totalWinners": 3,
       "clueCount": 5,
       "goldClue": 2
+    },
+    {
+      "date": "Wednesday, May 20, 2026",
+      "secretItem": "QUARTER",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 697,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Wednesday, May 20, 2026",
+      "secretItem": "SNAP",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v1",
+      "totalWinners": 1,
+      "clueCount": 5,
+      "goldClue": 1
     }
   ]
 }

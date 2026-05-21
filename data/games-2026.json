@@ -10763,5 +10763,121 @@
     "winnerPayout": "$2,500.00",
     "winnerNames": "Sunny for Days, King Nar Feller Knight",
     "wrongGuesses": ""
+  },
+  {
+    "date": "Wednesday, May 20, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "QUARTER",
+    "clues": [
+      {
+        "number": 1,
+        "text": "MADE THE CALL",
+        "correct": "3",
+        "guesses": "4,852 🥇",
+        "explanation": "In the old days, you had to use a quarter in a payphone to make a call."
+      },
+      {
+        "number": 2,
+        "text": "TWO PINTS TO THE EMERGENCY ROOM",
+        "correct": "133",
+        "guesses": "5,609 🥈",
+        "explanation": "Two pints equals a quart, and the acronym for the emergency room is ER, forming the word quarter."
+      },
+      {
+        "number": 3,
+        "text": "CATCH YOU ON THE FLIP SIDE",
+        "correct": "561",
+        "guesses": "6,094 🥉",
+        "explanation": "Quarters are the classic coin flipped for heads or tails, such as in the NFL."
+      },
+      {
+        "number": 4,
+        "text": "IF I HAD FIVE NICKELS FOR EVERY RIGHT ANSWER...",
+        "correct": "2,976",
+        "guesses": "5,638",
+        "explanation": "Five nickels is equal to the value of a quarter."
+      },
+      {
+        "number": 5,
+        "text": "FOR A SMALL EXPENSE, HERE'S 25 CENTS",
+        "correct": "3,083",
+        "guesses": "4,778",
+        "explanation": "A quarter is worth twenty-five cents, which represents a small expense."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 3,
+    "silverWinners": 133,
+    "bronzeWinners": 561,
+    "totalWinners": 697,
+    "goldPayout": 1000.0,
+    "silverPayout": 18.79,
+    "bronzePayout": 3.56,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "postal postal vilmonk, rainbow fox thirty three, tiffany twisted",
+    "wrongGuesses": "REFEREE, 911, UMPIRE, BLOOD, AMBULANCE"
+  },
+  {
+    "date": "Wednesday, May 20, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Howie Mandel",
+    "secretItem": "SNAP",
+    "clues": [
+      {
+        "number": 1,
+        "text": "THIS IS AN EASY ONE",
+        "correct": "1",
+        "guesses": "7,137 🥇",
+        "explanation": "Saying something is an easy one is another way of saying it can be done in a snap."
+      },
+      {
+        "number": 2,
+        "text": "IT TAKES TWO",
+        "correct": "12",
+        "guesses": "7,231",
+        "explanation": "It takes two fingers, a finger and a thumb, to snap."
+      },
+      {
+        "number": 3,
+        "text": "ATTENTION-GETTING PRESS RELEASE",
+        "correct": "26",
+        "guesses": "4,334",
+        "explanation": "To snap your fingers, you press them together and release to get someone's attention."
+      },
+      {
+        "number": 4,
+        "text": "PANS FROM RIGHT TO LEFT",
+        "correct": "93",
+        "guesses": "2,899",
+        "explanation": "The word pans spelled backwards from right to left is snap."
+      },
+      {
+        "number": 5,
+        "text": "KEEP TIME TO A BOP WITHOUT CRACKLE OR POP",
+        "correct": "1,734",
+        "guesses": "4,209",
+        "explanation": "You can keep time to music by snapping along without a crackle or pop sound."
+      }
+    ],
+    "winningClue": 1,
+    "goldClue": 1,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 1,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 1,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Dakin sketch",
+    "wrongGuesses": "TANGO, CLUE, EGG, CAMERA, PUZZLE"
   }
 ]
