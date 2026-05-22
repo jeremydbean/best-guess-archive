@@ -34535,13 +34535,13 @@
   {
     "date": "Thursday, May 21, 2026",
     "secretItems": [
-      "AN ELEPHANT",
+      "ELEPHANT",
       "THE MIDDLE SEAT"
     ],
     "rounds": [
       {
         "round": 1,
-        "secretItem": "AN ELEPHANT"
+        "secretItem": "ELEPHANT"
       },
       {
         "round": 2,
