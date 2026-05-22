@@ -10879,5 +10879,121 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Dakin sketch",
     "wrongGuesses": "TANGO, CLUE, EGG, CAMERA, PUZZLE"
+  },
+  {
+    "date": "Thursday, May 21, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "AN ELEPHANT",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ROOMMATE WHO GETS THE SILENT TREATMENT",
+        "correct": "16",
+        "guesses": "4,906 🥇",
+        "explanation": "The elephant in the room is a topic that people choose to avoid or ignore."
+      },
+      {
+        "number": 2,
+        "text": "TOTAL RECALL",
+        "correct": "90",
+        "guesses": "4,726 🥈",
+        "explanation": "There is a common idiom that an elephant never forgets."
+      },
+      {
+        "number": 3,
+        "text": "INTERNATIONAL TRUMPET VIRTUOSO",
+        "correct": "304",
+        "guesses": "5,217 🥉",
+        "explanation": "Elephants live in India and Africa and produce loud trumpeting noises."
+      },
+      {
+        "number": 4,
+        "text": "GIANT CREATURE WHOSE NAME ENDS WITH A TINY ONE",
+        "correct": "1,037",
+        "guesses": "2,936",
+        "explanation": "The last three letters of the word elephant spell ant, which is a tiny bug."
+      },
+      {
+        "number": 5,
+        "text": "SHADES OF GRAY, LIKE DUMBO THEY SAY",
+        "correct": "5,310",
+        "guesses": "7,117",
+        "explanation": "Elephants are typically gray and Dumbo is a famous fictional elephant."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 16,
+    "silverWinners": 90,
+    "bronzeWinners": 300,
+    "totalWinners": 406,
+    "goldPayout": 187.5,
+    "silverPayout": 27.77,
+    "bronzePayout": 6.66,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Uncanny, Train junior gala, hardest to muted oatmeal, Muted oatmeal",
+    "wrongGuesses": "ALARM CLOCK, ALARM, ALEXA, MOUSE, SPIDER"
+  },
+  {
+    "date": "Thursday, May 21, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Hunter March",
+    "secretItem": "THE MIDDLE SEAT",
+    "clues": [
+      {
+        "number": 1,
+        "text": "NOBODY LOVES ME",
+        "correct": "0",
+        "guesses": "6,035",
+        "explanation": "Passengers generally dislike choosing the middle seat on a plane flight."
+      },
+      {
+        "number": 2,
+        "text": "IT'S CRUNCH TIME",
+        "correct": "0",
+        "guesses": "9,004",
+        "explanation": "The middle seat is cramped and often requires passengers to crunch in tightly."
+      },
+      {
+        "number": 3,
+        "text": "NOT LEFT AND NOT RIGHT",
+        "correct": "76",
+        "guesses": "3,557 🥇",
+        "explanation": "The middle seat is positioned directly between the left seat and the right seat."
+      },
+      {
+        "number": 4,
+        "text": "RUBBING ELBOWS WITH STRANGERS",
+        "correct": "395",
+        "guesses": "3,198",
+        "explanation": "Sitting in the middle seat usually means rubbing elbows with strangers on both sides."
+      },
+      {
+        "number": 5,
+        "text": "NO WINDOW OR AISLE, SIT IN THE CENTER AND TRY TO SMILE",
+        "correct": "1,643",
+        "guesses": "4,024",
+        "explanation": "The middle seat offers no window or aisle access, forcing you to sit in the center."
+      }
+    ],
+    "winningClue": 3,
+    "goldClue": 3,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 76,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 76,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$98.68",
+    "winnerNames": "Nevendor, Rank Burrito, Purple Cats, Western Eagle, Wavy Skeleton",
+    "wrongGuesses": "TAXES, EXERCISE, GYM, AIRPLANE, SUBWAY"
   }
 ]

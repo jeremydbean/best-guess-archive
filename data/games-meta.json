@@ -2448,6 +2448,28 @@
       "totalWinners": 1,
       "clueCount": 5,
       "goldClue": 1
+    },
+    {
+      "date": "Thursday, May 21, 2026",
+      "secretItem": "AN ELEPHANT",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 406,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Thursday, May 21, 2026",
+      "secretItem": "THE MIDDLE SEAT",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v1",
+      "totalWinners": 76,
+      "clueCount": 5,
+      "goldClue": 3
     }
   ]
 }
