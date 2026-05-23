@@ -2470,6 +2470,28 @@
       "totalWinners": 76,
       "clueCount": 5,
       "goldClue": 3
+    },
+    {
+      "date": "Friday, May 22, 2026",
+      "secretItem": "PRINGLES",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 113,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Friday, May 22, 2026",
+      "secretItem": "WATERSLIDE",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v1",
+      "totalWinners": 73,
+      "clueCount": 5,
+      "goldClue": 1
     }
   ]
 }
