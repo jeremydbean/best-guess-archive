@@ -4185,7 +4185,7 @@ Rules:
       .slice(0, 15)
       .map(([text, entries]) => ({ text, count: entries.length, entries }));
     const wrongGuessMap = {};
-    games.forEach(g => {
+    games.filter(g => g.format === 'v2').forEach(g => {
       if (!g.wrongGuesses) return;
       g.wrongGuesses.split(',').forEach(w => {
         const guess = w.trim().toUpperCase();
