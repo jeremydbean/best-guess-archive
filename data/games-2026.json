@@ -10995,5 +10995,121 @@
     "winnerPayout": "$98.68",
     "winnerNames": "Nevendor, Rank Burrito, Purple Cats, Western Eagle, Wavy Skeleton",
     "wrongGuesses": "TAXES, EXERCISE, GYM, AIRPLANE, SUBWAY"
+  },
+  {
+    "date": "Friday, May 22, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "PRINGLES",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ROCKS A CURVY FIGURE",
+        "correct": "2",
+        "guesses": "6,211 🥇",
+        "explanation": "The chips and the container both have a distinctive curvy shape."
+      },
+      {
+        "number": 2,
+        "text": "SPORTS A REVEALING TUBE TOP",
+        "correct": "21",
+        "guesses": "5,741 🥈",
+        "explanation": "They come in a tube with a see-through lid."
+      },
+      {
+        "number": 3,
+        "text": "THE FINALE CAN BE A BIT OF A REACH",
+        "correct": "90",
+        "guesses": "5,085 🥉",
+        "explanation": "You have to reach deep into the container to get the last few chips."
+      },
+      {
+        "number": 4,
+        "text": "THE LINEUP IS STACKED IN FAVOR OF FLAVOR",
+        "correct": "1,340",
+        "guesses": "3,389",
+        "explanation": "The chips are lined up and stacked, with each variety having a specific flavor."
+      },
+      {
+        "number": 5,
+        "text": "SALTY POP STAR WHO'S ALL THAT AND A CAN OF CHIPS",
+        "correct": "2,757",
+        "guesses": "3,611",
+        "explanation": "These famous snacks come in an iconic can."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 2,
+    "silverWinners": 21,
+    "bronzeWinners": 90,
+    "totalWinners": 113,
+    "goldPayout": 1500.0,
+    "silverPayout": 119.04,
+    "bronzePayout": 22.22,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Slim, Shady, Distant Ladybug",
+    "wrongGuesses": "MOUNT RUSHMORE, WATER SLIDE, STATUE OF LIBERTY, TOOTHPASTE, GUITAR"
+  },
+  {
+    "date": "Friday, May 22, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Hunter March",
+    "secretItem": "WATERSLIDE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "EVERYONE'S IN A RUSH",
+        "correct": "73",
+        "guesses": "7,630 🥇",
+        "explanation": "Riding down the attraction provides an adrenaline rush and involves a rush of water."
+      },
+      {
+        "number": 2,
+        "text": "DROP IT LIKE IT'S HOT",
+        "correct": "44",
+        "guesses": "5,789",
+        "explanation": "You drop down the slide, typically on warm summer days."
+      },
+      {
+        "number": 3,
+        "text": "EXHILARATING YOUTUBE STREAM",
+        "correct": "86",
+        "guesses": "3,173",
+        "explanation": "A tube is sometimes required to go down the stream of water."
+      },
+      {
+        "number": 4,
+        "text": "IT'S A VERY SLIPPERY SLOPE",
+        "correct": "1,015",
+        "guesses": "3,448",
+        "explanation": "The nature of the ride involves sliding down a very slippery incline."
+      },
+      {
+        "number": 5,
+        "text": "WEAR YOUR BATHING SUIT, TO RIDE THIS SUMMERTIME CHUTE",
+        "correct": "3,480",
+        "guesses": "4,718",
+        "explanation": "Appropriate attire for this summertime ride includes a bathing suit."
+      }
+    ],
+    "winningClue": 1,
+    "goldClue": 1,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 73,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 73,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$102.73",
+    "winnerNames": "Tater tot one two three, Beige mongoose, A girl has no name, Copper barrel, old lava",
+    "wrongGuesses": "BLACK FRIDAY, AIRPORT, SUBWAY, MOUNT RUSHMORE, FRATERNITY"
   }
 ]
