@@ -29,6 +29,7 @@ let metaRaw = readJson('data/games-meta.json');
 // Support both old bare-array format and new {years, games} object format.
 let meta = Array.isArray(metaRaw) ? metaRaw : (metaRaw.games || []);
 const transcripts = readJson('data/transcripts.json');
+const dailyPuzzles = fs.existsSync('data/daily-puzzles.json') ? readJson('data/daily-puzzles.json') : [];
 const issues = [];
 const fixes = [];
 const warn = (code, message, context = {}) => issues.push({ level: 'warn', code, message, ...context });
@@ -54,6 +55,11 @@ function validateArchiveDate(date, context = {}) {
   if (weekday !== expectedWeekday) {
     error('date-weekday', `Date weekday should be ${expectedWeekday}`, { date, ...context });
   }
+}
+
+function isAllCapsText(value) {
+  const text = String(value || '');
+  return text === text.toUpperCase();
 }
 
 function archiveDateValue(date) {
@@ -335,6 +341,54 @@ for (const date of transcriptDates) {
   if (!allDates.has(date)) warn('orphan-transcript', 'Transcript date has no matching game date', { date });
 }
 
+const dailyDates = new Set();
+let previousDailyDateValue = 0;
+if (!Array.isArray(dailyPuzzles)) {
+  error('daily-puzzles-shape', 'data/daily-puzzles.json must be a flat array');
+} else {
+  for (const [index, puzzle] of dailyPuzzles.entries()) {
+    validateArchiveDate(puzzle?.date, { index, source: 'daily-puzzles.json', secretItem: puzzle?.secretItem });
+    const currentDateValue = archiveDateValue(puzzle?.date);
+    if (currentDateValue && previousDailyDateValue && currentDateValue < previousDailyDateValue) {
+      error('daily-puzzles-order', 'Daily puzzles must be stored oldest first, newest last', { index, date: puzzle?.date });
+    }
+    if (currentDateValue) previousDailyDateValue = currentDateValue;
+    if (dailyDates.has(puzzle?.date)) error('duplicate-daily-puzzle-date', 'Duplicate daily puzzle date', { index, date: puzzle?.date });
+    dailyDates.add(puzzle?.date);
+
+    const item = String(puzzle?.secretItem || '').trim();
+    if (!item) {
+      error('daily-puzzle-secret-item', 'Daily puzzle is missing secretItem', { index, date: puzzle?.date });
+    } else {
+      if (!isAllCapsText(item)) error('daily-puzzle-secret-item-case', 'Daily puzzle secretItem must be ALL CAPS', { index, date: puzzle?.date, secretItem: item });
+      if (/^(A|AN)\s+/i.test(item)) error('daily-puzzle-secret-item-article', 'Daily puzzle secretItem should strip leading A/AN articles', { index, date: puzzle?.date, secretItem: item });
+    }
+
+    if (!Array.isArray(puzzle?.clues) || puzzle.clues.length !== 5) {
+      error('daily-puzzle-clue-count', 'Daily puzzle must have exactly five clues', { index, date: puzzle?.date, secretItem: item });
+      continue;
+    }
+    puzzle.clues.forEach((clue, clueIndex) => {
+      const expectedNumber = clueIndex + 1;
+      const clueNumber = validateCountValue(clue?.clueNumber, 'clueNumber', { index, date: puzzle?.date, secretItem: item, clue: expectedNumber });
+      if (clueNumber !== expectedNumber) {
+        error('daily-puzzle-clue-number', 'Daily puzzle clueNumber is out of order', { index, date: puzzle?.date, secretItem: item, clue: expectedNumber, actual: clue?.clueNumber });
+      }
+      const text = String(clue?.text || '').trim();
+      if (!text) {
+        error('daily-puzzle-clue-text', 'Daily puzzle clue is missing text', { index, date: puzzle?.date, secretItem: item, clue: expectedNumber });
+      } else if (!isAllCapsText(text)) {
+        error('daily-puzzle-clue-text-case', 'Daily puzzle clue text must be ALL CAPS', { index, date: puzzle?.date, secretItem: item, clue: expectedNumber, text });
+      }
+      for (const field of ['correct', 'guesses', 'explanation']) {
+        if (Object.hasOwn(clue || {}, field)) {
+          error('daily-puzzle-extra-clue-field', 'Daily puzzle clues must not include live-game fields', { index, date: puzzle?.date, secretItem: item, clue: expectedNumber, field });
+        }
+      }
+    });
+  }
+}
+
 const summary = {
   ok: !issues.some(issue => issue.level === 'error'),
   errors: issues.filter(issue => issue.level === 'error').length,
@@ -345,6 +399,7 @@ const summary = {
     meta: meta.length,
     transcripts: transcripts.length,
     gameDates: allDates.size,
+    dailyPuzzles: Array.isArray(dailyPuzzles) ? dailyPuzzles.length : 0,
     inlineScripts: inlineScriptCount
   },
   issues
@@ -354,7 +409,7 @@ if (asJson) {
   console.log(JSON.stringify(summary, null, 2));
 } else {
   console.log(`Data audit: ${summary.ok ? 'PASS' : 'FAIL'}`);
-  console.log(`Games: ${games.length} | Meta: ${meta.length} | Transcripts: ${transcripts.length} | Dates: ${allDates.size} | Inline scripts: ${inlineScriptCount}`);
+  console.log(`Games: ${games.length} | Meta: ${meta.length} | Transcripts: ${transcripts.length} | Dates: ${allDates.size} | Daily puzzles: ${summary.counts.dailyPuzzles} | Inline scripts: ${inlineScriptCount}`);
   console.log(`Errors: ${summary.errors} | Warnings: ${summary.warnings}`);
   for (const fix of fixes) {
     console.log(`[FIXED] ${fix.code}: ${fix.path}`);

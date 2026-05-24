@@ -53,7 +53,8 @@ Last updated: 2026-05-24 (session end)
 - 120 total game days (119 playable + 1 cancelled: Thursday, April 9, 2026).
 - 239 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 203).
 - 120 transcript entries in `data/transcripts.json`.
-- **Daily Puzzles**: new `data/daily-puzzles.json` file for the Best Guess app's daily practice puzzles. First entry: BAND-AID (Saturday, May 24, 2026). See schema below. These are separate from live-show game rounds — no host, no prizes, no winners, no transcript.
+- **Daily Puzzles**: new `data/daily-puzzles.json` file for the Best Guess app's daily practice puzzles. First entry: BAND-AID (Sunday, May 24, 2026). See schema below. These are separate from live-show game rounds — no host, no prizes, no winners, no transcript. `npm run audit` validates this file; `npm run audit:fix` is not needed for daily-puzzle-only edits.
+- **Daily puzzle audit hardening 2026-05-24**: `tools/audit-data.mjs` now validates `data/daily-puzzles.json` as part of `npm run audit`, including flat-array shape, valid weekday/date strings, oldest-first order, duplicate dates, ALL CAPS secret item/clue text, no leading `A`/`AN` secret-item articles, exactly five ordered clues, and no live-game clue fields.
 - **Most Popular Wrong Guesses (Stats)**: now filtered to `format === 'v2'` games only (starting Thursday, April 23, 2026, CHOPSTICKS — the first v2 game). Pre-v2 wrong guesses are excluded from this stat. Each wrong guess in the top-10 also now shows which secret items it appeared in (same style as Reused Clue Text section).
 - **Secret item article rule**: Strip leading "A" and "AN" from secret items (e.g. "AN ELEPHANT" → "ELEPHANT"). Keep "THE" when it is semantically part of the answer (e.g. "THE MIDDLE SEAT" stays as-is). Apply this during any import.
 - **Payout math rule**: Always pre-calculate payouts using `floorCents(v) = Math.floor(v * 100) / 100`. Gemini-provided payout figures are unreliable — always recalculate from winner counts. goldPayout = floorCents(3000 / goldWinners), silverPayout = floorCents(2500 / silverWinners), bronzePayout = floorCents(2000 / bronzeWinners), v1 winnerPayout = floorCents(7500 / winnerCount).
@@ -263,7 +264,7 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 
 ```json
 {
-  "date": "Saturday, May 24, 2026",
+  "date": "Sunday, May 24, 2026",
   "secretItem": "BAND-AID",
   "clues": [
     {"clueNumber": 1, "text": "A WORLDWIDE COVER-UP"},
@@ -277,7 +278,7 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 
 Fields: `date` (full weekday string), `secretItem` (ALL CAPS, no leading article unless "THE" is part of the answer), `clues` array of exactly 5 objects with `clueNumber` (1–5) and `text` (ALL CAPS). No winners, no payouts, no host, no transcript.
 
-To add a new daily puzzle, append a new object to the END of `data/daily-puzzles.json`. No audit step needed (this file is not read by `npm run audit`).
+To add a new daily puzzle, append a new object to the END of `data/daily-puzzles.json`, then run `npm run audit`. Do not run `npm run audit:fix` for daily-puzzle-only edits because there is no generated metadata to update. The audit validates the file is a flat array, dates are valid/unique/oldest-first, secret items and clue text are ALL CAPS, each puzzle has exactly five ordered clues, and clues do not include live-game fields like `correct`, `guesses`, or `explanation`.
 
 ## UI Features Added in This Session
 
@@ -292,7 +293,7 @@ To add a new daily puzzle, append a new object to the END of `data/daily-puzzles
 - **games-meta.json**: Lightweight `{years, games}` object loaded on init for home stats. Year shards (`games-2025.json`, `games-2026.json`, …) lazy-load in parallel when the user first visits Database or Stats. No monolithic `games.json` download.
 - **Chart.js**: Injected dynamically on first Stats page visit only.
 - **filterDatabase**: Debounced 150ms.
-- **Data audit**: `npm run audit:fix` regenerates `games-meta.json`; `npm run audit` validates JSON, inline scripts, generated meta, archive dates, payout values, missing clue explanations, v2 winner totals/payout math, v1 classic winning-clue shape, hybrid format order from May 11 onward, bonus coverage, transcript schemas, transcript/game alignment, result clue text, and escaped HTML entities.
+- **Data audit**: `npm run audit:fix` regenerates `games-meta.json`; `npm run audit` validates JSON, inline scripts, generated meta, archive dates, payout values, missing clue explanations, v2 winner totals/payout math, v1 classic winning-clue shape, hybrid format order from May 11 onward, bonus coverage, transcript schemas, transcript/game alignment, result clue text, escaped HTML entities, and daily puzzle schema/order/casing.
 - **_homeStatsCache**: Invalidated when year shards finish loading or refreshStats() runs.
 
 ## Things Worth Double-Checking After Future Edits
@@ -308,7 +309,7 @@ To add a new daily puzzle, append a new object to the END of `data/daily-puzzles
 - Database details modal shows bonus section for promo dates; verify `g.bonus` is present in the year shard and the title is escaped, desc is trusted HTML.
 - Play feature (`startRandomGame`) awaits full year-shard load before starting.
 - Stats charts render all 5 canvases; Clue 5 bar in "Avg Payout Per Winner by Clue" shows `Avg payout: $2`.
-- `npm run audit:fix` regenerates `data/games-meta.json` from all year shards after every import. Daily puzzles do NOT need an audit step.
+- `npm run audit:fix` regenerates `data/games-meta.json` from all year shards after every live-game import. Daily puzzles do not need `audit:fix`, but they do need `npm run audit`.
 - Transcripts: search finds new date, shows host/chips/sections, database detail buttons work.
 - Daily Puzzles tab: inside the Database page (not a separate nav item). Tab count loads immediately on page open. Search persists across tab switches. Cross-tab matches shown via inline blue hint banner.
 
