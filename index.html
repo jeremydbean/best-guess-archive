@@ -2325,8 +2325,12 @@ class App {
       if (durSel) durSel.value = localStorage.getItem('clue_time') || '20';
     }
     if (name === 'database') {
-      // Preload daily puzzles in the background so cross-search works immediately
-      if (!this._dailyPuzzlesLoaded) this._ensureDailyPuzzlesLoaded().catch(() => {});
+      // Preload daily puzzles so the tab count shows immediately; re-render once loaded
+      if (!this._dailyPuzzlesLoaded) {
+        this._ensureDailyPuzzlesLoaded()
+          .then(() => { if (this._activeView === 'database') this.renderDatabase(); })
+          .catch(() => {});
+      }
       if (this._fullGamesLoaded) {
         this.renderDatabase();
       } else {
