@@ -1134,18 +1134,38 @@ document.addEventListener('focusout', function(e) {
 <!-- DAILY PUZZLES -->
 <template id="view-daily">
 <div class="space-y-6 fade-in pb-20">
-  <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4">
     <div>
       <h2 class="text-3xl font-display font-bold">Daily <span class="text-blue-500">Puzzles</span></h2>
-      <p class="text-slate-400 mt-1 text-sm">One new practice puzzle per day from the Best Guess app — no prizes, just for fun.</p>
+      <p class="text-sm text-slate-400 mt-1">One new practice puzzle per day from the Best Guess app — no prizes, just for fun.</p>
     </div>
-    <div class="shrink-0 text-right">
-      <div class="text-2xl font-display font-bold text-blue-400" id="daily-puzzle-count">—</div>
-      <div class="text-xs text-slate-500 uppercase tracking-widest mt-0.5">Puzzles</div>
+    <div class="relative w-full md:w-96">
+      <span class="material-symbols-outlined absolute left-3 top-3 text-slate-400">search</span>
+      <input id="daily-search" type="text" oninput="app.filterDailyPuzzles()"
+        class="w-full bg-slate-800 border border-slate-700 rounded-full py-2 pl-10 pr-4 text-white focus:outline-none focus:border-blue-500"
+        placeholder="Search answer, date, or clue text…">
     </div>
   </div>
-  <div class="space-y-4" id="daily-puzzle-list">
-    <div class="text-center py-12 text-slate-400">Loading daily puzzles…</div>
+  <div class="rounded-xl overflow-hidden border border-slate-700/50">
+    <div class="overflow-x-auto" id="daily-table-scroll">
+      <table class="w-full text-left text-xs text-slate-300 leading-tight" style="min-width:860px">
+        <thead class="bg-slate-900/80 text-[11px] uppercase font-semibold text-slate-400 sticky top-0 z-20">
+          <tr>
+            <th class="px-4 py-3 db-col-date whitespace-nowrap">Date</th>
+            <th class="px-4 py-3 whitespace-nowrap">Answer</th>
+            <th class="px-4 py-3">Clue 1</th>
+            <th class="px-4 py-3">Clue 2</th>
+            <th class="px-4 py-3">Clue 3</th>
+            <th class="px-4 py-3">Clue 4</th>
+            <th class="px-4 py-3">Clue 5</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-700/50" id="daily-table-body"></tbody>
+      </table>
+    </div>
+    <div class="bg-slate-900/50 px-6 py-3 text-xs text-slate-500">
+      <span id="daily-count-display">Loading…</span>
+    </div>
   </div>
 </div>
 </template>
@@ -2181,35 +2201,51 @@ class App {
     return this._dailyPuzzlesLoading;
   }
 
-  renderDailyPuzzles() {
-    const listEl = document.getElementById('daily-puzzle-list');
-    const countEl = document.getElementById('daily-puzzle-count');
-    if (!listEl) return;
+  _renderDailyTableRows(puzzles, query = '') {
     const esc = (v) => this._escapeHtml(v);
-    const puzzles = this.dailyPuzzles;
-    if (countEl) countEl.innerText = puzzles.length.toLocaleString();
+    const hl = (v) => this._highlight(String(v), query);
     if (!puzzles.length) {
-      listEl.innerHTML = '<div class="text-center py-12 text-slate-400">No daily puzzles yet.</div>';
-      return;
+      return `<tr><td colspan="7" class="text-center py-12 text-slate-400">${query ? 'No puzzles match your search.' : 'No daily puzzles yet.'}</td></tr>`;
     }
-    listEl.innerHTML = [...puzzles].reverse().map(p => {
-      const cluesHtml = p.clues.map(c => `
-        <div class="flex items-stretch rounded-lg overflow-hidden text-sm border border-slate-700/40">
-          <div class="flex items-center justify-center px-3 flex-shrink-0 bg-slate-700/50 text-slate-400 font-bold text-xs font-display min-w-[2.5rem]">${c.clueNumber}</div>
-          <div class="px-3 py-2.5 text-slate-300 font-display uppercase tracking-wide text-xs leading-snug flex items-center">${esc(c.text)}</div>
-        </div>`).join('');
-      return `
-        <div class="glass-panel rounded-xl border border-white/10 p-5 space-y-4">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <div class="text-xs text-slate-500 uppercase tracking-widest mb-1">${esc(p.date)}</div>
-              <div class="text-xl font-display font-bold text-white tracking-wide">${esc(p.secretItem)}</div>
-            </div>
-            <span class="shrink-0 text-[10px] font-bold text-blue-300 bg-blue-900/30 border border-blue-400/20 px-2 py-1 rounded-full uppercase tracking-widest whitespace-nowrap">Daily</span>
-          </div>
-          <div class="space-y-1.5">${cluesHtml}</div>
-        </div>`;
+    return [...puzzles].reverse().map(p => {
+      const cluesHtml = [1,2,3,4,5].map(n => {
+        const c = p.clues.find(x => x.clueNumber === n);
+        const text = c ? c.text : '—';
+        return `<td class="px-4 py-3 max-w-[14rem]"><span class="block truncate text-slate-400 font-display uppercase tracking-wide text-[11px]" title="${esc(text)}">${hl(text)}</span></td>`;
+      }).join('');
+      return `<tr class="hover:bg-white/5 transition-colors">
+        <td class="px-4 py-3 text-slate-400 font-mono text-[11px] db-col-date whitespace-nowrap">${hl(p.date)}</td>
+        <td class="px-4 py-3 font-bold text-white whitespace-nowrap">${hl(p.secretItem)}</td>
+        ${cluesHtml}
+      </tr>`;
     }).join('');
+  }
+
+  renderDailyPuzzles() {
+    const tbody = document.getElementById('daily-table-body');
+    const countEl = document.getElementById('daily-count-display');
+    if (!tbody) return;
+    const puzzles = this.dailyPuzzles;
+    tbody.innerHTML = this._renderDailyTableRows(puzzles);
+    if (countEl) countEl.innerText = `${puzzles.length.toLocaleString()} puzzle${puzzles.length !== 1 ? 's' : ''}`;
+  }
+
+  filterDailyPuzzles() {
+    const searchEl = document.getElementById('daily-search');
+    const tbody = document.getElementById('daily-table-body');
+    const countEl = document.getElementById('daily-count-display');
+    if (!tbody) return;
+    const query = (searchEl?.value || '').trim().toLowerCase();
+    const puzzles = query
+      ? this.dailyPuzzles.filter(p => {
+          const haystack = [p.date, p.secretItem, ...p.clues.map(c => c.text)].join(' ').toLowerCase();
+          return haystack.includes(query);
+        })
+      : this.dailyPuzzles;
+    tbody.innerHTML = this._renderDailyTableRows(puzzles, query);
+    if (countEl) countEl.innerText = query
+      ? `${puzzles.length} of ${this.dailyPuzzles.length} puzzle${this.dailyPuzzles.length !== 1 ? 's' : ''}`
+      : `${puzzles.length.toLocaleString()} puzzle${puzzles.length !== 1 ? 's' : ''}`;
   }
 
   // ==================== VIEWS ====================
