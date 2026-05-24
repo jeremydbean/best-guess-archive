@@ -61,6 +61,16 @@ Extract from the paste:
 
 Use the schema in `AI_HANDOFF.md`. Use `pot: 7500` unless the user specifies otherwise. For episodes before Monday, May 11, 2026, both rounds are normally `format: "v2"` unless the episode says otherwise. Starting Monday, May 11, 2026, the standard format is hybrid: Round 1 is `format: "v2"` tiered gold/silver/bronze, and Round 2 is `format: "v1"` classic mode.
 
+**Secret item article rule**: Strip leading "A" and "AN" from `secretItem` values (e.g. Gemini says "AN ELEPHANT" → store as "ELEPHANT"). Keep "THE" only when it is semantically part of the answer (e.g. "THE MIDDLE SEAT" stays as-is).
+
+**Payout math**: Never trust Gemini's payout figures. Always pre-calculate using `Math.floor(value * 100) / 100`. goldPayout = floorCents(3000 / goldWinners), silverPayout = floorCents(2500 / silverWinners), bronzePayout = floorCents(2000 / bronzeWinners), v1 per-winner = floorCents(7500 / winnerCount).
+
+**Gemini date rule**: Gemini consistently dates transcripts one day ahead of the actual game date. Always verify both the weekday name and day number against a calendar. The host usually states the day in the intro. Correct the date before importing.
+
+**winningClue for v1 with zero-correct early clues**: Set `winningClue` to the earliest clue where `correct > 0`. If clues 1 and 2 had 0 correct and clue 3 was the first correct clue, set `winningClue: 3`.
+
+**Curly quotes in JSON**: Null-speaker transcript annotation lines use Unicode curly quotes (`"…"`). Use Python `content.replace()` for edits — `sed` straight-quote patterns will not match.
+
 Medal emoji in the `guesses` field: append ` 🥇` after the number for the gold clue, ` 🥈` for the silver clue, and ` 🥉` for the bronze clue. Non-winner clues have no emoji. Every playable round still has exactly five clue objects. If a tier had no winners, set that tier's winner count and payout to `0`; omit that tier's medal clue field or set it to `0`.
 
 `winnerPayout` is typically `"$7,500.00"` for v2 rounds. Do not change it to a per-tier amount when a silver or bronze pool is redistributed.
@@ -121,6 +131,46 @@ If the paste says `CANCELLED`, create one stub game:
 }
 ```
 Also add a transcript entry with empty round content, `secretItems: []`, `rounds: []`, and the same six canonical section tags used by playable episodes.
+
+---
+
+## Daily Puzzle Import Procedure
+
+The Best Guess app releases one new practice puzzle per day. These are separate from live-show game rounds — no host, no prize money, no transcript, no winners. They are stored in `data/daily-puzzles.json`.
+
+### Schema
+
+```json
+{
+  "date": "Saturday, May 24, 2026",
+  "secretItem": "BAND-AID",
+  "clues": [
+    {"clueNumber": 1, "text": "A WORLDWIDE COVER-UP"},
+    {"clueNumber": 2, "text": "MAY FOLLOW A SOFT KISS"},
+    {"clueNumber": 3, "text": "WON'T HELP YOUR BRUISED EGO"},
+    {"clueNumber": 4, "text": "CAN BE A REAL PAIN"},
+    {"clueNumber": 5, "text": "YOU STICK WITH THEM 'CAUSE THEY'RE STUCK ON YOU"}
+  ]
+}
+```
+
+### Rules
+
+- `date`: full weekday + month + day + year string (e.g. "Saturday, May 24, 2026").
+- `secretItem`: ALL CAPS. Strip leading "A"/"AN" article (same rule as live game imports). Keep "THE" only when semantically integral to the answer.
+- `clues`: exactly 5 objects with `clueNumber` (integer 1–5) and `text` (ALL CAPS clue string). No `correct`, `guesses`, or `explanation` fields.
+- Append new entries to the **END** of `data/daily-puzzles.json` (oldest first, newest last).
+- Do **not** run `npm run audit:fix` — the audit tool does not process this file.
+
+### Commit
+
+```bash
+git add data/daily-puzzles.json
+git commit -m "Add daily puzzle [DATE]: [SECRET_ITEM]"
+git push -u origin <session-branch>
+```
+
+---
 
 ### Validation Checks
 

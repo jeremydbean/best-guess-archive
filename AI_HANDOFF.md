@@ -1,6 +1,6 @@
 # AI Handoff
 
-Last updated: 2026-05-12
+Last updated: 2026-05-24
 
 ## Current Branch
 
@@ -18,11 +18,12 @@ Last updated: 2026-05-12
 
 ## Latest Known Implementation Commit
 
-- Current commit - Year-based data sharding (games-2025.json, games-2026.json)
-- `bc0a690` - Bonus indicator opens highlighted details
-- `e47f7e4` - Reformat April 27 transcript to canonical Results layout
-- `17fcff7` - Update Apr 27, 2026: screen-verified clues, winner names, wrong guesses, transcript
-- `fbb8b4a` - Reformat all Dec/Jan/Feb/Mar transcripts to match established Results format
+- `0f76222` - Cross-search daily puzzles from main database search bar
+- `acd12bb` - Redesign Daily Puzzles as searchable spreadsheet table
+- `2476b08` - Add Daily Puzzles archive section (new nav tab + data/daily-puzzles.json)
+- `63e0a92` - Show which secret items each popular wrong guess appeared in
+- `c3068f5` - Filter Most Popular Wrong Guesses to v2 format games only
+- Earlier: Imports for May 15–22, 2026 (TETRIS, VACATION, TATTOO, RAKE, MAGNET, BAD BUNNY, QUARTER, SNAP, ELEPHANT, THE MIDDLE SEAT, PRINGLES, WATERSLIDE)
 
 ## Current State
 
@@ -46,9 +47,17 @@ Last updated: 2026-05-12
 - **Admin panel removed**: All game/transcript updates are now done by AI agents (Claude/Codex) directly editing the data files and committing. See "Daily Update Workflow" below.
 - **Bonus/promo data migrated**: `bonusMap` moved from hardcoded JS in `index.html` to a `bonus: {title, desc}` field on each game in the year shards. Rendering code reads `g.bonus` directly. `bonus.desc` may contain safe HTML (`<br>` and `<b>` tags).
 - **Scripts cleaned up**: Legacy docx/admin importer scripts are gone; current automation lives in `scripts/auto-import.py`, with a few one-off historical cleanup scripts still present.
-- Latest imported episode: Monday, May 11, 2026 with SIDEWALK (Round 1, v2) and THE STAR-SPANGLED BANNER (Round 2, v1 classic). This is the first hybrid episode.
-- 111 total game days (110 playable + 1 cancelled: Thursday, April 9, 2026).
-- 221 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 185).
+- Latest imported episode: Friday, May 22, 2026 with PRINGLES (Round 1, v2) and WATERSLIDE (Round 2, v1 classic).
+- 120 total game days (119 playable + 1 cancelled: Thursday, April 9, 2026).
+- 239 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 203).
+- 120 transcript entries in `data/transcripts.json`.
+- **Daily Puzzles**: new `data/daily-puzzles.json` file for the Best Guess app's daily practice puzzles. First entry: BAND-AID (Saturday, May 24, 2026). See schema below. These are separate from live-show game rounds — no host, no prizes, no winners, no transcript.
+- **Most Popular Wrong Guesses (Stats)**: now filtered to `format === 'v2'` games only (starting Thursday, April 23, 2026, CHOPSTICKS — the first v2 game). Pre-v2 wrong guesses are excluded from this stat. Each wrong guess in the top-10 also now shows which secret items it appeared in (same style as Reused Clue Text section).
+- **Secret item article rule**: Strip leading "A" and "AN" from secret items (e.g. "AN ELEPHANT" → "ELEPHANT"). Keep "THE" when it is semantically part of the answer (e.g. "THE MIDDLE SEAT" stays as-is). Apply this during any import.
+- **Payout math rule**: Always pre-calculate payouts using `floorCents(v) = Math.floor(v * 100) / 100`. Gemini-provided payout figures are unreliable — always recalculate from winner counts. goldPayout = floorCents(3000 / goldWinners), silverPayout = floorCents(2500 / silverWinners), bronzePayout = floorCents(2000 / bronzeWinners), v1 winnerPayout = floorCents(7500 / winnerCount).
+- **Gemini transcript date bug**: Gemini consistently labels transcripts with the NEXT day's date (off by +1). Always verify both weekday name and day number against calendar before importing. The host usually names the day in the intro.
+- **Curly quotes in JSON**: Transcript annotation lines (null-speaker recap lines) use Unicode curly quotes `"…"`. `sed` patterns with straight quotes won't match — use Python `content.replace()` for any edits to those strings.
+- **winningClue for v1 with zero-correct early clues**: Set `winningClue` to the earliest clue with `correct > 0`, not necessarily clue 1. Example: BAD BUNNY has `winningClue: 2` (clue 1 had 0 correct); THE MIDDLE SEAT has `winningClue: 3`.
 - **Transcripts reimported** from `Best_Guess_Live_Clean_Readable_Transcripts.docx` (uploaded to repo root). All 100 transcripts use the game data as canonical source for rounds/clues/host/pot/format. Section tags now read "Round 1 Results" / "Round 2 Results" (previously "Reveal").
 - **Jan 1-14 transcripts fixed**: These episodes had no Heading2 section markers in the docx. A heuristic state machine now splits them into 6 sections using phrase triggers ("crystal ball reveals", "correct answer was", etc.) and space-normalized secret-item matching. All 10 episodes are now fully populated.
 - **Mobile transcript layout fixed**: episode list max-height reduced from 32rem to 9rem on mobile; tapping an episode smooth-scrolls to the transcript detail panel. Desktop still uses 32rem two-column layout.
@@ -246,6 +255,34 @@ Each transcript entry:
 
 Sections always appear in exactly this order. `speaker` is a string (host name, "RECAP", etc.) or `null` for lines without a clear speaker.
 
+## daily-puzzles.json Schema
+
+`data/daily-puzzles.json` is a flat JSON array (oldest first). Each entry:
+
+```json
+{
+  "date": "Saturday, May 24, 2026",
+  "secretItem": "BAND-AID",
+  "clues": [
+    {"clueNumber": 1, "text": "A WORLDWIDE COVER-UP"},
+    {"clueNumber": 2, "text": "MAY FOLLOW A SOFT KISS"},
+    {"clueNumber": 3, "text": "WON'T HELP YOUR BRUISED EGO"},
+    {"clueNumber": 4, "text": "CAN BE A REAL PAIN"},
+    {"clueNumber": 5, "text": "YOU STICK WITH THEM 'CAUSE THEY'RE STUCK ON YOU"}
+  ]
+}
+```
+
+Fields: `date` (full weekday string), `secretItem` (ALL CAPS, no leading article unless "THE" is part of the answer), `clues` array of exactly 5 objects with `clueNumber` (1–5) and `text` (ALL CAPS). No winners, no payouts, no host, no transcript.
+
+To add a new daily puzzle, append a new object to the END of `data/daily-puzzles.json`. No audit step needed (this file is not read by `npm run audit`).
+
+## UI Features Added in This Session
+
+- **Daily Puzzles nav tab**: sits between Play and Database in both desktop and mobile nav. Loads `data/daily-puzzles.json` on demand. View shows a searchable spreadsheet table (date, answer, clue 1–5). Search filters across date, answer, and clue text with highlight.
+- **Database cross-search for daily puzzles**: When the Game Database search bar has a query, it simultaneously searches `data/daily-puzzles.json` and shows matching daily puzzles in a separate panel below the main table (blue border, hidden when no matches or empty query). Daily puzzles are preloaded in the background when the database view opens.
+- **Most Popular Wrong Guesses**: filtered to v2-only games; each entry now shows which secret items the wrong guess appeared in (same pattern as Reused Clue Text).
+
 ## Performance Architecture
 
 - **Tailwind**: Static `tailwind.css` (33KB prebuilt). If new Tailwind classes are added to index.html, regenerate with: `npx tailwindcss@3 -i tailwind-input.css -o tailwind.css --minify`
@@ -258,15 +295,19 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 ## Things Worth Double-Checking After Future Edits
 
 - GitHub Pages reflects the newest commit on `main`.
-- Latest manual import completed: Monday, May 11, 2026 (`SIDEWALK`, `THE STAR-SPANGLED BANNER`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
+- Latest manual import completed: Friday, May 22, 2026 (`PRINGLES`, `WATERSLIDE`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
+- Always verify Gemini-provided dates against a calendar (weekday name AND day number). Transcript headers from Gemini are consistently +1 day off.
+- Recalculate all payouts with `Math.floor(v * 100) / 100` — never trust Gemini's payout figures.
+- Strip "A"/"AN" from secret items; keep "THE" only when semantically part of the answer.
 - Friday, May 1, 2026 bonus metadata is attached to both `ZOOM` and `JUMPING JACKS`; audit should have 0 warnings.
 - Desktop database arrows remain visible and clickable while scrolling.
 - Home KPI counters do not cause layout shift.
 - Database details modal shows bonus section for promo dates; verify `g.bonus` is present in the year shard and the title is escaped, desc is trusted HTML.
 - Play feature (`startRandomGame`) awaits full year-shard load before starting.
 - Stats charts render all 5 canvases; Clue 5 bar in "Avg Payout Per Winner by Clue" shows `Avg payout: $2`.
-- `npm run audit:fix` regenerates `data/games-meta.json` from all year shards after every import.
+- `npm run audit:fix` regenerates `data/games-meta.json` from all year shards after every import. Daily puzzles do NOT need an audit step.
 - Transcripts: search finds new date, shows host/chips/sections, database detail buttons work.
+- Daily Puzzles tab: shows a table with all entries from `data/daily-puzzles.json`, searchable. Database search cross-searches daily puzzles and shows matches in a blue-bordered panel below the main table.
 
 ## Working Agreement
 
