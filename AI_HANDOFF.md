@@ -1,6 +1,6 @@
 # AI Handoff
 
-Last updated: 2026-05-24 (session end)
+Last updated: 2026-05-24 (continuing session)
 
 ## Current Branch
 
@@ -18,6 +18,7 @@ Last updated: 2026-05-24 (session end)
 
 ## Latest Known Implementation Commit
 
+- *(pending push)* - Add Daily Puzzles KPI card to Stats page first group
 - `1b952d5` - Match daily puzzle clue font size and wrapping to live games table
 - `4dc37b4` - Keep search when switching tabs; add cross-tab match hint
 - `489cc8c` - Show Daily Puzzles tab count immediately on database load
@@ -55,6 +56,7 @@ Last updated: 2026-05-24 (session end)
 - 120 transcript entries in `data/transcripts.json`.
 - **Daily Puzzles**: new `data/daily-puzzles.json` file for the Best Guess app's daily practice puzzles. First entry: BAND-AID (Sunday, May 24, 2026). See schema below. These are separate from live-show game rounds — no host, no prizes, no winners, no transcript. `npm run audit` validates this file; `npm run audit:fix` is not needed for daily-puzzle-only edits.
 - **Daily puzzle audit hardening 2026-05-24**: `tools/audit-data.mjs` now validates `data/daily-puzzles.json` as part of `npm run audit`, including flat-array shape, valid weekday/date strings, oldest-first order, duplicate dates, ALL CAPS secret item/clue text, no leading `A`/`AN` secret-item articles, exactly five ordered clues, and no live-game clue fields.
+- **Daily Puzzles KPI on Stats page 2026-05-24**: The Stats page first KPI group now includes a "Daily Puzzles Archived" card (purple, puzzle-piece icon) showing the count of puzzles in `data/daily-puzzles.json`. If any dates are missing since May 23, 2026 (the launch date), a warning badge shows "X dates missing". `setView('stats')` now loads daily puzzles alongside full games before rendering, and the stats cache key includes `dp${dailyPuzzles.length}` to invalidate on puzzle count change.
 - **Most Popular Wrong Guesses (Stats)**: now filtered to `format === 'v2'` games only (starting Thursday, April 23, 2026, CHOPSTICKS — the first v2 game). Pre-v2 wrong guesses are excluded from this stat. Each wrong guess in the top-10 also now shows which secret items it appeared in (same style as Reused Clue Text section).
 - **Secret item article rule**: Strip leading "A" and "AN" from secret items (e.g. "AN ELEPHANT" → "ELEPHANT"). Keep "THE" when it is semantically part of the answer (e.g. "THE MIDDLE SEAT" stays as-is). Apply this during any import.
 - **Payout math rule**: Always pre-calculate payouts using `floorCents(v) = Math.floor(v * 100) / 100`. Gemini-provided payout figures are unreliable — always recalculate from winner counts. goldPayout = floorCents(3000 / goldWinners), silverPayout = floorCents(2500 / silverWinners), bronzePayout = floorCents(2000 / bronzeWinners), v1 winnerPayout = floorCents(7500 / winnerCount).
