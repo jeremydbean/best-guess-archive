@@ -961,16 +961,63 @@ document.addEventListener('focusout', function(e) {
     </div>
 <!-- How to Play Modal Template -->
 <template id="how-to-play-modal">
-  <div class="space-y-6">
+  <div class="space-y-5">
     <h2 class="text-3xl font-display font-bold text-yellow-400">How to Play</h2>
-    <ol class="list-decimal list-inside text-slate-200 space-y-2 text-lg">
-      <li>Read the clue and try to guess the secret item.</li>
-      <li>Type your guess and press <b>Lock In</b> or hit <b>Enter</b>.</li>
-      <li>Each round gives you a new clue if you’re wrong.</li>
-      <li>Guess as early as possible for a bigger share of the prize!</li>
-      <li>See your results and popular wrong guesses at the end.</li>
-    </ol>
-    <div class="text-slate-400 text-sm pt-2">Tip: You only get one guess per game. Make it count!</div>
+
+    <p class="text-slate-300 text-sm leading-relaxed">
+      <strong class="text-white">Best Guess Live</strong> is a live game show where contestants watch 5 clues revealed one at a time and try to guess a secret item. The earlier you guess correctly, the bigger your prize.
+    </p>
+
+    <div class="space-y-3">
+      <div class="flex gap-3">
+        <span class="material-symbols-outlined text-yellow-400 shrink-0 mt-0.5" style="font-size:20px">looks_one</span>
+        <div>
+          <div class="text-white font-semibold text-sm">Five clues, hardest first</div>
+          <div class="text-slate-400 text-xs mt-0.5">Clue 1 is the most cryptic. Clue 5 practically gives it away. Guess early to win more.</div>
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <span class="material-symbols-outlined text-yellow-400 shrink-0 mt-0.5" style="font-size:20px">looks_two</span>
+        <div>
+          <div class="text-white font-semibold text-sm">One guess per round</div>
+          <div class="text-slate-400 text-xs mt-0.5">Type your answer and press <strong class="text-slate-200">Lock In</strong> (or Enter) when you’re ready. You can’t change it.</div>
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <span class="material-symbols-outlined text-yellow-400 shrink-0 mt-0.5" style="font-size:20px">looks_3</span>
+        <div>
+          <div class="text-white font-semibold text-sm">Lock in any time</div>
+          <div class="text-slate-400 text-xs mt-0.5">You can submit your guess after seeing just one clue, or wait for more. Once you lock in, you’ll see the remaining clues but can’t change your answer.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prize tiers -->
+    <div class="rounded-xl border border-slate-700/50 overflow-hidden">
+      <div class="bg-slate-800/60 px-4 py-2 text-xs font-bold text-slate-400 uppercase tracking-widest">Prize Tiers (current format)</div>
+      <div class="divide-y divide-slate-700/40">
+        <div class="flex items-center gap-3 px-4 py-2.5">
+          <span class="text-yellow-400 font-black text-sm w-14 shrink-0">🥇 GOLD</span>
+          <span class="text-slate-300 text-xs">Correct on the earliest clue that any gold winner guessed — biggest share of the $3,000 gold pool</span>
+        </div>
+        <div class="flex items-center gap-3 px-4 py-2.5">
+          <span class="text-slate-300 font-black text-sm w-14 shrink-0">🥈 SILVER</span>
+          <span class="text-slate-400 text-xs">Correct on the silver clue — splits the $2,500 silver pool</span>
+        </div>
+        <div class="flex items-center gap-3 px-4 py-2.5">
+          <span class="text-orange-400 font-black text-sm w-14 shrink-0">🥉 BRONZE</span>
+          <span class="text-slate-400 text-xs">Correct on the bronze clue — splits the $2,000 bronze pool</span>
+        </div>
+        <div class="flex items-center gap-3 px-4 py-2.5">
+          <span class="text-slate-500 font-black text-sm w-14 shrink-0">CLASSIC</span>
+          <span class="text-slate-500 text-xs">Some rounds (v1) split the full $7,500 among everyone who got the right answer on the earliest winning clue</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-blue-900/30 border border-blue-500/30 rounded-xl px-4 py-3 text-xs text-blue-200 leading-relaxed">
+      <strong class="text-blue-100">This archive</strong> lets you replay past episodes. Your result shows which tier you would have won in the real show — based on when the actual players guessed.
+    </div>
   </div>
 </template>
 
