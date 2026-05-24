@@ -1155,6 +1155,8 @@ document.addEventListener('focusout', function(e) {
       Daily Puzzles <span class="ml-1 text-xs font-normal opacity-70" id="db-tab-daily-count"></span>
     </button>
   </div>
+  <!-- Cross-tab hint: shown when search matches exist in the other tab -->
+  <div id="db-cross-hint" class="hidden"></div>
   <style>
     /* Responsive database table container */
     .db-responsive-container {
@@ -1895,6 +1897,7 @@ class App {
       nodes.tabDaily = document.getElementById('db-tab-daily');
       nodes.tabLiveCount = document.getElementById('db-tab-live-count');
       nodes.tabDailyCount = document.getElementById('db-tab-daily-count');
+      nodes.crossHint = document.getElementById('db-cross-hint');
     } else if (name === 'stats') {
       nodes.refresh = document.getElementById('refresh-stats-btn');
       nodes.kpis = document.getElementById('stats-kpi-grid');
@@ -3602,6 +3605,22 @@ Rules:
     if (nodes.tabLiveCount) nodes.tabLiveCount.innerText = filter ? `${liveFiltered.length} match${liveFiltered.length !== 1 ? 'es' : ''}` : `${this.games.length}`;
     if (nodes.tabDailyCount) nodes.tabDailyCount.innerText = filter ? `${dailyFiltered.length} match${dailyFiltered.length !== 1 ? 'es' : ''}` : `${this.dailyPuzzles.length}`;
 
+    // --- Cross-tab hint ---
+    if (nodes.crossHint) {
+      const crossCount = isDaily ? liveFiltered.length : dailyFiltered.length;
+      const crossLabel = isDaily ? 'live game' : 'daily puzzle';
+      const crossTab = isDaily ? 'live' : 'daily';
+      if (filter && crossCount > 0) {
+        nodes.crossHint.className = 'flex items-center gap-2 px-3 py-2 rounded-lg text-xs bg-blue-950/50 border border-blue-700/40 text-blue-300';
+        nodes.crossHint.innerHTML = `<span class="material-symbols-outlined" style="font-size:15px;line-height:1">info</span>
+          Also found <strong>${crossCount} ${crossLabel}${crossCount !== 1 ? 's' : ''}</strong> matching "<span class="italic">${this._escapeHtml(filter)}</span>" —
+          <button class="underline underline-offset-2 hover:text-white transition ml-0.5" onclick="app.switchDatabaseTab('${crossTab}')">switch tab to see ${crossCount !== 1 ? 'them' : 'it'}</button>`;
+      } else {
+        nodes.crossHint.className = 'hidden';
+        nodes.crossHint.innerHTML = '';
+      }
+    }
+
     // --- Tab button active styles ---
     const activeClass = ['border-blue-500', 'text-white', 'bg-blue-500/10'];
     const inactiveClass = ['border-transparent', 'text-slate-400'];
@@ -3660,9 +3679,6 @@ Rules:
 
   switchDatabaseTab(tab) {
     this._dbActiveTab = tab;
-    // Clear search when switching tabs
-    const nodes = this._getViewNodes('database');
-    if (nodes.search) nodes.search.value = '';
     if (tab === 'daily' && !this._dailyPuzzlesLoaded) {
       this._ensureDailyPuzzlesLoaded().then(() => this.renderDatabase()).catch(() => this.renderDatabase());
       return;
