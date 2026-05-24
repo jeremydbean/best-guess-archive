@@ -30,7 +30,8 @@ Before editing:
 
 After editing:
 
-- update `AI_HANDOFF.md`
+- update `AI_HANDOFF.md` (always — after every change, not just at session end)
+- update `AGENTS.md` if any workflow rules, schemas, or import procedures changed
 - commit on `main`
 - push to the session feature branch: `git push -u origin <session-branch-from-instructions>`
 - reset local main: `git reset --hard origin/main`

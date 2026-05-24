@@ -1,6 +1,6 @@
 # AI Handoff
 
-Last updated: 2026-05-24
+Last updated: 2026-05-24 (session end)
 
 ## Current Branch
 
@@ -18,12 +18,14 @@ Last updated: 2026-05-24
 
 ## Latest Known Implementation Commit
 
+- `1b952d5` - Match daily puzzle clue font size and wrapping to live games table
+- `4dc37b4` - Keep search when switching tabs; add cross-tab match hint
+- `489cc8c` - Show Daily Puzzles tab count immediately on database load
+- `ce0709f` - Fold Daily Puzzles into Database as a tab, remove standalone nav tab
+- `8430dd2` - Update AI_HANDOFF.md and AGENTS.md for May 15–24 session
 - `0f76222` - Cross-search daily puzzles from main database search bar
-- `acd12bb` - Redesign Daily Puzzles as searchable spreadsheet table
-- `2476b08` - Add Daily Puzzles archive section (new nav tab + data/daily-puzzles.json)
-- `63e0a92` - Show which secret items each popular wrong guess appeared in
-- `c3068f5` - Filter Most Popular Wrong Guesses to v2 format games only
-- Earlier: Imports for May 15–22, 2026 (TETRIS, VACATION, TATTOO, RAKE, MAGNET, BAD BUNNY, QUARTER, SNAP, ELEPHANT, THE MIDDLE SEAT, PRINGLES, WATERSLIDE)
+- Earlier: Stats wrong-guesses v2 filter, game attribution, Daily Puzzles section
+- Earlier: Imports for May 15–22, 2026 (TETRIS through WATERSLIDE)
 
 ## Current State
 
@@ -279,9 +281,10 @@ To add a new daily puzzle, append a new object to the END of `data/daily-puzzles
 
 ## UI Features Added in This Session
 
-- **Daily Puzzles nav tab**: sits between Play and Database in both desktop and mobile nav. Loads `data/daily-puzzles.json` on demand. View shows a searchable spreadsheet table (date, answer, clue 1–5). Search filters across date, answer, and clue text with highlight.
-- **Database cross-search for daily puzzles**: When the Game Database search bar has a query, it simultaneously searches `data/daily-puzzles.json` and shows matching daily puzzles in a separate panel below the main table (blue border, hidden when no matches or empty query). Daily puzzles are preloaded in the background when the database view opens.
-- **Most Popular Wrong Guesses**: filtered to v2-only games; each entry now shows which secret items the wrong guess appeared in (same pattern as Reused Clue Text).
+- **Daily Puzzles tab inside Database**: the Database page has two tabs — "Live Games" and "Daily Puzzles". The standalone Daily nav tab was removed. Tab badges always show total counts and update to "X matches" during a search. Daily puzzles are preloaded when the Database view opens so the count shows immediately without clicking.
+- **Unified cross-tab search**: the single search bar filters whichever tab is active. The query persists when switching tabs (no reset). When the active tab has no matches but the other tab does, a blue info banner appears inline: *"Also found N daily puzzles matching 'X' — switch tab to see them"* with a clickable link.
+- **Daily clue text**: same font, size, and wrapping as the live games table (`font-medium text-slate-200 leading-snug`, `min-width:200px`). No truncation.
+- **Most Popular Wrong Guesses (Stats)**: filtered to v2-only games (since April 23, 2026); each entry now shows which secret items the wrong guess appeared in (same pattern as Reused Clue Text).
 
 ## Performance Architecture
 
@@ -307,7 +310,7 @@ To add a new daily puzzle, append a new object to the END of `data/daily-puzzles
 - Stats charts render all 5 canvases; Clue 5 bar in "Avg Payout Per Winner by Clue" shows `Avg payout: $2`.
 - `npm run audit:fix` regenerates `data/games-meta.json` from all year shards after every import. Daily puzzles do NOT need an audit step.
 - Transcripts: search finds new date, shows host/chips/sections, database detail buttons work.
-- Daily Puzzles tab: shows a table with all entries from `data/daily-puzzles.json`, searchable. Database search cross-searches daily puzzles and shows matches in a blue-bordered panel below the main table.
+- Daily Puzzles tab: inside the Database page (not a separate nav item). Tab count loads immediately on page open. Search persists across tab switches. Cross-tab matches shown via inline blue hint banner.
 
 ## Working Agreement
 
