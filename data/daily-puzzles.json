@@ -1,6 +1,6 @@
 [
   {
-    "date": "Sunday, May 24, 2026",
+    "date": "Saturday, May 23, 2026",
     "secretItem": "BAND-AID",
     "clues": [
       {"clueNumber": 1, "text": "A WORLDWIDE COVER-UP"},
@@ -8,6 +8,17 @@
       {"clueNumber": 3, "text": "WON'T HELP YOUR BRUISED EGO"},
       {"clueNumber": 4, "text": "CAN BE A REAL PAIN"},
       {"clueNumber": 5, "text": "YOU STICK WITH THEM 'CAUSE THEY'RE STUCK ON YOU"}
+    ]
+  },
+  {
+    "date": "Sunday, May 24, 2026",
+    "secretItem": "SHERLOCK HOLMES",
+    "clues": [
+      {"clueNumber": 1, "text": "SMOKE DETECTOR"},
+      {"clueNumber": 2, "text": "A MAN WITH MANY BRIEF CASES"},
+      {"clueNumber": 3, "text": "JUST LIKE YOU, HE LOVES A GOOD CLUE"},
+      {"clueNumber": 4, "text": "SCHOOLS HIS DEAR SIDEKICK IN THE WAYS OF INVESTIGATION"},
+      {"clueNumber": 5, "text": "FICTIONAL BRITISH SLEUTH WHO ALWAYS FINDS THE TRUTH"}
     ]
   }
 ]
