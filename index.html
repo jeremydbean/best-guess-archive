@@ -2190,7 +2190,7 @@ class App {
       const cluesHtml = [1,2,3,4,5].map(n => {
         const c = p.clues.find(x => x.clueNumber === n);
         const text = c ? c.text : '—';
-        return `<td class="px-4 py-3 max-w-[14rem]"><span class="block truncate text-slate-400 font-display uppercase tracking-wide text-[11px]" title="${esc(text)}">${hl(text)}</span></td>`;
+        return `<td class="px-4 py-3 align-middle" style="min-width:200px"><div class="font-medium text-slate-200 leading-snug">${hl(text)}</div></td>`;
       }).join('');
       return `<tr class="hover:bg-white/5 transition-colors">
         <td class="px-4 py-3 text-slate-400 font-mono text-[11px] db-col-date whitespace-nowrap">${hl(p.date)}</td>
