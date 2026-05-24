@@ -794,6 +794,7 @@ document.addEventListener('focusout', function(e) {
       <div class="hidden md:flex items-center space-x-3">
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="home" onclick="app.setView('home')">Home</button>
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="play" onclick="app.startRandomGame()">Play</button>
+        <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="daily" onclick="app.setView('daily')">Daily</button>
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="database" onclick="app.setView('database')">Database</button>
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="stats" onclick="app.setView('stats')">Stats</button>
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="transcripts" onclick="app.setView('transcripts')">Transcripts</button>
@@ -813,6 +814,7 @@ document.addEventListener('focusout', function(e) {
     <div class="flex flex-col p-2 space-y-1">
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('home'); document.getElementById('mobile-menu').classList.add('hidden')">Home</button>
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.startRandomGame(); document.getElementById('mobile-menu').classList.add('hidden')">Play</button>
+      <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('daily'); document.getElementById('mobile-menu').classList.add('hidden')">Daily</button>
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('database'); document.getElementById('mobile-menu').classList.add('hidden')">Database</button>
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('stats'); document.getElementById('mobile-menu').classList.add('hidden')">Stats</button>
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('transcripts'); document.getElementById('mobile-menu').classList.add('hidden')">Transcripts</button>
@@ -1125,6 +1127,25 @@ document.addEventListener('focusout', function(e) {
         </div>
       </div>
     </div>
+  </div>
+</div>
+</template>
+
+<!-- DAILY PUZZLES -->
+<template id="view-daily">
+<div class="space-y-6 fade-in pb-20">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+    <div>
+      <h2 class="text-3xl font-display font-bold">Daily <span class="text-blue-500">Puzzles</span></h2>
+      <p class="text-slate-400 mt-1 text-sm">One new practice puzzle per day from the Best Guess app — no prizes, just for fun.</p>
+    </div>
+    <div class="shrink-0 text-right">
+      <div class="text-2xl font-display font-bold text-blue-400" id="daily-puzzle-count">—</div>
+      <div class="text-xs text-slate-500 uppercase tracking-widest mt-0.5">Puzzles</div>
+    </div>
+  </div>
+  <div class="space-y-4" id="daily-puzzle-list">
+    <div class="text-center py-12 text-slate-400">Loading daily puzzles…</div>
   </div>
 </div>
 </template>
@@ -1830,6 +1851,9 @@ class App {
     this._transcriptsLoaded = false;
     this._transcriptsLoading = null;
     this._transcriptsError = null;
+    this.dailyPuzzles = [];
+    this._dailyPuzzlesLoaded = false;
+    this._dailyPuzzlesLoading = null;
     this._selectedTranscriptDate = '';
     this._homeStatsCache = null;
     this._statsCache = null;
@@ -2138,6 +2162,56 @@ class App {
     return this._transcriptsLoading;
   }
 
+  _ensureDailyPuzzlesLoaded() {
+    if (this._dailyPuzzlesLoaded) return Promise.resolve();
+    if (this._dailyPuzzlesLoading) return this._dailyPuzzlesLoading;
+    this._dailyPuzzlesLoading = fetch('./data/daily-puzzles.json?_=' + Date.now())
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then(data => {
+        this.dailyPuzzles = Array.isArray(data) ? data : [];
+        this._dailyPuzzlesLoaded = true;
+        this._dailyPuzzlesLoading = null;
+      })
+      .catch(err => {
+        console.error('Could not load daily-puzzles.json:', err);
+        this.dailyPuzzles = [];
+        this._dailyPuzzlesLoading = null;
+        throw err;
+      });
+    return this._dailyPuzzlesLoading;
+  }
+
+  renderDailyPuzzles() {
+    const listEl = document.getElementById('daily-puzzle-list');
+    const countEl = document.getElementById('daily-puzzle-count');
+    if (!listEl) return;
+    const esc = (v) => this._escapeHtml(v);
+    const puzzles = this.dailyPuzzles;
+    if (countEl) countEl.innerText = puzzles.length.toLocaleString();
+    if (!puzzles.length) {
+      listEl.innerHTML = '<div class="text-center py-12 text-slate-400">No daily puzzles yet.</div>';
+      return;
+    }
+    listEl.innerHTML = [...puzzles].reverse().map(p => {
+      const cluesHtml = p.clues.map(c => `
+        <div class="flex items-stretch rounded-lg overflow-hidden text-sm border border-slate-700/40">
+          <div class="flex items-center justify-center px-3 flex-shrink-0 bg-slate-700/50 text-slate-400 font-bold text-xs font-display min-w-[2.5rem]">${c.clueNumber}</div>
+          <div class="px-3 py-2.5 text-slate-300 font-display uppercase tracking-wide text-xs leading-snug flex items-center">${esc(c.text)}</div>
+        </div>`).join('');
+      return `
+        <div class="glass-panel rounded-xl border border-white/10 p-5 space-y-4">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="text-xs text-slate-500 uppercase tracking-widest mb-1">${esc(p.date)}</div>
+              <div class="text-xl font-display font-bold text-white tracking-wide">${esc(p.secretItem)}</div>
+            </div>
+            <span class="shrink-0 text-[10px] font-bold text-blue-300 bg-blue-900/30 border border-blue-400/20 px-2 py-1 rounded-full uppercase tracking-widest whitespace-nowrap">Daily</span>
+          </div>
+          <div class="space-y-1.5">${cluesHtml}</div>
+        </div>`;
+    }).join('');
+  }
+
   // ==================== VIEWS ====================
   updateNavActiveState(viewName) {
     document.querySelectorAll('[data-nav-view]').forEach(el => {
@@ -2286,6 +2360,14 @@ class App {
     if (name === 'transcripts') {
       this.renderTranscriptsLoading();
       this._ensureTranscriptsLoaded().then(() => this.renderTranscripts());
+    }
+    if (name === 'daily') {
+      this._ensureDailyPuzzlesLoaded()
+        .then(() => this.renderDailyPuzzles())
+        .catch(err => {
+          const listEl = document.getElementById('daily-puzzle-list');
+          if (listEl) listEl.innerHTML = `<div class="text-center py-12 text-red-400">Failed to load daily puzzles: ${this._escapeHtml(err.message)}</div>`;
+        });
     }
   }
 
