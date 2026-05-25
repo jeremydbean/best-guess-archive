@@ -20,5 +20,16 @@
       {"clueNumber": 4, "text": "SCHOOLS HIS DEAR SIDEKICK IN THE WAYS OF INVESTIGATION"},
       {"clueNumber": 5, "text": "FICTIONAL BRITISH SLEUTH WHO ALWAYS FINDS THE TRUTH"}
     ]
+  },
+  {
+    "date": "Monday, May 25, 2026",
+    "secretItem": "BANANA SPLIT",
+    "clues": [
+      {"clueNumber": 1, "text": "AN AMERICAN CLASSIC"},
+      {"clueNumber": 2, "text": "CHANGES SHAPE OVER TIME"},
+      {"clueNumber": 3, "text": "USUALLY COMES IN A BOAT"},
+      {"clueNumber": 4, "text": "THIS DESSERT HAS MAJOR \"A PEEL\""},
+      {"clueNumber": 5, "text": "PEOPLE GO NUTS FOR ITS 3 SCOOPS"}
+    ]
   }
 ]
