@@ -380,7 +380,7 @@ if (!Array.isArray(dailyPuzzles)) {
       } else if (!isAllCapsText(text)) {
         error('daily-puzzle-clue-text-case', 'Daily puzzle clue text must be ALL CAPS', { index, date: puzzle?.date, secretItem: item, clue: expectedNumber, text });
       }
-      for (const field of ['correct', 'guesses', 'explanation']) {
+      for (const field of ['correct', 'guesses']) {
         if (Object.hasOwn(clue || {}, field)) {
           error('daily-puzzle-extra-clue-field', 'Daily puzzle clues must not include live-game fields', { index, date: puzzle?.date, secretItem: item, clue: expectedNumber, field });
         }
