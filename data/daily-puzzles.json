@@ -31,5 +31,16 @@
       {"clueNumber": 4, "text": "THIS DESSERT HAS MAJOR \"A PEEL\""},
       {"clueNumber": 5, "text": "PEOPLE GO NUTS FOR ITS 3 SCOOPS"}
     ]
+  },
+  {
+    "date": "Tuesday, May 26, 2026",
+    "secretItem": "NEW YORK CITY",
+    "clues": [
+      {"clueNumber": 1, "text": "LOVE THE ISLAND LIFE"},
+      {"clueNumber": 2, "text": "BAD CASE OF INSOMNIA"},
+      {"clueNumber": 3, "text": "THAT IS ONE GIANT PIECE OF FRUIT"},
+      {"clueNumber": 4, "text": "DESPITE ITS NAME, IT'S OVER 200 YEARS OLD"},
+      {"clueNumber": 5, "text": "IT'S SO NICE THEY NAMED IT TWICE"}
+    ]
   }
 ]
