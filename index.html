@@ -4063,7 +4063,8 @@ Rules:
             const active = t.date === this._selectedTranscriptDate;
             const lineCount = (t.sections || []).reduce((sum, section) => sum + (section.lines || []).length, 0);
             const itemText = (t.secretItems || []).length ? t.secretItems.join(' / ') : 'No game played';
-            const hostText = t.host || 'Host unknown';
+            const relatedHosts = [...new Set(this.games.filter(g => g.date === t.date && g.host).map(g => g.host))];
+            const hostText = t.host || relatedHosts.join(', ') || 'Host unknown';
             const sectionCount = (t.sections || []).length;
             const roundCount = (t.rounds || []).length || (t.secretItems || []).length;
             return `<button type="button" data-date="${esc(t.date)}" onclick="app.showTranscriptFromButton(this)"
