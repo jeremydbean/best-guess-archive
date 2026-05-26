@@ -11111,5 +11111,121 @@
     "winnerPayout": "$102.73",
     "winnerNames": "Tater tot one two three, Beige mongoose, A girl has no name, Copper barrel, old lava",
     "wrongGuesses": "BLACK FRIDAY, AIRPORT, SUBWAY, MOUNT RUSHMORE, FRATERNITY"
+  },
+  {
+    "date": "Monday, May 25, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "SHARK",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BACKUP WARNING",
+        "correct": "1",
+        "guesses": "4,090 🥇",
+        "explanation": "Its fin sticks up from its back, warning you it was coming—like a backup warning."
+      },
+      {
+        "number": 2,
+        "text": "GIVE IT A WEEK",
+        "correct": "4",
+        "guesses": "3,049 🥈",
+        "explanation": "Shark Week—the week dedicated to sharks on TV."
+      },
+      {
+        "number": 3,
+        "text": "DEVASTATING SIDE EYE",
+        "correct": "128",
+        "guesses": "4,673 🥉",
+        "explanation": "Their eyes are on either side of their head; if one is looking at you, that's a devastating side eye."
+      },
+      {
+        "number": 4,
+        "text": "A COLD-BLOODED KILLER WITH A SEAFOOD DIET",
+        "correct": "5,273",
+        "guesses": "8,358",
+        "explanation": "They live and hunt in the water and are mostly cold-blooded, feeding on seafood."
+      },
+      {
+        "number": 5,
+        "text": "OCEAN PREDATOR WHOSE FIN AND JAWS MIGHT GIVE YOU PAUSE",
+        "correct": "3,487",
+        "guesses": "4,148",
+        "explanation": "A classic ocean predator whose fin and the movie Jaws are iconic."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 4,
+    "bronzeWinners": 128,
+    "totalWinners": 133,
+    "goldPayout": 3000.0,
+    "silverPayout": 625.0,
+    "bronzePayout": 15.62,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Chris Etrada93",
+    "wrongGuesses": "ICLOUD, BEEP BEEP BEEP, TRIAL, A PIMPLE, KARDASHIAN, SHREK"
+  },
+  {
+    "date": "Monday, May 25, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Howie Mandel",
+    "secretItem": "BRACES",
+    "clues": [
+      {
+        "number": 1,
+        "text": "GIVE TO THE NEEDY",
+        "correct": "2",
+        "guesses": "7,499 🥇",
+        "explanation": "Nobody wants braces; you only get them if you need them—give them to the needy."
+      },
+      {
+        "number": 2,
+        "text": "WELCOME TO THE PEARLY GATES",
+        "correct": "433",
+        "guesses": "6,828",
+        "explanation": "Your pearly whites are your teeth; the gates are the braces that keep them aligned."
+      },
+      {
+        "number": 3,
+        "text": "WIRES WORN BY UNDERCOVER CANINES",
+        "correct": "3,006",
+        "guesses": "4,977",
+        "explanation": "Your canine teeth are covered by brackets and wires—that's what braces are."
+      },
+      {
+        "number": 4,
+        "text": "IN YOUR FACE TO FIX A SPACE",
+        "correct": "2,565",
+        "guesses": "3,455",
+        "explanation": "They're literally on your teeth, in your face, pulling them together to fix gaps."
+      },
+      {
+        "number": 5,
+        "text": "ORTHODONTIC DEVICES FOR STRAIGHT TEETH AT HIGH PRICES",
+        "correct": "1,829",
+        "guesses": "1,991",
+        "explanation": "Braces are expensive orthodontic devices used to straighten teeth."
+      }
+    ],
+    "winningClue": 1,
+    "goldClue": 1,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 2,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 2,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$3,750.00",
+    "winnerNames": "teamblender591, acatchy84",
+    "wrongGuesses": "A MAP, A HUG, COMPLIMENTS, A WELCOME MAT, A LEASH, CHIP AND JOANNA GAINES"
   }
 ]

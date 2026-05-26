@@ -2492,6 +2492,28 @@
       "totalWinners": 73,
       "clueCount": 5,
       "goldClue": 1
+    },
+    {
+      "date": "Monday, May 25, 2026",
+      "secretItem": "SHARK",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 133,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, May 25, 2026",
+      "secretItem": "BRACES",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v1",
+      "totalWinners": 2,
+      "clueCount": 5,
+      "goldClue": 1
     }
   ]
 }
