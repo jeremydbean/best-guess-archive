@@ -59,7 +59,12 @@ Extract from the paste:
 
 ### 2. Build two game objects (one per round)
 
-Use the schema in `AI_HANDOFF.md`. Use `pot: 7500` unless the user specifies otherwise. For episodes before Monday, May 11, 2026, both rounds are normally `format: "v2"` unless the episode says otherwise. Starting Monday, May 11, 2026, the standard format is hybrid: Round 1 is `format: "v2"` tiered gold/silver/bronze, and Round 2 is `format: "v1"` classic mode.
+Use the schema in `AI_HANDOFF.md`. Use `pot: 7500` unless the user specifies otherwise.
+
+**Format rules by date:**
+- Before Monday, May 11, 2026: both rounds are normally `format: "v2"` unless the episode says otherwise.
+- Monday, May 11, 2026 through Tuesday, May 26, 2026: hybrid format — Round 1 is `format: "v2"` tiered gold/silver/bronze, Round 2 is `format: "v1"` classic mode (earliest correct clue splits the full $7,500 pot).
+- Starting Wednesday, May 27, 2026: both rounds use `format: "v2"` tiered gold/silver/bronze (announced on the May 25, 2026 episode). Each round has three pools: gold $3,000, silver $2,500, bronze $2,000.
 
 **Secret item article rule**: Strip leading "A" and "AN" from `secretItem` values (e.g. Gemini says "AN ELEPHANT" → store as "ELEPHANT"). Keep "THE" only when it is semantically part of the answer (e.g. "THE MIDDLE SEAT" stays as-is).
 

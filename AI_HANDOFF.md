@@ -1,6 +1,6 @@
 # AI Handoff
 
-Last updated: 2026-05-24 (continuing session)
+Last updated: 2026-05-26 (session end)
 
 ## Current Branch
 
@@ -18,14 +18,14 @@ Last updated: 2026-05-24 (continuing session)
 
 ## Latest Known Implementation Commit
 
-- *(pending push)* - Add Daily Puzzles KPI card to Stats page first group
+- `0631cd7` - Add daily puzzle May 26: NEW YORK CITY
+- `c863060` - Import May 25, 2026: SHARK and BRACES
+- `3696e47` - Add daily puzzle May 25: BANANA SPLIT
+- `af06a51` - Rewrite How to Play modal with accurate game instructions
+- `b258c80` - Add daily puzzle May 24: SHERLOCK HOLMES; fix BAND-AID date to May 23
+- `bdaa4d1` - Add Daily Puzzles KPI card to Stats page
 - `1b952d5` - Match daily puzzle clue font size and wrapping to live games table
-- `4dc37b4` - Keep search when switching tabs; add cross-tab match hint
-- `489cc8c` - Show Daily Puzzles tab count immediately on database load
-- `ce0709f` - Fold Daily Puzzles into Database as a tab, remove standalone nav tab
-- `8430dd2` - Update AI_HANDOFF.md and AGENTS.md for May 15–24 session
-- `0f76222` - Cross-search daily puzzles from main database search bar
-- Earlier: Stats wrong-guesses v2 filter, game attribution, Daily Puzzles section
+- Earlier: Tabbed database (Live/Daily), cross-tab search, Stats wrong-guesses v2 filter
 - Earlier: Imports for May 15–22, 2026 (TETRIS through WATERSLIDE)
 
 ## Current State
@@ -55,9 +55,13 @@ Last updated: 2026-05-24 (continuing session)
 - 121 total game days (120 playable + 1 cancelled: Thursday, April 9, 2026).
 - 241 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 205).
 - 121 transcript entries in `data/transcripts.json`.
-- **Daily Puzzles**: `data/daily-puzzles.json` stores Best Guess app daily practice puzzles. First entry: BAND-AID (Saturday, May 23, 2026 — launch day). Second: SHERLOCK HOLMES (Sunday, May 24, 2026). These are separate from live-show game rounds — no host, no prizes, no winners, no transcript. `npm run audit` validates this file; `npm run audit:fix` is not needed for daily-puzzle-only edits.
+- **Daily Puzzles**: `data/daily-puzzles.json` stores Best Guess app daily practice puzzles. Launched Saturday, May 23, 2026. Current entries: BAND-AID (May 23), SHERLOCK HOLMES (May 24), BANANA SPLIT (May 25), NEW YORK CITY (May 26). These are separate from live-show game rounds — no host, no prizes, no winners, no transcript. `npm run audit` validates this file; `npm run audit:fix` is not needed for daily-puzzle-only edits.
 - **Daily puzzle audit hardening 2026-05-24**: `tools/audit-data.mjs` now validates `data/daily-puzzles.json` as part of `npm run audit`, including flat-array shape, valid weekday/date strings, oldest-first order, duplicate dates, ALL CAPS secret item/clue text, no leading `A`/`AN` secret-item articles, exactly five ordered clues, and no live-game clue fields.
 - **Daily Puzzles KPI on Stats page 2026-05-24**: The Stats page first KPI group now includes a "Daily Puzzles Archived" card (purple, puzzle-piece icon) showing the count of puzzles in `data/daily-puzzles.json`. If any dates are missing since May 23, 2026 (the launch date), a warning badge shows "X dates missing". `setView('stats')` now loads daily puzzles alongside full games before rendering, and the stats cache key includes `dp${dailyPuzzles.length}` to invalidate on puzzle count change.
+- **How to Play modal rewrite 2026-05-25**: The How to Play modal (`#how-to-play-modal` template in `index.html`) now contains real game instructions: five-clue structure (hardest first), one-guess-per-round rule, lock-in mechanic, v2 gold/silver/bronze prize tier table ($3K/$2.5K/$2K pools), v1 classic mode explanation, and a blue callout noting the archive maps your result to real-show tier thresholds.
+- **BAND-AID date fix 2026-05-25**: The first daily puzzle was incorrectly dated "Sunday, May 24" (Codex had fixed the wrong field). Corrected to "Saturday, May 23, 2026". The puzzle launched May 23; May 24's puzzle is SHERLOCK HOLMES.
+- **Daily puzzle imports May 23–26**: BAND-AID (Sat May 23), SHERLOCK HOLMES (Sun May 24), BANANA SPLIT (Mon May 25), NEW YORK CITY (Tue May 26) — all in `data/daily-puzzles.json`.
+- **May 25, 2026 episode imported**: Memorial Day, hosted by Howie Mandel. SHARK (Round 1, v2): gold Clue 1 (1 winner, $3,000 — Chris Etrada93), silver Clue 2 (4 winners, $625 each), bronze Clue 3 (128 winners, $15.62 each). BRACES (Round 2, v1 classic): winning Clue 1, 2 winners ($3,750 each — teamblender591, acatchy84).
 - **Most Popular Wrong Guesses (Stats)**: now filtered to `format === 'v2'` games only (starting Thursday, April 23, 2026, CHOPSTICKS — the first v2 game). Pre-v2 wrong guesses are excluded from this stat. Each wrong guess in the top-10 also now shows which secret items it appeared in (same style as Reused Clue Text section).
 - **Secret item article rule**: Strip leading "A" and "AN" from secret items (e.g. "AN ELEPHANT" → "ELEPHANT"). Keep "THE" when it is semantically part of the answer (e.g. "THE MIDDLE SEAT" stays as-is). Apply this during any import.
 - **Payout math rule**: Always pre-calculate payouts using `floorCents(v) = Math.floor(v * 100) / 100`. Gemini-provided payout figures are unreliable — always recalculate from winner counts. goldPayout = floorCents(3000 / goldWinners), silverPayout = floorCents(2500 / silverWinners), bronzePayout = floorCents(2000 / bronzeWinners), v1 winnerPayout = floorCents(7500 / winnerCount).
