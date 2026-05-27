@@ -35802,5 +35802,346 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, May 26, 2026",
+    "secretItems": [
+      "BRUNCH",
+      "ASTRONAUT"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "BRUNCH"
+      },
+      {
+        "round": 2,
+        "secretItem": "ASTRONAUT"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I am your host Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I want to start by shouting out all of you that have played the new daily puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds. Each round has one puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one will be a tiered puzzle which has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're going to load our crystal ball with a secret item. It could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues, but remember the clues are written like riddles. They're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you'll get twenty seconds to submit an answer, but you only get one best guess per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer and we do not accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The bottom line: you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in on the second earliest clue will split the silver pot of two thousand five hundred dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And everyone that gets it right on the third earliest clue gets the bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is worth seven thousand five hundred dollars. Let's load the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: After and before. Twenty seconds on the clock, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. After and before."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: Collision course. Twenty seconds on the clock, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Collision course."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: Three syllables served in one. Twenty seconds on the clock, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Three syllables served in one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: Not to be confused with linner. Twenty seconds on the clock, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: Special meal where Benedicts and mimosas sound ideal. Twenty seconds, your final twenty seconds for this round, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was brunch."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "She loves brunch. Let's find out who's taking home the money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: Special meal where Benedicts and mimosas sound ideal. Six thousand one hundred and thirty-six guesses. 4,888 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: Not to be confused with linner. Linner is the brunch of late afternoon — it combines lunch and dinner. 7,116 guesses. 3,860 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: Three syllables served in one. Breakfast, lunch — served in one meal. 4,382 guesses. Thirty-six people got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: Collision course. It combines two words and two meals. 3,974 guesses. Twenty-four people got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: After and before. It happens after breakfast time and before lunchtime. 2,952 guesses. Was it twelve people? No — thirteen people got gold."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “SPECIAL MEAL WHERE BENEDICTS AND MIMOSAS SOUND IDEAL.” Those are two very go-to brunch items, stereotypically. 4,888 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “NOT TO BE CONFUSED WITH LINNER.” Linner combines lunch and dinner, as opposed to breakfast and lunch. 3,860 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “THREE SYLLABLES SERVED IN ONE.” Breakfast and lunch are served in one meal. 36 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “COLLISION COURSE.” It combines two words and two meals. 24 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “AFTER AND BEFORE.” It happens after breakfast time and before lunchtime. 13 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 13 winners at $230.76 each. Silver (Clue 2): 24 winners at $104.16 each. Bronze (Clue 3): 36 winners at $55.55 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thirteen people got it right on after and before — going home with $230.76 each. Living era nine-nine-nine, Skimpy Oval, Sora attack three and a bunch more."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Silver: twenty-four people going home with $104.16 on collision course. Bronze: thirty-six people going home with $55.55 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now: our shark story. A player posted the whole story on Reddit and Discord. He's played almost every puzzle. Two correct answers in over 200 puzzles. Last night he saw backup warning, thought shark, and won three thousand dollars. His first win ever. Congratulations to Chris."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before we start round two, we need to acknowledge this will be our last classic puzzle. Starting tomorrow we're going back to tiered for both puzzles, which means a lot more winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But right now it's winner take all for seven thousand five hundred dollars, baby. One last time. Let us load the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Seven thousand five hundred dollars. This is the last chance this week to win seven thousand five hundred dollars in one go."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: Shift starts after one. Twenty seconds, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Shift starts after one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: Famously not under the weather. Twenty seconds, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: Puts on hose to go for a walk. Twenty seconds, starts now. Look at how hose is spelled — changes the meaning a lot."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: Has plenty of space but not much room. Twenty seconds, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: Represents their nation on an orbiting station. Twenty seconds, your final twenty seconds. Starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up. That's all five clues. Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was an astronaut!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly surprised we haven't done this one yet. The question is who did what."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: Represents their nation on an orbiting station. Astronauts from all over the world go up into orbit. 4,035 guesses. 1,927 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: Has plenty of space but not much room. Outer space is basically infinite, but it's cramped inside the spacecraft. 3,850 guesses. 1,361 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: Puts on hose to go for a walk. When they go for a spacewalk, they wear a suit with an air hose. 4,436 guesses. 269 people got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: Famously not under the weather. When an astronaut goes to space, they're above all the weather on Earth. 4,916 guesses. Exactly 71 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Did anyone get it right on clue number one? Shift starts after one — an astronaut launches into space after the famous ten, nine, eight, seven, six, five, four, three, two, one, liftoff."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Seven thousand four hundred and ninety-three guesses. Out of those, exactly eight people got it right — going home with nine hundred and thirty-seven dollars and fifty cents each."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “REPRESENTS THEIR NATION ON AN ORBITING STATION.” Astronauts from all over the world go up into orbit. 1,927 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “HAS PLENTY OF SPACE BUT NOT MUCH ROOM.” Outer space is basically infinite, but it's cramped inside the spacecraft. 1,361 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “PUTS ON HOSE TO GO FOR A WALK.” When they go for a spacewalk, they wear a suit with an air hose. 269 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “FAMOUSLY NOT UNDER THE WEATHER.” When an astronaut goes to space, they're above all the weather on Earth. 71 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “SHIFT STARTS AFTER ONE.” An astronaut launches into space after the countdown hits one. 8 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Classic mode (Clue 1): 8 winners at $937.50 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to It's Mikayla, Pretty Shy, Peachy Vanilla, Kurt, six fifteen, and a bunch more."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: DINNER, BREAKFAST, ACCIDENT, METEOR, DMV"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: SPRINKLER, GRAVEYARD, FIREFIGHTER, EARTHQUAKE, MOON"
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners. We are here every weekday, eight Eastern, five Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow. Don't forget to bring your best guess. Good night!"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -2514,6 +2514,28 @@
       "totalWinners": 2,
       "clueCount": 5,
       "goldClue": 1
+    },
+    {
+      "date": "Tuesday, May 26, 2026",
+      "secretItem": "BRUNCH",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 73,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Tuesday, May 26, 2026",
+      "secretItem": "ASTRONAUT",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v1",
+      "totalWinners": 8,
+      "clueCount": 5,
+      "goldClue": 1
     }
   ]
 }
