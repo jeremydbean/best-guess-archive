@@ -11227,5 +11227,121 @@
     "winnerPayout": "$3,750.00",
     "winnerNames": "teamblender591, acatchy84",
     "wrongGuesses": "CHARITY, DENTIST, SALVATION ARMY, CHURCH, HEAVEN"
+  },
+  {
+    "date": "Tuesday, May 26, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BRUNCH",
+    "clues": [
+      {
+        "number": 1,
+        "text": "AFTER AND BEFORE",
+        "correct": "13",
+        "guesses": "2,952 🥇",
+        "explanation": "It happens after breakfast time and before lunchtime."
+      },
+      {
+        "number": 2,
+        "text": "COLLISION COURSE",
+        "correct": "24",
+        "guesses": "3,974 🥈",
+        "explanation": "It combines two words and two meals."
+      },
+      {
+        "number": 3,
+        "text": "THREE SYLLABLES SERVED IN ONE",
+        "correct": "36",
+        "guesses": "4,382 🥉",
+        "explanation": "Breakfast and lunch are served in one meal."
+      },
+      {
+        "number": 4,
+        "text": "NOT TO BE CONFUSED WITH LINNER",
+        "correct": "3,860",
+        "guesses": "7,116",
+        "explanation": "Linner combines lunch and dinner, as opposed to breakfast and lunch."
+      },
+      {
+        "number": 5,
+        "text": "SPECIAL MEAL WHERE BENEDICTS AND MIMOSAS SOUND IDEAL",
+        "correct": "4,888",
+        "guesses": "6,136",
+        "explanation": "Those are two very go-to brunch items, stereotypically."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 13,
+    "silverWinners": 24,
+    "bronzeWinners": 36,
+    "totalWinners": 73,
+    "goldPayout": 230.76,
+    "silverPayout": 104.16,
+    "bronzePayout": 55.55,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Living era fine-nine-nine, Skimpy oval, Sora attack three",
+    "wrongGuesses": "DINNER, BREAKFAST, ACCIDENT, METEOR, DMV"
+  },
+  {
+    "date": "Tuesday, May 26, 2026",
+    "pot": 7500,
+    "format": "v1",
+    "host": "Hunter March",
+    "secretItem": "ASTRONAUT",
+    "clues": [
+      {
+        "number": 1,
+        "text": "SHIFT STARTS AFTER ONE",
+        "correct": "8",
+        "guesses": "7,493 🥇",
+        "explanation": "An astronaut launches into space after the countdown hits one."
+      },
+      {
+        "number": 2,
+        "text": "FAMOUSLY NOT UNDER THE WEATHER",
+        "correct": "71",
+        "guesses": "4,916",
+        "explanation": "When an astronaut goes to space, they're above all the weather on Earth."
+      },
+      {
+        "number": 3,
+        "text": "PUTS ON HOSE TO GO FOR A WALK",
+        "correct": "269",
+        "guesses": "4,436",
+        "explanation": "When they go for a spacewalk, they wear a suit with an air hose."
+      },
+      {
+        "number": 4,
+        "text": "HAS PLENTY OF SPACE BUT NOT MUCH ROOM",
+        "correct": "1,361",
+        "guesses": "3,850",
+        "explanation": "Outer space is basically infinite, but it's cramped inside the spacecraft."
+      },
+      {
+        "number": 5,
+        "text": "REPRESENTS THEIR NATION ON AN ORBITING STATION",
+        "correct": "1,927",
+        "guesses": "4,035",
+        "explanation": "Astronauts from all over the world go up into orbit."
+      }
+    ],
+    "winningClue": 1,
+    "goldClue": 1,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "winnerCount": 8,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 8,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$937.50",
+    "winnerNames": "It's Mikayla, Pretty Shy, Peachy Vanilla, Kurt, six fifteen",
+    "wrongGuesses": "SPRINKLER, GRAVEYARD, FIREFIGHTER, EARTHQUAKE, MOON"
   }
 ]
