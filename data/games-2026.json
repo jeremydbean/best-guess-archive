@@ -11343,5 +11343,119 @@
     "winnerPayout": "$937.50",
     "winnerNames": "It's Mikayla, Pretty Shy, Peachy Vanilla, Kurt, six fifteen",
     "wrongGuesses": "SPRINKLER, GRAVEYARD, FIREFIGHTER, EARTHQUAKE, MOON"
+  },
+  {
+    "date": "Wednesday, May 27, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "THE GYM",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ROOM FOR IMPROVEMENT",
+        "correct": "1,172",
+        "guesses": "4,749 🥇",
+        "explanation": "A gym is a room for improvement."
+      },
+      {
+        "number": 2,
+        "text": "SHORT PANTS ARE TOLERATED",
+        "correct": "2,201",
+        "guesses": "5,864 🥈",
+        "explanation": "Short pants are worn at the gym, and the panting from working out is tolerated too."
+      },
+      {
+        "number": 3,
+        "text": "IT'S ALL ABOUT SELF-REFLECTION, MY G",
+        "correct": "1,805",
+        "guesses": "6,000 🥉",
+        "explanation": "Reflecting 'my G' backwards spells gym."
+      },
+      {
+        "number": 4,
+        "text": "DROP THE WEIGHT, BUT DON'T DROP THE WEIGHT",
+        "correct": "4,247",
+        "guesses": "6,018",
+        "explanation": "You can lose weight at the gym, but dropping your weights is bad form."
+      },
+      {
+        "number": 5,
+        "text": "COME HERE IN A HUSTLE IF YOU'RE PUTTING ON MUSCLE",
+        "correct": "2,200",
+        "guesses": "2,500",
+        "explanation": "People go to the gym to build muscle."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1172,
+    "silverWinners": 2201,
+    "bronzeWinners": 1805,
+    "totalWinners": 5178,
+    "goldPayout": 2.55,
+    "silverPayout": 1.13,
+    "bronzePayout": 1.1,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "WrongGenes670, MojoRiot",
+    "wrongGuesses": "MIRROR, GARAGE, GOLF, TAILOR, BATHROOM"
+  },
+  {
+    "date": "Wednesday, May 27, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "JUGGLING",
+    "clues": [
+      {
+        "number": 1,
+        "text": "SHIFT STARTS AFTER ONE",
+        "correct": "1",
+        "guesses": "5,259 🥇",
+        "explanation": "Juggling requires more than one object — the shift starts when a second is added."
+      },
+      {
+        "number": 2,
+        "text": "KEEP IT MOVING",
+        "correct": "3",
+        "guesses": "6,980 🥈",
+        "explanation": "Juggling requires keeping objects moving in the air continuously."
+      },
+      {
+        "number": 3,
+        "text": "CATCH AND RELEASE",
+        "correct": "25",
+        "guesses": "6,064 🥉",
+        "explanation": "Juggling is an endless loop of catching and releasing objects."
+      },
+      {
+        "number": 4,
+        "text": "YOU HAVE TO THROW UP",
+        "correct": "336",
+        "guesses": "3,868",
+        "explanation": "Juggling requires throwing objects up into the air."
+      },
+      {
+        "number": 5,
+        "text": "KEEP THE BALLS IN THE AIR AT A CIRCUS OR FAIR",
+        "correct": "3,561",
+        "guesses": "4,000",
+        "explanation": "Juggling balls is a classic circus and fair performance."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 3,
+    "bronzeWinners": 25,
+    "totalWinners": 29,
+    "goldPayout": 3000.0,
+    "silverPayout": 833.33,
+    "bronzePayout": 80.0,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Apples the Journey",
+    "wrongGuesses": "FISHING, BASEBALL, BASKETBALL, CLUTCH, GRAVEYARD"
   }
 ]

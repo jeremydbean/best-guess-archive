@@ -36143,5 +36143,282 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Wednesday, May 27, 2026",
+    "secretItems": [
+      "THE GYM",
+      "JUGGLING"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "THE GYM"
+      },
+      {
+        "round": 2,
+        "secretItem": "JUGGLING"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome back to Best Guess Live! I'm your host Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's Wednesday, and it's a very special Wednesday — today we are going back to tiered pricing for both puzzles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Tiered means more winners across the board and a much better chance of cashing in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode has two rounds, each with one puzzle and three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We load our crystal ball with a secret item, then I give you five clues written like riddles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue you get twenty seconds to submit an answer, but you only get one best guess per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer — no typos. You want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone on the earliest correct clue splits the gold pot of three thousand dollars, second earliest splits silver at two thousand five hundred, third earliest splits bronze at two thousand."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one: seven thousand five hundred dollars. Let's load the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: Room for improvement. Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Clue number two: Short pants are tolerated. Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Clue number three: It's all about self-reflection, my G. Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Clue number four: Drop the weight, but don't drop the weight. Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Clue number five: Come here in a hustle if you're putting on muscle. Twenty seconds, your final twenty seconds. Starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up. Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was the gym!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, how scary a place. Let's see how the clues fit and who's taking home the money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue five: Come here in a hustle if you're putting on muscle — people go to the gym to build muscle. 2,200 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue four: Drop the weight, but don't drop the weight — lose weight at the gym, but dropping your weights is bad form. 4,247 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue three: It's all about self-reflection, my G — reflecting 'my G' backwards spells gym. 1,805 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue two: Short pants are tolerated — short pants are worn at the gym, and panting from the workout is tolerated too. 2,201 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue one: Room for improvement — a gym is a room for improvement. 1,172 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “COME HERE IN A HUSTLE IF YOU'RE PUTTING ON MUSCLE.” People go to the gym to build muscle. 2,200 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “DROP THE WEIGHT, BUT DON'T DROP THE WEIGHT.” You can lose weight at the gym, but dropping your weights is bad form. 4,247 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “IT'S ALL ABOUT SELF-REFLECTION, MY G.” Reflecting 'my G' backwards spells gym. 1,805 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “SHORT PANTS ARE TOLERATED.” Short pants are worn at the gym, and panting from the workout is tolerated too. 2,201 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “ROOM FOR IMPROVEMENT.” A gym is a room for improvement. 1,172 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1,172 winners at $2.55 each. Silver (Clue 2): 2,201 winners at $1.13 each. Bronze (Clue 3): 1,805 winners at $1.10 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to WrongGenes670, MojoRiot, and all 1,172 gold winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round two coming up — another tiered puzzle. Let's load the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: Shift starts after one. Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I know this sounds familiar from yesterday, but I promise it is not the same answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Clue number two: Keep it moving! Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Clue number three: Catch and release. Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Clue number four: You have to throw up. Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up. Clue number five: Keep the balls in the air at a circus or fair. Twenty seconds, your final twenty seconds. Starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up. Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was juggling!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And they gave me juggling balls as if I knew how to use them — let me give this a go."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue five: Keep the balls in the air at a circus or fair — classic juggling venues. 3,561 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue four: You have to throw up — juggling requires throwing objects into the air. 336 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue three: Catch and release — an endless loop of catching and releasing. 25 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue two: Keep it moving — everything stays in the air continuously. 3 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue one: Shift starts after one — juggling needs more than one object; the shift begins when you add a second. Exactly 1 person got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “KEEP THE BALLS IN THE AIR AT A CIRCUS OR FAIR.” Juggling balls is a classic circus and fair performance. 3,561 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “YOU HAVE TO THROW UP.” Juggling requires throwing objects up into the air. 336 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “CATCH AND RELEASE.” Juggling is an endless loop of catching and releasing objects. 25 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “KEEP IT MOVING.” Juggling requires keeping objects moving in the air continuously. 3 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “SHIFT STARTS AFTER ONE.” Juggling requires more than one object — the shift starts when a second is added. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1 winner at $3,000.00. Silver (Clue 2): 3 winners at $833.33 each. Bronze (Clue 3): 25 winners at $80.00 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Apples the Journey — three thousand dollars, the most clown name I've ever heard, and I love it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Silver winners going home with $833.33 each, and bronze winners with $80.00 each — eighty bucks, not bad."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: MIRROR, GARAGE, GOLF, TAILOR, BATHROOM"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: FISHING, BASEBALL, BASKETBALL, CLUTCH, GRAVEYARD"
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to all our winners. We're here every weekday at eight Eastern, five Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow and don't forget to bring your best guess. Good night!"
+          }
+        ]
+      }
+    ]
   }
 ]
