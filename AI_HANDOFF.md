@@ -1,6 +1,6 @@
 # AI Handoff
 
-Last updated: 2026-05-26 (session end)
+Last updated: 2026-05-28 (session end)
 
 ## Current Branch
 
@@ -18,13 +18,11 @@ Last updated: 2026-05-26 (session end)
 
 ## Latest Known Implementation Commit
 
-- `0631cd7` - Add daily puzzle May 26: NEW YORK CITY
-- `c863060` - Import May 25, 2026: SHARK and BRACES
-- `3696e47` - Add daily puzzle May 25: BANANA SPLIT
-- `af06a51` - Rewrite How to Play modal with accurate game instructions
-- `b258c80` - Add daily puzzle May 24: SHERLOCK HOLMES; fix BAND-AID date to May 23
-- `bdaa4d1` - Add Daily Puzzles KPI card to Stats page
-- `1b952d5` - Match daily puzzle clue font size and wrapping to live games table
+- `305c476` - Import May 27, 2026: THE GYM (v2) and JUGGLING (v2); confirm both-v2 era
+- `3aa82b7` - Add daily puzzle May 27: TIKTOK; daily puzzle explanations shortened to one-liners
+- `06fda33` - Import May 26, 2026: BRUNCH (v2) and ASTRONAUT (v1 classic, last ever)
+- Transcript cleanup: remove 17 duplicate host clue-recap lines from May 25–27 Results sections
+- Earlier: SHARK/BRACES (May 25), BANANA SPLIT puzzle, How to Play rewrite, SHERLOCK HOLMES, BAND-AID date fix
 - Earlier: Tabbed database (Live/Daily), cross-tab search, Stats wrong-guesses v2 filter
 - Earlier: Imports for May 15–22, 2026 (TETRIS through WATERSLIDE)
 
@@ -42,7 +40,7 @@ Last updated: 2026-05-26 (session end)
 - **Auto-import bug check 2026-05-08**: `scripts/auto-import.py` now catches URL/time-out/XML RSS failures before falling back to the channel page, prefers title dates for manual video imports, treats date-only publish metadata as noon UTC to avoid previous-day Eastern drift, and validates Claude output more strictly before writing: archive date shape, v2 format, host/pot/wrongGuesses, clue numbers, numeric correct/guess counts, medal tier order, winner totals, payouts, and full-pot `winnerPayout`. `tools/audit-data.mjs` mirrors the new clue-number, count-shape, medal-order, and v2 `winnerPayout` checks while tolerating legacy unknown count strings in old data.
 - **Auto-import cost guard 2026-05-12**: `.github/workflows/auto-import.yml` now runs a cheap `git push --dry-run origin HEAD:main` preflight before installing Python dependencies or calling Claude. If GitHub cannot accept a main push, the job stops before spending Anthropic API tokens. The workflow also skips the duplicate DST schedule when the Eastern hour is not 9, uses workflow concurrency, and passes `--max-episodes=1` so a backlog cannot spend multiple Claude calls in one scheduled run.
 - **Hybrid rules beginning Monday, May 11, 2026**: Round 1 stays `format: "v2"` tiered gold/silver/bronze. Round 2 returns to `format: "v1"` classic mode, where only the earliest clue with correct answers splits the full $7,500 pot. `scripts/auto-import.py`, `docs/DAILY_IMPORT.md`, `docs/DAILY_IMPORT_PROMPT.md`, `docs/PLAUD_AUDIO_PROMPT.md`, `AGENTS.md`, the in-app Gemini/Plaud copy prompts, and `tools/audit-data.mjs` have been updated for this. In the Database, classic v1 winning clues are now marked with the same 🥇 clue indicator used for v2 instead of a yellow highlighted clue box.
-- **⚠️ RULES CHANGE: Both rounds go v2 tiered starting Wednesday, May 27, 2026**: Announced on the May 25 episode. Starting May 27, 2026 BOTH rounds use `format: "v2"` tiered gold/silver/bronze with separate $3,000/$2,500/$2,000 pools. The last classic v1 Round 2 episodes are May 25 and May 26, 2026. Update `AGENTS.md` import procedure when this change is confirmed and reflected in the show. Do NOT yet change the auto-import script or prompts until the May 27 episode is confirmed.
+- **⚠️ RULES CHANGE CONFIRMED: Both rounds v2 tiered starting Wednesday, May 27, 2026**: Confirmed by the May 27 episode (THE GYM + JUGGLING both `format: "v2"`). The last classic v1 Round 2 episodes were May 25 and May 26. The audit rule for hybrid-format-order now has an upper bound at May 27 (exclusive). Update import docs and auto-import script to treat all rounds as v2 going forward.
 
 - GitHub Pages publishes from `main`.
 - Main-only workflow is in effect. Do not create branches; remove stale non-main branches after confirming their commits are already represented on `main`.
@@ -51,16 +49,19 @@ Last updated: 2026-05-26 (session end)
 - **Admin panel removed**: All game/transcript updates are now done by AI agents (Claude/Codex) directly editing the data files and committing. See "Daily Update Workflow" below.
 - **Bonus/promo data migrated**: `bonusMap` moved from hardcoded JS in `index.html` to a `bonus: {title, desc}` field on each game in the year shards. Rendering code reads `g.bonus` directly. `bonus.desc` may contain safe HTML (`<br>` and `<b>` tags).
 - **Scripts cleaned up**: Legacy docx/admin importer scripts are gone; current automation lives in `scripts/auto-import.py`, with a few one-off historical cleanup scripts still present.
-- Latest imported episode: Monday, May 25, 2026 (Memorial Day) with SHARK (Round 1, v2) and BRACES (Round 2, v1 classic).
-- 121 total game days (120 playable + 1 cancelled: Thursday, April 9, 2026).
-- 241 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 205).
-- 121 transcript entries in `data/transcripts.json`.
-- **Daily Puzzles**: `data/daily-puzzles.json` stores Best Guess app daily practice puzzles. Launched Saturday, May 23, 2026. Current entries: BAND-AID (May 23), SHERLOCK HOLMES (May 24), BANANA SPLIT (May 25), NEW YORK CITY (May 26). These are separate from live-show game rounds — no host, no prizes, no winners, no transcript. `npm run audit` validates this file; `npm run audit:fix` is not needed for daily-puzzle-only edits.
+- Latest imported episode: Wednesday, May 27, 2026 with THE GYM (Round 1, v2) and JUGGLING (Round 2, v2 — first dual-v2 episode under the new format era).
+- 124 total game days (123 playable + 1 cancelled: Thursday, April 9, 2026).
+- 245 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 209).
+- 123 transcript entries in `data/transcripts.json`.
+- **Daily Puzzles**: `data/daily-puzzles.json` stores Best Guess app daily practice puzzles. Launched Saturday, May 23, 2026. Current entries: BAND-AID (May 23), SHERLOCK HOLMES (May 24), BANANA SPLIT (May 25), NEW YORK CITY (May 26), TIKTOK (May 27). Each clue has an optional `explanation` field (short one-liner) shown as hover tooltip in the Daily Puzzles database table. These are separate from live-show game rounds — no host, no prizes, no winners, no transcript. `npm run audit` validates this file; `npm run audit:fix` is not needed for daily-puzzle-only edits.
 - **Daily puzzle audit hardening 2026-05-24**: `tools/audit-data.mjs` now validates `data/daily-puzzles.json` as part of `npm run audit`, including flat-array shape, valid weekday/date strings, oldest-first order, duplicate dates, ALL CAPS secret item/clue text, no leading `A`/`AN` secret-item articles, exactly five ordered clues, and no live-game clue fields.
 - **Daily Puzzles KPI on Stats page 2026-05-24**: The Stats page first KPI group now includes a "Daily Puzzles Archived" card (purple, puzzle-piece icon) showing the count of puzzles in `data/daily-puzzles.json`. If any dates are missing since May 23, 2026 (the launch date), a warning badge shows "X dates missing". `setView('stats')` now loads daily puzzles alongside full games before rendering, and the stats cache key includes `dp${dailyPuzzles.length}` to invalidate on puzzle count change.
 - **How to Play modal rewrite 2026-05-25**: The How to Play modal (`#how-to-play-modal` template in `index.html`) now contains real game instructions: five-clue structure (hardest first), one-guess-per-round rule, lock-in mechanic, v2 gold/silver/bronze prize tier table ($3K/$2.5K/$2K pools), v1 classic mode explanation, and a blue callout noting the archive maps your result to real-show tier thresholds.
 - **BAND-AID date fix 2026-05-25**: The first daily puzzle was incorrectly dated "Sunday, May 24" (Codex had fixed the wrong field). Corrected to "Saturday, May 23, 2026". The puzzle launched May 23; May 24's puzzle is SHERLOCK HOLMES.
-- **Daily puzzle imports May 23–26**: BAND-AID (Sat May 23), SHERLOCK HOLMES (Sun May 24), BANANA SPLIT (Mon May 25), NEW YORK CITY (Tue May 26) — all in `data/daily-puzzles.json`.
+- **Daily puzzle imports May 23–27**: BAND-AID (Sat May 23), SHERLOCK HOLMES (Sun May 24), BANANA SPLIT (Mon May 25), NEW YORK CITY (Tue May 26), TIKTOK (Wed May 27) — all in `data/daily-puzzles.json`. Each clue has a short one-liner `explanation` field for hover tooltips. `tools/audit-data.mjs` now allows `explanation` in daily puzzle clue objects (removed from forbidden fields list; only `correct` and `guesses` remain forbidden).
+- **May 26, 2026 episode imported**: Hosted by Howie Mandel. BRUNCH (Round 1, v2): gold Clue 1 (3 winners, $1,000 each), silver Clue 2 (24 winners, $104.16 each), bronze Clue 3 (36 winners, $55.55 each). ASTRONAUT (Round 2, v1 classic — last-ever classic v1 episode): winning Clue 2, 2 winners ($3,750 each).
+- **May 27, 2026 episode imported**: Hosted by Howie Mandel. THE GYM (Round 1, v2): gold Clue 1 (1176 winners, $2.55 each), silver Clue 2 (2213 winners, $1.13 each), bronze Clue 3 (1822 winners, $1.10 each). JUGGLING (Round 2, v2 — first-ever Round 2 v2 under new era): gold Clue 1 (1 winner, $3,000 — Apples the Journey), silver Clue 2 (3 winners, $833.33 each), bronze Clue 3 (25 winners, $80.00 each).
+- **Transcript cleanup (May 25–27)**: Results sections in May 25–27 transcripts had both host-spoken clue recap lines (e.g. "Clue one: ...") and null-speaker annotation lines for the same clues. The 17 duplicate host-recap lines were removed; null-speaker annotations remain as canonical structured data.
 - **May 25, 2026 episode imported**: Memorial Day, hosted by Howie Mandel. SHARK (Round 1, v2): gold Clue 1 (1 winner, $3,000 — Chris Etrada93), silver Clue 2 (4 winners, $625 each), bronze Clue 3 (128 winners, $15.62 each). BRACES (Round 2, v1 classic): winning Clue 1, 2 winners ($3,750 each — teamblender591, acatchy84).
 - **Most Popular Wrong Guesses (Stats)**: now filtered to `format === 'v2'` games only (starting Thursday, April 23, 2026, CHOPSTICKS — the first v2 game). Pre-v2 wrong guesses are excluded from this stat. Each wrong guess in the top-10 also now shows which secret items it appeared in (same style as Reused Clue Text section).
 - **Secret item article rule**: Strip leading "A" and "AN" from secret items (e.g. "AN ELEPHANT" → "ELEPHANT"). Keep "THE" when it is semantically part of the answer (e.g. "THE MIDDLE SEAT" stays as-is). Apply this during any import.
@@ -283,9 +284,9 @@ Sections always appear in exactly this order. `speaker` is a string (host name, 
 }
 ```
 
-Fields: `date` (full weekday string), `secretItem` (ALL CAPS, no leading article unless "THE" is part of the answer), `clues` array of exactly 5 objects with `clueNumber` (1–5) and `text` (ALL CAPS). No winners, no payouts, no host, no transcript.
+Fields: `date` (full weekday string), `secretItem` (ALL CAPS, no leading article unless "THE" is part of the answer), `clues` array of exactly 5 objects with `clueNumber` (1–5), `text` (ALL CAPS), and optional `explanation` (short one-liner shown as hover tooltip in the Daily Puzzles database table). No winners, no payouts, no host, no transcript.
 
-To add a new daily puzzle, append a new object to the END of `data/daily-puzzles.json`, then run `npm run audit`. Do not run `npm run audit:fix` for daily-puzzle-only edits because there is no generated metadata to update. The audit validates the file is a flat array, dates are valid/unique/oldest-first, secret items and clue text are ALL CAPS, each puzzle has exactly five ordered clues, and clues do not include live-game fields like `correct`, `guesses`, or `explanation`.
+To add a new daily puzzle, append a new object to the END of `data/daily-puzzles.json`, then run `npm run audit`. Do not run `npm run audit:fix` for daily-puzzle-only edits. The audit validates the file is a flat array, dates are valid/unique/oldest-first, secret items and clue text are ALL CAPS, each puzzle has exactly five ordered clues, and clues do not include live-game-only fields `correct` or `guesses`. The `explanation` field IS allowed on daily puzzle clues.
 
 ## UI Features Added in This Session
 
@@ -306,7 +307,7 @@ To add a new daily puzzle, append a new object to the END of `data/daily-puzzles
 ## Things Worth Double-Checking After Future Edits
 
 - GitHub Pages reflects the newest commit on `main`.
-- Latest manual import completed: Friday, May 22, 2026 (`PRINGLES`, `WATERSLIDE`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
+- Latest manual import completed: Wednesday, May 27, 2026 (`THE GYM`, `JUGGLING`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
 - Always verify Gemini-provided dates against a calendar (weekday name AND day number). Transcript headers from Gemini are consistently +1 day off.
 - Recalculate all payouts with `Math.floor(v * 100) / 100` — never trust Gemini's payout figures.
 - Strip "A"/"AN" from secret items; keep "THE" only when semantically part of the answer.
