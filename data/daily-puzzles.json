@@ -153,5 +153,36 @@
         "explanation": "Tick and tock are the two sounds a clock makes."
       }
     ]
+  },
+  {
+    "date": "Thursday, May 28, 2026",
+    "secretItem": "BIGFOOT",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "A NON-URBAN LEGEND",
+        "explanation": "Lives in the wilderness, not the city."
+      },
+      {
+        "clueNumber": 2,
+        "text": "EXPERT AT AVOIDING PAPARAZZI",
+        "explanation": "Every photo is mysteriously blurry."
+      },
+      {
+        "clueNumber": 3,
+        "text": "NOT INTO FASHION BUT OWNS A FUR COAT",
+        "explanation": "Head-to-toe fur, zero style choices."
+      },
+      {
+        "clueNumber": 4,
+        "text": "BEAST OF BURDEN OF PROOF",
+        "explanation": "It's a beast AND the proof is entirely on you."
+      },
+      {
+        "clueNumber": 5,
+        "text": "HUGE SHOES TO FILL",
+        "explanation": "Size 37 feet, give or take."
+      }
+    ]
   }
 ]
