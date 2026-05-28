@@ -267,10 +267,11 @@ for (const [index, g] of games.entries()) {
 }
 
 for (const [date, rounds] of playableByDate.entries()) {
-  if (archiveDateValue(date) >= archiveDateValue('Monday, May 11, 2026')) {
+  const dv = archiveDateValue(date);
+  if (dv >= archiveDateValue('Monday, May 11, 2026') && dv < archiveDateValue('Wednesday, May 27, 2026')) {
     const formats = rounds.map(g => g.format);
     if (formats.length === 2 && JSON.stringify(formats) !== JSON.stringify(['v2', 'v1'])) {
-      error('hybrid-format-order', 'Episodes starting Monday, May 11, 2026 should import as Round 1 v2 and Round 2 v1 classic unless the broadcast says otherwise', { date, formats });
+      error('hybrid-format-order', 'Episodes May 11–26, 2026 should import as Round 1 v2 and Round 2 v1 classic unless the broadcast says otherwise', { date, formats });
     }
   }
   const bonusRounds = rounds.filter(g => g.bonus).length;

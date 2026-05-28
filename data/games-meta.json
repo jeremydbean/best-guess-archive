@@ -2536,6 +2536,30 @@
       "totalWinners": 8,
       "clueCount": 5,
       "goldClue": 1
+    },
+    {
+      "date": "Wednesday, May 27, 2026",
+      "secretItem": "THE GYM",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 5178,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Wednesday, May 27, 2026",
+      "secretItem": "JUGGLING",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 29,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
