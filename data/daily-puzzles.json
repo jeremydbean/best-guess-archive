@@ -184,5 +184,36 @@
         "explanation": "Size 37 feet, give or take."
       }
     ]
+  },
+  {
+    "date": "Friday, May 29, 2026",
+    "secretItem": "ALCATRAZ",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "POPULAR FOR ITS MANY BARS",
+        "explanation": "Prison bars — lots and lots of them."
+      },
+      {
+        "clueNumber": 2,
+        "text": "THE VIEWS ARE SPECTACULAR",
+        "explanation": "Stunning views of San Francisco Bay from every cell window."
+      },
+      {
+        "clueNumber": 3,
+        "text": "PEOPLE LOVE TO VISIT, BUT NEVER WANT TO STAY",
+        "explanation": "A top tourist destination now; a place no prisoner ever wanted to be."
+      },
+      {
+        "clueNumber": 4,
+        "text": "SECURITY IS THE MAXIMUM PRIORITY",
+        "explanation": "It was America's most famous maximum-security federal penitentiary."
+      },
+      {
+        "clueNumber": 5,
+        "text": "ISLAND HOME FOR AL CAPONE",
+        "explanation": "The notorious gangster did time on this island in San Francisco Bay."
+      }
+    ]
   }
 ]
