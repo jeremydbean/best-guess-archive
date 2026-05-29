@@ -35988,5 +35988,998 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, May 28, 2026",
+    "secretItems": [
+      "DIAPER",
+      "PARROT"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "DIAPER"
+      },
+      {
+        "round": 2,
+        "secretItem": "PARROT"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everybody we're live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Get the party going on time."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Looking in the mirror, like three, two, one, I'm ready."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Maybe I'll have some fun."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We only 'cause I'm young and free and I'm ready like three, two, one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am your host Howie Mandel!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thank you!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thank you!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I can't tell you how happy I am to see you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I feel like one of those pet dogs that just waits by the door for their owner to come home."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "At home at the end of the day, and as soon as you walk in here, I'm so full of energy that I feel like jumping around and chewing up the couch."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But I'm a professional, so I'll just say, welcome and try to keep all that big dog energy just bottled up inside, which is not easy when you have $15,000 up for grabs."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, I'm trying to maintain my composure while I read the rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay Howie, you can do this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each puzzle has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And before each round, Neil is gonna load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It could be absolutely anything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Then I'm gonna give you five clues, but remember the clues are like riddles; they're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And after each clue, you're gonna have twenty seconds to submit an answer, but you only get one best guess per round, so make sure that you're confident before you lock it in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's got to be the exact answer, and we don't accept typos."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bottom line: you want to be fast, people, but you got to be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of twenty five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it on the third earliest clue will split the bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough talk, let's win some money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one, seventy five hundred dollars. Neil, load that ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's the weirdest voice, isn't it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Listen to him."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He's loading."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thank you Neil, that was really good."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's all in there and we are ready for your first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue one: A one and a two, and a one and a two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's exciting, it's exciting, $7,500 up for grabs."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10 seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And a two and a one and time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "See what I did?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I did the clue backwards, talking about the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not so slim shady ninety one said, “Tango.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One and two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I see what you are doing there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Italian scallion said, “Counting.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Very literal."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here is your second clue: Hold everything. And the clock will start now, twenty seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue was and a one and a two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And this clue is hold everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue we already had forty five hundred submitted answers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pretty good."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up on that second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "As your vapor two said, “poker.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, triple double seventy seven said, “food allergy.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know my wife."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know my wife."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "She orders what's on the menu and then redesigns it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not this, not that, not this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hold everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here is your third clue: The only constant is change."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Rockstar town."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The only constant is change."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The first clue was and a one and a two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know why I had it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It sounded like Lawrence Welk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the second clue was hold everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And this final clue, the only constant is change."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Lone Macaroni said, “wig.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I wouldn't know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And Fancy Britches."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Britches?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I saw the R."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Scared right there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Fancy Britches 119 said, “Lava lamp.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ooh, I love those."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I want those."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Those are probably hard to find now, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your fourth clue: absorbs for the adorbs."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Absorbs for the adorbs."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Over 15,000 guesses are already in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue was and a one and a two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Second clue is hold everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The third clue is the only constant is change."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And with the time running out, your fourth clue was absorbs for the adorbs."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Terrific doubts two hundred and nine said “kitty litter.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, I love that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Whoa, somebody made a cat sound?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did somebody make a cat sound?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, good."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I just want to make sure you did that because I would get myself checked because I want to make sure other people heard that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Maybe you didn't hear it, but somebody in the room."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your final clue for seventy five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Parenting would be damper without a Huggie or a Pamper."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Parenting would be damper without a Huggie or a Pamper."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue was and a one and a two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Second clue was hold everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Third clue is the only constant is change."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Fourth clue was absorbs for the adorbs, and this final clue with the time out, that was your final chance: parenting would be damper without a Huggie or a Pamper."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost twenty five thousand guesses are in right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, I don't have to tell you, this is the time to open the ball, so the people can see what it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here he goes."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Diaper!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, that was a little cutie right there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “PARENTING WOULD BE DAMPER WITHOUT A HUGGIE OR PAMPER.” Diapers are great for parents to have around. 4,131 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “ABSORBS FOR THE ADORBS.” Diapers are absorbent things for adorable babies. 2,419 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “THE ONLY CONSTANT IS CHANGE.” You are constantly changing a baby's diaper. 39 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “HOLD EVERYTHING!” A diaper's job is to hold everything that comes out of a baby. 8 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “AND A ONE AND A TWO.” A one and a two refers to what goes into a diaper. 2 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 2 winners at $1,500.00 each. Silver (Clue 2): 8 winners at $312.50 each. Bronze (Clue 3): 39 winners at $51.28 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So in gold, two of you, the best guessers, the gold guessers are Late Balloon 897 and Northern Hippo 386, are each getting fifteen hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is amazing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "On our silver, eight of you are getting three hundred and twelve dollars and fifty cents, and on bronze, thirty nine of you are getting fifty one dollars and twenty eight cents each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So there is good money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is really good."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's really good."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to all of our winners on our first round."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before we start round two, I want to remind everyone that season two of The Four Seasons is dropping on Netflix today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Just to be clear, it's season two of The Four Seasons, not season four of The Two Seasons, because that would be silly and wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Regardless, Tina Fey, Will Forte, Colman Domingo, who was great in Michael, Kerry Kenny Silver and Marco Calvani are back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And if you watched season one you know they got a lot to process."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So pack a bag and join this incredible cast as they take another trip around the sun."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and now on to round two, which is also worth seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're going to play another gold, silver, bronze game right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The prize pots are the same: three thousand for gold, twenty-five hundred for silver, two thousand for bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's load that crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, do what you do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You're amazing at it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I've seen other people try, but not like this. Seamless."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There we are. It's all loaded."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And here is your first clue: Amazon Echo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock is going to have twenty seconds on it, starting now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Amazon Echo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Think people, seventy five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ten seconds are left on this clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Counting down, five, four, three."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Classy Cutoffs 598 said, “Amazon, Amazon.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's an Amazon Echo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Amazon, Amazon."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's the Amazon Echo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your second clue: Bright, bright learner."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bright, bright learner."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And 20 seconds on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Start the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Amazon."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Amazon."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bright, bright learner is your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four, three, two, one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Closing that clock now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mild Carnival said “Tarzan.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and Murky Skies 387 said “Reading Rainbow.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love that show."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is that over?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Do they still do that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That was LeVar Burton."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "LeVar Burton."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love that show."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your third clue: A pirate's fave with two R's."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is that good?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is that good?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did I say that well?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Arrr!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, I have my silent sidekick here by the way today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Say hello."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What part of “silent” do you not understand?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, we have five seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And we are done."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, freshly crimped eight forty four said “Barry Bonds.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Was he with Pittsburgh?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, I didn't even realize that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I didn't realize that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here is clue number four: Copycat, a cat would eat."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Copycat, a cat would eat."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Twenty seconds on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First one was Amazon Echo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Second clue was bright, bright learner."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Third clue was pirate's fave with two R's, and the fourth was a copycat, a cat would eat."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Already got almost twenty-two thousand submissions."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So here is your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, your final chance at seventy-five hundred dollars tonight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pretty pet bird you can teach to say a word."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And I'll give you twenty more seconds on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Amazon Echo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bright, bright learner."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pirate's fave with two R's."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Fourth clue: Copycat, a cat would eat."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And with less than three seconds to go, pretty pet bird you can teach to say a word."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's it!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's find out what's in the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yellow banana?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is a."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Silent Sidekick, what do you have to say for yourself?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “PRETTY PET BIRD YOU CAN TEACH TO SAY A WORD.” A parrot is a pretty pet bird you can teach to say a word. 3,158 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “COPYCAT A CAT WOULD EAT.” A parrot can imitate sounds, and a cat would love to eat one. 1,590 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “PIRATE'S FAVE WITH TWO ARRRRS.” Pirates are often depicted with a parrot on their shoulder, and the word parrot has two R's in it. 3,592 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “BRIGHT, BRIGHT LEARNER.” A parrot is brightly colored and smart enough to learn things. 1,660 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “AMAZON ECHO.” Parrots live in the Amazon and echo the sounds they hear. 656 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 656 winners at $4.57 each. Silver (Clue 2): 1660 winners at $1.50 each. Bronze (Clue 3): 3592 winners at $0.55 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Six hundred and fifty-six gold winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each of you is going to split about four dollars, fifty-seven cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations, Honey Chip Wings and Never Forget 115."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am not going to name all six hundred and fifty six of you. Silver winners, sixteen hundred and sixty of you are getting a buck fifty each, and in bronze, thirty five hundred and ninety two of you are getting fifty five cents."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got to say that I am so thrilled because this is over five, almost close to six thousand winners tonight!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Over six thousand of you!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Where can you go and have six thousand winners?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Only Best Guess Live, and that is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before we say goodbye, I want to say one more thing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the silent sidekick."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're here every weekday at eight Eastern, five Pacific."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good night!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't want your coffee, okay?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stay okay!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Say okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You don't get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Just say, “Don't say anything, okay?”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Say okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Say okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is so much fun!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: PURSE"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: WALLET"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -11457,5 +11457,127 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Apples the Journey",
     "wrongGuesses": "FISHING, BASEBALL, BASKETBALL, CLUTCH, GRAVEYARD"
+  },
+  {
+    "date": "Thursday, May 28, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "DIAPER",
+    "clues": [
+      {
+        "number": 1,
+        "text": "AND A ONE AND A TWO",
+        "correct": "2",
+        "guesses": "4,523 🥇",
+        "explanation": "A one and a two refers to what goes into a diaper."
+      },
+      {
+        "number": 2,
+        "text": "HOLD EVERYTHING!",
+        "correct": "8",
+        "guesses": "4,371 🥈",
+        "explanation": "A diaper's job is to hold everything that comes out of a baby."
+      },
+      {
+        "number": 3,
+        "text": "THE ONLY CONSTANT IS CHANGE",
+        "correct": "39",
+        "guesses": "6,447 🥉",
+        "explanation": "You are constantly changing a baby's diaper."
+      },
+      {
+        "number": 4,
+        "text": "ABSORBS FOR THE ADORBS",
+        "correct": "2,419",
+        "guesses": "4,872",
+        "explanation": "Diapers are absorbent things for adorable babies."
+      },
+      {
+        "number": 5,
+        "text": "PARENTING WOULD BE DAMPER WITHOUT A HUGGIE OR PAMPER",
+        "correct": "4,131",
+        "guesses": "4,587",
+        "explanation": "Diapers are great for parents to have around."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 2,
+    "silverWinners": 8,
+    "bronzeWinners": 39,
+    "totalWinners": 49,
+    "goldPayout": 1500.0,
+    "silverPayout": 312.5,
+    "bronzePayout": 51.28,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Late Balloon 897, Northern Hippo 386",
+    "wrongGuesses": "PURSE",
+    "bonus": {
+      "title": "The Four Seasons",
+      "desc": "Season two of The Four Seasons is dropping on Netflix today.<br><br>Join Tina Fey, Will Forte, Colman Domingo, Kerry Kenny Silver and Marco Calvani as they take another trip around the sun."
+    }
+  },
+  {
+    "date": "Thursday, May 28, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "PARROT",
+    "clues": [
+      {
+        "number": 1,
+        "text": "AMAZON ECHO",
+        "correct": "656",
+        "guesses": "7,424 🥇",
+        "explanation": "Parrots live in the Amazon and echo the sounds they hear."
+      },
+      {
+        "number": 2,
+        "text": "BRIGHT, BRIGHT LEARNER",
+        "correct": "1,660",
+        "guesses": "6,604 🥈",
+        "explanation": "A parrot is brightly colored and smart enough to learn things."
+      },
+      {
+        "number": 3,
+        "text": "PIRATE'S FAVE WITH TWO ARRRRS",
+        "correct": "3,592",
+        "guesses": "5,611 🥉",
+        "explanation": "Pirates are often depicted with a parrot on their shoulder, and the word parrot has two R's in it."
+      },
+      {
+        "number": 4,
+        "text": "COPYCAT A CAT WOULD EAT",
+        "correct": "1,590",
+        "guesses": "2,354",
+        "explanation": "A parrot can imitate sounds, and a cat would love to eat one."
+      },
+      {
+        "number": 5,
+        "text": "PRETTY PET BIRD YOU CAN TEACH TO SAY A WORD",
+        "correct": "3,158",
+        "guesses": "3,420",
+        "explanation": "A parrot is a pretty pet bird you can teach to say a word."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 656,
+    "silverWinners": 1660,
+    "bronzeWinners": 3592,
+    "totalWinners": 5908,
+    "goldPayout": 4.57,
+    "silverPayout": 1.5,
+    "bronzePayout": 0.55,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Honey Chip Wings, Never Forget 115",
+    "wrongGuesses": "WALLET",
+    "bonus": {
+      "title": "The Four Seasons",
+      "desc": "Season two of The Four Seasons is dropping on Netflix today.<br><br>Join Tina Fey, Will Forte, Colman Domingo, Kerry Kenny Silver and Marco Calvani as they take another trip around the sun."
+    }
   }
 ]
