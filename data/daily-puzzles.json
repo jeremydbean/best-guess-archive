@@ -215,5 +215,36 @@
         "explanation": "The notorious gangster did time on this island in San Francisco Bay."
       }
     ]
+  },
+  {
+    "date": "Saturday, May 30, 2026",
+    "secretItem": "KPOP DEMON HUNTERS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "A GLOBAL PHENOMENON",
+        "explanation": "K-pop has conquered every corner of the planet."
+      },
+      {
+        "clueNumber": 2,
+        "text": "THEY DO IT ALL FOR THE FANS",
+        "explanation": "K-pop culture runs on intense devotion to the fanbase."
+      },
+      {
+        "clueNumber": 3,
+        "text": "HEY, SEOUL SISTERS",
+        "explanation": "Seoul is the home of K-pop, and these hunters are all about that vibe."
+      },
+      {
+        "clueNumber": 4,
+        "text": "THEY SLAY ONSTAGE AND OFF",
+        "explanation": "K-pop performers slay the stage; demon hunters literally slay demons."
+      },
+      {
+        "clueNumber": 5,
+        "text": "THEY'RE GONNA BE, GONNA BE GOLDEN",
+        "explanation": "Riffs on the Spice Girls' Wannabe — a K-pop girl group classic energy."
+      }
+    ]
   }
 ]
