@@ -11579,5 +11579,119 @@
       "title": "The Four Seasons",
       "desc": "Season two of The Four Seasons is dropping on Netflix today.<br><br>Join Tina Fey, Will Forte, Colman Domingo, Kerry Kenny Silver and Marco Calvani as they take another trip around the sun."
     }
+  },
+  {
+    "date": "Friday, May 29, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "ESCALATOR",
+    "clues": [
+      {
+        "number": 1,
+        "text": "NONSTOP FLIGHT",
+        "correct": "72",
+        "guesses": "3,611 🥇",
+        "explanation": "It’s a flight of steps and it never stops moving."
+      },
+      {
+        "number": 2,
+        "text": "GOES FLAT AFTER AWHILE",
+        "correct": "242",
+        "guesses": "7,673 🥈",
+        "explanation": "The escalator flattens out, so you get yourself a nice little pad to walk on and off."
+      },
+      {
+        "number": 3,
+        "text": "MAY HAVE A DOWN SIDE",
+        "correct": "227",
+        "guesses": "5,963 🥉",
+        "explanation": "Some escalators go up, some go down, and all of them go down in an emergency."
+      },
+      {
+        "number": 4,
+        "text": "CAN BE USED EVEN WHEN BROKEN",
+        "correct": "215",
+        "guesses": "1,902",
+        "explanation": "An escalator can never break; it only becomes stairs."
+      },
+      {
+        "number": 5,
+        "text": "YOU CAN STAY STATIC, THESE STAIRS ARE AUTOMATIC!",
+        "correct": "3,658",
+        "guesses": "4,092",
+        "explanation": "The escalator does the moving for you."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 72,
+    "silverWinners": 242,
+    "bronzeWinners": 227,
+    "totalWinners": 541,
+    "goldPayout": 41.66,
+    "silverPayout": 10.33,
+    "bronzePayout": 8.81,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "odd., Werewolf Rogue, Aura Scarlet Ring",
+    "wrongGuesses": "BALLOON, SODA, TIRE, HUMMINGBIRD, CHAMPAGNE"
+  },
+  {
+    "date": "Friday, May 29, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "SABRINA CARPENTER",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BIG YET SMALL",
+        "correct": "0",
+        "guesses": "3,348",
+        "explanation": "She’s a very big star and a very small stature."
+      },
+      {
+        "number": 2,
+        "text": "THE SHOT HEARD ‘ROUND THE WORLD",
+        "correct": "2",
+        "guesses": "3,678 🥇",
+        "explanation": "Espresso is the title of her global hit song."
+      },
+      {
+        "number": 3,
+        "text": "A WITCH AND A WOODWORKER",
+        "correct": "196",
+        "guesses": "3,729 🥈",
+        "explanation": "Sabrina the Teenage Witch and a woodworker is a carpenter."
+      },
+      {
+        "number": 4,
+        "text": "SEWED UP A HIT WITH A TAYLOR",
+        "correct": "727",
+        "guesses": "3,488 🥉",
+        "explanation": "She collaborated with Taylor Swift on a hit song."
+      },
+      {
+        "number": 5,
+        "text": "MANCHILDREN DON’T PLEASE PLEASE PLEASE THIS POP STAR",
+        "correct": "2,952",
+        "guesses": "5,586",
+        "explanation": "The clue references her song Please Please Please."
+      }
+    ],
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 2,
+    "silverWinners": 196,
+    "bronzeWinners": 727,
+    "totalWinners": 925,
+    "goldPayout": 1500.0,
+    "silverPayout": 12.75,
+    "bronzePayout": 2.75,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "PBZ210, K Klawzowski",
+    "wrongGuesses": "TAYLOR SWIFT, PINOCCHIO, FIREWORKS, EARTH, BROOM"
   }
 ]
