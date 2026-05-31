@@ -246,5 +246,36 @@
         "explanation": "Riffs on the Spice Girls' Wannabe — a K-pop girl group classic energy."
       }
     ]
+  },
+  {
+    "date": "Sunday, May 31, 2026",
+    "secretItem": "PODCAST",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "TALK IS CHEAP",
+        "explanation": "Podcasts are free and powered entirely by talking."
+      },
+      {
+        "clueNumber": 2,
+        "text": "CONVERSE ALL-STAR",
+        "explanation": "Converse = to talk; All-Star cast → pod + cast."
+      },
+      {
+        "clueNumber": 3,
+        "text": "APPARENTLY, EVERYBODY HAS ONE THESE DAYS",
+        "explanation": "Starting one has become a cultural cliché."
+      },
+      {
+        "clueNumber": 4,
+        "text": "PEA'S COAT + A MOVIE ENSEMBLE",
+        "explanation": "A pea lives in a pod (its coat); movie ensemble = cast → POD + CAST."
+      },
+      {
+        "clueNumber": 5,
+        "text": "CONVO SHOW ON THE GO THAT'S NOT RADIO",
+        "explanation": "On-demand audio shows you stream anywhere — not broadcast radio."
+      }
+    ]
   }
 ]
