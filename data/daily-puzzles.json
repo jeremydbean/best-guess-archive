@@ -277,5 +277,36 @@
         "explanation": "On-demand audio shows you stream anywhere — not broadcast radio."
       }
     ]
+  },
+  {
+    "date": "Monday, June 1, 2026",
+    "secretItem": "STRANGER THINGS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "BOTTOMS UP!",
+        "explanation": "The Upside Down is literally the world flipped upside down."
+      },
+      {
+        "clueNumber": 2,
+        "text": "NOT SAFE FOR KIDS",
+        "explanation": "Yet somehow all the heroes are middle schoolers."
+      },
+      {
+        "clueNumber": 3,
+        "text": "STORY WITH MULTIDIMENSIONAL CHARACTERS",
+        "explanation": "Literally — the plot involves travel between dimensions."
+      },
+      {
+        "clueNumber": 4,
+        "text": "PUTS THE E-G-G-O IN DEMOGORGON",
+        "explanation": "Eleven's love of Eggos and the Demogorgon are show icons."
+      },
+      {
+        "clueNumber": 5,
+        "text": "'80S SOUNDS, THE UPSIDE DOWN, AND MILLIE BOBBY BROWN",
+        "explanation": "The Netflix series is set in the '80s and made Millie Bobby Brown a star."
+      }
+    ]
   }
 ]
