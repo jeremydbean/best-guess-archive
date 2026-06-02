@@ -308,5 +308,36 @@
         "explanation": "The Netflix series is set in the '80s and made Millie Bobby Brown a star."
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 2, 2026",
+    "secretItem": "POPSICLE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "STICK TO THE LIQUID",
+        "explanation": "A popsicle is a frozen liquid on a stick."
+      },
+      {
+        "clueNumber": 2,
+        "text": "TIME IS THE ENEMY",
+        "explanation": "It melts — eat fast or lose it."
+      },
+      {
+        "clueNumber": 3,
+        "text": "JAW-DROPPING SUMMER DRIP",
+        "explanation": "You drop your jaw to lick it, and it drips all summer long."
+      },
+      {
+        "clueNumber": 4,
+        "text": "WHEN IT'S GONE, YOUR TONGUE GETS DEPRESSED",
+        "explanation": "The stick left behind is basically a tongue depressor."
+      },
+      {
+        "clueNumber": 5,
+        "text": "BEAT THE HEAT WITH THIS FLAVORED ICE TREAT",
+        "explanation": "A classic frozen, flavored treat for hot days."
+      }
+    ]
   }
 ]
