@@ -11693,5 +11693,119 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "PBZ210, K Klawzowski",
     "wrongGuesses": "TAYLOR SWIFT, PINOCCHIO, FIREWORKS, EARTH, BROOM"
+  },
+  {
+    "date": "Monday, June 1, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TREE HOUSE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "A RAISE AND A BONUS",
+        "correct": "1",
+        "guesses": "3,222 🥇",
+        "explanation": "It is a room raised off the ground that serves as a bonus structure on your property."
+      },
+      {
+        "number": 2,
+        "text": "UPPER-LEVEL BOARD ROOM",
+        "correct": "416",
+        "guesses": "7,062 🥈",
+        "explanation": "It is a room up in the air that is made out of boards."
+      },
+      {
+        "number": 3,
+        "text": "PLANT-BASED LIVING",
+        "correct": "2,594",
+        "guesses": "6,219 🥉",
+        "explanation": "A tree is a plant and a tree house is a base you can live in."
+      },
+      {
+        "number": 4,
+        "text": "WE'RE GOING OUT ON A LIMB HERE",
+        "correct": "3,833",
+        "guesses": "6,184",
+        "explanation": "You build a tree house on a tree's limbs."
+      },
+      {
+        "number": 5,
+        "text": "HANGOUT SPACE FOR YOUNG FOLK IN A MAPLE OR AN OAK",
+        "correct": "2,039",
+        "guesses": "2,657",
+        "explanation": "It can be in any type of tree and is mostly a hangout space for young folks."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 416,
+    "bronzeWinners": 2594,
+    "totalWinners": 3011,
+    "goldPayout": 3000.0,
+    "silverPayout": 6.0,
+    "bronzePayout": 0.77,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Junior Putter",
+    "wrongGuesses": "ATTIC, MONOPOLY, TREE, POKER, ELEVATOR"
+  },
+  {
+    "date": "Monday, June 1, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "SATURDAY NIGHT LIVE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "OPPOSITES IN THE MIDDLE",
+        "correct": "0",
+        "guesses": "4,656",
+        "explanation": "Day and night are opposites placed right next to each other in the middle of the show's name."
+      },
+      {
+        "number": 2,
+        "text": "STARTS AT THE END",
+        "correct": "0",
+        "guesses": "4,963",
+        "explanation": "The show starts near the end of Saturday, which is the end of the week."
+      },
+      {
+        "number": 3,
+        "text": "A HOST OF HOSTS",
+        "correct": "47",
+        "guesses": "4,494 🥇",
+        "explanation": "Tons of people have hosted the show over the years."
+      },
+      {
+        "number": 4,
+        "text": "GETS SKETCHY AFTER DARK",
+        "correct": "911",
+        "guesses": "3,608 🥈",
+        "explanation": "It is a sketch comedy show that happens late at night."
+      },
+      {
+        "number": 5,
+        "text": "FINISH IT RIGHT: “LIVE FROM NEW YORK, IT’S…”",
+        "correct": "6,000",
+        "guesses": "6,916 🥉",
+        "explanation": "The answer finishes the famous phrase, Live from New York, it's Saturday Night."
+      }
+    ],
+    "goldClue": 3,
+    "silverClue": 4,
+    "bronzeClue": 5,
+    "goldWinners": 47,
+    "silverWinners": 911,
+    "bronzeWinners": 6000,
+    "totalWinners": 6958,
+    "goldPayout": 63.82,
+    "silverPayout": 2.74,
+    "bronzePayout": 0.33,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Angry Bison, Mister B two one seven, Skipper Tara, B Skizzy",
+    "wrongGuesses": "MAGNET, OREO, BATTERY, TUG OF WAR, MAGNETS"
   }
 ]

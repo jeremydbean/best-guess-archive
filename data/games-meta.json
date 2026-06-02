@@ -2608,6 +2608,30 @@
       "goldClue": 2,
       "silverClue": 3,
       "bronzeClue": 4
+    },
+    {
+      "date": "Monday, June 1, 2026",
+      "secretItem": "TREE HOUSE",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 3011,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, June 1, 2026",
+      "secretItem": "SATURDAY NIGHT LIVE",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 6958,
+      "clueCount": 5,
+      "goldClue": 3,
+      "silverClue": 4,
+      "bronzeClue": 5
     }
   ]
 }
