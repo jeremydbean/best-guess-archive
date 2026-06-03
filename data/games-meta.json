@@ -2632,6 +2632,30 @@
       "goldClue": 3,
       "silverClue": 4,
       "bronzeClue": 5
+    },
+    {
+      "date": "Tuesday, June 2, 2026",
+      "secretItem": "SUSHI",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 1092,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Tuesday, June 2, 2026",
+      "secretItem": "DARTS",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 2788,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }

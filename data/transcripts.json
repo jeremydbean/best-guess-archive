@@ -39123,5 +39123,182 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 2, 2026",
+    "secretItems": [
+      "SUSHI",
+      "DARTS"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "SUSHI"
+      },
+      {
+        "round": 2,
+        "secretItem": "DARTS"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess! I'm Howie Mandel. Let's play!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round 1. The pot is $7,500. Let's reveal the clues."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “PREP SCHOOL ASSEMBLY.” Fish swim in schools, and you have to assemble them in sushi. 38 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “EXTREMELY RARE IMPORT.” Sushi is commonly served raw and originated overseas. 211 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “A PIECEMEAL PIECE MEAL.” When ordering sushi, there is often a variety of pieces that make up the meal and are served gradually. 843 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “MOSTLY SUS, USUALLY FISHY.” The letters 'sus' make up most of the word 'sushi,' and the dish usually involves fish. 2,794 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “SEAFOOD ON RICE WITH WASABI FOR SPICE.” Sushi is a dish that involves rice, seafood, and wasabi for spice. 5,125 got it right."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "The correct answer was sushi!"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “SEAFOOD ON RICE WITH WASABI FOR SPICE.” Sushi is a dish that involves rice, seafood, and wasabi for spice. 5,125 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “MOSTLY SUS, USUALLY FISHY.” The letters 'sus' make up most of the word 'sushi,' and the dish usually involves fish. 2,794 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “A PIECEMEAL PIECE MEAL.” When ordering sushi, there is often a variety of pieces that make up the meal and are served gradually. 843 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “EXTREMELY RARE IMPORT.” Sushi is commonly served raw and originated overseas. 211 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “PREP SCHOOL ASSEMBLY.” Fish swim in schools, and you have to assemble them in sushi. 38 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 38 winners at $78.94 each. Silver (Clue 2): 211 winners at $11.84 each. Bronze (Clue 3): 843 winners at $2.37 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to Gamebird, Guesser point E nine and eight, and Spartakon!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round 2. The pot is $7,500. Let's reveal the clues."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “GOING IN CIRCLES.” Darts go into concentric circles on a dartboard. 13 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “ART IS CENTRAL TO THIS PASTIME.” The word 'art' is in the middle of the word 'darts.' 329 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “GAME OF THROWNS.” Darts is a game named after objects that are thrown. 2,446 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “AIM TO PLEASE, WHERE A MALE COW SEES.” A male cow is a bull, and the center of the dartboard is the bullseye. 1,454 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “BAR SPORT WHERE YOU TOSS POINTY THINGS FOR POINTS.” The host notes that tossing pointy things for points is the exact definition of the game. 2,926 got it right."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "The correct answer was darts!"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “BAR SPORT WHERE YOU TOSS POINTY THINGS FOR POINTS.” The host notes that tossing pointy things for points is the exact definition of the game. 2,926 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “AIM TO PLEASE, WHERE A MALE COW SEES.” A male cow is a bull, and the center of the dartboard is the bullseye. 1,454 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “GAME OF THROWNS.” Darts is a game named after objects that are thrown. 2,446 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “ART IS CENTRAL TO THIS PASTIME.” The word 'art' is in the middle of the word 'darts.' 329 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “GOING IN CIRCLES.” Darts go into concentric circles on a dartboard. 13 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 13 winners at $230.76 each. Silver (Clue 2): 329 winners at $7.59 each. Bronze (Clue 3): 2,446 winners at $0.81 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to Io P, D. Decope, and Kate Marcus!"
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's it for today's Best Guess! See you tomorrow!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: CAVIAR, FISH STICKS, PEP RALLY, TUNA, LUNCHABLE"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: POTTERY, NASCAR, BASEBALL, MERRY GO ROUND, SPIROGRAPH"
+          }
+        ]
+      }
+    ]
   }
 ]
