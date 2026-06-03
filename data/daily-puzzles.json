@@ -339,5 +339,36 @@
         "explanation": "A classic frozen, flavored treat for hot days."
       }
     ]
+  },
+  {
+    "date": "Wednesday, June 3, 2026",
+    "secretItem": "TRAFFIC LIGHT",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "ORDER UP!",
+        "explanation": "Traffic lights cycle through colors in a strict order: red, green, yellow."
+      },
+      {
+        "clueNumber": 2,
+        "text": "NEVER HAS THE BLUES",
+        "explanation": "It has red, yellow, and green — but never blue."
+      },
+      {
+        "clueNumber": 3,
+        "text": "SYNCHRONIZED SHIMMER",
+        "explanation": "Traffic lights are often timed and synchronized to create a green wave of flow."
+      },
+      {
+        "clueNumber": 4,
+        "text": "WANTS YOU TO GO WITH THE FLOW",
+        "explanation": "Green means go, and the whole point is to manage traffic flow."
+      },
+      {
+        "clueNumber": 5,
+        "text": "TRICOLORED SIGNAL WITH A TAKE ON WHEN TO BRAKE",
+        "explanation": "Three colors (red, yellow, green) and it tells you exactly when to stop and brake."
+      }
+    ]
   }
 ]
