@@ -11921,5 +11921,119 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Io P, D. Decope, Kate Marcus",
     "wrongGuesses": "POTTERY, NASCAR, BASEBALL, MERRY GO ROUND, SPIROGRAPH"
+  },
+  {
+    "date": "Wednesday, June 3, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "PRETZEL",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BAR ASSOCIATION",
+        "correct": "11",
+        "guesses": "5,038 🥇",
+        "explanation": "Pretzels are often served at bars."
+      },
+      {
+        "number": 2,
+        "text": "CAN BE A BIG SOFTIE",
+        "correct": "285",
+        "guesses": "5,039 🥈",
+        "explanation": "Some pretzels are soft pretzels."
+      },
+      {
+        "number": 3,
+        "text": "CHIP'S COUSIN WHO'S A LITTLE TWISTED",
+        "correct": "3,848",
+        "guesses": "8,118 🥉",
+        "explanation": "They are snack foods like potato chips, but they are often in that twisted shape."
+      },
+      {
+        "number": 4,
+        "text": "A BIT OF DOUGH FOR NOT A LOT OF DOUGH",
+        "correct": "2,035",
+        "guesses": "4,308",
+        "explanation": "They are made of dough, and they are cheap."
+      },
+      {
+        "number": 5,
+        "text": "WHETHER SALTY OR SWEET, THIS SNACK CANNOT BE BEAT",
+        "correct": "1,937",
+        "guesses": "2,581",
+        "explanation": "They usually have a knot in the dough."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 11,
+    "silverWinners": 285,
+    "bronzeWinners": 3848,
+    "totalWinners": 4144,
+    "goldPayout": 272.72,
+    "silverPayout": 8.77,
+    "bronzePayout": 0.51,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Viva Vu, Lunar Taffy, Nick Rocks, Derkell, Birdie's eleven, twenty seven Durkle",
+    "wrongGuesses": "LAWYER, ICE CREAM, SOAP, GYMNASTICS, COOKIE"
+  },
+  {
+    "date": "Wednesday, June 3, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "CLUE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "WHO, WHERE, WHAT?",
+        "correct": "845",
+        "guesses": "5,129 🥇",
+        "explanation": "These questions refer to how you solve the game."
+      },
+      {
+        "number": 2,
+        "text": "ONE STORY MANSION",
+        "correct": "2,206",
+        "guesses": "5,056 🥈",
+        "explanation": "The board game is flat so it is one story tall, and it is always the story of a murder."
+      },
+      {
+        "number": 3,
+        "text": "THIS THE ANSWER",
+        "correct": "1,338",
+        "guesses": "4,956 🥉",
+        "explanation": "This is a clue to that."
+      },
+      {
+        "number": 4,
+        "text": "HAS MANY COLORFUL CHARACTERS",
+        "correct": "684",
+        "guesses": "4,259",
+        "explanation": "Many of the characters are named after colors like Professor Plum and Miss Scarlet."
+      },
+      {
+        "number": 5,
+        "text": "DON'T GET FLUSTERED WHEN YOU ACCUSE COLONEL MUSTARD",
+        "correct": "4,666",
+        "guesses": "5,662",
+        "explanation": "Accusing a character successfully is how you win the game of Clue."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 845,
+    "silverWinners": 2206,
+    "bronzeWinners": 1338,
+    "totalWinners": 4389,
+    "goldPayout": 3.55,
+    "silverPayout": 1.13,
+    "bronzePayout": 1.49,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Miss Play XO, Busy Gazpacho, Zen Horsefly",
+    "wrongGuesses": "THIS, WALDO, SESAME STREET, NOUN, QUESTION"
   }
 ]
