@@ -370,5 +370,36 @@
         "explanation": "Three colors (red, yellow, green) and it tells you exactly when to stop and brake."
       }
     ]
+  },
+  {
+    "date": "Thursday, June 4, 2026",
+    "secretItem": "AIR FORCE ONE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "A VERY IMPORTANT CONTAINER",
+        "explanation": "It's a plane — a container — that carries the most important person in the country."
+      },
+      {
+        "clueNumber": 2,
+        "text": "GEORGE WASHINGTON DIDN'T HAVE ONE",
+        "explanation": "Airplanes didn't exist in Washington's era, so no president before the aviation age had one."
+      },
+      {
+        "clueNumber": 3,
+        "text": "DESPITE ITS NAME, THERE ARE ACTUALLY TWO",
+        "explanation": "There are two dedicated presidential aircraft, both officially designated as Air Force One when the president is aboard."
+      },
+      {
+        "clueNumber": 4,
+        "text": "THINK NIKE, NELLY, AND HARRISON FORD",
+        "explanation": "Nike's Air line, Nelly's hit song 'Air Force Ones,' and Harrison Ford starred in the 1997 film Air Force One."
+      },
+      {
+        "clueNumber": 5,
+        "text": "THE FLYING WHITE HOUSE",
+        "explanation": "Air Force One is nicknamed 'the flying White House' because it serves as the president's airborne office."
+      }
+    ]
   }
 ]
