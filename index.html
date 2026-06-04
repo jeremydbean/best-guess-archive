@@ -4567,13 +4567,33 @@ Rules:
     const potValues = Object.values(charts.potBuckets);
     const potTotal = potValues.reduce((a, b) => a + b, 0);
 
+    const crosshairLinePlugin = {
+      id: 'crosshairLine',
+      afterDatasetsDraw(chart) {
+        const active = chart.tooltip?._active;
+        if (!active || !active.length) return;
+        const ctx2 = chart.ctx;
+        const x = active[0].element.x;
+        const { top, bottom } = chart.chartArea;
+        ctx2.save();
+        ctx2.beginPath();
+        ctx2.moveTo(x, top);
+        ctx2.lineTo(x, bottom);
+        ctx2.lineWidth = 1.5;
+        ctx2.strokeStyle = '#ef4444';
+        ctx2.setLineDash([4, 4]);
+        ctx2.stroke();
+        ctx2.restore();
+      }
+    };
     this._charts.playersTime = new Chart(nodes.chartPlayersTime, {
       type: 'line',
+      plugins: [crosshairLinePlugin],
       data: {
         labels: charts.timeLabels,
         datasets: [
-          { label:'Total Guesses', data:charts.guessesData, borderColor:'#60A5FA', backgroundColor:'rgba(96,165,250,0.08)', fill:true, tension:0.3, yAxisID:'y', pointRadius:2, pointHoverRadius:7, pointHitRadius:14, borderWidth:2 },
-          { label:'Total Winners', data:charts.winnersData, borderColor:'#34D399', backgroundColor:'rgba(52,211,153,0.08)', fill:true, tension:0.3, yAxisID:'y1', pointRadius:2, pointHoverRadius:7, pointHitRadius:14, borderWidth:2 }
+          { label:'Total Guesses', data:charts.guessesData, borderColor:'#60A5FA', backgroundColor:'rgba(96,165,250,0.08)', fill:true, tension:0.3, yAxisID:'y', pointRadius:2, pointHoverRadius:7, pointHoverBackgroundColor:'#ef4444', pointHoverBorderColor:'#ef4444', pointHitRadius:14, borderWidth:2 },
+          { label:'Total Winners', data:charts.winnersData, borderColor:'#34D399', backgroundColor:'rgba(52,211,153,0.08)', fill:true, tension:0.3, yAxisID:'y1', pointRadius:2, pointHoverRadius:7, pointHoverBackgroundColor:'#ef4444', pointHoverBorderColor:'#ef4444', pointHitRadius:14, borderWidth:2 }
         ]
       },
       options: {
