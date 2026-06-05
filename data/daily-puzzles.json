@@ -401,5 +401,36 @@
         "explanation": "Air Force One is nicknamed 'the flying White House' because it serves as the president's airborne office."
       }
     ]
+  },
+  {
+    "date": "Friday, June 5, 2026",
+    "secretItem": "BOWLING BALL",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "HEAVY HITTER",
+        "explanation": "Bowling balls are heavy, and the goal is to hit the pins with force."
+      },
+      {
+        "clueNumber": 2,
+        "text": "MANY LOANERS BUT FEW OWNERS",
+        "explanation": "Bowling alleys loan out balls to players, but very few people own their own."
+      },
+      {
+        "clueNumber": 3,
+        "text": "ROUND SHAPE, ROUND TRIP",
+        "explanation": "It's perfectly round, and it travels down the lane and returns via the ball return."
+      },
+      {
+        "clueNumber": 4,
+        "text": "OFTEN INVOLVED IN ALLEY OOPS",
+        "explanation": "Bowling happens in an alley, and \"oops\" is what you say when you gutter it."
+      },
+      {
+        "clueNumber": 5,
+        "text": "ITS GOAL IS TO NEVER SPARE A STRIKE",
+        "explanation": "The goal is to strike every frame — you never want to settle for just a spare."
+      }
+    ]
   }
 ]
