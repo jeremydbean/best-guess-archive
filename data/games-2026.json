@@ -12035,5 +12035,119 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Miss Play XO, Busy Gazpacho, Zen Horsefly",
     "wrongGuesses": "THIS, WALDO, SESAME STREET, NOUN, QUESTION"
+  },
+  {
+    "date": "Thursday, June 4, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "STETHOSCOPE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "A VERY COOL INSTRUMENT",
+        "correct": "224",
+        "guesses": "4,529 🥇",
+        "explanation": "A stethoscope is a medical instrument that always feels cold on the skin."
+      },
+      {
+        "number": 2,
+        "text": "SMART JEWELRY",
+        "correct": "231",
+        "guesses": "4,329 🥈",
+        "explanation": "Doctors, who undergo a lot of schooling, wear stethoscopes like jewelry."
+      },
+      {
+        "number": 3,
+        "text": "HEAR YE! HEAR YE!",
+        "correct": "257",
+        "guesses": "6,184 🥉",
+        "explanation": "A stethoscope is designed to help you hear things."
+      },
+      {
+        "number": 4,
+        "text": "BEATS NOT BY DRE",
+        "correct": "153",
+        "guesses": "5,389",
+        "explanation": "Stethoscopes are used to listen to heartbeats but are not made by the brand Beats by Dre."
+      },
+      {
+        "number": 5,
+        "text": "SEARCHES FOR SIGNS OF BURIED TREASURE IN A CHEST",
+        "correct": "307",
+        "guesses": "2,795",
+        "explanation": "A stethoscope is placed on a patient's chest to listen for health signs."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 224,
+    "silverWinners": 231,
+    "bronzeWinners": 257,
+    "totalWinners": 712,
+    "goldPayout": 13.39,
+    "silverPayout": 10.82,
+    "bronzePayout": 7.78,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "lyrical lily, So wins, Meager noodle",
+    "wrongGuesses": "HEARING AID, APPLE WATCH, AIRPODS, METAL DETECTOR, AIR PODS"
+  },
+  {
+    "date": "Thursday, June 4, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "SPONGEBOB SQUAREPANTS",
+    "clues": [
+      {
+        "number": 1,
+        "text": "SOFT AND IN SHAPE",
+        "correct": "24",
+        "guesses": "8,135 🥇",
+        "explanation": "Sponges are soft and SpongeBob wears pants shaped like a square."
+      },
+      {
+        "number": 2,
+        "text": "DEEPLY ABSORBING ENTERTAINER",
+        "correct": "2,343",
+        "guesses": "8,139 🥈",
+        "explanation": "SpongeBob lives deep in the ocean and sponges are highly absorbent."
+      },
+      {
+        "number": 3,
+        "text": "YELLOW, SUBMARINE, NOT THE BEATLES",
+        "correct": "2,520",
+        "guesses": "5,405 🥉",
+        "explanation": "SpongeBob is a yellow character who lives underwater and was never allowed in The Beatles."
+      },
+      {
+        "number": 4,
+        "text": "CARTOON STAR WHOSE CO-STAR IS A STAR",
+        "correct": "2,725",
+        "guesses": "3,242",
+        "explanation": "SpongeBob's best friend and co-star is Patrick Star."
+      },
+      {
+        "number": 5,
+        "text": "WOWSERS! NICKELODEON ICON WITH FOUR-SIDED TROUSERS!",
+        "correct": "912",
+        "guesses": "1,070",
+        "explanation": "SpongeBob is a beloved Nickelodeon character known for his square pants."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 24,
+    "silverWinners": 2343,
+    "bronzeWinners": 2520,
+    "totalWinners": 4887,
+    "goldPayout": 125.0,
+    "silverPayout": 1.06,
+    "bronzePayout": 0.79,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Bra, Swilly",
+    "wrongGuesses": "SPONGE, PILLOW, MARSHMALLOW, PLAYDOH, PLAY DOH"
   }
 ]
