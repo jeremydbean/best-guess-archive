@@ -432,5 +432,36 @@
         "explanation": "The goal is to strike every frame — you never want to settle for just a spare."
       }
     ]
+  },
+  {
+    "date": "Saturday, June 6, 2026",
+    "secretItem": "DONUT",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "EARLY RISER",
+        "explanation": "Donuts are a breakfast food — you get them early in the morning when the shop first opens."
+      },
+      {
+        "clueNumber": 2,
+        "text": "SHAPED LIKE A SPARE TIRE, MAY BECOME ONE",
+        "explanation": "A donut is round with a hole like a spare tire, and eating too many can give you a 'spare tire' around your midsection."
+      },
+      {
+        "clueNumber": 3,
+        "text": "DUNK CONTEST CHAMPION",
+        "explanation": "Dunking a donut in coffee is a beloved tradition — nobody wins the dunk contest like a donut."
+      },
+      {
+        "clueNumber": 4,
+        "text": "PEOPLE GET JELLY WHEN YOU TAKE THE GOOD ONES",
+        "explanation": "Jelly-filled donuts are the prize of the box, and people get jealous (jelly) when you snag one."
+      },
+      {
+        "clueNumber": 5,
+        "text": "A HOLESOME FRIED TREAT THAT IS SWEET TO EAT",
+        "explanation": "A pun on 'wholesome' — it literally has a hole, it's fried, and it's a sweet treat."
+      }
+    ]
   }
 ]
