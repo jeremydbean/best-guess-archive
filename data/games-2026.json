@@ -12149,5 +12149,127 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Bra, Swilly",
     "wrongGuesses": "SPONGE, PILLOW, MARSHMALLOW, PLAYDOH, PLAY DOH"
+  },
+  {
+    "date": "Saturday, June 6, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "SUNBURN",
+    "clues": [
+      {
+        "number": 1,
+        "text": "INDECENT EXPOSURE",
+        "correct": "681",
+        "guesses": "4,358 🥇",
+        "explanation": "You can get burned when you expose too much skin to the sun."
+      },
+      {
+        "number": 2,
+        "text": "YOU'RE GETTING WARMER...",
+        "correct": "2,274",
+        "guesses": "8,108 🥈",
+        "explanation": "The more sun you get, the warmer you feel and especially when you leave the sun after with a sunburn, you just get hot."
+      },
+      {
+        "number": 3,
+        "text": "DOWNSIDE OF A NO COVER VENUE",
+        "correct": "2,517",
+        "guesses": "6,113 🥉",
+        "explanation": "If you are in a place that doesn't have a roof or you are not covered up in the sun, you could get a sunburn."
+      },
+      {
+        "number": 4,
+        "text": "RED ALERT!",
+        "correct": "1,578",
+        "guesses": "3,004",
+        "explanation": "Sunburns are red."
+      },
+      {
+        "number": 5,
+        "text": "IF IT'S GOT YOU PEELING, TRY ALOE FOR HEALING",
+        "correct": "2,699",
+        "guesses": "3,054",
+        "explanation": "Aloe is a common way to heal a sunburn."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 681,
+    "silverWinners": 2274,
+    "bronzeWinners": 2517,
+    "totalWinners": 5472,
+    "goldPayout": 4.4,
+    "silverPayout": 1.09,
+    "bronzePayout": 0.79,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "BEACH, TANNING BED, SUN, SAUNA, BIKINI",
+    "bonus": {
+      "title": "Office Romance",
+      "desc": "Office Romance starring Jennifer Lopez and Brett Goldstein is premiering on Netflix today."
+    }
+  },
+  {
+    "date": "Saturday, June 6, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "TOM HANKS",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BIGGER THAN BIG",
+        "correct": "511",
+        "guesses": "3,786 🥇",
+        "explanation": "He starred in the movie Big, and his career goes way beyond that."
+      },
+      {
+        "number": 2,
+        "text": "HAD A BALL AT THE BEACH",
+        "correct": "1,002",
+        "guesses": "5,821 🥈",
+        "explanation": "He had a volleyball named Wilson."
+      },
+      {
+        "number": 3,
+        "text": "RAN THE COUNTRY",
+        "correct": "1,353",
+        "guesses": "5,925 🥉",
+        "explanation": "As Forrest Gump, he literally ran across the whole country."
+      },
+      {
+        "number": 4,
+        "text": "HAS GIVEN 4 WOODEN PERFORMANCES, SO FAR",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "He plays Woody in Toy Story and its many sequels."
+      },
+      {
+        "number": 5,
+        "text": "HOUSTON, WE HAVE AN ACADEMY AWARD WINNING ACTOR",
+        "correct": "2,243",
+        "guesses": "3,854",
+        "explanation": "This is a reference to his role in the film Apollo 13."
+      }
+    ],
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 511,
+    "silverWinners": 1002,
+    "bronzeWinners": 1353,
+    "totalWinners": 2866,
+    "goldPayout": 5.87,
+    "silverPayout": 2.49,
+    "bronzePayout": 1.47,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "FOREST GUMP, BEACH BALL",
+    "bonus": {
+      "title": "Office Romance",
+      "desc": "Office Romance starring Jennifer Lopez and Brett Goldstein is premiering on Netflix today."
+    }
   }
 ]
