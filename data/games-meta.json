@@ -2704,6 +2704,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Saturday, June 6, 2026",
+      "secretItem": "SUNBURN",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 5472,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Saturday, June 6, 2026",
+      "secretItem": "TOM HANKS",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 2866,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
