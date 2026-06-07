@@ -463,5 +463,36 @@
         "explanation": "A pun on 'wholesome' — it literally has a hole, it's fried, and it's a sweet treat."
       }
     ]
+  },
+  {
+    "date": "Sunday, June 7, 2026",
+    "secretItem": "HOLLYWOOD",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "EVENTUALLY SHOWED ITS TRUE COLORS",
+        "explanation": "The Hollywood Sign was originally an ad for 'Hollywoodland' before eventually becoming the iconic sign we know today."
+      },
+      {
+        "clueNumber": 2,
+        "text": "A SIGN OF SUCCESS AND FAILURE",
+        "explanation": "The Hollywood Sign is literally a sign, and Hollywood represents both the highest success and the harshest rejection in show business."
+      },
+      {
+        "clueNumber": 3,
+        "text": "FOR TOURISTS, THE STARS ARE ALIGNED",
+        "explanation": "The Hollywood Walk of Fame features stars aligned along the sidewalk — a top tourist attraction."
+      },
+      {
+        "clueNumber": 4,
+        "text": "HAS THREE SEASONS: SUMMER, AWARDS, AND PILOT",
+        "explanation": "Hollywood runs on summer blockbuster season, awards season, and pilot season."
+      },
+      {
+        "clueNumber": 5,
+        "text": "HOORAY FOR THIS TINSELLY TOWN WHERE SHOW BIZ GOES DOWN",
+        "explanation": "'Tinseltown' is a famous nickname for Hollywood, and 'Hooray for Hollywood' is a classic showbiz phrase."
+      }
+    ]
   }
 ]
