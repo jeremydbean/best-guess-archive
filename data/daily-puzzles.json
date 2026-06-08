@@ -494,5 +494,36 @@
         "explanation": "'Tinseltown' is a famous nickname for Hollywood, and 'Hooray for Hollywood' is a classic showbiz phrase."
       }
     ]
+  },
+  {
+    "date": "Monday, June 8, 2026",
+    "secretItem": "LINCOLN MEMORIAL",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "LITERALLY LARGER THAN LIFE",
+        "explanation": "The seated statue of Lincoln inside is 19 feet tall — far larger than any real person."
+      },
+      {
+        "clueNumber": 2,
+        "text": "LOOKING FOR A SEAT? THIS ONE'S TAKEN",
+        "explanation": "Lincoln's iconic statue is permanently seated, and that seat is very much taken."
+      },
+      {
+        "clueNumber": 3,
+        "text": "YOU CAN FIND IT AT THE MALL",
+        "explanation": "It sits at the west end of the National Mall in Washington, D.C."
+      },
+      {
+        "clueNumber": 4,
+        "text": "CELEBRATES A SWEET SIXTEEN",
+        "explanation": "Lincoln was the 16th President of the United States — a sweet sixteen worth celebrating."
+      },
+      {
+        "clueNumber": 5,
+        "text": "SHRINE DESIGNED TO KEEP ABE TOP OF MIND",
+        "explanation": "It's a memorial shrine dedicated to Abraham Lincoln (Abe), built to honor and preserve his memory."
+      }
+    ]
   }
 ]
