@@ -12271,5 +12271,119 @@
       "title": "Office Romance",
       "desc": "Office Romance starring Jennifer Lopez and Brett Goldstein is premiering on Netflix today."
     }
+  },
+  {
+    "date": "Monday, June 8, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "PUSH-UPS",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 37,
+    "bronzeWinners": 887,
+    "totalWinners": 925,
+    "goldPayout": 3000.0,
+    "silverPayout": 67.56,
+    "bronzePayout": 2.25,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Quandie Quandel Chapman, Quan L Chapman one, Huan Di",
+    "wrongGuesses": "LADDER, LIMBO, TUG OF WAR, SCALE, DANCING",
+    "clues": [
+      {
+        "number": 1,
+        "text": "NO ASSEMBLY REQUIRED",
+        "correct": "1",
+        "guesses": "2,468 🥇",
+        "explanation": "Push-ups require no gym equipment, nothing."
+      },
+      {
+        "number": 2,
+        "text": "GET DOWN, GET DOWN",
+        "correct": "37",
+        "guesses": "4,391 🥈",
+        "explanation": "You get down on the ground and then you lower yourself every rep."
+      },
+      {
+        "number": 3,
+        "text": "YOU NEVER PULL YOUR WEIGHT!",
+        "correct": "887",
+        "guesses": "6,668 🥉",
+        "explanation": "You push your weight in."
+      },
+      {
+        "number": 4,
+        "text": "HELD AT ARM'S LENGTH",
+        "correct": "837",
+        "guesses": "4,599",
+        "explanation": "Your arm's length is about as high as you can go when doing push-ups."
+      },
+      {
+        "number": 5,
+        "text": "DROP & GIVE ME TWENTY; YOU'LL THINK THAT'S PLENTY!",
+        "correct": "6,428",
+        "guesses": "7,141",
+        "explanation": "Drop and give me twenty is a phrase commonly associated with push-ups."
+      }
+    ]
+  },
+  {
+    "date": "Monday, June 8, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "SLINKY",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 153,
+    "silverWinners": 1084,
+    "bronzeWinners": 2700,
+    "totalWinners": 3937,
+    "goldPayout": 19.6,
+    "silverPayout": 2.3,
+    "bronzePayout": 0.74,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Mammal wellybelly twenty four, Exos of stone, Pooh bear six twenty three, I am a mammal ninety two",
+    "wrongGuesses": "RUBBER BAND, YOGA, RUBBERBAND, SLIME, SPRING",
+    "clues": [
+      {
+        "number": 1,
+        "text": "THAT'S A STRETCH",
+        "correct": "153",
+        "guesses": "7,202 🥇",
+        "explanation": "Slinkies are all about the stretch."
+      },
+      {
+        "number": 2,
+        "text": "PULLS ITSELF TOGETHER NICELY",
+        "correct": "1,084",
+        "guesses": "9,440 🥈",
+        "explanation": "Slinky always snaps back to form after being stretched."
+      },
+      {
+        "number": 3,
+        "text": "CAUGHT IN A DOWNWARD SPIRAL",
+        "correct": "2,700",
+        "guesses": "6,103 🥉",
+        "explanation": "A slinky is a spiral, and the momentum pulls down the stairs."
+      },
+      {
+        "number": 4,
+        "text": "CLASSIC SPRING TIME FUN",
+        "correct": "1,150",
+        "guesses": "2,261",
+        "explanation": "A slinky is a vintage toy that is a spring, and this is a classic by far."
+      },
+      {
+        "number": 5,
+        "text": "COILED METAL TOY THAT'S BROUGHT GENERATIONS JOY",
+        "correct": "1,770",
+        "guesses": "2,161",
+        "explanation": "Slinkies have been around forever, over 80 years."
+      }
+    ]
   }
 ]
