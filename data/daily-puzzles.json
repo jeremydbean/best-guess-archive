@@ -525,5 +525,36 @@
         "explanation": "It's a memorial shrine dedicated to Abraham Lincoln (Abe), built to honor and preserve his memory."
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 9, 2026",
+    "secretItem": "EMAIL",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "AN ICONIC SWOOSH",
+        "explanation": "The send button in email apps is often a swoosh/arrow icon."
+      },
+      {
+        "clueNumber": 2,
+        "text": "NO OFFENSE, SNAILS",
+        "explanation": "Snail mail is regular postal mail, contrasted with the speed of email."
+      },
+      {
+        "clueNumber": 3,
+        "text": "POPULAR SCREENWRITING TOOL",
+        "explanation": "Final Draft and other screenwriting tools export to email, but more directly, screenplay files are shared via email."
+      },
+      {
+        "clueNumber": 4,
+        "text": "HAVEN'T OPENED IT? THAT'S BOLD",
+        "explanation": "Unread emails appear in bold in your inbox."
+      },
+      {
+        "clueNumber": 5,
+        "text": "INBOX ITEM THAT'S PENNED WITHOUT A PEN",
+        "explanation": "Emails are written messages that go to your inbox, typed rather than handwritten."
+      }
+    ]
   }
 ]
