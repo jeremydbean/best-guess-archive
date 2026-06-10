@@ -556,5 +556,36 @@
         "explanation": "Emails are written messages that go to your inbox, typed rather than handwritten."
       }
     ]
+  },
+  {
+    "date": "Wednesday, June 10, 2026",
+    "secretItem": "LION KING",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "COMES FULL CIRCLE",
+        "explanation": "The Lion King's story ends where it begins — Simba returns to Pride Rock, completing the circle of life."
+      },
+      {
+        "clueNumber": 2,
+        "text": "HAS A CLIFFHANGER IN THE MIDDLE",
+        "explanation": "Mufasa dies in a cliffhanger moment when Scar causes him to fall into the stampede."
+      },
+      {
+        "clueNumber": 3,
+        "text": "MANELY A FATHER-SON STORY",
+        "explanation": "The Lion King is mainly (and manely) a story about Simba and his father Mufasa."
+      },
+      {
+        "clueNumber": 4,
+        "text": "THE PRIDE OF DISNEY",
+        "explanation": "The Lion King is one of Disney's most beloved films, and lions live in prides."
+      },
+      {
+        "clueNumber": 5,
+        "text": "ANSWER CORRECTLY? YOU GOTTA! BUT IF NOT, HAKUNA MATATA",
+        "explanation": "Hakuna Matata is the famous carefree motto from The Lion King."
+      }
+    ]
   }
 ]
