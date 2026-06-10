@@ -12385,5 +12385,119 @@
         "explanation": "Slinkies have been around forever, over 80 years."
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 9, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TACO BELL",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 11,
+    "silverWinners": 734,
+    "bronzeWinners": 1989,
+    "totalWinners": 2734,
+    "goldPayout": 272.72,
+    "silverPayout": 3.4,
+    "bronzePayout": 1.0,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "JINGLE, JINGLES, TACO, RED LOBSTER, GAS STATION",
+    "clues": [
+      {
+        "number": 1,
+        "text": "COMMERCIAL SOUND BITES",
+        "correct": "11",
+        "guesses": "3,689 🥇",
+        "explanation": "A commercial sound bite is also known as a jingle, which refers to a bell."
+      },
+      {
+        "number": 2,
+        "text": "SHUNS BUNS",
+        "correct": "734",
+        "guesses": "3,633 🥈",
+        "explanation": "The restaurant serves items like tacos and burritos instead of burgers with buns."
+      },
+      {
+        "number": 3,
+        "text": "A VERY PROFITABLE SHELL CORPORATION",
+        "correct": "1,989",
+        "guesses": "6,155 🥉",
+        "explanation": "The restaurant sells hard shell tacos and operates as a profitable corporation."
+      },
+      {
+        "number": 4,
+        "text": "RING MAKER WHO WORKS LATE",
+        "correct": "882",
+        "guesses": "3,320",
+        "explanation": "A bell is a ring maker."
+      },
+      {
+        "number": 5,
+        "text": "A FAST FOOD DREAM, HOME TO THE CRUNCHWRAP SUPREME",
+        "correct": "7,214",
+        "guesses": "7,794",
+        "explanation": "Taco Bell is a fast food restaurant known for the Crunchwrap Supreme."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, June 9, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TOM CRUISE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 69,
+    "silverWinners": 132,
+    "bronzeWinners": 2306,
+    "totalWinners": 2507,
+    "goldPayout": 43.47,
+    "silverPayout": 18.93,
+    "bronzePayout": 0.86,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Kyle F893, R45",
+    "wrongGuesses": "GARFIELD, CAMERA, POLAROID, TOM, TOM AND JERRY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "RARELY DOES A DOUBLE TAKE",
+        "correct": "69",
+        "guesses": "3,363 🥇",
+        "explanation": "He is known for almost never using a stunt double in his movies."
+      },
+      {
+        "number": 2,
+        "text": "HAS HAD A GOOD RUN",
+        "correct": "132",
+        "guesses": "4,066 🥈",
+        "explanation": "He has been iconically running through his movies since 1981."
+      },
+      {
+        "number": 3,
+        "text": "MALE CAT ON A SEAFARING VOYAGE",
+        "correct": "2,306",
+        "guesses": "6,931 🥉",
+        "explanation": "A male cat is a tom, and a seafaring voyage is a cruise."
+      },
+      {
+        "number": 4,
+        "text": "VINTAGE ACTION FIGURE WHOSE GOOSE GOT COOKED",
+        "correct": "1,611",
+        "guesses": "3,980",
+        "explanation": "He is in his sixties and his sidekick Goose famously died in Top Gun."
+      },
+      {
+        "number": 5,
+        "text": "MADE THE IMPOSSIBLE POSSIBLE IN “MISSION: IMPOSSIBLE”",
+        "correct": "4,325",
+        "guesses": "5,450",
+        "explanation": "He famously starred in the Mission Impossible movies."
+      }
+    ]
   }
 ]
