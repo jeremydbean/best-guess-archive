@@ -1178,7 +1178,7 @@ document.addEventListener('focusout', function(e) {
 
 <!-- DATABASE -->
 <template id="view-database">
-<div class="space-y-6 fade-in pb-20">
+<div id="db-view-root" class="space-y-6 fade-in pb-20">
   <div class="flex flex-col md:flex-row justify-between items-center gap-4">
     <div>
       <h2 class="text-3xl font-display font-bold">Game <span class="text-blue-500">Database</span></h2>
@@ -1204,7 +1204,31 @@ document.addEventListener('focusout', function(e) {
   </div>
   <!-- Cross-tab hint: shown when search matches exist in the other tab -->
   <div id="db-cross-hint" class="hidden"></div>
+  <!-- Secret-item spoiler control -->
+  <label class="inline-flex items-center gap-2 text-xs text-slate-400 cursor-pointer select-none">
+    <input id="db-reveal-all" type="checkbox" onchange="app.toggleRevealAll(this)" style="width:1rem;height:1rem;accent-color:#3b82f6;cursor:pointer">
+    Reveal all secret items
+  </label>
   <style>
+    /* Secret-item spoiler: hidden by default, click a cell to reveal it,
+       or tick "Reveal all secret items" to unblur the whole column. */
+    .db-secret {
+      cursor: pointer;
+      filter: blur(5px);
+      transition: filter .12s ease;
+      border-radius: 4px;
+      user-select: none;
+      -webkit-user-select: none;
+      outline: none;
+    }
+    .db-secret:hover, .db-secret:focus-visible { filter: blur(3px); }
+    .db-secret.revealed,
+    #db-view-root.db-reveal-all .db-secret {
+      filter: none;
+      cursor: text;
+      user-select: text;
+      -webkit-user-select: text;
+    }
     /* Responsive database table container */
     .db-responsive-container {
       width: 100%;
@@ -1884,6 +1908,7 @@ class App {
     this.timer = null;
     this._dbSort = { key: 'date', dir: 'desc' };
     this._dbActiveTab = 'live';
+    this._dbRevealAll = false;
     this._availableYears = null;
     this._fullGamesLoaded = false;
     this._fullGamesLoading = null;
@@ -2244,7 +2269,7 @@ class App {
       }).join('');
       return `<tr class="hover:bg-white/5 transition-colors">
         <td class="px-4 py-3 text-slate-400 font-mono text-[11px] db-col-date whitespace-nowrap">${hl(p.date)}</td>
-        <td class="px-4 py-3 font-bold text-white whitespace-nowrap">${hl(p.secretItem)}</td>
+        <td class="px-4 py-3 font-bold text-white whitespace-nowrap"><span class="db-secret" tabindex="0" role="button" title="Click to reveal answer" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(p.secretItem)}</span></td>
         ${cluesHtml}
       </tr>`;
     }).join('');
@@ -3617,7 +3642,7 @@ Rules:
     const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
       <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
       <td class="px-1 py-1 font-semibold text-white align-middle" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;">
-        <span style="white-space:nowrap;">${hl(g.secretItem)}</span>
+        <span class="db-secret" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)" style="white-space:nowrap;">${hl(g.secretItem)}</span>
         ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${hl(g.note)}</span></div>` : ''}
       </td>
       <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${g.pot.toLocaleString()}</td>
@@ -3643,6 +3668,12 @@ Rules:
     const nodes = this._getViewNodes('database');
     const filter = (nodes.search?.value || '').toLowerCase().trim();
     const isDaily = this._dbActiveTab === 'daily';
+
+    // Keep the secret-item spoiler control in sync with persisted state.
+    const revealRoot = document.getElementById('db-view-root');
+    if (revealRoot) revealRoot.classList.toggle('db-reveal-all', this._dbRevealAll);
+    const revealToggle = document.getElementById('db-reveal-all');
+    if (revealToggle) revealToggle.checked = this._dbRevealAll;
 
     // --- Tab badge counts (always computed for both tabs) ---
     const liveFiltered = this._getFilteredGames(filter, this._dbSort || { key: 'date', dir: 'desc' });
@@ -3725,6 +3756,23 @@ Rules:
         window.setupDatabaseScrollControls();
       }
     });
+  }
+
+  revealSecret(el) {
+    if (el) el.classList.add('revealed');
+  }
+
+  revealSecretKey(event, el) {
+    if (event && (event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar')) {
+      event.preventDefault();
+      this.revealSecret(el);
+    }
+  }
+
+  toggleRevealAll(el) {
+    this._dbRevealAll = !!(el && el.checked);
+    const root = document.getElementById('db-view-root');
+    if (root) root.classList.toggle('db-reveal-all', this._dbRevealAll);
   }
 
   switchDatabaseTab(tab) {
