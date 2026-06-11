@@ -1,6 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-05-28 (session end)
+Last updated: 2026-06-11 (session end)
+
+## Most Recent Changes (2026-06-11)
+
+- **Host name fix — "Corinne Five" → "Corinne Foxx"**: The host previously transcribed as "Corinne Five" (a mishearing of Foxx) is now "Corinne Foxx" everywhere — 2 host fields in `data/games-2026.json` and 277 occurrences in `data/transcripts.json`. `data/games-meta.json` regenerated via `npm run audit:fix`.
+- **SPARKLER (Thu May 7, 2026) silver payout corrected to $1.07**: Per real-show data, silver winners received $1.07 each (the final amount *after* the empty $2,000 bronze pot was redistributed to gold+silver). Back-solved the winner count under the audit's redistribution formula `floorCents(2500/sW) + floorCents(2000/(15+sW)) = 1.07` → silver = 4,160 winners (base $0.60 + $0.47 bronze share). Updated: `silverWinners` 2975→4160, `silverPayout` 1.5→1.07, `goldPayout` 200.66→200.47 (its bronze-redistribution share changed), `totalWinners` 2990→4175, Clue 5 `correct` 2975→4160, and the two SPARKLER Round 1 Results transcript lines. There is still **no bronze tier** (bronzeWinners 0). `npm run audit` passes 0/0.
+- **Database secret-item spoiler**: On the Database view, secret items / daily-puzzle answers are now blurred by default and reveal on click (or Enter/Space). A "Reveal all secret items" checkbox (unchecked by default, near the tab bar) unblurs the whole column via the `#db-view-root.db-reveal-all` class. State persists across tab switches/re-renders (`this._dbRevealAll`). Implemented with the `.db-secret` CSS class and `revealSecret` / `revealSecretKey` / `toggleRevealAll` methods. Uses only inline styles / pre-existing Tailwind classes, so `tailwind.css` did not need regenerating. The Details modal still shows the full item (clicking View is an intentional reveal).
 
 ## Current Branch
 
