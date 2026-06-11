@@ -2776,6 +2776,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Wednesday, June 10, 2026",
+      "secretItem": "PAPER AIRPLANE",
+      "pot": 7500,
+      "host": "Corinne Five",
+      "format": "v2",
+      "totalWinners": 2145,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Wednesday, June 10, 2026",
+      "secretItem": "BAKER'S DOZEN",
+      "pot": 7500,
+      "host": "Corinne Five",
+      "format": "v2",
+      "totalWinners": 5173,
+      "clueCount": 5,
+      "goldClue": 2,
+      "silverClue": 3,
+      "bronzeClue": 4
     }
   ]
 }
