@@ -12499,5 +12499,119 @@
         "explanation": "He famously starred in the Mission Impossible movies."
       }
     ]
+  },
+  {
+    "date": "Wednesday, June 10, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Corinne Five",
+    "secretItem": "PAPER AIRPLANE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 112,
+    "silverWinners": 323,
+    "bronzeWinners": 1710,
+    "totalWinners": 2145,
+    "goldPayout": 26.78,
+    "silverPayout": 7.73,
+    "bronzePayout": 1.16,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Jaw Fixer, Slammer72",
+    "wrongGuesses": "",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ALWAYS TRAVELS LIGHT",
+        "correct": "112",
+        "guesses": "4,889 🥇",
+        "explanation": "A paper airplane is extremely light, made of just a single sheet of paper."
+      },
+      {
+        "number": 2,
+        "text": "TAKE A FREE THROW",
+        "correct": "323",
+        "guesses": "4,692 🥈",
+        "explanation": "Throwing a paper airplane doesn't cost anything — it's a free throw."
+      },
+      {
+        "number": 3,
+        "text": "ONE SHEET TO THE WIND",
+        "correct": "1,710",
+        "guesses": "6,978 🥉",
+        "explanation": "A paper airplane is made from one sheet of paper and flies through the wind (a play on three sheets to the wind)."
+      },
+      {
+        "number": 4,
+        "text": "MIGHT GO OVER STUDENTS' HEADS",
+        "correct": "1,891",
+        "guesses": "4,619",
+        "explanation": "When thrown in class, a paper airplane literally flies over other students' heads."
+      },
+      {
+        "number": 5,
+        "text": "A FOLDED FLYER, YOU TRY TO GET FARTHER AND HIGHER",
+        "correct": "3,455",
+        "guesses": "4,394",
+        "explanation": "A paper airplane is a folded paper flyer that you throw and try to send as far and high as possible."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, June 10, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Corinne Five",
+    "secretItem": "BAKER'S DOZEN",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 1,
+    "silverWinners": 14,
+    "bronzeWinners": 5158,
+    "totalWinners": 5173,
+    "goldPayout": 3000.0,
+    "silverPayout": 178.57,
+    "bronzePayout": 0.38,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "not your time",
+    "wrongGuesses": "",
+    "clues": [
+      {
+        "number": 1,
+        "text": "FREE FOR ALL",
+        "correct": "0",
+        "guesses": "4,108",
+        "explanation": "When you buy a dozen, the 13th item is included free for all."
+      },
+      {
+        "number": 2,
+        "text": "ODDLY SPECIFIC",
+        "correct": "1",
+        "guesses": "2,900 🥇",
+        "explanation": "Thirteen is an odd number, and a baker's dozen is an oddly specific quantity."
+      },
+      {
+        "number": 3,
+        "text": "SIX SEVEN BEFORE SIX SEVEN",
+        "correct": "14",
+        "guesses": "5,122 🥈",
+        "explanation": "Six plus seven equals thirteen."
+      },
+      {
+        "number": 4,
+        "text": "MAYBE THE BAGEL MAKER CAN'T COUNT",
+        "correct": "5,158",
+        "guesses": "8,121 🥉",
+        "explanation": "If you order a dozen (12) bagels and receive 13, the baker seems to have miscounted."
+      },
+      {
+        "number": 5,
+        "text": "SOUNDS LIKE TWELVE, BUT IT'S THIRTEEN IF YOU KNOW WHAT I MEAN",
+        "correct": "2,982",
+        "guesses": "4,220",
+        "explanation": "A baker's dozen sounds like it should be twelve (a dozen), but it's actually thirteen."
+      }
+    ]
   }
 ]
