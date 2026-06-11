@@ -1962,6 +1962,7 @@ class App {
     this._dbSort = { key: 'date', dir: 'desc' };
     this._dbActiveTab = 'live';
     this._dbRevealAll = false;
+    this._revealedSecrets = new Set();
     this._availableYears = null;
     this._fullGamesLoaded = false;
     this._fullGamesLoading = null;
@@ -2322,7 +2323,7 @@ class App {
       }).join('');
       return `<tr class="hover:bg-white/5 transition-colors">
         <td class="px-4 py-3 text-slate-400 font-mono text-[11px] db-col-date whitespace-nowrap">${hl(p.date)}</td>
-        <td class="px-4 py-3 font-bold text-white whitespace-nowrap"><span class="db-secret" tabindex="0" role="button" title="Click to reveal answer" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(p.secretItem)}</span></td>
+        <td class="px-4 py-3 font-bold text-white whitespace-nowrap"><span class="db-secret" data-secret-key="${esc(p.date + '::' + p.secretItem)}" tabindex="0" role="button" title="Click to reveal answer" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(p.secretItem)}</span></td>
         ${cluesHtml}
       </tr>`;
     }).join('');
@@ -3695,7 +3696,7 @@ Rules:
     const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
       <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
       <td class="px-1 py-1 font-semibold text-white align-middle" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;">
-        <span class="db-secret" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)" style="white-space:nowrap;">${hl(g.secretItem)}</span>
+        <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)" style="white-space:nowrap;">${hl(g.secretItem)}</span>
         ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${hl(g.note)}</span></div>` : ''}
       </td>
       <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${g.pot.toLocaleString()}</td>
@@ -3804,6 +3805,8 @@ Rules:
       if (nodes.body) nodes.body.innerHTML = this._renderDailyTableRows(dailyFiltered, filter);
     }
 
+    this._applyRevealedState();
+
     requestAnimationFrame(() => {
       if (typeof window.setupDatabaseScrollControls === 'function') {
         window.setupDatabaseScrollControls();
@@ -3812,7 +3815,23 @@ Rules:
   }
 
   revealSecret(el) {
-    if (el) el.classList.add('revealed');
+    if (!el) return;
+    el.classList.add('revealed');
+    // Remember this answer so it stays revealed across re-renders and shows
+    // already-revealed in the Details modal (and vice-versa).
+    const key = el.dataset.secretKey;
+    if (key) this._revealedSecrets.add(key);
+  }
+
+  // Re-apply individually-revealed answers after a table re-render. (The
+  // "Reveal all" case is handled purely by the #db-view-root.db-reveal-all
+  // CSS class, so it isn't needed here.)
+  _applyRevealedState() {
+    const body = this._getViewNodes('database').body;
+    if (!body) return;
+    body.querySelectorAll('.db-secret[data-secret-key]').forEach(el => {
+      if (this._revealedSecrets.has(el.dataset.secretKey)) el.classList.add('revealed');
+    });
   }
 
   revealSecretKey(event, el) {
@@ -4055,10 +4074,18 @@ Rules:
             Transcript
           </button>`
       : '';
+    // Keep the modal answer linked to the table: if it's already revealed in
+    // the database view (clicked there, or "Reveal all" is on), show it
+    // revealed here too — no extra click needed.
+    const secretKey = g.date + '::' + g.secretItem;
+    const secretAlreadyRevealed = this._dbRevealAll || this._revealedSecrets.has(secretKey);
+    const secretHeading = g.secretItem
+      ? `<span class="db-secret db-secret-lg${secretAlreadyRevealed ? ' revealed' : ''}" data-secret-key="${esc(secretKey)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${esc(g.secretItem)}</span>`
+      : esc(g.secretItem);
     document.getElementById('modal-content').innerHTML = `
       <div class="mb-8 text-center">
         <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
-        <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${g.secretItem ? `<span class="db-secret db-secret-lg" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${esc(g.secretItem)}</span>` : esc(g.secretItem)}</h2>
+        <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${secretHeading}</h2>
 
         <div class="mt-5 flex flex-wrap items-center justify-center text-sm" style="column-gap:2rem;row-gap:.75rem;line-height:1.7">
           <span class="font-bold text-green-300">$${g.pot.toLocaleString()}</span>
