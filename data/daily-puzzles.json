@@ -587,5 +587,36 @@
         "explanation": "Hakuna Matata is the famous carefree motto from The Lion King."
       }
     ]
+  },
+  {
+    "date": "Thursday, June 11, 2026",
+    "secretItem": "WALKIE TALKIE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "RADIO ACTIVE",
+        "explanation": "A walkie-talkie is a handheld two-way radio — and the phrase puns on 'radioactive'."
+      },
+      {
+        "clueNumber": 2,
+        "text": "TWO WAYS TO SAY",
+        "explanation": "It's a two-way radio: both people can talk and listen."
+      },
+      {
+        "clueNumber": 3,
+        "text": "A VERY MOVING CONVERSATION",
+        "explanation": "You can walk and talk at the same time — a conversation on the move."
+      },
+      {
+        "clueNumber": 4,
+        "text": "A HANDFUL THAT'LL GIVE YOU AN EARFUL",
+        "explanation": "A handheld device you hold in your hand and hear voices through."
+      },
+      {
+        "clueNumber": 5,
+        "text": "HERE'S YOUR LAST CLUE. OVER.",
+        "explanation": "'Over' is the classic radio/walkie-talkie sign-off."
+      }
+    ]
   }
 ]
