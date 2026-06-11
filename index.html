@@ -718,6 +718,98 @@
     #input-container { background: rgba(2,6,22,0.92); backdrop-filter: blur(10px); }
     input#guess-input { font-size: 18px; padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
   }
+
+  /* ===== Database secret-item reveal (global so it also applies to the
+     Details modal, which is a top-level element and can be opened from the
+     Transcripts page as well as the Database table). ===== */
+  /* Secret-item spoiler: a standardized scratch-off-style bar hides every
+     answer behind the SAME fixed-width cover, so the answer's length can't
+     be inferred from the box. Click/tap (or Enter/Space) reveals one, or
+     tick "Reveal all secret items" to reveal the whole column. */
+  .db-secret {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.5rem;            /* standardized — identical for every answer */
+    height: 1.45rem;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+    vertical-align: middle;
+    position: relative;
+    color: transparent !important;   /* hide the real text (and any search highlight) */
+    user-select: none;
+    -webkit-user-select: none;
+    outline: none;
+    /* brushed-metallic scratch-off look: silver gradient + diagonal hatch */
+    background:
+      repeating-linear-gradient(45deg, rgba(0,0,0,0.10) 0 6px, rgba(255,255,255,0.06) 6px 12px),
+      linear-gradient(145deg, #c7cdd8 0%, #9aa3b2 45%, #d2d8e2 55%, #8b94a4 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 2px rgba(0,0,0,0.35);
+    transition: filter .12s ease, box-shadow .12s ease;
+  }
+  .db-secret::after {
+    content: "TAP TO REVEAL";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: rgba(30,41,59,0.78);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.45);
+    pointer-events: none;
+  }
+  .db-secret:hover, .db-secret:focus-visible {
+    filter: brightness(1.08);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.65), inset 0 -1px 2px rgba(0,0,0,0.35), 0 0 0 2px rgba(59,130,246,0.55);
+  }
+  /* Larger cover for the database Details modal heading — still a fixed,
+     length-independent width so the answer can't be guessed from the box. */
+  .db-secret.db-secret-lg {
+    width: 16rem;
+    height: 3rem;
+    border-radius: 8px;
+  }
+  .db-secret.db-secret-lg::after {
+    font-size: 13px;
+    letter-spacing: .12em;
+  }
+  .db-secret.revealed,
+  #db-view-root.db-reveal-all .db-secret {
+    display: inline;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    filter: none;
+    color: inherit !important;
+    cursor: text;
+    user-select: text;
+    -webkit-user-select: text;
+  }
+  .db-secret.revealed::after,
+  #db-view-root.db-reveal-all .db-secret::after { content: none; }
+
+  /* Host explanations in the Details modal are spoilers, so they're blurred
+     until the answer is revealed. Linked purely to the secret-item reveal:
+     when the modal's answer cover is revealed (clicked, or pre-revealed from
+     the table), #modal-content gets .answer-revealed and these un-blur. */
+  .db-explanation {
+    filter: blur(6px);
+    transition: filter .15s ease;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  #modal-content.answer-revealed .db-explanation {
+    filter: none;
+    user-select: text;
+    -webkit-user-select: text;
+  }
 </style>
 </head>
 <body class="flex flex-col">
@@ -1210,78 +1302,8 @@ document.addEventListener('focusout', function(e) {
     Reveal all secret items
   </label>
   <style>
-    /* Secret-item spoiler: a standardized scratch-off-style bar hides every
-       answer behind the SAME fixed-width cover, so the answer's length can't
-       be inferred from the box. Click/tap (or Enter/Space) reveals one, or
-       tick "Reveal all secret items" to reveal the whole column. */
-    .db-secret {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 7.5rem;            /* standardized — identical for every answer */
-      height: 1.45rem;
-      overflow: hidden;
-      cursor: pointer;
-      border-radius: 5px;
-      vertical-align: middle;
-      position: relative;
-      color: transparent !important;   /* hide the real text (and any search highlight) */
-      user-select: none;
-      -webkit-user-select: none;
-      outline: none;
-      /* brushed-metallic scratch-off look: silver gradient + diagonal hatch */
-      background:
-        repeating-linear-gradient(45deg, rgba(0,0,0,0.10) 0 6px, rgba(255,255,255,0.06) 6px 12px),
-        linear-gradient(145deg, #c7cdd8 0%, #9aa3b2 45%, #d2d8e2 55%, #8b94a4 100%);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 2px rgba(0,0,0,0.35);
-      transition: filter .12s ease, box-shadow .12s ease;
-    }
-    .db-secret::after {
-      content: "TAP TO REVEAL";
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: .06em;
-      color: rgba(30,41,59,0.78);
-      text-shadow: 0 1px 0 rgba(255,255,255,0.45);
-      pointer-events: none;
-    }
-    .db-secret:hover, .db-secret:focus-visible {
-      filter: brightness(1.08);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.65), inset 0 -1px 2px rgba(0,0,0,0.35), 0 0 0 2px rgba(59,130,246,0.55);
-    }
-    /* Larger cover for the database Details modal heading — still a fixed,
-       length-independent width so the answer can't be guessed from the box. */
-    .db-secret.db-secret-lg {
-      width: 16rem;
-      height: 3rem;
-      border-radius: 8px;
-    }
-    .db-secret.db-secret-lg::after {
-      font-size: 13px;
-      letter-spacing: .12em;
-    }
-    .db-secret.revealed,
-    #db-view-root.db-reveal-all .db-secret {
-      display: inline;
-      width: auto;
-      height: auto;
-      overflow: visible;
-      border-radius: 0;
-      background: none;
-      box-shadow: none;
-      filter: none;
-      color: inherit !important;
-      cursor: text;
-      user-select: text;
-      -webkit-user-select: text;
-    }
-    .db-secret.revealed::after,
-    #db-view-root.db-reveal-all .db-secret::after { content: none; }
+    /* Database secret-item reveal styles (.db-secret / .db-explanation) live
+       in the global <head> style so they also apply to the Details modal. */
     /* Responsive database table container */
     .db-responsive-container {
       width: 100%;
@@ -3821,6 +3843,10 @@ Rules:
     // already-revealed in the Details modal (and vice-versa).
     const key = el.dataset.secretKey;
     if (key) this._revealedSecrets.add(key);
+    // If this is the Details modal answer, un-blur the (spoiler) host
+    // explanations now that the answer is shown.
+    const modal = el.closest('#modal-content');
+    if (modal) modal.classList.add('answer-revealed');
   }
 
   // Re-apply individually-revealed answers after a table re-render. (The
@@ -4011,7 +4037,7 @@ Rules:
           <span class="text-slate-500 ml-auto">${esc(c.correct)} right / ${esc(c.guesses)} guesses</span>
         </div>
         <p class="mt-4 text-lg font-bold leading-relaxed text-white">"${esc(c.text)}"</p>
-        <p class="mt-3 text-sm leading-7 text-slate-400">${e ? esc(e) : 'No explanation recorded.'}</p>
+        <p class="db-explanation mt-3 text-sm leading-7 text-slate-400" title="Revealed when you reveal the answer">${e ? esc(e) : 'No explanation recorded.'}</p>
       </div>`;
     }).join('');
 
@@ -4082,7 +4108,11 @@ Rules:
     const secretHeading = g.secretItem
       ? `<span class="db-secret db-secret-lg${secretAlreadyRevealed ? ' revealed' : ''}" data-secret-key="${esc(secretKey)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${esc(g.secretItem)}</span>`
       : esc(g.secretItem);
-    document.getElementById('modal-content').innerHTML = `
+    // Blur the spoiler host explanations unless the answer is already revealed
+    // (or there's no answer cover to reveal, e.g. a stub with no secret item).
+    const modalContentEl = document.getElementById('modal-content');
+    modalContentEl.classList.toggle('answer-revealed', secretAlreadyRevealed || !g.secretItem);
+    modalContentEl.innerHTML = `
       <div class="mb-8 text-center">
         <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
         <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${secretHeading}</h2>
