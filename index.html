@@ -1210,25 +1210,67 @@ document.addEventListener('focusout', function(e) {
     Reveal all secret items
   </label>
   <style>
-    /* Secret-item spoiler: hidden by default, click a cell to reveal it,
-       or tick "Reveal all secret items" to unblur the whole column. */
+    /* Secret-item spoiler: a standardized scratch-off-style bar hides every
+       answer behind the SAME fixed-width cover, so the answer's length can't
+       be inferred from the box. Click/tap (or Enter/Space) reveals one, or
+       tick "Reveal all secret items" to reveal the whole column. */
     .db-secret {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 7.5rem;            /* standardized — identical for every answer */
+      height: 1.45rem;
+      overflow: hidden;
       cursor: pointer;
-      filter: blur(5px);
-      transition: filter .12s ease;
-      border-radius: 4px;
+      border-radius: 5px;
+      vertical-align: middle;
+      position: relative;
+      color: transparent !important;   /* hide the real text (and any search highlight) */
       user-select: none;
       -webkit-user-select: none;
       outline: none;
+      /* brushed-metallic scratch-off look: silver gradient + diagonal hatch */
+      background:
+        repeating-linear-gradient(45deg, rgba(0,0,0,0.10) 0 6px, rgba(255,255,255,0.06) 6px 12px),
+        linear-gradient(145deg, #c7cdd8 0%, #9aa3b2 45%, #d2d8e2 55%, #8b94a4 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), inset 0 -1px 2px rgba(0,0,0,0.35);
+      transition: filter .12s ease, box-shadow .12s ease;
     }
-    .db-secret:hover, .db-secret:focus-visible { filter: blur(3px); }
+    .db-secret::after {
+      content: "TAP TO REVEAL";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      color: rgba(30,41,59,0.78);
+      text-shadow: 0 1px 0 rgba(255,255,255,0.45);
+      pointer-events: none;
+    }
+    .db-secret:hover, .db-secret:focus-visible {
+      filter: brightness(1.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.65), inset 0 -1px 2px rgba(0,0,0,0.35), 0 0 0 2px rgba(59,130,246,0.55);
+    }
     .db-secret.revealed,
     #db-view-root.db-reveal-all .db-secret {
+      display: inline;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
       filter: none;
+      color: inherit !important;
       cursor: text;
       user-select: text;
       -webkit-user-select: text;
     }
+    .db-secret.revealed::after,
+    #db-view-root.db-reveal-all .db-secret::after { content: none; }
     /* Responsive database table container */
     .db-responsive-container {
       width: 100%;
