@@ -12518,7 +12518,7 @@
     "bronzePayout": 1.16,
     "winnerPayout": "$7,500.00",
     "winnerNames": "Jaw Fixer, Slammer72",
-    "wrongGuesses": "",
+    "wrongGuesses": "BASKETBALL, KITE, FRISBEE, GRADUATION CAP, FEATHER",
     "clues": [
       {
         "number": 1,
@@ -12550,7 +12550,7 @@
       },
       {
         "number": 5,
-        "text": "A FOLDED FLYER, YOU TRY TO GET FARTHER AND HIGHER",
+        "text": "A FOLDED FLYER YOU TRY TO GET FARTHER AND HIGHER",
         "correct": "3,455",
         "guesses": "4,394",
         "explanation": "A paper airplane is a folded paper flyer that you throw and try to send as far and high as possible."
@@ -12575,11 +12575,11 @@
     "bronzePayout": 0.38,
     "winnerPayout": "$7,500.00",
     "winnerNames": "not your time",
-    "wrongGuesses": "",
+    "wrongGuesses": "13, AIR, OXYGEN, 21, BUFFET",
     "clues": [
       {
         "number": 1,
-        "text": "FREE FOR ALL",
+        "text": "FREE-FOR-ALL",
         "correct": "0",
         "guesses": "4,108",
         "explanation": "When you buy a dozen, the 13th item is included free for all."
@@ -12593,7 +12593,7 @@
       },
       {
         "number": 3,
-        "text": "SIX SEVEN BEFORE SIX SEVEN",
+        "text": "6-7 BEFORE 6-7",
         "correct": "14",
         "guesses": "5,122 🥈",
         "explanation": "Six plus seven equals thirteen."
@@ -12607,7 +12607,7 @@
       },
       {
         "number": 5,
-        "text": "SOUNDS LIKE TWELVE, BUT IT'S THIRTEEN IF YOU KNOW WHAT I MEAN",
+        "text": "SOUNDS LIKE 12 BUT IT'S 13 IF YOU KNOW WHAT I MEAN",
         "correct": "2,982",
         "guesses": "4,220",
         "explanation": "A baker's dozen sounds like it should be twelve (a dozen), but it's actually thirteen."
