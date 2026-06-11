@@ -1254,6 +1254,17 @@ document.addEventListener('focusout', function(e) {
       filter: brightness(1.08);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.65), inset 0 -1px 2px rgba(0,0,0,0.35), 0 0 0 2px rgba(59,130,246,0.55);
     }
+    /* Larger cover for the database Details modal heading — still a fixed,
+       length-independent width so the answer can't be guessed from the box. */
+    .db-secret.db-secret-lg {
+      width: 16rem;
+      height: 3rem;
+      border-radius: 8px;
+    }
+    .db-secret.db-secret-lg::after {
+      font-size: 13px;
+      letter-spacing: .12em;
+    }
     .db-secret.revealed,
     #db-view-root.db-reveal-all .db-secret {
       display: inline;
@@ -4047,7 +4058,7 @@ Rules:
     document.getElementById('modal-content').innerHTML = `
       <div class="mb-8 text-center">
         <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
-        <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${esc(g.secretItem)}</h2>
+        <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${g.secretItem ? `<span class="db-secret db-secret-lg" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${esc(g.secretItem)}</span>` : esc(g.secretItem)}</h2>
 
         <div class="mt-5 flex flex-wrap items-center justify-center text-sm" style="column-gap:2rem;row-gap:.75rem;line-height:1.7">
           <span class="font-bold text-green-300">$${g.pot.toLocaleString()}</span>
