@@ -12613,5 +12613,119 @@
         "explanation": "A baker's dozen sounds like it should be twelve (a dozen), but it's actually thirteen."
       }
     ]
+  },
+  {
+    "date": "Thursday, June 11, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "OCTOPUS",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 187,
+    "silverWinners": 2437,
+    "bronzeWinners": 3878,
+    "totalWinners": 6502,
+    "goldPayout": 16.04,
+    "silverPayout": 1.02,
+    "bronzePayout": 0.51,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Kalini, Sanja Blade eighty nine, Jaded Stall",
+    "wrongGuesses": "SQUID, JELLYFISH, CLOCK, HANDSHAKE, SCALE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "HAS AN EVENHANDED APPROACH",
+        "correct": "187",
+        "guesses": "5,054 🥇",
+        "explanation": "Eight is an even number, representing an even number of hands or arms."
+      },
+      {
+        "number": 2,
+        "text": "SPINELESS UNDER PRESSURE",
+        "correct": "2,437",
+        "guesses": "6,904 🥈",
+        "explanation": "An octopus has no backbone and lives deep underwater where there is a lot of pressure."
+      },
+      {
+        "number": 3,
+        "text": "O THAT SUCKS",
+        "correct": "3,878",
+        "guesses": "7,344 🥉",
+        "explanation": "An octopus starts with the letter O and has suction cups on its arms that suck."
+      },
+      {
+        "number": 4,
+        "text": "KING OF THE INKIN' EMPIRE",
+        "correct": "1,869",
+        "guesses": "3,652",
+        "explanation": "An octopus is known for shooting ink, punning on the Incan Empire."
+      },
+      {
+        "number": 5,
+        "text": "EIGHT LIMBS IS A KEY FEATURE OF THIS SEA CREATURE",
+        "correct": "2,632",
+        "guesses": "2,972",
+        "explanation": "An octopus has eight arms as its key feature."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, June 11, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "ROBIN HOOD",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 27,
+    "silverWinners": 756,
+    "bronzeWinners": 1408,
+    "totalWinners": 2191,
+    "goldPayout": 111.11,
+    "silverPayout": 3.3,
+    "bronzePayout": 1.42,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Sandy Machine Seven Five, Amanda Panda ninety, Gilly Bean, oh, five",
+    "wrongGuesses": "BATMAN, TUG OF WAR, TREE, PENNY, SCALE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "GIVE AND TAKE",
+        "correct": "27",
+        "guesses": "5,553 🥇",
+        "explanation": "Robin Hood is famous for taking from the rich and giving to the poor."
+      },
+      {
+        "number": 2,
+        "text": "ARCH-ENEMY OF INJUSTICE",
+        "correct": "756",
+        "guesses": "4,341 🥈",
+        "explanation": "He fights bad guys using archery, acting as the arch enemy of injustice."
+      },
+      {
+        "number": 3,
+        "text": "HEAD COVER FOR A BIRD",
+        "correct": "1,408",
+        "guesses": "4,879 🥉",
+        "explanation": "A hood is a head cover and a robin is a type of bird."
+      },
+      {
+        "number": 4,
+        "text": "WOULD HE LIVE IN THE FOREST? SURE WOULD!",
+        "correct": "3,926",
+        "guesses": "6,329",
+        "explanation": "Robin Hood lives in Sherwood Forest, punning on sure would."
+      },
+      {
+        "number": 5,
+        "text": "FOXY ENGLISH OUTLAW WHO FIGHTS IN GREEN TIGHTS",
+        "correct": "3,210",
+        "guesses": "4,064",
+        "explanation": "Robin Hood is an English outlaw who wears green tights and was portrayed as a fox by Disney."
+      }
+    ]
   }
 ]

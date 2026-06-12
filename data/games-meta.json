@@ -2800,6 +2800,30 @@
       "goldClue": 2,
       "silverClue": 3,
       "bronzeClue": 4
+    },
+    {
+      "date": "Thursday, June 11, 2026",
+      "secretItem": "OCTOPUS",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 6502,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Thursday, June 11, 2026",
+      "secretItem": "ROBIN HOOD",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 2191,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
