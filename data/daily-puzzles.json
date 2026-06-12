@@ -618,5 +618,36 @@
         "explanation": "'Over' is the classic radio/walkie-talkie sign-off."
       }
     ]
+  },
+  {
+    "date": "Friday, June 12, 2026",
+    "secretItem": "HOODIE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "UP AND OVER",
+        "explanation": "You pull a hoodie up and over your head to put it on."
+      },
+      {
+        "clueNumber": 2,
+        "text": "TOP OF THE TOP",
+        "explanation": "A hoodie is a top, and its hood sits at the very top."
+      },
+      {
+        "clueNumber": 3,
+        "text": "COMFY KANGAROO COSPLAY",
+        "explanation": "A hoodie's front pouch is called a kangaroo pocket."
+      },
+      {
+        "clueNumber": 4,
+        "text": "THIS ONE MIGHT GO OVER YOUR HEAD",
+        "explanation": "The hood pulls up over your head."
+      },
+      {
+        "clueNumber": 5,
+        "text": "THIS SWEATSHIRT'S A GEM FOR ROCKY AND EMINEM",
+        "explanation": "A hoodie is a hooded sweatshirt, famously worn by Rocky Balboa and Eminem."
+      }
+    ]
   }
 ]
