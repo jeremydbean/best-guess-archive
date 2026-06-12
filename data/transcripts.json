@@ -46818,5 +46818,1235 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, June 11, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "OCTOPUS",
+      "ROBIN HOOD"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "OCTOPUS",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "HAS AN EVENHANDED APPROACH",
+          "SPINELESS UNDER PRESSURE",
+          "O THAT SUCKS",
+          "KING OF THE INKIN' EMPIRE",
+          "EIGHT LIMBS IS A KEY FEATURE OF THIS SEA CREATURE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "ROBIN HOOD",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "GIVE AND TAKE",
+          "ARCH-ENEMY OF INJUSTICE",
+          "HEAD COVER FOR A BIRD",
+          "WOULD HE LIVE IN THE FOREST? SURE WOULD!",
+          "FOXY ENGLISH OUTLAW WHO FIGHTS IN GREEN TIGHTS"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guests Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm your host Howie Mandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now last yeah okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's the last time I'm bringing family."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Last night, Our second puzzle “NachoTime” won three thousand dollars by being the only person to guess “baker's dozen” on the second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now, listen to this: Nacho Time, we love you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He or she has been playing since we started; they played almost every game, has given almost one hundred right answers and have now made money three times."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You see?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "If at first you don't succeed, try ninety-nine times more is the point here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Last night was by far their biggest win."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love when big winners are players who have been with us since the beginning."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You deserve it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stick with us, we'll stick with you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, to celebrate those longtime players, we're going to play a game before our game."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm gonna here's what's going to happen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm going to read the rules and just like we do every night, but the producers have changed one word now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know what word they changed so together We're going to try and find out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It'll be like “Where's Waldo?” but with a word, “Where's Wordo.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here we go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Remember, one word is going to be different."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pay attention and hit the skull emoji when you think you hear it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We can do this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know we can."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here we go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Listen to me each episode of Best Guess Live has two rounds, each round has one puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each puzzle has three sets of winners gold."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Silver and bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, we're going to load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Then I'll give you five clues, but remember the clues are like riddles; they're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "After each clue, you get twenty seconds to submit an answer, but you only get one best guess per round—not one per clue, one per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It has to be the exact answer and we don't accept typos."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bottom line, you want to be fast, but you sardines to be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of three thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer is great."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in, well, I don't want to give it away."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everybody that locks in a correct answer on the second earliest clue will split the silver pot of twenty five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it on the third earliest clue will split the bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough talk, let's win some money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one is worth seventy five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I couldn't see the emojis."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did we get some emojis?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What was the word?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's load that crystal ball, Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow, it's being loaded now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here's your first clue: Has an even-handed approach."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Has an even-handed approach."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Typos count."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Remember, you want to be fast here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you got a sardine."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, uh, Monster Pillow three ninety eight said a masseuse."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know I get it, but it doesn't have to be even."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You can have one up here and one down there, but that's okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Loops TTV said pizza."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pizza has an even handed approach?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What what are you trying to show me behind the camera?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What were you doing?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your second clue: spineless under pressure."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "An even-handed approach."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Spineless under pressure."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We already have over 5,000 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's huge!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "For the first clue, five seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock for the second clue: two, one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And your time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Lofty Ant Hill Two Twenty One said, “San Antonio Spurs.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did you watch that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You saw that last night too soon?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my god!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How do you lose that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What are you spineless under that pressure?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, you played like a bunch of sardines."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here is your third clue: Oh, that sucks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, that sucks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Has an even-handed approach."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Spineless under pressure."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And oh, that sucks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They don't tell us the answers, and I'm going to be honest with you, I am incredibly confused right now, but that makes it more fun."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, Velocera says a straw?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mmm!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I like that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And silly tilly eighty eight said, “bankruptcy.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, that sucks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Going out of business."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your fourth clue: King of the Incan Empire."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue was has an even handed approach."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The second clue was spineless under pressure and."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, that sucks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And then King of the Incan Empire, Peter Plumber seventy seven thinks it's Jason Momoa."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We've got almost twenty thousand guesses more than twenty thousand guesses right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And now here is well, twenty three thousand guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your final clue for seventy five hundred dollars, eight limbs."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is a key feature of this sea creature."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Twenty seconds on that clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Has an even handed approach."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Spineless under pressure."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, that sucks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "King of the Incan empire."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And finally, eight limbs is a key feature of this sea creature."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's find out what's in that crystal ball, Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open it and show us."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is an octopus."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's an octopus."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Those are so cool."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am fascinated by octopuses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, Let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The fifth clue I gave you was eight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Limbs is a key feature of this sea creature, and octopus has eight limbs, eight arms."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How do we know those are arms?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Are those arms?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They call them arms."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, they are eight arms."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They have eight arms."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think there's seven arms and one leg."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's just me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The fourth clue: King of the Incan Empire."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They are known for shooting ink."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I watched that that uh there was a documentary on that one, the school thing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They shot the ink all the time."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, three thousand six hundred and fifty two guesses, one thousand eight hundred and sixty nine of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, third clue: O That sucks!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Octopus starts with an O and their arms."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They have the suction cups they suck."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's how they climb."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's how they stick to things Things, the are o's that suck."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here is clue number two: spineless under pressure."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "An octopus has no backbone and lives underwater way down, where there is tons of pressure than on much more pressure than is on the land."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I can't go down that deep."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I once tried one of those."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thanks, just like a few weeks ago, and I screamed and said, “Get me out! I can't take pressure. My ear—I thought I was going to go deaf.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's not a story you need to hear now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But, let's get six thousand nine hundred and four of you guessed, two thousand four hundred and thirty -, seven of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You think this is a good time to talk about my rash?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No, okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Has an even handed approach."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Eight's an even number."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Even hands, even number."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So, uh five thousand and uh fifty four of you guessed on that first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Guess what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One hundred and eighty seven of you got it correct."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “EIGHT LIMBS IS A KEY FEATURE OF THIS SEA CREATURE.” An octopus has eight arms as its key feature. 2,632 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “KING OF THE INKIN' EMPIRE.” An octopus is known for shooting ink, punning on the Incan Empire. 1,869 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “O THAT SUCKS.” An octopus starts with the letter O and has suction cups on its arms that suck. 3,878 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “SPINELESS UNDER PRESSURE.” An octopus has no backbone and lives deep underwater where there is a lot of pressure. 2,437 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “HAS AN EVENHANDED APPROACH.” Eight is an even number, representing an even number of hands or arms. 187 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 187 winners at $16.04 each. Silver (Clue 2): 2,437 winners at $1.02 each. Bronze (Clue 3): 3,878 winners at $0.51 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The uh, our uh, There's two thousand four hundred and thirty seven silver winners, each getting a buck, a dollar two cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And there's three thousand eight hundred and seventy eight bronze winners each getting fifty one cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost six thousand winners and we're just on round one okay."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now that you're all warmed up and you've stretched out your klutz."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, clues and klutz."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's play round two for another seven thousand five hundred dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The prize pots are exactly the same: three thousand for gold, twenty-five hundred for silver, two thousand for bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, you know what to do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You want me to say it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Load the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, he's loading the ball now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I wish you could see him work because nobody loads a ball like Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here is your first clue: give and take."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Twenty seconds on the clock, starting now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Give and take."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What could it be?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What could it be?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am thinking, I am thinking."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Are you thinking?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Lender Bonnie three one one said marriage."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Because you give, then you split up and she takes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Arch enemy of injustice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The first clue is “give and take.”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the second clue is the arch enemy of injustice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "of injustice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Arch enemy of injustice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "More first guesses on this one than on the last round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Fifty five hundred first guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, Speltseer six six one said Superman."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The arch enemy of injustice, that's what he's all about."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Molly Wally ninety said justice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What does injustice hate more than anything?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Justice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love you Molly Wally ninety"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your third clue: head cover For a bird, and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Give and take was clue number one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Arch enemy of injustice was clue number two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Head cover for a bird is your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "With three, two, one left on the clock, your time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Lingering stank four ninety eight said toucan."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That answer is going to have a lingering stink for all of us."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Would he live in the forest?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sure would."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Got it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, clue number one: give and take."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, clue number two: arch enemy of injustice, And clue number three, head cover for a bird."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now it's making me laugh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And clue number four, would he live in the forest?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sure would."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh, scrawny mystery said tree."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, nice try scrawny."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay here is your fifth clue: Foxy English outlaw who fights in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Green tights, and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Give and take."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Arch enemy of injustice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Head cover for a bird."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Would he live in the forest?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sure would."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And finally, foxy English outlaw who fights in green tights, and time is up."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's it; that was your last shot."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "At $7,500, let's find out what's in the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can I say it before you open it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is my guess: Robin Hood!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Robin Hood!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There you go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Whoa, whoa, did you see that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We don't get to see where it lands?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You just shot the arrow and we don't know where it lands?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, Let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Foxy English outlaw who fights."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And green tights."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He's been portrayed in so many movies, including the Disney one where he was a fox and he wears tights."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Robin Hood wears the tights, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, Four thousand four thousand and sixty -, four of you guessed, three thousand, two hundred and ten of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Would he live in the forest?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sherwood!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He lives in Sherwood Forest."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This the one that made me laugh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This the one that made me laugh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Head cover for a bird?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What's a head cover?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A hood, and what kind of bird?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A robin?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Robin Hood!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There you go, four thousand eight hundred and seventy-nine guesses, one thousand four hundred and eight of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Number two, arch enemy of injustice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He fights the bad guys using archery."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He fights all the bad guys."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He takes from the, he takes the bad guys' money and gives it to the good guys who don't have that much money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, four thousand three hundred and forty one of you guessed correctly, seven hundred and fifty six of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, that's the new gold standard."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did anybody beat you?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Give and take was the first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, we all know he takes from the rich and he gives to the poor."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's his whole thing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's Robin Hood."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Gives and takes five thousand five hundred and fifty three of you guessed, twenty seven of you got it correct."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “FOXY ENGLISH OUTLAW WHO FIGHTS IN GREEN TIGHTS.” Robin Hood is an English outlaw who wears green tights and was portrayed as a fox by Disney. 3,210 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “WOULD HE LIVE IN THE FOREST? SURE WOULD!” Robin Hood lives in Sherwood Forest, punning on sure would. 3,926 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “HEAD COVER FOR A BIRD.” A hood is a head cover and a robin is a type of bird. 1,408 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “ARCH-ENEMY OF INJUSTICE.” He fights bad guys using archery, acting as the arch enemy of injustice. 756 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “GIVE AND TAKE.” Robin Hood is famous for taking from the rich and giving to the poor. 27 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 27 winners at $111.11 each. Silver (Clue 2): 756 winners at $3.30 each. Bronze (Clue 3): 1,408 winners at $1.42 each."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's a lot of winners!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A lot of winners!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's what a great day!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All of our winners, we are here every weekday at eight five Pacific."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good night."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [SQUID, JELLYFISH, CLOCK, HANDSHAKE, SCALE]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [BATMAN, TUG OF WAR, TREE, PENNY, SCALE]"
+          }
+        ]
+      }
+    ]
   }
 ]
