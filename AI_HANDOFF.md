@@ -57,8 +57,8 @@ Last updated: 2026-06-11 (session end)
 - **No-winner validation hardening 2026-05-07**: `scripts/auto-import.py` now accepts empty silver/bronze tiers only when their medal clue field is omitted or `0`, while still requiring all five clue objects. `tools/audit-data.mjs` enforces the same shape and verifies v2 payout math including official redistribution, so bad imports cannot make Play award a nonexistent medal tier.
 - **Auto-import bug check 2026-05-08**: `scripts/auto-import.py` now catches URL/time-out/XML RSS failures before falling back to the channel page, prefers title dates for manual video imports, treats date-only publish metadata as noon UTC to avoid previous-day Eastern drift, and validates Claude output more strictly before writing: archive date shape, v2 format, host/pot/wrongGuesses, clue numbers, numeric correct/guess counts, medal tier order, winner totals, payouts, and full-pot `winnerPayout`. `tools/audit-data.mjs` mirrors the new clue-number, count-shape, medal-order, and v2 `winnerPayout` checks while tolerating legacy unknown count strings in old data.
 - **Auto-import cost guard 2026-05-12**: `.github/workflows/auto-import.yml` now runs a cheap `git push --dry-run origin HEAD:main` preflight before installing Python dependencies or calling Claude. If GitHub cannot accept a main push, the job stops before spending Anthropic API tokens. The workflow also skips the duplicate DST schedule when the Eastern hour is not 9, uses workflow concurrency, and passes `--max-episodes=1` so a backlog cannot spend multiple Claude calls in one scheduled run.
-- **Hybrid rules beginning Monday, May 11, 2026**: Round 1 stays `format: "v2"` tiered gold/silver/bronze. Round 2 returns to `format: "v1"` classic mode, where only the earliest clue with correct answers splits the full $7,500 pot. `scripts/auto-import.py`, `docs/DAILY_IMPORT.md`, `docs/DAILY_IMPORT_PROMPT.md`, `docs/PLAUD_AUDIO_PROMPT.md`, `AGENTS.md`, the in-app Gemini/Plaud copy prompts, and `tools/audit-data.mjs` have been updated for this. In the Database, classic v1 winning clues are now marked with the same 🥇 clue indicator used for v2 instead of a yellow highlighted clue box.
-- **⚠️ RULES CHANGE CONFIRMED: Both rounds v2 tiered starting Wednesday, May 27, 2026**: Confirmed by the May 27 episode (THE GYM + JUGGLING both `format: "v2"`). The last classic v1 Round 2 episodes were May 25 and May 26. The audit rule for hybrid-format-order now has an upper bound at May 27 (exclusive). Update import docs and auto-import script to treat all rounds as v2 going forward.
+- **Hybrid rules window Monday, May 11 through Tuesday, May 26, 2026**: During this window, Round 1 is `format: "v2"` tiered gold/silver/bronze and Round 2 is `format: "v1"` classic mode, where only the earliest clue with correct answers splits the full $7,500 pot. In the Database, classic v1 winning clues are marked with the same 🥇 clue indicator used for v2 instead of a yellow highlighted clue box.
+- **Rules change confirmed: both rounds v2 tiered starting Wednesday, May 27, 2026**: Confirmed by the May 27 episode (THE GYM + JUGGLING both `format: "v2"`). The last classic v1 Round 2 episodes were May 25 and May 26. `tools/audit-data.mjs`, `scripts/auto-import.py`, `docs/DAILY_IMPORT.md`, `docs/DAILY_IMPORT_PROMPT.md`, `docs/PLAUD_AUDIO_PROMPT.md`, `AGENTS.md`, and the in-app Gemini/Plaud copy prompts now use the bounded May 11–26 hybrid rule and treat May 27+ episodes as both-v2 unless the broadcast explicitly says otherwise.
 
 - GitHub Pages publishes from `main`.
 - Main-only workflow is in effect. Do not create branches; remove stale non-main branches after confirming their commits are already represented on `main`.
@@ -67,11 +67,11 @@ Last updated: 2026-06-11 (session end)
 - **Admin panel removed**: All game/transcript updates are now done by AI agents (Claude/Codex) directly editing the data files and committing. See "Daily Update Workflow" below.
 - **Bonus/promo data migrated**: `bonusMap` moved from hardcoded JS in `index.html` to a `bonus: {title, desc}` field on each game in the year shards. Rendering code reads `g.bonus` directly. `bonus.desc` may contain safe HTML (`<br>` and `<b>` tags).
 - **Scripts cleaned up**: Legacy docx/admin importer scripts are gone; current automation lives in `scripts/auto-import.py`, with a few one-off historical cleanup scripts still present.
-- Latest imported episode: Wednesday, May 27, 2026 with THE GYM (Round 1, v2) and JUGGLING (Round 2, v2 — first dual-v2 episode under the new format era).
-- 124 total game days (123 playable + 1 cancelled: Thursday, April 9, 2026).
-- 245 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 209).
-- 123 transcript entries in `data/transcripts.json`.
-- **Daily Puzzles**: `data/daily-puzzles.json` stores Best Guess app daily practice puzzles. Launched Saturday, May 23, 2026. Current entries: BAND-AID (May 23), SHERLOCK HOLMES (May 24), BANANA SPLIT (May 25), NEW YORK CITY (May 26), TIKTOK (May 27). Each clue has an optional `explanation` field (short one-liner) shown as hover tooltip in the Daily Puzzles database table. These are separate from live-show game rounds — no host, no prizes, no winners, no transcript. `npm run audit` validates this file; `npm run audit:fix` is not needed for daily-puzzle-only edits.
+- Latest imported episode: Friday, June 12, 2026 with ZOMBIE (Round 1, v2) and DISCO BALL (Round 2, v2).
+- 135 total game days (134 playable + 1 cancelled: Thursday, April 9, 2026).
+- 269 game objects across year shards (`data/games-2025.json`: 36, `data/games-2026.json`: 233).
+- 135 transcript entries in `data/transcripts.json`.
+- **Daily Puzzles**: `data/daily-puzzles.json` stores Best Guess app daily practice puzzles. Launched Saturday, May 23, 2026. Current latest entry: APPLE (Saturday, June 13, 2026), with 22 total daily puzzles. Each clue has an optional `explanation` field (short one-liner) shown as hover tooltip in the Daily Puzzles database table. These are separate from live-show game rounds — no host, no prizes, no winners, no transcript. `npm run audit` validates this file; `npm run audit:fix` is not needed for daily-puzzle-only edits.
 - **Daily puzzle audit hardening 2026-05-24**: `tools/audit-data.mjs` now validates `data/daily-puzzles.json` as part of `npm run audit`, including flat-array shape, valid weekday/date strings, oldest-first order, duplicate dates, ALL CAPS secret item/clue text, no leading `A`/`AN` secret-item articles, exactly five ordered clues, and no live-game clue fields.
 - **Daily Puzzles KPI on Stats page 2026-05-24**: The Stats page first KPI group now includes a "Daily Puzzles Archived" card (purple, puzzle-piece icon) showing the count of puzzles in `data/daily-puzzles.json`. If any dates are missing since May 23, 2026 (the launch date), a warning badge shows "X dates missing". `setView('stats')` now loads daily puzzles alongside full games before rendering, and the stats cache key includes `dp${dailyPuzzles.length}` to invalidate on puzzle count change.
 - **How to Play modal rewrite 2026-05-25**: The How to Play modal (`#how-to-play-modal` template in `index.html`) now contains real game instructions: five-clue structure (hardest first), one-guess-per-round rule, lock-in mechanic, v2 gold/silver/bronze prize tier table ($3K/$2.5K/$2K pools), v1 classic mode explanation, and a blue callout noting the archive maps your result to real-show tier thresholds.
@@ -140,7 +140,7 @@ Preferred no-preformat path: put the raw transcript at `incoming/YYYY-MM-DD.txt`
 
 **Step 1 — Get structured transcript from Gemini/Plaud:**
 
-For audio-only Plaud output, use `docs/PLAUD_AUDIO_PROMPT.md` or the hidden Data Health popup's "Plaud Audio Prompt" copy button. For screenshot-backed cleanup, use the hidden Data Health popup's "Gemini Import Prompt" copy button. The in-app prompt already accounts for the Monday, May 11, 2026 hybrid rule: Round 1 v2 tiered, Round 2 v1 classic.
+For audio-only Plaud output, use `docs/PLAUD_AUDIO_PROMPT.md` or the hidden Data Health popup's "Plaud Audio Prompt" copy button. For screenshot-backed cleanup, use the hidden Data Health popup's "Gemini Import Prompt" copy button. The in-app prompts account for the format timeline: pre-May 11 usually both v2, May 11–26 hybrid, and May 27+ both v2 unless the show says otherwise.
 
 **Step 2 — Paste to Claude/Codex in this format:**
 
@@ -177,7 +177,8 @@ Clue 5 Explanation: [from Gemini output]
 
 --- ROUND 2 ---
 [Before Monday, May 11, 2026: same structure as Round 1 unless the show says otherwise.
-Starting Monday, May 11, 2026: use Format: v1 classic mode, include Winning Clue, Winner Count, Winner Payout, Total Winners, winner names, wrong guesses, and all five clue/explanation lines. Keep Gold Clue equal to Winning Clue for compatibility, and set medal winner/payout fields to 0.]
+Monday, May 11 through Tuesday, May 26, 2026: use Format: v1 classic mode, include Winning Clue, Winner Count, Winner Payout, Total Winners, winner names, wrong guesses, and all five clue/explanation lines. Keep Gold Clue equal to Winning Clue for compatibility, and set medal winner/payout fields to 0.
+Starting Wednesday, May 27, 2026: same v2 tiered structure as Round 1 unless the show says otherwise.]
 
 --- SPECIAL PROMO (omit section if none) ---
 Title: [e.g. Netflix Shop Voucher]
@@ -188,7 +189,7 @@ Description: [full text including how-to-qualify. May use <br> and <b> tags.]
 ```
 
 **Notes:**
-- For episodes before Monday, May 11, 2026, both rounds are normally `format: v2` unless the show says otherwise. Starting Monday, May 11, 2026, the standard import is hybrid: Round 1 is `format: "v2"` tiered gold/silver/bronze, and Round 2 is `format: "v1"` classic mode.
+- For episodes before Monday, May 11, 2026, both rounds are normally `format: v2` unless the show says otherwise. Monday, May 11 through Tuesday, May 26, 2026 is hybrid: Round 1 is `format: "v2"` tiered gold/silver/bronze, and Round 2 is `format: "v1"` classic mode. Starting Wednesday, May 27, 2026, both rounds are normally `format: "v2"` tiered.
 - For v2, `winnerPayout` stays the full round pot string, normally `"$7,500.00"`, and medal payouts go in `goldPayout`, `silverPayout`, and `bronzePayout`. For v1 classic, set `winningClue`, `winnerCount`, `totalWinners`, and `winnerPayout` to the per-winner share of the full pot; keep `goldClue` equal to `winningClue` for compatibility.
 - `bonus.desc` may contain `<br>` and `<b>` tags; they are rendered as HTML in the modal. Keep descriptions clean and avoid other HTML tags.
 - Clue text on-screen uses all caps and may include punctuation; verify spelling from the video still frame if Gemini misheard a word.
@@ -319,13 +320,13 @@ To add a new daily puzzle, append a new object to the END of `data/daily-puzzles
 - **games-meta.json**: Lightweight `{years, games}` object loaded on init for home stats. Year shards (`games-2025.json`, `games-2026.json`, …) lazy-load in parallel when the user first visits Database or Stats. No monolithic `games.json` download.
 - **Chart.js**: Injected dynamically on first Stats page visit only.
 - **filterDatabase**: Debounced 150ms.
-- **Data audit**: `npm run audit:fix` regenerates `games-meta.json`; `npm run audit` validates JSON, inline scripts, generated meta, archive dates, payout values, missing clue explanations, v2 winner totals/payout math, v1 classic winning-clue shape, hybrid format order from May 11 onward, bonus coverage, transcript schemas, transcript/game alignment, result clue text, escaped HTML entities, and daily puzzle schema/order/casing.
+- **Data audit**: `npm run audit:fix` regenerates `games-meta.json`; `npm run audit` validates JSON, inline scripts, generated meta, archive dates, payout values, missing clue explanations, v2 winner totals/payout math, v1 classic winning-clue shape, hybrid format order for May 11–26, bonus coverage, transcript schemas, transcript/game alignment, result clue text, escaped HTML entities, and daily puzzle schema/order/casing.
 - **_homeStatsCache**: Invalidated when year shards finish loading or refreshStats() runs.
 
 ## Things Worth Double-Checking After Future Edits
 
 - GitHub Pages reflects the newest commit on `main`.
-- Latest manual import completed: Wednesday, May 27, 2026 (`THE GYM`, `JUGGLING`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
+- Latest manual import completed: Friday, June 12, 2026 (`ZOMBIE`, `DISCO BALL`). For screenshot-backed imports, prefer exact clue wording and popular wrong guesses from screenshots over rough transcript text.
 - Always verify Gemini-provided dates against a calendar (weekday name AND day number). Transcript headers from Gemini are consistently +1 day off.
 - Recalculate all payouts with `Math.floor(v * 100) / 100` — never trust Gemini's payout figures.
 - Strip "A"/"AN" from secret items; keep "THE" only when semantically part of the answer.

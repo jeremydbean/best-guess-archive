@@ -163,10 +163,10 @@ The Best Guess app releases one new practice puzzle per day. These are separate 
 
 - `date`: full weekday + month + day + year string (e.g. "Sunday, May 24, 2026").
 - `secretItem`: ALL CAPS. Strip leading "A"/"AN" article (same rule as live game imports). Keep "THE" only when semantically integral to the answer.
-- `clues`: exactly 5 objects with `clueNumber` (integer 1–5) and `text` (ALL CAPS clue string). No `correct`, `guesses`, or `explanation` fields.
+- `clues`: exactly 5 objects with `clueNumber` (integer 1–5), `text` (ALL CAPS clue string), and optional short `explanation` for hover tooltips. No `correct` or `guesses` fields.
 - Append new entries to the **END** of `data/daily-puzzles.json` (oldest first, newest last).
 - Do **not** run `npm run audit:fix` for daily-puzzle-only edits because there is no meta file to regenerate.
-- Do run `npm run audit`; it validates daily puzzle dates, ordering, all-caps secret items/clues, exact five-clue shape, duplicate dates, and rejects live-game-only clue fields.
+- Do run `npm run audit`; it validates daily puzzle dates, ordering, all-caps secret items/clues, exact five-clue shape, duplicate dates, and rejects live-game-only clue fields (`correct` and `guesses`).
 
 ### Commit
 

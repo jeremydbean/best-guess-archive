@@ -12,7 +12,7 @@ HOST: [Howie Mandel or Hunter March and/or guest hosts who identify themselves b
 ROUND 1 ANSWER: [secret item revealed when crystal ball opens]
 ROUND 2 ANSWER: [secret item revealed when crystal ball opens]
 ROUND 1 FORMAT: [v2 tiered unless the episode says otherwise]
-ROUND 2 FORMAT: [Before Monday, May 11, 2026 usually v2 tiered. Starting Monday, May 11, 2026 use v1 classic unless the episode says otherwise.]
+ROUND 2 FORMAT: [Before Monday, May 11, 2026 usually v2 tiered. Monday, May 11 through Tuesday, May 26, 2026 use v1 classic unless the episode says otherwise. Starting Wednesday, May 27, 2026 use v2 tiered unless the episode says otherwise.]
 
 ---
 
@@ -54,7 +54,7 @@ Rules:
 - Use each speaker's full identified name on every spoken line. If there are guest hosts or multiple hosts, use their names once identified. If a speaker is not identified by name in the audio, use a neutral label such as "Host 1", "Host 2", "Guest", or "Speaker" consistently until identified.
 - Infer clue spelling as best as possible from audio only. If spelling or punctuation is uncertain, add [?] immediately after the uncertain word or phrase.
 - Do not include any information that is not spoken aloud. If popular wrong guesses, clue wording, counts, or payouts are not spoken clearly, write [not spoken] or [unclear] rather than guessing.
-- Starting Monday, May 11, 2026, Round 2 is classic mode unless the episode says otherwise: only the earliest clue with any correct answers wins, and those winners split the full $7,500 pot. In that case fill WINNER DATA V1 CLASSIC and leave WINNER DATA V2 as "not applicable."
+- Monday, May 11 through Tuesday, May 26, 2026, Round 2 is classic mode unless the episode says otherwise: only the earliest clue with any correct answers wins, and those winners split the full $7,500 pot. Starting Wednesday, May 27, 2026, Round 2 is v2 tiered unless the episode says otherwise.
 - For v2 tiered rounds, fill WINNER DATA V2 and leave WINNER DATA V1 CLASSIC as "not applicable."
 - If a silver or bronze v2 tier has no winners, write 0 winners at $0 and keep all five clue counts.
 ```

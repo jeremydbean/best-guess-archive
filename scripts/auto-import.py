@@ -371,8 +371,11 @@ Video title: {video_title}
 
 --- EXTRACTION RULES ---
 1. Extract both rounds. Each game entry must match the year-shard game schema exactly.
-   For episodes starting Monday, May 11, 2026, Round 1 is v2 tiered and Round 2 is
-   v1 classic unless the show explicitly says otherwise.
+   Format by date unless the show explicitly says otherwise:
+   - Before Monday, May 11, 2026: both rounds are usually v2 tiered.
+   - Monday, May 11 through Tuesday, May 26, 2026: Round 1 is v2 tiered and
+     Round 2 is v1 classic.
+   - Starting Wednesday, May 27, 2026: both rounds are v2 tiered.
 2. For v2 format: include goldClue, silverClue, bronzeClue (clue numbers 1–5 when that tier had winners),
    goldWinners, silverWinners, bronzeWinners, goldPayout, silverPayout, bronzePayout.
    totalWinners = goldWinners + silverWinners + bronzeWinners.
@@ -485,12 +488,22 @@ def validate_import_data(data: dict, expected_date: str | None) -> None:
 
     if len(games) != 2:
         raise ValueError(f"Playable episodes must include exactly 2 games, got {len(games)}.")
-    if archive_date_sort_key(episode_date) >= archive_date_sort_key("Monday, May 11, 2026"):
-        formats = [game.get("format") for game in games]
+    episode_key = archive_date_sort_key(episode_date)
+    formats = [game.get("format") for game in games]
+    if (
+        episode_key >= archive_date_sort_key("Monday, May 11, 2026")
+        and episode_key < archive_date_sort_key("Wednesday, May 27, 2026")
+    ):
         if formats != ["v2", "v1"]:
             raise ValueError(
-                "Hybrid episodes starting Monday, May 11, 2026 must import as "
+                "Hybrid episodes from May 11 through May 26, 2026 must import as "
                 "Round 1 format='v2' and Round 2 format='v1'."
+            )
+    elif episode_key >= archive_date_sort_key("Wednesday, May 27, 2026"):
+        if formats != ["v2", "v2"]:
+            raise ValueError(
+                "Episodes starting Wednesday, May 27, 2026 must import both rounds "
+                "as format='v2' unless the broadcast explicitly says otherwise."
             )
     for index, game in enumerate(games, start=1):
         if game.get("date") != episode_date:

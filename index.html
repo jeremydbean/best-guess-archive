@@ -2761,7 +2761,7 @@ Output a single JSON object with these top-level keys: \`date\`, \`rounds\`, \`t
 
 **\`date\`**: \`"Weekday, Month D, YYYY"\`. Use today's date unless explicitly stated otherwise.
 
-**Format/prizing**: Starting Monday, May 11, 2026, the standard show format is hybrid unless the episode explicitly says otherwise: Round 1 is tiered v2 (Gold/Silver/Bronze), Round 2 is classic v1 where only the earliest clue with correct answers splits the full $7,500 pot. Episodes before May 11, 2026 are usually both v2 unless the show says otherwise. In classic v1, do not create Silver/Bronze winners; identify the single winning clue as the earliest clue with any correct answers, the winner count as that clue's correct count, and the payout as $7,500 divided among those winners (round to nearest cent).
+**Format/prizing**: Use the broadcast if it explicitly announces different rules. Otherwise use these date rules: before Monday, May 11, 2026, both rounds are usually tiered v2 (Gold/Silver/Bronze); Monday, May 11 through Tuesday, May 26, 2026 uses hybrid format with Round 1 v2 and Round 2 classic v1; starting Wednesday, May 27, 2026, both rounds are v2 tiered. In classic v1, do not create Silver/Bronze winners; identify the single winning clue as the earliest clue with correct answers, the winner count as that clue's correct count, and the payout as $7,500 divided among those winners (round to nearest cent).
 
 **\`rounds\`**: An object with \`round1\` and \`round2\`. Each contains all structured game data for that round.
 
@@ -2887,7 +2887,7 @@ Omit \`bonus\` entirely if there is no promo.
 **Rules**:
 - One sentence per line. Never paraphrase — exact words only.
 - Clue text in recap lines must come from screenshots, not audio.
-- For hybrid episodes from Monday, May 11, 2026 onward, Round 1 should have a Gold/Silver/Bronze summary and Round 2 should have the Classic mode summary unless the episode explicitly announces different rules.
+- For Monday, May 11 through Tuesday, May 26, 2026 hybrid episodes, Round 1 should have a Gold/Silver/Bronze summary and Round 2 should have the Classic mode summary unless the episode explicitly announces different rules. Starting Wednesday, May 27, 2026, both rounds should have Gold/Silver/Bronze summaries unless the episode explicitly announces different rules.
 - Do not add lines that weren't spoken. Do not merge sentences.
 - Output JSON only. No markdown fences. No commentary before or after.`;
     if (navigator.clipboard?.writeText) {
@@ -2913,7 +2913,7 @@ HOST: [Howie Mandel or Hunter March and/or guest hosts who identify themselves b
 ROUND 1 ANSWER: [secret item revealed when crystal ball opens]
 ROUND 2 ANSWER: [secret item revealed when crystal ball opens]
 ROUND 1 FORMAT: [v2 tiered unless the episode says otherwise]
-ROUND 2 FORMAT: [Before Monday, May 11, 2026 usually v2 tiered. Starting Monday, May 11, 2026 use v1 classic unless the episode says otherwise.]
+ROUND 2 FORMAT: [Before Monday, May 11, 2026 usually v2 tiered. Monday, May 11 through Tuesday, May 26, 2026 use v1 classic unless the episode says otherwise. Starting Wednesday, May 27, 2026 use v2 tiered unless the episode says otherwise.]
 
 ---
 
@@ -2955,7 +2955,7 @@ Rules:
 - Use each speaker's full identified name on every spoken line. If there are guest hosts or multiple hosts, use their names once identified. If a speaker is not identified by name in the audio, use a neutral label such as "Host 1", "Host 2", "Guest", or "Speaker" consistently until identified.
 - Infer clue spelling as best as possible from audio only. If spelling or punctuation is uncertain, add [?] immediately after the uncertain word or phrase.
 - Do not include any information that is not spoken aloud. If popular wrong guesses, clue wording, counts, or payouts are not spoken clearly, write [not spoken] or [unclear] rather than guessing.
-- Starting Monday, May 11, 2026, Round 2 is classic mode unless the episode says otherwise: only the earliest clue with any correct answers wins, and those winners split the full $7,500 pot. In that case fill WINNER DATA V1 CLASSIC and leave WINNER DATA V2 as "not applicable."
+- Monday, May 11 through Tuesday, May 26, 2026, Round 2 is classic mode unless the episode says otherwise: only the earliest clue with any correct answers wins, and those winners split the full $7,500 pot. Starting Wednesday, May 27, 2026, Round 2 is v2 tiered unless the episode says otherwise.
 - For v2 tiered rounds, fill WINNER DATA V2 and leave WINNER DATA V1 CLASSIC as "not applicable."
 - If a silver or bronze v2 tier has no winners, write 0 winners at $0 and keep all five clue counts.`;
     if (navigator.clipboard?.writeText) {
