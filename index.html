@@ -3068,6 +3068,9 @@ Rules:
     if (game?.date === 'Tuesday, May 5, 2026' && answer === 'mayonnaise') {
       accepted.add('mayo');
     }
+    if (answer === 'kfc') {
+      accepted.add('kentuckyfriedchicken');
+    }
     return accepted;
   }
 
