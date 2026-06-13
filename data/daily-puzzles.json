@@ -649,5 +649,36 @@
         "explanation": "A hoodie is a hooded sweatshirt, famously worn by Rocky Balboa and Eminem."
       }
     ]
+  },
+  {
+    "date": "Saturday, June 13, 2026",
+    "secretItem": "APPLE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "OCCASIONALLY GETS SAUCY",
+        "explanation": "Cooked-down apples make applesauce."
+      },
+      {
+        "clueNumber": 2,
+        "text": "SEEDY AT ITS CORE",
+        "explanation": "An apple keeps its seeds in its core."
+      },
+      {
+        "clueNumber": 3,
+        "text": "TEACHERS LOVE THEM, DOCTORS DON'T?",
+        "explanation": "A classic gift for teachers — and 'an apple a day keeps the doctor away.'"
+      },
+      {
+        "clueNumber": 4,
+        "text": "GRANNY SMITH THAT'S NOT YOUR NANA",
+        "explanation": "Granny Smith is a tart green apple variety, not your grandmother."
+      },
+      {
+        "clueNumber": 5,
+        "text": "GIVE THIS FRUIT A TRY, THE KEY FLAVOR OF AMERICAN PIE",
+        "explanation": "Apple pie is the quintessential American pie."
+      }
+    ]
   }
 ]
