@@ -1980,6 +1980,7 @@ class App {
     this.currentGame = null;
     this.currentClueIndex = 0;
     this.acceptingGuesses = false;
+    this._revealing = false;
     this.timer = null;
     this._dbSort = { key: 'date', dir: 'desc' };
     this._dbActiveTab = 'live';
@@ -3163,6 +3164,7 @@ Rules:
     this.currentGame = playableGames[idx];
     this.currentClueIndex = 0;
     this.gameStarted = false;
+    this._revealing = false;
     this.lastGuess = '';
     this.setGuessingState('closed');
     this._renderHostCartoon();
@@ -3214,6 +3216,7 @@ Rules:
 
   exitGame() {
     this.clearTimers();
+    this._revealing = false;
     this.setView('home');
   }
 
@@ -3348,6 +3351,7 @@ Rules:
 
   nextClue() {
       if (!this.gameStarted) return;
+      if (this._revealing) return;
       this.clearTimers();
       if (this.currentClueIndex < 4) {
         this.currentClueIndex++;
@@ -3371,53 +3375,132 @@ Rules:
       inputEl.value = '';
       // Store the user's guess for summary
       this.lastGuess = input;
+      this.clearTimers();
+
+      const n = this.currentClueIndex + 1;
+      const g = this.currentGame;
+      // Compute the outcome now, but defer showing it (see below) so the round
+      // can play out the remaining clues first.
+      let finish;
 
       if (acceptedAnswers.has(guess)) {
-        this.clearTimers();
-        const n = this.currentClueIndex + 1;
-        const g = this.currentGame;
-
         if (g.format === 'v2') {
           const { goldClue, silverClue, bronzeClue, goldWinners, silverWinners, bronzeWinners } = g;
           const lastMedalClue = bronzeClue || silverClue || goldClue;
           if (n < goldClue) {
-            this.endGame(true, `You solved it before any real winners! Gold wasn't cracked until Clue ${goldClue}. You'd win the entire $3,000 gold pot solo!`, 3000, 'gold');
+            finish = () => this.endGame(true, `You solved it before any real winners! Gold wasn't cracked until Clue ${goldClue}. You'd win the entire $3,000 gold pot solo!`, 3000, 'gold');
           } else if (n === goldClue) {
             const share = 3000 / (Number(goldWinners) + 1);
-            this.endGame(true, `🥇 Gold! You matched ${Number(goldWinners).toLocaleString()} real gold winner${goldWinners != 1 ? 's' : ''} on Clue ${goldClue}. You'd be winner #${(Number(goldWinners)+1).toLocaleString()}!`, share, 'gold');
+            finish = () => this.endGame(true, `🥇 Gold! You matched ${Number(goldWinners).toLocaleString()} real gold winner${goldWinners != 1 ? 's' : ''} on Clue ${goldClue}. You'd be winner #${(Number(goldWinners)+1).toLocaleString()}!`, share, 'gold');
           } else if (silverClue && n === silverClue) {
             const share = 2500 / (Number(silverWinners) + 1);
             const silverMsg = Number(silverWinners) === 0
               ? `🥈 Silver! Nobody else won silver on Clue ${silverClue} — you'd have been the only winner, claiming the entire $2,500 silver pot!`
               : `🥈 Silver! You matched ${Number(silverWinners).toLocaleString()} real silver winner${silverWinners != 1 ? 's' : ''} on Clue ${silverClue}. You'd share the $2,500 silver pot!`;
-            this.endGame(true, silverMsg, share, 'silver');
+            finish = () => this.endGame(true, silverMsg, share, 'silver');
           } else if (bronzeClue && n === bronzeClue) {
             const share = 2000 / (Number(bronzeWinners) + 1);
             const bronzeMsg = Number(bronzeWinners) === 0
               ? `🥉 Bronze! Nobody else won bronze on Clue ${bronzeClue} — you'd have been the only winner, claiming the entire $2,000 bronze pot!`
               : `🥉 Bronze! You matched ${Number(bronzeWinners).toLocaleString()} bronze winner${bronzeWinners != 1 ? 's' : ''} on Clue ${bronzeClue}. You'd share the $2,000 bronze pot!`;
-            this.endGame(true, bronzeMsg, share, 'bronze');
+            finish = () => this.endGame(true, bronzeMsg, share, 'bronze');
           } else if (n < lastMedalClue) {
-            this.endGame('close', `You were right, but a little too late! You guessed on Clue ${n}, but the medal clues were ${goldClue} (🥇 gold)${silverClue ? ', ' + silverClue + ' (🥈 silver)' : ''}${bronzeClue ? ', ' + bronzeClue + ' (🥉 bronze)' : ''}. Hold off until a medal clue next time!`);
+            finish = () => this.endGame('close', `You were right, but a little too late! You guessed on Clue ${n}, but the medal clues were ${goldClue} (🥇 gold)${silverClue ? ', ' + silverClue + ' (🥈 silver)' : ''}${bronzeClue ? ', ' + bronzeClue + ' (🥉 bronze)' : ''}. Hold off until a medal clue next time!`);
           } else {
-            this.endGame('close', `You were right, but a little too late! All medals were awarded by Clue ${lastMedalClue} and you answered on Clue ${n}.`);
+            finish = () => this.endGame('close', `You were right, but a little too late! All medals were awarded by Clue ${lastMedalClue} and you answered on Clue ${n}.`);
           }
         } else {
           const winningClue = g.winningClue || g.goldClue;
           const winnerCount = g.totalWinners;
           if (n > winningClue) {
-            this.endGame('close', `You were right, but a little too late! The game was already decided on Clue ${winningClue}.`);
+            finish = () => this.endGame('close', `You were right, but a little too late! The game was already decided on Clue ${winningClue}.`);
           } else if (n < winningClue) {
-            this.endGame(true, `You got it early! Real players didn't solve it until Clue ${winningClue}. You win the whole pot!`, g.pot);
+            finish = () => this.endGame(true, `You got it early! Real players didn't solve it until Clue ${winningClue}. You win the whole pot!`, g.pot);
           } else {
             const share = g.pot / (winnerCount + 1);
-            this.endGame(true, `Correct! You matched the ${winnerCount.toLocaleString()} real winner${winnerCount !== 1 ? 's' : ''} on Clue ${winningClue}. You'd be winner #${(winnerCount+1).toLocaleString()}!`, share);
+            finish = () => this.endGame(true, `Correct! You matched the ${winnerCount.toLocaleString()} real winner${winnerCount !== 1 ? 's' : ''} on Clue ${winningClue}. You'd be winner #${(winnerCount+1).toLocaleString()}!`, share);
           }
         }
       } else {
-        this.endGame(false, `"${input}" was incorrect.`);
+        finish = () => this.endGame(false, `"${input}" was incorrect.`);
+      }
+
+      // After locking in on clues 1–4, play out the rest of the round: reveal the
+      // remaining clues one at a time, then show the win/loss after clue 5. When
+      // the guess lands on clue 5 there's nothing left to reveal, so show it now.
+      if (this.currentClueIndex < 4) {
+        this._revealRemainingCluesThenFinish(finish);
+      } else {
+        finish();
       }
     }
+
+  // Accelerated end-of-round playout: after a guess on clues 1–4, expose the
+  // remaining clues (~2.2s apart), hold on clue 5 for ~3s, then reveal the result.
+  _revealRemainingCluesThenFinish(finish) {
+    this.clearTimers();
+    this._revealing = true;
+    this.setGuessingState('timeup');
+    const barEl = document.getElementById('main-timer-bar');
+    const textEl = document.getElementById('main-timer-text');
+    if (barEl) {
+      barEl.style.transition = 'none';
+      barEl.style.width = '100%';
+      barEl.style.background = 'rgba(148,163,184,0.35)';
+      barEl.style.boxShadow = 'none';
+    }
+    const setLabel = (t) => {
+      if (textEl) textEl.innerHTML = `<span class="text-white/60 font-display tracking-widest text-xs uppercase">${t}</span>`;
+    };
+    setLabel('Revealing…');
+    const STEP = 2200; // ms between clue reveals
+    const HOLD = 3000; // ms to hold on clue 5 before the result
+    const done = () => { this._revealing = false; finish(); };
+    const step = () => {
+      this.currentClueIndex++;
+      this._renderAcceleratedClue();
+      if (this.currentClueIndex >= 4) {
+        setLabel('Results…');
+        this._delayTimeout = setTimeout(done, HOLD);
+      } else {
+        this._delayTimeout = setTimeout(step, STEP);
+      }
+    };
+    this._delayTimeout = setTimeout(step, 1000);
+  }
+
+  // Render clues 0..currentClueIndex with the newest highlighted and all text
+  // already visible (no guess timer) — used during the accelerated playout.
+  _renderAcceleratedClue() {
+    const g = this.currentGame;
+    const ci = this.currentClueIndex;
+    const stackEl = document.getElementById('clue-stack');
+    if (!stackEl) return;
+    stackEl.innerHTML = '';
+    for (let j = 0; j <= ci; j++) {
+      const isActive = j === ci;
+      const div = document.createElement('div');
+      div.className = 'flex items-stretch rounded-xl overflow-hidden' + (isActive ? ' clue-stack-enter' : '');
+      if (isActive) {
+        div.style.background = 'linear-gradient(135deg, #60a5fa 0%, #3b82f6 45%, #2563eb 100%)';
+        div.style.boxShadow = '0 0 0 1.5px rgba(255,255,255,0.55), 0 0 14px rgba(255,255,255,0.35), 0 0 26px rgba(147,197,253,0.5), inset 0 1px 0 rgba(255,255,255,0.3)';
+      } else {
+        div.style.background = 'linear-gradient(90deg, #1a3a7a 0%, #1e4ea8 40%, #1a3a7a 100%)';
+        div.style.boxShadow = '0 2px 8px rgba(0,0,0,0.4)';
+      }
+      const safeClueText = this._escapeHtml(g.clues[j].text);
+      div.innerHTML = `
+        <div class="flex items-center justify-center px-3 flex-shrink-0" style="background:rgba(0,0,0,0.28); min-width:3rem;">
+          <span class="text-white font-bold text-base font-display">${j+1}</span>
+        </div>
+        <div class="w-px self-stretch flex-shrink-0" style="background:rgba(255,255,255,0.3)"></div>
+        <div class="flex items-center flex-grow min-w-0 px-3 py-3">
+          <div class="flex-grow min-w-0"><span class="text-base md:text-lg font-bold text-white font-display uppercase tracking-wide leading-snug" style="overflow-wrap: break-word;">${safeClueText}</span></div>
+        </div>`;
+      stackEl.appendChild(div);
+    }
+  }
+
 
   endGame(won, message, amount = 0, medal = null) {
     // Dismiss the soft keyboard before switching to the result screen
