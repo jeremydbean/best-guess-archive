@@ -12727,5 +12727,119 @@
         "explanation": "Robin Hood is an English outlaw who wears green tights and was portrayed as a fox by Disney."
       }
     ]
+  },
+  {
+    "date": "Friday, June 12, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "ZOMBIE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 5,
+    "silverWinners": 23,
+    "bronzeWinners": 10,
+    "totalWinners": 38,
+    "goldPayout": 600.0,
+    "silverPayout": 108.69,
+    "bronzePayout": 200.0,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Dan Flash's twenty three, Dana B eighty one twenty five, Maria Kaludis, J Kid twelve thirty two, Night for R two",
+    "wrongGuesses": "MICHAEL JACKSON, DRILL, PACMAN, PUZZLE, GORDON RAMSEY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BIT BY BIT",
+        "correct": "5",
+        "guesses": "4,619 🥇",
+        "explanation": "A zombie eats people bit by bit."
+      },
+      {
+        "number": 2,
+        "text": "THE END IS JUST THE BEGINNING",
+        "correct": "23",
+        "guesses": "4,060 🥈",
+        "explanation": "A zombie experiences the end of life as just the beginning."
+      },
+      {
+        "number": 3,
+        "text": "SHOWBIZ LEGEND WITH A WALK OF FAME",
+        "correct": "10",
+        "guesses": "4,747 🥉",
+        "explanation": "Rob Zombie is a showbiz legend with a star on the Walk of Fame."
+      },
+      {
+        "number": 4,
+        "text": "FOOD FOR THOUGHT? MORE LIKE THOUGHTS FOR FOOD!",
+        "correct": "65",
+        "guesses": "2,596",
+        "explanation": "Zombies eat brains, which are literal thoughts for food."
+      },
+      {
+        "number": 5,
+        "text": "GHOUL WHO INSPIRES DREAD IN “WORLD WAR Z” & “THE WALKING DEAD”",
+        "correct": "5,258",
+        "guesses": "6,250",
+        "explanation": "These are all popular zombie movies and series."
+      }
+    ]
+  },
+  {
+    "date": "Friday, June 12, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "DISCO BALL",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 4,
+    "silverWinners": 1335,
+    "bronzeWinners": 1418,
+    "totalWinners": 2757,
+    "goldPayout": 750.0,
+    "silverPayout": 1.87,
+    "bronzePayout": 1.41,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Fancy Moo three sixteen, Wild Z, Diesel Dad, Evil Chin five ninety eight",
+    "wrongGuesses": "MIRROR, CIGARETTE, MOON, DISCO, SUN",
+    "clues": [
+      {
+        "number": 1,
+        "text": "NEED A LIGHT?",
+        "correct": "4",
+        "guesses": "3,585 🥇",
+        "explanation": "A disco ball needs to be lit up to truly shine."
+      },
+      {
+        "number": 2,
+        "text": "I'M OVER THE HUSTLE",
+        "correct": "1,335",
+        "guesses": "4,759 🥈",
+        "explanation": "A disco ball hangs over a dance floor where the song The Hustle might be playing."
+      },
+      {
+        "number": 3,
+        "text": "DOESN'T PAUSE TO REFLECT",
+        "correct": "1,418",
+        "guesses": "7,772 🥉",
+        "explanation": "A disco ball reflects light while continuously moving so you cannot stop to look at yourself."
+      },
+      {
+        "number": 4,
+        "text": "BEEN AROUND THE DANCE FLOOR A LONG TIME",
+        "correct": "4,777",
+        "guesses": "6,035",
+        "explanation": "Disco balls have been spinning on dance floors for decades."
+      },
+      {
+        "number": 5,
+        "text": "ORB THAT SHINES BRIGHT FOR A FEVER ON SATURDAY NIGHT",
+        "correct": "1,452",
+        "guesses": "1,820",
+        "explanation": "A disco ball is an orb that shines bright and makes people want to dance."
+      }
+    ]
   }
 ]
