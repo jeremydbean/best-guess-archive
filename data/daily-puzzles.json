@@ -680,5 +680,36 @@
         "explanation": "Apple pie is the quintessential American pie."
       }
     ]
+  },
+  {
+    "date": "Sunday, June 14, 2026",
+    "secretItem": "WEED",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "INTRUDER ALERT!",
+        "explanation": "A weed is an unwanted plant that invades your lawn or garden."
+      },
+      {
+        "clueNumber": 2,
+        "text": "TOPIC OF GROWING CONCERN",
+        "explanation": "Weeds grow fast — a pun on a 'growing concern.'"
+      },
+      {
+        "clueNumber": 3,
+        "text": "ALWAYS SLIPPING THROUGH THE CRACKS",
+        "explanation": "Weeds famously sprout up through cracks in sidewalks and pavement."
+      },
+      {
+        "clueNumber": 4,
+        "text": "TOTAL WHACK JOB, ACCORDING TO GROUNDSKEEPERS",
+        "explanation": "Groundskeepers clear them with a weed whacker."
+      },
+      {
+        "clueNumber": 5,
+        "text": "I BEG YOUR PARDON - UNWANTED PLANTS IN MY GARDEN?",
+        "explanation": "Riffs on 'I never promised you a rose garden' — weeds are the unwanted plants in it."
+      }
+    ]
   }
 ]
