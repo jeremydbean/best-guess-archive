@@ -711,5 +711,36 @@
         "explanation": "Riffs on 'I never promised you a rose garden' — weeds are the unwanted plants in it."
       }
     ]
+  },
+  {
+    "date": "Monday, June 15, 2026",
+    "secretItem": "SNOW",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "WHAT MAKES A MAN",
+        "explanation": "You build a snowman out of snow."
+      },
+      {
+        "clueNumber": 2,
+        "text": "BANK DEPOSIT",
+        "explanation": "Plowed and piled snow forms a snowbank."
+      },
+      {
+        "clueNumber": 3,
+        "text": "BLANKET THAT WON'T KEEP YOU WARM",
+        "explanation": "A 'blanket of snow' covers the ground but is freezing cold."
+      },
+      {
+        "clueNumber": 4,
+        "text": "FROSTED FLAKES",
+        "explanation": "Snow falls as frozen, frosty flakes."
+      },
+      {
+        "clueNumber": 5,
+        "text": "IT'S A REAL PAIN TO SHOVEL THIS WHITE, FLUFFY RAIN",
+        "explanation": "Snow is shoveled like frozen rain."
+      }
+    ]
   }
 ]
