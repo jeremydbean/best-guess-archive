@@ -1674,6 +1674,17 @@ document.addEventListener('focusout', function(e) {
     </div>
   </div>
 
+  <!-- Medal Tiers Over Time (v2) -->
+  <div class="glass-panel p-6 rounded-xl">
+    <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <span class="material-symbols-outlined text-yellow-400">military_tech</span> Medal Tiers Over Time
+    </h3>
+    <p class="text-xs text-slate-400 mb-4">For each v2 episode (by air date): gold / silver / bronze <strong>winner counts</strong> (solid lines, left axis) and <strong>amount won per winner</strong> (dashed lines, right axis). Both axes are log scale; empty tiers (no winners) appear as gaps. Hover for details.</p>
+    <div style="height:320px;position:relative">
+      <canvas id="chart-medal-time"></canvas>
+    </div>
+  </div>
+
   <!-- Clue Distribution + Avg Winners Per Clue -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <div class="glass-panel p-6 rounded-xl">
@@ -2063,6 +2074,7 @@ class App {
       nodes.statAvgWinners = document.getElementById('stat-avg-winners');
       nodes.statAvgClue = document.getElementById('stat-avg-clue');
       nodes.chartPlayersTime = document.getElementById('chart-players-time');
+      nodes.chartMedalTime = document.getElementById('chart-medal-time');
       nodes.chartClueDist = document.getElementById('chart-clue-dist');
       nodes.chartAvgWinners = document.getElementById('chart-avg-winners-clue');
       nodes.chartPotDist = document.getElementById('chart-pot-dist');
@@ -4499,6 +4511,20 @@ Rules:
     });
     const guessesData = sortedByDate.map(g => this._getGameMeta(g).totalPlayers);
     const winnersData = sortedByDate.map(g => g.totalWinners);
+    // Per-tier winner counts and per-winner payouts over time, v2 games only.
+    // 0/empty tiers map to null so the line shows a gap (log scale + no winners).
+    const v2Sorted = sortedByDate.filter(g => g.format === 'v2');
+    const posOrNull = v => { const n = Number(v); return n > 0 ? n : null; };
+    const v2TimeLabels = v2Sorted.map(g => {
+      const d = this._archiveDateObject(g.date);
+      return d ? d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : (g.date.split(',')[1]?.trim() || g.date);
+    });
+    const goldWinnersData = v2Sorted.map(g => posOrNull(g.goldWinners));
+    const silverWinnersData = v2Sorted.map(g => posOrNull(g.silverWinners));
+    const bronzeWinnersData = v2Sorted.map(g => posOrNull(g.bronzeWinners));
+    const goldPayoutData = v2Sorted.map(g => posOrNull(g.goldPayout));
+    const silverPayoutData = v2Sorted.map(g => posOrNull(g.silverPayout));
+    const bronzePayoutData = v2Sorted.map(g => posOrNull(g.bronzePayout));
     const wcWinnersMap = {1:[],2:[],3:[],4:[],5:[]};
     games.forEach(g => {
       if (g.format === 'v2') {
@@ -4724,6 +4750,14 @@ Rules:
         timeLabels,
         guessesData,
         winnersData,
+        v2SortedByDate: v2Sorted,
+        v2TimeLabels,
+        goldWinnersData,
+        silverWinnersData,
+        bronzeWinnersData,
+        goldPayoutData,
+        silverPayoutData,
+        bronzePayoutData,
         clueDist,
         clueColors: ['#FBBF24','#94A3B8','#F97316','#60A5FA','#F472B6'],
         avgWinnersByClue,
@@ -4924,6 +4958,57 @@ Rules:
         { label: ctx => `Avg payout: $${ctx.parsed.y.toLocaleString()}` }
       )
     });
+
+    if (nodes.chartMedalTime) {
+      const medalLine = (label, data, color, axis, dash) => ({
+        label, data, borderColor: color, backgroundColor: color,
+        yAxisID: axis, tension: 0.3, fill: false, borderWidth: 2, borderDash: dash || [],
+        pointRadius: 2, pointHoverRadius: 7, pointHoverBackgroundColor: '#ef4444',
+        pointHoverBorderColor: '#ef4444', pointHitRadius: 12, spanGaps: false
+      });
+      this._charts.medalTime = new Chart(nodes.chartMedalTime, {
+        type: 'line',
+        plugins: [crosshairLinePlugin],
+        data: {
+          labels: charts.v2TimeLabels,
+          datasets: [
+            medalLine('🥇 Gold winners', charts.goldWinnersData, '#FBBF24', 'y'),
+            medalLine('🥈 Silver winners', charts.silverWinnersData, '#CBD5E1', 'y'),
+            medalLine('🥉 Bronze winners', charts.bronzeWinnersData, '#FB923C', 'y'),
+            medalLine('🥇 Gold $/winner', charts.goldPayoutData, '#FBBF24', 'y1', [5, 4]),
+            medalLine('🥈 Silver $/winner', charts.silverPayoutData, '#CBD5E1', 'y1', [5, 4]),
+            medalLine('🥉 Bronze $/winner', charts.bronzePayoutData, '#FB923C', 'y1', [5, 4])
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', axis: 'x', intersect: false },
+          plugins: {
+            legend: { labels: { color: '#94a3b8', usePointStyle: true, boxWidth: 8 } },
+            tooltip: {
+              intersect: false,
+              padding: 10,
+              filter: item => item.parsed.y != null,
+              callbacks: {
+                title: items => {
+                  const game = charts.v2SortedByDate[items[0]?.dataIndex];
+                  return game ? `${game.secretItem} · ${game.date}` : (items[0]?.label || '');
+                },
+                label: ctx => ctx.dataset.yAxisID === 'y1'
+                  ? `${ctx.dataset.label}: $${ctx.parsed.y.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+                  : `${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString()}`
+              }
+            }
+          },
+          scales: {
+            x: { ticks: { color: '#64748b', maxTicksLimit: 10 }, grid: { color: 'rgba(148,163,184,0.05)' } },
+            y: { type: 'logarithmic', position: 'left', ticks: { color: '#94a3b8', callback: v => this._compactNumber(v) }, grid: { color: 'rgba(148,163,184,0.05)' }, title: { display: true, text: 'Winners (log)', color: '#94a3b8' }, afterBuildTicks: this._logTickFilter([1, 10, 100, 1000, 10000]) },
+            y1: { type: 'logarithmic', position: 'right', ticks: { color: '#94a3b8', callback: v => '$' + this._compactNumber(v) }, grid: { drawOnChartArea: false }, title: { display: true, text: '$ / winner (log)', color: '#94a3b8' }, afterBuildTicks: this._logTickFilter([1, 10, 100, 1000, 10000]) }
+          }
+        }
+      });
+    }
     this._statsChartsRendered = true;
     this._statsChartsVersion = stats.cacheKey;
   }
