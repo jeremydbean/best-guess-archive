@@ -1674,17 +1674,6 @@ document.addEventListener('focusout', function(e) {
     </div>
   </div>
 
-  <!-- Medal winner counts over time (v2) -->
-  <div class="glass-panel p-6 rounded-xl">
-    <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
-      <span class="material-symbols-outlined text-yellow-400">military_tech</span> Medal Winners Over Time
-    </h3>
-    <p class="text-xs text-slate-400 mb-4">Gold / silver / bronze winner counts for each v2 episode, by air date (log scale). Empty tiers (no winners) appear as gaps. Hover for details.</p>
-    <div style="height:280px;position:relative">
-      <canvas id="chart-medal-winners"></canvas>
-    </div>
-  </div>
-
   <!-- Per-winner payout over time (v2) -->
   <div class="glass-panel p-6 rounded-xl">
     <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
@@ -2085,7 +2074,6 @@ class App {
       nodes.statAvgWinners = document.getElementById('stat-avg-winners');
       nodes.statAvgClue = document.getElementById('stat-avg-clue');
       nodes.chartPlayersTime = document.getElementById('chart-players-time');
-      nodes.chartMedalWinners = document.getElementById('chart-medal-winners');
       nodes.chartMedalPayout = document.getElementById('chart-medal-payout');
       nodes.chartClueDist = document.getElementById('chart-clue-dist');
       nodes.chartAvgWinners = document.getElementById('chart-avg-winners-clue');
@@ -4531,9 +4519,6 @@ Rules:
       const d = this._archiveDateObject(g.date);
       return d ? d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : (g.date.split(',')[1]?.trim() || g.date);
     });
-    const goldWinnersData = v2Sorted.map(g => posOrNull(g.goldWinners));
-    const silverWinnersData = v2Sorted.map(g => posOrNull(g.silverWinners));
-    const bronzeWinnersData = v2Sorted.map(g => posOrNull(g.bronzeWinners));
     const goldPayoutData = v2Sorted.map(g => posOrNull(g.goldPayout));
     const silverPayoutData = v2Sorted.map(g => posOrNull(g.silverPayout));
     const bronzePayoutData = v2Sorted.map(g => posOrNull(g.bronzePayout));
@@ -4764,9 +4749,6 @@ Rules:
         winnersData,
         v2SortedByDate: v2Sorted,
         v2TimeLabels,
-        goldWinnersData,
-        silverWinnersData,
-        bronzeWinnersData,
         goldPayoutData,
         silverPayoutData,
         bronzePayoutData,
@@ -5007,19 +4989,6 @@ Rules:
       }
     });
 
-    if (nodes.chartMedalWinners) {
-      this._charts.medalWinners = buildMedalChart(
-        nodes.chartMedalWinners,
-        [
-          medalLine('🥇 Gold', charts.goldWinnersData, '#FBBF24'),
-          medalLine('🥈 Silver', charts.silverWinnersData, '#CBD5E1'),
-          medalLine('🥉 Bronze', charts.bronzeWinnersData, '#FB923C')
-        ],
-        'Winners (log)',
-        v => this._compactNumber(v),
-        v => v.toLocaleString()
-      );
-    }
     if (nodes.chartMedalPayout) {
       this._charts.medalPayout = buildMedalChart(
         nodes.chartMedalPayout,
