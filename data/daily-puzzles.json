@@ -742,5 +742,36 @@
         "explanation": "Snow is shoveled like frozen rain."
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 16, 2026",
+    "secretItem": "FERRIS WHEEL",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "HANGING AROUND",
+        "explanation": "Its cabins hang as they ride around the wheel."
+      },
+      {
+        "clueNumber": 2,
+        "text": "RIGHT BACK WHERE WE STARTED",
+        "explanation": "It's a circle, so one loop returns you to where you began."
+      },
+      {
+        "clueNumber": 3,
+        "text": "REINVENTED WHAT YOU DON'T REINVENT",
+        "explanation": "You're told not to 'reinvent the wheel' — a Ferris wheel did."
+      },
+      {
+        "clueNumber": 4,
+        "text": "A FAIRLY AMUSING EXPERIENCE",
+        "explanation": "A staple of fairs and amusement parks ('fairly'/'amusing')."
+      },
+      {
+        "clueNumber": 5,
+        "text": "GRAB A PIC AT THE TOP IF THIS CIRCULAR RIDE SHOULD STOP",
+        "explanation": "At the top you get the best view — handy if the ride pauses."
+      }
+    ]
   }
 ]
