@@ -2848,6 +2848,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Monday, June 15, 2026",
+      "secretItem": "CANDLE",
+      "pot": 7500,
+      "host": "Corinne Foxx",
+      "format": "v2",
+      "totalWinners": 1205,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, June 15, 2026",
+      "secretItem": "SEATBELT",
+      "pot": 7500,
+      "host": "Corinne Foxx",
+      "format": "v2",
+      "totalWinners": 6270,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }

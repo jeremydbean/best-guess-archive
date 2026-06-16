@@ -4,6 +4,7 @@ Last updated: 2026-06-11 (session end)
 
 ## Most Recent Changes (2026-06-11)
 
+- **June 15, 2026 episode imported — CANDLE (R1) and SEATBELT (R2), host Corinne Foxx** (both `format: "v2"`). Appended to `data/games-2026.json` (now 235 games) + full transcript in `data/transcripts.json` (now 136); `npm run audit:fix` regenerated meta; `npm run audit` passes 0/0. Payload was clean — payouts verified: R1 gold 49 @ $61.22 / silver 818 @ $3.05 / bronze 338 @ $5.91 (total 1,205); R2 gold 88 @ $34.09 / silver 1,269 @ $1.97 / bronze 4,913 @ $0.40 (total 6,270). No results screenshot, so wrong guesses are from the payload. (This is the live episode; separate from the June 15 SNOW daily puzzle.)
 - **Daily puzzle added — Monday, June 15, 2026: SNOW**: Appended to `data/daily-puzzles.json` (now 24 entries). Clues: WHAT MAKES A MAN / BANK DEPOSIT / BLANKET THAT WON'T KEEP YOU WARM / FROSTED FLAKES / IT'S A REAL PAIN TO SHOVEL THIS WHITE, FLUFFY RAIN. `npm run audit` passes.
 - **Daily puzzle added — Sunday, June 14, 2026: WEED**: Appended to `data/daily-puzzles.json` (now 23 entries). Clues: INTRUDER ALERT! / TOPIC OF GROWING CONCERN / ALWAYS SLIPPING THROUGH THE CRACKS / TOTAL WHACK JOB, ACCORDING TO GROUNDSKEEPERS / I BEG YOUR PARDON - UNWANTED PLANTS IN MY GARDEN? `npm run audit` passes.
 - **Play mode: accept "KENTUCKY FRIED CHICKEN" for KFC**: `_getAcceptedAnswers()` now adds `kentuckyfriedchicken` as an accepted alias when the answer normalizes to `kfc` (same mechanism as the mayonnaise→mayo alias).
