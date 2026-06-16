@@ -49514,5 +49514,967 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Monday, June 15, 2026",
+    "host": "Corinne Foxx",
+    "secretItems": [
+      "CANDLE",
+      "SEATBELT"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "CANDLE",
+        "host": "Corinne Foxx",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "USE IT AND LOSE IT",
+          "FRIEND TO THE POWERLESS",
+          "OFTEN FOUND OUT IN THE STICKS",
+          "TURNS A BIRTHDAY INTO A BLOWOUT",
+          "WAX-EMBEDDED WICK TO LIGHT A ROOM QUICK"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "SEATBELT",
+        "host": "Corinne Foxx",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "CLINGY AND OVERPROTECTIVE",
+          "TRAVEL RESTRICTION IN PLACE",
+          "ANTI-WHIPLASH WHIP LASH",
+          "IT BUCKLES...BUT NOT UNDER PRESSURE",
+          "DEVICE YOU WEAR IN YOUR RIDE TO BE SAFE IF YOU COLLIDE"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Welcome to Best Guess Live, I'm your host Corinne Foxx."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh my gosh!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Wow!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Thank you."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Wow, what an incredible weekend for competition."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Congratulations to all the fans of the New York Knicks."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yes."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And the Carolina Hurricanes on their championships."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That's hockey?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Hockey?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "No?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Hockey."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, sorry."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "But let's let's try to harness some of that competitive energy for today's Best Guess Live puzzles."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "We don't have a trophy, but I think fifteen thousand dollars is a pretty nice substitute."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And unlike the NHL the odds are pretty good that you'll finish today's game with all of your teeth."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Not a hundred percent, but it... it's pretty good."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "So before we begin, please rise and remove your hats for the reading of the rules."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Before each round, we're gonna load up our crystal ball with a secret item and it could be anything."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And then I will give you five clues."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Remember, the clues are like riddles, they are meant to make you think."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And after each clue, you'll get twenty seconds to submit an answer, but you only get one best guess per round."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Not one per clue, one per round, so make sure you are confident before you lock it in."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And it has to be the exact answer, we do not accept typos."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Everyone that locks in the correct answer on the earliest clue will split the Gold prize pot of three thousand dollars."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the Silver pot of twenty-five hundred dollars."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And everyone that gets it on the third earliest clue will split the Bronze pot of two thousand dollars."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, enough talk, let's win some money!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Round one is worth seventy-five hundred dollars."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's load up that crystal ball."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Hey you guys!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Ooh, there's twenty thousand of you guys playing?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, here is your first clue."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: Use it and lose it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, use it and lose it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Remember they've changed things on me a little bit, okay?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I don't know what the answer is anymore."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I used to."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "They took that away from me, so now I am... I am guessing alongside of you."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Use it and lose it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Three seconds left to lock in your answer on the first clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Barbecue Benny 45 said the remote."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yes."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's always under the same couch cushion."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Jenk 333 said a tooth."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah, you you use it and you can lose it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Totally."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, here is your second clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: Friend to the powerless."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Friend to the powerless."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, clue number one was use it and lose it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, friend to the powerless."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Friend to the powerless."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, I'm not... I'm not getting much from these."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "If you guys are answering, I think you're a lot smarter than I am because I'm not getting it quite yet."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, let's see what you guys submitted."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "MD Dog 12 said money, friend to the powerless."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Nimble Ox 498 said spinach."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Spinach."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I don't really understand that answer quite yet."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, let's move on to clue number three."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Here's your third clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three is: Often found out in the sticks."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Often found out in the sticks."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, use it and lose it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two was friend to the powerless."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, often found out in the sticks."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "In the sticks."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's like what, a forest?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "What's sticks?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Maine?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Minty Soup 89 said the second little pig."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright you guys, here is your fourth clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four: Turns a birthday into a blowout."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, I'm starting to get it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, use it and lose it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, friend to the powerless."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, often found out in the sticks."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four, turns a birthday into a blowout."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Five seconds on the clock and your time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, Tremendous Flea 098 said a keg."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That that makes a birthday a really good time."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Back in my college days."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright you guys, here is your final clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Remember this is your final chance to guess if you haven't yet, this is your time to lock it in."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five: Wax-embedded wick to light a room quick."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, clue number one was use it and lose it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, friend to the powerless."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, often found out in the sticks."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four, turns a birthday into a blowout."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And clue number five, wax-embedded wick to light a room quick."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I love these little little rhymes that they they come up with."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay you guys, let's find out what was in that crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's a candle!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's a candle!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, now I see why I didn't get a prop today."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I really wanted a prop today and I see why they did not give me one."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, yes, the answer was candle."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's take a look at how the clues fit and find out who is taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “WAX-EMBEDDED WICK TO LIGHT A ROOM QUICK.” It is a rhyming definition of a candle. 1,184 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “TURNS A BIRTHDAY INTO A BLOWOUT.” Candles are blown out on a birthday cake. 4,176 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “OFTEN FOUND OUT IN THE STICKS.” A candle sticks up out of a candlestick. 338 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “FRIEND TO THE POWERLESS.” A candle provides light when the power goes out. 818 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “USE IT AND LOSE IT.” A candle is gone forever after it is burned. 49 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 49 winners at $61.22 each. Silver (Clue 2): 818 winners at $3.05 each. Bronze (Clue 3): 338 winners at $5.91 each."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Congratulations to you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Frigid Phoenix, you are a Gold guesser, congratulations."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Shell Russell, congratulations."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And Jamie Cake, also a Gold guesser."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright you guys, it's halftime and we don't have a marching band and I left my kazoo in the car."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "So let's just move on to round two with another seventy-five hundred dollars up for grabs."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Prize pots are the same: three thousand dollars for Gold, twenty-five hundred dollars for Silver, and two thousand dollars for Bronze."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's load up the crystal ball."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, round two coming in hot!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And that crystal ball is loaded up and here is your first clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: Clingy and overprotective."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one is clingy and overprotective."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And it sounds like my my golden doodle Archie, he is clingy and he is overprotective."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And I would love if he was in that crystal ball."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright you guys, just about five seconds left on clue number one, which was clingy and overprotective."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, One Log Gen 5 said tape."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clingy."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Bundle Bear 275 says my wife Betsy."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And uh, Just... Oleo? 464 said dog."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And I'm thinking what you're thinking."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm thinking what you're thinking."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, clue number two."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two is: Travel restriction in place."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one was clingy and overprotective."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: travel restriction in place."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Travel restriction."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "You also, my dog can't go on a plane, he's restricted from travel."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm holding out hope that Archie is in that crystal ball."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Maybe not."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Ooh, Best Guess Now said TSA."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Murky Milk 55 said getting grounded."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah, clingy, overprotective, you're stuck, okay."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright you guys, let's move on to your third clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three: Anti-whiplash whip lash."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one was clingy and overprotective."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, travel restriction in place."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, anti-whiplash whip lash."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Anti-whiplash whip lash."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Five seconds on the clock is your last chance to lock it in on clue number three."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Two more clues to go and time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Murple Burple 77 says Indiana Jones, question mark?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Indiana Jones."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "He's got a whip."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, here's your fourth clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four: It buckles... but not under pressure."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, clue number one, clingy and overprotective."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, travel restriction in place."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, anti-whiplash whip lash."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four, it buckles... but not under pressure."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Buckles but not under pressure."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And your time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, Blenny Spruce 87 said a pilgrim's shoe."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "They do have little buckles, yeah."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Weeping Willow 561 said eyelashes."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It buckles... under pressure."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright you guys, here is your final clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "This is your final chance to guess in this puzzle."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five: Device you wear in your ride to be safe if you collide."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Twenty seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm getting it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I only get it on clue number five."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, clingy and overprotective."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, travel restriction in place."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, anti-whiplash whip lash."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four, it buckles but not under pressure."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And clue number five, device you wear in your ride to be safe if you collide."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, your time is up you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's see what was in that crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Safety first everyone!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It is your seatbelt."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It is your seatbelt."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It is your seatbelt."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright you guys, that was the correct answer."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's find out how the clues fit and find out who is taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “DEVICE YOU WEAR IN YOUR RIDE TO BE SAFE IF YOU COLLIDE.” A seatbelt is worn to keep passengers safe on the road. 932 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “IT BUCKLES...BUT NOT UNDER PRESSURE.” A seatbelt buckles and keeps you safe in a crisis. 2,786 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “ANTI-WHIPLASH WHIP LASH.” “Whip” is slang for a car and “lash” means to tie something down. 4,913 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “TRAVEL RESTRICTION IN PLACE.” A seatbelt holds a person in place while traveling by car. 1,269 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “CLINGY AND OVERPROTECTIVE.” A seatbelt clings and protects by fastening over the torso. 88 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 88 winners at $34.09 each. Silver (Clue 2): 1,269 winners at $1.97 each. Bronze (Clue 3): 4,913 winners at $0.40 each."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Hey, I love it."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Alright, well that's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "We are here every weekday at 8 Eastern, 5 Pacific, so come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Goodnight you guys!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh my gosh, how did they even get it right on clue number one?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Woo!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Pretty good."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [BATTERY, MONEY, FIRE, MATCH, CHARGER]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [SARAN WRAP, PLASTIC WRAP, DOG, BELT, NECK PILLOW]"
+          }
+        ]
+      }
+    ]
   }
 ]

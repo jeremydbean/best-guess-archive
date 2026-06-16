@@ -12841,5 +12841,119 @@
         "explanation": "A disco ball is an orb that shines bright and makes people want to dance."
       }
     ]
+  },
+  {
+    "date": "Monday, June 15, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Corinne Foxx",
+    "secretItem": "CANDLE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 49,
+    "silverWinners": 818,
+    "bronzeWinners": 338,
+    "totalWinners": 1205,
+    "goldPayout": 61.22,
+    "silverPayout": 3.05,
+    "bronzePayout": 5.91,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Frigid Phoenix, Shell Russell, Jamie Cake",
+    "wrongGuesses": "BATTERY, MONEY, FIRE, MATCH, CHARGER",
+    "clues": [
+      {
+        "number": 1,
+        "text": "USE IT AND LOSE IT",
+        "correct": "49",
+        "guesses": "5,405 🥇",
+        "explanation": "A candle is gone forever after it is burned."
+      },
+      {
+        "number": 2,
+        "text": "FRIEND TO THE POWERLESS",
+        "correct": "818",
+        "guesses": "7,616 🥈",
+        "explanation": "A candle provides light when the power goes out."
+      },
+      {
+        "number": 3,
+        "text": "OFTEN FOUND OUT IN THE STICKS",
+        "correct": "338",
+        "guesses": "4,842 🥉",
+        "explanation": "A candle sticks up out of a candlestick."
+      },
+      {
+        "number": 4,
+        "text": "TURNS A BIRTHDAY INTO A BLOWOUT",
+        "correct": "4,176",
+        "guesses": "5,921",
+        "explanation": "Candles are blown out on a birthday cake."
+      },
+      {
+        "number": 5,
+        "text": "WAX-EMBEDDED WICK TO LIGHT A ROOM QUICK",
+        "correct": "1,184",
+        "guesses": "2,036",
+        "explanation": "It is a rhyming definition of a candle."
+      }
+    ]
+  },
+  {
+    "date": "Monday, June 15, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Corinne Foxx",
+    "secretItem": "SEATBELT",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 88,
+    "silverWinners": 1269,
+    "bronzeWinners": 4913,
+    "totalWinners": 6270,
+    "goldPayout": 34.09,
+    "silverPayout": 1.97,
+    "bronzePayout": 0.4,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "SARAN WRAP, PLASTIC WRAP, DOG, BELT, NECK PILLOW",
+    "clues": [
+      {
+        "number": 1,
+        "text": "CLINGY AND OVERPROTECTIVE",
+        "correct": "88",
+        "guesses": "8,420 🥇",
+        "explanation": "A seatbelt clings and protects by fastening over the torso."
+      },
+      {
+        "number": 2,
+        "text": "TRAVEL RESTRICTION IN PLACE",
+        "correct": "1,269",
+        "guesses": "5,924 🥈",
+        "explanation": "A seatbelt holds a person in place while traveling by car."
+      },
+      {
+        "number": 3,
+        "text": "ANTI-WHIPLASH WHIP LASH",
+        "correct": "4,913",
+        "guesses": "7,602 🥉",
+        "explanation": "“Whip” is slang for a car and “lash” means to tie something down."
+      },
+      {
+        "number": 4,
+        "text": "IT BUCKLES...BUT NOT UNDER PRESSURE",
+        "correct": "2,786",
+        "guesses": "3,655",
+        "explanation": "A seatbelt buckles and keeps you safe in a crisis."
+      },
+      {
+        "number": 5,
+        "text": "DEVICE YOU WEAR IN YOUR RIDE TO BE SAFE IF YOU COLLIDE",
+        "correct": "932",
+        "guesses": "1,040",
+        "explanation": "A seatbelt is worn to keep passengers safe on the road."
+      }
+    ]
   }
 ]
