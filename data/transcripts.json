@@ -50476,5 +50476,1287 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 16, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "HOME RUN",
+      "SCOOBY DOO"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "HOME RUN",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "BE RIGHT BACK",
+          "QUICK CONNECTING FLIGHT",
+          "THE HOPE DIAMOND",
+          "ATHLETIC FEAT THAT WON'T MAKE YOU SAY “D'OH!”",
+          "4-BASE HIT THAT CAN LAND IN FANS' HANDS IN THE STANDS"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "SCOOBY DOO",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "FAMOUSLY WELL-TREATED",
+          "DRAWN TO TROUBLE",
+          "FOUR PAWS, FOUR O'S",
+          "YOU STILL DON'T KNOW THE ANSWER? RUH-ROH",
+          "HIS TAIL GETS WAGGY WHEN HE'S SOLVING WITH SHAGGY"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live, I'm your host Howie Mandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "As you may know, I spend a lot of time judging talent."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But tonight, I'm gonna show off a talent of my own."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's what I've decided to do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm now gonna sing Celine Dion's, my fellow Canadian, just like some of the audience here... My Heart Will Go On and I'm gonna sing it in its entirety."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am an incredible singer and I thought Best Guess Live is the place to showcase it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is gonna blow you away."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It'll cost how much to do the entire song?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my god."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, how much for half a song?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well how much can we afford?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Near..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, now it's time to read the rules!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds, each round has one puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, we're gonna load our crystal ball with a secret item... it could be absolutely anything, and then I'm gonna give you five clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But remember, the clues, they're like riddles, they're meant to make you think people, so after each clue, you're gonna get 20 seconds to submit an answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you only get one Best Guess per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is that what I just said?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not one per clue, one per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in, 'cause it's gotta be the exact answer and we're not accepting typos."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bottom line, you wanna be fast, but you have to be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the Gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the Silver pot of $2,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough talk, let's win some money, Round 1, $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, load the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here we go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my gosh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The singing was good, wasn't it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You don't need a whole song to know how good I am."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Be right back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Be right back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "About 10 seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm gonna recap the clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Be right back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Got a lot of recapping when you get one clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "ZachSmack45 said chiropractor."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Get your back right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Quick connecting flight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue was be right back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Second clue was quick connecting flight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost 4,000 guesses on that first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What could it be?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Answers are coming in now, people are guessing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What could it be?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "DukeyShoes said elevator."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I just wanna stop at your name and not your guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "LittleTroll779 said wings."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The Hope Diamond."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Be right back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Quick connecting flight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And third clue with 10 seconds left in the clock is the Hope Diamond."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "MadCheese said kite."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know I get it, you don't have to explain it to me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "EarlyBard567 said Zales, which is a diamond outlet."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That you can explain to the people, Zales is not a national or is it an international... is it in Canada?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let me know in Discord after this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let me know if Zales is in Canada."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "If not I'm telling you it's like Birks, it's a diamond-selling place."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here we go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Athletic feat that won't make you say “D'oh!”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, the first..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did I do that good?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The first clue was be right back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Start the clock, I forgot to start the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, the first clue is be right back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The second clue, quick connecting flight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Third clue was the Hope Diamond."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And this last clue, athletic feat that won't make you say “D'oh!”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "ChillyFlames372 said curling."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know the big Canadian sport."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "My dad was in a curling league."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh yeah."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He had a broom, he had a puck, he had a shoe."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He had a sweater."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And he had my mom."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4-base hit that can land in fans' hands in the stands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright, the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright, clue number one, be right back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue two, a quick connecting flight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue three, the Hope Diamond."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue four, athletic feat that won't make you say “D'oh!”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the fifth clue, 4-base hit that can land in fans' hands in the stands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm gonna be honest with you, I got it, but I got it in the fifth."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I bet a lot of you got it before me, but..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can I say it before... I'm gonna say open the ball but can I say what I think it is?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Am I allowed to?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think it's gonna be a home run."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think... well don't tell me, don't tell me, Neil open the ball and show me how stupid I am or smart."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Home run!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pretty good for a guy that never got to second base when I was dating."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway let's take a look at how the clues fit and find out who's taking the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “4-BASE HIT THAT CAN LAND IN FANS' HANDS IN THE STANDS.” A home run is a four-base hit that is knocked out of the park. 4,745 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “ATHLETIC FEAT THAT WON'T MAKE YOU SAY “D'OH!”” Homer Simpson's iconic catchphrase is “D'oh!”, and a home run is also called a homer. 2,272 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “THE HOPE DIAMOND.” The baseball diamond is where everyone hopes to hit a home run. 656 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “QUICK CONNECTING FLIGHT.” When a bat connects with a ball, it flies speedily through the air and over the fence all the way to home. 5 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “BE RIGHT BACK.” A home run is a round trip ticket back to home plate. 5 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 5 winners at $600.00 each. Silver (Clue 2): 5 winners at $500.00 each. Bronze (Clue 3): 656 winners at $3.04 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay this is what made me get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A four-base hit that can land in fans' hands in the stands... hopefully by now you all knocked this puzzle out of the park right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So 6,640 of you guessed, 4,745 of you guessed correctly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4,746 of us, guessed correctly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't think I'm in that number right there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number four."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Athletic feat that won't make you say “D'oh!”"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Because you won, hey, the Simpsons fans, whose iconic catchphrase is D'oh?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Homer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a Homer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5,011 guesses, 2,272 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, clue number three."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The hope diamond."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "At the baseball diamond everyone hopes to hit a home run."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4,651 guesses, 656 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, clue number two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Quick connecting flight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "When your bat connects with the ball it flies speedily through the air over the fence, you gotta have the right connection and it's flight all the way to home."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5,578 guesses, 5 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That up until now is the gold standard."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is that gonna remain the gold standard, we're about to find out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The first clue was Be right back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A home run is a round trip ticket back to home plate."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Home plate... boom, out of the park, be right back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There you go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,945 people guessed on that first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Which means that is the gold, our gold guessers are each getting $600!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "DogBite17, MomTheMeatloaf, Igloo... and a couple more of you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Our silver winners, 5 of you are getting $500 each!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And 656 bronze winners are getting $3.04 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It was so much fun watching you win, I am so ready to do it again."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's right it doesn't need to be clue five for me to rhyme."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "In fact I do it all the time."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's time for round two!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "If you're keeping tabs... 7,500 up for grabs."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, it's part of the... I ruined the timing of the whole poem."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I should come in for rehearsal."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,000 for gold, 2,500 for silver, 2,000 for bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Winning all of that money would be cooler than The Fonz."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Heyyy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm done rhyming, that's all."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's go ahead and load the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That one was an accident."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I blew it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm so bad, I deserve like an X."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That was horrible."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I was horrible."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your first clue though, you be better than me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Famously well-treated."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Famously well-treated."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "People are whispering in the background."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What is wrong with Howie today?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He can't read a little poem."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "MassiveNibble said Halloween."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Famously well-treated, I get what you're saying... trick or treat, okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "OddBaby said ham."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You odd baby, you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Drawn to trouble."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Famously well-treated."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your second clue is drawn to trouble."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost 5,000 guesses in on that first one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five seconds left."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Three, two, one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "IvorySoap said cat water."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "NeedlenoseNancy said Charlie Sheen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know what's funnier, your name or your answer, Charlie Sheen or NeedlenoseNancy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four paws, four O's."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Famously well-treated."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Drawn to trouble."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four paws, four O's."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now that they don't give us the answers, I'm spending more time trying to figure out the answers than be a good host."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "TrembleBiscuit77 said a polar bear."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Which is polar, which is four O's."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You still don't know the answer?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ruh-roh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh now I think I got it now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm putting in an answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm not typing it, but it's in my head."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Got it on four."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm sorry, I was wasting time."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "With my... didn't I help you?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "By not starting the clock I just gave you more time to think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What do I do for you people?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, famously well-treated."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Drawn to trouble."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four paws, four O's."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And you still don't know the answer?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ruh-roh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "MarkTheSpark12 said no Howie I don't."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "MarkTheSpark, this is not a conversation, it's a game."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But if that's your best guess, god help you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, here's your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Final chance to guess, final shot at $7,500 for today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "His tail gets waggy when he's solving with Shaggy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think I got it on four."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How proud I am."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "15 seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Over 25,000 submitted answers already."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And we're not finished getting all the submissions."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Really good people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Call your friends, call your neighbors, have them play with you too."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's make this huge."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay let's find out... can I say my guess now too?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Scooby Doo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Scooby Doo?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, well I don't know, I don't know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm not looking for the answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, I'm looking for you to open the ball so I can see if I'm right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost my license plate, you know that right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "My license plate is Scooby Jew."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is, not even a joke."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Why am I giving out my license plate on national..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There's no editing here right, this is live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No it's not."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's not my license."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What an idiot I am."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “HIS TAIL GETS WAGGY WHEN HE'S SOLVING WITH SHAGGY.” The talking Great Dane loves solving mysteries with his pals. 964 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “YOU STILL DON'T KNOW THE ANSWER? RUH-ROH.” “Ruh-roh” is Scooby's famous catchphrase. 8,454 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “FOUR PAWS, FOUR O'S.” There are four O's in the name Scooby Doo. 1,684 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “DRAWN TO TROUBLE.” He is a cartoon character who is always getting into scrapes. 487 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “FAMOUSLY WELL-TREATED.” Scooby Snacks are iconic dog treats. 147 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 147 winners at $20.40 each. Silver (Clue 2): 487 winners at $5.13 each. Bronze (Clue 3): 1,684 winners at $1.18 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "His tail gets waggy when he's solving with Shaggy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He's talking Great Dane loves solving mysteries with his pals."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "1,144 guesses, 964 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number four, when I locked in my answer in my head, let's see."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You still don't know the answer? Ruh-roh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ruh-roh is Scoob's famous catchphrase, that's why I got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "9,633 of you guessed, 8,454."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So I wasn't alone."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What a team we are."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue guessers on clue four."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But let's see if there's people smarter than us."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, clue number three."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four paws, four O's."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, count them, there are four O's in Scooby Doo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5,765 guesses, 1,684 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Drawn to trouble."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He's a cartoon character who's always getting into scrapes, and that's what they were doing, trying to solve trouble and everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And they're drawn, so that makes sense."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4,934 guesses, 487 of you got that correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Famously well-treated."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everybody knows Scooby Snacks, the iconic dog treats."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4,706 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what, 147 of you... very bright players today, that is the new gold."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "147 of you each get $20.40 for the gold winning winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "ChipReynolds, Willie, BruceGopher and many more."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Our silver winners are 487 of you are each getting $5.13."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the bronze winners, 1,684 winners each getting a buck eighteen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's over 2,000 winners today which makes it a great day."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tomorrow's gonna be even better."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Call your friends, call your neighbors, have them play with you too, this game is just getting bigger, bigger, bigger."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all our winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're here every weekday at 8pm Eastern 5 Pacific."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So come back tomorrow, and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Goodnight everybody."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [BOOMERANG, BASEBALL, COMMERCIAL, GRAND SLAM, LAYOVER]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [DOG, GARFIELD, WATER, DOGS, POODLE]"
+          }
+        ]
+      }
+    ]
   }
 ]
