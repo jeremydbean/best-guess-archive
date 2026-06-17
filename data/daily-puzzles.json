@@ -773,5 +773,36 @@
         "explanation": "At the top you get the best view — handy if the ride pauses."
       }
     ]
+  },
+  {
+    "date": "Wednesday, June 17, 2026",
+    "secretItem": "DRACULA",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "A BATMAN",
+        "explanation": "Dracula can transform into a bat — making him 'a bat-man.'"
+      },
+      {
+        "clueNumber": 2,
+        "text": "HAS A DRINKING PROBLEM",
+        "explanation": "The vampire's thirst for blood is quite the habit."
+      },
+      {
+        "clueNumber": 3,
+        "text": "ALWAYS ON THE VERGE OF A HEART ATTACK",
+        "explanation": "A wooden stake through the heart is what finishes him off."
+      },
+      {
+        "clueNumber": 4,
+        "text": "BEEN GOING THROUGH A GOTH PHASE",
+        "explanation": "The classic gothic-horror count, all in black."
+      },
+      {
+        "clueNumber": 5,
+        "text": "COUNT ON HIM TO BE LITERATURE'S SUCKIEST CHARACTER",
+        "explanation": "Count Dracula, from Bram Stoker's novel, sucks blood."
+      }
+    ]
   }
 ]
