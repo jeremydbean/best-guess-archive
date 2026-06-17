@@ -12955,5 +12955,119 @@
         "explanation": "A seatbelt is worn to keep passengers safe on the road."
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 16, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "HOME RUN",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 5,
+    "silverWinners": 5,
+    "bronzeWinners": 656,
+    "totalWinners": 666,
+    "goldPayout": 600.0,
+    "silverPayout": 500.0,
+    "bronzePayout": 3.04,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "DogBite17, MomTheMeatloaf, Igloo",
+    "wrongGuesses": "BOOMERANG, BASEBALL, COMMERCIAL, GRAND SLAM, LAYOVER",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BE RIGHT BACK",
+        "correct": "5",
+        "guesses": "3,945 🥇",
+        "explanation": "A home run is a round trip ticket back to home plate."
+      },
+      {
+        "number": 2,
+        "text": "QUICK CONNECTING FLIGHT",
+        "correct": "5",
+        "guesses": "5,578 🥈",
+        "explanation": "When a bat connects with a ball, it flies speedily through the air and over the fence all the way to home."
+      },
+      {
+        "number": 3,
+        "text": "THE HOPE DIAMOND",
+        "correct": "656",
+        "guesses": "4,651 🥉",
+        "explanation": "The baseball diamond is where everyone hopes to hit a home run."
+      },
+      {
+        "number": 4,
+        "text": "ATHLETIC FEAT THAT WON'T MAKE YOU SAY “D'OH!”",
+        "correct": "2,272",
+        "guesses": "5,011",
+        "explanation": "Homer Simpson's iconic catchphrase is “D'oh!”, and a home run is also called a homer."
+      },
+      {
+        "number": 5,
+        "text": "4-BASE HIT THAT CAN LAND IN FANS' HANDS IN THE STANDS",
+        "correct": "4,745",
+        "guesses": "6,640",
+        "explanation": "A home run is a four-base hit that is knocked out of the park."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, June 16, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "SCOOBY DOO",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 147,
+    "silverWinners": 487,
+    "bronzeWinners": 1684,
+    "totalWinners": 2318,
+    "goldPayout": 20.4,
+    "silverPayout": 5.13,
+    "bronzePayout": 1.18,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "ChipReynolds, Willie, BruceGopher",
+    "wrongGuesses": "DOG, GARFIELD, WATER, DOGS, POODLE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "FAMOUSLY WELL-TREATED",
+        "correct": "147",
+        "guesses": "4,706 🥇",
+        "explanation": "Scooby Snacks are iconic dog treats."
+      },
+      {
+        "number": 2,
+        "text": "DRAWN TO TROUBLE",
+        "correct": "487",
+        "guesses": "4,934 🥈",
+        "explanation": "He is a cartoon character who is always getting into scrapes."
+      },
+      {
+        "number": 3,
+        "text": "FOUR PAWS, FOUR O'S",
+        "correct": "1,684",
+        "guesses": "5,765 🥉",
+        "explanation": "There are four O's in the name Scooby Doo."
+      },
+      {
+        "number": 4,
+        "text": "YOU STILL DON'T KNOW THE ANSWER? RUH-ROH",
+        "correct": "8,454",
+        "guesses": "9,633",
+        "explanation": "“Ruh-roh” is Scooby's famous catchphrase."
+      },
+      {
+        "number": 5,
+        "text": "HIS TAIL GETS WAGGY WHEN HE'S SOLVING WITH SHAGGY",
+        "correct": "964",
+        "guesses": "1,144",
+        "explanation": "The talking Great Dane loves solving mysteries with his pals."
+      }
+    ]
   }
 ]
