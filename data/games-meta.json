@@ -2903,8 +2903,11 @@
       "pot": 7500,
       "host": "Hunter March",
       "format": "v2",
-      "totalWinners": 0,
-      "clueCount": 5
+      "totalWinners": 650,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     },
     {
       "date": "Wednesday, June 17, 2026",
@@ -2912,8 +2915,11 @@
       "pot": 7500,
       "host": "Hunter March",
       "format": "v2",
-      "totalWinners": 0,
-      "clueCount": 5
+      "totalWinners": 896,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
