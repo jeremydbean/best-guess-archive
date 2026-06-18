@@ -51758,5 +51758,187 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Wednesday, June 17, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "BRAIN",
+      "HIDE AND SEEK"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "BRAIN",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "ON TOP OF IT",
+          "FAMOUS FOR A GOOD REASON",
+          "INSPIRED AI AND CONTAINS IT",
+          "WORKS OUT OF HEADQUARTERS",
+          "ORGAN IN YOUR SKULL THAT LETS YOU ACT, FEEL, AND MULL"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "HIDE AND SEEK",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "COUNTDOWN TO LIFTOFF",
+          "CLASSIC WAY TO HAVE FUN WITH HUNTER",
+          "HURRY UP AND WAIT",
+          "A GOOD FRIEND IS HARD TO FIND",
+          "KIDS' GAME WHERE YOU MIGHT GET CAUGHT, READY OR NOT"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Full transcript pending — clue text, answers, host, and popular wrong guesses were captured from episode screenshots; dialogue and winner figures will be added when available."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Clue 1: ON TOP OF IT"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: FAMOUS FOR A GOOD REASON"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: INSPIRED AI AND CONTAINS IT"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: WORKS OUT OF HEADQUARTERS"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: ORGAN IN YOUR SKULL THAT LETS YOU ACT, FEEL, AND MULL"
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "The crystal ball revealed: BRAIN."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “ORGAN IN YOUR SKULL THAT LETS YOU ACT, FEEL, AND MULL.” The organ in your skull behind thinking, feeling, and acting."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “WORKS OUT OF HEADQUARTERS.” It runs the whole body from headquarters — your head."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “INSPIRED AI AND CONTAINS IT.” Brains inspired AI — and the letters A-I sit inside 'brain.'"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “FAMOUS FOR A GOOD REASON.” The brain is the seat of reason — famous 'for a good reason.'"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “ON TOP OF IT.” Your brain sits right at the top, inside your head."
+          },
+          {
+            "speaker": null,
+            "text": "Winner counts and payouts pending."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Clue 1: COUNTDOWN TO LIFTOFF"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: CLASSIC WAY TO HAVE FUN WITH HUNTER"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: HURRY UP AND WAIT"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: A GOOD FRIEND IS HARD TO FIND"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: KIDS' GAME WHERE YOU MIGHT GET CAUGHT, READY OR NOT"
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "The crystal ball revealed: HIDE AND SEEK."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “KIDS' GAME WHERE YOU MIGHT GET CAUGHT, READY OR NOT.” The classic kids' game — 'ready or not, here I come!'"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “A GOOD FRIEND IS HARD TO FIND.” Well-hidden players are hard to find."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “HURRY UP AND WAIT.” You rush to hide, then wait quietly to be found."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “CLASSIC WAY TO HAVE FUN WITH HUNTER.” The seeker hunts for hidden players (with a wink at host Hunter)."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “COUNTDOWN TO LIFTOFF.” The seeker counts down before coming to look — 'ready or not!'"
+          },
+          {
+            "speaker": null,
+            "text": "Winner counts and payouts pending."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [CHERRY, GOOGLE, ELON MUSK, SIRI, APPLE]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [ROCKET, TIMER, TAG, ELEVATOR, FIREWORKS]"
+          }
+        ]
+      }
+    ]
   }
 ]

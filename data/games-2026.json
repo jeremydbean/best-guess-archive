@@ -13069,5 +13069,115 @@
         "explanation": "The talking Great Dane loves solving mysteries with his pals."
       }
     ]
+  },
+  {
+    "date": "Wednesday, June 17, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BRAIN",
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 0,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "CHERRY, GOOGLE, ELON MUSK, SIRI, APPLE",
+    "adminNote": "Results pending: winner counts and payouts not yet captured. Clue text, answer, host, and popular wrong guesses are from episode screenshots.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ON TOP OF IT",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "Your brain sits right at the top, inside your head."
+      },
+      {
+        "number": 2,
+        "text": "FAMOUS FOR A GOOD REASON",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "The brain is the seat of reason — famous 'for a good reason.'"
+      },
+      {
+        "number": 3,
+        "text": "INSPIRED AI AND CONTAINS IT",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "Brains inspired AI — and the letters A-I sit inside 'brain.'"
+      },
+      {
+        "number": 4,
+        "text": "WORKS OUT OF HEADQUARTERS",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "It runs the whole body from headquarters — your head."
+      },
+      {
+        "number": 5,
+        "text": "ORGAN IN YOUR SKULL THAT LETS YOU ACT, FEEL, AND MULL",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "The organ in your skull behind thinking, feeling, and acting."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, June 17, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "HIDE AND SEEK",
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 0,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "ROCKET, TIMER, TAG, ELEVATOR, FIREWORKS",
+    "adminNote": "Results pending: winner counts and payouts not yet captured. Clue text, answer, host, and popular wrong guesses are from episode screenshots. Screenshot medal tiers: gold Clue 1, silver Clue 2, bronze Clue 3.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "COUNTDOWN TO LIFTOFF",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "The seeker counts down before coming to look — 'ready or not!'"
+      },
+      {
+        "number": 2,
+        "text": "CLASSIC WAY TO HAVE FUN WITH HUNTER",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "The seeker hunts for hidden players (with a wink at host Hunter)."
+      },
+      {
+        "number": 3,
+        "text": "HURRY UP AND WAIT",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "You rush to hide, then wait quietly to be found."
+      },
+      {
+        "number": 4,
+        "text": "A GOOD FRIEND IS HARD TO FIND",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "Well-hidden players are hard to find."
+      },
+      {
+        "number": 5,
+        "text": "KIDS' GAME WHERE YOU MIGHT GET CAUGHT, READY OR NOT",
+        "correct": "0",
+        "guesses": "0",
+        "explanation": "The classic kids' game — 'ready or not, here I come!'"
+      }
+    ]
   }
 ]
