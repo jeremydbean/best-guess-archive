@@ -13076,52 +13076,54 @@
     "format": "v2",
     "host": "Hunter March",
     "secretItem": "BRAIN",
-    "goldWinners": 0,
-    "silverWinners": 0,
-    "bronzeWinners": 0,
-    "totalWinners": 0,
-    "goldPayout": 0,
-    "silverPayout": 0,
-    "bronzePayout": 0,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 1,
+    "bronzeWinners": 648,
+    "totalWinners": 650,
+    "goldPayout": 3000.0,
+    "silverPayout": 2500.0,
+    "bronzePayout": 3.08,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "Bumpy Birdie 537",
     "wrongGuesses": "CHERRY, GOOGLE, ELON MUSK, SIRI, APPLE",
-    "adminNote": "Results pending: winner counts and payouts not yet captured. Clue text, answer, host, and popular wrong guesses are from episode screenshots.",
     "clues": [
       {
         "number": 1,
         "text": "ON TOP OF IT",
-        "correct": "0",
-        "guesses": "0",
-        "explanation": "Your brain sits right at the top, inside your head."
+        "correct": "1",
+        "guesses": "45,561 🥇",
+        "explanation": "The brain is located at the top of your body and is in charge of everything."
       },
       {
         "number": 2,
         "text": "FAMOUS FOR A GOOD REASON",
-        "correct": "0",
-        "guesses": "0",
-        "explanation": "The brain is the seat of reason — famous 'for a good reason.'"
+        "correct": "1",
+        "guesses": "3,358 🥈",
+        "explanation": "The brain is famously what you use to reason."
       },
       {
         "number": 3,
         "text": "INSPIRED AI AND CONTAINS IT",
-        "correct": "0",
-        "guesses": "0",
-        "explanation": "Brains inspired AI — and the letters A-I sit inside 'brain.'"
+        "correct": "648",
+        "guesses": "5,314 🥉",
+        "explanation": "AI is modeled after the human brain and the word brain contains the letters A and I."
       },
       {
         "number": 4,
         "text": "WORKS OUT OF HEADQUARTERS",
-        "correct": "0",
-        "guesses": "0",
-        "explanation": "It runs the whole body from headquarters — your head."
+        "correct": "1,435",
+        "guesses": "4,427",
+        "explanation": "Your brain lives inside your head."
       },
       {
         "number": 5,
         "text": "ORGAN IN YOUR SKULL THAT LETS YOU ACT, FEEL, AND MULL",
-        "correct": "0",
-        "guesses": "0",
-        "explanation": "The organ in your skull behind thinking, feeling, and acting."
+        "correct": "6,841",
+        "guesses": "7,029",
+        "explanation": "The brain is the organ in your skull that lets you act, feel, and mull."
       }
     ]
   },
@@ -13131,52 +13133,54 @@
     "format": "v2",
     "host": "Hunter March",
     "secretItem": "HIDE AND SEEK",
-    "goldWinners": 0,
-    "silverWinners": 0,
-    "bronzeWinners": 0,
-    "totalWinners": 0,
-    "goldPayout": 0,
-    "silverPayout": 0,
-    "bronzePayout": 0,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 5,
+    "silverWinners": 303,
+    "bronzeWinners": 588,
+    "totalWinners": 896,
+    "goldPayout": 600.0,
+    "silverPayout": 8.25,
+    "bronzePayout": 3.4,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "West Goose, Guestmaster, Pluto is a planet",
     "wrongGuesses": "ROCKET, TIMER, TAG, ELEVATOR, FIREWORKS",
-    "adminNote": "Results pending: winner counts and payouts not yet captured. Clue text, answer, host, and popular wrong guesses are from episode screenshots. Screenshot medal tiers: gold Clue 1, silver Clue 2, bronze Clue 3.",
     "clues": [
       {
         "number": 1,
         "text": "COUNTDOWN TO LIFTOFF",
-        "correct": "0",
-        "guesses": "0",
-        "explanation": "The seeker counts down before coming to look — 'ready or not!'"
+        "correct": "5",
+        "guesses": "4,097 🥇",
+        "explanation": "You count down from ten and then lift your hands off your eyes."
       },
       {
         "number": 2,
         "text": "CLASSIC WAY TO HAVE FUN WITH HUNTER",
-        "correct": "0",
-        "guesses": "0",
-        "explanation": "The seeker hunts for hidden players (with a wink at host Hunter)."
+        "correct": "303",
+        "guesses": "4,084 🥈",
+        "explanation": "One person is hunting for everyone else."
       },
       {
         "number": 3,
         "text": "HURRY UP AND WAIT",
-        "correct": "0",
-        "guesses": "0",
-        "explanation": "You rush to hide, then wait quietly to be found."
+        "correct": "588",
+        "guesses": "7,000 🥉",
+        "explanation": "The seeker runs around while the hider waits."
       },
       {
         "number": 4,
         "text": "A GOOD FRIEND IS HARD TO FIND",
-        "correct": "0",
-        "guesses": "0",
-        "explanation": "Well-hidden players are hard to find."
+        "correct": "1,357",
+        "guesses": "3,127",
+        "explanation": "You play it with friends and the ones who are really good are hard to find."
       },
       {
         "number": 5,
         "text": "KIDS' GAME WHERE YOU MIGHT GET CAUGHT, READY OR NOT",
-        "correct": "0",
-        "guesses": "0",
-        "explanation": "The classic kids' game — 'ready or not, here I come!'"
+        "correct": "5,284",
+        "guesses": "6,180",
+        "explanation": "Hide and seek is a kids' game where you might get caught."
       }
     ]
   }
