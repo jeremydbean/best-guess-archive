@@ -2896,6 +2896,24 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Wednesday, June 17, 2026",
+      "secretItem": "BRAIN",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 0,
+      "clueCount": 5
+    },
+    {
+      "date": "Wednesday, June 17, 2026",
+      "secretItem": "HIDE AND SEEK",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 0,
+      "clueCount": 5
     }
   ]
 }
