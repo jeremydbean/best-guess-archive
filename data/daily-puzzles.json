@@ -804,5 +804,36 @@
         "explanation": "Count Dracula, from Bram Stoker's novel, sucks blood."
       }
     ]
+  },
+  {
+    "date": "Thursday, June 18, 2026",
+    "secretItem": "PEANUT BUTTER",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "RICH AND FAMOUS",
+        "explanation": "A rich, famously popular spread."
+      },
+      {
+        "clueNumber": 2,
+        "text": "GREAT IN A CUP BUT YOU CAN'T DRINK IT",
+        "explanation": "A Reese's Peanut Butter Cup — a cup you eat, not drink."
+      },
+      {
+        "clueNumber": 3,
+        "text": "KEEPS LOGS ANT-INFESTED",
+        "explanation": "It's the spread in 'ants on a log' (celery, peanut butter, raisins)."
+      },
+      {
+        "clueNumber": 4,
+        "text": "DON'T GET JELLY OF JELLY'S BESTIE",
+        "explanation": "Peanut butter is jelly's best friend in a PB&J — don't be jealous ('jelly')."
+      },
+      {
+        "clueNumber": 5,
+        "text": "CRUNCHY OR CREAMY, THIS SANDWICH SPREAD'S DREAMY",
+        "explanation": "Peanut butter comes crunchy or creamy and is a classic sandwich spread."
+      }
+    ]
   }
 ]
