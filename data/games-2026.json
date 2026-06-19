@@ -13183,5 +13183,119 @@
         "explanation": "Hide and seek is a kids' game where you might get caught."
       }
     ]
+  },
+  {
+    "date": "Thursday, June 18, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "CALCULATOR",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 2,
+    "silverWinners": 5,
+    "bronzeWinners": 691,
+    "totalWinners": 698,
+    "goldPayout": 1500.0,
+    "silverPayout": 500.0,
+    "bronzePayout": 2.89,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Head nerds, La Miles Morales",
+    "wrongGuesses": "DIAMOND, SUBMARINE, SCALE, TIRE, TIRES",
+    "clues": [
+      {
+        "number": 1,
+        "text": "EFFECTIVE UNDER PRESSURE",
+        "correct": "2",
+        "guesses": "4,919 🥇",
+        "explanation": "A calculator effectively does math when its buttons are pressed."
+      },
+      {
+        "number": 2,
+        "text": "STAR OF THE SMALL SCREEN",
+        "correct": "5",
+        "guesses": "3,278 🥈",
+        "explanation": "A calculator has a tiny screen."
+      },
+      {
+        "number": 3,
+        "text": "ALL THINGS BEING EQUAL",
+        "correct": "691",
+        "guesses": "4,275 🥉",
+        "explanation": "A lot of activity on a calculator ends with hitting the equals button."
+      },
+      {
+        "number": 4,
+        "text": "YOU CAN COUNT ON IT",
+        "correct": "5,294",
+        "guesses": "7,235",
+        "explanation": "A calculator counts and calculates numbers."
+      },
+      {
+        "number": 5,
+        "text": "ELECTRONIC DOODAD THAT HELPS YOU SUBTRACT AND ADD",
+        "correct": "4,080",
+        "guesses": "4,421",
+        "explanation": "A calculator helps you add, subtract, multiply, and divide."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, June 18, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "FISHING",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 63,
+    "silverWinners": 778,
+    "bronzeWinners": 2415,
+    "totalWinners": 3256,
+    "goldPayout": 47.61,
+    "silverPayout": 3.21,
+    "bronzePayout": 0.82,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Cool Beans, Tapenga, Wilky 87",
+    "wrongGuesses": "FISHING POLE, PARACHUTE, AMBULANCE, LAWNMOWER, FISHING ROD",
+    "clues": [
+      {
+        "number": 1,
+        "text": "PULL A FAST ONE",
+        "correct": "63",
+        "guesses": "4,589 🥇",
+        "explanation": "You pull fish out of the water that are trying to speed away."
+      },
+      {
+        "number": 2,
+        "text": "LIVES ARE ON THE LINE",
+        "correct": "778",
+        "guesses": "7,346 🥈",
+        "explanation": "You have live fish on the end of your line."
+      },
+      {
+        "number": 3,
+        "text": "GROSS NET INCOME",
+        "correct": "2,415",
+        "guesses": "6,919 🥉",
+        "explanation": "Fish come into your net and they are slimy and gross."
+      },
+      {
+        "number": 4,
+        "text": "GET HOOKED UP WITH A REAL CATCH",
+        "correct": "2,805",
+        "guesses": "4,699",
+        "explanation": "You catch real fish with a fish hook."
+      },
+      {
+        "number": 5,
+        "text": "ACTIVITY WITH A ROD OR POLE TO REEL IN A COD OR SOLE",
+        "correct": "1,521",
+        "guesses": "1,760",
+        "explanation": "You reel in a cod or sole using a rod or pole."
+      }
+    ]
   }
 ]
