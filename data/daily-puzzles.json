@@ -835,5 +835,36 @@
         "explanation": "Peanut butter comes crunchy or creamy and is a classic sandwich spread."
       }
     ]
+  },
+  {
+    "date": "Friday, June 19, 2026",
+    "secretItem": "CORNHOLE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "LANDSLIDE VICTORY",
+        "explanation": "Bags slide down the angled board — and a decisive win."
+      },
+      {
+        "clueNumber": 2,
+        "text": "IMPRESSIVE HANDBAG COLLECTION",
+        "explanation": "You toss bean bags by hand — a collection of 'hand-bags.'"
+      },
+      {
+        "clueNumber": 3,
+        "text": "TOSSES AND TURNS",
+        "explanation": "Players take turns tossing the bags."
+      },
+      {
+        "clueNumber": 4,
+        "text": "INCLINED TO BE A GOOD TIME",
+        "explanation": "The board sits at an incline, and it's a fun party game."
+      },
+      {
+        "clueNumber": 5,
+        "text": "BEANBAGS GO THROUGH THE O WITH EVERY A-MAIZE-ING THROW",
+        "explanation": "You sink bags through the hole; 'maize' (corn) gives cornhole."
+      }
+    ]
   }
 ]
