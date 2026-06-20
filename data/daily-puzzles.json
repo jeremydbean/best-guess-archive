@@ -866,5 +866,36 @@
         "explanation": "You sink bags through the hole; 'maize' (corn) gives cornhole."
       }
     ]
+  },
+  {
+    "date": "Saturday, June 20, 2026",
+    "secretItem": "SWIMMING POOL",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "NEVER ABOVEBOARD",
+        "explanation": "A pool sits below the diving board, never above it."
+      },
+      {
+        "clueNumber": 2,
+        "text": "VERY DAMP CRAWL SPACE",
+        "explanation": "A wet space where you can do the crawl stroke."
+      },
+      {
+        "clueNumber": 3,
+        "text": "BUOYANT ATHLETES LAP IT UP",
+        "explanation": "Swimmers float and swim laps in it."
+      },
+      {
+        "clueNumber": 4,
+        "text": "HOME TO TWO KINDS OF POLO: WATER AND MARCO",
+        "explanation": "Home to both water polo and Marco Polo."
+      },
+      {
+        "clueNumber": 5,
+        "text": "SPOT FOR WHEN IT'S HOT THAT YOU CLEAN WITH CHLORINE",
+        "explanation": "A place to cool off in the heat, kept clean with chlorine."
+      }
+    ]
   }
 ]
