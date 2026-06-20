@@ -13297,5 +13297,127 @@
         "explanation": "You reel in a cod or sole using a rod or pole."
       }
     ]
+  },
+  {
+    "date": "Friday, June 19, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "HOT DOG",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 4,
+    "silverWinners": 7,
+    "bronzeWinners": 2568,
+    "totalWinners": 2579,
+    "goldPayout": 750.0,
+    "silverPayout": 357.14,
+    "bronzePayout": 0.77,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Cayenne Cap, Rear Doctor, Vial of Ven 374",
+    "wrongGuesses": "WATER SLIDE, WATERSLIDE, THERMOMETER, TWIX, COIN",
+    "bonus": {
+      "title": "Voicemails for Isabelle",
+      "desc": "Zoe Deutch, Nick Robinson, and Nick Offerman star in this romantic comedy about love, loss, and telecommunication. And if you like laughing and crying and going awww, you'll want to check this out."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "PICK A SIDE",
+        "correct": "4",
+        "guesses": "4,784 🥇",
+        "explanation": "You can start eating a hot dog from either end but never in the middle, so you have to pick a side."
+      },
+      {
+        "number": 2,
+        "text": "DOWN THE TUBES",
+        "correct": "7",
+        "guesses": "3,979 🥈",
+        "explanation": "A hot dog is a tube-shaped food that people devour."
+      },
+      {
+        "number": 3,
+        "text": "RETRIEVER WITH A FEVER",
+        "correct": "2,568",
+        "guesses": "5,072 🥉",
+        "explanation": "A retriever is a dog and a fever means hot, so putting them together makes a hot dog."
+      },
+      {
+        "number": 4,
+        "text": "YOU MIGHT SAY ITS NAME WHEN YOU'RE EXCITED TO EAT IT",
+        "correct": "2,440",
+        "guesses": "3,385",
+        "explanation": "People say the phrase hot dog when they are excited."
+      },
+      {
+        "number": 5,
+        "text": "WIENER IN A BUN FOR BBQ FUN IN THE SUN",
+        "correct": "5,208",
+        "guesses": "5,460",
+        "explanation": "A hot dog is a wiener eaten in a bun at a barbecue."
+      }
+    ]
+  },
+  {
+    "date": "Friday, June 19, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "DOLLY PARTON",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 62,
+    "silverWinners": 376,
+    "bronzeWinners": 1614,
+    "totalWinners": 2052,
+    "goldPayout": 48.38,
+    "silverPayout": 6.64,
+    "bronzePayout": 1.23,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "30 Lou 529, Dino Bucky Buck, HJ the Survivor, a 1994",
+    "wrongGuesses": "BARBER, DIAMOND, DJ, TAYLOR SWIFT, NASHVILLE",
+    "bonus": {
+      "title": "Voicemails for Isabelle",
+      "desc": "Zoe Deutch, Nick Robinson, and Nick Offerman star in this romantic comedy about love, loss, and telecommunication. And if you like laughing and crying and going awww, you'll want to check this out."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "WORKS ODD HOURS",
+        "correct": "62",
+        "guesses": "2,354 🥇",
+        "explanation": "Her biggest song is 9 to 5, and both nine and five are odd numbers."
+      },
+      {
+        "number": 2,
+        "text": "PLATINUM CUT, PLATINUM CUTS",
+        "correct": "376",
+        "guesses": "5,031 🥈",
+        "explanation": "She is a platinum blonde and her songs go platinum."
+      },
+      {
+        "number": 3,
+        "text": "A TEN OUT OF TENN",
+        "correct": "1,614",
+        "guesses": "5,828 🥉",
+        "explanation": "She is a ten out of ten and is from Tennessee."
+      },
+      {
+        "number": 4,
+        "text": "HER GENRE IS NOT RAP AND SO IS HER LAST NAME BACKWARDS",
+        "correct": "3,504",
+        "guesses": "4,816",
+        "explanation": "Parton spelled backwards is not rap."
+      },
+      {
+        "number": 5,
+        "text": "Y'ALL LOVE THIS COUNTRY QUEEN, 'CEPT FOR MAYBE JOLENE",
+        "correct": "3,556",
+        "guesses": "4,268",
+        "explanation": "Everyone loves the queen of country except people who try to take away her man."
+      }
+    ]
   }
 ]
