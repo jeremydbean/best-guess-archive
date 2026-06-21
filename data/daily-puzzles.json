@@ -897,5 +897,36 @@
         "explanation": "A place to cool off in the heat, kept clean with chlorine."
       }
     ]
+  },
+  {
+    "date": "Sunday, June 21, 2026",
+    "secretItem": "POT HOLE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "DEEP TROUBLE",
+        "explanation": "A deep hole in the road spells trouble for your car."
+      },
+      {
+        "clueNumber": 2,
+        "text": "PIT STOP ON A ROAD TRIP",
+        "explanation": "It's a literal pit in the road — a pun on 'pit stop.'"
+      },
+      {
+        "clueNumber": 3,
+        "text": "DRIVE OVER ONE IN NO TIME...FLAT",
+        "explanation": "Hit one and you may get a flat tire — 'in no time flat.'"
+      },
+      {
+        "clueNumber": 4,
+        "text": "A VOID TO AVOID WHEN A ROAD ERODES",
+        "explanation": "A void that opens up as the road erodes — best avoided."
+      },
+      {
+        "clueNumber": 5,
+        "text": "STREET CRATER THAT SOUNDS LIKE A VESSEL USED BY COOKS",
+        "explanation": "A street crater; 'pot' is a cook's vessel, giving pothole."
+      }
+    ]
   }
 ]
