@@ -928,5 +928,36 @@
         "explanation": "A street crater; 'pot' is a cook's vessel, giving pothole."
       }
     ]
+  },
+  {
+    "date": "Monday, June 22, 2026",
+    "secretItem": "GENIE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "HAS A FULFILLING CAREER",
+        "explanation": "A genie's job is fulfilling — it grants wishes."
+      },
+      {
+        "clueNumber": 2,
+        "text": "NOT A FREE SPIRIT",
+        "explanation": "It's a spirit, but bound to a lamp until it's freed."
+      },
+      {
+        "clueNumber": 3,
+        "text": "DON'T RUB ME THE WRONG WAY",
+        "explanation": "You summon a genie by rubbing its lamp."
+      },
+      {
+        "clueNumber": 4,
+        "text": "DISNEY ROLE THAT HAD A ROBIN WORKING BLUE",
+        "explanation": "Robin Williams voiced Aladdin's blue Genie."
+      },
+      {
+        "clueNumber": 5,
+        "text": "THEIR BOTTLE'S ENCHANTED, YOUR WISHES ARE GRANTED",
+        "explanation": "A genie in an enchanted bottle or lamp grants your wishes."
+      }
+    ]
   }
 ]
