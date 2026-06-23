@@ -13419,5 +13419,127 @@
         "explanation": "Everyone loves the queen of country except people who try to take away her man."
       }
     ]
+  },
+  {
+    "date": "Monday, June 22, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "EARTH",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 35,
+    "silverWinners": 479,
+    "bronzeWinners": 1279,
+    "totalWinners": 1793,
+    "goldPayout": 85.71,
+    "silverPayout": 5.21,
+    "bronzePayout": 1.56,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Scares tuxedo 992, eyeglass cam, meow meow meow momo, stoic ridge",
+    "wrongGuesses": "RECORD, LOTTERY, RECORD PLAYER, FERRIS WHEEL, FEET",
+    "bonus": {
+      "title": "Daily Polls",
+      "desc": "Daily polls are launching on the Best Guess Live app a week from today. Every day there will be new questions ranging from profound to tremendously silly, allowing players to predict the most popular answers and see results from previous polls."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "SET FOR LIFE",
+        "correct": "35",
+        "guesses": "4,652 🥇",
+        "explanation": "Earth is the one spot we know of that has life."
+      },
+      {
+        "number": 2,
+        "text": "I'M ON IT!",
+        "correct": "479",
+        "guesses": "5,050 🥈",
+        "explanation": "The host is currently broadcasting live from the planet Earth."
+      },
+      {
+        "number": 3,
+        "text": "YOU SPIN ME RIGHT ROUND, BABY, RIGHT ROUND",
+        "correct": "1,279",
+        "guesses": "7,467 🥉",
+        "explanation": "The Earth spins on its axis and revolves around the sun."
+      },
+      {
+        "number": 4,
+        "text": "THE SKY'S THE LIMIT",
+        "correct": "1,212",
+        "guesses": "3,785",
+        "explanation": "Once you go far enough up, you are outside of Earth's atmosphere."
+      },
+      {
+        "number": 5,
+        "text": "BLUE-GREEN PLANET OF OURS BETWEEN VENUS AND MARS",
+        "correct": "3,967",
+        "guesses": "4,264",
+        "explanation": "Earth is the third planet from the sun."
+      }
+    ]
+  },
+  {
+    "date": "Monday, June 22, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "CINDERELLA",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 28,
+    "bronzeWinners": 287,
+    "totalWinners": 316,
+    "goldPayout": 3000.0,
+    "silverPayout": 89.28,
+    "bronzePayout": 6.96,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Tom Edith",
+    "wrongGuesses": "ARMADILLO, FOOTBALL, BASEBALL, BASKETBALL, SOCCER",
+    "bonus": {
+      "title": "Daily Polls",
+      "desc": "Daily polls are launching on the Best Guess Live app a week from today. Every day there will be new questions ranging from profound to tremendously silly, allowing players to predict the most popular answers and see results from previous polls."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "STEPS OUT OF LINE",
+        "correct": "1",
+        "guesses": "3,263 🥇",
+        "explanation": "Cinderella's stepmother and stepsisters stepped out of line."
+      },
+      {
+        "number": 2,
+        "text": "PUT ME IN COACH",
+        "correct": "28",
+        "guesses": "5,757 🥈",
+        "explanation": "Her fairy godmother puts her in a pumpkin coach."
+      },
+      {
+        "number": 3,
+        "text": "ROLLS UP INTO A BALL",
+        "correct": "287",
+        "guesses": "4,940 🥉",
+        "explanation": "She goes to a royal ball."
+      },
+      {
+        "number": 4,
+        "text": "BIG FAN OF “KISS” BY PRINCE",
+        "correct": "557",
+        "guesses": "2,276",
+        "explanation": "Prince Charming puts a shoe on her."
+      },
+      {
+        "number": 5,
+        "text": "CLASSIC DISNEY LASS WITH A SLIPPER MADE OF GLASS",
+        "correct": "7,958",
+        "guesses": "8,360",
+        "explanation": "Cinderella is a classic Disney character who leaves behind a glass slipper."
+      }
+    ]
   }
 ]
