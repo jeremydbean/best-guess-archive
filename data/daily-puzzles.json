@@ -959,5 +959,36 @@
         "explanation": "A genie in an enchanted bottle or lamp grants your wishes."
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 23, 2026",
+    "secretItem": "HARLEY DAVIDSON",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "TWO FOR THE ROAD",
+        "explanation": "A two-wheeled motorcycle built for the open road."
+      },
+      {
+        "clueNumber": 2,
+        "text": "HD BEFORE HIGH DEFINITION WAS A THING",
+        "explanation": "'HD' stood for Harley-Davidson long before high-def TV."
+      },
+      {
+        "clueNumber": 3,
+        "text": "FEEL THE ROAR OF THE BOAR",
+        "explanation": "A Harley is nicknamed a 'hog,' and its engine roars."
+      },
+      {
+        "clueNumber": 4,
+        "text": "ORANGE, WHITE & BLACK MADE IN THE RED, WHITE & BLUE",
+        "explanation": "Its orange/white/black logo, made in the USA."
+      },
+      {
+        "clueNumber": 5,
+        "text": "THE FIRST AND LAST NAMES IN THE MOTORCYCLE GAME",
+        "explanation": "Harley and Davidson, the names behind the iconic motorcycle brand."
+      }
+    ]
   }
 ]
