@@ -13541,5 +13541,119 @@
         "explanation": "Cinderella is a classic Disney character who leaves behind a glass slipper."
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 23, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "SWEAT",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 1,
+    "bronzeWinners": 78,
+    "totalWinners": 80,
+    "goldPayout": 3000.0,
+    "silverPayout": 2500.0,
+    "bronzePayout": 25.64,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Becky May",
+    "wrongGuesses": "BOARD, GUITAR HERO, BRICK, SOUR PATCH KIDS, WATERMELON",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BATTLE OF THE BANDS",
+        "correct": "1",
+        "guesses": "3,797 🥇",
+        "explanation": "Sweat bands fight sweat."
+      },
+      {
+        "number": 2,
+        "text": "INSIDE OUT",
+        "correct": "1",
+        "guesses": "3,390 🥈",
+        "explanation": "It starts inside your body and then comes out."
+      },
+      {
+        "number": 3,
+        "text": "ALMOST SWEET, BUT NOT SO SWEET",
+        "correct": "78",
+        "guesses": "3,540 🥉",
+        "explanation": "Sweat is only one letter different from sweet, but it's salty."
+      },
+      {
+        "number": 4,
+        "text": "YOU MIGHT BREAK ONE IN KARATE CLASS",
+        "correct": "710",
+        "guesses": "5,228",
+        "explanation": "You work up a sweat when doing karate."
+      },
+      {
+        "number": 5,
+        "text": "IN A ROOM WITHOUT FANS, IT'LL POUR FROM YOUR GLANDS",
+        "correct": "8,246",
+        "guesses": "8,596",
+        "explanation": "You sweat."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, June 23, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "JENNIFER LOPEZ",
+    "goldClue": 3,
+    "silverClue": 4,
+    "bronzeClue": 5,
+    "goldWinners": 35,
+    "silverWinners": 2299,
+    "bronzeWinners": 3845,
+    "totalWinners": 6179,
+    "goldPayout": 85.71,
+    "silverPayout": 1.08,
+    "bronzePayout": 0.52,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "J Folk, Harmonic time, J Mac",
+    "wrongGuesses": "SALAD, LETTUCE, BARBER, RANCH, CEO",
+    "clues": [
+      {
+        "number": 1,
+        "text": "TAKES A SHORTCUT",
+        "correct": "0",
+        "guesses": "4,650",
+        "explanation": "J.Lo is short for Jennifer Lopez."
+      },
+      {
+        "number": 2,
+        "text": "MAJORITY PARTNER IN A CO-BRANDING VENTURE",
+        "correct": "0",
+        "guesses": "3,737",
+        "explanation": "Jennifer was most of Bennifer."
+      },
+      {
+        "number": 3,
+        "text": "ENJOYS GREEN GODDESS DRESSING",
+        "correct": "35",
+        "guesses": "6,685 🥇",
+        "explanation": "She was a goddess who made a very green dress iconic at the Grammys."
+      },
+      {
+        "number": 4,
+        "text": "IF YOU HAD HER LOVE, IT WOULDN'T COST A THING",
+        "correct": "2,299",
+        "guesses": "4,106 🥈",
+        "explanation": "Her hit songs are “If You Had My Love” and “Love Don't Cost a Thing”."
+      },
+      {
+        "number": 5,
+        "text": "YOU KNOW HER FROM THE BLOCK AND SHE HAS SHOWBIZ ON LOCK",
+        "correct": "3,845",
+        "guesses": "4,712 🥉",
+        "explanation": "She's Jenny from the block."
+      }
+    ]
   }
 ]

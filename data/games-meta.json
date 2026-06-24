@@ -2992,6 +2992,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Tuesday, June 23, 2026",
+      "secretItem": "SWEAT",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 80,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Tuesday, June 23, 2026",
+      "secretItem": "JENNIFER LOPEZ",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 6179,
+      "clueCount": 5,
+      "goldClue": 3,
+      "silverClue": 4,
+      "bronzeClue": 5
     }
   ]
 }
