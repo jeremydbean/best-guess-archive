@@ -990,5 +990,36 @@
         "explanation": "Harley and Davidson, the names behind the iconic motorcycle brand."
       }
     ]
+  },
+  {
+    "date": "Wednesday, June 24, 2026",
+    "secretItem": "SOUP",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "ALPHABETICAL ORDER",
+        "explanation": "Alphabet soup is full of little letters."
+      },
+      {
+        "clueNumber": 2,
+        "text": "IN THE STOCK MARKET",
+        "explanation": "Soup is built on a stock (broth)."
+      },
+      {
+        "clueNumber": 3,
+        "text": "BEGINNER'S COURSE THAT'S A GOOD WARM-UP",
+        "explanation": "It's often the warm starter course of a meal."
+      },
+      {
+        "clueNumber": 4,
+        "text": "USED TO GETTING CANNED",
+        "explanation": "Soup is famously sold in cans."
+      },
+      {
+        "clueNumber": 5,
+        "text": "LIQUID DISH LOVED BY ALL, CHICKEN, PEA, OR MATZO BALL",
+        "explanation": "Chicken, pea, and matzo ball are all classic soups."
+      }
+    ]
   }
 ]
