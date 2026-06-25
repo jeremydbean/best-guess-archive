@@ -1021,5 +1021,36 @@
         "explanation": "Chicken, pea, and matzo ball are all classic soups."
       }
     ]
+  },
+  {
+    "date": "Thursday, June 25, 2026",
+    "secretItem": "THE BIG DIPPER",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "HERE'S THE SCOOP",
+        "explanation": "The Big Dipper is shaped like a scoop or ladle."
+      },
+      {
+        "clueNumber": 2,
+        "text": "CONNECT THE DOTS",
+        "explanation": "Connect the stars (the dots) to trace its shape."
+      },
+      {
+        "clueNumber": 3,
+        "text": "INVISIBLE IN BROAD DAYLIGHT",
+        "explanation": "Its stars can't be seen during the day."
+      },
+      {
+        "clueNumber": 4,
+        "text": "MAJOR STAR OF STARS",
+        "explanation": "It's part of the constellation Ursa Major."
+      },
+      {
+        "clueNumber": 5,
+        "text": "LADLE OF GREAT SIZE THAT SHINES IN THE NIGHT SKIES",
+        "explanation": "It looks like a giant ladle in the night sky."
+      }
+    ]
   }
 ]
