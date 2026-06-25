@@ -57104,5 +57104,155 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Wednesday, June 24, 2026",
+    "host": "Aisha Tyler",
+    "secretItems": [
+      "NIGHTMARE",
+      "BUTT DIAL"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "NIGHTMARE",
+        "host": "Aisha Tyler",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "I'M AFRAID I'M OUT",
+          "REASON TO CALL YOUR PARENTS",
+          "BEWARE THE DARK HORSE",
+          "IT'S ALL IN YOUR HEAD (AND ON ELM STREET)",
+          "A REALLY BAD DREAM THAT CAN MAKE YOU SCREAM"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "BUTT DIAL",
+        "host": "Aisha Tyler",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "YOU'RE NOT EVEN TRYING",
+          "ANSWER TO NO ONE",
+          "THE OTHER TUSH PUSH",
+          "THE BOOTY CALL NO ONE WANTS",
+          "WHEN YOUR REAR END ACCIDENTALLY PHONES A FRIEND"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Aisha Tyler",
+            "text": "Welcome to Best Guess Live."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Aisha Tyler",
+            "text": "Let's dive into our first puzzle of the night."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Aisha Tyler",
+            "text": "The correct answer we were looking for is NIGHTMARE."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “A REALLY BAD DREAM THAT CAN MAKE YOU SCREAM.” A nightmare is defined as a very distressing dream that can cause someone to scream. 2,164 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “IT'S ALL IN YOUR HEAD (AND ON ELM STREET).” A Nightmare on Elm Street is a famous movie franchise set inside dreams. 5,938 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “BEWARE THE DARK HORSE.” The word nightmare historically links back to a mythological goblin or dark horse of the night. 297 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “REASON TO CALL YOUR PARENTS.” Waking up from a scary nightmare is a classic reason a child calls for their parents. 48 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “I'M AFRAID I'M OUT.” A nightmare makes you feel afraid and want to get out of a bad dream. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 48 winners at $62.50 each. Silver (Clue 3): 297 winners at $8.41 each. Bronze (Clue 4): 5,938 winners at $0.33 each."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Aisha Tyler",
+            "text": "Let's move right along to round two."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Aisha Tyler",
+            "text": "The puzzle solution is BUTT DIAL."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “WHEN YOUR REAR END ACCIDENTALLY PHONES A FRIEND.” A butt dial happens when your rear end unintentionally places a phone call to someone. 5,280 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “THE BOOTY CALL NO ONE WANTS.” An inadvertent call from your back pocket is an unwanted type of booty call. 1,895 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “THE OTHER TUSH PUSH.” This phrase playfully references pushing phone buttons with your backside. 679 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “ANSWER TO NO ONE.” When you accidentally call someone this way, there is usually no one intentionally answering on your end. 12 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “YOU'RE NOT EVEN TRYING.” An accidental pocket call requires completely zero effort on your part. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1 winner at $3,000.00. Silver (Clue 2): 12 winners at $208.33 each. Bronze (Clue 3): 679 winners at $2.94 each."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Aisha Tyler",
+            "text": "Thanks for playing along with us tonight on Best Guess Live."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [MONEY, FREDDY KRUEGER, FREDDY KRUGER, SHARK TANK, KATY PERRY]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [DIARRHEA, VOICEMAIL, BREATHING, COLONOSCOPY, POOP]"
+          }
+        ]
+      }
+    ]
   }
 ]

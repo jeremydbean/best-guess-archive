@@ -3016,6 +3016,30 @@
       "goldClue": 3,
       "silverClue": 4,
       "bronzeClue": 5
+    },
+    {
+      "date": "Wednesday, June 24, 2026",
+      "secretItem": "NIGHTMARE",
+      "pot": 7500,
+      "host": "Aisha Tyler",
+      "format": "v2",
+      "totalWinners": 6283,
+      "clueCount": 5,
+      "goldClue": 2,
+      "silverClue": 3,
+      "bronzeClue": 4
+    },
+    {
+      "date": "Wednesday, June 24, 2026",
+      "secretItem": "BUTT DIAL",
+      "pot": 7500,
+      "host": "Aisha Tyler",
+      "format": "v2",
+      "totalWinners": 692,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
