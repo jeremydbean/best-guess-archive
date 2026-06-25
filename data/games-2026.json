@@ -13655,5 +13655,119 @@
         "explanation": "She's Jenny from the block."
       }
     ]
+  },
+  {
+    "date": "Wednesday, June 24, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Aisha Tyler",
+    "secretItem": "NIGHTMARE",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 48,
+    "silverWinners": 297,
+    "bronzeWinners": 5938,
+    "totalWinners": 6283,
+    "goldPayout": 62.5,
+    "silverPayout": 8.41,
+    "bronzePayout": 0.33,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "MONEY, FREDDY KRUEGER, FREDDY KRUGER, SHARK TANK, KATY PERRY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "I'M AFRAID I'M OUT",
+        "correct": "0",
+        "guesses": "4,137",
+        "explanation": "A nightmare makes you feel afraid and want to get out of a bad dream."
+      },
+      {
+        "number": 2,
+        "text": "REASON TO CALL YOUR PARENTS",
+        "correct": "48",
+        "guesses": "4,935 🥇",
+        "explanation": "Waking up from a scary nightmare is a classic reason a child calls for their parents."
+      },
+      {
+        "number": 3,
+        "text": "BEWARE THE DARK HORSE",
+        "correct": "297",
+        "guesses": "3,949 🥈",
+        "explanation": "The word nightmare historically links back to a mythological goblin or dark horse of the night."
+      },
+      {
+        "number": 4,
+        "text": "IT'S ALL IN YOUR HEAD (AND ON ELM STREET)",
+        "correct": "5,938",
+        "guesses": "8,794 🥉",
+        "explanation": "A Nightmare on Elm Street is a famous movie franchise set inside dreams."
+      },
+      {
+        "number": 5,
+        "text": "A REALLY BAD DREAM THAT CAN MAKE YOU SCREAM",
+        "correct": "2,164",
+        "guesses": "2,560",
+        "explanation": "A nightmare is defined as a very distressing dream that can cause someone to scream."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, June 24, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Aisha Tyler",
+    "secretItem": "BUTT DIAL",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 12,
+    "bronzeWinners": 679,
+    "totalWinners": 692,
+    "goldPayout": 3000.0,
+    "silverPayout": 208.33,
+    "bronzePayout": 2.94,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "DIARRHEA, VOICEMAIL, BREATHING, COLONOSCOPY, POOP",
+    "clues": [
+      {
+        "number": 1,
+        "text": "YOU'RE NOT EVEN TRYING",
+        "correct": "1",
+        "guesses": "2,221 🥇",
+        "explanation": "An accidental pocket call requires completely zero effort on your part."
+      },
+      {
+        "number": 2,
+        "text": "ANSWER TO NO ONE",
+        "correct": "12",
+        "guesses": "3,729 🥈",
+        "explanation": "When you accidentally call someone this way, there is usually no one intentionally answering on your end."
+      },
+      {
+        "number": 3,
+        "text": "THE OTHER TUSH PUSH",
+        "correct": "679",
+        "guesses": "4,458 🥉",
+        "explanation": "This phrase playfully references pushing phone buttons with your backside."
+      },
+      {
+        "number": 4,
+        "text": "THE BOOTY CALL NO ONE WANTS",
+        "correct": "1,895",
+        "guesses": "7,748",
+        "explanation": "An inadvertent call from your back pocket is an unwanted type of booty call."
+      },
+      {
+        "number": 5,
+        "text": "WHEN YOUR REAR END ACCIDENTALLY PHONES A FRIEND",
+        "correct": "5,280",
+        "guesses": "6,236",
+        "explanation": "A butt dial happens when your rear end unintentionally places a phone call to someone."
+      }
+    ]
   }
 ]
