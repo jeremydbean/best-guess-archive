@@ -1052,5 +1052,36 @@
         "explanation": "It looks like a giant ladle in the night sky."
       }
     ]
+  },
+  {
+    "date": "Friday, June 26, 2026",
+    "secretItem": "AIR FRESHENER",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "A ROTTEN COVER-UP",
+        "explanation": "It covers up rotten, bad smells."
+      },
+      {
+        "clueNumber": 2,
+        "text": "GREAT WHEN YOU'RE IN A FUNK",
+        "explanation": "It clears the air when there's a funky odor."
+      },
+      {
+        "clueNumber": 3,
+        "text": "KNOWN FOR HANGING OUT IN CARS",
+        "explanation": "The little tree ones hang from car mirrors."
+      },
+      {
+        "clueNumber": 4,
+        "text": "IT MAKES SCENTS",
+        "explanation": "A pun — it 'makes scents' (sense)."
+      },
+      {
+        "clueNumber": 5,
+        "text": "HAS THE ROOM SMELLING FINE, WHETHER FEBREZE OR PINE",
+        "explanation": "Keeps a room smelling nice, from Febreze to pine."
+      }
+    ]
   }
 ]
