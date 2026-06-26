@@ -13770,5 +13770,127 @@
         "explanation": "A butt dial happens when your rear end unintentionally places a phone call to someone."
       }
     ]
+  },
+  {
+    "date": "Thursday, June 25, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "ELEVATOR",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 5,
+    "silverWinners": 14,
+    "bronzeWinners": 562,
+    "totalWinners": 581,
+    "goldPayout": 600.0,
+    "silverPayout": 178.57,
+    "bronzePayout": 3.55,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Wise Guy 86, Alex Trebek 1, Mint Champ 810, Evil Chin",
+    "wrongGuesses": "TOILET, SLEEP, NEWSPAPER, BOOK, INSTAGRAM",
+    "bonus": {
+      "title": "Avatar: The Last Airbender",
+      "desc": "Season 2 of Avatar: The Last Airbender is dropping on Netflix today.<br><br>It's all about a young boy who has the fate of the world in his hands with everything depending on his ability to manipulate air, water, earth, and fire."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "FREE REFILLS DAILY",
+        "correct": "5",
+        "guesses": "3,450 🥇",
+        "explanation": "People frequently come in and out of elevators, and it normally does not cost anything."
+      },
+      {
+        "number": 2,
+        "text": "AN OPEN-AND-SHUT CASE",
+        "correct": "14",
+        "guesses": "4,726 🥈",
+        "explanation": "An elevator is a large carrying case for humans whose doors constantly open and close."
+      },
+      {
+        "number": 3,
+        "text": "YOU'RE ALWAYS CHANGING YOUR STORY!",
+        "correct": "562",
+        "guesses": "5,821 🥉",
+        "explanation": "Elevators move up and down from one story to another."
+      },
+      {
+        "number": 4,
+        "text": "MAY TAKE YOU FROM 12 TO 14 WITH NOTHING IN BETWEEN",
+        "correct": "2,422",
+        "guesses": "4,059",
+        "explanation": "Many buildings do not have a thirteenth floor."
+      },
+      {
+        "number": 5,
+        "text": "MECHANICAL PLATFORM WITH DOORS THAT STOPS AT ALL THE FLOORS",
+        "correct": "5,958",
+        "guesses": "6,153",
+        "explanation": "A rhyming definition — an elevator is a mechanical platform with doors that stops at every floor."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, June 25, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BIG BANG THEORY",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 21,
+    "silverWinners": 23,
+    "bronzeWinners": 1735,
+    "totalWinners": 1779,
+    "goldPayout": 142.85,
+    "silverPayout": 108.69,
+    "bronzePayout": 1.15,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Neely Oyster 171, J Mac 64",
+    "wrongGuesses": "DOCTOR, FACEBOOK, BEST BUY, GRADUATION, VAN WILDER",
+    "bonus": {
+      "title": "Avatar: The Last Airbender",
+      "desc": "Season 2 of Avatar: The Last Airbender is dropping on Netflix today.<br><br>It's all about a young boy who has the fate of the world in his hands with everything depending on his ability to manipulate air, water, earth, and fire."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "THE BEGINNING, BUT ALSO, NOT",
+        "correct": "21",
+        "guesses": "3,577 🥇",
+        "explanation": "The Big Bang was the start of the universe, but the show also has multiple prequel spin-offs."
+      },
+      {
+        "number": 2,
+        "text": "SPENT OVER A DECADE AT COLLEGE",
+        "correct": "23",
+        "guesses": "3,473 🥈",
+        "explanation": "The main characters worked at Caltech for the show's twelve-season run."
+      },
+      {
+        "number": 3,
+        "text": "GIANT, EXPLOSIVE, IDEA",
+        "correct": "1,735",
+        "guesses": "6,589 🥉",
+        "explanation": "The words giant, explosive, and idea are synonyms for big, bang, and theory."
+      },
+      {
+        "number": 4,
+        "text": "A GEEK SQUAD SITUATION",
+        "correct": "1,610",
+        "guesses": "4,780",
+        "explanation": "The characters are a group of geeks in a situation comedy."
+      },
+      {
+        "number": 5,
+        "text": "THIS SHOW WENT “KA-CHING-A” WHEN SHELDON SAID “BAZINGA!”",
+        "correct": "4,016",
+        "guesses": "5,057",
+        "explanation": "The show made a lot of money and Sheldon often said his catchphrase “Bazinga”."
+      }
+    ]
   }
 ]
