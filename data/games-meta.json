@@ -3064,6 +3064,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Friday, June 26, 2026",
+      "secretItem": "SURFBOARD",
+      "pot": 7500,
+      "host": "Corinne Foxx",
+      "format": "v2",
+      "totalWinners": 6440,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Friday, June 26, 2026",
+      "secretItem": "POPCORN",
+      "pot": 7500,
+      "host": "Corinne Foxx",
+      "format": "v2",
+      "totalWinners": 995,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }

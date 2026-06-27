@@ -13892,5 +13892,127 @@
         "explanation": "The show made a lot of money and Sheldon often said his catchphrase “Bazinga”."
       }
     ]
+  },
+  {
+    "date": "Friday, June 26, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Corinne Foxx",
+    "secretItem": "SURFBOARD",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 9,
+    "silverWinners": 120,
+    "bronzeWinners": 6311,
+    "totalWinners": 6440,
+    "goldPayout": 333.33,
+    "silverPayout": 20.83,
+    "bronzePayout": 0.31,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Luna Fish 9, The Cheat 89",
+    "wrongGuesses": "DOG, NATIONAL ANTHEM, BIKINI, SERVICE DOG, STATUE OF LIBERTY",
+    "bonus": {
+      "title": "Little Brother",
+      "desc": "A brand new R-rated comedy starring John Cena, Eric Andre, Michelle Monaghan, and Christopher Meloni.<br><br>The film is centered around Eric making John's life miserable in hilarious ways."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "PART OF A LONG-STANDING TRADITION",
+        "correct": "9",
+        "guesses": "4,422 🥇",
+        "explanation": "They have been around for hundreds of years and you stand on them."
+      },
+      {
+        "number": 2,
+        "text": "SUPPORTIVE COMPANION WITH A LEASH",
+        "correct": "120",
+        "guesses": "4,227 🥈",
+        "explanation": "They support you in the water and connect to your ankle via a leash."
+      },
+      {
+        "number": 3,
+        "text": "WAX TO GET BEACH-READY",
+        "correct": "6,311",
+        "guesses": "8,229 🥉",
+        "explanation": "Before using a surfboard you usually wax it."
+      },
+      {
+        "number": 4,
+        "text": "WAVE HELLO, HOPEFULLY",
+        "correct": "2,740",
+        "guesses": "3,749",
+        "explanation": "You hope you are going to be saying hi to some sweet waves."
+      },
+      {
+        "number": 5,
+        "text": "PLANK YOU GET UP ON AGAIN & AGAIN WHEN YOU WANT TO HANG TEN",
+        "correct": "1,979",
+        "guesses": "2,456",
+        "explanation": "Hang ten is a classic surfing lingo."
+      }
+    ]
+  },
+  {
+    "date": "Friday, June 26, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Corinne Foxx",
+    "secretItem": "POPCORN",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 7,
+    "silverWinners": 299,
+    "bronzeWinners": 689,
+    "totalWinners": 995,
+    "goldPayout": 428.57,
+    "silverPayout": 8.36,
+    "bronzePayout": 2.9,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "SMILE, CORN, TIME, CORN MAZE, CORN ON THE COB",
+    "bonus": {
+      "title": "Little Brother",
+      "desc": "A brand new R-rated comedy starring John Cena, Eric Andre, Michelle Monaghan, and Christopher Meloni.<br><br>The film is centered around Eric making John's life miserable in hilarious ways."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "THERE'S NO GOING BACK",
+        "correct": "7",
+        "guesses": "3,640 🥇",
+        "explanation": "Once it pops, you cannot un-pop it."
+      },
+      {
+        "number": 2,
+        "text": "FROM EAR TO EAR",
+        "correct": "299",
+        "guesses": "5,654 🥈",
+        "explanation": "It comes from an ear of corn and you hear it pop from ear to ear."
+      },
+      {
+        "number": 3,
+        "text": "FOR HOT TUB LOVERS",
+        "correct": "689",
+        "guesses": "4,051 🥉",
+        "explanation": "Everyone loves a hot tub full of popcorn."
+      },
+      {
+        "number": 4,
+        "text": "GOES TO PIECES AND ROLLS IN THE AISLES AT THE MOVIES",
+        "correct": "6,130",
+        "guesses": "6,900",
+        "explanation": "This is just a couple of puns about the iconic movie snack."
+      },
+      {
+        "number": 5,
+        "text": "BUTTERY SALTY KERNELS WHOSE INSIDES ARE NOW EXTERNALS",
+        "correct": "3,522",
+        "guesses": "3,648",
+        "explanation": "Those corn kernels have popped and they are delicious."
+      }
+    ]
   }
 ]
