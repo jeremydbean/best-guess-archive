@@ -2761,11 +2761,16 @@ class App {
   }
 
   copyGeminiPrompt(btn) {
-    const p = `This is your instruction set for an upcoming task. Do not process anything yet. Reply only with "Ready — send the transcript and screenshots." and wait for my next message, which will contain the raw transcript and screenshots to process.
+    const p = `This is your instruction set for an upcoming task. Do not process anything yet. Reply only with "Ready — send the transcript and screenshots." and wait for my next message, which will contain the transcript (either pasted text or an attached audio file) plus the screenshots to process.
 
 ---
 
-You are processing a Best Guess Live episode (Netflix game show, two rounds). I will provide a raw transcript and screenshots of the on-screen clue cards and popular wrong guesses screens in my next message.
+You are processing a Best Guess Live episode (Netflix game show, two rounds). In my next message I will provide the episode transcript and screenshots of the on-screen clue cards, results screens, and popular wrong guesses screens.
+
+**Sources — read carefully:**
+- The transcript may arrive as pasted text OR as an attached audio file (e.g. an .mp3 recorded on a Plaud device). If an audio file is attached, transcribe it yourself and treat that audio as the episode transcript — the audio IS the transcript. Do not wait for a text transcript if audio is provided.
+- Always use the screenshots (never the audio) as the source of truth for: each clue card's exact wording and spelling, the correct/guess counts, the payout tiers, and the popular wrong guesses. The audio only supplies spoken dialogue and the host's clue explanations.
+- If the audio and a screenshot ever disagree on a clue's wording or spelling, the screenshot wins.
 
 Use today's date for the \`date\` field unless I explicitly specify a different date in my follow-up message.
 
