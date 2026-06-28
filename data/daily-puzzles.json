@@ -1114,5 +1114,36 @@
         "explanation": "A red-and-black beetle said to bring good luck."
       }
     ]
+  },
+  {
+    "date": "Sunday, June 28, 2026",
+    "secretItem": "IKEA",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "HEAVILY ACCENTED",
+        "explanation": "The Swedish brand and its accented (å/ö) product names."
+      },
+      {
+        "clueNumber": 2,
+        "text": "THE WHOLE THING'S STAGED",
+        "explanation": "Its showrooms are fully staged room setups."
+      },
+      {
+        "clueNumber": 3,
+        "text": "MANUAL LABOR, MANUAL REQUIRED",
+        "explanation": "You assemble the flat-pack furniture yourself from a manual."
+      },
+      {
+        "clueNumber": 4,
+        "text": "GIVES SHOPPERS A CASE OF STOCK HOME SYNDROME",
+        "explanation": "A pun on Stockholm syndrome — IKEA is from Stockholm, Sweden."
+      },
+      {
+        "clueNumber": 5,
+        "text": "IKONIC STORE FOR CHEAP DECOR & MEATBALLS GALORE",
+        "explanation": "The iconic Swedish store known for cheap decor and meatballs."
+      }
+    ]
   }
 ]
