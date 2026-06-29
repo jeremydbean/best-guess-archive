@@ -4,6 +4,7 @@ Last updated: 2026-06-11 (session end)
 
 ## Most Recent Changes (2026-06-11)
 
+- **Daily puzzle added — Monday, June 29, 2026: DOORBELL**: Appended to `data/daily-puzzles.json` (now 38 entries). Clues: NOT PART OF A RAP SESSION / POPULAR ENTRANCE MUSIC / HAS A NICE RING TO IT / DON'T KNOCK UNTIL YOU'VE TRIED IT / GOES DING-DONG WHEN COMPANY COMES ALONG. `npm run audit` passes.
 - **Daily puzzle added — Sunday, June 28, 2026: IKEA**: Appended to `data/daily-puzzles.json` (now 37 entries). Clues: HEAVILY ACCENTED / THE WHOLE THING'S STAGED / MANUAL LABOR, MANUAL REQUIRED / GIVES SHOPPERS A CASE OF STOCK HOME SYNDROME / IKONIC STORE FOR CHEAP DECOR & MEATBALLS GALORE. `npm run audit` passes.
 - **Daily puzzle added — Saturday, June 27, 2026: LADYBUG**: Appended to `data/daily-puzzles.json` (now 36 entries). Clues: HARD SHELL, SOFT LANDING / SPOTTED WHILE FLYING / GAGA PLUS ICONIC VW EQUALS.... / HAS A FEMININE NAME, BUT IT REARRANGES TO "BALD GUY" / BEETLE THAT'S BLACK & RED AND BRINGS GOOD LUCK, IT'S SAID. `npm run audit` passes.
 - **SURFBOARD (June 26) details note**: Added `adminNote` to the SURFBOARD game — `"Surfing" was also accepted as a correct answer for this puzzle.` — rendering as the "Note" box in the Details modal (same pattern as the BUTT DIAL "pocket dial" note).

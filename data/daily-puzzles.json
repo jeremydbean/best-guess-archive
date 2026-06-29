@@ -1145,5 +1145,36 @@
         "explanation": "The iconic Swedish store known for cheap decor and meatballs."
       }
     ]
+  },
+  {
+    "date": "Monday, June 29, 2026",
+    "secretItem": "DOORBELL",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "NOT PART OF A RAP SESSION",
+        "explanation": "To 'rap' is to knock — a doorbell is the alternative to knocking."
+      },
+      {
+        "clueNumber": 2,
+        "text": "POPULAR ENTRANCE MUSIC",
+        "explanation": "It chimes a tune at the entrance when someone arrives."
+      },
+      {
+        "clueNumber": 3,
+        "text": "HAS A NICE RING TO IT",
+        "explanation": "It literally rings."
+      },
+      {
+        "clueNumber": 4,
+        "text": "DON'T KNOCK UNTIL YOU'VE TRIED IT",
+        "explanation": "Ring it instead of knocking — 'don't knock it till you try it.'"
+      },
+      {
+        "clueNumber": 5,
+        "text": "GOES DING-DONG WHEN COMPANY COMES ALONG",
+        "explanation": "The classic ding-dong chime when guests arrive."
+      }
+    ]
   }
 ]
