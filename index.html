@@ -2761,14 +2761,21 @@ class App {
   }
 
   copyGeminiPrompt(btn) {
-    const p = `This is your instruction set for an upcoming task. Do not process anything yet. Reply only with "Ready — send the transcript and screenshots." and wait for my next message, which will contain the transcript (either pasted text or an attached audio file) plus the screenshots to process.
+    const p = `This is your instruction set for processing a Best Guess Live episode (Netflix game show, two rounds).
+
+**Before anything else, check what is attached to THIS message:**
+- If this message already has an audio file (e.g. an .mp3 from a Plaud device) and/or screenshots attached, DO NOT reply "Ready" and DO NOT wait. Begin processing immediately using the instructions below, and your very first reply must be the finished JSON object — nothing else.
+- Only if NOTHING is attached to this message: reply with exactly "Ready — send the audio and screenshots." and wait for my next message. That message will contain the episode audio (or pasted transcript text) plus the screenshots. As soon as it arrives, process it immediately — do not acknowledge it, do not ask again, just output the JSON.
+
+In other words: never ask for a transcript or screenshots that are already attached, and never stop at "Ready" once material has been provided.
 
 ---
 
-You are processing a Best Guess Live episode (Netflix game show, two rounds). In my next message I will provide the episode transcript and screenshots of the on-screen clue cards, results screens, and popular wrong guesses screens.
+I will provide the episode audio (or transcript text) plus screenshots of the on-screen clue cards, results screens, and popular wrong guesses screens.
 
 **Sources — read carefully:**
-- The transcript may arrive as pasted text OR as an attached audio file (e.g. an .mp3 recorded on a Plaud device). If an audio file is attached, transcribe it yourself and treat that audio as the episode transcript — the audio IS the transcript. Do not wait for a text transcript if audio is provided.
+- The transcript source may arrive as an attached audio file (e.g. an .mp3 from a Plaud device) OR as pasted text. If an audio file is attached, transcribe the ENTIRE recording yourself, word for word, from the first second to the last — that audio IS the transcript. Do not wait for a separate text transcript, and do not ask me to paste one.
+- CRITICAL — transcribe the audio IN FULL. Do not summarize, condense, paraphrase, skip, or truncate any part of it. Capture every sentence the host actually says: the intro banter, the rules read-out, each clue read, the host's per-clue commentary, the reactions to individual player guesses (by username), every reveal, the between-rounds promo, and the outro. A short, partial, or "highlights" transcript is a failure — if the recording runs several minutes, the transcript must contain the host's words for that entire runtime. Do not invent or fill in words you cannot hear; transcribe only what is actually said, but transcribe all of it.
 - Always use the screenshots (never the audio) as the source of truth for: each clue card's exact wording and spelling, the correct/guess counts, the payout tiers, and the popular wrong guesses. The audio only supplies spoken dialogue and the host's clue explanations.
 - If the audio and a screenshot ever disagree on a clue's wording or spelling, the screenshot wins.
 
