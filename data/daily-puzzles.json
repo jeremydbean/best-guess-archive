@@ -1176,5 +1176,36 @@
         "explanation": "The classic ding-dong chime when guests arrive."
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 30, 2026",
+    "secretItem": "SUNSET",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "A MAJOR DOWNER",
+        "explanation": "The sun goes down at a sunset — a literal 'downer.'"
+      },
+      {
+        "clueNumber": 2,
+        "text": "HIGH-PROFILE VANISHING ACT",
+        "explanation": "The sun, the highest-profile thing in the sky, disappears below the horizon."
+      },
+      {
+        "clueNumber": 3,
+        "text": "POPULAR TWILIGHT PREQUEL",
+        "explanation": "A sunset happens right before twilight, leading into it."
+      },
+      {
+        "clueNumber": 4,
+        "text": "A BIG STAR'S FAREWELL TOUR",
+        "explanation": "The sun is a giant star making its nightly farewell."
+      },
+      {
+        "clueNumber": 5,
+        "text": "REDS & ORANGES IN THE SKIES JUST BEFORE THE DAYLIGHT DIES",
+        "explanation": "The sky fills with reds and oranges as the sun sets and daylight fades."
+      }
+    ]
   }
 ]
