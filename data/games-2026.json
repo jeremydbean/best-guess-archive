@@ -14015,5 +14015,127 @@
         "explanation": "Those corn kernels have popped and they are delicious."
       }
     ]
+  },
+  {
+    "date": "Monday, June 29, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "FLAMINGO",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 1,
+    "silverWinners": 605,
+    "bronzeWinners": 3633,
+    "totalWinners": 4239,
+    "goldPayout": 3000.0,
+    "silverPayout": 4.13,
+    "bronzePayout": 0.55,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "FalconFever",
+    "wrongGuesses": "LION, TIGER, JOHNNY CASH, PINK PANTHER, CHEETAH",
+    "bonus": {
+      "title": "Daily Polls",
+      "desc": "Every day — even on the weekends — we are putting three poll questions on the app. Some are funny, some are insightful, and some will let you decide different things that will happen on the show.<br><br>Plus you'll be able to predict what you think the most popular answers will be and see the results from the previous polls. You'll have 24 hours to answer each poll and they'll be rolling out at different times throughout the day."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "ONE AT A TIME",
+        "correct": "0",
+        "guesses": "2,867",
+        "explanation": "Flamingos stand on one leg at a time."
+      },
+      {
+        "number": 2,
+        "text": "RING OF FIRE",
+        "correct": "1",
+        "guesses": "3,890 🥇",
+        "explanation": "A ring of fire is a flaming O."
+      },
+      {
+        "number": 3,
+        "text": "ANIMAL THAT'S SIMILAR TO A PARTICULAR PANTHER",
+        "correct": "605",
+        "guesses": "5,758 🥈",
+        "explanation": "It refers to the Pink Panther."
+      },
+      {
+        "number": 4,
+        "text": "DECOR FOR YOUR HOME LIKE A FLORIDIAN GNOME",
+        "correct": "3,633",
+        "guesses": "5,071 🥉",
+        "explanation": "A pink flamingo is a classic tacky lawn ornament."
+      },
+      {
+        "number": 5,
+        "text": "BIRD WHO WEARS PINK SHADES AND WADES IN THE EVERGLADES",
+        "correct": "5,123",
+        "guesses": "5,583",
+        "explanation": "Flamingos are pink birds that wade in the water."
+      }
+    ]
+  },
+  {
+    "date": "Monday, June 29, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MARIO",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 1223,
+    "silverWinners": 2907,
+    "bronzeWinners": 2599,
+    "totalWinners": 6729,
+    "goldPayout": 2.45,
+    "silverPayout": 0.85,
+    "bronzePayout": 0.76,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "HULK, MR POTATO HEAD, WRECK IT RALPH, PUZZLE, MARIO BROTHERS",
+    "bonus": {
+      "title": "Daily Polls",
+      "desc": "Every day — even on the weekends — we are putting three poll questions on the app. Some are funny, some are insightful, and some will let you decide different things that will happen on the show.<br><br>Plus you'll be able to predict what you think the most popular answers will be and see the results from the previous polls. You'll have 24 hours to answer each poll and they'll be rolling out at different times throughout the day."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "ALL MIXED UP...OR AM I?",
+        "correct": "0",
+        "guesses": "4,756",
+        "explanation": "The letters in Mario mix up to spell 'or am I.'"
+      },
+      {
+        "number": 2,
+        "text": "OVERALL GOOD GUY",
+        "correct": "1,223",
+        "guesses": "4,796 🥇",
+        "explanation": "Mario is a good guy who wears iconic overalls."
+      },
+      {
+        "number": 3,
+        "text": "A SMASH FROM THE JUMP",
+        "correct": "2,907",
+        "guesses": "7,413 🥈",
+        "explanation": "Mario smashes bricks with his fist when he jumps."
+      },
+      {
+        "number": 4,
+        "text": "PIPE DOWN BRO",
+        "correct": "2,599",
+        "guesses": "4,683 🥉",
+        "explanation": "He is one of the Super Mario Brothers who goes down pipes."
+      },
+      {
+        "number": 5,
+        "text": "TO SAVE-A PRINCESS PEACH, BOWSER'S CASTLE HE MUST-A REACH",
+        "correct": "2,511",
+        "guesses": "3,000",
+        "explanation": "Mario fights Bowser to save Princess Peach."
+      }
+    ]
   }
 ]

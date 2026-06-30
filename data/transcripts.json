@@ -59322,5 +59322,303 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Monday, June 29, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "FLAMINGO",
+      "MARIO"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "FLAMINGO",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "ONE AT A TIME",
+          "RING OF FIRE",
+          "ANIMAL THAT'S SIMILAR TO A PARTICULAR PANTHER",
+          "DECOR FOR YOUR HOME LIKE A FLORIDIAN GNOME",
+          "BIRD WHO WEARS PINK SHADES AND WADES IN THE EVERGLADES"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "MARIO",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "ALL MIXED UP...OR AM I?",
+          "OVERALL GOOD GUY",
+          "A SMASH FROM THE JUMP",
+          "PIPE DOWN BRO",
+          "TO SAVE-A PRINCESS PEACH, BOWSER'S CASTLE HE MUST-A REACH"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live, how's it going, hello!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm your host Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Happy Monday everybody."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The 4th of July is coming and the World Cup is on."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's win some money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round 1, $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One at a time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ring of fire."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Animal that's similar to a particular panther."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Decor for your home like a Floridian gnome."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bird who wears pink shades and wades in the Everglades."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was a FLAMINGO!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues fit to find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “BIRD WHO WEARS PINK SHADES AND WADES IN THE EVERGLADES.” Flamingos are pink birds that wade in the water. 5,123 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “DECOR FOR YOUR HOME LIKE A FLORIDIAN GNOME.” A pink flamingo is a classic tacky lawn ornament. 3,633 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “ANIMAL THAT'S SIMILAR TO A PARTICULAR PANTHER.” It refers to the Pink Panther. 605 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “RING OF FIRE.” A ring of fire is a flaming O. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “ONE AT A TIME.” Flamingos stand on one leg at a time. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 1 winner at $3,000.00. Silver (Clue 3): 605 winners at $4.13 each. Bronze (Clue 4): 3,633 winners at $0.55 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations FalconFever!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Before we start round two though it's time for a very big announcement."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Daily polls hit the app today."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Every day even on the weekends we are putting three poll questions on the app."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Some are funny, some are insightful, and some will let you decide different things that will happen on the show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Plus you'll be able to predict what you think the most popular answers will be and see the results from the previous polls."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You'll have 24 hours to answer each poll and they'll be rolling out at different times throughout the day."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All mixed up...or am I?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Overall good guy."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A smash from the jump."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Pipe down bro."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "To save-a Princess Peach, Bowser's castle he must-a reach."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was MARIO!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now the question is who got it right on what clue?"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “TO SAVE-A PRINCESS PEACH, BOWSER'S CASTLE HE MUST-A REACH.” Mario fights Bowser to save Princess Peach. 2,511 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “PIPE DOWN BRO.” He is one of the Super Mario Brothers who goes down pipes. 2,599 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “A SMASH FROM THE JUMP.” Mario smashes bricks with his fist when he jumps. 2,907 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “OVERALL GOOD GUY.” Mario is a good guy who wears iconic overalls. 1,223 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “ALL MIXED UP...OR AM I?” The letters in Mario mix up to spell 'or am I.' 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 1,223 winners at $2.45 each. Silver (Clue 3): 2,907 winners at $0.85 each. Bronze (Clue 4): 2,599 winners at $0.76 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations everyone!"
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Thanks for playing Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We will see you tomorrow."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [LION, TIGER, JOHNNY CASH, PINK PANTHER, CHEETAH]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [HULK, MR POTATO HEAD, WRECK IT RALPH, PUZZLE, MARIO BROTHERS]"
+          }
+        ]
+      }
+    ]
   }
 ]
