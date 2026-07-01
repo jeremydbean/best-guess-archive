@@ -59888,5 +59888,203 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 30, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "STOP SIGN",
+      "STANLEY CUP"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "STOP SIGN",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "NO ADVANCE NOTICE",
+          "FEATURING ONE DIRECTION",
+          "WORD ON THE STREET",
+          "LIGHT ALTERNATIVE FOR WHEN YOU'RE ON THE GO",
+          "RED OCTAGON ON A POLE? HIT THE BRAKES! SLOW YOUR ROLL!"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "STANLEY CUP",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "DUAL CITIZENSHIP",
+          "FAMOUS COLDPLAY RECORD",
+          "FANCY TREASURE HIDDEN IN PUNY CASTLE",
+          "COVETED BY BOTH SENATORS AND KINGS",
+          "THE GOAL IS NOT TO FAIL AT WINNING HOCKEY'S HOLY GRAIL"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "[Full transcript pending — to be added from the June 30 episode audio.]"
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round 1, $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "NO ADVANCE NOTICE."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "FEATURING ONE DIRECTION."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "WORD ON THE STREET."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "LIGHT ALTERNATIVE FOR WHEN YOU'RE ON THE GO."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "RED OCTAGON ON A POLE? HIT THE BRAKES! SLOW YOUR ROLL!."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was a STOP SIGN!"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “RED OCTAGON ON A POLE? HIT THE BRAKES! SLOW YOUR ROLL!” A stop sign is a red octagon on a pole that makes you brake. 4,048 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “LIGHT ALTERNATIVE FOR WHEN YOU'RE ON THE GO.” A stop sign is the alternative to a traffic light at an intersection. 1,197 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “WORD ON THE STREET.” A stop sign is a single word posted right on the street. 1,669 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “FEATURING ONE DIRECTION.” At a stop, traffic takes turns proceeding one direction at a time. 413 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “NO ADVANCE NOTICE.” A stop sign orders you to halt rather than advance. 314 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 314 winners at $9.55 each. Silver (Clue 2): 413 winners at $6.05 each. Bronze (Clue 3): 1,669 winners at $1.19 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "[Full transcript pending — to be added from the June 30 episode audio.]"
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round 2, $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "DUAL CITIZENSHIP."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "FAMOUS COLDPLAY RECORD."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "FANCY TREASURE HIDDEN IN PUNY CASTLE."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "COVETED BY BOTH SENATORS AND KINGS."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "THE GOAL IS NOT TO FAIL AT WINNING HOCKEY'S HOLY GRAIL."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was the STANLEY CUP!"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “THE GOAL IS NOT TO FAIL AT WINNING HOCKEY'S HOLY GRAIL.” The Stanley Cup is hockey's ultimate prize — its holy grail. 5,147 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “COVETED BY BOTH SENATORS AND KINGS.” The Senators and the Kings are both NHL teams chasing the Cup. 522 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “FANCY TREASURE HIDDEN IN PUNY CASTLE.” The letters of 'puny castle' rearrange to spell Stanley Cup. 74 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “FAMOUS COLDPLAY RECORD.” Hockey is 'cold play' on the ice, and the Cup is its top record. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “DUAL CITIZENSHIP.” The Cup is contested by NHL teams in both the U.S. and Canada. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 3): 74 winners at $40.54 each. Silver (Clue 4): 522 winners at $4.78 each. Bronze (Clue 5): 5,147 winners at $0.38 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "[Full transcript pending — to be added from the June 30 episode audio.]"
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "[Full transcript pending — to be added from the June 30 episode audio.]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [MONOPOLY, ONE WAY, YIELD, STOP LIGHT, GREEN LIGHT]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [CROWN, GOLD, PEARL, PUCK, VIVA LA VIDA]"
+          }
+        ]
+      }
+    ]
   }
 ]

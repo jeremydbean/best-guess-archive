@@ -3112,6 +3112,30 @@
       "goldClue": 2,
       "silverClue": 3,
       "bronzeClue": 4
+    },
+    {
+      "date": "Tuesday, June 30, 2026",
+      "secretItem": "STOP SIGN",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 2396,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Tuesday, June 30, 2026",
+      "secretItem": "STANLEY CUP",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 5743,
+      "clueCount": 5,
+      "goldClue": 3,
+      "silverClue": 4,
+      "bronzeClue": 5
     }
   ]
 }
