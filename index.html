@@ -1663,7 +1663,7 @@ document.addEventListener('focusout', function(e) {
 
 <!-- POLLS -->
 <template id="view-polls">
-<div class="fade-in space-y-6 pb-20">
+<div class="fade-in space-y-8 pb-20">
   <style>
     .poll-search-wrap { width: 100%; max-width: 32rem; }
     #polls-search { color: #fff; }
@@ -1698,7 +1698,7 @@ document.addEventListener('focusout', function(e) {
       overflow: hidden;
       display: flex;
       align-items: center;
-      margin: 0.4rem 0;
+      margin: 0.55rem 0;
       box-sizing: border-box;
     }
     .poll-option-fill {
@@ -1769,7 +1769,7 @@ document.addEventListener('focusout', function(e) {
     <div id="polls-category-chips" class="flex flex-wrap gap-2"></div>
   </div>
 
-  <div id="polls-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+  <div id="polls-grid" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
     <div class="text-slate-400 col-span-full">Loading polls...</div>
   </div>
 </div>
@@ -5313,12 +5313,12 @@ Rules:
         <span class="poll-option-label">${hl(o.text)}</span>
         <span class="poll-option-pct">${o.pct.toFixed(1)}%</span>
       </div>`).join('');
-    return `<div class="poll-card glass-panel rounded-xl border border-slate-700/60 p-5">
-      <div class="flex items-start justify-between gap-2 mb-2">
+    return `<div class="poll-card glass-panel rounded-xl border border-slate-700/60 p-6">
+      <div class="flex items-start justify-between gap-3 mb-3">
         <span class="text-[10px] uppercase tracking-widest text-purple-300 font-bold">${hl(p.category || 'Uncategorized')}</span>
         <span class="text-[10px] text-slate-500 shrink-0">${esc(p.date || '')}</span>
       </div>
-      <h3 class="poll-question text-white font-bold text-base mb-1 leading-snug">${hl(p.question)}</h3>
+      <h3 class="poll-question text-white font-bold text-base mb-4 leading-snug">${hl(p.question)}</h3>
       <div>${optionsHtml}</div>
     </div>`;
   }
