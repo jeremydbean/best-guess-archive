@@ -1759,17 +1759,22 @@ document.addEventListener('focusout', function(e) {
     </div>
   </div>
 
-  <div id="polls-trends" class="grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
+  <div class="glass-panel p-6 rounded-xl">
+    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+      <span class="material-symbols-outlined text-yellow-400">emoji_events</span> Trends
+    </h3>
+    <div id="polls-trends" class="grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
+  </div>
 
-  <div class="glass-panel rounded-xl border border-slate-700/60 p-4">
-    <div class="flex items-center justify-between mb-3">
-      <span class="text-xs uppercase tracking-widest text-slate-400 font-bold">Poll Topics</span>
-      <span id="polls-count" class="text-xs text-purple-300">Loading...</span>
-    </div>
+  <div class="glass-panel p-6 rounded-xl">
+    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+      <span class="material-symbols-outlined text-purple-400">sell</span> Poll Topics
+      <span id="polls-count" class="text-xs font-normal text-purple-300 normal-case tracking-normal ml-auto">Loading...</span>
+    </h3>
     <div id="polls-category-chips" class="flex flex-wrap gap-2"></div>
   </div>
 
-  <div id="polls-grid" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+  <div id="polls-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <div class="text-slate-400 col-span-full">Loading polls...</div>
   </div>
 </div>
@@ -5285,7 +5290,7 @@ Rules:
           mostDecisive ? { icon: 'trending_up', color: 'text-green-400', label: 'Most Decisive', val: `${mostDecisive.top.pct.toFixed(1)}%`, sub: `"${mostDecisive.top.text}" — ${mostDecisive.poll.question}` } : null,
           closestRace ? { icon: 'balance', color: 'text-amber-400', label: 'Closest Race', val: `${closestRace.margin.toFixed(1)}pt gap`, sub: closestRace.poll.question } : null,
         ].filter(Boolean);
-        nodes.trends.innerHTML = cards.map(c => `<div class="glass-panel p-4 rounded-xl border border-slate-700/30">
+        nodes.trends.innerHTML = cards.map(c => `<div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/30">
           <div class="flex items-center gap-2 mb-1">
             <span class="material-symbols-outlined ${c.color}" style="font-size:18px">${esc(c.icon)}</span>
             <span class="text-xs text-slate-500 uppercase tracking-widest">${esc(c.label)}</span>
