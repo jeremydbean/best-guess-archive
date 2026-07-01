@@ -57107,7 +57107,7 @@
   },
   {
     "date": "Wednesday, June 24, 2026",
-    "host": "Aisha Tyler",
+    "host": "Corinne Foxx",
     "secretItems": [
       "NIGHTMARE",
       "BUTT DIAL"
@@ -57116,7 +57116,7 @@
       {
         "round": 1,
         "secretItem": "NIGHTMARE",
-        "host": "Aisha Tyler",
+        "host": "Corinne Foxx",
         "pot": 7500,
         "format": "v2",
         "clues": [
@@ -57130,7 +57130,7 @@
       {
         "round": 2,
         "secretItem": "BUTT DIAL",
-        "host": "Aisha Tyler",
+        "host": "Corinne Foxx",
         "pot": 7500,
         "format": "v2",
         "clues": [
@@ -57147,8 +57147,92 @@
         "tag": "Intro",
         "lines": [
           {
-            "speaker": "Aisha Tyler",
-            "text": "Welcome to Best Guess Live."
+            "speaker": null,
+            "text": "Mic check: “Meep meep up, come on, we're going.”"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Welcome to Best Guess Live! I'm your host, Karen Fox — wow."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Thank you. Hunter and Howie are in training for their three-legged full-contact miniature golf tournament, so I'm taking over."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And so far they're the only people in the tournament, but that hasn't stopped them from going for the glory. So you can do it, fellas, give it up for them."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "No, seriously, I love being on this set, everyone is really nice, but it is weird — it's like everyone has clues."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "When I asked what was for lunch in the cafeteria, the chef said, “This round Italian treat is made of bread, sauce, cheese, and meat.”"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And I guessed spaghetti and meatballs, but it was actually pizza, so they didn't give me any lunch."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "But they said, “You got to be right if you want a bite.”"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And then I said, “If you don't give me a slice, I'll stop being nice.”"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And that's when I realized I have truly become one of the Best Guess Live crew — come on up!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh my gosh, thank you. I never got the pizza though, but luckily I have some mints in my purse, so I have enough strength to read the rules."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Each episode of Best Guess Live has two rounds. Each round has one puzzle. Each puzzle has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Before each round, we're going to load up our crystal ball with a secret item, and it could be anything."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Then I will give you five clues, and remember, the clues are like riddles, they're meant to make you think."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "After each clue you'll get 20 seconds to submit an answer, but you only get one best guess per round — not one per clue, one per round."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "So make sure you are confident before you lock it in, and it has to be the exact answer — we don't accept typos."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Everyone that locks in the correct answer on the earliest clue will split the gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Everyone that locks in the correct answer on the second earliest clue will split the silver pot of $2,500."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And everyone that gets it on the third earliest clue will split the bronze pot of $2,000."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, enough talk, let's win some money! Round one is worth $7,500, and let's load up the crystal ball."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay you guys, what is in that crystal ball?"
           }
         ]
       },
@@ -57156,8 +57240,100 @@
         "tag": "Round 1",
         "lines": [
           {
-            "speaker": "Aisha Tyler",
-            "text": "Let's dive into our first puzzle of the night."
+            "speaker": "Corinne Foxx",
+            "text": "Okay, here is your first clue. Clue number one: I'm afraid I'm out. 20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "There are 20,000 of you guys playing right now, and remember, they have not told me what the answer is — I'm just as clueless, or clue-one-less, as you."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "5 seconds left to lock in your answer if you feel confident. And time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "NiftyGrip55 said fly ball — I'm afraid I'm out, oh yeah, out of bounds, right, okay I get it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "ChunkySocks said shark — oh yeah, no, I'm afraid I'm out, yeah, I get it too."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here's your second clue. Clue number two: Reason to call your parents. 20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, I'm afraid I'm out. Clue number two, reason to call your parents."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right you guys, you have just about 10 seconds left. I can think of a lot of reasons I'd call my parents — maybe if there were sharks in the water, yeah, I'd call my parents."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, and time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Como93 said broke — oh yeah, you're calling your parents."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Someone said Itsy Bitsy Spider, and another said in jail — oh, these are great reasons to call your parents, I love that."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here's your third clue. Clue number three: Beware the dark horse. 20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, I'm afraid I'm out. Clue number two, reason to call your parents. Clue number three, beware the dark horse."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Like a toxic ex, call your parents, dark horse — I don't know, I'm so lost."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, MerryMouse494 said chess — oh yeah, there's a piece, right, a horse, a dark horse, something like that, okay, that's a great guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, here's your fourth clue. Clue number four: It's all in your head, and on Elm Street. 20 seconds starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, I'm afraid I'm out. Clue number two, reason to call your parents. Clue number three, beware the dark horse. Clue number four, it's all in your head and on Elm Street."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, I'm starting to put things together now, that was a good clue. Time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "BaggieJean023 said “My psychiatrist” — it's all in your head, it's on your head, man."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "PeachDaisyCat said Freddy Krueger — that's what I was thinking, Elm Street, that's where I was going with that."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here is your final clue — this is your final chance to guess if you haven't guessed yet, this is your time to lock it in."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's clue number five: A really bad dream that can make you scream. 20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, I'm afraid I'm out. Clue number two, reason to call your parents. Clue number three, beware of the dark horse. Clue number four, it's all in your head and on Elm Street. Clue number five, a really bad dream that can make you scream."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And time is just about up. I hope you guys locked in your answers — let's find out what was in that crystal ball."
           }
         ]
       },
@@ -57165,8 +57341,64 @@
         "tag": "Round 1 Results",
         "lines": [
           {
-            "speaker": "Aisha Tyler",
-            "text": "The correct answer we were looking for is NIGHTMARE."
+            "speaker": "Corinne Foxx",
+            "text": "A NIGHTMARE! Oh, nightmare on Elm Street, yes, okay, I get it now. Okay, I was thinking Freddy Krueger, that was in line."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, the correct answer was nightmare. Let's take a look at how the clues fit and find out who is taking home the money."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five, a really bad dream that can make you scream — having a nightmare is your worst nightmare."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "2,560 people guessed, 2,164 people got it right on clue number five, great job you guys, let's see if it holds."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four, it's on your head and on Elm Street, as in A Nightmare on Elm Street movies, that's what I was thinking."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "8,794 people guessed, 5,938 people got it right, great job."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, let's check out clue number three, which was beware the dark horse — dark as in night, and horse as in mare, that was a good one, beware the nightmare."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, 3,949 people guessed on clue number three, 297 got it right, wow, that was really good thinking there."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number two, reason to call your parents — when a kid is scared by a nightmare they yell for their parents, mom, yes, and it's always mom who wakes up and just kind of rolls over."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "4,935 people guessed on clue number two, and 48 people got it right, wow, okay, let's see if that holds at clue number two."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one was I'm afraid I'm out — you're asleep and you're terrified, I'm afraid I'm out."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "4,137 people guessed on clue number one, no one got it right — they're cheering for you, they're not, they're not for you."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That means that our gold pot is going to the 48 people who guessed on clue number two, they're taking home $62.50, oh my gosh."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Our silver pot is going to our people who guessed on clue number three, 297 people are taking home $8.41."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And on clue number four, our bronze pot is going home to 5,938 people with 33 cents, great job you guys."
           },
           {
             "speaker": null,
@@ -57191,6 +57423,10 @@
           {
             "speaker": null,
             "text": "Gold (Clue 2): 48 winners at $62.50 each. Silver (Clue 3): 297 winners at $8.41 each. Bronze (Clue 4): 5,938 winners at $0.33 each."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And the show is not over yet, it is time for the encore. Let's play round number two with another $7,500 on the line."
           }
         ]
       },
@@ -57198,8 +57434,104 @@
         "tag": "Round 2",
         "lines": [
           {
-            "speaker": "Aisha Tyler",
-            "text": "Let's move right along to round two."
+            "speaker": "Corinne Foxx",
+            "text": "Prize spots are the same, $3,000 for gold, $2,500 for silver, $2,000 for bronze. Let's load up that crystal ball."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, round number two — if you didn't get it that time, you can still make some money."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, here is your first clue. Clue number one: You're not even trying. 20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "This is like a good acting challenge for me — you're not even trying, what are different ways I could say this? You're not even trying."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right you guys, you have about 5 seconds on the clock left, if you feel good about it you can lock in your answer, but there's four more coming."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "RottenDen589 guessed karaoke — you know, I do think people try their hardest, they're just not that talented."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "ModernPapa409 said “Teenagers.” Yeah, you know what, Gen Z, I'm trying."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right you guys, here is your second clue. Clue number two: Answer to no one. The clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, not even trying. Clue number two, answer to no one. Yes, I would say teenagers — does anyone? I think that was a really good guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right you guys, time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "BiscuitNibble999 — where are you guys getting your names from, is this an autogenerated thing? BiscuitNibble999 said retired — yeah, I'm not answering to nobody."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, here is your third clue. Clue number three: The other tush push. 20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, you're not even trying. Clue number two, answer to no one. Clue number three, the other tush push."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Now that one is throwing me off, I don't know what a tush push is, I don't know if that's rated G, but we have just about — time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "FreddyTheSailor said twerking — you know, you don't have to answer to nobody to twerk."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And here is your fourth clue, you guys. Clue number four: The booty call no one wants. 20 seconds starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number one, you're not even trying. Clue number two, answer to no one. Clue number three, the other tush push. Clue number four, the booty call no one wants."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I know there are going to be a lot of answers we cannot read out loud. Okay, time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "MostlyNice564 said your ex — that's what I was thinking, you're not even trying, you know."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "LargeChief296 said spanking — can we say that? Okay, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here is your final clue, your final chance to guess if you haven't locked in your answer, this is your time to do it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five: When your rear end accidentally phones a friend. 20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, you're not even trying. Clue number two, answer to no one. Clue number three, the other tush push. Clue number four, the booty call no one wants. And clue number five, when your rear end accidentally phones a friend."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "5 seconds on the clock, I think I know what it is now, and it's not as dirty as you guys thought it was."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, HeatherK72 said gas — that's a tush push. All right, let's find out what's in the crystal ball."
           }
         ]
       },
@@ -57207,8 +57539,68 @@
         "tag": "Round 2 Results",
         "lines": [
           {
-            "speaker": "Aisha Tyler",
-            "text": "The puzzle solution is BUTT DIAL."
+            "speaker": "Corinne Foxx",
+            "text": "It's a butt dial! Get your mind out of the gutter, guys, it's a butt dial."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, let's see how the clues fit and find out who is taking home the money."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five, when your rear end accidentally phones a friend — we don't just define the butt dial, we also give you a little poem about it, it's when your rear end calls somebody by accident."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "6,236 people guessed, 5,280 people got it right on clue number five, we got there, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four, the booty call no one wants — your booty is literally calling somebody."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "7,748 people guessed, 1,895 people got it right, great job you guys, let's see."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, the other tush push — not gas, as we've determined, unlike the one in football, it's your tush pushing buttons on your phone."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, is a tush push a football thing? I didn't know that, I didn't know that."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, 4,458 people guessed, 679 people got it right — they knew what a tush push was, I didn't."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, let's check out clue number two, answer to no one — the person who gets called says “Hello? Hello?” and no one's there."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "3,729 people guessed, 12 people got it right on clue number two, wow, let's see if it holds."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, you're not even trying — people butt dial by accident, you're not even trying."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, 2,221 people guessed, one person got it right — oh my gosh, wait guys, I get to use the fun gun, I wanted to use the gun!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yes, it's raining money for LoyalCoconut207 — you are a gold guesser, you are taking home $3,000!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "We have other winners — our silver pot is going home to 12 people who are taking home $208.33, oh my gosh."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, and our bronze pot is going home to 679 people, taking home $2.94, you guys, wow, what a great episode."
           },
           {
             "speaker": null,
@@ -57240,8 +57632,16 @@
         "tag": "Outro",
         "lines": [
           {
-            "speaker": "Aisha Tyler",
-            "text": "Thanks for playing along with us tonight on Best Guess Live."
+            "speaker": "Corinne Foxx",
+            "text": "That's it for this episode of Best Guess Live. Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "We're here every weekday at 8 Eastern, 5 Pacific, so come back tomorrow and don't forget to bring your best guess. Goodnight!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I got to use the gun, I got to use the gun!"
           },
           {
             "speaker": null,
