@@ -889,6 +889,7 @@ document.addEventListener('focusout', function(e) {
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="database" onclick="app.setView('database')">Database</button>
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="stats" onclick="app.setView('stats')">Stats</button>
         <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="transcripts" onclick="app.setView('transcripts')">Transcripts</button>
+        <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="polls" onclick="app.setView('polls')">Polls</button>
         <a href="https://forms.gle/zzTwMu8wpZpC5zR58" target="_blank" rel="noopener noreferrer" class="nav-link nav-link--feedback px-3 py-2 rounded-md text-sm transition font-bold flex items-center gap-1">
           <span class="material-symbols-outlined align-middle text-base">bug_report</span> Report a Bug / Feedback
         </a>
@@ -908,6 +909,7 @@ document.addEventListener('focusout', function(e) {
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('database'); document.getElementById('mobile-menu').classList.add('hidden')">Database</button>
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('stats'); document.getElementById('mobile-menu').classList.add('hidden')">Stats</button>
       <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('transcripts'); document.getElementById('mobile-menu').classList.add('hidden')">Transcripts</button>
+      <button class="px-3 py-2 text-left rounded-md hover:bg-white/10" onclick="app.setView('polls'); document.getElementById('mobile-menu').classList.add('hidden')">Polls</button>
       <button class="flex items-center gap-2 px-3 py-2 text-left rounded-md bg-gradient-to-r from-pink-900/40 to-rose-900/40 hover:from-pink-900/60 text-pink-300 font-bold" onclick="app.openTipJar(); document.getElementById('mobile-menu').classList.add('hidden')">
         <span class="material-symbols-outlined text-sm">volunteer_activism</span> KindaCharming's Tip Jar
       </button>
@@ -1649,6 +1651,104 @@ document.addEventListener('focusout', function(e) {
 </div>
 </template>
 
+<!-- POLLS -->
+<template id="view-polls">
+<div class="fade-in space-y-6 pb-20">
+  <style>
+    .poll-search-wrap { width: 100%; max-width: 32rem; }
+    #polls-search { color: #fff; }
+    #polls-search::placeholder { color: #94a3b8; opacity: 1; }
+    .poll-chip {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.1);
+      color: #cbd5e1;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      transition: all .15s ease;
+      cursor: pointer;
+    }
+    .poll-chip:hover { background: rgba(148, 163, 184, 0.2); }
+    .poll-chip.is-active {
+      background: rgba(168, 85, 247, 0.25);
+      border-color: rgba(192, 132, 252, 0.6);
+      color: #f3e8ff;
+    }
+    .poll-option {
+      position: relative;
+      height: 2.35rem;
+      border-radius: 0.65rem;
+      background: rgba(51, 65, 85, 0.35);
+      border: 1px solid rgba(71, 85, 105, 0.4);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      margin: 0.4rem 0;
+    }
+    .poll-option-fill {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      background: linear-gradient(90deg, rgba(59,130,246,0.6), rgba(96,165,250,0.35));
+      border-radius: 0.65rem 0 0 0.65rem;
+    }
+    .poll-option.is-top .poll-option-fill {
+      background: linear-gradient(90deg, rgba(250,204,21,0.55), rgba(250,204,21,0.3));
+    }
+    .poll-option.is-top { border-color: rgba(250,204,21,0.55); }
+    .poll-option-label {
+      position: relative; z-index: 1;
+      padding-left: 0.85rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .poll-option-pct {
+      position: relative; z-index: 1;
+      padding-right: 0.85rem;
+      padding-left: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #f8fafc;
+      white-space: nowrap;
+    }
+    .poll-card { display: flex; flex-direction: column; }
+  </style>
+  <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+    <div>
+      <h2 class="text-3xl font-display font-bold">Daily <span class="text-purple-400">Polls</span></h2>
+      <p class="text-slate-400 text-sm mt-1">Every poll question the app has put in front of players, with results — no personal guesses, just the crowd's answers.</p>
+    </div>
+    <div class="relative poll-search-wrap">
+      <span class="material-symbols-outlined absolute left-3 top-3 text-slate-400">search</span>
+      <input id="polls-search" type="text" placeholder="Search questions or answers"
+        class="w-full bg-slate-800 border border-slate-700 rounded-full py-2 pl-10 pr-4 text-white focus:outline-none focus:border-purple-500">
+    </div>
+  </div>
+
+  <div id="polls-trends" class="grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
+
+  <div class="glass-panel rounded-xl border border-slate-700/60 p-4">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-xs uppercase tracking-widest text-slate-400 font-bold">Poll Topics</span>
+      <span id="polls-count" class="text-xs text-purple-300">Loading...</span>
+    </div>
+    <div id="polls-category-chips" class="flex flex-wrap gap-2"></div>
+  </div>
+
+  <div id="polls-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div class="text-slate-400 col-span-full">Loading polls...</div>
+  </div>
+</div>
+</template>
+
 <!-- STATS -->
 <template id="view-stats">
 <div class="fade-in space-y-8 pb-20">
@@ -2007,6 +2107,11 @@ class App {
     this.dailyPuzzles = [];
     this._dailyPuzzlesLoaded = false;
     this._dailyPuzzlesLoading = null;
+    this.dailyPolls = [];
+    this._dailyPollsLoaded = false;
+    this._dailyPollsLoading = null;
+    this._dailyPollsError = null;
+    this._pollsCategoryFilter = 'All';
     this._selectedTranscriptDate = '';
     this._homeStatsCache = null;
     this._statsCache = null;
@@ -2089,6 +2194,12 @@ class App {
       nodes.count = document.getElementById('transcript-count');
       nodes.list = document.getElementById('transcript-list');
       nodes.detail = document.getElementById('transcript-detail');
+    } else if (name === 'polls') {
+      nodes.search = document.getElementById('polls-search');
+      nodes.count = document.getElementById('polls-count');
+      nodes.chips = document.getElementById('polls-category-chips');
+      nodes.trends = document.getElementById('polls-trends');
+      nodes.grid = document.getElementById('polls-grid');
     }
     this._viewNodes[name] = nodes;
     return nodes;
@@ -2341,6 +2452,27 @@ class App {
     return this._dailyPuzzlesLoading;
   }
 
+  _ensureDailyPollsLoaded() {
+    if (this._dailyPollsLoaded) return Promise.resolve();
+    if (this._dailyPollsLoading) return this._dailyPollsLoading;
+    this._dailyPollsLoading = fetch('./data/daily-polls.json?_=' + Date.now())
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then(data => {
+        this.dailyPolls = Array.isArray(data) ? data : [];
+        this._dailyPollsLoaded = true;
+        this._dailyPollsError = null;
+        this._dailyPollsLoading = null;
+      })
+      .catch(err => {
+        console.error('Could not load daily-polls.json:', err);
+        this.dailyPolls = [];
+        this._dailyPollsError = err;
+        this._dailyPollsLoading = null;
+        throw err;
+      });
+    return this._dailyPollsLoading;
+  }
+
   _renderDailyTableRows(puzzles, query = '') {
     const esc = (v) => this._escapeHtml(v);
     const hl = (v) => this._highlight(String(v), query);
@@ -2519,6 +2651,10 @@ class App {
     if (name === 'transcripts') {
       this.renderTranscriptsLoading();
       this._ensureTranscriptsLoaded().then(() => this.renderTranscripts());
+    }
+    if (name === 'polls') {
+      this.renderPollsLoading();
+      this._ensureDailyPollsLoaded().then(() => this.renderPolls()).catch(() => this.renderPolls());
     }
   }
 
@@ -5043,6 +5179,122 @@ Rules:
       }
     }, { rootMargin: '160px 0px' });
     this._statsChartObserver.observe(anchor);
+  }
+
+  renderPollsLoading() {
+    const nodes = this._getViewNodes('polls');
+    if (nodes.count) nodes.count.innerText = 'Loading...';
+    if (nodes.chips) nodes.chips.innerHTML = '';
+    if (nodes.trends) nodes.trends.innerHTML = '';
+    if (nodes.grid) nodes.grid.innerHTML = '<div class="text-slate-400 col-span-full">Loading polls...</div>';
+  }
+
+  _pollSearchText(p) {
+    if (p._searchText) return p._searchText;
+    const text = [p.question, p.category, ...(p.options || []).map(o => o.text)].join(' ').toLowerCase();
+    p._searchText = text;
+    return text;
+  }
+
+  setPollsCategoryFilter(cat) {
+    this._pollsCategoryFilter = cat || 'All';
+    this.renderPolls();
+  }
+
+  renderPolls() {
+    const nodes = this._getViewNodes('polls');
+    const esc = (v) => this._escapeHtml(v);
+    const hl = (v) => this._highlight(v, query);
+    if (this._dailyPollsError) {
+      if (nodes.count) nodes.count.innerText = 'Error';
+      if (nodes.grid) nodes.grid.innerHTML = `<div class="text-red-300 col-span-full">Failed to load polls: ${esc(this._dailyPollsError.message)}</div>`;
+      return;
+    }
+    if (nodes.search && !nodes.search._pollsBound) {
+      nodes.search.addEventListener('input', () => this.renderPolls());
+      nodes.search._pollsBound = true;
+    }
+
+    const query = (nodes.search?.value || '').toLowerCase().trim();
+    const all = this.dailyPolls || [];
+
+    // Category chips (computed from the full set, not the filtered one, so counts stay stable)
+    const categoryCounts = new Map();
+    all.forEach(p => {
+      const cat = p.category || 'Uncategorized';
+      categoryCounts.set(cat, (categoryCounts.get(cat) || 0) + 1);
+    });
+    const categories = ['All', ...[...categoryCounts.keys()].sort()];
+    if (!categories.includes(this._pollsCategoryFilter)) this._pollsCategoryFilter = 'All';
+    if (nodes.chips) {
+      nodes.chips.innerHTML = categories.map(cat => {
+        const count = cat === 'All' ? all.length : (categoryCounts.get(cat) || 0);
+        const active = cat === this._pollsCategoryFilter;
+        return `<button type="button" class="poll-chip ${active ? 'is-active' : ''}" onclick="app.setPollsCategoryFilter('${esc(cat).replace(/'/g, "\\'")}')">${esc(cat)} <span class="opacity-60">${count}</span></button>`;
+      }).join('');
+    }
+
+    const byCategory = this._pollsCategoryFilter === 'All'
+      ? all
+      : all.filter(p => (p.category || 'Uncategorized') === this._pollsCategoryFilter);
+    const filtered = query ? byCategory.filter(p => this._pollSearchText(p).includes(query)) : byCategory;
+
+    if (nodes.count) nodes.count.innerText = `${filtered.length} of ${all.length}`;
+
+    // Trend callouts: total tracked, most decisive (highest top answer), closest race (smallest gap top two)
+    if (nodes.trends) {
+      if (!all.length) {
+        nodes.trends.innerHTML = '';
+      } else {
+        const withMargins = all.map(p => {
+          const sorted = [...(p.options || [])].sort((a, b) => b.pct - a.pct);
+          const top = sorted[0];
+          const second = sorted[1];
+          return { poll: p, top, margin: top && second ? top.pct - second.pct : null };
+        }).filter(x => x.top);
+        const mostDecisive = [...withMargins].sort((a, b) => b.top.pct - a.top.pct)[0];
+        const closestRace = [...withMargins].filter(x => x.margin !== null).sort((a, b) => a.margin - b.margin)[0];
+        const cards = [
+          { icon: 'poll', color: 'text-purple-400', label: 'Polls Tracked', val: String(all.length), sub: `${categories.length - 1} topic${categories.length - 1 !== 1 ? 's' : ''} so far` },
+          mostDecisive ? { icon: 'trending_up', color: 'text-green-400', label: 'Most Decisive', val: `${mostDecisive.top.pct.toFixed(1)}%`, sub: `"${mostDecisive.top.text}" — ${mostDecisive.poll.question}` } : null,
+          closestRace ? { icon: 'balance', color: 'text-amber-400', label: 'Closest Race', val: `${closestRace.margin.toFixed(1)}pt gap`, sub: closestRace.poll.question } : null,
+        ].filter(Boolean);
+        nodes.trends.innerHTML = cards.map(c => `<div class="glass-panel p-4 rounded-xl border border-slate-700/30">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="material-symbols-outlined ${c.color}" style="font-size:18px">${esc(c.icon)}</span>
+            <span class="text-xs text-slate-500 uppercase tracking-widest">${esc(c.label)}</span>
+          </div>
+          <div class="font-bold text-white text-lg leading-snug">${esc(c.val)}</div>
+          <div class="text-xs text-slate-500 mt-1 leading-snug line-clamp-2">${esc(c.sub)}</div>
+        </div>`).join('');
+      }
+    }
+
+    if (nodes.grid) {
+      nodes.grid.innerHTML = filtered.length
+        ? filtered.map(p => this._renderPollCard(p, query)).join('')
+        : '<div class="text-slate-400 col-span-full">No polls match that search.</div>';
+    }
+  }
+
+  _renderPollCard(p, query = '') {
+    const esc = (v) => this._escapeHtml(v);
+    const hl = (v) => this._highlight(v, query);
+    const options = [...(p.options || [])].sort((a, b) => b.pct - a.pct);
+    const topPct = options.length ? options[0].pct : 0;
+    const optionsHtml = options.map(o => `<div class="poll-option ${o.pct === topPct ? 'is-top' : ''}">
+        <div class="poll-option-fill" style="width:${Math.max(0, Math.min(100, o.pct))}%"></div>
+        <span class="poll-option-label">${hl(o.text)}</span>
+        <span class="poll-option-pct">${o.pct.toFixed(1)}%</span>
+      </div>`).join('');
+    return `<div class="poll-card glass-panel rounded-xl border border-slate-700/60 p-5">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <span class="text-[10px] uppercase tracking-widest text-purple-300 font-bold">${hl(p.category || 'Uncategorized')}</span>
+        <span class="text-[10px] text-slate-500 shrink-0">${esc(p.date || '')}</span>
+      </div>
+      <h3 class="text-white font-bold text-base mb-1 leading-snug">${hl(p.question)}</h3>
+      <div>${optionsHtml}</div>
+    </div>`;
   }
 
   renderStats() {

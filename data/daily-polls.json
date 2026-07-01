@@ -1,0 +1,46 @@
+[
+  {
+    "date": "Monday, June 29, 2026",
+    "question": "BEST NAME FOR A PET FLAMINGO?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "MR. PINK", "pct": 17.8 },
+      { "text": "BINGO (THE FLAMINGO)", "pct": 40.5 },
+      { "text": "LEGGY", "pct": 15.2 },
+      { "text": "FRANK", "pct": 26.4 }
+    ]
+  },
+  {
+    "date": "Monday, June 29, 2026",
+    "question": "WHICH PAST BGL ANSWER WOULD BE THE BEST GAME SHOW HOST?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "WILLY WONKA (CHAOTIC ENERGY)", "pct": 33.6 },
+      { "text": "OPRAH (WINNING ENERGY)", "pct": 11.3 },
+      { "text": "TOM HANKS (OSCAR ENERGY)", "pct": 24.9 },
+      { "text": "SPONGEBOB (EXCESSIVE ENERGY)", "pct": 29.9 }
+    ]
+  },
+  {
+    "date": "Monday, June 29, 2026",
+    "question": "WHO'S YOUR FAVORITE CAPTAIN?",
+    "category": "Pop Culture Favorites",
+    "options": [
+      { "text": "HOOK", "pct": 31.4 },
+      { "text": "CRUNCH", "pct": 40.7 },
+      { "text": "KIRK", "pct": 16.8 },
+      { "text": "UNDERPANTS", "pct": 11.0 }
+    ]
+  },
+  {
+    "date": "Monday, June 29, 2026",
+    "question": "WHAT IS YOUR BEST GUESS LIVE CLUE STRATEGY?",
+    "category": "Gameplay Strategy",
+    "options": [
+      { "text": "GUESS ON 1 AND DONE", "pct": 17.1 },
+      { "text": "3 FOR ME", "pct": 68.7 },
+      { "text": "5 TO STAY ALIVE", "pct": 10.8 },
+      { "text": "I ALWAYS GUESS “BATTLESHIP”", "pct": 3.2 }
+    ]
+  }
+]
