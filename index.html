@@ -550,6 +550,16 @@
   .tip-jar-pill:hover {
     background: linear-gradient(180deg, rgba(96,34,70,0.95) 0%, rgba(70,28,53,0.9) 100%);
   }
+  /* Safety net: the desktop nav row must never force the whole document to
+     scroll horizontally (that would shift every section below it, including
+     unrelated pages like Polls, mid-scroll). If the nav's own content is ever
+     wider than the available space, it scrolls within itself instead. */
+  .nav-links-scroll {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .nav-links-scroll::-webkit-scrollbar { display: none; }
   .btn-primary {
     background: linear-gradient(135deg,#2c63f6,#1f4fd4);
     transition: all .2s;
@@ -883,21 +893,21 @@ document.addEventListener('focusout', function(e) {
         <img src="bestguessarchive.png" alt="Best Guess Archive Logo" class="h-10 w-10 rounded-full border-2 border-yellow-500 object-cover" decoding="async">
         <span class="font-display text-2xl tracking-[0.05em] text-white leading-none">BEST GUESS <span class="text-[#ffbb39]">ARCHIVE</span></span>
       </div>
-      <div class="hidden md:flex items-center space-x-3">
-        <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="home" onclick="app.setView('home')">Home</button>
-        <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="play" onclick="app.startRandomGame()">Play</button>
-        <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="database" onclick="app.setView('database')">Database</button>
-        <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="stats" onclick="app.setView('stats')">Stats</button>
-        <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="transcripts" onclick="app.setView('transcripts')">Transcripts</button>
-        <button class="nav-link px-3 py-2 rounded-md text-sm transition" data-nav-view="polls" onclick="app.setView('polls')">Polls</button>
-        <a href="https://forms.gle/zzTwMu8wpZpC5zR58" target="_blank" rel="noopener noreferrer" class="nav-link nav-link--feedback px-3 py-2 rounded-md text-sm transition font-bold flex items-center gap-1">
-          <span class="material-symbols-outlined align-middle text-base">bug_report</span> Report a Bug / Feedback
+      <div class="hidden md:flex items-center gap-1 lg:gap-2 min-w-0 nav-links-scroll">
+        <button class="nav-link px-2 lg:px-3 py-2 rounded-md text-sm transition shrink-0" data-nav-view="home" onclick="app.setView('home')">Home</button>
+        <button class="nav-link px-2 lg:px-3 py-2 rounded-md text-sm transition shrink-0" data-nav-view="play" onclick="app.startRandomGame()">Play</button>
+        <button class="nav-link px-2 lg:px-3 py-2 rounded-md text-sm transition shrink-0" data-nav-view="database" onclick="app.setView('database')">Database</button>
+        <button class="nav-link px-2 lg:px-3 py-2 rounded-md text-sm transition shrink-0" data-nav-view="stats" onclick="app.setView('stats')">Stats</button>
+        <button class="nav-link px-2 lg:px-3 py-2 rounded-md text-sm transition shrink-0" data-nav-view="transcripts" onclick="app.setView('transcripts')">Transcripts</button>
+        <button class="nav-link px-2 lg:px-3 py-2 rounded-md text-sm transition shrink-0" data-nav-view="polls" onclick="app.setView('polls')">Polls</button>
+        <a href="https://forms.gle/zzTwMu8wpZpC5zR58" target="_blank" rel="noopener noreferrer" title="Report a Bug / Feedback" class="nav-link nav-link--feedback px-2 lg:px-3 py-2 rounded-md text-sm transition font-bold flex items-center gap-1 shrink-0">
+          <span class="material-symbols-outlined align-middle text-base">bug_report</span> <span class="hidden xl:inline">Report a Bug / Feedback</span>
         </a>
-        <button class="tip-jar-pill ml-2 flex items-center gap-1.5 text-sm font-bold px-5 py-2 rounded-full transition" onclick="app.openTipJar()">
+        <button class="tip-jar-pill ml-1 lg:ml-2 flex items-center gap-1.5 text-sm font-bold px-3 lg:px-5 py-2 rounded-full transition shrink-0" onclick="app.openTipJar()">
           <span class="material-symbols-outlined" style="font-size:14px;line-height:1">volunteer_activism</span> TIP JAR
         </button>
       </div>
-      <button class="md:hidden p-2 text-slate-400 hover:text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <button class="md:hidden p-2 text-slate-400 hover:text-white shrink-0" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
@@ -1679,6 +1689,8 @@ document.addEventListener('focusout', function(e) {
     }
     .poll-option {
       position: relative;
+      min-width: 0;
+      width: 100%;
       height: 2.35rem;
       border-radius: 0.65rem;
       background: rgba(51, 65, 85, 0.35);
@@ -1687,6 +1699,7 @@ document.addEventListener('focusout', function(e) {
       display: flex;
       align-items: center;
       margin: 0.4rem 0;
+      box-sizing: border-box;
     }
     .poll-option-fill {
       position: absolute;
@@ -1719,7 +1732,20 @@ document.addEventListener('focusout', function(e) {
       color: #f8fafc;
       white-space: nowrap;
     }
-    .poll-card { display: flex; flex-direction: column; }
+    .poll-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .poll-question {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    #polls-grid {
+      min-width: 0;
+      overflow-x: hidden;
+    }
   </style>
   <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
     <div>
@@ -5292,7 +5318,7 @@ Rules:
         <span class="text-[10px] uppercase tracking-widest text-purple-300 font-bold">${hl(p.category || 'Uncategorized')}</span>
         <span class="text-[10px] text-slate-500 shrink-0">${esc(p.date || '')}</span>
       </div>
-      <h3 class="text-white font-bold text-base mb-1 leading-snug">${hl(p.question)}</h3>
+      <h3 class="poll-question text-white font-bold text-base mb-1 leading-snug">${hl(p.question)}</h3>
       <div>${optionsHtml}</div>
     </div>`;
   }
