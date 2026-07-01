@@ -14156,7 +14156,7 @@
     "silverPayout": 6.05,
     "bronzePayout": 1.19,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "Leonius, Chubby Hawk, Llama Mama",
     "wrongGuesses": "MONOPOLY, ONE WAY, YIELD, STOP LIGHT, GREEN LIGHT",
     "clues": [
       {
@@ -14194,7 +14194,11 @@
         "guesses": "4,275",
         "explanation": "A stop sign is a red octagon on a pole that makes you brake."
       }
-    ]
+    ],
+    "bonus": {
+      "title": "Unhinged",
+      "desc": "A new immersive game experience on Netflix, featuring the voice talents of Zoë Kravitz, Stranger Things star Sadie Sink, and legendary voice actor Troy Baker — who voiced Sam Drake in Uncharted, Joel in The Last of Us, and Indiana Jones in the Great Circle.<br><br>Check it out if you're not afraid of the dark... or what's waiting for you there."
+    }
   },
   {
     "date": "Tuesday, June 30, 2026",
@@ -14213,7 +14217,7 @@
     "silverPayout": 4.78,
     "bronzePayout": 0.38,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "Solemn Spinach, Wildcat Cadets",
     "wrongGuesses": "CROWN, GOLD, PEARL, PUCK, VIVA LA VIDA",
     "clues": [
       {
@@ -14251,6 +14255,10 @@
         "guesses": "6,988 🥉",
         "explanation": "The Stanley Cup is hockey's ultimate prize — its holy grail."
       }
-    ]
+    ],
+    "bonus": {
+      "title": "Unhinged",
+      "desc": "A new immersive game experience on Netflix, featuring the voice talents of Zoë Kravitz, Stranger Things star Sadie Sink, and legendary voice actor Troy Baker — who voiced Sam Drake in Uncharted, Joel in The Last of Us, and Indiana Jones in the Great Circle.<br><br>Check it out if you're not afraid of the dark... or what's waiting for you there."
+    }
   }
 ]
