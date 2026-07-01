@@ -14138,5 +14138,119 @@
         "explanation": "Mario fights Bowser to save Princess Peach."
       }
     ]
+  },
+  {
+    "date": "Tuesday, June 30, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "STOP SIGN",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 314,
+    "silverWinners": 413,
+    "bronzeWinners": 1669,
+    "totalWinners": 2396,
+    "goldPayout": 9.55,
+    "silverPayout": 6.05,
+    "bronzePayout": 1.19,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "MONOPOLY, ONE WAY, YIELD, STOP LIGHT, GREEN LIGHT",
+    "clues": [
+      {
+        "number": 1,
+        "text": "NO ADVANCE NOTICE",
+        "correct": "314",
+        "guesses": "3,412 🥇",
+        "explanation": "A stop sign orders you to halt rather than advance."
+      },
+      {
+        "number": 2,
+        "text": "FEATURING ONE DIRECTION",
+        "correct": "413",
+        "guesses": "4,679 🥈",
+        "explanation": "At a stop, traffic takes turns proceeding one direction at a time."
+      },
+      {
+        "number": 3,
+        "text": "WORD ON THE STREET",
+        "correct": "1,669",
+        "guesses": "6,910 🥉",
+        "explanation": "A stop sign is a single word posted right on the street."
+      },
+      {
+        "number": 4,
+        "text": "LIGHT ALTERNATIVE FOR WHEN YOU'RE ON THE GO",
+        "correct": "1,197",
+        "guesses": "4,281",
+        "explanation": "A stop sign is the alternative to a traffic light at an intersection."
+      },
+      {
+        "number": 5,
+        "text": "RED OCTAGON ON A POLE? HIT THE BRAKES! SLOW YOUR ROLL!",
+        "correct": "4,048",
+        "guesses": "4,275",
+        "explanation": "A stop sign is a red octagon on a pole that makes you brake."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, June 30, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "STANLEY CUP",
+    "goldClue": 3,
+    "silverClue": 4,
+    "bronzeClue": 5,
+    "goldWinners": 74,
+    "silverWinners": 522,
+    "bronzeWinners": 5147,
+    "totalWinners": 5743,
+    "goldPayout": 40.54,
+    "silverPayout": 4.78,
+    "bronzePayout": 0.38,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "CROWN, GOLD, PEARL, PUCK, VIVA LA VIDA",
+    "clues": [
+      {
+        "number": 1,
+        "text": "DUAL CITIZENSHIP",
+        "correct": "0",
+        "guesses": "2,925",
+        "explanation": "The Cup is contested by NHL teams in both the U.S. and Canada."
+      },
+      {
+        "number": 2,
+        "text": "FAMOUS COLDPLAY RECORD",
+        "correct": "0",
+        "guesses": "2,280",
+        "explanation": "Hockey is 'cold play' on the ice, and the Cup is its top record."
+      },
+      {
+        "number": 3,
+        "text": "FANCY TREASURE HIDDEN IN PUNY CASTLE",
+        "correct": "74",
+        "guesses": "4,535 🥇",
+        "explanation": "The letters of 'puny castle' rearrange to spell Stanley Cup."
+      },
+      {
+        "number": 4,
+        "text": "COVETED BY BOTH SENATORS AND KINGS",
+        "correct": "522",
+        "guesses": "4,024 🥈",
+        "explanation": "The Senators and the Kings are both NHL teams chasing the Cup."
+      },
+      {
+        "number": 5,
+        "text": "THE GOAL IS NOT TO FAIL AT WINNING HOCKEY'S HOLY GRAIL",
+        "correct": "5,147",
+        "guesses": "6,988 🥉",
+        "explanation": "The Stanley Cup is hockey's ultimate prize — its holy grail."
+      }
+    ]
   }
 ]
