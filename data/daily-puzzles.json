@@ -1207,5 +1207,36 @@
         "explanation": "The sky fills with reds and oranges as the sun sets and daylight fades."
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 1, 2026",
+    "secretItem": "PLUMBER",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "BOLDLY GOES WHERE YOU HAVE GONE BEFORE",
+        "explanation": "A Star Trek riff — a plumber works in the bathroom, where you've already 'gone.'"
+      },
+      {
+        "clueNumber": 2,
+        "text": "KNOWS A FLUSH BEATS A FULL HOUSE",
+        "explanation": "A poker pun on 'flush' — the thing a plumber keeps working."
+      },
+      {
+        "clueNumber": 3,
+        "text": "WHO YOU CALL WHEN YOUR WATER BREAKS",
+        "explanation": "When a pipe bursts and water breaks, you call a plumber."
+      },
+      {
+        "clueNumber": 4,
+        "text": "THEIR JOB CAN BE DRAINING",
+        "explanation": "A plumber deals with drains all day."
+      },
+      {
+        "clueNumber": 5,
+        "text": "A PRO WITH WATER FLOWS, LIKE THE MARIO BROS",
+        "explanation": "Mario and Luigi, who handle pipes and water, are famously plumbers."
+      }
+    ]
   }
 ]
