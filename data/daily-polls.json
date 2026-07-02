@@ -1,6 +1,17 @@
 [
   {
     "date": "Wednesday, July 1, 2026",
+    "question": "WHAT WORD(S) SHOULD HUNTER HAVE TO WORK INTO A FUTURE BEST GUESS LIVE EPISODE?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "KUMQUAT PIE", "pct": 16.6 },
+      { "text": "LORD OF THE AARDVARKS", "pct": 14.8 },
+      { "text": "BELLY BUTTON LINT", "pct": 28.8 },
+      { "text": "ANTI-DISESTABLISHMENTARIANISM", "pct": 39.6 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 1, 2026",
     "question": "WHAT'S YOUR FAVORITE SIGN?",
     "category": "Hypothetical & Silly",
     "options": [
