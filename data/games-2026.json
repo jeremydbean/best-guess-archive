@@ -14260,5 +14260,121 @@
       "title": "Unhinged",
       "desc": "A new immersive game experience on Netflix, featuring the voice talents of Zoë Kravitz, Stranger Things star Sadie Sink, and legendary voice actor Troy Baker — who voiced Sam Drake in Uncharted, Joel in The Last of Us, and Indiana Jones in the Great Circle.<br><br>Check it out if you're not afraid of the dark... or what's waiting for you there."
     }
+  },
+  {
+    "date": "Wednesday, July 1, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "HOT AIR BALLOON",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 131,
+    "silverWinners": 4461,
+    "bronzeWinners": 3546,
+    "totalWinners": 8138,
+    "goldPayout": 22.9,
+    "silverPayout": 0.56,
+    "bronzePayout": 0.56,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "",
+    "adminNote": "“Balloon” was also accepted as a correct answer for this puzzle.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ALL RISE",
+        "correct": "131",
+        "guesses": "5,409 🥇",
+        "explanation": "When a hot air balloon takes off, it rises straight up into the sky."
+      },
+      {
+        "number": 2,
+        "text": "POSITIVELY AFFECTED BY INFLATION",
+        "correct": "4,461",
+        "guesses": "8,803 🥈",
+        "explanation": "A hot air balloon needs to be inflated with hot air before it can fly."
+      },
+      {
+        "number": 3,
+        "text": "ADDS SOME ATMOSPHERE TO A ROMANTIC OCCASION",
+        "correct": "3,546",
+        "guesses": "5,505 🥉",
+        "explanation": "A hot air balloon ride is a classic romantic date."
+      },
+      {
+        "number": 4,
+        "text": "PASSES WITH FLYING COLORS",
+        "correct": "1,100",
+        "guesses": "2,149",
+        "explanation": "Hot air balloons are famous for their colorful designs as they fly overhead."
+      },
+      {
+        "number": 5,
+        "text": "BUOYANT CRAFT WITH GAS INSIDE & A BASKET SO YOU CAN RIDE",
+        "correct": "1,191",
+        "guesses": "1,617",
+        "explanation": "A hot air balloon is a buoyant craft filled with hot air, with a basket underneath to ride in."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, July 1, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TYPO",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 23,
+    "silverWinners": 92,
+    "bronzeWinners": 532,
+    "totalWinners": 647,
+    "goldPayout": 130.43,
+    "silverPayout": 27.17,
+    "bronzePayout": 3.75,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "",
+    "adminNote": "Clue 4’s exact guess/correct tally wasn’t visible in any screenshot captured for this episode. It didn’t affect payouts since gold, silver, and bronze all fell on clues 1–3.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "USUALLY UNACCEPTABLE",
+        "correct": "23",
+        "guesses": "2,031 🥇",
+        "explanation": "A typo is usually considered an unacceptable mistake in writing."
+      },
+      {
+        "number": 2,
+        "text": "HOW MANY TIMES DO I HAVE TO TELL YOU?",
+        "correct": "92",
+        "guesses": "3,289 🥈",
+        "explanation": "Typos are a recurring frustration you keep having to point out and correct."
+      },
+      {
+        "number": 3,
+        "text": "HAT AIR BALLOON",
+        "correct": "532",
+        "guesses": "3,181 🥉",
+        "explanation": "It's a typo of last episode's answer, “Hot Air Balloon” — swapping the O for an A."
+      },
+      {
+        "number": 4,
+        "text": "RESULT OF BEING OFF-KEY",
+        "correct": "?",
+        "guesses": "?",
+        "explanation": "A typo happens when your fingers hit the wrong key while typing."
+      },
+      {
+        "number": 5,
+        "text": "KEYBOARD MISTAKE THAT BEST GUESSERS SHOULDN'T MAKE",
+        "correct": "6,541",
+        "guesses": "9,273",
+        "explanation": "A typo is a keyboard mistake made while typing quickly."
+      }
+    ]
   }
 ]

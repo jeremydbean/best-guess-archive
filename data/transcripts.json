@@ -61010,5 +61010,195 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 1, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "HOT AIR BALLOON",
+      "TYPO"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "HOT AIR BALLOON",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "ALL RISE",
+          "POSITIVELY AFFECTED BY INFLATION",
+          "ADDS SOME ATMOSPHERE TO A ROMANTIC OCCASION",
+          "PASSES WITH FLYING COLORS",
+          "BUOYANT CRAFT WITH GAS INSIDE & A BASKET SO YOU CAN RIDE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "TYPO",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "USUALLY UNACCEPTABLE",
+          "HOW MANY TIMES DO I HAVE TO TELL YOU?",
+          "HAT AIR BALLOON",
+          "RESULT OF BEING OFF-KEY",
+          "KEYBOARD MISTAKE THAT BEST GUESSERS SHOULDN'T MAKE"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "[Full transcript pending — to be added from the episode audio.]"
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round 1, $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "ALL RISE."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "POSITIVELY AFFECTED BY INFLATION."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "ADDS SOME ATMOSPHERE TO A ROMANTIC OCCASION."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "PASSES WITH FLYING COLORS."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "BUOYANT CRAFT WITH GAS INSIDE & A BASKET SO YOU CAN RIDE."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was a HOT AIR BALLOON!"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “BUOYANT CRAFT WITH GAS INSIDE & A BASKET SO YOU CAN RIDE.” A hot air balloon is a buoyant craft filled with hot air, with a basket underneath to ride in. 1,191 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “PASSES WITH FLYING COLORS.” Hot air balloons are famous for their colorful designs as they fly overhead. 1,100 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “ADDS SOME ATMOSPHERE TO A ROMANTIC OCCASION.” A hot air balloon ride is a classic romantic date. 3,546 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “POSITIVELY AFFECTED BY INFLATION.” A hot air balloon needs to be inflated with hot air before it can fly. 4,461 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “ALL RISE.” When a hot air balloon takes off, it rises straight up into the sky. 131 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 131 winners at $22.90 each. Silver (Clue 2): 4,461 winners at $0.56 each. Bronze (Clue 3): 3,546 winners at $0.56 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "[Full transcript pending — to be added from the episode audio.]"
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round 2, $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "USUALLY UNACCEPTABLE."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "HOW MANY TIMES DO I HAVE TO TELL YOU?."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "HAT AIR BALLOON."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "RESULT OF BEING OFF-KEY."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "KEYBOARD MISTAKE THAT BEST GUESSERS SHOULDN'T MAKE."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was TYPO!"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “KEYBOARD MISTAKE THAT BEST GUESSERS SHOULDN'T MAKE.” A typo is a keyboard mistake made while typing quickly. 6,541 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “RESULT OF BEING OFF-KEY.” A typo happens when your fingers hit the wrong key while typing."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “HAT AIR BALLOON.” It's a typo of last episode's answer, “Hot Air Balloon” — swapping the O for an A. 532 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “HOW MANY TIMES DO I HAVE TO TELL YOU?” Typos are a recurring frustration you keep having to point out and correct. 92 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “USUALLY UNACCEPTABLE.” A typo is usually considered an unacceptable mistake in writing. 23 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 23 winners at $130.43 each. Silver (Clue 2): 92 winners at $27.17 each. Bronze (Clue 3): 532 winners at $3.75 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "[Full transcript pending — to be added from the episode audio.]"
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "[Full transcript pending — to be added from the episode audio.]"
+          }
+        ]
+      }
+    ]
   }
 ]
