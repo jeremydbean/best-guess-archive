@@ -1238,5 +1238,36 @@
         "explanation": "Mario and Luigi, who handle pipes and water, are famously plumbers."
       }
     ]
+  },
+  {
+    "date": "Thursday, July 2, 2026",
+    "secretItem": "CAMPFIRE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "HERE TODAY, GONE TOMORROW",
+        "explanation": "A campfire burns out and is gone by the next day."
+      },
+      {
+        "clueNumber": 2,
+        "text": "LOG-IN PROCEDURE",
+        "explanation": "You log in to a campfire by adding actual logs to it."
+      },
+      {
+        "clueNumber": 3,
+        "text": "REMOTE HOTSPOT WITH NO REMOTE",
+        "explanation": "A campfire is a hot spot out in a remote location, with no remote control involved."
+      },
+      {
+        "clueNumber": 4,
+        "text": "GETS TENSE IF IT GETS TOO CLOSE TO THE TENTS",
+        "explanation": "A campfire too close to the tents creates a tense, dangerous situation."
+      },
+      {
+        "clueNumber": 5,
+        "text": "GREAT FOR MARSHMALLOW ROASTS AND TALES ABOUT GHOSTS",
+        "explanation": "A campfire is the classic spot for roasting marshmallows and telling ghost stories."
+      }
+    ]
   }
 ]
