@@ -14278,7 +14278,7 @@
     "silverPayout": 0.56,
     "bronzePayout": 0.56,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "MlyC, Poison Ivy, Dramatic Cake, Bumpy Birdie",
     "wrongGuesses": "",
     "adminNote": "“Balloon” was also accepted as a correct answer for this puzzle.",
     "clues": [
@@ -14317,7 +14317,11 @@
         "guesses": "1,617",
         "explanation": "A hot air balloon is a buoyant craft filled with hot air, with a basket underneath to ride in."
       }
-    ]
+    ],
+    "bonus": {
+      "title": "Enola Holmes 3",
+      "desc": "Enola Holmes 3 is dropping on Netflix today. Enola is getting ready for her wedding when her big brother Sherlock is kidnapped, kicking off the biggest adventure since Enola Holmes 2.<br><br>Millie Bobby Brown, Louis Partridge, Helena Bonham Carter, and Henry Cavill are all back."
+    }
   },
   {
     "date": "Wednesday, July 1, 2026",
@@ -14336,9 +14340,8 @@
     "silverPayout": 27.17,
     "bronzePayout": 3.75,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "CordialTea, SlimOnion",
     "wrongGuesses": "",
-    "adminNote": "Clue 4’s exact guess/correct tally wasn’t visible in any screenshot captured for this episode. It didn’t affect payouts since gold, silver, and bronze all fell on clues 1–3.",
     "clues": [
       {
         "number": 1,
@@ -14364,9 +14367,9 @@
       {
         "number": 4,
         "text": "RESULT OF BEING OFF-KEY",
-        "correct": "?",
-        "guesses": "?",
-        "explanation": "A typo happens when your fingers hit the wrong key while typing."
+        "correct": "388",
+        "guesses": "2,989",
+        "explanation": "If you're one key off from the correct key, your result is a typo."
       },
       {
         "number": 5,
@@ -14375,6 +14378,10 @@
         "guesses": "9,273",
         "explanation": "A typo is a keyboard mistake made while typing quickly."
       }
-    ]
+    ],
+    "bonus": {
+      "title": "Enola Holmes 3",
+      "desc": "Enola Holmes 3 is dropping on Netflix today. Enola is getting ready for her wedding when her big brother Sherlock is kidnapped, kicking off the biggest adventure since Enola Holmes 2.<br><br>Millie Bobby Brown, Louis Partridge, Helena Bonham Carter, and Henry Cavill are all back."
+    }
   }
 ]
