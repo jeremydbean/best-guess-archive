@@ -1,6 +1,17 @@
 [
   {
     "date": "Wednesday, July 1, 2026",
+    "question": "WHAT'S YOUR FAVORITE SIGN?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "STOP", "pct": 13.0 },
+      { "text": "PEACE", "pct": 63.1 },
+      { "text": "AQUARIUS", "pct": 10.8 },
+      { "text": "JOHN HANCOCK", "pct": 12.8 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 1, 2026",
     "question": "WHO WOULD YOU LIKE TO SEE AS YOUR CHECKOUT PERSON AT THE GROCERY STORE?",
     "category": "Hypothetical & Silly",
     "options": [
