@@ -1,5 +1,16 @@
 [
   {
+    "date": "Wednesday, July 1, 2026",
+    "question": "WHO WOULD YOU LIKE TO SEE AS YOUR CHECKOUT PERSON AT THE GROCERY STORE?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "THE FLASH", "pct": 25.1 },
+      { "text": "DOLLY PARTON", "pct": 33.3 },
+      { "text": "AN OCTOPUS", "pct": 16.3 },
+      { "text": "SELF-CHECKOUT, BABY!", "pct": 25.1 }
+    ]
+  },
+  {
     "date": "Tuesday, June 30, 2026",
     "question": "BEST NAME FOR A PET FLAMINGO?",
     "category": "Hypothetical & Silly",
