@@ -1,6 +1,17 @@
 [
   {
     "date": "Friday, July 3, 2026",
+    "question": "WHAT'S THE MOST SATISFYING THING TO DO FOR NO REASON?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "POPPING BUBBLE WRAP", "pct": 51.2 },
+      { "text": "EXCESSIVE PEN CLICKING", "pct": 10.1 },
+      { "text": "CRACKING YOUR KNUCKLES", "pct": 16.3 },
+      { "text": "DOOM SCROLLING", "pct": 22.2 }
+    ]
+  },
+  {
+    "date": "Friday, July 3, 2026",
     "question": "WHICH FORMER BGL ANSWER WOULD YOU MOST WANT TO SPEND AN ENTIRE YEAR IN?",
     "category": "Show Trivia",
     "options": [
