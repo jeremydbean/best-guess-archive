@@ -1,5 +1,16 @@
 [
   {
+    "date": "Thursday, July 2, 2026",
+    "question": "WHICH SERIES WOULD YOU MOST LIKE TO BE A CHARACTER ON?",
+    "category": "Pop Culture Favorites",
+    "options": [
+      { "text": "STRANGER THINGS", "pct": 32.5 },
+      { "text": "BRIDGERTON", "pct": 35.3 },
+      { "text": "ONE PIECE", "pct": 14.2 },
+      { "text": "SQUID GAME", "pct": 17.8 }
+    ]
+  },
+  {
     "date": "Wednesday, July 1, 2026",
     "question": "WHAT WORD(S) SHOULD HUNTER HAVE TO WORK INTO A FUTURE BEST GUESS LIVE EPISODE?",
     "category": "Show Trivia",
