@@ -1,6 +1,17 @@
 [
   {
     "date": "Friday, July 3, 2026",
+    "question": "WHICH FORMER BGL ANSWER WOULD YOU MOST WANT TO SPEND AN ENTIRE YEAR IN?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "ALCATRAZ", "pct": 11.3 },
+      { "text": "DMV", "pct": 11.4 },
+      { "text": "JURASSIC PARK", "pct": 61.2 },
+      { "text": "THE MIDDLE SEAT", "pct": 15.8 }
+    ]
+  },
+  {
+    "date": "Friday, July 3, 2026",
     "question": "WHICH OF THESE WOULD BE THE WORST PLACE TO BE OVERCROWDED?",
     "category": "Hypothetical & Silly",
     "options": [
