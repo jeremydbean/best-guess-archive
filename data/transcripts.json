@@ -61520,5 +61520,471 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, July 2, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "TRICYCLE",
+      "TOMATO"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "TRICYCLE",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "YOU'RE ONLY GETTING THREE CLUES",
+          "WHERE THREE COMES BEFORE TWO",
+          "THREE-TO-ONE RATIO",
+          "MAKES A LOT OF THREE-POINT TURNS",
+          "THREE-WHEELED BIKE FOR A WOBBLY TYKE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "TOMATO",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "HOW SHOULD I SAY THIS...",
+          "GREEN MEANS STOP, RED MEANS GO",
+          "GOT BIG ON VINE, AND OFTEN SEEN ON APPS",
+          "STILL NOT SURE? THIS MIGHT HELP YOU KETCHUP",
+          "WITHOUT THIS PLANT YOU KNOW SO WELL, A BLT IS JUST A BL"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live! How's it going? Hello, hello!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm your host, Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The results from the daily poll are in and you have chosen a word or phrase that I have to work into tonight's show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I won't say it, but challenge accepted."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Keep your ears open for that — or as my dad says, my ears are always open because of the way they stick straight out of my head."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The crew wanted to get in on the fun and they have a challenge for me as well — I forgot about this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They challenged me to do the rules from memory with my eyes closed."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You could have just turned off the teleprompter."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is basically the game show host equivalent of riding a unicycle on a tightrope."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Also the rules are like the one thing that legally I shouldn't get wrong, so this is a huge risk on everyone's behalf."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Prepare to be amazed. Live, right now, without a net — unlike the people on that building — I present the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds. Each round has one puzzle. How am I doing?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly, I'm stumped, I have no idea what's next. I do know the general beats, so I'll just, yeah, okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each puzzle has three... sets of..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Listen, the whole point is we got two puzzles today, each puzzle has five clues, you get one guess per puzzle, not per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you get it on gold, you're sharing the money with everyone else who got it on gold for $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you get it on silver, you're sharing the money with everyone else who got it on silver for $2,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you get it on bronze, you're going home with about a quarter."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Point is, we're having a good time, you have to spell it right — no typos. Except for yesterday."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And what else — oh, don't forget, you want to be fast but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Did I get it? Did I get it? Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, point is we got $7,500 up for grabs."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Let's get into puzzle number one. Here we go ladies and gentlemen, good luck with what's in the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Can't believe I got it verbatim. Anyway, here's clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You're only getting three clues. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds for you, 20 seconds for me. Again, I don't know the answers."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The only one I've known recently was typo, because I had to not say it. But now I know all the words — in fact I think I know all the words that have ever existed."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The shortest word, A. The longest word eludes me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You're only getting three clues was clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "ShinyCharcoal93 said rip-off — hey, a Best Guess Live with only three clues would be a rip-off, we're doing five, baby, that's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You're early in — three clues, cool, wonder what this is. I'm trying to think of things."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: Where three comes before two. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Where three comes before two — you're only getting three clues. Where three clues comes before two clues? What are the other two clues gonna be?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "CurvedFractal287 said drag race — where three comes before two? Ah, different drag race — that's on me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "AttackOfThePat said countdown — okay yeah, we're on the same page a little bit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number three: Three-to-one ratio. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly I feel like I closed my eyes when I did the rules and it feels like the clue writers only had four or five words to choose from today, and they wrote the same clues — but it's all gotta be for a reason, people, use your peepers."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Three-to-one ratio, I don't know, I'm stumped."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "PleasantLinebacker, who you guys might remember from Breaking Bad, said sulfur trioxide — how would that ever be the answer?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "XoXoJet from Willows, California said Oreo — three-to-one ratio, maybe, there's obviously the XL stuffed Oreos and stuff like that, good guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: Makes a lot of three-point turns. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I have a guess. Where three comes before two, okay, I think I know what it is — you're only getting three clues, got it, three-two-one ratio, I think I know what it is, but maybe I don't, I think I do."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Makes a lot of three-point turns was clue number four. SweetCheese498 says elderly — I don't think that's wrong, I think, to be safe."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five, your fifth and final clue — I was wrong."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Your fifth and final clue is: Three-wheeled bike for a wobbly tyke. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Three-wheeled bike for a wobbly tyke, okay, you got it, I think you guys can do it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "10 seconds. There's not a lot of options for this last one, I really wish I had seen it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five, three-wheeled bike for a wobbly tyke."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Let us find out what was inside the crystal ball. The correct answer was... a TRICYCLE!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go over the clues and find out how they fit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I have honestly — this is so uncomfortable up my butt right now, this is not a seat anybody should sit on."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “THREE-WHEELED BIKE FOR A WOBBLY TYKE.” Well, that is a tricycle. 7,105 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “MAKES A LOT OF THREE-POINT TURNS.” It has three points of contact, so every turn's a three-point turn. 427 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “THREE-TO-ONE RATIO.” A regular car is a four-to-one vehicle, a bicycle is a two-to-one ratio. 42 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “WHERE THREE COMES BEFORE TWO.” Most kids ride a trike before they're ready to ride a bike — you start on three, you end up on two. 10 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “YOU'RE ONLY GETTING THREE CLUES.” We told you from the beginning all of your clues were three clues, and we were not wrong. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1 winner at $3,000.00. Silver (Clue 2): 10 winners at $250.00 each. Bronze (Clue 3): 42 winners at $47.61 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Meaning, in a very apropos way, you're going home with $3,000!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I felt very Chris Angel there — was that your card?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's time for an encore presentation."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations, by the way, to SmokeyLeo884 — if you filmed yourself losing your mind for $3,000, our gold guesser, please send it in."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "For right now let's play round two with another $7,500 on the line."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Prize pots are the same, 3,000 for gold, 2,500 for silver, 2,000 for bronze. Let us load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good luck everybody, I wish you the most luck in the world."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: How should I say this... 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "How should I say this... eight seconds left, good luck, we're all playing along right now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "NimbleGramps said Andrea — oh, is it Andra? Is it Andrea? Is it Andria? That's a really good guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's move on to clue number two: Green means stop, red means go. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Green means stop, red means go, you got 13 seconds. How should I say this. Five seconds left, good luck."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "PoopsieDoopsie said watermelon — that is such a good guess, how in the world do you say watermelon? It doesn't work for the first clue, but it's good for the second, I like that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: Got big on Vine, and often seen on apps. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Green means stop, red means go — how should I say this — got big on Vine, and often seen on apps."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They're nodding as if I have it, I'm just reading the clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "ForeverFreddy said Jake Paul — he's great, one of the most humble people on the planet. Got big on Vine, yeah, that's a good guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number four: Still not sure? This might help you catch up. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "How should I say this — green means stop, red means go — got big on Vine, often seen on apps — I know what it is, and ironically I did not need the fourth most helpful clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "LoftyBarnacle112 said whacking the bottle — we don't accept things like that, what is that, it's like a rare action I guess? I like that you're trying to get something in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number five, your fifth and final clue, I think you got this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five is: Without this plant you know so well, a BLT is just a BL. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It kind of is just a BL. Without this thing, that's a free clue for you — personally, at that point I didn't even know what it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A BLT is just a BL. Three seconds left. Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds over."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Let us find out what was inside the crystal ball. The correct answer was..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ooooh, these look great, a TOMATO! Are they washed? No, they're not washed. Can I wing them at the crew right now? Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well, the correct answer was tomatoes. Let's take a look at the clues and find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “WITHOUT THIS PLANT YOU KNOW SO WELL, A BLT IS JUST A BL.” A BLT without a tomato would just be a bacon and lettuce sandwich, which isn't the famous sandwich. 2,320 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “STILL NOT SURE? THIS MIGHT HELP YOU KETCHUP.” This might help you catch up. 4,569 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “GOT BIG ON VINE, AND OFTEN SEEN ON APPS.” Tomatoes grow on vines, and they show up on a lot of appetizers, like tomato and burrata. 2,661 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “GREEN MEANS STOP, RED MEANS GO.” When a tomato is green it is not ripe yet, and when it's red, you eat it. 785 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “HOW SHOULD I SAY THIS...” It was just the famous “tomato, tomahto.” 84 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 84 winners at $35.71 each. Silver (Clue 2): 785 winners at $3.18 each. Bronze (Clue 3): 2,661 winners at $0.75 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Meaning 84 people are sharing gold for $35.71 each, 785 people on silver getting $3.18, and bronze going home with 75 cents each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Nay Gray, Stashu, Festival 614, Lymphatic, and a bunch more."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners, thank you guys so much for playing, and our Daily Polls — I really love that, we have fun ones coming up, don't forget to check that out in the app."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We are here every weekday at 8 Eastern, 5 Pacific. Come back tomorrow, and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Goodnight everybody!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [COUNTDOWN, TRIANGLE, BLUES CLUES, GENIE, BASKETBALL]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [GRAPES, WATERMELON, APPLE, OPPOSITE, TOMATOE]"
+          }
+        ]
+      }
+    ]
   }
 ]
