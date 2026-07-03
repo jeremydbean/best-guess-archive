@@ -14383,5 +14383,119 @@
       "title": "Enola Holmes 3",
       "desc": "Enola Holmes 3 is dropping on Netflix today. Enola is getting ready for her wedding when her big brother Sherlock is kidnapped, kicking off the biggest adventure since Enola Holmes 2.<br><br>Millie Bobby Brown, Louis Partridge, Helena Bonham Carter, and Henry Cavill are all back."
     }
+  },
+  {
+    "date": "Thursday, July 2, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TRICYCLE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 10,
+    "bronzeWinners": 42,
+    "totalWinners": 53,
+    "goldPayout": 3000.0,
+    "silverPayout": 250.0,
+    "bronzePayout": 47.61,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "SmokeyLeo884",
+    "wrongGuesses": "COUNTDOWN, TRIANGLE, BLUES CLUES, GENIE, BASKETBALL",
+    "clues": [
+      {
+        "number": 1,
+        "text": "YOU'RE ONLY GETTING THREE CLUES",
+        "correct": "1",
+        "guesses": "2,283 🥇",
+        "explanation": "We told you from the beginning all of your clues were three clues, and we were not wrong."
+      },
+      {
+        "number": 2,
+        "text": "WHERE THREE COMES BEFORE TWO",
+        "correct": "10",
+        "guesses": "3,554 🥈",
+        "explanation": "Most kids ride a trike before they're ready to ride a bike — you start on three, you end up on two."
+      },
+      {
+        "number": 3,
+        "text": "THREE-TO-ONE RATIO",
+        "correct": "42",
+        "guesses": "3,963 🥉",
+        "explanation": "A regular car is a four-to-one vehicle, a bicycle is a two-to-one ratio."
+      },
+      {
+        "number": 4,
+        "text": "MAKES A LOT OF THREE-POINT TURNS",
+        "correct": "427",
+        "guesses": "3,915",
+        "explanation": "It has three points of contact, so every turn's a three-point turn."
+      },
+      {
+        "number": 5,
+        "text": "THREE-WHEELED BIKE FOR A WOBBLY TYKE",
+        "correct": "7,105",
+        "guesses": "7,757",
+        "explanation": "Well, that is a tricycle."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, July 2, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TOMATO",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 84,
+    "silverWinners": 785,
+    "bronzeWinners": 2661,
+    "totalWinners": 3530,
+    "goldPayout": 35.71,
+    "silverPayout": 3.18,
+    "bronzePayout": 0.75,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Nay Gray, Stashu, Festival 614, Lymphatic",
+    "wrongGuesses": "GRAPES, WATERMELON, APPLE, OPPOSITE, TOMATOE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "HOW SHOULD I SAY THIS...",
+        "correct": "84",
+        "guesses": "3,152 🥇",
+        "explanation": "It was just the famous “tomato, tomahto.”"
+      },
+      {
+        "number": 2,
+        "text": "GREEN MEANS STOP, RED MEANS GO",
+        "correct": "785",
+        "guesses": "3,970 🥈",
+        "explanation": "When a tomato is green it is not ripe yet, and when it's red, you eat it."
+      },
+      {
+        "number": 3,
+        "text": "GOT BIG ON VINE, AND OFTEN SEEN ON APPS",
+        "correct": "2,661",
+        "guesses": "7,112 🥉",
+        "explanation": "Tomatoes grow on vines, and they show up on a lot of appetizers, like tomato and burrata."
+      },
+      {
+        "number": 4,
+        "text": "STILL NOT SURE? THIS MIGHT HELP YOU KETCHUP",
+        "correct": "4,569",
+        "guesses": "5,734",
+        "explanation": "This might help you catch up."
+      },
+      {
+        "number": 5,
+        "text": "WITHOUT THIS PLANT YOU KNOW SO WELL, A BLT IS JUST A BL",
+        "correct": "2,320",
+        "guesses": "2,705",
+        "explanation": "A BLT without a tomato would just be a bacon and lettuce sandwich, which isn't the famous sandwich."
+      }
+    ]
   }
 ]
