@@ -1269,5 +1269,36 @@
         "explanation": "A campfire is the classic spot for roasting marshmallows and telling ghost stories."
       }
     ]
+  },
+  {
+    "date": "Friday, July 3, 2026",
+    "secretItem": "ESPRESSO",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "SMALL BUT MIGHTY",
+        "explanation": "An espresso shot is tiny but packs a strong punch of caffeine."
+      },
+      {
+        "clueNumber": 2,
+        "text": "THE QUICKER PICKER UPPER",
+        "explanation": "Espresso gives you a fast jolt of energy to pick you up."
+      },
+      {
+        "clueNumber": 3,
+        "text": "I GET A KICK OUT OF YOU",
+        "explanation": "The caffeine in espresso gives you a kick."
+      },
+      {
+        "clueNumber": 4,
+        "text": "BOOSTER SHOT THAT INCREASES YOUR HEART RATE",
+        "explanation": "A shot of espresso is a caffeine booster that can raise your heart rate."
+      },
+      {
+        "clueNumber": 5,
+        "text": "COFFEE THAT'S SHORT AND STRONG JUST LIKE SABRINA'S SONG",
+        "explanation": "Sabrina Carpenter's song \"Espresso\" shares its name with the short, strong coffee shot."
+      }
+    ]
   }
 ]
