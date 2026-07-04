@@ -1,8 +1,13 @@
 # AI Handoff
 
-Last updated: 2026-06-11 (session end)
+Last updated: 2026-07-04 (session end)
 
-## Most Recent Changes (2026-06-11)
+## Most Recent Changes (2026-07-04)
+
+- **Daily puzzle added — Saturday, July 4, 2026: MAZE**: Appended to `data/daily-puzzles.json` (now 43 entries). Screenshot's answer label glitched to "ETCH A SKETCH" (answered on clue #2), but all five clues point to MAZE and the user confirmed it. Clues: GET OUTTA HERE! / THAT'S WHERE I DRAW THE LINE / A TO Z IN THE MIDDLE OF ME / IF YOU'RE LOST, YOU'VE LOST / MANY PATHS ABOUT, YOU MUST FIND YOUR WAY OUT. `npm run audit` passes.
+- **3 new polls added, filed under Saturday, July 4, 2026**: Appended to `data/daily-polls.json` (now 14 entries, at the top). (1) "Which of these is your favorite trio?" (Pop Culture Favorites) — 3 LITTLE PIGS 21.9%, 3 MUSKETEERS 21.7%, 3 STOOGES 37.4% (crowd pick), THE JONAS BROTHERS 18.8%. (2) "What should be the next Olympic sport?" (Hypothetical & Silly) — OFFICE CHAIR LUGE 44.2% (crowd pick), BIG AIR YODELING 10.6%, 100M DART JUGGLING 16.2%, SYNCHRONIZED APPLE BOBBING 28.9%. (3) "Whose outfit would you least like to wear to a job interview?" (Hypothetical & Silly) — CLOWN 49.6% (crowd pick), PRO WRESTLER 31.8%, ROCK STAR 2.2%, HOWIE 16.2%. Dated today since all three appeared above the existing July 3 entries in the app's poll list (newest-first ordering) — flag for correction if the user has a more precise date. `npm run audit` passes.
+
+## Previous Changes (2026-06-11)
 
 - **July 3, 2026 episode imported — CONNECT FOUR (R1) and THE BEATLES (R2), host Hunter March** (both `format: "v2"`, standard tiers gold/silver/bronze = clues 1/2/3). Appended to `data/games-2026.json` (now 263 games) + full transcript (now 150; came with the full audio, no placeholder needed). **The 150th episode** — a July 4th-themed special with a chaotic "favorite moments" blooper-reel montage played during the Round 2 intro (disjointed clips referencing Neal, Anthony Anderson, a table leaf, Stranger Things spoilers, etc. — kept verbatim since it's a real, intentionally-disjointed compilation, not something to "clean up"). All payout math verified clean on the first pass, no corrections needed this time: R1 CONNECT FOUR gold 3 @ $1,000.00 / silver 48 @ $52.08 / bronze 1,470 @ $1.36 (total 1,521); R2 THE BEATLES gold 11 @ $272.72 / silver 267 @ $9.36 / bronze 1,106 @ $1.80 (total 1,384). No promo/bonus this episode (the 150th/July 4th celebration took that slot instead). Wrong guesses: R1 `FISHING, ARCADE, FISH, FISHING POLE, FIREWORKS`; R2 `THE BEETLES, TEA, FIREWORKS, BEETLES, BEE`. `npm run audit` passes 0/0.
 - **11th poll added — "What's the most satisfying thing to do for no reason?"**: Appended to `data/daily-polls.json` (now 11 entries, at the top), filed under Friday, July 3, 2026, category "Hypothetical & Silly". Options: POPPING BUBBLE WRAP 51.2% (crowd pick, by a landslide), EXCESSIVE PEN CLICKING 10.1%, CRACKING YOUR KNUCKLES 16.3%, DOOM SCROLLING 22.2%. `npm run audit` passes.

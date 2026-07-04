@@ -1,5 +1,38 @@
 [
   {
+    "date": "Saturday, July 4, 2026",
+    "question": "WHICH OF THESE IS YOUR FAVORITE TRIO?",
+    "category": "Pop Culture Favorites",
+    "options": [
+      { "text": "3 LITTLE PIGS", "pct": 21.9 },
+      { "text": "3 MUSKETEERS", "pct": 21.7 },
+      { "text": "3 STOOGES", "pct": 37.4 },
+      { "text": "THE JONAS BROTHERS", "pct": 18.8 }
+    ]
+  },
+  {
+    "date": "Saturday, July 4, 2026",
+    "question": "WHAT SHOULD BE THE NEXT OLYMPIC SPORT?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "OFFICE CHAIR LUGE", "pct": 44.2 },
+      { "text": "BIG AIR YODELING", "pct": 10.6 },
+      { "text": "100M DART JUGGLING", "pct": 16.2 },
+      { "text": "SYNCHRONIZED APPLE BOBBING", "pct": 28.9 }
+    ]
+  },
+  {
+    "date": "Saturday, July 4, 2026",
+    "question": "WHOSE OUTFIT WOULD YOU LEAST LIKE TO WEAR TO A JOB INTERVIEW?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "CLOWN", "pct": 49.6 },
+      { "text": "PRO WRESTLER", "pct": 31.8 },
+      { "text": "ROCK STAR", "pct": 2.2 },
+      { "text": "HOWIE", "pct": 16.2 }
+    ]
+  },
+  {
     "date": "Friday, July 3, 2026",
     "question": "WHAT'S THE MOST SATISFYING THING TO DO FOR NO REASON?",
     "category": "Hypothetical & Silly",
