@@ -1300,5 +1300,36 @@
         "explanation": "Sabrina Carpenter's song \"Espresso\" shares its name with the short, strong coffee shot."
       }
     ]
+  },
+  {
+    "date": "Saturday, July 4, 2026",
+    "secretItem": "MAZE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "GET OUTTA HERE!",
+        "explanation": "This is what you might shout while trying to escape a maze."
+      },
+      {
+        "clueNumber": 2,
+        "text": "THAT'S WHERE I DRAW THE LINE",
+        "explanation": "You trace a line through a maze's paths to solve it."
+      },
+      {
+        "clueNumber": 3,
+        "text": "A TO Z IN THE MIDDLE OF ME",
+        "explanation": "The word MAZE has the letters A and Z, the start and end of the alphabet, in its middle."
+      },
+      {
+        "clueNumber": 4,
+        "text": "IF YOU'RE LOST, YOU'VE LOST",
+        "explanation": "Getting lost while navigating a maze means you haven't solved it."
+      },
+      {
+        "clueNumber": 5,
+        "text": "MANY PATHS ABOUT, YOU MUST FIND YOUR WAY OUT",
+        "explanation": "A maze is full of branching paths, and the goal is to find your way out."
+      }
+    ]
   }
 ]
