@@ -61986,5 +61986,667 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Friday, July 3, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "CONNECT FOUR",
+      "THE BEATLES"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "CONNECT FOUR",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "DROP ME A LINE",
+          "ATTACH AN IV",
+          "GREAT WAY FOR KIDS TO PLAY THE SLOTS",
+          "AFTER YOU WIN, YOU DEAL WITH THE FALLOUT",
+          "GAME WHERE YOU TAKE RISKS TO LINK A QUARTET OF DISCS"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "THE BEATLES",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "MADE SOMETHING SPECIAL",
+          "THE SPELLING IS A FEATURE, NOT A BUG",
+          "THE BRITISH ARE COMING!",
+          "WHY DID THE FOUR MUSICAL SUPERSTARS CROSS THE ROAD?",
+          "JOHN, PAUL, GEORGE & RINGO: WHAT'S THE BAND? BINGO!"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, hey, didn't see you there. Was just checking on the brats and snags."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live! I'm your host, Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Happy birthday, America!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We are celebrating the 4th of July a day early around here, because we have a lot to celebrate ourselves."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "While the country is turning 250 tomorrow, we're turning 150 today!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Today is our 150th episode, and we've got a lot to celebrate."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Our incredible crew has done such a good job on this show from day one — applaud for yourselves! Of all things not to applaud for."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone's done an incredible job, and we're excited to keep it going."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We've got some hot dogs on the grill right here — ooh, hot, hot, hot."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We also have some CGI fireworks — very quiet fireworks."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And we got $15,000 in the cooler right here, ready to go. Wow, we have so much money in here, that is a lot."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And it could all be yours very soon."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The only thing stopping you from taking all this money is the rules, and wouldn't you know it, here they are."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds. Each round has one puzzle. Each puzzle has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round we're gonna load our crystal ball with a secret item — it could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues, but remember the clues are written like riddles, they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you'll get 20 seconds to submit an answer, but you only get one best guess per round — not one per clue, one per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So make sure you're confident before you lock it in. It has to be the exact answer, and we do not accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line: you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of $2,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And everyone that gets it right on the third earliest clue splits the bronze pot of $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk, let's win some money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is worth 7,500 buckaroos. Let us load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh man, if you guys ever get a chance to fan yourselves with thousands of dollars, take it — just is nice. Helps that they were in a cooler."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Fun crystal ball today. I wish you the best of luck."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: Drop me a line. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Drop you a line, drop me a line. Just because I'm playing with you guys — again, I do not know the answers to these, so I'm with you guys right now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Drop me a line, what does that make me think of?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You know what happens, all these ideas go through my head and they're for puzzles we've already done, so it can't be that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "TrulyNachos, not to be confused with those fake nachos, said singles bar — drop me a line, like a phone number? Got it, like a pickup line."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, drop me a line — hey, did it hurt when you just fell down those stairs? Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "RoyalCoconut207 said M&M — drop me a line, famous for his very fast lines. Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: Attach an IV. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Attach an IV — drop me a line, attach an IV, I feel like they can both be kinda the same, they're both a line that is being dropped into you in this situation."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up. Attach an IV — SaltyBanker567 said hangover."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Attach an IV, yeah, you might have to after a good hangover get an IV — that's how the wealthy deal with it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number three: Great way for kids to play the slots. I guess this is America on its birthday."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now. Great way for kids to play the slots — got 14, 13, 12, come on, we got this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I feel like I should know this one, it's one of those clues that's long enough to give me a false sense of confidence."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Three seconds left. Time is up. Great way for kids to play the slots — DandyMandy went about as literal as they could and said fake ID. That's fantastic, that's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four might narrow it down: After you win, you deal with the fallout. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great way for kids to play the slots — after you win you deal with the fallout, I know what it is, I got it on four, that's pretty good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue, oh sorry, I'm so excited I almost just went past it — I was like, hey, mine now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After you win you deal with the fallout — InfantWeasel208 said bowling, man, definitely after you deal with the fallout."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And potato sack race from DaringSlug, yeah, you fall out at the end of the race. These are great guesses, are they as good as what I would have put? No, because I figured it out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue five: Game where you take risks to link a quartet of discs. 20 seconds, your final 20 seconds for this first puzzle, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I was correct, I got it right indeed. Game where you take risks to link a quartet of discs — drop me a line, attach an IV, great way for kids to play the slots, after you win you deal with the fallout, that's where I got it, and then game where you take risks to link a quartet of discs."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Let us find out what is inside the crystal ball. The correct answer was CONNECT FOUR."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “GAME WHERE YOU TAKE RISKS TO LINK A QUARTET OF DISCS.” Making four in a row is what it's all about. 2,515 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “AFTER YOU WIN, YOU DEAL WITH THE FALLOUT.” At the end of the game you move the little thing and all of it falls out. 824 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “GREAT WAY FOR KIDS TO PLAY THE SLOTS.” Dropping the tokens into the slots is the game. 1,470 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “ATTACH AN IV.” IV is the Roman numeral for four. 48 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “DROP ME A LINE.” You drop tokens into a grid to line them up. 3 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 3 winners at $1,000.00 each. Silver (Clue 2): 48 winners at $52.08 each. Bronze (Clue 3): 1,470 winners at $1.36 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, so, ah look at that, whatever, thing, get out of here."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, let's take a look at our clues to find out who's taking home the money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll start with clue number five, game where you take risks to link a quartet of discs — well making four in a row is what it's all about."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,781 guesses, 2,515 people got it right, well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four, after you win, you deal with the fallout — this is where I got it, because at the end of the game you move the little thing and all of it falls out and then you reset."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,575 guesses, 824 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three, great way for kids to play the slots — well dropping the tokens into the slots is the game, and it's fun for all ages."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "5,083 guesses, 1,470 got it right, meaning 1,470 people already in the money. The question is how much."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two, attach an IV — IV is four in Roman numerals, would have helped to pay attention in school, in that history class."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "2,899 guesses, exactly 48 people got it right. Very well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one, drop me a line, you drop tokens into the grid to line them up and therefore you win. The question is how many people are winning on clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, if it's you, I hope you're filming yourself, because 3,731 guesses, only three people got it right! Which feels like a huge letdown because it should have been four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to those three people, each going home with $1,000 on July 4th, man oh man that is a lot of hot dogs. You're going to have yourself a weekend."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to I love giraffes, hiren, and then there's a bunch of people on silver going home with $52 each, and then bronze you guys are going home with a cool dollar 36. Well done."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round two is on its way, but first I have a special treat for you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We have the best time bringing you Best Guess Live every day, so in honor of our 150th episode, we put together some of our favorite moments from the show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, just like the puzzles lately, I have no idea what I'm about to see, so we're going in this together, check it out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“The Best Guess Live team have an incredible gift for you, but I promise I would not say anything until the end of the show, okay? Cause I'm literally freaking out, I want to tell you, but I promise.”"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Anyway, I'm your host Hunter Million.” Dang it, no, sorry that was the whole thing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Oh you blew it. You blew it. Make me dead.”"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“You know what, it's water you liars. Don't, don't do that to me. I was ready to really mess up this second puzzle.”"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Well I shouldn't be telling you this, but what happens at the end is that guy dies.”"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, do you guys hear him? He just told us how Stranger Things ends. Oh, those poor kids."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's move on to our final clue, clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Can be very nosy. I've been told I can be very earsy.” Don't do that. Don't do that. We were supposed to have all this done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Why does the ball go so fast? Let's load the crystal ball, Neal. Neal, that's your cue, load the ball. Neal. Neal.”"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Reveal, look at Neal work.” Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Clue number three, the truth hurts.” SpicyTuna626 said mirror. WinnieBadger569 said hair. Really? Really?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Extremely farsighted in one eye. Anthony Anderson! I got it, it's B, 20 seconds on the clock.”"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“The answer, the correct answer is, you're gonna win, you're gonna win.”"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Justin, please, you fell for this, you deserve to lose. It's a table leaf.”"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is the best set decoration we've ever done, this feels so good right now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Who is my favorite answer. We really went all out today.”"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "“Goodbye. Goodbye. Oh, we've had some good times.”"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I also noticed that Howie got to eat a lot of fun stuff while I had to rake leaves this whole time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, it's been a great 150 episodes and it's just going to keep getting better."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's wrap up this special occasion by playing round two for another $7,500. Prize pots are the same, 3,000 for gold, 2,500 for silver, 2,000 for bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball. Alright, there it is. A cluster of July 4th celebrations around our — cluster was half the word I was going to say."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to our first clue. Clue one: Made something special. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Made something special. Alright, I got no idea what this is, but I'm excited."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And looking back at Best Guess Live, it's a sweet thing, it's been fun."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thank you guys so much for playing along with us and being such big parts of our lives for the last 150 episodes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A lot of people here, a lot of crew here worked really hard to make this a fun show for you, and we appreciate you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Made something special — NimbleGramps said Eli Whitney. Who's Eli Whitney? Now that I get it, great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "WholeDishes617 said grill — made something special this weekend, that's a great opportunity to do that this weekend."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: The spelling is a feature, not a bug. Interesting. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The spelling is a feature, not a bug — made something special. I have an idea for what I think it is, but it's too obvious, I gotta rule that out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If it's too obvious on clue two, I know I'm not that smart. Yeah, in fact I just saw my answer come up, meaning it's not my answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "FrolickingFrogs345 said Tori — is this Tori Spelling? At least we're getting closer to like this generation's references."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "SweetSpot from Washington said Bee, which is what I was thinking — is maybe a spelling bee, and what it made special was spelling. It's not correct, unfortunately."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three: The British are coming! 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh, the British are coming! Wait, made something special, the spelling is a feature, not a bug. Not a bug. Something."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think I know what it is, I think I got a guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "MoltenCandy698 said Benedict Cumberbatch — foiled again, that was my guess. No it wasn't my guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "LittleBug9935 said tea, as in the Boston Tea Party, it's a great guess, we'll see if it holds for this next one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue four: Why did the four musical superstars cross the road? Ah, now I know what it is, I think a lot of you do too. 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, I was wrong two to eight times in this puzzle, but I have it now. And the reference might be older than Tori Spelling and Eli Whitney."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Times up. Why did the four musical superstars cross the road? Daniel Doofus wasted their guess entirely on this — I will say that, but it was a good waste."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Why did the four musical superstars cross the road to get to the other groupie — they finished what wasn't even a joke and wasted their chance at thousands of dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: John, Paul, George and Ringo, what's the band? Bingo! 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You guys should have this. I actually think this will be harder than, let me think, I guess that 80 percent of people are going to get it right, that's my guess. So four-fifths are going to get it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm already seeing some wrong guesses come in, this is so funny. John, Paul, George and Ringo, what's the band? Bingo!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Katie1130 said ACDC — famously British people crossing a road."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was THE BEATLES!"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “JOHN, PAUL, GEORGE & RINGO: WHAT'S THE BAND? BINGO!” Those are the four members of the band. 1,251 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “WHY DID THE FOUR MUSICAL SUPERSTARS CROSS THE ROAD?” They crossed Abbey Road on their famous album cover. 6,275 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “THE BRITISH ARE COMING!” They were the landmark group of the British invasion. 1,106 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “THE SPELLING IS A FEATURE, NOT A BUG.” Their name sounds like a bug but is spelled with an A. 267 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “MADE SOMETHING SPECIAL.” They made many special hit songs. 11 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 11 winners at $272.72 each. Silver (Clue 2): 267 winners at $9.36 each. Bronze (Clue 3): 1,106 winners at $1.80 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What better way to celebrate July 4th than with The Beatles!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A lot of people don't know this, The Beatles is the whole reason for the Boston Tea Party, that's why we revolted."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number five: John, Paul, George and Ringo, what's that band? Bingo, well they are all four members of The Beatles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "1,708 guesses, 1,251 got it right, puts it in at about 60, 70 percent correct, alright. You guys, you did worse than I thought."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four, why did the four musical superstars cross the road? I mean this was a gimme for a lot of people, and it's clear because on this one a lot of people got it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They famously crossed Abbey Road on their album with the same name. 7,980 guesses, 6,275 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The British are coming was clue number three. They were the landmark group of the British invasion of the 1960s."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "4,829 guesses, 1,106 got it right. Really well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The spelling is a feature, not a bug — looking back on this one I should have had it. Their name, which sounds like Beatles, which is a type of bug, is actually spelled — it doesn't matter."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, on this one I thought it was America's National Anthem, and the acronym was ANT, and it made America special, and you guys went no, we're big fans of the Brits on America's day."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Spelling is a feature not a bug, 2,940 guesses, 267 people got it right. Well done, they really threw you guys with this British thing, it's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The question is on clue number one, did anyone get it? Made something special, one of their many number one hits was the song Something."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They made it special, they made a lot of things special, they specifically made Something special."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,424 guesses, and out of those, exactly 11 people got it right! Congratulations to the 11 people going home with $272 each for this beautiful July 4th."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Evzy, scrawny Ben, Auburn Lagoon, Laylor, and seven more."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then spelling is not a feature, silver, 267 people going home with just under $10, and then a bunch of bronze winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is it for this episode of Best Guess Live. Congratulations again to all of our winners, we're here every weekday at 8:30 Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Have an incredible and a safe 4th of July weekend. Don't go driving if you shouldn't, have fun, keep your hands away from fireworks — all the, wow, I'm getting old, that's my first thought."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, come back Monday, we'll see you there, bye bye!"
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [FISHING, ARCADE, FISH, FISHING POLE, FIREWORKS]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [THE BEETLES, TEA, FIREWORKS, BEETLES, BEE]"
+          }
+        ]
+      }
+    ]
   }
 ]

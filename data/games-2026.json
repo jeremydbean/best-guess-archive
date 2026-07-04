@@ -14497,5 +14497,119 @@
         "explanation": "A BLT without a tomato would just be a bacon and lettuce sandwich, which isn't the famous sandwich."
       }
     ]
+  },
+  {
+    "date": "Friday, July 3, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "CONNECT FOUR",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 3,
+    "silverWinners": 48,
+    "bronzeWinners": 1470,
+    "totalWinners": 1521,
+    "goldPayout": 1000.0,
+    "silverPayout": 52.08,
+    "bronzePayout": 1.36,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "I love giraffes, hiren",
+    "wrongGuesses": "FISHING, ARCADE, FISH, FISHING POLE, FIREWORKS",
+    "clues": [
+      {
+        "number": 1,
+        "text": "DROP ME A LINE",
+        "correct": "3",
+        "guesses": "3,731 🥇",
+        "explanation": "You drop tokens into a grid to line them up."
+      },
+      {
+        "number": 2,
+        "text": "ATTACH AN IV",
+        "correct": "48",
+        "guesses": "2,899 🥈",
+        "explanation": "IV is the Roman numeral for four."
+      },
+      {
+        "number": 3,
+        "text": "GREAT WAY FOR KIDS TO PLAY THE SLOTS",
+        "correct": "1,470",
+        "guesses": "5,083 🥉",
+        "explanation": "Dropping the tokens into the slots is the game."
+      },
+      {
+        "number": 4,
+        "text": "AFTER YOU WIN, YOU DEAL WITH THE FALLOUT",
+        "correct": "824",
+        "guesses": "3,575",
+        "explanation": "At the end of the game you move the little thing and all of it falls out."
+      },
+      {
+        "number": 5,
+        "text": "GAME WHERE YOU TAKE RISKS TO LINK A QUARTET OF DISCS",
+        "correct": "2,515",
+        "guesses": "3,781",
+        "explanation": "Making four in a row is what it's all about."
+      }
+    ]
+  },
+  {
+    "date": "Friday, July 3, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "THE BEATLES",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 11,
+    "silverWinners": 267,
+    "bronzeWinners": 1106,
+    "totalWinners": 1384,
+    "goldPayout": 272.72,
+    "silverPayout": 9.36,
+    "bronzePayout": 1.8,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Evzy, scrawny Ben, Auburn Lagoon, Laylor",
+    "wrongGuesses": "THE BEETLES, TEA, FIREWORKS, BEETLES, BEE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "MADE SOMETHING SPECIAL",
+        "correct": "11",
+        "guesses": "3,424 🥇",
+        "explanation": "They made many special hit songs."
+      },
+      {
+        "number": 2,
+        "text": "THE SPELLING IS A FEATURE, NOT A BUG",
+        "correct": "267",
+        "guesses": "2,940 🥈",
+        "explanation": "Their name sounds like a bug but is spelled with an A."
+      },
+      {
+        "number": 3,
+        "text": "THE BRITISH ARE COMING!",
+        "correct": "1,106",
+        "guesses": "4,829 🥉",
+        "explanation": "They were the landmark group of the British invasion."
+      },
+      {
+        "number": 4,
+        "text": "WHY DID THE FOUR MUSICAL SUPERSTARS CROSS THE ROAD?",
+        "correct": "6,275",
+        "guesses": "7,980",
+        "explanation": "They crossed Abbey Road on their famous album cover."
+      },
+      {
+        "number": 5,
+        "text": "JOHN, PAUL, GEORGE & RINGO: WHAT'S THE BAND? BINGO!",
+        "correct": "1,251",
+        "guesses": "1,708",
+        "explanation": "Those are the four members of the band."
+      }
+    ]
   }
 ]
