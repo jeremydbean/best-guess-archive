@@ -1,5 +1,16 @@
 [
   {
+    "date": "Sunday, July 5, 2026",
+    "question": "WHAT SHOULD BE THE NEXT GREAT NATIONAL HOLIDAY?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "SLEEP ALL DAY DAY", "pct": 54.5 },
+      { "text": "FREAKY FRENCH FRY DAY", "pct": 13.2 },
+      { "text": "SPANXGIVING", "pct": 6.9 },
+      { "text": "TUESDAY", "pct": 25.2 }
+    ]
+  },
+  {
     "date": "Saturday, July 4, 2026",
     "question": "WHICH OF THESE IS YOUR FAVORITE TRIO?",
     "category": "Pop Culture Favorites",

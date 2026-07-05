@@ -1331,5 +1331,36 @@
         "explanation": "A maze is full of branching paths, and the goal is to find your way out."
       }
     ]
+  },
+  {
+    "date": "Sunday, July 5, 2026",
+    "secretItem": "SUGAR",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "IT'S A PIECE OF CAKE",
+        "explanation": "Cake is loaded with sugar, and the phrase also means something easy."
+      },
+      {
+        "clueNumber": 2,
+        "text": "WORKS WITH MAMAS, DADDIES, AND BABIES",
+        "explanation": "Sugar pairs up in sugar mama, sugar daddy, and sugar baby."
+      },
+      {
+        "clueNumber": 3,
+        "text": "CHEAP ENERGY CRYSTALS",
+        "explanation": "Sugar crystals are a cheap, quick source of energy."
+      },
+      {
+        "clueNumber": 4,
+        "text": "THAT'S SO SWEET!",
+        "explanation": "Sugar is the definition of sweet."
+      },
+      {
+        "clueNumber": 5,
+        "text": "THESE TASTY GRAINS COME PLAINLY FROM THE CANES",
+        "explanation": "Plain sugar is refined straight from sugar cane."
+      }
+    ]
   }
 ]
