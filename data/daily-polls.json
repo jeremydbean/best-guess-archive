@@ -1,6 +1,28 @@
 [
   {
     "date": "Sunday, July 5, 2026",
+    "question": "HARDEST THING TO EXPLAIN TO A TIME TRAVELER FROM 1776?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "NETFLIX AND CHILL", "pct": 12.0 },
+      { "text": "HAMILTON IS A MUSICAL?", "pct": 10.3 },
+      { "text": "VIRTUAL REALITY", "pct": 29.9 },
+      { "text": "6-7", "pct": 47.7 }
+    ]
+  },
+  {
+    "date": "Sunday, July 5, 2026",
+    "question": "WHICH FORMER BGL ANSWER ARE YOU THE MOST LIKELY TO USE THE DAY AFTER THE FOURTH OF JULY?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "BAND-AID", "pct": 36.6 },
+      { "text": "TOUPEE", "pct": 4.4 },
+      { "text": "CRUTCHES", "pct": 13.7 },
+      { "text": "MARGARITA", "pct": 45.2 }
+    ]
+  },
+  {
+    "date": "Sunday, July 5, 2026",
     "question": "WHAT SHOULD BE THE NEXT GREAT NATIONAL HOLIDAY?",
     "category": "Hypothetical & Silly",
     "options": [

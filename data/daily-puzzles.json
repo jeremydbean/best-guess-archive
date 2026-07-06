@@ -1362,5 +1362,36 @@
         "explanation": "Plain sugar is refined straight from sugar cane."
       }
     ]
+  },
+  {
+    "date": "Monday, July 6, 2026",
+    "secretItem": "PICNIC",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "ALWAYS ON THE GO",
+        "explanation": "A picnic is a meal taken on an outing, away from home."
+      },
+      {
+        "clueNumber": 2,
+        "text": "SPREAD OUT ON THE GROUND",
+        "explanation": "You spread a picnic blanket out on the ground."
+      },
+      {
+        "clueNumber": 3,
+        "text": "PLEASE DON'T GET ANTSY",
+        "explanation": "A pun on staying patient and the ants that always show up at a picnic."
+      },
+      {
+        "clueNumber": 4,
+        "text": "HAS A BLANKET COVERAGE POLICY",
+        "explanation": "A picnic blanket covers the ground where you sit and eat."
+      },
+      {
+        "clueNumber": 5,
+        "text": "TAKE YOUR FOOD FOR A RIDE AND EAT OUTSIDE",
+        "explanation": "A picnic means packing up food to eat outdoors."
+      }
+    ]
   }
 ]

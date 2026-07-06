@@ -1,8 +1,13 @@
 # AI Handoff
 
-Last updated: 2026-07-05 (session end)
+Last updated: 2026-07-06 (session end)
 
-## Most Recent Changes (2026-07-05)
+## Most Recent Changes (2026-07-06)
+
+- **Daily puzzle added — Monday, July 6, 2026: PICNIC**: Appended to `data/daily-puzzles.json` (now 45 entries). Screenshot's answer label showed "PICNIC" directly (answered on clue #3, wrong). Clues: ALWAYS ON THE GO / SPREAD OUT ON THE GROUND / PLEASE DON'T GET ANTSY / HAS A BLANKET COVERAGE POLICY / TAKE YOUR FOOD FOR A RIDE AND EAT OUTSIDE. `npm run audit` passes.
+- **2 new polls added, filed under Sunday, July 5, 2026**: Appended to `data/daily-polls.json` (now 17 entries, at the top — positioned above the previously-logged "next great national holiday" July 5 entry since they appeared newer in the app's list). (1) "Hardest thing to explain to a time traveler from 1776?" (Hypothetical & Silly) — NETFLIX AND CHILL 12%, HAMILTON IS A MUSICAL? 10.3%, VIRTUAL REALITY 29.9%, 6-7 47.7% (crowd pick). (2) "Which former BGL answer are you the most likely to use the day after the Fourth of July?" (Show Trivia) — BAND-AID 36.6%, TOUPEE 4.4%, CRUTCHES 13.7%, MARGARITA 45.2% (crowd pick). A third poll ("If you joined a 4th of July eating contest, which food would you prefer?") was visible but not expanded — no data yet, pending a future screenshot. `npm run audit` passes.
+
+## Previous Changes (2026-07-05)
 
 - **Daily puzzle added — Sunday, July 5, 2026: SUGAR**: Appended to `data/daily-puzzles.json` (now 44 entries). Screenshot's answer label showed "SUGAR" directly (answered on clue #3, wrong). Clues: IT'S A PIECE OF CAKE / WORKS WITH MAMAS, DADDIES, AND BABIES (sugar mama/daddy/baby) / CHEAP ENERGY CRYSTALS / THAT'S SO SWEET! / THESE TASTY GRAINS COME PLAINLY FROM THE CANES. `npm run audit` passes.
 - **New poll added — "What should be the next great national holiday?"**: Appended to `data/daily-polls.json` (now 15 entries, at the top), filed under Sunday, July 5, 2026 (appeared above the July 4 entries in the app's newest-first list), category "Hypothetical & Silly". Options: SLEEP ALL DAY DAY 54.5% (crowd pick), FREAKY FRENCH FRY DAY 13.2%, SPANXGIVING 6.9%, TUESDAY 25.2%. `npm run audit` passes.
