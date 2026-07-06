@@ -1,5 +1,27 @@
 [
   {
+    "date": "Monday, July 6, 2026",
+    "question": "WHICH OF THESE DOES A WHALE'S BLOWHOLE MOST SOUND LIKE?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "FOGHORN", "pct": 27.1 },
+      { "text": "WHOOPEE CUSHION", "pct": 7.2 },
+      { "text": "MOUTHWASH SWISH", "pct": 8.7 },
+      { "text": "PFFFFFFSHHHMMMM", "pct": 56.8 }
+    ]
+  },
+  {
+    "date": "Monday, July 6, 2026",
+    "question": "WHICH OF THESE \"COLORFUL\" CELEBRITIES IS MOST COLORFUL?",
+    "category": "Pop Culture Favorites",
+    "options": [
+      { "text": "JACK BLACK", "pct": 39.2 },
+      { "text": "BETTY WHITE", "pct": 34.1 },
+      { "text": "JAMES BROWN", "pct": 14.0 },
+      { "text": "AXL ROSE", "pct": 12.5 }
+    ]
+  },
+  {
     "date": "Sunday, July 5, 2026",
     "question": "HARDEST THING TO EXPLAIN TO A TIME TRAVELER FROM 1776?",
     "category": "Hypothetical & Silly",
