@@ -3208,6 +3208,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Monday, July 6, 2026",
+      "secretItem": "FIRE HYDRANT",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 706,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, July 6, 2026",
+      "secretItem": "JUSTIN BIEBER",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 5948,
+      "clueCount": 5,
+      "goldClue": 2,
+      "silverClue": 3,
+      "bronzeClue": 4
     }
   ]
 }
