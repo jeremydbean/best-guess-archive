@@ -1,8 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-07-06 (session end)
+Last updated: 2026-07-07 (session end)
 
-## Most Recent Changes (2026-07-06)
+## Most Recent Changes (2026-07-07)
+
+- **Daily puzzle added — Tuesday, July 7, 2026: ERASER**: Appended to `data/daily-puzzles.json` (now 46 entries). Screenshot's answer label glitched to "BERMUDA TRIANGLE" (answered on clue #2), but all five clues point to ERASER and the user confirmed it. Clues: THAT'S NOT THE POINT / FAMOUS FOR ITS DISAPPEARING ACT / GET THE WORD OUT / WRITING TIP FOR THE ERROR-PRONE / PINK PENCIL PART FOR WHEN YOU NEED TO RESTART. `npm run audit` passes.
+
+## Previous Changes (2026-07-06)
 
 - **Daily puzzle added — Monday, July 6, 2026: PICNIC**: Appended to `data/daily-puzzles.json` (now 45 entries). Screenshot's answer label showed "PICNIC" directly (answered on clue #3, wrong). Clues: ALWAYS ON THE GO / SPREAD OUT ON THE GROUND / PLEASE DON'T GET ANTSY / HAS A BLANKET COVERAGE POLICY / TAKE YOUR FOOD FOR A RIDE AND EAT OUTSIDE. `npm run audit` passes.
 - **2 new polls added, filed under Sunday, July 5, 2026**: Appended to `data/daily-polls.json` (now 17 entries, at the top — positioned above the previously-logged "next great national holiday" July 5 entry since they appeared newer in the app's list). (1) "Hardest thing to explain to a time traveler from 1776?" (Hypothetical & Silly) — NETFLIX AND CHILL 12%, HAMILTON IS A MUSICAL? 10.3%, VIRTUAL REALITY 29.9%, 6-7 47.7% (crowd pick). (2) "Which former BGL answer are you the most likely to use the day after the Fourth of July?" (Show Trivia) — BAND-AID 36.6%, TOUPEE 4.4%, CRUTCHES 13.7%, MARGARITA 45.2% (crowd pick). A third poll ("If you joined a 4th of July eating contest, which food would you prefer?") was visible but not expanded — no data yet, pending a future screenshot. `npm run audit` passes.
