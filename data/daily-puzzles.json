@@ -1393,5 +1393,36 @@
         "explanation": "A picnic means packing up food to eat outdoors."
       }
     ]
+  },
+  {
+    "date": "Tuesday, July 7, 2026",
+    "secretItem": "ERASER",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "THAT'S NOT THE POINT",
+        "explanation": "An eraser is on the opposite end of a pencil from its sharpened point."
+      },
+      {
+        "clueNumber": 2,
+        "text": "FAMOUS FOR ITS DISAPPEARING ACT",
+        "explanation": "An eraser makes pencil marks disappear."
+      },
+      {
+        "clueNumber": 3,
+        "text": "GET THE WORD OUT",
+        "explanation": "An eraser gets rid of written words."
+      },
+      {
+        "clueNumber": 4,
+        "text": "WRITING TIP FOR THE ERROR-PRONE",
+        "explanation": "An eraser is the go-to tool for fixing writing mistakes."
+      },
+      {
+        "clueNumber": 5,
+        "text": "PINK PENCIL PART FOR WHEN YOU NEED TO RESTART",
+        "explanation": "The pink eraser at the end of a pencil lets you undo and start over."
+      }
+    ]
   }
 ]
