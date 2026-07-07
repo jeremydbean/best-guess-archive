@@ -14611,5 +14611,119 @@
         "explanation": "Those are the four members of the band."
       }
     ]
+  },
+  {
+    "date": "Monday, July 6, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "FIRE HYDRANT",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 7,
+    "bronzeWinners": 698,
+    "totalWinners": 706,
+    "goldPayout": 3000,
+    "silverPayout": 357.14,
+    "bronzePayout": 2.86,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "CaliBlonde",
+    "wrongGuesses": "AIRPORT, AIRCRAFT CARRIER, CARRIER, AMAZON, DOORDASH",
+    "clues": [
+      {
+        "number": 1,
+        "text": "24/7 DELIVERY SERVICE",
+        "correct": "1",
+        "guesses": "4,847 🥇",
+        "explanation": "A fire hydrant delivers water anytime you need it."
+      },
+      {
+        "number": 2,
+        "text": "BASE FOR FIGHTER JETS",
+        "correct": "7",
+        "guesses": "3,891 🥈",
+        "explanation": "Fire hydrants provide firefighters with jets of water to fight fires."
+      },
+      {
+        "number": 3,
+        "text": "#1 CHOICE FOR DOGS",
+        "correct": "698",
+        "guesses": "4,156 🥉",
+        "explanation": "Dogs love to go number one on a fire hydrant."
+      },
+      {
+        "number": 4,
+        "text": "LIFE SAVER THAT PERFORMS WELL UNDER PRESSURE",
+        "correct": "503",
+        "guesses": "2,647",
+        "explanation": "A fire hydrant saves lives by providing pressurized water."
+      },
+      {
+        "number": 5,
+        "text": "CONNECTION POINT TO THE WATER SUPPLY WHEN A BLAZE IS NEARBY",
+        "correct": "5,815",
+        "guesses": "7,102",
+        "explanation": "A fire hydrant is a connection point to a water supply when there is a fire."
+      }
+    ]
+  },
+  {
+    "date": "Monday, July 6, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "JUSTIN BIEBER",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 32,
+    "silverWinners": 265,
+    "bronzeWinners": 5651,
+    "totalWinners": 5948,
+    "goldPayout": 93.75,
+    "silverPayout": 9.43,
+    "bronzePayout": 0.35,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Pen2489",
+    "wrongGuesses": "WAVE, GOOGLE, LOBSTER, SHRIMP, TIGER WOODS",
+    "clues": [
+      {
+        "number": 1,
+        "text": "FOUND IN THE SURF",
+        "correct": "0",
+        "guesses": "3,977",
+        "explanation": "Justin Bieber was discovered on the internet by someone surfing the web."
+      },
+      {
+        "number": 2,
+        "text": "DELIVERED A PUBLIC APOLOGY",
+        "correct": "32",
+        "guesses": "2,527 🥇",
+        "explanation": "One of Justin Bieber's biggest songs is called Sorry, which serves as a public apology."
+      },
+      {
+        "number": 3,
+        "text": "A MILLENNIAL BABY BOOMER",
+        "correct": "265",
+        "guesses": "4,039 🥈",
+        "explanation": "He is a millennial whose career boomed with his song Baby."
+      },
+      {
+        "number": 4,
+        "text": "HE PUT THE B IN BELIEVER",
+        "correct": "5,651",
+        "guesses": "8,571 🥉",
+        "explanation": "His fans call themselves Beliebers."
+      },
+      {
+        "number": 5,
+        "text": "THIS CANADIAN POP SENSATION IS NOW A BALDWIN RELATION",
+        "correct": "2,441",
+        "guesses": "3,599",
+        "explanation": "He famously married Hailey Baldwin."
+      }
+    ]
   }
 ]
