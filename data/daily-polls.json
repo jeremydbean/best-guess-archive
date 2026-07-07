@@ -1,6 +1,17 @@
 [
   {
     "date": "Monday, July 6, 2026",
+    "question": "WHICH OF THESE PEOPLE WOULD YOU TIP TO MAKE THEM *STOP* WORKING?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "GARDENER WITH LEAF BLOWER", "pct": 9.4 },
+      { "text": "JACKHAMMER OPERATOR", "pct": 34.2 },
+      { "text": "TELEMARKETER", "pct": 42.6 },
+      { "text": "TIKTOK INFLUENCER", "pct": 13.6 }
+    ]
+  },
+  {
+    "date": "Monday, July 6, 2026",
     "question": "WHICH OF THESE DOES A WHALE'S BLOWHOLE MOST SOUND LIKE?",
     "category": "Hypothetical & Silly",
     "options": [
