@@ -1,8 +1,13 @@
 # AI Handoff
 
-Last updated: 2026-07-07 (session end)
+Last updated: 2026-07-08 (session end)
 
-## Most Recent Changes (2026-07-07)
+## Most Recent Changes (2026-07-08)
+
+- **Daily puzzle added — Wednesday, July 8, 2026: BLIND DATE**: Appended to `data/daily-puzzles.json` (now 47 entries). Screenshot's answer label showed "BLIND DATE" directly (answered on clue #3, wrong). Clues: STRANGER THING / A BIT OF A FIXER-UPPER / PARTY OF TWO...AND IT'S A SURPRISE PARTY / LIKE THREE FAMOUS MICE AND THE THIRD OF MAY, LET'S SAY / A ROMANTIC RENDEZVOUS WITH SOMEONE YOU'VE YET TO VIEW. `npm run audit` passes.
+- **2 new polls added, filed under Tuesday, July 7, 2026**: Appended to `data/daily-polls.json` (now 22 entries, at the top — both appeared above all previously-logged July 6 entries in the app's newest-first list, dated to match the July 7 ELBOW/UNICORN episode day). (1) "Which of these automatic devices is most annoying when broken in a public restroom?" (Hypothetical & Silly) — FAUCET 22.8%, SOAP DISPENSER 16.2%, HAND DRYER 14.3%, FLUSHER 46.6% (crowd pick). (2) "What is the best mashup name for Howie Mandel & Hunter March?" (Show Trivia) — HUNNIE MANCH 40% (crowd pick), HOWTER MARDEL 16.3%, HOW-MAR MAN 10.9%, HU-MAN 32.5%. A third poll ("What would you like to have spray out of a fire hydrant, besides water?" — a callback to the July 6 FIRE HYDRANT daily) was visible but not expanded — no data yet. `npm run audit` passes.
+
+## Previous Changes (2026-07-07)
 
 - **Daily puzzle added — Tuesday, July 7, 2026: ERASER**: Appended to `data/daily-puzzles.json` (now 46 entries). Screenshot's answer label glitched to "BERMUDA TRIANGLE" (answered on clue #2), but all five clues point to ERASER and the user confirmed it. Clues: THAT'S NOT THE POINT / FAMOUS FOR ITS DISAPPEARING ACT / GET THE WORD OUT / WRITING TIP FOR THE ERROR-PRONE / PINK PENCIL PART FOR WHEN YOU NEED TO RESTART. `npm run audit` passes.
 - **July 7, 2026 episode imported — ELBOW (R1) and UNICORN (R2), host Hunter March** (both `format: "v2"`, standard tiers gold/silver/bronze = clues 1/2/3). Appended to `data/games-2026.json` (now 303 games) + full transcript (now 152). R1 ELBOW: gold Clue 1 (GETS TO THE POINT) 1 @ $3,000.00 / silver Clue 2 (STRICTLY OFF THE TABLE) 1,601 @ $1.56 / bronze Clue 3 (HAS A HILARIOUS NEIGHBOR) 1,952 @ $1.02, total 3,554. R2 UNICORN: gold Clue 1 (A RARE ONE) 137 @ $21.89 / silver Clue 2 (AN UPWARD SPIRAL) 511 @ $4.89 / bronze Clue 3 (SOME WEAR OVER A RAINBOW) 676 @ $2.95, total 1,324. All payout math verified clean on the first pass, no corrections needed. Winners: `CaringChives` (R1 gold, solo $3,000); `Grumpy1977, NickTurnel, SlimySpatula, SecretToad` (R2 gold, among others). Wrong guesses: R1 `PENCIL, KNIFE, PEN, ERASER, ARROW` (note: "ERASER" was also that day's daily-puzzle answer); R2 `TORNADO, STEAK, DNA, DIAMOND, TWISTER`. No promo/bonus this episode. Transcript was fairly thin (mostly clue-read/timer beats, minimal player-guess banter) as supplied — kept as given rather than padded. `npm run audit` passes 0/0.
