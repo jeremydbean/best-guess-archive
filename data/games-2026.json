@@ -14725,5 +14725,119 @@
         "explanation": "He famously married Hailey Baldwin."
       }
     ]
+  },
+  {
+    "date": "Tuesday, July 7, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "ELBOW",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 1601,
+    "bronzeWinners": 1952,
+    "totalWinners": 3554,
+    "goldPayout": 3000,
+    "silverPayout": 1.56,
+    "bronzePayout": 1.02,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "CaringChives",
+    "wrongGuesses": "PENCIL, KNIFE, PEN, ERASER, ARROW",
+    "clues": [
+      {
+        "number": 1,
+        "text": "GETS TO THE POINT",
+        "correct": "1",
+        "guesses": "5,779 🥇",
+        "explanation": "It is literally the point of your arm."
+      },
+      {
+        "number": 2,
+        "text": "STRICTLY OFF THE TABLE",
+        "correct": "1,601",
+        "guesses": "4,509 🥈",
+        "explanation": "It is bad manners in many houses to put your elbows on the dinner table."
+      },
+      {
+        "number": 3,
+        "text": "HAS A HILARIOUS NEIGHBOR",
+        "correct": "1,952",
+        "guesses": "4,019 🥉",
+        "explanation": "It is right next to your funny bone."
+      },
+      {
+        "number": 4,
+        "text": "VERY BONEY AND OFTEN THE PASTA IN CHEESE & MACARONI",
+        "correct": "5,558",
+        "guesses": "6,569",
+        "explanation": "Macaroni often uses elbow pasta."
+      },
+      {
+        "number": 5,
+        "text": "BET THE FARM ON THIS JOINT BETWEEN YOUR FORE & UPPER ARM",
+        "correct": "2,713",
+        "guesses": "3,102",
+        "explanation": "The elbow is the joint between your fore and upper arm."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, July 7, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "UNICORN",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 137,
+    "silverWinners": 511,
+    "bronzeWinners": 676,
+    "totalWinners": 1324,
+    "goldPayout": 21.89,
+    "silverPayout": 4.89,
+    "bronzePayout": 2.95,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Grumpy1977, NickTurnel, SlimySpatula, SecretToad",
+    "wrongGuesses": "TORNADO, STEAK, DNA, DIAMOND, TWISTER",
+    "clues": [
+      {
+        "number": 1,
+        "text": "A RARE ONE",
+        "correct": "137",
+        "guesses": "4,290 🥇",
+        "explanation": "Unicorns are famously rare."
+      },
+      {
+        "number": 2,
+        "text": "AN UPWARD SPIRAL",
+        "correct": "511",
+        "guesses": "5,196 🥈",
+        "explanation": "The horn on a unicorn spirals upwards."
+      },
+      {
+        "number": 3,
+        "text": "SOME WEAR OVER A RAINBOW",
+        "correct": "676",
+        "guesses": "6,603 🥉",
+        "explanation": "A lot of merchandise that features unicorns shows them flying over a rainbow."
+      },
+      {
+        "number": 4,
+        "text": "A RIDE WITH A HORN YOU CAN'T HONK",
+        "correct": "4,329",
+        "guesses": "5,824",
+        "explanation": "You can ride it but you can't honk its horn."
+      },
+      {
+        "number": 5,
+        "text": "MAGICAL, FLYING PONY WITH AN APPENDAGE THAT'S CONE-Y",
+        "correct": "2,685",
+        "guesses": "2,944",
+        "explanation": "There are not a lot of magical flying ponies with an appendage that's cone-y."
+      }
+    ]
   }
 ]
