@@ -1424,5 +1424,36 @@
         "explanation": "The pink eraser at the end of a pencil lets you undo and start over."
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 8, 2026",
+    "secretItem": "BLIND DATE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "STRANGER THING",
+        "explanation": "You're meeting a complete stranger."
+      },
+      {
+        "clueNumber": 2,
+        "text": "A BIT OF A FIXER-UPPER",
+        "explanation": "A blind date is often set up by someone else, hoping to fix you up."
+      },
+      {
+        "clueNumber": 3,
+        "text": "PARTY OF TWO...AND IT'S A SURPRISE PARTY",
+        "explanation": "It's just the two of you, and you don't know what your date looks like."
+      },
+      {
+        "clueNumber": 4,
+        "text": "LIKE THREE FAMOUS MICE AND THE THIRD OF MAY, LET'S SAY",
+        "explanation": "Both the Three Blind Mice and Goya's painting The Third of May involve blindness/blindfolds, like a blind date."
+      },
+      {
+        "clueNumber": 5,
+        "text": "A ROMANTIC RENDEZVOUS WITH SOMEONE YOU'VE YET TO VIEW",
+        "explanation": "A blind date is a romantic meetup with someone you haven't seen before."
+      }
+    ]
   }
 ]

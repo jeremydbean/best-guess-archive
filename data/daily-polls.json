@@ -1,5 +1,27 @@
 [
   {
+    "date": "Tuesday, July 7, 2026",
+    "question": "WHICH OF THESE AUTOMATIC DEVICES IS MOST ANNOYING WHEN BROKEN IN A PUBLIC RESTROOM?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "FAUCET", "pct": 22.8 },
+      { "text": "SOAP DISPENSER", "pct": 16.2 },
+      { "text": "HAND DRYER", "pct": 14.3 },
+      { "text": "FLUSHER", "pct": 46.6 }
+    ]
+  },
+  {
+    "date": "Tuesday, July 7, 2026",
+    "question": "WHAT IS THE BEST MASHUP NAME FOR HOWIE MANDEL & HUNTER MARCH?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "HUNNIE MANCH", "pct": 40.0 },
+      { "text": "HOWTER MARDEL", "pct": 16.3 },
+      { "text": "HOW-MAR MAN", "pct": 10.9 },
+      { "text": "HU-MAN", "pct": 32.5 }
+    ]
+  },
+  {
     "date": "Monday, July 6, 2026",
     "question": "WHICH OF THESE PEOPLE WOULD YOU TIP TO MAKE THEM *STOP* WORKING?",
     "category": "Hypothetical & Silly",
