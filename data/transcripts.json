@@ -63850,5 +63850,379 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, July 7, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "ELBOW",
+      "UNICORN"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "ELBOW",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "GETS TO THE POINT",
+          "STRICTLY OFF THE TABLE",
+          "HAS A HILARIOUS NEIGHBOR",
+          "VERY BONEY AND OFTEN THE PASTA IN CHEESE & MACARONI",
+          "BET THE FARM ON THIS JOINT BETWEEN YOUR FORE & UPPER ARM"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "UNICORN",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "A RARE ONE",
+          "AN UPWARD SPIRAL",
+          "SOME WEAR OVER A RAINBOW",
+          "A RIDE WITH A HORN YOU CAN'T HONK",
+          "MAGICAL, FLYING PONY WITH AN APPENDAGE THAT'S CONE-Y"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello, how are we?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm your host Hunter March and yesterday I gave you a mission to send us videos of the rules jazzed up a little bit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Let's start with clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gets to the point."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gets to the point."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Strictly off the table."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Has a hilarious neighbor."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Very boney and often the pasta in cheese and macaroni."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bet the farm on this joint between your fore and upper arm."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answer was elbow!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out who was correct though and who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “BET THE FARM ON THIS JOINT BETWEEN YOUR FORE & UPPER ARM.” The elbow is the joint between your fore and upper arm. 2,713 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “VERY BONEY AND OFTEN THE PASTA IN CHEESE & MACARONI.” Macaroni often uses elbow pasta. 5,558 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “HAS A HILARIOUS NEIGHBOR.” It is right next to your funny bone. 1,952 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “STRICTLY OFF THE TABLE.” It is bad manners in many houses to put your elbows on the dinner table. 1,601 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “GETS TO THE POINT.” It is literally the point of your arm. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1 winner at $3,000.00. Silver (Clue 2): 1,601 winners at $1.56 each. Bronze (Clue 3): 1,952 winners at $1.02 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to CaringChives on that gold guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is incredible."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's move on to round two."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A rare one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "An upward spiral."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Some wear over a rainbow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A ride with a horn you can't honk."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's move to clue five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Magical, flying pony with an appendage that's cone-y."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Twenty seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answer was a unicorn!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is so sweet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues put, find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “MAGICAL, FLYING PONY WITH AN APPENDAGE THAT’S CONE-Y.” There are not a lot of magical flying ponies with an appendage that’s cone-y. 2,685 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “A RIDE WITH A HORN YOU CAN’T HONK.” You can ride it but you can’t honk its horn. 4,329 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “SOME WEAR OVER A RAINBOW.” A lot of merchandise that features unicorns shows them flying over a rainbow. 676 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “AN UPWARD SPIRAL.” The horn on a unicorn spirals upwards. 511 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “A RARE ONE.” Unicorns are famously rare. 137 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 137 winners at $21.89 each. Silver (Clue 2): 511 winners at $4.89 each. Bronze (Clue 3): 676 winners at $2.95 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Grumpy1977, NickTurnel, SlimySpatula, SecretToad and the rest of our winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done everybody."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good night!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [PENCIL, KNIFE, PEN, ERASER, ARROW]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [TORNADO, STEAK, DNA, DIAMOND, TWISTER]"
+          }
+        ]
+      }
+    ]
   }
 ]
