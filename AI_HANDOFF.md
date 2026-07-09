@@ -1,8 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-07-08 (session end)
+Last updated: 2026-07-09 (session end)
 
-## Most Recent Changes (2026-07-08)
+## Most Recent Changes (2026-07-09)
+
+- **Daily puzzle added — Thursday, July 9, 2026: TURKEY LEG**: Appended to `data/daily-puzzles.json` (now 48 entries). Screenshot's answer label glitched to "CROCS" (answered on clue #2), but all five clues point to TURKEY LEG and the user confirmed it. Clues: USUALLY OVER A FOOT / YOU CAN PULL THIS OFF / THE ORIGINAL RENAISSANCE FARE / GOBBLE DRUMSTICKS THAT AREN'T FOR DRUMMERS / THIS HUNK OF DARK MEAT IS A THANKSGIVING TREAT. `npm run audit` passes.
+
+## Previous Changes (2026-07-08)
 
 - **Daily puzzle added — Wednesday, July 8, 2026: BLIND DATE**: Appended to `data/daily-puzzles.json` (now 47 entries). Screenshot's answer label showed "BLIND DATE" directly (answered on clue #3, wrong). Clues: STRANGER THING / A BIT OF A FIXER-UPPER / PARTY OF TWO...AND IT'S A SURPRISE PARTY / LIKE THREE FAMOUS MICE AND THE THIRD OF MAY, LET'S SAY / A ROMANTIC RENDEZVOUS WITH SOMEONE YOU'VE YET TO VIEW. `npm run audit` passes.
 - **2 new polls added, filed under Tuesday, July 7, 2026**: Appended to `data/daily-polls.json` (now 22 entries, at the top — both appeared above all previously-logged July 6 entries in the app's newest-first list, dated to match the July 7 ELBOW/UNICORN episode day). (1) "Which of these automatic devices is most annoying when broken in a public restroom?" (Hypothetical & Silly) — FAUCET 22.8%, SOAP DISPENSER 16.2%, HAND DRYER 14.3%, FLUSHER 46.6% (crowd pick). (2) "What is the best mashup name for Howie Mandel & Hunter March?" (Show Trivia) — HUNNIE MANCH 40% (crowd pick), HOWTER MARDEL 16.3%, HOW-MAR MAN 10.9%, HU-MAN 32.5%. A third poll ("What would you like to have spray out of a fire hydrant, besides water?" — a callback to the July 6 FIRE HYDRANT daily) was visible but not expanded — no data yet. `npm run audit` passes.
