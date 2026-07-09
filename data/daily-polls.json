@@ -1,5 +1,49 @@
 [
   {
+    "date": "Wednesday, July 8, 2026",
+    "question": "WHAT'S YOUR FAVORITE BOW?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "ELBOW", "pct": 10.0 },
+      { "text": "RAINBOW", "pct": 67.8 },
+      { "text": "CROSSBOW", "pct": 16.8 },
+      { "text": "TIM TEBOW", "pct": 5.2 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 8, 2026",
+    "question": "WHAT'S THE BEST SUBSTITUTE IF YOU LOSE YOUR BELT?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "SUSPENDERS", "pct": 63.2 },
+      { "text": "EXTENSION CORD", "pct": 22.5 },
+      { "text": "QUICKLY GAINING 20 POUNDS", "pct": 9.1 },
+      { "text": "LIVE SNAKE", "pct": 5.1 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 8, 2026",
+    "question": "WHICH PAST BGL ANSWER WOULD GIVE THE BEST WEDDING TOAST?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "LADY GAGA", "pct": 9.7 },
+      { "text": "ELMO", "pct": 14.9 },
+      { "text": "WILL FERRELL", "pct": 36.2 },
+      { "text": "SNOOP DOGG", "pct": 39.0 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 8, 2026",
+    "question": "WHAT WOULD YOU LIKE TO HAVE SPRAY OUT OF A FIRE HYDRANT, BESIDES WATER?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "TOMATO JUICE", "pct": 9.2 },
+      { "text": "PENNIES", "pct": 47.0 },
+      { "text": "SUPER BALLS", "pct": 32.3 },
+      { "text": "AXE BODY SPRAY", "pct": 11.3 }
+    ]
+  },
+  {
     "date": "Tuesday, July 7, 2026",
     "question": "WHICH OF THESE AUTOMATIC DEVICES IS MOST ANNOYING WHEN BROKEN IN A PUBLIC RESTROOM?",
     "category": "Hypothetical & Silly",
