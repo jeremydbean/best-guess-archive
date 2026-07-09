@@ -1455,5 +1455,36 @@
         "explanation": "A blind date is a romantic meetup with someone you haven't seen before."
       }
     ]
+  },
+  {
+    "date": "Thursday, July 9, 2026",
+    "secretItem": "TURKEY LEG",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "USUALLY OVER A FOOT",
+        "explanation": "A turkey leg is often over a foot long."
+      },
+      {
+        "clueNumber": 2,
+        "text": "YOU CAN PULL THIS OFF",
+        "explanation": "You pull a turkey leg right off the bird to eat it."
+      },
+      {
+        "clueNumber": 3,
+        "text": "THE ORIGINAL RENAISSANCE FARE",
+        "explanation": "Turkey legs are a classic food sold at Renaissance fairs."
+      },
+      {
+        "clueNumber": 4,
+        "text": "GOBBLE DRUMSTICKS THAT AREN'T FOR DRUMMERS",
+        "explanation": "Turkeys gobble, and a drumstick is another name for a leg."
+      },
+      {
+        "clueNumber": 5,
+        "text": "THIS HUNK OF DARK MEAT IS A THANKSGIVING TREAT",
+        "explanation": "A turkey leg is a hunk of dark meat often enjoyed on Thanksgiving."
+      }
+    ]
   }
 ]
