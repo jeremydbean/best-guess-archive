@@ -5,6 +5,7 @@ Last updated: 2026-07-09 (session end)
 ## Most Recent Changes (2026-07-09)
 
 - **Daily puzzle added — Thursday, July 9, 2026: TURKEY LEG**: Appended to `data/daily-puzzles.json` (now 48 entries). Screenshot's answer label glitched to "CROCS" (answered on clue #2), but all five clues point to TURKEY LEG and the user confirmed it. Clues: USUALLY OVER A FOOT / YOU CAN PULL THIS OFF / THE ORIGINAL RENAISSANCE FARE / GOBBLE DRUMSTICKS THAT AREN'T FOR DRUMMERS / THIS HUNK OF DARK MEAT IS A THANKSGIVING TREAT. `npm run audit` passes.
+- **2 new polls added, filed under Thursday, July 9, 2026**: Appended to `data/daily-polls.json` (now 28 entries, at the top — both appeared above all previously-logged July 8 entries in the app's newest-first list). (1) "Who would you rather road trip across the country with?" (Hypothetical & Silly) — SOMEONE WITH TERRIBLE TASTE IN MUSIC 40% (crowd pick), SOMEONE WHO HAS BAD HYGIENE 2.2%, SOMEONE WHO HAS TO PEE AT EVERY EXIT 29.5%, SOMEONE ELSE'S KIDS 28.2%. (2) "For tomorrow's show, in which musical genre would you like Hunter to perform the rules?" (Show Trivia) — a 2-option poll, RAP 60.1% (crowd pick) vs COUNTRY 39.8% — this is the exact poll Hunter referenced in the July 8 transcript ("there's a poll... whether I should do the rules tomorrow in country or rap"). `npm run audit` passes.
 
 ## Previous Changes (2026-07-08)
 

@@ -1,5 +1,25 @@
 [
   {
+    "date": "Thursday, July 9, 2026",
+    "question": "WHO WOULD YOU RATHER ROAD TRIP ACROSS THE COUNTRY WITH?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "SOMEONE WITH TERRIBLE TASTE IN MUSIC", "pct": 40.0 },
+      { "text": "SOMEONE WHO HAS BAD HYGIENE", "pct": 2.2 },
+      { "text": "SOMEONE WHO HAS TO PEE AT EVERY EXIT", "pct": 29.5 },
+      { "text": "SOMEONE ELSE'S KIDS", "pct": 28.2 }
+    ]
+  },
+  {
+    "date": "Thursday, July 9, 2026",
+    "question": "FOR TOMORROW'S SHOW, IN WHICH MUSICAL GENRE WOULD YOU LIKE HUNTER TO PERFORM THE RULES?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "RAP", "pct": 60.1 },
+      { "text": "COUNTRY", "pct": 39.8 }
+    ]
+  },
+  {
     "date": "Wednesday, July 8, 2026",
     "question": "WHAT'S YOUR FAVORITE BOW?",
     "category": "Hypothetical & Silly",
