@@ -14839,5 +14839,119 @@
         "explanation": "There are not a lot of magical flying ponies with an appendage that's cone-y."
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 8, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "TELEVISION",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 66,
+    "silverWinners": 1774,
+    "bronzeWinners": 2049,
+    "totalWinners": 3889,
+    "goldPayout": 45.45,
+    "silverPayout": 1.4,
+    "bronzePayout": 0.97,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Rock Paper Johnny, serendipity, call me yeezy",
+    "wrongGuesses": "SANTA CLAUS, PENCIL, CAR, SANTA, DONKEY KONG",
+    "clues": [
+      {
+        "number": 1,
+        "text": "USUALLY GOES BY A NICKNAME",
+        "correct": "66",
+        "guesses": "3,694 🥇",
+        "explanation": "Television usually goes by the nickname TV."
+      },
+      {
+        "number": 2,
+        "text": "WHEN IT'S ON, IT'S ON",
+        "correct": "1,774",
+        "guesses": "4,534 🥈",
+        "explanation": "When the television is on, you are watching television."
+      },
+      {
+        "number": 3,
+        "text": "LOSS OF CONTROL CAN BE A PROBLEM",
+        "correct": "2,049",
+        "guesses": "6,005 🥉",
+        "explanation": "Losing the remote control is a huge problem when turning on your television."
+      },
+      {
+        "number": 4,
+        "text": "JUST KEEPS GETTING SHARPER AND THINNER WITH AGE",
+        "correct": "751",
+        "guesses": "2,929",
+        "explanation": "Over time televisions have become flat panels that get sharper and crisper."
+      },
+      {
+        "number": 5,
+        "text": "STILL DON'T KNOW? IT'S THE SET THAT SHOWS YOUR FAVORITE SHOW",
+        "correct": "3,971",
+        "guesses": "5,014",
+        "explanation": "Best Guess Live is your favorite show, but you can watch other great stuff on TV."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, July 8, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "DEJA VU",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 307,
+    "silverWinners": 2249,
+    "bronzeWinners": 2993,
+    "totalWinners": 5549,
+    "goldPayout": 9.77,
+    "silverPayout": 1.11,
+    "bronzePayout": 0.66,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Sparse Magic 945, Baffled Trial 183, New Nasha",
+    "wrongGuesses": "MARRIAGE, DE JA VU, BUFFET, WEDDING, DEJA VUE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BEEN THERE, DONE THAT",
+        "correct": "307",
+        "guesses": "2,327 🥇",
+        "explanation": "Deja vu feels like you have been there and done that."
+      },
+      {
+        "number": 2,
+        "text": "HAVING SECOND THOUGHTS?",
+        "correct": "2,249",
+        "guesses": "6,675 🥈",
+        "explanation": "You think it is the second time something is happening."
+      },
+      {
+        "number": 3,
+        "text": "HAS A FRENCH ACCENT...TWO, ACTUALLY",
+        "correct": "2,993",
+        "guesses": "5,628 🥉",
+        "explanation": "There is an accent on both the E and the A of Deja Vu."
+      },
+      {
+        "number": 4,
+        "text": "HAVING SECOND THOUGHTS? WHOA, THIS FEELS SO FAMILIAR",
+        "correct": "4,635",
+        "guesses": "6,091",
+        "explanation": "You might think we already did this clue since it feels so familiar."
+      },
+      {
+        "number": 5,
+        "text": "A BRIEF DURATION OF \"DID THIS ALREADY HAPPEN?\" SENSATION",
+        "correct": "2,105",
+        "guesses": "3,873",
+        "explanation": "Deja vu is that brief feeling of this having already happened."
+      }
+    ]
   }
 ]
