@@ -1486,5 +1486,36 @@
         "explanation": "A turkey leg is a hunk of dark meat often enjoyed on Thanksgiving."
       }
     ]
+  },
+  {
+    "date": "Friday, July 10, 2026",
+    "secretItem": "PRANK",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "DO UNTO OTHERS",
+        "explanation": "Pulling a prank means doing something to someone else, often to be turned around on you."
+      },
+      {
+        "clueNumber": 2,
+        "text": "NOTED PUNK ACT",
+        "explanation": "Wordplay on \"punk,\" a near-anagram of prank, and pranks being a rebellious, punk-style act."
+      },
+      {
+        "clueNumber": 3,
+        "text": "MISCHIEVOUS CALL THAT'S UNCALLED FOR",
+        "explanation": "A prank call is an uncalled-for, mischievous phone call."
+      },
+      {
+        "clueNumber": 4,
+        "text": "KNARP? OK, WHO'S THE JOKER WHO REVERSED THE LETTERS?",
+        "explanation": "\"Knarp\" is \"prank\" spelled backward."
+      },
+      {
+        "clueNumber": 5,
+        "text": "TRICK TO FOOL FOOLS THAT WISE GUYS DEVISE",
+        "explanation": "A prank is a trick devised to fool someone, especially on April Fools' Day."
+      }
+    ]
   }
 ]
