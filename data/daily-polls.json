@@ -1,6 +1,17 @@
 [
   {
     "date": "Thursday, July 9, 2026",
+    "question": "WHAT LIFE EXPERIENCE WOULD YOU MOST WANT TO RELIVE, DÉJÀ VU-STYLE?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "FIRST BREAKUP", "pct": 24.3 },
+      { "text": "FIRST HANGOVER", "pct": 36.8 },
+      { "text": "FIRST TIME GETTING FIRED", "pct": 11.6 },
+      { "text": "FIRST TIME GETTING A TICKET", "pct": 27.1 }
+    ]
+  },
+  {
+    "date": "Thursday, July 9, 2026",
     "question": "WHO WOULD YOU RATHER ROAD TRIP ACROSS THE COUNTRY WITH?",
     "category": "Hypothetical & Silly",
     "options": [
