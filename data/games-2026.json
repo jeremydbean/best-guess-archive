@@ -14953,5 +14953,127 @@
         "explanation": "Deja vu is that brief feeling of this having already happened."
       }
     ]
+  },
+  {
+    "date": "Thursday, July 9, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "DEODORANT",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 12,
+    "bronzeWinners": 25,
+    "totalWinners": 38,
+    "goldPayout": 3000,
+    "silverPayout": 208.33,
+    "bronzePayout": 80,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Jackie No Breaks",
+    "wrongGuesses": "FLAG, ELEVATOR, LADDER, ROOF, JACK",
+    "bonus": {
+      "title": "Little House on the Prairie",
+      "desc": "Premiering on Netflix today, based on the beloved novels by Laura Ingalls Wilder, the series follows the ultimate frontier family, the Ingalls.<br><br>Fans of the books will love it and Netflix has reimagined them for a new generation."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "I NEED A RAISE",
+        "correct": "1",
+        "guesses": "4,780 🥇",
+        "explanation": "If you want to check to see if you've applied deodorant you have to raise your arm."
+      },
+      {
+        "number": 2,
+        "text": "NOBODY NOTICES ME WHEN I'M WORKING",
+        "correct": "12",
+        "guesses": "5,492 🥈",
+        "explanation": "If it's doing its job, you really won't notice its presence, it's when it's not doing its job that everybody notices."
+      },
+      {
+        "number": 3,
+        "text": "TODDLERS NEED NOT APPLY",
+        "correct": "25",
+        "guesses": "3,748 🥉",
+        "explanation": "Toddlers don't really need deodorant."
+      },
+      {
+        "number": 4,
+        "text": "ON THE PIT CREW FOR YOU",
+        "correct": "1,431",
+        "guesses": "4,123",
+        "explanation": "You apply it to your armpits."
+      },
+      {
+        "number": 5,
+        "text": "MY JOB IS STOPPING B.O., YOUR UNDERARM IS WHERE I GO",
+        "correct": "4,803",
+        "guesses": "5,302",
+        "explanation": "You put it under your arms for the most part."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, July 9, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "PIRATE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 725,
+    "bronzeWinners": 1964,
+    "totalWinners": 2690,
+    "goldPayout": 3000,
+    "silverPayout": 3.44,
+    "bronzePayout": 1.01,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Dog! 420",
+    "wrongGuesses": "THE GRINCH, FISHING POLE, GRINCH, TOW TRUCK, FISHING",
+    "bonus": {
+      "title": "Little House on the Prairie",
+      "desc": "Premiering on Netflix today, based on the beloved novels by Laura Ingalls Wilder, the series follows the ultimate frontier family, the Ingalls.<br><br>Fans of the books will love it and Netflix has reimagined them for a new generation."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "TAKES THINGS THE WRONG WAY",
+        "correct": "1",
+        "guesses": "2,839 🥇",
+        "explanation": "Pirates get their stuff by stealing, they take things the wrong way."
+      },
+      {
+        "number": 2,
+        "text": "VERY GREEDY AND MOSTLY IRATE",
+        "correct": "725",
+        "guesses": "5,016 🥈",
+        "explanation": "Irate is most of the word, pirate."
+      },
+      {
+        "number": 3,
+        "text": "HOOKS A BIG ONE",
+        "correct": "1,964",
+        "guesses": "6,527 🥉",
+        "explanation": "Captain Hook is the big one."
+      },
+      {
+        "number": 4,
+        "text": "GIVES AN EYE FOR AN AYE",
+        "correct": "4,885",
+        "guesses": "6,384",
+        "explanation": "They iconically wear eye patches and say aye."
+      },
+      {
+        "number": 5,
+        "text": "SEA-THIEVING SCALLYWAG WHO FLIES A SKULL & CROSSBONES FLAG",
+        "correct": "2,563",
+        "guesses": "2,987",
+        "explanation": "That's your classic pirate, me mateys!"
+      }
+    ]
   }
 ]
