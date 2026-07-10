@@ -2675,7 +2675,7 @@ class App {
       }
     }
     if (name === 'stats') {
-      Promise.all([this._ensureFullGamesLoaded(), this._ensureDailyPuzzlesLoaded()])
+      Promise.all([this._ensureFullGamesLoaded(), this._ensureDailyPuzzlesLoaded(), this._ensureDailyPollsLoaded().catch(() => {})])
         .then(() => this.renderStats())
         .catch(err => this._showDataLoadError(err));
     }
@@ -4653,7 +4653,7 @@ Rules:
 
   // ==================== STATS ====================
   _getStatsData() {
-    const cacheKey = `${this._dataVersion}|${new Date().toDateString()}|dp${this.dailyPuzzles.length}`;
+    const cacheKey = `${this._dataVersion}|${new Date().toDateString()}|dp${this.dailyPuzzles.length}|poll${this.dailyPolls.length}`;
     if (this._statsCache && this._statsCache.cacheKey === cacheKey) return this._statsCache;
 
     const games = this.games.filter(g => !this._getGameMeta(g).isStub);
@@ -4677,7 +4677,6 @@ Rules:
       const wc = Number(g.winningClue || g.goldClue);
       if (wc >= 1 && wc <= 5) clueDist[wc] += 1;
     });
-    const mostCommonWinClue = Object.entries(clueDist).sort((a, b) => b[1] - a[1])[0]?.[0] || '1';
     const dailyPuzzleStart = new Date('2026-05-23T00:00:00');
     const todayMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
     const expectedDailyCount = Math.max(0, Math.floor((todayMidnight - dailyPuzzleStart) / (1000 * 60 * 60 * 24)) + 1);
@@ -4908,7 +4907,7 @@ Rules:
         {label:'Total Winners', val: totalWinners.toLocaleString(), color:'text-yellow-400', icon:'emoji_events'},
         {label:'Solo Wins', val: soloWins.toLocaleString(), color:'text-red-400', icon:'person'},
         {label:'Total Guesses', val: totalGuesses.toLocaleString(), color:'text-pink-400', icon:'casino'},
-        {label:'Most Won On', val:'Clue ' + mostCommonWinClue, color:'text-orange-400', icon:'star'}
+        {label:'Daily Polls Tracked', val: this.dailyPolls.length.toLocaleString(), color:'text-orange-400', icon:'poll'}
       ],
       hostRows,
       records,
