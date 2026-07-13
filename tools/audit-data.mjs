@@ -170,6 +170,27 @@ for (const [index, g] of games.entries()) {
   if (!playableByDate.has(g.date)) playableByDate.set(g.date, []);
   if (!isStub) playableByDate.get(g.date).push(g);
 
+  if (isStub && g.partialClues !== undefined) {
+    if (!Array.isArray(g.partialClues)) {
+      error('partial-clues-shape', 'Stub game partialClues must be an array', { index, date: g.date, secretItem: g.secretItem });
+    } else {
+      const seenNumbers = new Set();
+      g.partialClues.forEach((clue, clueIndex) => {
+        const num = clue?.clueNumber;
+        if (num !== null && num !== undefined && (!Number.isInteger(num) || num < 1 || num > 5)) {
+          error('partial-clue-number', 'Stub game partialClues clueNumber must be null or between 1 and 5', { index, date: g.date, secretItem: g.secretItem, entry: clueIndex });
+        }
+        if (num !== null && num !== undefined) {
+          if (seenNumbers.has(num)) error('partial-clue-duplicate', 'Stub game partialClues has a duplicate clueNumber', { index, date: g.date, secretItem: g.secretItem, clueNumber: num });
+          seenNumbers.add(num);
+        }
+        if (!String(clue?.text || '').trim()) {
+          error('partial-clue-text', 'Stub game partialClues entry is missing text', { index, date: g.date, secretItem: g.secretItem, entry: clueIndex });
+        }
+      });
+    }
+  }
+
   if (!isStub && (!Array.isArray(g.clues) || g.clues.length !== 5)) {
     error('clue-count', 'Playable game does not have exactly five clues', { index, date: g.date, secretItem: g.secretItem });
   }
