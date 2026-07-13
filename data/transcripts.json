@@ -66496,5 +66496,37 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Friday, July 10, 2026",
+    "host": "",
+    "secretItems": [],
+    "rounds": [],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": []
+      },
+      {
+        "tag": "Round 1",
+        "lines": []
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": []
+      },
+      {
+        "tag": "Round 2",
+        "lines": []
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": []
+      },
+      {
+        "tag": "Outro",
+        "lines": []
+      }
+    ]
   }
 ]

@@ -3304,6 +3304,26 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Friday, July 10, 2026",
+      "secretItem": "THE HULK",
+      "pot": 0,
+      "host": "",
+      "format": "v2",
+      "totalWinners": 0,
+      "clueCount": 0,
+      "note": "This round was not recorded. The answer was confirmed as THE HULK, but clue wording and winner counts are missing."
+    },
+    {
+      "date": "Friday, July 10, 2026",
+      "secretItem": "SMILE",
+      "pot": 0,
+      "host": "",
+      "format": "v2",
+      "totalWinners": 0,
+      "clueCount": 0,
+      "note": "This round was not recorded. The answer was confirmed as SMILE, but clue wording and winner counts are missing."
     }
   ]
 }
