@@ -3307,23 +3307,23 @@
     },
     {
       "date": "Friday, July 10, 2026",
-      "secretItem": "THE HULK",
-      "pot": 0,
-      "host": "",
-      "format": "v2",
-      "totalWinners": 0,
-      "clueCount": 0,
-      "note": "This round was not recorded. The answer was confirmed as THE HULK, but clue wording and winner counts are missing."
-    },
-    {
-      "date": "Friday, July 10, 2026",
       "secretItem": "SMILE",
       "pot": 0,
       "host": "",
       "format": "v2",
       "totalWinners": 0,
       "clueCount": 0,
-      "note": "This round was not recorded. The answer was confirmed as SMILE, but clue wording and winner counts are missing."
+      "note": "Round 1 — not recorded. Answer confirmed as SMILE. Recovered from a viewer's own gameplay: their answer landed in the bronze tier, paying $4.44. Wrong guesses submitted so far (list likely incomplete): LIPS, BASEBALL, GOLF, MOUTH. Clue wording, clue numbers, host, and full winner/payout totals are still missing."
+    },
+    {
+      "date": "Friday, July 10, 2026",
+      "secretItem": "THE HULK",
+      "pot": 0,
+      "host": "",
+      "format": "v2",
+      "totalWinners": 0,
+      "clueCount": 0,
+      "note": "Round 2 — not recorded. Answer confirmed as THE HULK. Recovered from a viewer's own gameplay: Clue 2 was \"IMPRESSIVE EMOTIONAL GROWTH\", Clue 3 was \"RIPPED PANTS, RIPPED GENES\" (this viewer's own winning bronze clue — 1,814 correct / 5,729 guesses at the time they answered, $1.10 payout), Clue 4 was \"WE SEE GREEN WHEN HE SEES RED\". Wrong guesses submitted so far (list likely incomplete): DNA, THERAPY, REMOTE. Clues 1 and 5, host, and full winner/payout totals are still missing."
     }
   ]
 }
