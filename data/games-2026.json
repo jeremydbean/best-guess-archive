@@ -15110,14 +15110,14 @@
     "host": "",
     "secretItem": "THE HULK",
     "clues": [],
-    "goldClue": null,
+    "goldClue": 1,
     "silverClue": null,
     "bronzeClue": 3,
-    "goldWinners": null,
+    "goldWinners": 69,
     "silverWinners": null,
     "bronzeWinners": 1814,
     "totalWinners": null,
-    "goldPayout": null,
+    "goldPayout": 43.47,
     "silverPayout": null,
     "bronzePayout": 1.10,
     "winnerPayout": "$7,500.00",
@@ -15132,6 +15132,6 @@
       { "clueNumber": 3, "text": "RIPPED PANTS, RIPPED GENES", "correct": 1814, "guesses": 5729 },
       { "clueNumber": 4, "text": "WE SEE GREEN WHEN HE SEES RED", "correct": null, "guesses": null }
     ],
-    "reportedResult": "A viewer's own answer landed in the bronze tier on Clue 3, paying $1.10."
+    "reportedResult": "A viewer's own answer landed in the bronze tier on Clue 3, paying $1.10. Episode recap also confirmed a \"Wild Guess\" highlight — 69 players got Clue 1 right for the gold tier, paying $43.47/winner (floor($3,000 / 69))."
   }
 ]
