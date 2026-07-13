@@ -3898,12 +3898,22 @@ Rules:
     const meta = this._getGameMeta(g);
 
     if (meta.isStub) {
+      const hasSecret = !!g.secretItem;
+      const secretSpan = hasSecret
+        ? `<span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span> — `
+        : '';
+      const noteLink = g.noteUrl
+        ? `<a href="${esc(g.noteUrl)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 underline decoration-dotted hover:text-red-300">
+            <span class="material-symbols-outlined" style="font-size:13px;line-height:1">open_in_new</span>Submit details
+          </a>`
+        : '';
       const html = `<tr class="border-b border-red-900/40 bg-red-950/20">
         <td class="pl-4 pr-1 py-4 text-slate-400 font-mono text-xs db-col-date" title="${esc(g.date)}">${esc(g.date)}</td>
         <td colspan="14" class="px-4 py-4">
-          <span class="inline-flex items-center gap-2 text-sm font-bold text-red-400">
-            <span class="material-symbols-outlined" style="font-size:18px">cancel</span>
-            ${esc(g.note)} — no episode aired
+          <span class="inline-flex flex-wrap items-center gap-2 text-sm font-bold text-red-400">
+            <span class="material-symbols-outlined" style="font-size:18px">${hasSecret ? 'warning' : 'cancel'}</span>
+            ${secretSpan}${esc(g.note)}${hasSecret ? '' : ' — no episode aired'}
+            ${noteLink}
           </span>
         </td>
       </tr>`;
