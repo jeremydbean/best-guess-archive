@@ -3953,6 +3953,20 @@ Rules:
         </td>`;
       }).join('');
       const dashCell = `<td class="px-2 py-1 text-center text-slate-700 align-middle">—</td>`;
+      const tierLine = (emoji, clueNum, winners) => winners == null
+        ? `<div>${emoji} <span class="text-slate-700">—</span></div>`
+        : `<div>${emoji} <span class="font-mono text-slate-200">${Number(winners).toLocaleString()}</span>${clueNum ? `<span class="text-slate-500 text-[10px]"> (Clue ${clueNum})</span>` : ''}</div>`;
+      const hasAnyWinnerData = [g.goldWinners, g.silverWinners, g.bronzeWinners].some(v => v != null);
+      const winnersCell = hasAnyWinnerData
+        ? `<td class="px-2 py-1 align-middle"><div class="text-xs text-center space-y-0.5">${tierLine('🥇', g.goldClue, g.goldWinners)}${tierLine('🥈', g.silverClue, g.silverWinners)}${tierLine('🥉', g.bronzeClue, g.bronzeWinners)}</div></td>`
+        : dashCell;
+      const payoutLine = (emoji, payout) => payout == null
+        ? `<div>${emoji} <span class="text-slate-700">—</span></div>`
+        : `<div>${emoji} <span class="text-green-400">${fmtMoney(payout)}</span></div>`;
+      const hasAnyPayoutData = [g.goldPayout, g.silverPayout, g.bronzePayout].some(v => v != null);
+      const payoutsCell = hasAnyPayoutData
+        ? `<td class="px-2 py-1 align-middle"><div class="text-xs font-mono space-y-0.5" style="min-width:90px">${payoutLine('🥇', g.goldPayout)}${payoutLine('🥈', g.silverPayout)}${payoutLine('🥉', g.bronzePayout)}</div></td>`
+        : dashCell;
       const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
         <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
         <td class="px-1 py-1 font-semibold text-white align-middle leading-snug" style="max-width:200px;overflow-wrap:break-word;">
@@ -3963,8 +3977,8 @@ Rules:
         ${stubClueCells}
         ${dashCell}
         ${dashCell}
-        ${dashCell}
-        ${dashCell}
+        ${winnersCell}
+        ${payoutsCell}
         <td class="px-1 py-1 text-slate-700 align-middle">—</td>
         <td class="db-details-cell px-3 py-2 text-center align-middle">
           <button onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="db-details-button" title="View what's known about ${esc(g.secretItem)}">
