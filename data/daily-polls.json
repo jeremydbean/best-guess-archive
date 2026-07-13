@@ -1,5 +1,112 @@
 [
   {
+    "date": "Monday, July 13, 2026",
+    "question": "WHAT ELSE DO YOU WISH YOU COULD DO IN 20 SECONDS, BESIDES TYPE AN ANSWER?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "TAXES", "pct": 17.7 },
+      { "text": "DENTIST", "pct": 24.0 },
+      { "text": "COMMUTE", "pct": 44.6 },
+      { "text": "FOLD A FITTED SHEET", "pct": 13.5 }
+    ]
+  },
+  {
+    "date": "Monday, July 13, 2026",
+    "question": "WHICH OF THESE PHRASES WOULD YOU MOST LIKE SOMEONE TO WHISPER TO YOU JUST BEFORE A BIG MEETING?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "MESS THIS UP AND YOU'RE FIRED", "pct": 19.5 },
+      { "text": "YOU SPLIT YOUR PANTS", "pct": 25.0 },
+      { "text": "FORGOT TO TELL YOU, YOUR PART'S AN HOUR", "pct": 25.5 },
+      { "text": "YOU KNOW SIGN LANGUAGE, RIGHT?", "pct": 29.8 }
+    ]
+  },
+  {
+    "date": "Monday, July 13, 2026",
+    "question": "IN WHICH OF THESE LOCATIONS DO YOU MOST HOPE THE OTHER PERSON IS WEARING DEODORANT?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "DENTIST CHAIR", "pct": 9.3 },
+      { "text": "BROKEN ELEVATOR", "pct": 44.8 },
+      { "text": "INTERNATIONAL SPACE STATION", "pct": 6.5 },
+      { "text": "HEADLOCK", "pct": 39.2 }
+    ]
+  },
+  {
+    "date": "Sunday, July 12, 2026",
+    "question": "WHICH OF THESE BGL ANSWERS WOULD MAKE THE BEST CANDLE SCENT?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "KFC", "pct": 52.3 },
+      { "text": "CLEAN DIAPER", "pct": 22.1 },
+      { "text": "BAGGAGE CLAIM", "pct": 4.4 },
+      { "text": "TITANIC", "pct": 21.0 }
+    ]
+  },
+  {
+    "date": "Sunday, July 12, 2026",
+    "question": "WHICH OF THESE TWO THINGS WOULD YOU BE MORE WILLING TO GET AT A 7-ELEVEN?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "SURGERY", "pct": 27.1 },
+      { "text": "CLAMS", "pct": 72.8 }
+    ]
+  },
+  {
+    "date": "Saturday, July 11, 2026",
+    "question": "WHICH LOW-SPEED ANIMAL RACE WOULD YOU MOST LIKE TO SEE?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "MANATEE MARATHON", "pct": 17.2 },
+      { "text": "TURTLE HURDLES", "pct": 26.8 },
+      { "text": "SLOTH SPRINT", "pct": 37.2 },
+      { "text": "KOALA CROSS-COUNTRY", "pct": 18.5 }
+    ]
+  },
+  {
+    "date": "Saturday, July 11, 2026",
+    "question": "WHICH PAST BGL ANSWER BEST DESCRIBES YOUR WEEKEND ENERGY?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "HAMMOCK", "pct": 44.5 },
+      { "text": "DISCO BALL", "pct": 12.7 },
+      { "text": "ZOMBIE", "pct": 35.1 },
+      { "text": "VOLCANO", "pct": 7.5 }
+    ]
+  },
+  {
+    "date": "Friday, July 10, 2026",
+    "question": "WHICH OF THESE WOULD MAKE YOU LIKELIEST TO HULK OUT?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "CO-WORKER MICROWAVED FISH", "pct": 14.4 },
+      { "text": "INCESSANT SPAM CALLS", "pct": 29.7 },
+      { "text": "SOMEONE PARKED IN TWO SPOTS", "pct": 26.6 },
+      { "text": "TYPO ON BGL CLUE ONE", "pct": 29.2 }
+    ]
+  },
+  {
+    "date": "Friday, July 10, 2026",
+    "question": "WHICH OF THESE SONGS DO YOU NEVER NEED TO HEAR AGAIN IN YOUR LIFE?",
+    "category": "Pop Culture Favorites",
+    "options": [
+      { "text": "BABY SHARK", "pct": 70.8 },
+      { "text": "HAPPY BIRTHDAY TO YOU", "pct": 6.3 },
+      { "text": "THE KARS-4-KIDS JINGLE", "pct": 22.8 }
+    ]
+  },
+  {
+    "date": "Friday, July 10, 2026",
+    "question": "BESIDES HOWIE, WHICH OF THESE ICONS LOOKS THE COOLEST IN SUNGLASSES?",
+    "category": "Pop Culture Favorites",
+    "options": [
+      { "text": "THE TERMINATOR", "pct": 41.9 },
+      { "text": "ELTON JOHN", "pct": 22.4 },
+      { "text": "JACQUELINE KENNEDY ONASSIS", "pct": 8.7 },
+      { "text": "CHESTER CHEETAH", "pct": 26.8 }
+    ]
+  },
+  {
     "date": "Thursday, July 9, 2026",
     "question": "WHAT LIFE EXPERIENCE WOULD YOU MOST WANT TO RELIVE, DÉJÀ VU-STYLE?",
     "category": "Hypothetical & Silly",
