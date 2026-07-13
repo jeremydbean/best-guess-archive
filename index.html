@@ -3953,14 +3953,14 @@ Rules:
         </td>`;
       }).join('');
       const dashCell = `<td class="px-2 py-1 text-center text-slate-700 align-middle">—</td>`;
-      const tierLine = (emoji, winners) => winners == null
+      const tierLine = (emoji, winners, colorClass) => winners == null
         ? `<div>${emoji} <span class="text-slate-700">—</span></div>`
-        : `<div>${emoji} <span class="font-mono text-slate-200">${Number(winners).toLocaleString()}</span></div>`;
+        : `<div>${emoji} <span class="font-mono ${colorClass}">${Number(winners).toLocaleString()}</span></div>`;
       const hasAnyWinnerData = [g.goldWinners, g.silverWinners, g.bronzeWinners].some(v => v != null);
       const knownWinnerTotal = [g.goldWinners, g.silverWinners, g.bronzeWinners].filter(v => v != null).reduce((sum, v) => sum + Number(v), 0);
       const winnersCell = hasAnyWinnerData
         ? `<td class="px-2 py-1 align-middle"><div class="text-xs text-center space-y-0.5">
-            ${tierLine('🥇', g.goldWinners)}${tierLine('🥈', g.silverWinners)}${tierLine('🥉', g.bronzeWinners)}
+            ${tierLine('🥇', g.goldWinners, 'text-yellow-400')}${tierLine('🥈', g.silverWinners, 'text-slate-300')}${tierLine('🥉', g.bronzeWinners, 'text-amber-600')}
             <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono whitespace-nowrap">${knownWinnerTotal.toLocaleString()} known</div>
           </div></td>`
         : dashCell;
