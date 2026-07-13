@@ -3311,8 +3311,11 @@
       "pot": 7500,
       "host": "",
       "format": "v2",
-      "totalWinners": 0,
+      "totalWinners": 1035,
       "clueCount": 0,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3,
       "note": "Round 1 was not recorded."
     },
     {
@@ -3321,8 +3324,10 @@
       "pot": 7500,
       "host": "",
       "format": "v2",
-      "totalWinners": 0,
+      "totalWinners": 1872,
       "clueCount": 0,
+      "goldClue": 1,
+      "silverClue": 2,
       "bronzeClue": 3,
       "note": "Round 2 was not recorded."
     }
