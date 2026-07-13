@@ -15128,6 +15128,7 @@
     "note": "Round 2 was not recorded.",
     "noteUrl": "https://forms.gle/zzTwMu8wpZpC5zR58",
     "partialClues": [
+      { "clueNumber": 1, "text": "MISSION: CONTROL", "correct": null, "guesses": null },
       { "clueNumber": 2, "text": "IMPRESSIVE EMOTIONAL GROWTH", "correct": null, "guesses": null },
       { "clueNumber": 3, "text": "RIPPED PANTS, RIPPED GENES", "correct": 1814, "guesses": 5729 },
       { "clueNumber": 4, "text": "WE SEE GREEN WHEN HE SEES RED", "correct": null, "guesses": null }
