@@ -3953,14 +3953,14 @@ Rules:
         </td>`;
       }).join('');
       const dashCell = `<td class="px-2 py-1 text-center text-slate-700 align-middle">—</td>`;
-      const tierLine = (emoji, clueNum, winners) => winners == null
+      const tierLine = (emoji, winners) => winners == null
         ? `<div>${emoji} <span class="text-slate-700">—</span></div>`
-        : `<div>${emoji} <span class="font-mono text-slate-200">${Number(winners).toLocaleString()}</span>${clueNum ? `<span class="text-slate-500 text-[10px]"> (Clue ${clueNum})</span>` : ''}</div>`;
+        : `<div>${emoji} <span class="font-mono text-slate-200">${Number(winners).toLocaleString()}</span></div>`;
       const hasAnyWinnerData = [g.goldWinners, g.silverWinners, g.bronzeWinners].some(v => v != null);
       const knownWinnerTotal = [g.goldWinners, g.silverWinners, g.bronzeWinners].filter(v => v != null).reduce((sum, v) => sum + Number(v), 0);
       const winnersCell = hasAnyWinnerData
         ? `<td class="px-2 py-1 align-middle"><div class="text-xs text-center space-y-0.5">
-            ${tierLine('🥇', g.goldClue, g.goldWinners)}${tierLine('🥈', g.silverClue, g.silverWinners)}${tierLine('🥉', g.bronzeClue, g.bronzeWinners)}
+            ${tierLine('🥇', g.goldWinners)}${tierLine('🥈', g.silverWinners)}${tierLine('🥉', g.bronzeWinners)}
             <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono whitespace-nowrap">${knownWinnerTotal.toLocaleString()} known</div>
           </div></td>`
         : dashCell;
