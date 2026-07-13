@@ -1436,6 +1436,28 @@ document.addEventListener('focusout', function(e) {
       opacity: 1;
       transform: translateY(0);
     }
+    .db-unrecorded-flag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 15px;
+      height: 15px;
+      margin-left: 0.35rem;
+      border-radius: 9999px;
+      background: rgba(248,113,113,0.9);
+      color: #1e1b1b;
+      font-size: 10px;
+      font-weight: 900;
+      line-height: 1;
+      vertical-align: middle;
+      cursor: help;
+      transition: background 0.12s ease;
+    }
+    .db-unrecorded-flag:hover,
+    .db-unrecorded-flag:focus-visible {
+      background: #f87171;
+      outline: none;
+    }
     .db-details-head,
     .db-details-cell {
       position: sticky;
@@ -3897,33 +3919,59 @@ Rules:
     const fmtMoney = (n, decimals = 2) => '$' + Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
     const meta = this._getGameMeta(g);
 
-    if (meta.isStub) {
-      const hasSecret = !!g.secretItem;
-      const hasPartialData = hasSecret && (g.reportedResult || (Array.isArray(g.partialClues) && g.partialClues.length) || g.wrongGuesses);
-      const secretSpan = hasSecret
-        ? `<span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span> — `
-        : '';
-      const viewButton = hasSecret
-        ? `<button onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="db-details-button" title="View what's known so far">
-            <span class="material-symbols-outlined">visibility</span>
-            <span>${hasPartialData ? 'View partial data' : 'View'}</span>
-          </button>`
-        : '';
-      const noteLink = g.noteUrl
-        ? `<a href="${esc(g.noteUrl)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 underline decoration-dotted hover:text-red-300">
-            <span class="material-symbols-outlined" style="font-size:13px;line-height:1">open_in_new</span>Submit details
-          </a>`
-        : '';
+    if (meta.isStub && !g.secretItem) {
+      // Genuinely cancelled show — nothing known, nothing to fill in.
       const html = `<tr class="border-b border-red-900/40 bg-red-950/20">
         <td class="pl-4 pr-1 py-4 text-slate-400 font-mono text-xs db-col-date" title="${esc(g.date)}">${esc(g.date)}</td>
-        <td colspan="13" class="px-4 py-4">
+        <td colspan="14" class="px-4 py-4">
           <span class="inline-flex flex-wrap items-center gap-2 text-sm font-bold text-red-400">
-            <span class="material-symbols-outlined" style="font-size:18px">${hasSecret ? 'warning' : 'cancel'}</span>
-            ${secretSpan}${esc(g.note)}${hasSecret ? '' : ' — no episode aired'}
-            ${noteLink}
+            <span class="material-symbols-outlined" style="font-size:18px">cancel</span>
+            ${esc(g.note)} — no episode aired
           </span>
         </td>
-        <td class="db-details-cell px-3 py-2 text-center align-middle">${viewButton}</td>
+      </tr>`;
+      this._dbRowHtmlCache.set(g, html);
+      return html;
+    }
+
+    if (meta.isStub) {
+      // Episode aired and the answer is known, but it wasn't recorded — render a
+      // normal-looking row with blanks for whatever data is still missing, plus
+      // a small "!" flag that surfaces the not-recorded note (and submit link
+      // via the details modal) instead of turning the whole row red.
+      const partialByNumber = {};
+      (Array.isArray(g.partialClues) ? g.partialClues : []).forEach(c => {
+        if (c && c.clueNumber) partialByNumber[c.clueNumber] = c;
+      });
+      const stubClueCells = Array.from({ length: 5 }, (_, i) => {
+        const c = partialByNumber[i + 1];
+        if (!c) return `<td class="px-4 py-3 text-slate-700 text-center align-middle">—</td>`;
+        const hasCounts = c.correct != null && c.guesses != null;
+        return `<td class="px-4 py-3 align-middle" style="min-width:200px">
+          <div class="font-medium text-slate-200 leading-snug">${hl(c.text)}</div>
+          ${hasCounts ? `<div class="font-mono mt-0.5 leading-snug whitespace-nowrap" style="font-size:10px"><span class="text-green-500">${Number(c.correct).toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${Number(c.guesses).toLocaleString()}</span></div>` : ''}
+        </td>`;
+      }).join('');
+      const dashCell = `<td class="px-2 py-1 text-center text-slate-700 align-middle">—</td>`;
+      const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
+        <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
+        <td class="px-1 py-1 font-semibold text-white align-middle leading-snug" style="max-width:200px;overflow-wrap:break-word;">
+          <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>
+          <button type="button" class="db-unrecorded-flag" data-clue-tooltip="${esc(g.note || 'Not recorded')} — click for details and to submit what you have." tabindex="0" onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}">!</button>
+        </td>
+        <td class="px-2 py-1 text-slate-700 font-mono whitespace-nowrap align-middle">—</td>
+        ${stubClueCells}
+        ${dashCell}
+        ${dashCell}
+        ${dashCell}
+        ${dashCell}
+        <td class="px-1 py-1 text-slate-700 align-middle">—</td>
+        <td class="db-details-cell px-3 py-2 text-center align-middle">
+          <button onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="db-details-button" title="View what's known about ${esc(g.secretItem)}">
+            <span class="material-symbols-outlined">visibility</span>
+            <span>View</span>
+          </button>
+        </td>
       </tr>`;
       this._dbRowHtmlCache.set(g, html);
       return html;
