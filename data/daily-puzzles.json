@@ -1579,5 +1579,36 @@
         "explanation": "Miss Piggy's most famous running gag is her romantic pursuit of Kermit the Frog."
       }
     ]
+  },
+  {
+    "date": "Monday, July 13, 2026",
+    "secretItem": "CHESS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "CAN'T LIVE OFF THE GRID",
+        "explanation": "Chess is played on an 8x8 grid of squares."
+      },
+      {
+        "clueNumber": 2,
+        "text": "EARLY ADOPTER OF MOTION CAPTURE",
+        "explanation": "Wordplay — chess pieces move around the board to capture opponents' pieces."
+      },
+      {
+        "clueNumber": 3,
+        "text": "YOU GO, QUEEN! SLAY!",
+        "explanation": "The queen is the most powerful piece on the chessboard."
+      },
+      {
+        "clueNumber": 4,
+        "text": "GAME OF CHECK-ERS",
+        "explanation": "Wordplay on \"checkers\" — chess involves putting an opponent's king in check."
+      },
+      {
+        "clueNumber": 5,
+        "text": "DECIDE THE KING'S FATE WHEN YOU PLAY WITH A MATE",
+        "explanation": "A game of chess ends in checkmate, deciding the king's fate."
+      }
+    ]
   }
 ]
