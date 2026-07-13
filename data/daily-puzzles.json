@@ -1517,5 +1517,67 @@
         "explanation": "A prank is a trick devised to fool someone, especially on April Fools' Day."
       }
     ]
+  },
+  {
+    "date": "Saturday, July 11, 2026",
+    "secretItem": "HALO",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "GOES RIGHT OVER YOUR HEAD",
+        "explanation": "A halo is a ring of light that appears directly above the head."
+      },
+      {
+        "clueNumber": 2,
+        "text": "WIRELESS RING LIGHT",
+        "explanation": "A halo looks like a glowing ring of light with no cord or plug needed."
+      },
+      {
+        "clueNumber": 3,
+        "text": "O FOR GOODNESS SAKE",
+        "explanation": "A halo is shaped like an \"O\" and symbolizes goodness and holiness."
+      },
+      {
+        "clueNumber": 4,
+        "text": "POPULAR ANGEL HAIR TOPPING",
+        "explanation": "Angels are commonly depicted with a halo topping their head."
+      },
+      {
+        "clueNumber": 5,
+        "text": "USE THIS CIRCULAR GLOW, WHEN A DIVINE PERSON YOU MUST SHOW",
+        "explanation": "A halo is the circular glow artists use to depict a divine or holy figure."
+      }
+    ]
+  },
+  {
+    "date": "Sunday, July 12, 2026",
+    "secretItem": "MISS PIGGY",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "PRETTY IN PINK",
+        "explanation": "Miss Piggy is a glamorous pink pig."
+      },
+      {
+        "clueNumber": 2,
+        "text": "LOTS OF TALENT ON HAND",
+        "explanation": "Wordplay — Miss Piggy is a hand puppet with many talents."
+      },
+      {
+        "clueNumber": 3,
+        "text": "SINGING CHOPS, KARATE CHOPS, PORK CHOPS",
+        "explanation": "Miss Piggy is known for her singing, her signature karate chop, and being a pig."
+      },
+      {
+        "clueNumber": 4,
+        "text": "MUPPET WHO HOGS THE SPOTLIGHT",
+        "explanation": "Miss Piggy is a Muppet famous for demanding to be the center of attention, a play on \"hog.\""
+      },
+      {
+        "clueNumber": 5,
+        "text": "WE CAN CONFIRM IT: SHE'S CRUSHING ON KERMIT",
+        "explanation": "Miss Piggy's most famous running gag is her romantic pursuit of Kermit the Frog."
+      }
+    ]
   }
 ]

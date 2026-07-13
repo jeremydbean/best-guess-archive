@@ -1,8 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-07-10 (session end)
+Last updated: 2026-07-13 (session end)
 
-## Most Recent Changes (2026-07-10)
+## Most Recent Changes (2026-07-13)
+
+- **2 daily puzzles added — Saturday, July 11, 2026: HALO and Sunday, July 12, 2026: MISS PIGGY**: Appended to `data/daily-puzzles.json` (now 51 entries). HALO: screenshot's answer label glitched to "UFO" (answered on clue #2), but all five clues point to HALO and the user confirmed it. Clues: GOES RIGHT OVER YOUR HEAD / WIRELESS RING LIGHT / O FOR GOODNESS SAKE / POPULAR ANGEL HAIR TOPPING / USE THIS CIRCULAR GLOW, WHEN A DIVINE PERSON YOU MUST SHOW. MISS PIGGY: screenshot's answer label glitched to "TALENT SHOW" (answered on clue #3), but all five clues point to MISS PIGGY and the user confirmed it. Clues: PRETTY IN PINK / LOTS OF TALENT ON HAND / SINGING CHOPS, KARATE CHOPS, PORK CHOPS / MUPPET WHO HOGS THE SPOTLIGHT / WE CAN CONFIRM IT: SHE'S CRUSHING ON KERMIT. `npm run audit` passes.
+
+## Previous Changes (2026-07-10)
 
 - **Daily puzzle added — Friday, July 10, 2026: PRANK**: Appended to `data/daily-puzzles.json` (now 49 entries). Screenshot's answer label showed "PRANK" directly (answered on clue #2, wrong). Clues: DO UNTO OTHERS / NOTED PUNK ACT / MISCHIEVOUS CALL THAT'S UNCALLED FOR / KNARP? OK, WHO'S THE JOKER WHO REVERSED THE LETTERS? (KNARP = PRANK backward) / TRICK TO FOOL FOOLS THAT WISE GUYS DEVISE. `npm run audit` passes.
 
