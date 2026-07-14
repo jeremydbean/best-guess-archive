@@ -1610,5 +1610,36 @@
         "explanation": "A game of chess ends in checkmate, deciding the king's fate."
       }
     ]
+  },
+  {
+    "date": "Tuesday, July 14, 2026",
+    "secretItem": "SURPRISE PARTY",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "MAJOR POP-UP EVENT",
+        "explanation": "Everyone pops out of hiding to yell surprise."
+      },
+      {
+        "clueNumber": 2,
+        "text": "AN EXHILARATING ROUND OF HIDE AND SHRIEK",
+        "explanation": "Wordplay on hide and seek — guests hide, then shriek surprise."
+      },
+      {
+        "clueNumber": 3,
+        "text": "WHAT TO EXPECT WHEN YOU'RE NOT EXPECTING",
+        "explanation": "Wordplay on the book title — the guest of honor doesn't expect the party."
+      },
+      {
+        "clueNumber": 4,
+        "text": "THE GUEST OF HONOR IS NOT INVITED",
+        "explanation": "The guest of honor is kept in the dark so the surprise isn't spoiled."
+      },
+      {
+        "clueNumber": 5,
+        "text": "WHEN THIS BASH IS FOR YOU, YOU DON'T HAVE A CLUE",
+        "explanation": "The whole point of a surprise party is that the honoree has no idea it's coming."
+      }
+    ]
   }
 ]

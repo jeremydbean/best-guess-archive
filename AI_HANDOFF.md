@@ -1,8 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-07-13 (session end)
+Last updated: 2026-07-14 (session end)
 
-## Most Recent Changes (2026-07-13)
+## Most Recent Changes (2026-07-14)
+
+- **Daily puzzle added — Tuesday, July 14, 2026: SURPRISE PARTY**: Appended to `data/daily-puzzles.json` (now 53 entries). Screenshot's answer label ("WHAT TO EXPECT WHEN YOU'RE NOT EXPECTING") was answered on clue #3, and the user confirmed SURPRISE PARTY. Clues: MAJOR POP-UP EVENT / AN EXHILARATING ROUND OF HIDE AND SHRIEK / WHAT TO EXPECT WHEN YOU'RE NOT EXPECTING / THE GUEST OF HONOR IS NOT INVITED / WHEN THIS BASH IS FOR YOU, YOU DON'T HAVE A CLUE. `npm run audit` passes.
+
+## Previous Changes (2026-07-13)
 
 - **THE HULK Clue 3 text reverted to "RIPPED PANTS, RIPPED GENES"**: User corrected an earlier change this session that had swapped this to the video-pulled "RIPPED PANTS, RIPPED JEANS" — reverted `partialClues` back to "RIPPED PANTS, RIPPED GENES" (the genetics pun) in `data/games-2026.json` and updated `reportedResult` to drop the now-inaccurate note about the video-sourced correction. `npm run audit` passes 0/0.
 
