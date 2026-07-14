@@ -15104,7 +15104,7 @@
       { "clueNumber": 1, "text": "CURVE UP AHEAD", "correct": 69, "guesses": null },
       { "clueNumber": 2, "text": "WARNING: MAY CRACK WHILE PLAYING", "correct": 516, "guesses": null }
     ],
-    "reportedResult": "All three tiers now confirmed: Gold (Clue 1, CURVE UP AHEAD) 69 winners; Silver (Clue 2, WARNING: MAY CRACK WHILE PLAYING) 516 winners; Bronze (Clue 3, text still unknown) 450 winners. Payouts verified against the standard $3,000/$2,500/$2,000 gold/silver/bronze tier-pool floor formula: gold floors to $43.47 (reported as $43.37, likely a typo), silver $4.84, bronze $4.44 — all match exactly except gold's reported cents."
+    "reportedResult": "All three tiers now confirmed: Gold (Clue 1, CURVE UP AHEAD) 69 winners; Silver (Clue 2, WARNING: MAY CRACK WHILE PLAYING) 516 winners; Bronze (Clue 3, text still unknown) 450 winners. Payouts verified against the standard $3,000/$2,500/$2,000 gold/silver/bronze tier-pool floor formula: gold floors to $43.47 (reported as $43.37, likely a typo), silver $4.84, bronze $4.44 — all match exactly except gold's reported cents. Clue 4 (text still unknown): 3,358 correct — not medal-winning, since bronze was already decided at Clue 3."
   },
   {
     "date": "Friday, July 10, 2026",
@@ -15136,6 +15136,128 @@
       { "clueNumber": 3, "text": "RIPPED PANTS, RIPPED JEANS", "correct": 1814, "guesses": 5729 },
       { "clueNumber": 4, "text": "WE SEE GREEN WHEN HE SEES RED", "correct": null, "guesses": null }
     ],
-    "reportedResult": "All three tiers now confirmed, with clue wording pulled directly from the episode video: Gold (Clue 1, MISSION: CONTROL) 2 winners/$1,500.00; Silver (Clue 2, IMPRESSIVE EMOTIONAL GROWTH) 56 winners/$44.64; Bronze (Clue 3, RIPPED PANTS, RIPPED JEANS) 1,814 winners/$1.10. Payouts verified exactly against the standard $3,000/$2,500/$2,000 gold/silver/bronze tier-pool floor formula. Clue 3's text corrected from an earlier viewer-recalled \"RIPPED PANTS, RIPPED GENES\" to the video-sourced \"RIPPED PANTS, RIPPED JEANS\"."
+    "reportedResult": "All three tiers now confirmed, with clue wording pulled directly from the episode video: Gold (Clue 1, MISSION: CONTROL) 2 winners/$1,500.00; Silver (Clue 2, IMPRESSIVE EMOTIONAL GROWTH) 56 winners/$44.64; Bronze (Clue 3, RIPPED PANTS, RIPPED JEANS) 1,814 winners/$1.10. Payouts verified exactly against the standard $3,000/$2,500/$2,000 gold/silver/bronze tier-pool floor formula. Clue 3's text corrected from an earlier viewer-recalled \"RIPPED PANTS, RIPPED GENES\" to the video-sourced \"RIPPED PANTS, RIPPED JEANS\". Clue 5 (text still unknown): 3,088 correct — not medal-winning, since bronze was already decided at Clue 3."
+  },
+  {
+    "date": "Monday, July 13, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "TREADMILL",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 75,
+    "silverWinners": 1164,
+    "bronzeWinners": 5283,
+    "totalWinners": 6522,
+    "goldPayout": 40.00,
+    "silverPayout": 2.14,
+    "bronzePayout": 0.37,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Raindrop3131086, FiberLily, Mr. Best Guess Live",
+    "wrongGuesses": "EQUATOR, CHUCK NORRIS, BRUCE LEE, JACKIE CHAN, ESCALATOR",
+    "bonus": {
+      "title": "MLB's Home Run Derby on Netflix",
+      "desc": "Baseball's biggest stars are hitting dingers, moonshots, and taters as we speak."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "WORLD-RENOWNED BLACK BELT",
+        "correct": "75",
+        "guesses": "5,207 🥇",
+        "explanation": "The moving belt on a treadmill is always black and found worldwide."
+      },
+      {
+        "number": 2,
+        "text": "WELL THIS IS GOING NOWHERE",
+        "correct": "1,164",
+        "guesses": "4,907 🥈",
+        "explanation": "Treadmills are stationary, so you go nowhere."
+      },
+      {
+        "number": 3,
+        "text": "I'M INCLINED TO MAKE IT HARDER",
+        "correct": "5,283",
+        "guesses": "7,988 🥉",
+        "explanation": "Increasing the incline makes the treadmill more difficult."
+      },
+      {
+        "number": 4,
+        "text": "YOU STEP ON IT AND THEN YOU STEP ON IT!",
+        "correct": "1,768",
+        "guesses": "3,548",
+        "explanation": "You step onto the treadmill and then take steps on it."
+      },
+      {
+        "number": 5,
+        "text": "GYM DEVICE THAT SETS THE PACE FOR WALKING OR RUNNING IN PLACE",
+        "correct": "2,222",
+        "guesses": "2,453",
+        "explanation": "A treadmill lets you run in place at the gym."
+      }
+    ]
+  },
+  {
+    "date": "Monday, July 13, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "MEME",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 5,
+    "silverWinners": 270,
+    "bronzeWinners": 991,
+    "totalWinners": 1266,
+    "goldPayout": 600.00,
+    "silverPayout": 9.25,
+    "bronzePayout": 2.01,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Iron Cove 927, Call The Ball, Pierre French Cat",
+    "wrongGuesses": "KEYBOARD, SELFIE, CARDS, FINGERS, RUMOR",
+    "bonus": {
+      "title": "MLB's Home Run Derby on Netflix",
+      "desc": "Baseball's biggest stars are hitting dingers, moonshots, and taters as we speak."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "SPREAD 'EM!",
+        "correct": "0",
+        "guesses": "5,237",
+        "explanation": "People spread memes online."
+      },
+      {
+        "number": 2,
+        "text": "YOU KNOW THE TYPE",
+        "correct": "5",
+        "guesses": "4,236 🥇",
+        "explanation": "The meme font is a recognizable type."
+      },
+      {
+        "number": 3,
+        "text": "REPEAT AFTER ME",
+        "correct": "270",
+        "guesses": "4,027 🥈",
+        "explanation": "The word meme is spelled M-E-M-E."
+      },
+      {
+        "number": 4,
+        "text": "NOT GETTING THE PICTURE? IT'S A PICTURE YOU GET",
+        "correct": "991",
+        "guesses": "3,887 🥉",
+        "explanation": "Memes are pictures that people send to each other."
+      },
+      {
+        "number": 5,
+        "text": "IMAGE FROM AN ONLINE TREND - LIKE, SAY, \"DISTRACTED BOYFRIEND\"",
+        "correct": "2,984",
+        "guesses": "4,784",
+        "explanation": "The Distracted Boyfriend is one of the most famous memes of all time."
+      }
+    ]
   }
 ]

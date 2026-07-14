@@ -3330,6 +3330,30 @@
       "silverClue": 2,
       "bronzeClue": 3,
       "note": "Round 2 was not recorded."
+    },
+    {
+      "date": "Monday, July 13, 2026",
+      "secretItem": "TREADMILL",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 6522,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, July 13, 2026",
+      "secretItem": "MEME",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 1266,
+      "clueCount": 5,
+      "goldClue": 2,
+      "silverClue": 3,
+      "bronzeClue": 4
     }
   ]
 }
