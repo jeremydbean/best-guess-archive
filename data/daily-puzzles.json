@@ -1641,5 +1641,36 @@
         "explanation": "The whole point of a surprise party is that the honoree has no idea it's coming."
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 15, 2026",
+    "secretItem": "KEVIN HART",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "A LITTLE-KNOWN ENTERTAINER",
+        "explanation": "He's short and very well-known."
+      },
+      {
+        "clueNumber": 2,
+        "text": "MANY SPECIAL DELIVERIES RIGHT TO YOUR HOME",
+        "explanation": "He's had many Netflix comedy specials you can watch at home."
+      },
+      {
+        "clueNumber": 3,
+        "text": "REGULARLY ROLES WITH A ROCK",
+        "explanation": "He regularly acts in movies with The Rock."
+      },
+      {
+        "clueNumber": 4,
+        "text": "STAND-UP GUY WITH A LOT OF HEART",
+        "explanation": "He's a stand-up comic and his last name sounds like \"Heart.\""
+      },
+      {
+        "clueNumber": 5,
+        "text": "COMEDIAN WHO MADE US LAUGH THE MOST AT HIS NETFLIX ROAST",
+        "explanation": "In 2026, Netflix had a roast of Kevin Hart."
+      }
+    ]
   }
 ]
