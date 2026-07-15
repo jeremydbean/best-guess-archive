@@ -15259,5 +15259,120 @@
         "explanation": "The Distracted Boyfriend is one of the most famous memes of all time."
       }
     ]
+  },
+  {
+    "date": "Tuesday, July 14, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BUNK BED",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 2,
+    "silverWinners": 4,
+    "bronzeWinners": 100,
+    "totalWinners": 106,
+    "goldPayout": 1500.00,
+    "silverPayout": 625.00,
+    "bronzePayout": 20.00,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Plump Venom, Arrogant Syrup",
+    "wrongGuesses": "DIVORCE, TWINS, BOWLING, BANANA SPLIT, TWIX",
+    "adminNote": "The source recap misattributed tiers by one clue (treating Clue 2 as gold, Clue 3 as silver, and Clue 4 as a paying bronze tier). The transcript's own dialogue confirms the correct mapping used here: Clue 1 (2 winners) split the $3,000 gold pool at $1,500 each, Clue 2 (4 winners) split $2,500 silver at $625 each, and Clue 3 (100 winners) split $2,000 bronze at $20 each — all exact floor-formula matches. Clue 4's 6,047 correct guesses came in after bronze was already decided and are not winners.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "SPLIT DECISION",
+        "correct": "2",
+        "guesses": "3,434 🥇",
+        "explanation": "You have to decide whether to take the top or the bottom."
+      },
+      {
+        "number": 2,
+        "text": "IT TAKES TWO",
+        "correct": "4",
+        "guesses": "5,603 🥈",
+        "explanation": "You need two mattresses to make a bunk bed."
+      },
+      {
+        "number": 3,
+        "text": "DIVIDE THE REST",
+        "correct": "100",
+        "guesses": "4,726 🥉",
+        "explanation": "You rest in bed and divide the entire contraption with someone else."
+      },
+      {
+        "number": 4,
+        "text": "TWIN STRUCTURE FOR TWIN MATTRESSES",
+        "correct": "6,047",
+        "guesses": "7,277",
+        "explanation": "Bunk beds are commonly twin sized."
+      },
+      {
+        "number": 5,
+        "text": "STACKED SNOOZING SPOTS FOR A PAIR OF SIBLING TOTS",
+        "correct": "1,633",
+        "guesses": "1,834",
+        "explanation": "A tongue twister describing who typically sleeps in bunk beds."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, July 14, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "PRINCE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 11,
+    "silverWinners": 461,
+    "bronzeWinners": 2795,
+    "totalWinners": 3267,
+    "goldPayout": 272.72,
+    "silverPayout": 5.42,
+    "bronzePayout": 0.71,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Gregs Mom, Sneaky Hutch, Ray Nashville Actress, Mountain Pro",
+    "wrongGuesses": "TAYLOR SWIFT, SKITTLES, MICHAEL JACKSON, RAINBOW, MY WIFE BETSY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "OUR MOST ICONIC ANSWER EVER",
+        "correct": "11",
+        "guesses": "4,120 🥇",
+        "explanation": "Prince changed his name to an unpronounceable icon."
+      },
+      {
+        "number": 2,
+        "text": "DROPPED COLORFUL DROPS",
+        "correct": "461",
+        "guesses": "4,718 🥈",
+        "explanation": "He dropped colorful songs like \"Purple Rain,\" \"Little Red Corvette,\" and \"Raspberry Beret.\""
+      },
+      {
+        "number": 3,
+        "text": "MUSICIAN WITH A SIGNATURE NUMBER",
+        "correct": "2,795",
+        "guesses": "7,116 🥉",
+        "explanation": "His signature number is 1999 because of his hit song."
+      },
+      {
+        "number": 4,
+        "text": "ROCK ROYALTY WHO WAS MINI AND MINN-Y",
+        "correct": "1,731",
+        "guesses": "3,191",
+        "explanation": "Prince was rock royalty who was small and from Minnesota."
+      },
+      {
+        "number": 5,
+        "text": "PURPLE GUITAR-GOD GUY WHO SANG \"KISS\" & \"WHEN DOVES CRY\"",
+        "correct": "3,911",
+        "guesses": "4,181",
+        "explanation": "He was a purple guitar-god who sang \"Kiss\" and \"When Doves Cry.\""
+      }
+    ]
   }
 ]
