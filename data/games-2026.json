@@ -15374,5 +15374,119 @@
         "explanation": "He was a purple guitar-god who sang \"Kiss\" and \"When Doves Cry.\""
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 15, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "PIANO",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 6,
+    "silverWinners": 206,
+    "bronzeWinners": 730,
+    "totalWinners": 942,
+    "goldPayout": 500.00,
+    "silverPayout": 12.13,
+    "bronzePayout": 2.73,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Mooney, MusicNut, RavenCookie9, ImpossibleGirlie",
+    "wrongGuesses": "OCEAN, SCALE, MUSICIAN, CAR, NAIL SALON",
+    "clues": [
+      {
+        "number": 1,
+        "text": "TIPS WELCOME",
+        "correct": "6",
+        "guesses": "3,703 🥇",
+        "explanation": "Pianos welcome your fingertips and piano players welcome tips."
+      },
+      {
+        "number": 2,
+        "text": "C IN THE MIDDLE, A IN THE MIDDLE",
+        "correct": "206",
+        "guesses": "2,400 🥈",
+        "explanation": "Middle C is a note on the piano, and the middle letter of the word piano is A."
+      },
+      {
+        "number": 3,
+        "text": "OFTEN MOVING, BUT HARD TO MOVE",
+        "correct": "730",
+        "guesses": "4,352 🥉",
+        "explanation": "Piano music can be emotionally moving, but pianos are very heavy to move."
+      },
+      {
+        "number": 4,
+        "text": "THE KIND OF MAN BILLY JOEL IS",
+        "correct": "4,180",
+        "guesses": "6,820",
+        "explanation": "Billy Joel is known as the piano man."
+      },
+      {
+        "number": 5,
+        "text": "WHETHER GRAND OR UPRIGHT, ITS MANY KEYS ARE BLACK & WHITE",
+        "correct": "5,152",
+        "guesses": "5,700",
+        "explanation": "Pianos are either grand or upright and have black and white keys."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, July 15, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "FOMO",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 2,
+    "silverWinners": 4,
+    "bronzeWinners": 49,
+    "totalWinners": 55,
+    "goldPayout": 1500.00,
+    "silverPayout": 625.00,
+    "bronzePayout": 40.81,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "DianaFloss, FlickAi",
+    "wrongGuesses": "EMAIL, MAIL, WIFI, VOICEMAIL, ABSENCE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ONE LETTER IS MISSING",
+        "correct": "2",
+        "guesses": "1,905 🥇",
+        "explanation": "The letter M in the acronym FOMO stands for missing."
+      },
+      {
+        "number": 2,
+        "text": "IT'S PRESENT WHEN YOU'RE NOT",
+        "correct": "4",
+        "guesses": "2,621 🥈",
+        "explanation": "You get FOMO when you are not where the action is."
+      },
+      {
+        "number": 3,
+        "text": "GET IT AT HOME OR WHEREVER YOU AREN'T",
+        "correct": "49",
+        "guesses": "5,984 🥉",
+        "explanation": "If you stay home, you are very likely missing out."
+      },
+      {
+        "number": 4,
+        "text": "YOU MIGHT FEEL IT NOW IF YOU HAVEN'T GUESSED YET",
+        "correct": "717",
+        "guesses": "3,708",
+        "explanation": "You feel like you are missing out on something if you haven't guessed yet."
+      },
+      {
+        "number": 5,
+        "text": "AN ACRONYM FOR A TYPE OF SCARE OF NOT BEING THERE",
+        "correct": "4,949",
+        "guesses": "6,618",
+        "explanation": "FOMO is an acronym that stands for fear of missing out."
+      }
+    ]
   }
 ]

@@ -69156,5 +69156,1295 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 15, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "PIANO",
+      "FOMO"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "PIANO",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "TIPS WELCOME",
+          "C IN THE MIDDLE, A IN THE MIDDLE",
+          "OFTEN MOVING, BUT HARD TO MOVE",
+          "THE KIND OF MAN BILLY JOEL IS",
+          "WHETHER GRAND OR UPRIGHT, ITS MANY KEYS ARE BLACK & WHITE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "FOMO",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "ONE LETTER IS MISSING",
+          "IT'S PRESENT WHEN YOU'RE NOT",
+          "GET IT AT HOME OR WHEREVER YOU AREN'T",
+          "YOU MIGHT FEEL IT NOW IF YOU HAVEN'T GUESSED YET",
+          "AN ACRONYM FOR A TYPE OF SCARE OF NOT BEING THERE"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Singer",
+            "text": "Come on everybody we're live."
+          },
+          {
+            "speaker": "Singer",
+            "text": "Get the party going on set."
+          },
+          {
+            "speaker": "Singer",
+            "text": "Looking in the mirror like 3 2 1 I'm ready."
+          },
+          {
+            "speaker": "Singer",
+            "text": "Baby I'm having fun."
+          },
+          {
+            "speaker": "Singer",
+            "text": "Doing it 'cause I won."
+          },
+          {
+            "speaker": "Singer",
+            "text": "Set 'em up set like 3 2 1 I'm ready."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First of all, Elaine and the band, they never get their props."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The way she, Elaine, the way you sing each and every night and everybody Gary and Stephen and Phil the whole... I, I don't have time for this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live, I'm your host, Howie Mandel!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's somebody's birthday on Best Guess Live staff."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wendy!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know Howie knew it today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And uh, we had a, a cake in the break room."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I didn't even know we had a break room."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, which made me think, a birthday cake in the break room of your office is a lot like $15,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's just sitting out there, waiting for anyone who wants to come and take it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you gotta be fast if you want a piece."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "See the comparison?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But what makes our money better than office cake is Neil didn't sneeze on the money!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So if you want a slice of this prize money, guaranteed to be sneeze-free, all you have to do is take it, and here's how you do it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds, each round has one puzzle, each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, we're gonna load our crystal ball—Neil's gonna load the crystal ball with a secret item."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It could be absolutely anything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And then I'm gonna give you five clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But remember, the clues are like riddles, they're meant to make you think, and after each clue you're gonna get 20 seconds to submit an answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you only get one best guess per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not one per clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's got— look it says one guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Like, they heard me, we don't have to write it!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It has to be the exact answer and we don't accept typos."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No typos!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You should spell that wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That would be great if you spelled that wrong just to give them an example of how to do it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bottom line, you want to be fast but you gotta be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in the correct answer on the earliest clue will split the Gold prize pot of... well there, you read it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "$3,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in the correct answer on the second earliest clue will split the Silver pot... there you go, of $2,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it on the third earliest clue will split the Bronze pot of... oooh that one tickled."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It went right across my waistline there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You have no idea, you're just looking at it, I feel it, it's right in front of me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough talk, let's win all this money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one is worth $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, you know what to do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Load that ball, baby."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm looking at him."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You can't see it, but when he's loading, he's... he's... crazy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, here's your first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tips welcome."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And you know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds on the clock starting right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tips are welcome."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's not only a clue, that's also a statement I'm making, so feel free to, uh, to tip your, your host."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm always afraid when I go into a restaurant because people know who I am, that I overtip because I don't want them to walk away saying Howie is cheap."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How cheap could I be?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm giving you $7,500 right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, time's up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, MillieSprints, 598 said supercuts."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tips welcome."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Do you mean the money, or you can get little blonde things?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Crowbar421, golf."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Golf tips?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is that what... is that... okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh you were giving an example because I did that and then I realized I can't read the second clue with it like that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um... C in the middle, A in the middle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The first clue was tips welcome."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "C in the middle, A in the middle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Getting interesting."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Got almost 4,000 on the first, uh, on the first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ah... thinking."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's hard to play and host."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I want to play."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh... Wormula said scale."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "C in the middle, A in the middle?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Scale?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I get it now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "BrisklyLoofah319, blackjack."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Explain that to me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh it's the letters."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The letters!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am so clueless."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I, you guys are gonna do better than me because I'm not doing good today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Often moving, but hard to move."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay the first clue, tips welcome."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Second clue, C in the middle, A in the middle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the third clue... 10 seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Often moving, but hard to move."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Are you guys thinking?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know I am."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "S_SilentHeart or SilentHeart said car."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah I get that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's hard to move but it's often moving."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I mean you couldn't, it's hard to push, but... anyway here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The kind of man Billy Joel is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got it now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tips welcome."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "C in the middle, A in the middle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Often moving, but hard to move."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the kind of man Billy Joel is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost 13,000 submissions."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "HowieRules76, you're one of my favorite players."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You're always here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "HowieRules76."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Short."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The kind of man Billy Joel is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He's short."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Are you just trying to entertain me or you trying to win the show?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Because even if you entertain me, I'm not giving you $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Though there's some cake left, maybe I'll send you some cake."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Final chance to guess, final shot at $7,500 for this first round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Whether grand or upright, its many keys are black and white."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tips welcome."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "C in the middle, A in the middle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Often moving, but hard to move."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The kind of man Billy Joel is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And finally, whether grand or upright, its many keys are black and white."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3, 2, 1."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know it, can I say it?"
+          },
+          {
+            "speaker": "Crew",
+            "text": "Yes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Piano."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, open, open the ball and show me your piano."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got it, the correct answer was piano."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And there's a, in case you don't know what they are, they put in a little, uh, picture of somebody playing one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay let's find out, uh, how the clues fit, and find out who is taking home the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “WHETHER GRAND OR UPRIGHT, ITS MANY KEYS ARE BLACK & WHITE.” Pianos are either grand or upright and have black and white keys. 5,152 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “THE KIND OF MAN BILLY JOEL IS.” Billy Joel is known as the piano man. 4,180 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “OFTEN MOVING, BUT HARD TO MOVE.” Piano music can be emotionally moving, but pianos are heavy and hard to move. 730 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “C IN THE MIDDLE, A IN THE MIDDLE.” Middle C is a note on the piano, and the middle letter of the word piano is A. 206 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “TIPS WELCOME.” Pianos welcome your fingertips and piano players welcome tips. 6 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 6 winners at $500.00 each. Silver (Clue 2): 206 winners at $12.13 each. Bronze (Clue 3): 730 winners at $2.73 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "6 of you are Gold guessers!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "6 of you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Which means 6 of you are gonna get $500 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The Silver, 206 of you are getting $12.13, and the Bronze, 730 Bronze guessers are getting $2.73."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Some of the Gold guessers, Mooney, MusicNut... oh of course you're a music person, uh, RavenCookie9, and ImpossibleGirlie."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "ImpossibleGirlie, congratulations and the other two of you too."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I guess they didn't put all six up for me, but you know who you are."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's the game's so nice we play it twice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Really?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're gonna be rhyming now?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm just reading, is that what we're gonna be doing?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Like clue 5 wasn't enough of a rhyme."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You guys... you guys have a sickness."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You really do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You really... okay."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's play second round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, where $7,500 can be found."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Come on, guys!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough with the... you gotta get help."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, prize pots are the same."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, 30... $3,000 for gold."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This doesn't get old."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hey, stop it!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stop it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, $2,500 for silver, and $2,000 for bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Got through that part without a rhyme at all."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No longer time to stall."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stop it!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now let's go ahead and load the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh you had it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You had it, I didn't read ahead."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, oh God, he's got such a feel for this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here we go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The ball is loaded, clue number 1 is coming your way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One letter is missing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One letter is missing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What could it be?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One letter is missing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ooh, getting a lot of submissions."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I see you players."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Right now, there's about 23,000 of you playing along."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, GhastlySmooch99 said... Organ Freeman."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Organ Freeman."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, I love that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You are so funny."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, let's continue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's present, it's present when you're not."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Organ Freeman."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Didn't he play God?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Gee."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's where I left off."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10 seconds left."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One letter missing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's present when you're not."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "BrotherFrank209 said snore."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's present when you're not because you're sleeping?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you're there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "CraftyMumbai117 said mail."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh you're right, it gets delivered when you're not home."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sometimes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A letter's missing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, I see what you're doing there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Get it at home or wherever you aren't."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One letter is missing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's present when you're not."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Get it at home or wherever you aren't."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five seconds left."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "BarbaraBounce77 said cell service."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Who's laughing behind the wall?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There's a guy standing behind the wall there alone just going hehehehe."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What's your first name?"
+          },
+          {
+            "speaker": "Colin",
+            "text": "Colin."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know how creepy it is coming off?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You're the only one alone in the room behind a wall... hehehehe."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You might feel it now if you haven't guessed yet."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Colin?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Could they hear that at home?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Could you hear... I don't think the mic picked it up, but he's making noises, and I don't know what Colin is doing, but uh, somebody should check on him."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up on that one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, you might feel it now if you haven't guessed yet."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "FurryGolfBall12 said confused."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You might feel... are you confused by these uh clues or the fact that Colin is confusing?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is uh your final clue, your final chance to guess, your final shot at $7,500 for today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "An acronym for a type of scare of not being there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "An acronym for a type of scare of not being there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what an acronym is, right Colin?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, let's find out what's in the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Don't say yeah, that was, that's the cue I said when I say Neil you open the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You have one job and that's all."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did you rhyme again?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Whoa."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is FOMO."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The fear of missing out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know I mentioned Oprah earlier."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Didn't FOMO come from Oprah?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wasn't she the first person to mention FOMO?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think so."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You don't know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil's nuts."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “AN ACRONYM FOR A TYPE OF SCARE OF NOT BEING THERE.” FOMO is an acronym that stands for fear of missing out. 4,949 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “YOU MIGHT FEEL IT NOW IF YOU HAVEN'T GUESSED YET.” You feel like you are missing out on something if you haven't guessed yet. 717 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “GET IT AT HOME OR WHEREVER YOU AREN'T.” If you stay home, you are very likely missing out. 49 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “IT'S PRESENT WHEN YOU'RE NOT.” You get FOMO when you are not where the action is. 4 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “ONE LETTER IS MISSING.” The letter M in the acronym FOMO stands for missing. 2 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 2 winners at $1,500.00 each. Silver (Clue 2): 4 winners at $625.00 each. Bronze (Clue 3): 49 winners at $40.81 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow, that means two of you are getting the Gold, $1,500 a piece."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is DianaFloss and FlickAi."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh wow, look at the, look at all the confetti."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, that, oh and also I should mention the Silver winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There's 4 of you, you're all, each getting $625."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is a fun day for you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And 49 Bronze winners are getting $40.81."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Today's big money wins."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Big money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's big money Wednesday here with Howie."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and that is it for this episode of Best Guess Live."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all our winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We are here every weekday at 8 Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can I get one more giggle?"
+          },
+          {
+            "speaker": "Colin",
+            "text": "[Giggle]"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did they hear that on the mic?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good night everybody."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is there any cake left?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Happy birthday Wendy!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [OCEAN, SCALE, MUSICIAN, CAR, NAIL SALON]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [EMAIL, MAIL, WIFI, VOICEMAIL, ABSENCE]"
+          }
+        ]
+      }
+    ]
   }
 ]

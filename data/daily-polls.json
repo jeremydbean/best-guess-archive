@@ -1,5 +1,81 @@
 [
   {
+    "date": "Wednesday, July 15, 2026",
+    "question": "BESIDES “REROUTING,” WHAT ELSE SHOULD YOUR GPS SAY WHEN YOU MISS A TURN?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "I GIVE UP", "pct": 12.8 },
+      { "text": "SERIOUSLY, BRO?", "pct": 74.1 },
+      { "text": "I THINK WE SHOULD SEE OTHER PEOPLE", "pct": 12.9 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 15, 2026",
+    "question": "IF YOU COULDN'T WIN MONEY ON BGL, WHICH OF THESE IS THE NEXT BEST THING?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "ASTRONAUT ICE CREAM", "pct": 20.6 },
+      { "text": "TRUCKER HAT", "pct": 12.3 },
+      { "text": "HUNTER MARCH CHIA PET", "pct": 34.1 },
+      { "text": "HIGH FIVE FROM HOWIE", "pct": 32.8 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 15, 2026",
+    "question": "OTHER THAN A TREADMILL, WHAT IS YOUR FAVORITE WAY TO EXERCISE?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "PUNCHING FROZEN MEAT", "pct": 9.9 },
+      { "text": "SPEED TYPING ON CLUE 1", "pct": 32.1 },
+      { "text": "INTERPRETIVE JUMPING JACKS", "pct": 18.9 },
+      { "text": "FREESTYLE MOSEYING", "pct": 38.9 }
+    ]
+  },
+  {
+    "date": "Tuesday, July 14, 2026",
+    "question": "HOW DO YOU CELEBRATE YOUR BIRTHDAY?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "ALL-OUT RAGER", "pct": 13.5 },
+      { "text": "DON'T TELL ANYONE", "pct": 42.3 },
+      { "text": "DROP HINTS", "pct": 23.5 },
+      { "text": "FREE MEAL AT DENNY'S", "pct": 20.5 }
+    ]
+  },
+  {
+    "date": "Tuesday, July 14, 2026",
+    "question": "WHICH PAST BGL ANSWER WOULD HAVE THE MOST INTENSE PASSPORT PHOTO?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "MONA LISA", "pct": 31.8 },
+      { "text": "A SCARECROW", "pct": 22.2 },
+      { "text": "THE MOUNT RUSHMORE GUYS", "pct": 21.2 },
+      { "text": "TOM CRUISE", "pct": 24.7 }
+    ]
+  },
+  {
+    "date": "Monday, July 13, 2026",
+    "question": "WHICH OF THESE ACTIVITIES ARE YOU THE MOST GUILTY OF?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "JAYWALKING", "pct": 32.1 },
+      { "text": "DRINKING MILK OUT OF A CARTON", "pct": 13.7 },
+      { "text": "STEALING OFFICE SUPPLIES", "pct": 14.4 },
+      { "text": "DOUBLE-DIPPING", "pct": 39.5 }
+    ]
+  },
+  {
+    "date": "Monday, July 13, 2026",
+    "question": "WHICH WOULD YOU BE MOST EXCITED TO FIND IN YOUR HOTEL MINI-FRIDGE?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "BEEF SPRITZER", "pct": 18.3 },
+      { "text": "CAVIAR GUMBALLS", "pct": 17.8 },
+      { "text": "BUTTERMILK MARGARITA", "pct": 37.4 },
+      { "text": "FREE VEGEMITE", "pct": 26.3 }
+    ]
+  },
+  {
     "date": "Monday, July 13, 2026",
     "question": "WHAT ELSE DO YOU WISH YOU COULD DO IN 20 SECONDS, BESIDES TYPE AN ANSWER?",
     "category": "Hypothetical & Silly",
