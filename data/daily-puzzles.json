@@ -1672,5 +1672,36 @@
         "explanation": "In 2026, Netflix had a roast of Kevin Hart."
       }
     ]
+  },
+  {
+    "date": "Thursday, July 16, 2026",
+    "secretItem": "BROOM",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "PILE DRIVER",
+        "explanation": "Sweeping motion drives dirt and dust into a pile."
+      },
+      {
+        "clueNumber": 2,
+        "text": "GET A HANDLE ON IT",
+        "explanation": "A broom has a long handle you grip to sweep."
+      },
+      {
+        "clueNumber": 3,
+        "text": "STICKS TO THE SURFACE",
+        "explanation": "A broom is basically a bristled stick that works the floor's surface."
+      },
+      {
+        "clueNumber": 4,
+        "text": "A WITCH'S RIDE THAT LETS HER GLIDE",
+        "explanation": "Witches are famously depicted flying on brooms."
+      },
+      {
+        "clueNumber": 5,
+        "text": "FOR SWEEPING DIRT AND DUST, THIS BRISTLED TOOL'S A MUST",
+        "explanation": "A broom's bristles sweep away dirt and dust."
+      }
+    ]
   }
 ]

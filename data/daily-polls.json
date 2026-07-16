@@ -1,5 +1,38 @@
 [
   {
+    "date": "Thursday, July 16, 2026",
+    "question": "WHAT'S THE BEST THING TO HEAR RIGHT BEFORE GOING UNDER FOR SURGERY?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "WAIT, WHICH LEG?", "pct": 13.5 },
+      { "text": "YOU WON'T FEEL MUCH", "pct": 49.6 },
+      { "text": "IF IT WASN'T FOR YOUTUBE, I'D BE SO LOST", "pct": 22.9 },
+      { "text": "IF I DO THIS RIGHT, I GRADUATE!", "pct": 13.8 }
+    ]
+  },
+  {
+    "date": "Thursday, July 16, 2026",
+    "question": "FOR TOMORROW’S SHOW, IN WHICH ACCENT SHOULD HUNTER READ THE RULES?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "SOUTHERN BELLE", "pct": 28.8 },
+      { "text": "NEW YORK CAB DRIVER", "pct": 18.5 },
+      { "text": "AUSSIE SURFER", "pct": 20.2 },
+      { "text": "CHRISTOPHER WALKEN", "pct": 32.3 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 15, 2026",
+    "question": "AS AN ADULT, WHAT IS THE WORST PLACE TO SLEEP OTHER THAN A BUNK BED?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "FOLD-OUT HOTEL COUCH", "pct": 15.2 },
+      { "text": "ON A PLANE, LEANING AGAINST MY NEIGHBOR", "pct": 23.7 },
+      { "text": "STANDING IN LINE AT THE DMV", "pct": 16.3 },
+      { "text": "JOB INTERVIEW", "pct": 44.6 }
+    ]
+  },
+  {
     "date": "Wednesday, July 15, 2026",
     "question": "BESIDES “REROUTING,” WHAT ELSE SHOULD YOUR GPS SAY WHEN YOU MISS A TURN?",
     "category": "Hypothetical & Silly",
