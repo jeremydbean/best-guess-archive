@@ -15488,5 +15488,128 @@
         "explanation": "FOMO is an acronym that stands for fear of missing out."
       }
     ]
+  },
+  {
+    "date": "Thursday, July 16, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "KANGAROO",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 17,
+    "silverWinners": 234,
+    "bronzeWinners": 508,
+    "totalWinners": 759,
+    "goldPayout": 176.47,
+    "silverPayout": 10.68,
+    "bronzePayout": 3.93,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Pinky and the Brain, Erratic Taffy 796, Queen Jo, Minty Aura",
+    "wrongGuesses": "MIKE TYSON, GEORGE FOREMAN, MICHAEL JORDAN, MUHAMMAD ALI, SHAQ",
+    "bonus": {
+      "title": "The Hawk",
+      "desc": "Will Ferrell's new series The Hawk is dropping on Netflix today.<br><br>He plays Lonnie Hawkins, a legendary golfer trying to reclaim his former glory while facing younger superior competition."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "APPEARS SOMEWHAT DOWN AND OUT",
+        "correct": "17",
+        "guesses": "3,054 🥇",
+        "explanation": "Down is in \"down under,\" and out is in the \"Australian outback.\""
+      },
+      {
+        "number": 2,
+        "text": "I NEED A LITTLE POCKET CHANGE",
+        "correct": "234",
+        "guesses": "5,101 🥈",
+        "explanation": "A baby kangaroo finishes developing in its mother's pouch."
+      },
+      {
+        "number": 3,
+        "text": "THIS BOXER MADE THEIR NAME BETWEEN KO'S",
+        "correct": "508",
+        "guesses": "4,363 🥉",
+        "explanation": "A kangaroo is famously known to box and its name starts with a K and ends with two O's."
+      },
+      {
+        "number": 4,
+        "text": "BIGFOOT THAT'S RECOGNIZABLE FROM THE JUMP",
+        "correct": "772",
+        "guesses": "2,716",
+        "explanation": "Kangaroos have big feet and are famous for jumping."
+      },
+      {
+        "number": 5,
+        "text": "HOPPY MARSUPIAL YOU SEE AT THE ZOO-PIAL",
+        "correct": "6,505",
+        "guesses": "7,010",
+        "explanation": "A kangaroo is a hoppy marsupial commonly seen at a zoo."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, July 16, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BALLET",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 6,
+    "silverWinners": 176,
+    "bronzeWinners": 410,
+    "totalWinners": 592,
+    "goldPayout": 500.00,
+    "silverPayout": 14.20,
+    "bronzePayout": 4.87,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Dragon Queenie 808, Dev G, Loving Sparrow, Pudgy Roast, Foreign Pisces",
+    "wrongGuesses": "TUTU, GOLF, TARGET, GYMNASTICS, VACATION",
+    "adminNote": "Bronze was supplied as $4.88 but floorCents(2000/410) = $4.87 (audit-enforced) — corrected here; the host's own spoken recap doesn't restate the bronze figure so nothing needed changing in the transcript.",
+    "bonus": {
+      "title": "The Hawk",
+      "desc": "Will Ferrell's new series The Hawk is dropping on Netflix today.<br><br>He plays Lonnie Hawkins, a legendary golfer trying to reclaim his former glory while facing younger superior competition."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "WORK LIFE BALANCE",
+        "correct": "6",
+        "guesses": "2,810 🥇",
+        "explanation": "You must have amazing balance when your life's work is ballet."
+      },
+      {
+        "number": 2,
+        "text": "COMPANY WITH A TIGHT BUDGET",
+        "correct": "176",
+        "guesses": "4,304 🥈",
+        "explanation": "A ballet company has a budget for buying tights."
+      },
+      {
+        "number": 3,
+        "text": "WITH EVERY SCORE COMES A LOT OF POINTS",
+        "correct": "410",
+        "guesses": "4,338 🥉",
+        "explanation": "Every musical score for a ballet comes with a lot of pointe toes."
+      },
+      {
+        "number": 4,
+        "text": "ITS OUTFIT SOUNDS LIKE IT ADDS UP TO FOUR",
+        "correct": "2,168",
+        "guesses": "4,461",
+        "explanation": "A tutu sounds like \"two, two,\" which adds up to four."
+      },
+      {
+        "number": 5,
+        "text": "DANCE STYLE THAT TAKES THE CAKE IN \"NUTCRACKER\" OR \"SWAN LAKE\"",
+        "correct": "5,127",
+        "guesses": "5,864",
+        "explanation": "The Nutcracker and Swan Lake are famous ballet productions."
+      }
+    ]
   }
 ]
