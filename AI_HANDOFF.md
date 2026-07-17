@@ -1,8 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-07-16 (session end)
+Last updated: 2026-07-17 (session end)
 
-## Most Recent Changes (2026-07-16)
+## Most Recent Changes (2026-07-17)
+
+- **New poll added — "Which of these do you least fear missing out on?"**: Appended to `data/daily-polls.json` (now 50 entries, at the top), filed under Friday, July 17, 2026 (appeared above the previously-logged July 16 entries in the app's newest-first list), category "Hypothetical & Silly". Options: IN-LAWS COMING OVER 22.6%, ANOTHER ROOT CANAL 50.2% (crowd pick), OFFICE TALENT SHOW 13.1%, AIRPLANE RESTROOM ETIQUETTE CLASS 13.9%. `npm run audit` passes.
+
+## Previous Changes (2026-07-16)
 
 - **July 16, 2026 episode imported — KANGAROO (R1) and BALLET (R2), host Hunter March** (both `format: "v2"`, standard tiers gold/silver/bronze = clues 1/2/3). Appended to `data/games-2026.json` (now 317 games) + full transcript (now 159). **Host confirmed via AskUserQuestion**: the pasted payload had every speaker labeled generic "Host" (both `host` fields too) instead of a real name — user confirmed Hunter March, applied everywhere (metadata + every spoken line). **One payout fix**: BALLET bronze was supplied as $4.88 but floorCents(2000/410) = **$4.87** (audit-enforced) — corrected in the game data; the host's own spoken recap doesn't restate the bronze figure so nothing needed changing there. Verified: R1 KANGAROO gold Clue 1 (APPEARS SOMEWHAT DOWN AND OUT) 17 @ $176.47 / silver Clue 2 (I NEED A LITTLE POCKET CHANGE) 234 @ $10.68 / bronze Clue 3 (THIS BOXER MADE THEIR NAME BETWEEN KO'S) 508 @ $3.93, total 759. R2 BALLET gold Clue 1 (WORK LIFE BALANCE) 6 @ $500.00 / silver Clue 2 (COMPANY WITH A TIGHT BUDGET) 176 @ $14.20 / bronze Clue 3 (WITH EVERY SCORE COMES A LOT OF POINTS) 410 @ $4.87, total 592. **Bonus/promo**: "The Hawk" (Will Ferrell's new Netflix series), attached to both rounds. Winners: `Pinky and the Brain, Erratic Taffy 796, Queen Jo, Minty Aura` (R1 gold, among others); `Dragon Queenie 808, Dev G, Loving Sparrow, Pudgy Roast, Foreign Pisces` (R2 gold, among others). Wrong guesses: R1 `MIKE TYSON, GEORGE FOREMAN, MICHAEL JORDAN, MUHAMMAD ALI, SHAQ`; R2 `TUTU, GOLF, TARGET, GYMNASTICS, VACATION`. This episode has a running "Hunter plays along without knowing the answer" bit throughout both rounds. Nested curly quotes in BALLET's Clue 5 recap line (its own clue text quotes both "Nutcracker" and "Swan Lake") needed the same manual fix as previous episodes — the naive alternating-toggle quote converter produces backwards quotes whenever a line has more than one nested pair. `npm run audit` passes 0/0.
 
