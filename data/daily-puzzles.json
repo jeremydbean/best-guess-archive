@@ -1703,5 +1703,36 @@
         "explanation": "A broom's bristles sweep away dirt and dust."
       }
     ]
+  },
+  {
+    "date": "Friday, July 17, 2026",
+    "secretItem": "TEXAS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "THE NEIGHBOR IS OK",
+        "explanation": "Texas borders Oklahoma, whose state abbreviation is \"OK.\""
+      },
+      {
+        "clueNumber": 2,
+        "text": "WHERE ONE STAR IS ACTUALLY A GOOD THING",
+        "explanation": "Famously, Texas is the Lone Star State."
+      },
+      {
+        "clueNumber": 3,
+        "text": "RANCH DRESSING IS REALLY POPULAR HERE",
+        "explanation": "Many Texans dress for working on a ranch."
+      },
+      {
+        "clueNumber": 4,
+        "text": "LIKE TOY STORY, IT HAS COWBOYS & ASTRONAUTS",
+        "explanation": "Texas is cowboy country, and Houston is the home of NASA."
+      },
+      {
+        "clueNumber": 5,
+        "text": "DON'T MESS WITH THIS BIG STATE WHERE THE BBQ'S GREAT",
+        "explanation": "Don't mess with Texas... or Texas barbecue!"
+      }
+    ]
   }
 ]

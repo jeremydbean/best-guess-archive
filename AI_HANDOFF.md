@@ -4,6 +4,8 @@ Last updated: 2026-07-17 (session end)
 
 ## Most Recent Changes (2026-07-17)
 
+- **Daily puzzle added — Friday, July 17, 2026: TEXAS**: Appended to `data/daily-puzzles.json` (now 56 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #2, "WHERE ONE STAR IS ACTUALLY A GOOD THING"); explanations reused from the screenshot's own text (sentence case, matching file convention). Clues: THE NEIGHBOR IS OK / WHERE ONE STAR IS ACTUALLY A GOOD THING / RANCH DRESSING IS REALLY POPULAR HERE / LIKE TOY STORY, IT HAS COWBOYS & ASTRONAUTS / DON'T MESS WITH THIS BIG STATE WHERE THE BBQ'S GREAT. `npm run audit` passes.
+
 - **New poll added — "Which of these do you least fear missing out on?"**: Appended to `data/daily-polls.json` (now 50 entries, at the top), filed under Friday, July 17, 2026 (appeared above the previously-logged July 16 entries in the app's newest-first list), category "Hypothetical & Silly". Options: IN-LAWS COMING OVER 22.6%, ANOTHER ROOT CANAL 50.2% (crowd pick), OFFICE TALENT SHOW 13.1%, AIRPLANE RESTROOM ETIQUETTE CLASS 13.9%. `npm run audit` passes.
 
 ## Previous Changes (2026-07-16)
