@@ -1,5 +1,16 @@
 [
   {
+    "date": "Friday, July 17, 2026",
+    "question": "WHICH OF THESE DO YOU LEAST FEAR MISSING OUT ON?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "IN-LAWS COMING OVER", "pct": 22.6 },
+      { "text": "ANOTHER ROOT CANAL", "pct": 50.2 },
+      { "text": "OFFICE TALENT SHOW", "pct": 13.1 },
+      { "text": "AIRPLANE RESTROOM ETIQUETTE CLASS", "pct": 13.9 }
+    ]
+  },
+  {
     "date": "Thursday, July 16, 2026",
     "question": "WHAT'S THE BEST THING TO HEAR RIGHT BEFORE GOING UNDER FOR SURGERY?",
     "category": "Hypothetical & Silly",
