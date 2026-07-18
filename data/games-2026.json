@@ -15611,5 +15611,128 @@
         "explanation": "The Nutcracker and Swan Lake are famous ballet productions."
       }
     ]
+  },
+  {
+    "date": "Friday, July 17, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "COWBOY HAT",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 4,
+    "silverWinners": 209,
+    "bronzeWinners": 3344,
+    "totalWinners": 3557,
+    "goldPayout": 750.00,
+    "silverPayout": 11.96,
+    "bronzePayout": 0.59,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Neat-y Minnie Boss, Happy Socks 300, Oris Clovis, Bring Back The OA",
+    "wrongGuesses": "BARTENDER, HAT, COWBOY, MICROWAVE, STOVE",
+    "adminNote": "Bronze was supplied as $0.60 but floorCents(2000/3344) = $0.59 (audit-enforced) — corrected here; the host's own spoken recap already says \"fifty-nine cents,\" matching the corrected figure.",
+    "bonus": {
+      "title": "FIFA World Cup Launch Edition on Netflix Games",
+      "desc": "Howie Mandel and Hunter March play the new FIFA World Cup Launch Edition on Netflix Games in a heated match."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "TOP OF THE RANGE",
+        "correct": "4",
+        "guesses": "3,711 🥇",
+        "explanation": "You wear a cowboy hat on top of your head when you're on the cattle range."
+      },
+      {
+        "number": 2,
+        "text": "THROWS SHADE AT TOUGH GUYS",
+        "correct": "209",
+        "guesses": "3,444 🥈",
+        "explanation": "Cowboys are generally tough and the hat's brim provides shade."
+      },
+      {
+        "number": 3,
+        "text": "GETS TIPPED AT THE SALOON",
+        "correct": "3,344",
+        "guesses": "8,254 🥉",
+        "explanation": "A polite cowboy tips his hat when he walks into the saloon."
+      },
+      {
+        "number": 4,
+        "text": "HELPED OLD WEST SHERIFFS GO UNDERCOVER",
+        "correct": "1,796",
+        "guesses": "3,185",
+        "explanation": "An Old West sheriff's head is covered under a cowboy hat."
+      },
+      {
+        "number": 5,
+        "text": "YEE-HAW! THIS HEADWEAR IS IN ALL ITS GLORY ON WOODY FROM TOY STORY",
+        "correct": "2,255",
+        "guesses": "2,590",
+        "explanation": "Woody is a cowboy and always has his trusty hat."
+      }
+    ]
+  },
+  {
+    "date": "Friday, July 17, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "GHOSTBUSTERS",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 17,
+    "silverWinners": 75,
+    "bronzeWinners": 1960,
+    "totalWinners": 2052,
+    "goldPayout": 176.47,
+    "silverPayout": 33.33,
+    "bronzePayout": 1.02,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Fake Lock, Mango Madness, Jinx Mcfluff, Ovine Corner, Mangy Chain",
+    "wrongGuesses": "SMORES, BARTENDER, FISHERMAN, SMORE, JINGLE",
+    "bonus": {
+      "title": "FIFA World Cup Launch Edition on Netflix Games",
+      "desc": "Howie Mandel and Hunter March play the new FIFA World Cup Launch Edition on Netflix Games in a heated match."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "NO LOGO",
+        "correct": "17",
+        "guesses": "1,960 🥇",
+        "explanation": "Their logo is a red circle with a diagonal line through it, meaning no."
+      },
+      {
+        "number": 2,
+        "text": "CATCHY JOB, CATCHY SLOGAN",
+        "correct": "75",
+        "guesses": "2,711 🥈",
+        "explanation": "They catch ghosts and their famous slogan comes from their catchy theme song."
+      },
+      {
+        "number": 3,
+        "text": "NOT A FAN OF FREE SPIRITS",
+        "correct": "1,960",
+        "guesses": "6,202 🥉",
+        "explanation": "Their job is literally trapping spirits."
+      },
+      {
+        "number": 4,
+        "text": "CINEMA'S MOST ICONIC MARSHMALLOW ROAST",
+        "correct": "3,398",
+        "guesses": "5,611",
+        "explanation": "This references their iconic fight with the Stay Puft Marshmallow Man."
+      },
+      {
+        "number": 5,
+        "text": "BILL MURRAY VS. SLIMER: THIS '80S COMEDY'S AN ALL-TIMER!",
+        "correct": "3,684",
+        "guesses": "4,319",
+        "explanation": "Bill Murray stars and Slimer chows down in this classic comedy film."
+      }
+    ]
   }
 ]

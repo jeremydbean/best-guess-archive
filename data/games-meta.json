@@ -3426,6 +3426,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Friday, July 17, 2026",
+      "secretItem": "COWBOY HAT",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 3557,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Friday, July 17, 2026",
+      "secretItem": "GHOSTBUSTERS",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 2052,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
