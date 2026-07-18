@@ -1,5 +1,60 @@
 [
   {
+    "date": "Saturday, July 18, 2026",
+    "question": "BESIDES THE MAP, WHAT BACKGROUND WOULD YOU LIKE TO SEE ON THE NEXT SHOW?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "15,000 DOLLARS IN PENNIES", "pct": 17.0 },
+      { "text": "OLD HEADSHOTS OF OUR HOSTS", "pct": 35.9 },
+      { "text": "HUNTER'S DOG GRIZZ", "pct": 28.5 },
+      { "text": "VIDEO OF INTERNET KITTIES", "pct": 18.4 }
+    ]
+  },
+  {
+    "date": "Saturday, July 18, 2026",
+    "question": "WHICH OF THESE CHILDHOOD RULES DO YOU MOST OFTEN BREAK?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "RUNNING WITH SCISSORS", "pct": 1.7 },
+      { "text": "SWIMMING RIGHT AFTER YOU EAT", "pct": 26.2 },
+      { "text": "TALKING TO STRANGERS", "pct": 48.5 },
+      { "text": "SITTING TOO CLOSE TO THE TV", "pct": 23.4 }
+    ]
+  },
+  {
+    "date": "Friday, July 17, 2026",
+    "question": "WHAT WOULD BE THE BEST PART ABOUT HAVING A POUCH LIKE A KANGAROO?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "YOU CAN DITCH THE STROLLER", "pct": 11.0 },
+      { "text": "KEEPS YOUR HANDS WARM", "pct": 16.9 },
+      { "text": "NEVER NEED BAGS AT THE GROCERY STORE", "pct": 25.6 },
+      { "text": "ALWAYS HAVE SNACKS CLOSE BY", "pct": 46.4 }
+    ]
+  },
+  {
+    "date": "Friday, July 17, 2026",
+    "question": "WHICH OF THESE IS THE MOST STRESSFUL?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "SPLITTING A LARGE RESTAURANT CHECK", "pct": 21.3 },
+      { "text": "ASSEMBLING FURNITURE", "pct": 40.8 },
+      { "text": "BUYING A VALENTINE'S DAY GIFT", "pct": 20.3 },
+      { "text": "CARRYING MORE THAN TWO CUPS AT ONCE", "pct": 17.4 }
+    ]
+  },
+  {
+    "date": "Friday, July 17, 2026",
+    "question": "WHAT DOES THE BGL CRYSTAL BALL DO WHEN IT'S NOT AT WORK?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "GOES BOWLING", "pct": 22.5 },
+      { "text": "GIVES KEYNOTE AT ORBCON '26", "pct": 6.1 },
+      { "text": "WATCHES HUNTER SLEEP", "pct": 51.4 },
+      { "text": "UNDERSTUDY AT THE PLANETARIUM", "pct": 19.8 }
+    ]
+  },
+  {
     "date": "Friday, July 17, 2026",
     "question": "WHICH OF THESE DO YOU LEAST FEAR MISSING OUT ON?",
     "category": "Hypothetical & Silly",

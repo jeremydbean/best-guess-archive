@@ -4,6 +4,8 @@ Last updated: 2026-07-18 (session end)
 
 ## Most Recent Changes (2026-07-18)
 
+- **5 new Daily Polls added, spread across July 17–18, 2026**: Appended to `data/daily-polls.json` (now 55 entries, at the top). Reconstructed from 3 overlapping scrolling screenshots — all 5 appeared above the previously-logged July 17 "least fear missing out" entry, dated per user confirmation: **Saturday, July 18** — "Besides the map, what background would you like to see on the next show?" (Old headshots of our hosts 35.9% crowd pick — this is the exact poll referenced in the July 17 episode's cold open), "Which of these childhood rules do you most often break?" (Talking to strangers 48.5% crowd pick). **Friday, July 17** — "What would be the best part about having a pouch like a kangaroo?" (Always have snacks close by 46.4% crowd pick — a callback to the July 16 KANGAROO episode; question wording confirmed by the user since the screenshot's header was scrolled out of frame and only the results were visible), "Which of these is the most stressful?" (Assembling furniture 40.8% crowd pick), "What does the BGL crystal ball do when it's not at work?" (Watches Hunter sleep 51.4% crowd pick). `npm run audit` passes 0/0.
+
 - **Daily puzzle added — Saturday, July 18, 2026: STAPLER**: Appended to `data/daily-puzzles.json` (now 57 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #5, "METAL PRONGS IT DISPATCHES INTO THE PAGES IT ATTACHES"); explanations reused from the screenshot's own text. Clues: EXTREMELY PUSHY / ALWAYS OPEN TO CONNECT / PUT IT DOWN ON PAPER / A DESKTOP BINDER THAT HAS NO RINGS / METAL PRONGS IT DISPATCHES INTO THE PAGES IT ATTACHES. `npm run audit` passes.
 
 ## Previous Changes (2026-07-17)
