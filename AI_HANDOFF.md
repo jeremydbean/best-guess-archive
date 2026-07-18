@@ -1,8 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-07-17 (session end)
+Last updated: 2026-07-18 (session end)
 
-## Most Recent Changes (2026-07-17)
+## Most Recent Changes (2026-07-18)
+
+- **Daily puzzle added — Saturday, July 18, 2026: STAPLER**: Appended to `data/daily-puzzles.json` (now 57 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #5, "METAL PRONGS IT DISPATCHES INTO THE PAGES IT ATTACHES"); explanations reused from the screenshot's own text. Clues: EXTREMELY PUSHY / ALWAYS OPEN TO CONNECT / PUT IT DOWN ON PAPER / A DESKTOP BINDER THAT HAS NO RINGS / METAL PRONGS IT DISPATCHES INTO THE PAGES IT ATTACHES. `npm run audit` passes.
+
+## Previous Changes (2026-07-17)
 
 - **July 17, 2026 episode imported — COWBOY HAT (R1) and GHOSTBUSTERS (R2), host Hunter March** (both `format: "v2"`, standard tiers gold/silver/bronze = clues 1/2/3). Appended to `data/games-2026.json` (now 319 games) + full transcript (now 160). **One payout fix**: COWBOY HAT bronze was supplied as $0.60 but floorCents(2000/3344) = **$0.59** (audit-enforced) — the host's own spoken recap ("a bunch of people going home with fifty-nine cents") already had the correct figure, so this was purely a summary-block typo. GHOSTBUSTERS' tiers matched the floor formula exactly, no correction needed. Verified: R1 COWBOY HAT gold Clue 1 (TOP OF THE RANGE) 4 @ $750.00 / silver Clue 2 (THROWS SHADE AT TOUGH GUYS) 209 @ $11.96 / bronze Clue 3 (GETS TIPPED AT THE SALOON) 3,344 @ $0.59, total 3,557. R2 GHOSTBUSTERS gold Clue 1 (NO LOGO) 17 @ $176.47 / silver Clue 2 (CATCHY JOB, CATCHY SLOGAN) 75 @ $33.33 / bronze Clue 3 (NOT A FAN OF FREE SPIRITS) 1,960 @ $1.02, total 2,052. **Bonus/promo**: "FIFA World Cup Launch Edition on Netflix Games" (a Hunter-vs-Howie in-studio match, described mid-Round-2 but attached to both rounds per convention — first pass missed Round 1 and the audit caught the `partial-day-bonus` warning). Winners: `Neat-y Minnie Boss, Happy Socks 300, Oris Clovis, Bring Back The OA` (R1 gold); `Fake Lock, Mango Madness, Jinx Mcfluff, Ovine Corner, Mangy Chain` (R2 gold, among others). Wrong guesses: R1 `BARTENDER, HAT, COWBOY, MICROWAVE, STOVE`; R2 `SMORES, BARTENDER, FISHERMAN, SMORE, JINGLE`. Episode includes an extended bit where Howie and Hunter play FIFA on Netflix Games on-camera (Howie gets a red card). `npm run audit` passes 0/0.
 
