@@ -1734,5 +1734,36 @@
         "explanation": "Don't mess with Texas... or Texas barbecue!"
       }
     ]
+  },
+  {
+    "date": "Saturday, July 18, 2026",
+    "secretItem": "STAPLER",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "EXTREMELY PUSHY",
+        "explanation": "You operate a stapler by pushing down on it."
+      },
+      {
+        "clueNumber": 2,
+        "text": "ALWAYS OPEN TO CONNECT",
+        "explanation": "Staplers are open and they're all about connecting."
+      },
+      {
+        "clueNumber": 3,
+        "text": "PUT IT DOWN ON PAPER",
+        "explanation": "You push it down onto pieces of paper."
+      },
+      {
+        "clueNumber": 4,
+        "text": "A DESKTOP BINDER THAT HAS NO RINGS",
+        "explanation": "Staplers bind pieces of paper together."
+      },
+      {
+        "clueNumber": 5,
+        "text": "METAL PRONGS IT DISPATCHES INTO THE PAGES IT ATTACHES",
+        "explanation": "We hope you enjoyed this poetic tribute to the stapler."
+      }
+    ]
   }
 ]
