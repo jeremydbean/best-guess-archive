@@ -1,8 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-07-18 (session end)
+Last updated: 2026-07-19 (session end)
 
-## Most Recent Changes (2026-07-18)
+## Most Recent Changes (2026-07-19)
+
+- **Daily puzzle added — Sunday, July 19, 2026: CHEESECAKE**: Appended to `data/daily-puzzles.json` (now 58 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #4, "NO JACK, SWISS, OR CHEDDAR - IT'S SWEET SO IT'S BETTER"); explanations reused from the screenshot's own text. Clues: OFTEN FOUND IN A FACTORY / WELL, THAT'S RICH / WHAT A MOUSE WANTS TO EAT ON THEIR BIRTHDAY / NO JACK, SWISS, OR CHEDDAR - IT'S SWEET SO IT'S BETTER / DAIRY DESSERT, GRAHAM CRACKER BASE, BAKED & IN A GLASS CASE. `npm run audit` passes.
+
+## Previous Changes (2026-07-18)
 
 - **5 new Daily Polls added, spread across July 17–18, 2026**: Appended to `data/daily-polls.json` (now 55 entries, at the top). Reconstructed from 3 overlapping scrolling screenshots — all 5 appeared above the previously-logged July 17 "least fear missing out" entry, dated per user confirmation: **Saturday, July 18** — "Besides the map, what background would you like to see on the next show?" (Old headshots of our hosts 35.9% crowd pick — this is the exact poll referenced in the July 17 episode's cold open), "Which of these childhood rules do you most often break?" (Talking to strangers 48.5% crowd pick). **Friday, July 17** — "What would be the best part about having a pouch like a kangaroo?" (Always have snacks close by 46.4% crowd pick — a callback to the July 16 KANGAROO episode; question wording confirmed by the user since the screenshot's header was scrolled out of frame and only the results were visible), "Which of these is the most stressful?" (Assembling furniture 40.8% crowd pick), "What does the BGL crystal ball do when it's not at work?" (Watches Hunter sleep 51.4% crowd pick). `npm run audit` passes 0/0.
 
