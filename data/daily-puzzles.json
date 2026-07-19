@@ -1765,5 +1765,36 @@
         "explanation": "We hope you enjoyed this poetic tribute to the stapler."
       }
     ]
+  },
+  {
+    "date": "Sunday, July 19, 2026",
+    "secretItem": "CHEESECAKE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "OFTEN FOUND IN A FACTORY",
+        "explanation": "As in the Cheesecake Factory."
+      },
+      {
+        "clueNumber": 2,
+        "text": "WELL, THAT'S RICH",
+        "explanation": "It's a very rich dessert."
+      },
+      {
+        "clueNumber": 3,
+        "text": "WHAT A MOUSE WANTS TO EAT ON THEIR BIRTHDAY",
+        "explanation": "Mice love cheese, and you eat cake on your birthday."
+      },
+      {
+        "clueNumber": 4,
+        "text": "NO JACK, SWISS, OR CHEDDAR - IT'S SWEET SO IT'S BETTER",
+        "explanation": "None of those is the cheese in cheesecake."
+      },
+      {
+        "clueNumber": 5,
+        "text": "DAIRY DESSERT, GRAHAM CRACKER BASE, BAKED & IN A GLASS CASE",
+        "explanation": "We're serving you this delicious answer on a silver platter."
+      }
+    ]
   }
 ]
