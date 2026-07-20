@@ -4,6 +4,8 @@ Last updated: 2026-07-20 (session end)
 
 ## Most Recent Changes (2026-07-20)
 
+- **3 new Daily Polls added, spread across July 18–20, 2026**: Appended to `data/daily-polls.json` (now 58 entries, at the top). Reconstructed from 5 overlapping scrolling screenshots — all 3 appeared above the previously-logged July 18 "besides the map" entry, dated per user confirmation (one per day, filling the Jul 19–20 gap): **Monday, July 20** — "What would be the worst thing to consume on a bumpy flight?" (Hot bowl of soup 88% crowd pick, by a landslide). **Sunday, July 19** — "Which of these would most ruin your weekend?" (Air conditioner breaks 47.9% crowd pick). **Saturday, July 18** — "Which hat would make a cowboy look the silliest?" (Easter bonnet 40.3% crowd pick — a callback to the July 17 COWBOY HAT episode). `npm run audit` passes 0/0.
+
 - **Daily puzzle added — Monday, July 20, 2026: TOM BRADY**: Appended to `data/daily-puzzles.json` (now 59 entries). Screenshot's answer label showed "TOM BRADY — ANSWERED ON CLUE #1" directly (no explanations given this time, so explanations were written to match the file's existing style). Clues: THE OLD 1-2 / WAS A MODEL HUSBAND / REPEATEDLY THREW THE BIG GAME / FROM PATRIOT TO PIRATE RINGLEADER / THIS G.O.A.T. QB IS A HALL-OF-FAMER TO BE. `npm run audit` passes.
 
 ## Previous Changes (2026-07-19)
