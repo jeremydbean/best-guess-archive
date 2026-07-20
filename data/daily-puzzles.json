@@ -1796,5 +1796,36 @@
         "explanation": "We're serving you this delicious answer on a silver platter."
       }
     ]
+  },
+  {
+    "date": "Monday, July 20, 2026",
+    "secretItem": "TOM BRADY",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "THE OLD 1-2",
+        "explanation": "Tom Brady wore jersey number 12."
+      },
+      {
+        "clueNumber": 2,
+        "text": "WAS A MODEL HUSBAND",
+        "explanation": "He was married to supermodel Gisele Bündchen."
+      },
+      {
+        "clueNumber": 3,
+        "text": "REPEATEDLY THREW THE BIG GAME",
+        "explanation": "He played in a record number of Super Bowls."
+      },
+      {
+        "clueNumber": 4,
+        "text": "FROM PATRIOT TO PIRATE RINGLEADER",
+        "explanation": "He went from the New England Patriots to the Tampa Bay Buccaneers."
+      },
+      {
+        "clueNumber": 5,
+        "text": "THIS G.O.A.T. QB IS A HALL-OF-FAMER TO BE",
+        "explanation": "He's widely considered the greatest quarterback of all time and a future Hall of Famer."
+      }
+    ]
   }
 ]
