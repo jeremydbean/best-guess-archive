@@ -1,5 +1,36 @@
 [
   {
+    "date": "Monday, July 20, 2026",
+    "question": "WHAT WOULD BE THE WORST THING TO CONSUME ON A BUMPY FLIGHT?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "HOT BOWL OF SOUP", "pct": 88.0 },
+      { "text": "CHICKEN SKEWERS", "pct": 11.9 }
+    ]
+  },
+  {
+    "date": "Sunday, July 19, 2026",
+    "question": "WHICH OF THESE WOULD MOST RUIN YOUR WEEKEND?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "AIR CONDITIONER BREAKS", "pct": 47.9 },
+      { "text": "RUN OUT OF GAS", "pct": 12.2 },
+      { "text": "THE INTERNET IS DOWN", "pct": 25.9 },
+      { "text": "SURPRISE VISIT FROM IN-LAWS", "pct": 13.8 }
+    ]
+  },
+  {
+    "date": "Saturday, July 18, 2026",
+    "question": "WHICH HAT WOULD MAKE A COWBOY LOOK THE SILLIEST?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "BERET", "pct": 5.5 },
+      { "text": "EASTER BONNET", "pct": 40.3 },
+      { "text": "PROPELLER BEANIE", "pct": 36.0 },
+      { "text": "SHOWER CAP", "pct": 18.0 }
+    ]
+  },
+  {
     "date": "Saturday, July 18, 2026",
     "question": "BESIDES THE MAP, WHAT BACKGROUND WOULD YOU LIKE TO SEE ON THE NEXT SHOW?",
     "category": "Show Trivia",
