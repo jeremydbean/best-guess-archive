@@ -1,8 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-07-19 (session end)
+Last updated: 2026-07-20 (session end)
 
-## Most Recent Changes (2026-07-19)
+## Most Recent Changes (2026-07-20)
+
+- **Daily puzzle added — Monday, July 20, 2026: TOM BRADY**: Appended to `data/daily-puzzles.json` (now 59 entries). Screenshot's answer label showed "TOM BRADY — ANSWERED ON CLUE #1" directly (no explanations given this time, so explanations were written to match the file's existing style). Clues: THE OLD 1-2 / WAS A MODEL HUSBAND / REPEATEDLY THREW THE BIG GAME / FROM PATRIOT TO PIRATE RINGLEADER / THIS G.O.A.T. QB IS A HALL-OF-FAMER TO BE. `npm run audit` passes.
+
+## Previous Changes (2026-07-19)
 
 - **Daily puzzle added — Sunday, July 19, 2026: CHEESECAKE**: Appended to `data/daily-puzzles.json` (now 58 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #4, "NO JACK, SWISS, OR CHEDDAR - IT'S SWEET SO IT'S BETTER"); explanations reused from the screenshot's own text. Clues: OFTEN FOUND IN A FACTORY / WELL, THAT'S RICH / WHAT A MOUSE WANTS TO EAT ON THEIR BIRTHDAY / NO JACK, SWISS, OR CHEDDAR - IT'S SWEET SO IT'S BETTER / DAIRY DESSERT, GRAHAM CRACKER BASE, BAKED & IN A GLASS CASE. `npm run audit` passes.
 
