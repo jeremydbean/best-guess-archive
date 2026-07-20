@@ -1,6 +1,28 @@
 [
   {
     "date": "Monday, July 20, 2026",
+    "question": "WHICH OF THESE SHOULD BE THE NAME OF THE BGL FANBASE?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "THE BESTIES", "pct": 12.5 },
+      { "text": "THE CRYSTAL BALLERS", "pct": 57.5 },
+      { "text": "THE LOCK GUESS MONSTERS", "pct": 19.7 },
+      { "text": "THE RHYME TIME CLUE CREW", "pct": 10.1 }
+    ]
+  },
+  {
+    "date": "Monday, July 20, 2026",
+    "question": "WHICH OF THESE IS YOUR MOST-USED HAND GESTURE?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "FINGER GUNS", "pct": 32.4 },
+      { "text": "CHEF'S KISS", "pct": 20.9 },
+      { "text": "AIR GUITAR", "pct": 10.4 },
+      { "text": "\"THIS GUY\" THUMBS", "pct": 36.1 }
+    ]
+  },
+  {
+    "date": "Monday, July 20, 2026",
     "question": "WHAT WOULD BE THE WORST THING TO CONSUME ON A BUMPY FLIGHT?",
     "category": "Hypothetical & Silly",
     "options": [
