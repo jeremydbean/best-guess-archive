@@ -1,8 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-07-20 (session end)
+Last updated: 2026-07-21 (session end)
 
-## Most Recent Changes (2026-07-20)
+## Most Recent Changes (2026-07-21)
+
+- **Daily puzzle added — Tuesday, July 21, 2026: BAGEL**: Appended to `data/daily-puzzles.json` (now 60 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #2, "HAS AN INEDIBLE CENTER"); explanations reused from the screenshot's own text. Clues: EVERYTHING IS ON THE MENU / HAS AN INEDIBLE CENTER / A WELL-ROUNDED MEAL / PART OF A SCHMEAR CAMPAIGN / THIS DOUGHY CIRCLE ROCKS WITH CREAM CHEESE AND LOX. `npm run audit` passes.
+
+## Previous Changes (2026-07-20)
 
 - **July 20, 2026 episode imported — SHREK (R1) and EDDIE MURPHY (R2), host Hunter March** (both `format: "v2"`, standard tiers gold/silver/bronze = clues 1/2/3). Appended to `data/games-2026.json` (now 321 games) + full transcript (now 161). **One payout fix**: EDDIE MURPHY silver was supplied as $277.78 but floorCents(2500/9) = **$277.77** (audit-enforced) — corrected here; a rounding-vs-flooring slip rather than a real data conflict. Verified: R1 SHREK gold Clue 1 (GREAT SCOT!) 30 @ $100.00 / silver Clue 2 (CALLING HIM AN OG IS ONLY THE HALF OF IT) 1,876 @ $1.33 / bronze Clue 3 (THIS BEASTIE BOY HAS A BESTIE YOU'LL GET A KICK OUT OF) 1,603 @ $1.24, total 3,509. R2 EDDIE MURPHY gold Clue 1 (STARTED OUT WORKING WEEKENDS) 7 @ $428.57 / silver Clue 2 (PLAYED A BIG ROLE ON CAMPUS) 9 @ $277.77 / bronze Clue 3 (DID A LOT WHILE DOING LITTLE) 835 @ $2.39, total 851. No promo/bonus this episode. Winners: `fabled chip, CuBing, Mr9821, WinwardWayward` (R1 gold, among 100 total); `Tasty Freeze, Ninja Death Monkey, Gator Professor, Frozen Thumb, Sweet T` (R2 gold, among others). Wrong guesses: R1 `BACK TO THE FUTURE, DOC BROWN, OGRE, WILLIAM WALLACE, CHRISTOPHER LLOYD`; R2 `MASCOT, DONKEY, DR DOLITTLE, DR DOOLITTLE, STUART LITTLE`. Both puzzles' clue chains connect via a running "Beastie Boy bestie" pun linking Shrek's Donkey to Eddie Murphy (who voices Donkey) — Hunter self-deprecates for not catching the connection sooner. `npm run audit` passes 0/0.
 

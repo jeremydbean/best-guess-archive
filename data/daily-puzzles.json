@@ -1827,5 +1827,36 @@
         "explanation": "He's widely considered the greatest quarterback of all time and a future Hall of Famer."
       }
     ]
+  },
+  {
+    "date": "Tuesday, July 21, 2026",
+    "secretItem": "BAGEL",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "EVERYTHING IS ON THE MENU",
+        "explanation": "\"Everything\" is a popular type of bagel."
+      },
+      {
+        "clueNumber": 2,
+        "text": "HAS AN INEDIBLE CENTER",
+        "explanation": "There's no center in a bagel."
+      },
+      {
+        "clueNumber": 3,
+        "text": "A WELL-ROUNDED MEAL",
+        "explanation": "It's round and packs many calories."
+      },
+      {
+        "clueNumber": 4,
+        "text": "PART OF A SCHMEAR CAMPAIGN",
+        "explanation": "Bagels taste great with a \"schmear\" of spread on them."
+      },
+      {
+        "clueNumber": 5,
+        "text": "THIS DOUGHY CIRCLE ROCKS WITH CREAM CHEESE AND LOX",
+        "explanation": "That's a delicious bagel!"
+      }
+    ]
   }
 ]
