@@ -15734,5 +15734,120 @@
         "explanation": "Bill Murray stars and Slimer chows down in this classic comedy film."
       }
     ]
+  },
+  {
+    "date": "Monday, July 20, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "SHREK",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 30,
+    "silverWinners": 1876,
+    "bronzeWinners": 1603,
+    "totalWinners": 3509,
+    "goldPayout": 100.00,
+    "silverPayout": 1.33,
+    "bronzePayout": 1.24,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "fabled chip, CuBing, Mr9821, WinwardWayward",
+    "wrongGuesses": "BACK TO THE FUTURE, DOC BROWN, OGRE, WILLIAM WALLACE, CHRISTOPHER LLOYD",
+    "clues": [
+      {
+        "number": 1,
+        "text": "GREAT SCOT!",
+        "correct": "30",
+        "guesses": "3,797 🥇",
+        "explanation": "Shrek has a Scottish accent and is one of the greatest Scots to ever do it."
+      },
+      {
+        "number": 2,
+        "text": "CALLING HIM AN OG IS ONLY THE HALF OF IT",
+        "correct": "1,876",
+        "guesses": "5,686 🥈",
+        "explanation": "The letters O-G are half of the word ogre."
+      },
+      {
+        "number": 3,
+        "text": "THIS BEASTIE BOY HAS A BESTIE YOU'LL GET A KICK OUT OF",
+        "correct": "1,603",
+        "guesses": "4,458 🥉",
+        "explanation": "His best friend is a donkey, and they are famous for kicking."
+      },
+      {
+        "number": 4,
+        "text": "HIS MANY MOVIES HAVE A MONSTER GROSS AT THE BOX OFFICE",
+        "correct": "678",
+        "guesses": "2,672",
+        "explanation": "He is a gross monster who has sold a lot of movie tickets."
+      },
+      {
+        "number": 5,
+        "text": "ANIMATED OGRE WHO'S SOMETIMES MEAN BUT ALWAYS LOVABLE AND GREEN",
+        "correct": "4,807",
+        "guesses": "5,460",
+        "explanation": "When it comes to lovable cartoon ogres, Shrek is an all-star."
+      }
+    ]
+  },
+  {
+    "date": "Monday, July 20, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "EDDIE MURPHY",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 7,
+    "silverWinners": 9,
+    "bronzeWinners": 835,
+    "totalWinners": 851,
+    "goldPayout": 428.57,
+    "silverPayout": 277.77,
+    "bronzePayout": 2.39,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Tasty Freeze, Ninja Death Monkey, Gator Professor, Frozen Thumb, Sweet T",
+    "wrongGuesses": "MASCOT, DONKEY, DR DOLITTLE, DR DOOLITTLE, STUART LITTLE",
+    "adminNote": "Silver was supplied as $277.78 but floorCents(2500/9) = $277.77 (audit-enforced) — corrected here.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "STARTED OUT WORKING WEEKENDS",
+        "correct": "7",
+        "guesses": "2,160 🥇",
+        "explanation": "He was on Saturday Night Live early in his career, which is how a lot of people grew to know and love him."
+      },
+      {
+        "number": 2,
+        "text": "PLAYED A BIG ROLE ON CAMPUS",
+        "correct": "9",
+        "guesses": "4,246 🥈",
+        "explanation": "He played a very rotund Nutty Professor."
+      },
+      {
+        "number": 3,
+        "text": "DID A LOT WHILE DOING LITTLE",
+        "correct": "835",
+        "guesses": "6,270 🥉",
+        "explanation": "He attended to hundreds of animals as Dr. Dolittle."
+      },
+      {
+        "number": 4,
+        "text": "HIS BEASTIE BOY BESTIE GETS A KICK OUT OF HIM",
+        "correct": "687",
+        "guesses": "3,332",
+        "explanation": "He voices the character Donkey in the Shrek movies."
+      },
+      {
+        "number": 5,
+        "text": "MADE US LAUGH OFF OUR RUMPS AS A BEVERLY HILLS COP & THE KLUMPS",
+        "correct": "4,489",
+        "guesses": "5,398",
+        "explanation": "He made four Beverly Hills Cop movies and played most of the Klumps in The Nutty Professor."
+      }
+    ]
   }
 ]

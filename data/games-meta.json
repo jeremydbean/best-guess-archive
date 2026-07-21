@@ -3450,6 +3450,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Monday, July 20, 2026",
+      "secretItem": "SHREK",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 3509,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, July 20, 2026",
+      "secretItem": "EDDIE MURPHY",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 851,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
