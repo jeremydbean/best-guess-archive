@@ -1858,5 +1858,36 @@
         "explanation": "That's a delicious bagel!"
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 22, 2026",
+    "secretItem": "NAIL CLIPPERS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "GIVE 'EM A HAND",
+        "explanation": "You can use them to trim your finger nails."
+      },
+      {
+        "clueNumber": 2,
+        "text": "LOTS OF TENSION, BUT TAKES THE EDGE OFF",
+        "explanation": "They have a spring in them and they cut off the edge of the fingernail."
+      },
+      {
+        "clueNumber": 3,
+        "text": "FREQUENTLY HAS A FILE ATTACHED",
+        "explanation": "The other side of nail clippers usually has an emery board for filing."
+      },
+      {
+        "clueNumber": 4,
+        "text": "SNIPPY ASSISTANT WITH A DEAD-END JOB",
+        "explanation": "Finger nails are dead and clippers snip them."
+      },
+      {
+        "clueNumber": 5,
+        "text": "GROOMING TOOL TO HAVE AT THE READY DURING A MANI OR A PEDI",
+        "explanation": "You can also use them to trim your toenails."
+      }
+    ]
   }
 ]
