@@ -3474,6 +3474,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Tuesday, July 21, 2026",
+      "secretItem": "HAMMOCK",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 4222,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Tuesday, July 21, 2026",
+      "secretItem": "NASA",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 1334,
+      "clueCount": 5,
+      "goldClue": 2,
+      "silverClue": 3,
+      "bronzeClue": 4
     }
   ]
 }
