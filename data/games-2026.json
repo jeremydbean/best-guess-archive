@@ -15849,5 +15849,121 @@
         "explanation": "He made four Beverly Hills Cop movies and played most of the Klumps in The Nutty Professor."
       }
     ]
+  },
+  {
+    "date": "Tuesday, July 21, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "HAMMOCK",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 198,
+    "silverWinners": 2474,
+    "bronzeWinners": 1550,
+    "totalWinners": 4222,
+    "goldPayout": 15.15,
+    "silverPayout": 1.01,
+    "bronzePayout": 1.29,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "SWING, ROCKING CHAIR, RECLINER, HYPNOSIS, VACATION",
+    "adminNote": "Reconstructed from live gameplay screenshots (reveal-animation, medals walking down clue-by-clue), not the official post-show recap — winner names and full transcript are still pending. Payout math verified against the standard $3,000/$2,500/$2,000 tier-pool floor formula.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "JUST RELAX!",
+        "correct": "198",
+        "guesses": "3,511 🥇",
+        "explanation": "Hammocks are the ultimate spot to relax."
+      },
+      {
+        "number": 2,
+        "text": "I'M GOIN' BACK AND FORTH ON THIS ONE",
+        "correct": "2,474",
+        "guesses": "10,596 🥈",
+        "explanation": "A hammock swings back and forth."
+      },
+      {
+        "number": 3,
+        "text": "YOU'RE SUSPENDED",
+        "correct": "1,550",
+        "guesses": "5,895 🥉",
+        "explanation": "A hammock is suspended between two points."
+      },
+      {
+        "number": 4,
+        "text": "YOU'VE EARNED A FREE NAP AT THE DOUBLETREE",
+        "correct": "971",
+        "guesses": "1,916",
+        "explanation": "Wordplay — a hammock is often strung between two trees."
+      },
+      {
+        "number": 5,
+        "text": "IN THIS OUTDOOR HANGING BED, YOU CAN ROCK AND REST YOUR HEAD",
+        "correct": "1735",
+        "guesses": "1,904",
+        "explanation": "A hammock is an outdoor hanging bed you can rock in."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, July 21, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "NASA",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 347,
+    "silverWinners": 689,
+    "bronzeWinners": 298,
+    "totalWinners": 1334,
+    "goldPayout": 8.64,
+    "silverPayout": 3.62,
+    "bronzePayout": 6.71,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "ROOSTER, BREAD, SUN, YEAST, CHICKEN",
+    "adminNote": "Reconstructed from live gameplay screenshots (reveal-animation, medals walking down clue-by-clue), not the official post-show recap — winner names and full transcript are still pending. Payout math verified against the standard $3,000/$2,500/$2,000 tier-pool floor formula, and independently cross-checked against the screenshotting viewer's own silver-tier payout ($3.62), which matches floorCents(2500/689) exactly. Clue 2's connection to NASA wasn't obvious from the clue text alone — explanation is a placeholder pending the host's actual commentary.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "A FAMOUS EARLY RISER",
+        "correct": "0",
+        "guesses": "7,611",
+        "explanation": "NASA rockets famously launch very early in the morning."
+      },
+      {
+        "number": 2,
+        "text": "FOUND IN TUNA SALAD, VIENNA SAUSAGE, & BOLOGNA SANDWICHES",
+        "correct": "347",
+        "guesses": "4,348 🥇",
+        "explanation": "Explanation pending — connection to NASA not yet confirmed."
+      },
+      {
+        "number": 3,
+        "text": "BUSINESS IS UP WHEN THE NUMBERS GO DOWN",
+        "correct": "689",
+        "guesses": "3,932 🥈",
+        "explanation": "NASA famously counts down before a launch."
+      },
+      {
+        "number": 4,
+        "text": "TRAVEL AGENCY THAT SPECIALIZES IN EXCLUSIVE DESTINATIONS",
+        "correct": "298",
+        "guesses": "1,566 🥉",
+        "explanation": "NASA sends astronauts to exclusive destinations like the Moon and Mars."
+      },
+      {
+        "number": 5,
+        "text": "FEDERAL ORG. THAT GOES TO SPACE & WON THE MOON-LANDING RACE",
+        "correct": "5,801",
+        "guesses": "6,020",
+        "explanation": "NASA is the federal agency that put the first humans on the Moon."
+      }
+    ]
   }
 ]

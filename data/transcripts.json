@@ -74032,5 +74032,119 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, July 21, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "HAMMOCK",
+      "NASA"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "HAMMOCK",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "JUST RELAX!",
+          "I'M GOIN' BACK AND FORTH ON THIS ONE",
+          "YOU'RE SUSPENDED",
+          "YOU'VE EARNED A FREE NAP AT THE DOUBLETREE",
+          "IN THIS OUTDOOR HANGING BED, YOU CAN ROCK AND REST YOUR HEAD"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "NASA",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "A FAMOUS EARLY RISER",
+          "FOUND IN TUNA SALAD, VIENNA SAUSAGE, & BOLOGNA SANDWICHES",
+          "BUSINESS IS UP WHEN THE NUMBERS GO DOWN",
+          "TRAVEL AGENCY THAT SPECIALIZES IN EXCLUSIVE DESTINATIONS",
+          "FEDERAL ORG. THAT GOES TO SPACE & WON THE MOON-LANDING RACE"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": []
+      },
+      {
+        "tag": "Round 1",
+        "lines": []
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Clue 5: “IN THIS OUTDOOR HANGING BED, YOU CAN ROCK AND REST YOUR HEAD.” A hammock is an outdoor hanging bed you can rock in. 1,735 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “YOU'VE EARNED A FREE NAP AT THE DOUBLETREE.” Wordplay — a hammock is often strung between two trees. 971 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “YOU'RE SUSPENDED.” A hammock is suspended between two points. 1,550 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “I'M GOIN' BACK AND FORTH ON THIS ONE.” A hammock swings back and forth. 2,474 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “JUST RELAX!” Hammocks are the ultimate spot to relax. 198 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 198 winners at $15.15 each. Silver (Clue 2): 2,474 winners at $1.01 each. Bronze (Clue 3): 1,550 winners at $1.29 each."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": []
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Clue 5: “FEDERAL ORG. THAT GOES TO SPACE & WON THE MOON-LANDING RACE.” NASA is the federal agency that put the first humans on the Moon. 5,801 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “TRAVEL AGENCY THAT SPECIALIZES IN EXCLUSIVE DESTINATIONS.” NASA sends astronauts to exclusive destinations like the Moon and Mars. 298 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “BUSINESS IS UP WHEN THE NUMBERS GO DOWN.” NASA famously counts down before a launch. 689 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “FOUND IN TUNA SALAD, VIENNA SAUSAGE, & BOLOGNA SANDWICHES.” Explanation pending — connection to NASA not yet confirmed. 347 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “A FAMOUS EARLY RISER.” NASA rockets famously launch very early in the morning. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 347 winners at $8.64 each. Silver (Clue 3): 689 winners at $3.62 each. Bronze (Clue 4): 298 winners at $6.71 each."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": []
+      }
+    ]
   }
 ]
