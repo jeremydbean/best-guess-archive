@@ -1977,7 +1977,7 @@ document.addEventListener('focusout', function(e) {
     <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
       <span class="material-symbols-outlined text-red-400">cancel</span> Most Popular Wrong Guesses
     </h3>
-    <p class="text-xs text-slate-400 mb-4">The most common wrong answers submitted across all episodes.</p>
+    <p class="text-xs text-slate-400 mb-4">The most common wrong answers submitted across all episodes, excluding any that have been a correct answer themselves.</p>
     <ol class="space-y-2" id="stats-wrong-guesses"></ol>
   </div>
 
@@ -4995,12 +4995,17 @@ Rules:
       .sort((a, b) => b[1].length - a[1].length)
       .slice(0, 15)
       .map(([text, entries]) => ({ text, count: entries.length, entries }));
+    const knownAnswers = new Set([
+      ...games.map(g => (g.secretItem || '').trim().toUpperCase()),
+      ...this.dailyPuzzles.map(p => (p.secretItem || '').trim().toUpperCase())
+    ].filter(Boolean));
     const wrongGuessMap = {};
     games.filter(g => g.format === 'v2').forEach(g => {
       if (!g.wrongGuesses) return;
       g.wrongGuesses.split(',').forEach(w => {
         const guess = w.trim().toUpperCase();
         if (!guess) return;
+        if (knownAnswers.has(guess)) return; // exclude guesses that have themselves been a correct answer
         if (!wrongGuessMap[guess]) wrongGuessMap[guess] = { count: 0, games: [] };
         wrongGuessMap[guess].count += 1;
         wrongGuessMap[guess].games.push(g);
