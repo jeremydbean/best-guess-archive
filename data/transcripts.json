@@ -74146,5 +74146,979 @@
         "lines": []
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 22, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "CRAYONS",
+      "SOAP OPERA"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "CRAYONS",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "THE REAL SLIM SHADY",
+          "OFTEN ON KIDS' MENUS",
+          "MOSTLY MADE OF RAYON",
+          "A DRAW-ER YOU MIGHT FIND IN A DRAWER",
+          "SMALL WAX STICK IN MANY A HUE, FROM BURNT SIENNA TO NAVY BLUE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "SOAP OPERA",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "BAR WITH ITALIAN MUSIC",
+          "SERVES AFTERNOON TEA",
+          "KEEPS YOUR WATCH RUNNING",
+          "ONE OF THEM IS AN UNSPECIFIED MEDICAL FACILITY",
+          "IT'S A SERIAL TELEDRAMA WITH ENDLESS TWISTS AND MELODRAMA"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Come on everybody we're live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Get the party going on time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Looking in the mirror like three, two, one, I'm ready."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Baby I'm 'bout to have some fun."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Do it mainly 'cause I want."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Staring in my face like three, two, one, I'm ready."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello, how are we?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, how's it going?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm your host Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Happy Wednesday!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And one of our recent daily polls, which if you haven't played yet you really should, you decided that the Best Guess Live fan base should be called... The Crystal Ballers!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And honestly it was a landslide."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I thought you would pick the Lock Guess Monsters, it's a pretty good name, but no, the Crystal Ballers."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It is a little unsettling though because in addition to naming yourself the Crystal Ballers, you also said that you think the crystal ball likes to watch me sleep during its off time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's you guys."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, which just raises some questions about you, the people writing the polls, everything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Regardless, your wishes, our command, I hereby dub thee the Crystal Ballers."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congrats I guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And here's something that every true Crystal Baller loves, the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds, each round has one puzzle, each puzzle has three sets of winners, gold, silver, and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round we're gonna load our crystal ball with a secret item, it could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five seconds, or I'll give you five wordplay puzzles or jokes I mean, but remember the wordplay puzzles or jokes are written like riddles, they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each wordplay puzzle or joke you'll get 20 seconds to submit an answer, but you only get one Best Guess per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not one per wordplay puzzle or joke, one per round, so make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer, and we do not accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in the correct answer on the earliest wordplay puzzle or joke will split the gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the second earliest wordplay puzzle or joke will split the silver pot of $2,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And everyone that gets it on the third earliest wordplay puzzle or joke will split the bronze pot of $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk, let's win some money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one, $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, there it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The crystal ball, aka, you guys, the crystal ballers."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's start with wordplay puzzle or joke number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The real slim shady."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The real slim shady."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think I know what a common guess is going to be at the end of the episode."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm willing to bet that there are many guesses that are gonna be the exact same on this one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is it correct?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I guess we'll find out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The real slim shady, ACBA said Eminem."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You thought you had one honest there."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You're like oh I got this one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh Grill Master Jim said Slenderman."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly the real slim shady, yeah Slenderman is terrifying."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to wordplay puzzle or joke number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Often on kids' menus."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Often on kids' menus."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay I'm thinking, again I don't know the answers so I'm playing with you guys."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let me think about this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The real slim shady, often on kids' menus."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay dang that stinks."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I thought I would have had it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Often on kids' menus, foolish professor 209 said stains."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "True, my brain was in the exact same vein there so that's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wordplay puzzle or joke number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mostly made of rayon."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think I know the answer, but this wordplay puzzle or joke three may have been..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know if it's thrown me again."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I've been thrown before."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The real slim shady, often on kids' menus, mostly made of rayon."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay I think I got it but I think a lot of people got it too."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Freesoda said Mickey Rourke."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's, I didn't say that Mickey."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you're watching Mickey, I did not say that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wordplay puzzle or joke number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A draw-er you might find in a drawer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A draw-er, a draw-er you might find in a drawer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay 3 seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A draw-er you might find in a drawer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, HillyDitch09 said a lottery ticket."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, because it's a draw-ing you might find it in a drawer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh that's good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Often on kids' menus."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I wish."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh... Sorry, reading off the kids' menu again."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, wordplay puzzle or joke number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Your fifth and final wordplay puzzle or joke for this first puzzle, and yes it turns out my guess on wordplay puzzle or joke three was correct."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I assume that a lot of other people's..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Small wax stick, in many a hue, from burnt sienna to navy blue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds, your fifth and final 20 seconds, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Small wax stick in many a hue, from burnt sienna to navy blue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We have the real slim shady, often on kids menus, mostly made of rayon, a draw-er you might find in a drawer, and small wax stick in many a hue from burnt sienna to navy blue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That was your fifth and final wordplay puzzle or joke."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, it rhymed with blue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's in the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "It's the word CRAYONS."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And they've given me 120... wow, the smell of that is so nostalgic."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is unbelievable."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Can you imagine I just start eating a bunch of crayons and you found out I was that kid in school?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh... Let's find out, look at how the wordplay puzzles or jokes fit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Wordplay puzzle or joke 5: “SMALL WAX STICK IN MANY A HUE, FROM BURNT SIENNA TO NAVY BLUE.” Burnt sienna and navy blue are classic Crayola crayon colors. 1,090 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Wordplay puzzle or joke 4: “A DRAW-ER YOU MIGHT FIND IN A DRAWER.” You can draw with crayons and also store them in a drawer. 3,030 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Wordplay puzzle or joke 3: “MOSTLY MADE OF RAYON.” The word crayon is mostly made up of the word rayon. 6,832 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Wordplay puzzle or joke 2: “OFTEN ON KIDS' MENUS.” Disposable kids' menus at restaurants often have crayon art all over them. 1,008 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Wordplay puzzle or joke 1: “THE REAL SLIM SHADY.” Crayons are traditionally skinny and add shade or color. 4 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Wordplay puzzle or joke 1): 4 winners at $750.00 each. Silver (Wordplay puzzle or joke 2): 1,008 winners at $2.48 each. Bronze (Wordplay puzzle or joke 3): 6,832 winners at $0.29 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow, so 4 people are going home with $750 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If that was you, CopraSpeckle, theHaze222, WavyJuice959, and one other person... a tongue twister."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, I think they had to make sure that wasn't a dirty word before I said it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um... Congratulations, 1,008 people getting a little over two dollars, and then hey, us wordplay puzzle or joke three-ers going home with 29 cents each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'll take mine now."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "By now, I shouldn't have to tell you that we're about to play round two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's start round two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Open the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think we gotta go sit... through some graphics."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, we'll go through the graphics, but I shouldn't have to tell you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's just go to the, yeah there we go."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think they know what the deal is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, there it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One more chance."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got it on three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A lot of you got it on three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here's our mission for this puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's try to get it on one or two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, new mission alert."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The thing you guys try to do every day."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wordplay puzzle or joke number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bar with Italian music."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is such a specific wordplay puzzle or joke."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I feel like it should give me an answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Italian music?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm like looking off at all the producers being like, um, they're not helping at all."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They're just looking directly at me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bar with Italian music."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, bar with Italian music."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Holistic frog put Booka Di Beppo."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Why is a bar with Italian music... great Aquarius from Miami Florida went just a little less Italian, Olive Garden."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Man, making me hungry."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We can go all the way down the line."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But we're gonna go to wordplay puzzle or joke two instead."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Serves afternoon tea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bar with Italian music, serves afternoon tea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What the heck?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Serves afternoon tea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Why the heck is there a bar with Italian music... why the heck is it going to be called the crystal ballers... Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, serves afternoon tea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeehaw Deborah said Meghan Markle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "She serving tea, about all the royals ins and outs, ok."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, bar with Italian music, I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, wordplay puzzle or joke number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Keeps your watch running."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They just laughed."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The producers just laughed off camera which makes me think keeps your watch running is hysterical."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Keeps your watch running."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Serves afternoon tea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bar with Italian music."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Actually Licorice just went straight for it, said battery."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well it's one of those guesses honestly guys that is great for one wordplay puzzle or joke and makes no sense for the rest of them."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, Little Knob was another guess, the little knob on the side of your watch."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a good funny guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Again, not sure how it fits the rest."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wordplay puzzle or joke number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One of them is an unspecified medical facility."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What the heck?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One of them is an unspecified medical facility."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Technically everything's an unspecified medical facility if you just pretend to be a doctor."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Three seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One of them... like this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wordplay puzzle or joke number four, Fragile Bulldog said excuses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's how you know the puzzle is hard today."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They're not giving excuses, they're giving excuses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wordplay puzzle or joke number five, the fifth and final wordplay puzzle or joke."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a serial teledrama with endless twists and melodrama."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bar with Italian music."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Serves afternoon tea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Keeps your watch running."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One of them is an unspecified medical facility."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a serial teledrama with endless twists and melodrama."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Listen, I might just not be the demo for this because I have no idea what this could possibly be."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Playing Moose is with me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Playing Moose actually said exactly what I was thinking."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They wrote 'what?'."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was, ah, soap opera."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I so was not the demo."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But I'm looking at the wordplay puzzles or jokes and it all makes sense."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the wordplay puzzles or jokes fit and find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Wordplay puzzle or joke 5: “IT'S A SERIAL TELEDRAMA WITH ENDLESS TWISTS AND MELODRAMA.” A serial teledrama is another term for a soap opera. 3,056 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Wordplay puzzle or joke 4: “ONE OF THEM IS AN UNSPECIFIED MEDICAL FACILITY.” General Hospital is an unspecified medical facility and a well-known soap opera. 143 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Wordplay puzzle or joke 3: “KEEPS YOUR WATCH RUNNING.” Soap operas are long-running shows that you can keep watching. 54 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Wordplay puzzle or joke 2: “SERVES AFTERNOON TEA.” Soap operas feature a lot of tea, which means gossip. 89 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Wordplay puzzle or joke 1: “BAR WITH ITALIAN MUSIC.” The word bar refers to soap and Italian music refers to opera. 25 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Wordplay puzzle or joke 1): 25 winners at $120.00 each. Silver (Wordplay puzzle or joke 2): 89 winners at $28.08 each. Bronze (Wordplay puzzle or joke 3): 54 winners at $37.03 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to the 25 people going home with $120 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, even silver is going home with $28, and bronze $37."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Duke7012, MadamBell, Carm798, Pipitell, and a bunch more."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, and for those of you that are like 'well that's not fair I don't watch soap operas', think about all the people who watch soap operas who had to figure out what 6-7 was."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We make the game fair for everybody."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way these winners are the same people that got Table Lead, so this is great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're here every weekday at 8 Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow and don't forget to bring... your Best Guess!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Goodnight!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [UMBRELLA, PALM TREE, FRENCH FRIES, EMINEM, SLIM JIM]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [BATTERY, OPERA, ER, OLIVE GARDEN, GREYS ANATOMY]"
+          }
+        ]
+      }
+    ]
   }
 ]

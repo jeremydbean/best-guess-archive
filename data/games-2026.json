@@ -15965,5 +15965,120 @@
         "explanation": "NASA is the federal agency that put the first humans on the Moon."
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 22, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "CRAYONS",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 4,
+    "silverWinners": 1008,
+    "bronzeWinners": 6832,
+    "totalWinners": 7844,
+    "goldPayout": 750.00,
+    "silverPayout": 2.48,
+    "bronzePayout": 0.29,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "CopraSpeckle, theHaze222, WavyJuice959",
+    "wrongGuesses": "UMBRELLA, PALM TREE, FRENCH FRIES, EMINEM, SLIM JIM",
+    "clues": [
+      {
+        "number": 1,
+        "text": "THE REAL SLIM SHADY",
+        "correct": "4",
+        "guesses": "4,517 🥇",
+        "explanation": "Crayons are traditionally skinny and add shade or color."
+      },
+      {
+        "number": 2,
+        "text": "OFTEN ON KIDS' MENUS",
+        "correct": "1,008",
+        "guesses": "5,178 🥈",
+        "explanation": "Disposable kids' menus at restaurants often have crayon art all over them."
+      },
+      {
+        "number": 3,
+        "text": "MOSTLY MADE OF RAYON",
+        "correct": "6,832",
+        "guesses": "8,353 🥉",
+        "explanation": "The word crayon is mostly made up of the word rayon."
+      },
+      {
+        "number": 4,
+        "text": "A DRAW-ER YOU MIGHT FIND IN A DRAWER",
+        "correct": "3,030",
+        "guesses": "3,528",
+        "explanation": "You can draw with crayons and also store them in a drawer."
+      },
+      {
+        "number": 5,
+        "text": "SMALL WAX STICK IN MANY A HUE, FROM BURNT SIENNA TO NAVY BLUE",
+        "correct": "1,090",
+        "guesses": "1,260",
+        "explanation": "Burnt sienna and navy blue are classic Crayola crayon colors."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, July 22, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "SOAP OPERA",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 25,
+    "silverWinners": 89,
+    "bronzeWinners": 54,
+    "totalWinners": 168,
+    "goldPayout": 120.00,
+    "silverPayout": 28.08,
+    "bronzePayout": 37.03,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Duke7012, MadamBell, Carm798, Pipitell",
+    "wrongGuesses": "BATTERY, OPERA, ER, OLIVE GARDEN, GREYS ANATOMY",
+    "adminNote": "Silver was supplied as $28.09 but floorCents(2500/89) = $28.08, and bronze was supplied as $37.04 but floorCents(2000/54) = $37.03 (both audit-enforced) — corrected here.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BAR WITH ITALIAN MUSIC",
+        "correct": "25",
+        "guesses": "2,607 🥇",
+        "explanation": "The word bar refers to soap and Italian music refers to opera."
+      },
+      {
+        "number": 2,
+        "text": "SERVES AFTERNOON TEA",
+        "correct": "89",
+        "guesses": "2,811 🥈",
+        "explanation": "Soap operas feature a lot of tea, which means gossip."
+      },
+      {
+        "number": 3,
+        "text": "KEEPS YOUR WATCH RUNNING",
+        "correct": "54",
+        "guesses": "3,832 🥉",
+        "explanation": "Soap operas are long-running shows that you can keep watching."
+      },
+      {
+        "number": 4,
+        "text": "ONE OF THEM IS AN UNSPECIFIED MEDICAL FACILITY",
+        "correct": "143",
+        "guesses": "1,852",
+        "explanation": "General Hospital is an unspecified medical facility and a well-known soap opera."
+      },
+      {
+        "number": 5,
+        "text": "IT'S A SERIAL TELEDRAMA WITH ENDLESS TWISTS AND MELODRAMA",
+        "correct": "3,056",
+        "guesses": "7,431",
+        "explanation": "A serial teledrama is another term for a soap opera."
+      }
+    ]
   }
 ]
