@@ -1,5 +1,82 @@
 [
   {
+    "date": "Thursday, July 23, 2026",
+    "question": "IN WHICH OF THESE ENCOUNTERS ARE YOU MOST LIKELY TO STRETCH THE TRUTH?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "DENTAL VISIT", "pct": 15.3 },
+      { "text": "TRAFFIC STOP", "pct": 29.1 },
+      { "text": "JOB INTERVIEW", "pct": 39.7 },
+      { "text": "FIRST DATE", "pct": 15.7 }
+    ]
+  },
+  {
+    "date": "Thursday, July 23, 2026",
+    "question": "WHAT'S THE MOST STRESSFUL THING ABOUT PLAYING BEST GUESS LIVE?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "BEING THE ONLY ONE WHO WON ON ONE", "pct": 2.7 },
+      { "text": "AVOIDING TYPOS", "pct": 30.7 },
+      { "text": "ENTERING THE RIGHT ANSWER IN TIME", "pct": 55.3 },
+      { "text": "ENDURING THE RULES YET AGAIN", "pct": 11.2 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 22, 2026",
+    "question": "WHICH OF THESE WOULD BE THE WORST TO LISTEN TO FOR AN HOUR?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "NAILS ON A CHALKBOARD", "pct": 57.6 },
+      { "text": "NEIGHBOR'S CAR ALARM", "pct": 13.4 },
+      { "text": "BARKING CHIHUAHUAS", "pct": 12.2 },
+      { "text": "SMOKE DETECTOR WITH LOW BATTERY", "pct": 16.6 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 22, 2026",
+    "question": "WHAT'S YOUR FAVORITE PIECE OF PLAYGROUND EQUIPMENT?",
+    "category": "Hypothetical & Silly",
+    "options": [
+      { "text": "SPLINTERY SEESAW", "pct": 5.7 },
+      { "text": "RUSTY JUNGLE GYM", "pct": 10.0 },
+      { "text": "SCALDING HOT SLIDE", "pct": 17.8 },
+      { "text": "SWING WITH PUDDLE UNDERNEATH", "pct": 66.3 }
+    ]
+  },
+  {
+    "date": "Wednesday, July 22, 2026",
+    "question": "WHICH OF THESE PAST BGL ANSWERS IS THE BEST LOCATION FOR A WEDDING ON A BUDGET?",
+    "category": "Show Trivia",
+    "options": [
+      { "text": "TREE HOUSE", "pct": 47.6 },
+      { "text": "KFC", "pct": 17.0 },
+      { "text": "DOG PARK", "pct": 30.9 },
+      { "text": "DMV", "pct": 4.3 }
+    ]
+  },
+  {
+    "date": "Tuesday, July 21, 2026",
+    "question": "WHO IS YOUR FAVORITE FAMOUS DUO?",
+    "category": "Pop Culture Favorites",
+    "options": [
+      { "text": "SHREK & DONKEY", "pct": 40.0 },
+      { "text": "PEANUT BUTTER & JELLY", "pct": 31.3 },
+      { "text": "THUNDER & LIGHTNING", "pct": 18.6 },
+      { "text": "HALL & OATES", "pct": 9.9 }
+    ]
+  },
+  {
+    "date": "Tuesday, July 21, 2026",
+    "question": "WHICH OF THESE MUSICAL ACTS SOUNDS THE MOST DELICIOUS?",
+    "category": "Pop Culture Favorites",
+    "options": [
+      { "text": "BLACK EYED PEAS", "pct": 9.6 },
+      { "text": "RED HOT CHILI PEPPERS", "pct": 13.0 },
+      { "text": "MEATLOAF", "pct": 55.4 },
+      { "text": "THE CRANBERRIES", "pct": 21.8 }
+    ]
+  },
+  {
     "date": "Monday, July 20, 2026",
     "question": "WHICH OF THESE SHOULD BE THE NAME OF THE BGL FANBASE?",
     "category": "Show Trivia",
