@@ -1889,5 +1889,36 @@
         "explanation": "You can also use them to trim your toenails."
       }
     ]
+  },
+  {
+    "date": "Thursday, July 23, 2026",
+    "secretItem": "CROSSWORD PUZZLE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "YOU COMPLETE ME",
+        "explanation": "You complete a crossword puzzle."
+      },
+      {
+        "clueNumber": 2,
+        "text": "NEVER TOTALLY CLUELESS",
+        "explanation": "They always give you clues."
+      },
+      {
+        "clueNumber": 3,
+        "text": "GREAT PLACE TO DO SOME THOUGHTFUL LETTER-WRITING",
+        "explanation": "You have to figure out which letters to put in which squares."
+      },
+      {
+        "clueNumber": 4,
+        "text": "CAN BE HARD TO PUT ONE DOWN, AND HARD TO SOLVE 1-DOWN",
+        "explanation": "1-Down is a portion of the puzzle to solve."
+      },
+      {
+        "clueNumber": 5,
+        "text": "LINGUISTIC CHALLENGE TO ATTACK BY FILLING SQUARES OF WHITE & BLACK",
+        "explanation": "Crossword puzzles have black and white squares."
+      }
+    ]
   }
 ]
