@@ -16195,7 +16195,6 @@
       "title": "Daily Poll",
       "desc": "After the show, go to the daily polls on the app and wield your power over the host by deciding what he wears tomorrow."
     },
-    "adminNote": "Supplied data skipped Clue 2's 12 real winners (goldClue was listed as 3, silverClue as 4, bronzeClue as 5), shifting the tiers down by one — the same class of error as the BUNK BED (7/14) episode. The transcript's own dialogue confirms the true tiers: Howie says the 12 clue-2 guessers get \"250 dollars apiece\" (floorCents(3000/12)=$250.00, gold), the 182 clue-3 guessers get \"13 dollars and 73 cents\" (floorCents(2500/182)=$13.73, silver), and the 2,902 clue-4 guessers get \"68 cents\" (floorCents(2000/2902)=$0.68, bronze). Clue 5's 5,902 correct guesses are never mentioned as receiving a payout — they're past the cutoff. Corrected here; winnerNames unaffected since Milly Pilaf 62, Scaly Impala 562, and Special Cyanide 257 were already identified in the transcript as the gold winners.",
     "clues": [
       {
         "number": 1,
