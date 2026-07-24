@@ -75120,5 +75120,1499 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, July 23, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "PUPPY",
+      "HAWAII"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "PUPPY",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "YOUR BEST FRIEND'S KID",
+          "COMES BEFORE LOVE AND AFTER A HUSH",
+          "A PIECE OF LITTER YOU ENJOY PICKING UP",
+          "MOM AND DAD, CAN WE PLEEEEEEEEASE GET THIS ANSWER?",
+          "BABY BEAGLE, POODLE, OR PUG WHO'S CUTE AND FUN TO CUDDLE AND HUG"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "HAWAII",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "AN OBVIOUS DISCONNECT",
+          "LAST BUT NOT LEAST",
+          "CHAIN THAT'S POPULAR WITH TOURISTS",
+          "HI, MY POSTAL ABBREVIATION IS...",
+          "SAY ALOHA TO A WIN TODAY IF YOU KNOW THE STATE WITH THE LUAU & LEI"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hey everybody, welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm your host Howie Mandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before we start the show tonight... didn't we already start?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, before we start the game tonight, I want to tell you that one of our players reached out to Hunter and gave him a message."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And then Hunter passed that message on to me, and now I'm gonna give you the message."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's kind of like a game of telephone, but I'm pretty sure I got the message right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, slappy earth train ballerina."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Supposed to be what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Happy birthday Athena!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That makes so much more sense when you get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now they tell me it's time to read the rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, it's time to read the rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I gotta trim my ear hair."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I just, I was growing it out because I was gonna make like pigtails."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, each episode of Best Guess Live has two rounds, each round has one puzzle, each puzzle has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Like the Olympics!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, we're gonna load the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil is gonna load the crystal ball with a secret item, it could be absolutely anything, then I'm gonna give you five clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But remember, those clues, they're like riddles, people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now after each clue, I'll put 20 seconds on the clock for you to submit an answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you only get one best guess per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not one per clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in, because it's gotta be the exact answer, and we don't accept typos."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You should spell that wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That'd be funny, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, anyway, bottom line, you want to be fast, but you gotta be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of 3,000 dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of 2,500 dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it right on the third earliest clue will split the bronze pot of 2,000 dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough talk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's win some money!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "7,500 dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Put that... you don't put the 75, just the round one?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, yeah."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, Neil, load the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here we go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We don't have time for all the graphics that you want."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm waiting for the first clue, and here it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your best friend's kid."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds on that clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your best friend's kid."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know why I have to go hm when I'm thinking."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's hard to think without going hm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I feel like Arsenio Hall."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Things that make you go hmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everybody used to do that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Flipping Nickels 33 said lazy punk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my god, that's your best friend's kid?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I hope they're not playing along with you, the neighbors just saw that and it is no longer your best friend."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Comes before love and after hush."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your best friend's kid."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Comes before love and after hush."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five seconds left on that clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Already have over 4,000 answers submitted."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tremendous Hug 309 said second base."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Really?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I get it before the love, but after shh... shh... hush."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Just touch these."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Just these now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's the third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A piece of litter you enjoy picking up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ooh, that doesn't apply to me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I've never enjoyed picking... I don't shake hands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First clue was your best friend's kid."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Second clue, comes before love and after hush."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And this third clue, a piece of litter you enjoy picking up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Drama King 59 said aluminum cans."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Speaking of second base."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Are these real?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Because they feel like aluminum."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here is your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mom and Dad, can we pleeeeeeease get this answer?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your best friend's kid."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Comes before love and after hush."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Piece of litter you enjoy picking up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mom and Dad, can we please get this answer?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four, three, two, one, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pleasant Diaper 77 said inheritance, inheritance."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mom and Dad, can we please get this answer?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Inheritance."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And here's the final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is your final chance."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your final shot at 7,500 dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Baby beagle, poodle, or pug who's cute and fun to cuddle and hug."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your best friend's kid."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Comes before love and after hush."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number three, a piece of litter you enjoy picking up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mom and Dad, can we please get this answer?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And clue number five, a baby beagle, poodle, or pug who's cute and fun to cuddle and hug."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know what it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And do I say it?"
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "At the same time, Neil, you open the ball and I'm gonna say... puppy!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, it really... what are you saying?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How do you operate it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How do you... no, how do you turn it off so that I can..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There's a button I don't know how to turn it off."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, anyway, it's puppy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's a look at how the clues fit and find out who's taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know how to turn it off."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, anyway."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Baby beagle, poodle, or pug who's cute and fun to cuddle and hug."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Quiet."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, we hope Best Guess Live gives you even a fraction of the joy that this is giving me right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,390 guesses, 2,677 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number four, clue number four."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mom and Dad, can we please get this answer?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know kids are always saying begging."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can we please have a puppy that won't shut up even though I'm trying to, you said slap the head to stop it and it doesn't, that's not working."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know kids are always begging for a puppy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "2,862 of you guessed, 1,514 of you got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number three, a piece of litter you enjoy picking up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're born in a litter, you get a litter of these, and people love going to pick up their puppy, this is like the cutest one in the whole litter."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, 5,822 of you guessed on that, 2,917 of you, can you hear me?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can they hear me?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is there anybody on audio here?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can they... we're good?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number two, comes before love and after hush, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Puppy love."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They call it puppy love, and Hush Puppies, those are a kind of shoe."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, uh, 6,467 guesses on that one, and 4,520 of you got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And your best friend's kid."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A dog is man's best friend and their kid is a puppy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "People treat their puppies like children."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know, I know I do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm sending you off to college!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,200... you just hit the head."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hit the head."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, that's it, he just went to the men's room."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, 3,268 of you guessed."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "1,366 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's the new gold."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's a lot."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “BABY BEAGLE, POODLE, OR PUG WHO'S CUTE AND FUN TO CUDDLE AND HUG.” A puppy is a baby beagle, poodle, or pug that is fun to cuddle. 2,677 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “MOM AND DAD, CAN WE PLEEEEEEEEASE GET THIS ANSWER?” Kids are always begging for a puppy. 1,514 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “A PIECE OF LITTER YOU ENJOY PICKING UP.” They are born in a litter and people love picking up the cutest puppy. 2,917 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “COMES BEFORE LOVE AND AFTER A HUSH.” They call it puppy love, and Hush Puppies are a kind of shoe. 4,520 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “YOUR BEST FRIEND'S KID.” A dog is man's best friend and their kid is a puppy. 1,366 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1,366 winners at $2.19 each. Silver (Clue 2): 4,520 winners at $0.55 each. Bronze (Clue 3): 2,917 winners at $0.68 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That means 1366 of you are gold winners, you're each getting 2 dollars and 19 cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations, Gray Envy 137, Magic Mo 99, Upper Electron 827, Chris Tenna Kimmy, and a lot, a lot more."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The silver, 4,520 of you are each getting 55 cents, and our gold winners... wait, 2,917 of you are each getting 68 cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's the great news."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The great news is that over five, six, uh, almost 10,000 winners so far, and we're only halfway through the game."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost 10,000 of you are already winning."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's what it's all about."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now before we start round two, I want to remind everyone there is currently a poll on the app... I'm really, I'm being serious with you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Where you can decide what I wear tomorrow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Go to it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And after the show, just go to the daily polls on the app and wield your power over me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "'Cause I'm just a puppet here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm gonna do your bidding, I will wear whatever you, you tell me to wear."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "For now, let's play round two for another 7,500 dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Prize pots are the same, 3,000 for gold, 2,500 for silver, 2,000 for bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Load that crystal ball, Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Just don't want to put on a thong backwards, 'cause that's gonna hurt."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Just saying."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The ball is loaded."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The first clue is... an obvious disconnect."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I can't tell you the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I can't tell you how many times I get that clue from my wife."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what's going on here Howie, we're having an obvious disconnect."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I hope Terry if you're watching, I'm just I'm just riffing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm not giving secrets away about our our relationship."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Jay Charming said Wi-Fi."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's an obvious disconnect, that makes sense."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And Slimy Parakeet 609 said boomers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm taking that one personally."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I picture that's my wife."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Obvious an obvious disconnect."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Last but not least."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "An obvious disconnect."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And your second clue is last but not least."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10 seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost 4,000 submissions already."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright, I'm trying to think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm playing along with you in real time."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Philip Flies 309 said caboose."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Last but not least."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But not the... that's Neil for you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You can't see him, but he was just like dead... it's the last of the train."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But it's the coolest looking one!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Isn't it amazing that Neil is married?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That he found somebody?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love the caboose."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Isn't it the coolest looking one?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Chain that's popular with tourists."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your first clue was an obvious disconnect."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, clue number two was last but not least."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The third clue was chain that's popular with tourists."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Still got five seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four, three, two, one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Parallel Host 88 said a leash."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That one makes sense."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's popular with tourists?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We have a lot of out of town K-9s in town, and uh, Orlando Alex 99 said Bubba Gump Shrimp Company."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is a, no that's a, that is a chain that's popular."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No, a popular chain."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I was looking for a chain, restaurant, I get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hi, my postal abbreviation is... and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Obvious disconnect."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Last but not least."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Chain that's popular with tourists."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hi, my postal abbreviation is..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And with 10 seconds remaining on the fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hi, my postal abbreviation is..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Horsey Sauce 41 said 90210."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I wasn't asking for your postal code."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It was a clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Horsey Sauce 41, is this your first time on Best Guess Live?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "These aren't questions, these are clues, but thank you for your input."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Final chance at 7,500 dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Say aloha to a win today if you know the state with the luau and lei."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "An obvious disconnect."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Last but not least."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Chain that's popular with tourists."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hi, my postal abbreviation is..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And clue number five, say aloha to a win today if you know the state with the luau and lei."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And that's it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Those are your five clues, people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's find out what's in the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, Neil, open it up."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know with the hula dancing, Hawaii."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's Hawaii."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "For those that aren't guessing, it's Hawaii."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Do you know that they tell a, the hula dancing or whatever this is called, you tell a story with your hands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Even without hula dancing I could tell you a story with my hands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I can do it with one finger, but I won't."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I won't."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The fifth clue was say aloha to a win today if you know the state with the luau and lei."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A luau is where they roast a pig and this is the lei."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thank you for... the lei."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, luaus, leis, and the word aloha are all associated with one very special state, and that is the state of Hawaii."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love Hawaii."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "6,411 of you guessed."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5,902 of you guessed correctly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hi, my postal abbreviation is clue number four is... Hawaii state postal abbreviation is HI."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "HI."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No, I get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm explaining it to them."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil always thinks this is just for me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "6,230 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "2,902 of you got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "HI."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, chain that's popular with tourists."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a chain of islands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The Hawaiian islands."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Major tourist destination."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All makes sense."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,554 of you guessed."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "182 of you guessed correctly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is getting... last but not least."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Do you know that this is the newest state in the union?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And it's awesome."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't think it's the least."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think it's the most."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But it's the last."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, 2,389 of you guessed."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "12 got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And this makes sense."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's an obvious disconnect."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hawaii is not part of the continental of the USA."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's called a, what do you call that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's disconnected from the rest of us."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh, 3,222 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Guess how many of you got it correct?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Zero!"
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “SAY ALOHA TO A WIN TODAY IF YOU KNOW THE STATE WITH THE LUAU & LEI.” Luaus, leis, and the word aloha are all associated with Hawaii. 5,902 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “HI, MY POSTAL ABBREVIATION IS...” The state postal abbreviation for Hawaii is HI. 2,902 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “CHAIN THAT'S POPULAR WITH TOURISTS.” The Hawaiian islands are a chain of islands and a major tourist destination. 182 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “LAST BUT NOT LEAST.” It is the newest and last state in the union. 12 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “AN OBVIOUS DISCONNECT.” Hawaii is disconnected from the continental USA. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 12 winners at $250.00 each. Silver (Clue 3): 182 winners at $13.73 each. Bronze (Clue 4): 2,902 winners at $0.68 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's good, because we have 12 of you gold guessers, which means each of you are getting 250 dollars apiece."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We have 182 silver guessers that are getting 13 dollars and 73 cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And 2900 bronze guessers getting 68 cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Altogether, there's big money here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Altogether, oh some of the gold guessers I'll mention you, Milly Pilaf 62, Scaly Impala 562, and Special Cyanide 257, those are gold guessers, you're all getting big money there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost 12,000 winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's huge."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's huge."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I can't think of a better way to spend 15 minutes than to enjoy ourselves with 12,000 other people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think we all enjoyed ourselves, just playing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It doesn't matter if you win."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're all having a good time."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And that's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all of our winners, we're here every weekday at 8 Eastern 5 Pacific, so come back tomorrow, and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Goodnight."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hey, and go to the poll."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Cause I won't be wearing this tomorrow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's up to you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Go to the poll now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Choose it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm telling you, this is, we're very interactive."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're trying to engage."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There's pants on the poll, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're gonna be wearing pants."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Whoa!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Whoa!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What's... whoa!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The squirrel tickles!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That squirrel tickles!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "[laughing]"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know where he went?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm not gonna say that, but ah... what did they gather?"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [MONEY, DOG, BABY, KITTEN, GOAT]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [ZIP CODE, WIFI, CABOOSE, HI, ZIPPER]"
+          }
+        ]
+      }
+    ]
   }
 ]

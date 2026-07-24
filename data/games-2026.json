@@ -15101,8 +15101,18 @@
     "note": "Round 1 was not recorded.",
     "noteUrl": "https://forms.gle/zzTwMu8wpZpC5zR58",
     "partialClues": [
-      { "clueNumber": 1, "text": "CURVE UP AHEAD", "correct": 69, "guesses": null },
-      { "clueNumber": 2, "text": "WARNING: MAY CRACK WHILE PLAYING", "correct": 516, "guesses": null }
+      {
+        "clueNumber": 1,
+        "text": "CURVE UP AHEAD",
+        "correct": 69,
+        "guesses": null
+      },
+      {
+        "clueNumber": 2,
+        "text": "WARNING: MAY CRACK WHILE PLAYING",
+        "correct": 516,
+        "guesses": null
+      }
     ],
     "reportedResult": "All three tiers now confirmed: Gold (Clue 1, CURVE UP AHEAD) 69 winners; Silver (Clue 2, WARNING: MAY CRACK WHILE PLAYING) 516 winners; Bronze (Clue 3, text still unknown) 450 winners. Payouts verified against the standard $3,000/$2,500/$2,000 gold/silver/bronze tier-pool floor formula: gold floors to $43.47 (reported as $43.37, likely a typo), silver $4.84, bronze $4.44 — all match exactly except gold's reported cents. Clue 4 (text still unknown): 3,358 correct — not medal-winning, since bronze was already decided at Clue 3."
   },
@@ -15120,9 +15130,9 @@
     "silverWinners": 56,
     "bronzeWinners": 1814,
     "totalWinners": 1872,
-    "goldPayout": 1500.00,
+    "goldPayout": 1500.0,
     "silverPayout": 44.64,
-    "bronzePayout": 1.10,
+    "bronzePayout": 1.1,
     "winnerPayout": "$7,500.00",
     "winnerNames": "",
     "wrongGuesses": "DNA, THERAPY, REMOTE",
@@ -15131,10 +15141,30 @@
     "note": "Round 2 was not recorded.",
     "noteUrl": "https://forms.gle/zzTwMu8wpZpC5zR58",
     "partialClues": [
-      { "clueNumber": 1, "text": "MISSION: CONTROL", "correct": 2, "guesses": null },
-      { "clueNumber": 2, "text": "IMPRESSIVE EMOTIONAL GROWTH", "correct": 56, "guesses": null },
-      { "clueNumber": 3, "text": "RIPPED PANTS, RIPPED GENES", "correct": 1814, "guesses": 5729 },
-      { "clueNumber": 4, "text": "WE SEE GREEN WHEN HE SEES RED", "correct": null, "guesses": null }
+      {
+        "clueNumber": 1,
+        "text": "MISSION: CONTROL",
+        "correct": 2,
+        "guesses": null
+      },
+      {
+        "clueNumber": 2,
+        "text": "IMPRESSIVE EMOTIONAL GROWTH",
+        "correct": 56,
+        "guesses": null
+      },
+      {
+        "clueNumber": 3,
+        "text": "RIPPED PANTS, RIPPED GENES",
+        "correct": 1814,
+        "guesses": 5729
+      },
+      {
+        "clueNumber": 4,
+        "text": "WE SEE GREEN WHEN HE SEES RED",
+        "correct": null,
+        "guesses": null
+      }
     ],
     "reportedResult": "All three tiers now confirmed: Gold (Clue 1, MISSION: CONTROL) 2 winners/$1,500.00; Silver (Clue 2, IMPRESSIVE EMOTIONAL GROWTH) 56 winners/$44.64; Bronze (Clue 3, RIPPED PANTS, RIPPED GENES) 1,814 winners/$1.10. Payouts verified exactly against the standard $3,000/$2,500/$2,000 gold/silver/bronze tier-pool floor formula. Clue 5 (text still unknown): 3,088 correct — not medal-winning, since bronze was already decided at Clue 3."
   },
@@ -15151,7 +15181,7 @@
     "silverWinners": 1164,
     "bronzeWinners": 5283,
     "totalWinners": 6522,
-    "goldPayout": 40.00,
+    "goldPayout": 40.0,
     "silverPayout": 2.14,
     "bronzePayout": 0.37,
     "winnerPayout": "$7,500.00",
@@ -15212,7 +15242,7 @@
     "silverWinners": 270,
     "bronzeWinners": 991,
     "totalWinners": 1266,
-    "goldPayout": 600.00,
+    "goldPayout": 600.0,
     "silverPayout": 9.25,
     "bronzePayout": 2.01,
     "winnerPayout": "$7,500.00",
@@ -15273,9 +15303,9 @@
     "silverWinners": 4,
     "bronzeWinners": 100,
     "totalWinners": 106,
-    "goldPayout": 1500.00,
-    "silverPayout": 625.00,
-    "bronzePayout": 20.00,
+    "goldPayout": 1500.0,
+    "silverPayout": 625.0,
+    "bronzePayout": 20.0,
     "winnerPayout": "$7,500.00",
     "winnerNames": "Plump Venom, Arrogant Syrup",
     "wrongGuesses": "DIVORCE, TWINS, BOWLING, BANANA SPLIT, TWIX",
@@ -15388,7 +15418,7 @@
     "silverWinners": 206,
     "bronzeWinners": 730,
     "totalWinners": 942,
-    "goldPayout": 500.00,
+    "goldPayout": 500.0,
     "silverPayout": 12.13,
     "bronzePayout": 2.73,
     "winnerPayout": "$7,500.00",
@@ -15445,8 +15475,8 @@
     "silverWinners": 4,
     "bronzeWinners": 49,
     "totalWinners": 55,
-    "goldPayout": 1500.00,
-    "silverPayout": 625.00,
+    "goldPayout": 1500.0,
+    "silverPayout": 625.0,
     "bronzePayout": 40.81,
     "winnerPayout": "$7,500.00",
     "winnerNames": "DianaFloss, FlickAi",
@@ -15563,8 +15593,8 @@
     "silverWinners": 176,
     "bronzeWinners": 410,
     "totalWinners": 592,
-    "goldPayout": 500.00,
-    "silverPayout": 14.20,
+    "goldPayout": 500.0,
+    "silverPayout": 14.2,
     "bronzePayout": 4.87,
     "winnerPayout": "$7,500.00",
     "winnerNames": "Dragon Queenie 808, Dev G, Loving Sparrow, Pudgy Roast, Foreign Pisces",
@@ -15625,7 +15655,7 @@
     "silverWinners": 209,
     "bronzeWinners": 3344,
     "totalWinners": 3557,
-    "goldPayout": 750.00,
+    "goldPayout": 750.0,
     "silverPayout": 11.96,
     "bronzePayout": 0.59,
     "winnerPayout": "$7,500.00",
@@ -15748,7 +15778,7 @@
     "silverWinners": 1876,
     "bronzeWinners": 1603,
     "totalWinners": 3509,
-    "goldPayout": 100.00,
+    "goldPayout": 100.0,
     "silverPayout": 1.33,
     "bronzePayout": 1.24,
     "winnerPayout": "$7,500.00",
@@ -15979,7 +16009,7 @@
     "silverWinners": 1008,
     "bronzeWinners": 6832,
     "totalWinners": 7844,
-    "goldPayout": 750.00,
+    "goldPayout": 750.0,
     "silverPayout": 2.48,
     "bronzePayout": 0.29,
     "winnerPayout": "$7,500.00",
@@ -16036,7 +16066,7 @@
     "silverWinners": 89,
     "bronzeWinners": 54,
     "totalWinners": 168,
-    "goldPayout": 120.00,
+    "goldPayout": 120.0,
     "silverPayout": 28.08,
     "bronzePayout": 37.03,
     "winnerPayout": "$7,500.00",
@@ -16078,6 +16108,129 @@
         "correct": "3,056",
         "guesses": "7,431",
         "explanation": "A serial teledrama is another term for a soap opera."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, July 23, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "PUPPY",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1366,
+    "silverWinners": 4520,
+    "bronzeWinners": 2917,
+    "totalWinners": 8803,
+    "goldPayout": 2.19,
+    "silverPayout": 0.55,
+    "bronzePayout": 0.68,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Gray Envy 137, Magic Mo 99, Upper Electron 827, Chris Tenna Kimmy",
+    "wrongGuesses": "MONEY, DOG, BABY, KITTEN, GOAT",
+    "bonus": {
+      "title": "Daily Poll",
+      "desc": "After the show, go to the daily polls on the app and wield your power over the host by deciding what he wears tomorrow."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "YOUR BEST FRIEND'S KID",
+        "correct": "1,366",
+        "guesses": "3,268 🥇",
+        "explanation": "A dog is man's best friend and their kid is a puppy."
+      },
+      {
+        "number": 2,
+        "text": "COMES BEFORE LOVE AND AFTER A HUSH",
+        "correct": "4,520",
+        "guesses": "6,467 🥈",
+        "explanation": "They call it puppy love, and Hush Puppies are a kind of shoe."
+      },
+      {
+        "number": 3,
+        "text": "A PIECE OF LITTER YOU ENJOY PICKING UP",
+        "correct": "2,917",
+        "guesses": "5,822 🥉",
+        "explanation": "They are born in a litter and people love picking up the cutest puppy."
+      },
+      {
+        "number": 4,
+        "text": "MOM AND DAD, CAN WE PLEEEEEEEEASE GET THIS ANSWER?",
+        "correct": "1,514",
+        "guesses": "2,862",
+        "explanation": "Kids are always begging for a puppy."
+      },
+      {
+        "number": 5,
+        "text": "BABY BEAGLE, POODLE, OR PUG WHO'S CUTE AND FUN TO CUDDLE AND HUG",
+        "correct": "2,677",
+        "guesses": "3,390",
+        "explanation": "A puppy is a baby beagle, poodle, or pug that is fun to cuddle."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, July 23, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "HAWAII",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 12,
+    "silverWinners": 182,
+    "bronzeWinners": 2902,
+    "totalWinners": 3096,
+    "goldPayout": 250.0,
+    "silverPayout": 13.73,
+    "bronzePayout": 0.68,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Milly Pilaf 62, Scaly Impala 562, Special Cyanide 257",
+    "wrongGuesses": "ZIP CODE, WIFI, CABOOSE, HI, ZIPPER",
+    "bonus": {
+      "title": "Daily Poll",
+      "desc": "After the show, go to the daily polls on the app and wield your power over the host by deciding what he wears tomorrow."
+    },
+    "adminNote": "Supplied data skipped Clue 2's 12 real winners (goldClue was listed as 3, silverClue as 4, bronzeClue as 5), shifting the tiers down by one — the same class of error as the BUNK BED (7/14) episode. The transcript's own dialogue confirms the true tiers: Howie says the 12 clue-2 guessers get \"250 dollars apiece\" (floorCents(3000/12)=$250.00, gold), the 182 clue-3 guessers get \"13 dollars and 73 cents\" (floorCents(2500/182)=$13.73, silver), and the 2,902 clue-4 guessers get \"68 cents\" (floorCents(2000/2902)=$0.68, bronze). Clue 5's 5,902 correct guesses are never mentioned as receiving a payout — they're past the cutoff. Corrected here; winnerNames unaffected since Milly Pilaf 62, Scaly Impala 562, and Special Cyanide 257 were already identified in the transcript as the gold winners.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "AN OBVIOUS DISCONNECT",
+        "correct": "0",
+        "guesses": "3,222",
+        "explanation": "Hawaii is disconnected from the continental USA."
+      },
+      {
+        "number": 2,
+        "text": "LAST BUT NOT LEAST",
+        "correct": "12",
+        "guesses": "2,389 🥇",
+        "explanation": "It is the newest and last state in the union."
+      },
+      {
+        "number": 3,
+        "text": "CHAIN THAT'S POPULAR WITH TOURISTS",
+        "correct": "182",
+        "guesses": "3,554 🥈",
+        "explanation": "The Hawaiian islands are a chain of islands and a major tourist destination."
+      },
+      {
+        "number": 4,
+        "text": "HI, MY POSTAL ABBREVIATION IS...",
+        "correct": "2,902",
+        "guesses": "6,230 🥉",
+        "explanation": "The state postal abbreviation for Hawaii is HI."
+      },
+      {
+        "number": 5,
+        "text": "SAY ALOHA TO A WIN TODAY IF YOU KNOW THE STATE WITH THE LUAU & LEI",
+        "correct": "5,902",
+        "guesses": "6,411",
+        "explanation": "Luaus, leis, and the word aloha are all associated with Hawaii."
       }
     ]
   }
