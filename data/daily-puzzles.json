@@ -1920,5 +1920,36 @@
         "explanation": "Crossword puzzles have black and white squares."
       }
     ]
+  },
+  {
+    "date": "Friday, July 24, 2026",
+    "secretItem": "BLACK HOLE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "TAKE IT ALL IN",
+        "explanation": "Black holes have powerful gravity that attracts everything."
+      },
+      {
+        "clueNumber": 2,
+        "text": "SMART PEOPLE FIND IT EXTREMELY DENSE",
+        "explanation": "Their incredible density is something scientists study."
+      },
+      {
+        "clueNumber": 3,
+        "text": "KNOWN FOR BEING A LIGHT EATER",
+        "explanation": "Not even light waves can avoid a black hole."
+      },
+      {
+        "clueNumber": 4,
+        "text": "LIKE PLAIN COFFEE PLUS THE CENTER OF A DONUT",
+        "explanation": "Plain coffee is black, the center of a donut is a hole."
+      },
+      {
+        "clueNumber": 5,
+        "text": "NOTHING ESCAPES THE GRAVITY OF THIS MASSIVE COSMIC CAVITY",
+        "explanation": "It's a huge amount of mass collapsed into a small space in outer space."
+      }
+    ]
   }
 ]
