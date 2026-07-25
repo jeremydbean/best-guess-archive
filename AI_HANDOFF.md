@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-07-24 (session end)
+Last updated: 2026-07-25 (session end)
+
+## Most Recent Changes (2026-07-25)
+
+- **Daily puzzle added — Saturday, July 25, 2026: BROADWAY**: Appended to `data/daily-puzzles.json` (now 64 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #3, "THE SHOW MUST GO ON... OR OFF"); the secret item name wasn't shown directly on this pre-reveal screenshot (no "SHOW RESULTS" tap captured), but every explanation names Broadway explicitly, so it's unambiguous. Explanations reused from the screenshot's own text, converted to sentence case to match file convention. Clues: THE SCENIC ROUTE / THIS PLACE CAN FIT YOUR EGO TO A T / THE SHOW MUST GO ON... OR OFF / WHERE YOU CAN OBSERVE HOW NEW YORKERS ACT IRL / HUB OF NYC'S THEATER BIZ THAT WAS HOME TO CATS & LES MIZ. `npm run audit` passes.
 
 ## Most Recent Changes (2026-07-24)
 
