@@ -1951,5 +1951,36 @@
         "explanation": "It's a huge amount of mass collapsed into a small space in outer space."
       }
     ]
+  },
+  {
+    "date": "Saturday, July 25, 2026",
+    "secretItem": "BROADWAY",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "THE SCENIC ROUTE",
+        "explanation": "It's a route as in a street and the shows on it have scenes."
+      },
+      {
+        "clueNumber": 2,
+        "text": "THIS PLACE CAN FIT YOUR EGO TO A T",
+        "explanation": "You need a Tony to complete an EGOT and you can only get one on Broadway."
+      },
+      {
+        "clueNumber": 3,
+        "text": "THE SHOW MUST GO ON... OR OFF",
+        "explanation": "Shows can appear both on and off Broadway."
+      },
+      {
+        "clueNumber": 4,
+        "text": "WHERE YOU CAN OBSERVE HOW NEW YORKERS ACT IRL",
+        "explanation": "Broadway is the place to see live actors in New York."
+      },
+      {
+        "clueNumber": 5,
+        "text": "HUB OF NYC'S THEATER BIZ THAT WAS HOME TO CATS & LES MIZ",
+        "explanation": "Cats and Les Miz are some of the most famous Broadway shows of all time."
+      }
+    ]
   }
 ]
