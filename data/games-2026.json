@@ -16232,5 +16232,119 @@
         "explanation": "Luaus, leis, and the word aloha are all associated with Hawaii."
       }
     ]
+  },
+  {
+    "date": "Friday, July 24, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "ZIP LINE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 5,
+    "silverWinners": 17,
+    "bronzeWinners": 102,
+    "totalWinners": 124,
+    "goldPayout": 600.0,
+    "silverPayout": 147.05,
+    "bronzePayout": 19.6,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "UneasyDrake492, oh brother 00, UnholyCharger89, Sierra Dawn, Goats Rule",
+    "wrongGuesses": "SKIING, NATIONAL GEOGRAPHIC, DISCOVERY, SKI LIFT, ANIMAL PLANET",
+    "clues": [
+      {
+        "number": 1,
+        "text": "A STARTUP VENTURE",
+        "correct": "5",
+        "guesses": "2,976 🥇",
+        "explanation": "You start up in the air and take on a daring venture."
+      },
+      {
+        "number": 2,
+        "text": "THE QUEUE IS QUICK",
+        "correct": "17",
+        "guesses": "3,281 🥈",
+        "explanation": "A queue is another word for a line, and zip means quick."
+      },
+      {
+        "number": 3,
+        "text": "ACTIVITY WITH DECLINING POPULARITY",
+        "correct": "102",
+        "guesses": "4,610 🥉",
+        "explanation": "It is a popular activity where you decline from higher ground to lower ground."
+      },
+      {
+        "number": 4,
+        "text": "HIGH-END CABLE NETWORK FOR NATURE LOVERS",
+        "correct": "1,270",
+        "guesses": "4,423",
+        "explanation": "A zip line is a network of cables high up in nature."
+      },
+      {
+        "number": 5,
+        "text": "WHEN YOU HANG FROM A STEEL ROPE AND SLIDE ALONG IT DOWN A SLOPE",
+        "correct": "3,111",
+        "guesses": "4,282",
+        "explanation": "Ziplining involves hanging from a steel rope and sliding down a slope."
+      }
+    ]
+  },
+  {
+    "date": "Friday, July 24, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "MADONNA",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 14,
+    "silverWinners": 12,
+    "bronzeWinners": 874,
+    "totalWinners": 900,
+    "goldPayout": 214.28,
+    "silverPayout": 208.33,
+    "bronzePayout": 2.28,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "BobJoeDew, BlueHorizon21, LKH Lady, NeonSock86",
+    "wrongGuesses": "BABY, CHER, SUN, BRUCE SPRINGSTEEN, LADY GAGA",
+    "clues": [
+      {
+        "number": 1,
+        "text": "LIKE A BOSS",
+        "correct": "14",
+        "guesses": "2,137 🥇",
+        "explanation": "She is the boss who gave us \"Like a Prayer\" and \"Like a Virgin.\""
+      },
+      {
+        "number": 2,
+        "text": "A LITTLE ANGRY AT FIRST",
+        "correct": "12",
+        "guesses": "3,963 🥈",
+        "explanation": "Angry means mad, which is what her name starts with."
+      },
+      {
+        "number": 3,
+        "text": "GLOBAL STAR YOU'RE ON A FIRST-NAME BASIS WITH",
+        "correct": "874",
+        "guesses": "5,366 🥉",
+        "explanation": "The world calls her by her first name, Madonna."
+      },
+      {
+        "number": 4,
+        "text": "LEATHER & FISHNET ARE TWO OF HER FAVORITE MATERIALS",
+        "correct": "4,083",
+        "guesses": "6,595",
+        "explanation": "\"Material Girl\" is another of her songs, and she wears a lot of leather and fishnets."
+      },
+      {
+        "number": 5,
+        "text": "POP QUEEN WHO DID IT RIGHT WITH \"VOGUE,\" \"MUSIC,\" & \"RAY OF LIGHT\"",
+        "correct": "2,048",
+        "guesses": "2,589",
+        "explanation": "\"Vogue,\" \"Music,\" and \"Ray of Light\" are three of Madonna's signature hits."
+      }
+    ]
   }
 ]

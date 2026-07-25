@@ -3546,6 +3546,30 @@
       "goldClue": 2,
       "silverClue": 3,
       "bronzeClue": 4
+    },
+    {
+      "date": "Friday, July 24, 2026",
+      "secretItem": "ZIP LINE",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 124,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Friday, July 24, 2026",
+      "secretItem": "MADONNA",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 900,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
