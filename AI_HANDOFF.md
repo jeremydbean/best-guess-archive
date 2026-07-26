@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-07-25 (session end)
+Last updated: 2026-07-26 (session end)
+
+## Most Recent Changes (2026-07-26)
+
+- **Daily puzzle added — Sunday, July 26, 2026: WINNIE THE POOH**: Appended to `data/daily-puzzles.json` (now 65 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #3, "ONE OF HIS BUDDIES ALWAYS HAS TO BOUNCE"); explanations reused from the screenshot's own text, converted to sentence case to match file convention. Clues: I'M STUFFED! / FAMOUSLY TEAMED UP WITH ROBIN / ONE OF HIS BUDDIES ALWAYS HAS TO BOUNCE / STARTS WITH A WIN, ENDS WITH A BACKWARDS HOOP / BEAR WHO THINKS HUNNY'S GOOD & LIVES IN THE HUNDRED ACRE WOOD. `npm run audit` passes.
 
 ## Most Recent Changes (2026-07-25)
 

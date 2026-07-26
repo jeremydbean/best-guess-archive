@@ -1982,5 +1982,36 @@
         "explanation": "Cats and Les Miz are some of the most famous Broadway shows of all time."
       }
     ]
+  },
+  {
+    "date": "Sunday, July 26, 2026",
+    "secretItem": "WINNIE THE POOH",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "I'M STUFFED!",
+        "explanation": "He's a stuffed animal come to life."
+      },
+      {
+        "clueNumber": 2,
+        "text": "FAMOUSLY TEAMED UP WITH ROBIN",
+        "explanation": "Winnie is the stuffed animal friend of Christopher Robin."
+      },
+      {
+        "clueNumber": 3,
+        "text": "ONE OF HIS BUDDIES ALWAYS HAS TO BOUNCE",
+        "explanation": "Bouncing is what Tiggers do best!"
+      },
+      {
+        "clueNumber": 4,
+        "text": "STARTS WITH A WIN, ENDS WITH A BACKWARDS HOOP",
+        "explanation": "The first three letters of Winnie are W-I-N and Pooh spelled backwards is Hoop."
+      },
+      {
+        "clueNumber": 5,
+        "text": "BEAR WHO THINKS HUNNY'S GOOD & LIVES IN THE HUNDRED ACRE WOOD",
+        "explanation": "That's where he lives and \"hunny\" is what he loves to eat."
+      }
+    ]
   }
 ]
