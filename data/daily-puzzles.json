@@ -2013,5 +2013,36 @@
         "explanation": "That's where he lives and \"hunny\" is what he loves to eat."
       }
     ]
+  },
+  {
+    "date": "Monday, July 27, 2026",
+    "secretItem": "EYELINER",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "PENCIL ME IN",
+        "explanation": "You use an eyeliner pencil to apply it."
+      },
+      {
+        "clueNumber": 2,
+        "text": "FREQUENTLY APPEARS WITH ROCK STARS",
+        "explanation": "Members of rock bands are known to wear eyeliner."
+      },
+      {
+        "clueNumber": 3,
+        "text": "COMMON OPTICAL ILLUSION",
+        "explanation": "Eyeliner creates a look around your eyes."
+      },
+      {
+        "clueNumber": 4,
+        "text": "MAKEUP ON THE BRINK OF A BLINK",
+        "explanation": "Eyeliner goes on the tips of your eyelids."
+      },
+      {
+        "clueNumber": 5,
+        "text": "DEFINING THE SHAPE OF YOUR PEEPER? THEN THIS COSMETIC'S A KEEPER",
+        "explanation": "Eyeliner goes right under your peepers or eyes."
+      }
+    ]
   }
 ]

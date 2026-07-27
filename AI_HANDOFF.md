@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-07-26 (session end)
+Last updated: 2026-07-27 (session end)
+
+## Most Recent Changes (2026-07-27)
+
+- **Daily puzzle added — Monday, July 27, 2026: EYELINER**: Appended to `data/daily-puzzles.json` (now 66 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #2, "FREQUENTLY APPEARS WITH ROCK STARS"); explanations reused from the screenshot's own text, converted to sentence case to match file convention. Clues: PENCIL ME IN / FREQUENTLY APPEARS WITH ROCK STARS / COMMON OPTICAL ILLUSION / MAKEUP ON THE BRINK OF A BLINK / DEFINING THE SHAPE OF YOUR PEEPER? THEN THIS COSMETIC'S A KEEPER. `npm run audit` passes.
 
 ## Most Recent Changes (2026-07-26)
 
