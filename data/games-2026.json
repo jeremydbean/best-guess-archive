@@ -15309,7 +15309,6 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Plump Venom, Arrogant Syrup",
     "wrongGuesses": "DIVORCE, TWINS, BOWLING, BANANA SPLIT, TWIX",
-    "adminNote": "The source recap misattributed tiers by one clue (treating Clue 2 as gold, Clue 3 as silver, and Clue 4 as a paying bronze tier). The transcript's own dialogue confirms the correct mapping used here: Clue 1 (2 winners) split the $3,000 gold pool at $1,500 each, Clue 2 (4 winners) split $2,500 silver at $625 each, and Clue 3 (100 winners) split $2,000 bronze at $20 each — all exact floor-formula matches. Clue 4's 6,047 correct guesses came in after bronze was already decided and are not winners.",
     "clues": [
       {
         "number": 1,
@@ -15599,7 +15598,6 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Dragon Queenie 808, Dev G, Loving Sparrow, Pudgy Roast, Foreign Pisces",
     "wrongGuesses": "TUTU, GOLF, TARGET, GYMNASTICS, VACATION",
-    "adminNote": "Bronze was supplied as $4.88 but floorCents(2000/410) = $4.87 (audit-enforced) — corrected here; the host's own spoken recap doesn't restate the bronze figure so nothing needed changing in the transcript.",
     "bonus": {
       "title": "The Hawk",
       "desc": "Will Ferrell's new series The Hawk is dropping on Netflix today.<br><br>He plays Lonnie Hawkins, a legendary golfer trying to reclaim his former glory while facing younger superior competition."
@@ -15661,7 +15659,6 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Neat-y Minnie Boss, Happy Socks 300, Oris Clovis, Bring Back The OA",
     "wrongGuesses": "BARTENDER, HAT, COWBOY, MICROWAVE, STOVE",
-    "adminNote": "Bronze was supplied as $0.60 but floorCents(2000/3344) = $0.59 (audit-enforced) — corrected here; the host's own spoken recap already says \"fifty-nine cents,\" matching the corrected figure.",
     "bonus": {
       "title": "FIFA World Cup Launch Edition on Netflix Games",
       "desc": "Howie Mandel and Hunter March play the new FIFA World Cup Launch Edition on Netflix Games in a heated match."
@@ -15841,7 +15838,6 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Tasty Freeze, Ninja Death Monkey, Gator Professor, Frozen Thumb, Sweet T",
     "wrongGuesses": "MASCOT, DONKEY, DR DOLITTLE, DR DOOLITTLE, STUART LITTLE",
-    "adminNote": "Silver was supplied as $277.78 but floorCents(2500/9) = $277.77 (audit-enforced) — corrected here.",
     "clues": [
       {
         "number": 1,
@@ -15899,7 +15895,6 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "",
     "wrongGuesses": "SWING, ROCKING CHAIR, RECLINER, HYPNOSIS, VACATION",
-    "adminNote": "Reconstructed from live gameplay screenshots (reveal-animation, medals walking down clue-by-clue), not the official post-show recap — winner names and full transcript are still pending. Payout math verified against the standard $3,000/$2,500/$2,000 tier-pool floor formula.",
     "clues": [
       {
         "number": 1,
@@ -15957,7 +15952,6 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "",
     "wrongGuesses": "ROOSTER, BREAD, SUN, YEAST, CHICKEN",
-    "adminNote": "Reconstructed from live gameplay screenshots (reveal-animation, medals walking down clue-by-clue), not the official post-show recap — winner names and full transcript are still pending. Payout math verified against the standard $3,000/$2,500/$2,000 tier-pool floor formula, and independently cross-checked against the screenshotting viewer's own silver-tier payout ($3.62), which matches floorCents(2500/689) exactly. Clue 2's connection to NASA wasn't obvious from the clue text alone — explanation is a placeholder pending the host's actual commentary.",
     "clues": [
       {
         "number": 1,
@@ -16072,7 +16066,6 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Duke7012, MadamBell, Carm798, Pipitell",
     "wrongGuesses": "BATTERY, OPERA, ER, OLIVE GARDEN, GREYS ANATOMY",
-    "adminNote": "Silver was supplied as $28.09 but floorCents(2500/89) = $28.08, and bronze was supplied as $37.04 but floorCents(2000/54) = $37.03 (both audit-enforced) — corrected here.",
     "clues": [
       {
         "number": 1,
@@ -16366,7 +16359,6 @@
     "winnerPayout": "$7,500.00",
     "winnerNames": "Narrow Paris 123, Nutty Ceremony 782, Vista DG, Whiz Kid, Purple Vest",
     "wrongGuesses": "MAGNETO, SANTA CLAUS, SANTA, LADY LIBERTY, METAL DETECTOR",
-    "adminNote": "Silver was supplied as $73.53 but floorCents(2500/34) = $73.52, and bronze was supplied as $15.04 but floorCents(2000/133) = $15.03 (both audit-enforced) — corrected here.",
     "clues": [
       {
         "number": 1,
