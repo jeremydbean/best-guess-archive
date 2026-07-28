@@ -16346,5 +16346,120 @@
         "explanation": "\"Vogue,\" \"Music,\" and \"Ray of Light\" are three of Madonna's signature hits."
       }
     ]
+  },
+  {
+    "date": "Monday, July 27, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "THE STATUE OF LIBERTY",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 33,
+    "silverWinners": 34,
+    "bronzeWinners": 133,
+    "totalWinners": 200,
+    "goldPayout": 90.9,
+    "silverPayout": 73.52,
+    "bronzePayout": 15.03,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Narrow Paris 123, Nutty Ceremony 782, Vista DG, Whiz Kid, Purple Vest",
+    "wrongGuesses": "MAGNETO, SANTA CLAUS, SANTA, LADY LIBERTY, METAL DETECTOR",
+    "adminNote": "Silver was supplied as $73.53 but floorCents(2500/34) = $73.52, and bronze was supplied as $15.04 but floorCents(2000/133) = $15.03 (both audit-enforced) — corrected here.",
+    "clues": [
+      {
+        "number": 1,
+        "text": "REMARKABLY GIFTED",
+        "correct": "33",
+        "guesses": "3,280 🥇",
+        "explanation": "She was famously given as a gift to the United States by France."
+      },
+      {
+        "number": 2,
+        "text": "HAS A VERY MAGNETIC PERSONALITY",
+        "correct": "34",
+        "guesses": "4,122 🥈",
+        "explanation": "She attracts many people, from immigrants to tourists, giving her a magnetic personality."
+      },
+      {
+        "number": 3,
+        "text": "LIVES ON AN ISLAND, NEVER WALKS IN THE SAND",
+        "correct": "133",
+        "guesses": "3,912 🥉",
+        "explanation": "She is located on Liberty Island and cannot walk because she is a statue."
+      },
+      {
+        "number": 4,
+        "text": "IT'S TOUGH TO GET INSIDE HER HEAD",
+        "correct": "949",
+        "guesses": "3,545",
+        "explanation": "You have to take a narrow, winding staircase to get inside the top of her head."
+      },
+      {
+        "number": 5,
+        "text": "SHE SYMBOLIZES THE LAND OF THE FREE, SEE HER TORCH IN NYC",
+        "correct": "5,754",
+        "guesses": "6,754",
+        "explanation": "She represents the USA and literally carries a giant torch."
+      }
+    ]
+  },
+  {
+    "date": "Monday, July 27, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "SKITTLES",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 1,
+    "silverWinners": 45,
+    "bronzeWinners": 1276,
+    "totalWinners": 1322,
+    "goldPayout": 3000.0,
+    "silverPayout": 55.55,
+    "bronzePayout": 1.56,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Cool Cat 7",
+    "wrongGuesses": "BUNNY, MMS, RESUME, MM, BAD BUNNY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "SUCCINCT COVER LETTER",
+        "correct": "0",
+        "guesses": "1,802",
+        "explanation": "The candy is known by the single, succinct letter S on its cover."
+      },
+      {
+        "number": 2,
+        "text": "HAS A RICHER CELEBRITY LOOK-ALIKE",
+        "correct": "1",
+        "guesses": "2,234 🥇",
+        "explanation": "Skittles look like M&Ms, which are a richer and more chocolatey candy."
+      },
+      {
+        "number": 3,
+        "text": "SKI FOR BEGINNERS",
+        "correct": "45",
+        "guesses": "3,310 🥈",
+        "explanation": "The beginning of the word Skittles is spelled S-K-I."
+      },
+      {
+        "number": 4,
+        "text": "YOU WON'T GET THE BLUES IF YOU BUY THE ORIGINAL VARIETY",
+        "correct": "1,276",
+        "guesses": "4,554 🥉",
+        "explanation": "The original variety of Skittles does not include a blue flavor."
+      },
+      {
+        "number": 5,
+        "text": "\"TASTE THE RAINBOW\" IS YOUR DUTY, WITH THIS CANDY THAT IS FRUITY",
+        "correct": "8,815",
+        "guesses": "9,225",
+        "explanation": "Taste the rainbow is the famous Skittles slogan and the candy is fruity."
+      }
+    ]
   }
 ]
