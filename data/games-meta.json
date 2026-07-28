@@ -3309,27 +3309,25 @@
       "date": "Friday, July 10, 2026",
       "secretItem": "SMILE",
       "pot": 7500,
-      "host": "",
+      "host": "Hunter March",
       "format": "v2",
       "totalWinners": 1035,
-      "clueCount": 0,
+      "clueCount": 5,
       "goldClue": 1,
       "silverClue": 2,
-      "bronzeClue": 3,
-      "note": "Round 1 was not recorded."
+      "bronzeClue": 3
     },
     {
       "date": "Friday, July 10, 2026",
       "secretItem": "THE HULK",
       "pot": 7500,
-      "host": "",
+      "host": "Hunter March",
       "format": "v2",
       "totalWinners": 1872,
-      "clueCount": 0,
+      "clueCount": 5,
       "goldClue": 1,
       "silverClue": 2,
-      "bronzeClue": 3,
-      "note": "Round 2 was not recorded."
+      "bronzeClue": 3
     },
     {
       "date": "Monday, July 13, 2026",

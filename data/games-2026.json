@@ -15080,9 +15080,45 @@
     "date": "Friday, July 10, 2026",
     "pot": 7500,
     "format": "v2",
-    "host": "",
+    "host": "Hunter March",
     "secretItem": "SMILE",
-    "clues": [],
+    "clues": [
+      {
+        "number": 1,
+        "text": "CURVE UP AHEAD",
+        "correct": "69",
+        "guesses": "4,214",
+        "explanation": "A smile is a curve up and down the head."
+      },
+      {
+        "number": 2,
+        "text": "WARNING: MAY CRACK WHILE PLAYING",
+        "correct": "516",
+        "guesses": "4,510",
+        "explanation": "When someone is having fun playing, they may crack a smile."
+      },
+      {
+        "number": 3,
+        "text": "SHOUTED BEFORE SOMEONE SNAPS",
+        "correct": "450",
+        "guesses": "4,535",
+        "explanation": "Before someone snaps a picture, they yell smile."
+      },
+      {
+        "number": 4,
+        "text": "HOPE YOU'RE HAPPY...IT'S RIGHT UNDER YOUR NOSE!",
+        "correct": "3,358",
+        "guesses": "5,733",
+        "explanation": "When a person smiles, it is right under their nose."
+      },
+      {
+        "number": 5,
+        "text": "FACIAL EXPRESSION THAT'S SIGHTED WHEN SOMEONE IS DELIGHTED",
+        "correct": "3,342",
+        "guesses": "3,535",
+        "explanation": "A smile is a facial expression sighted when someone is delighted."
+      }
+    ],
     "goldClue": 1,
     "silverClue": 2,
     "bronzeClue": 3,
@@ -15094,35 +15130,54 @@
     "silverPayout": 4.84,
     "bronzePayout": 4.44,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
-    "wrongGuesses": "LIPS, BASEBALL, GOLF, MOUTH",
+    "winnerNames": "goat 0878, Pleased 461, Once Matt, Once Maddie",
+    "wrongGuesses": "LIPS, BASEBALL, GOLF, MOUTH, BASEBALL BAT",
     "winningClue": 0,
-    "winnerCount": 0,
-    "note": "Round 1 was not recorded.",
-    "noteUrl": "https://forms.gle/zzTwMu8wpZpC5zR58",
-    "partialClues": [
-      {
-        "clueNumber": 1,
-        "text": "CURVE UP AHEAD",
-        "correct": 69,
-        "guesses": null
-      },
-      {
-        "clueNumber": 2,
-        "text": "WARNING: MAY CRACK WHILE PLAYING",
-        "correct": 516,
-        "guesses": null
-      }
-    ],
-    "reportedResult": "All three tiers now confirmed: Gold (Clue 1, CURVE UP AHEAD) 69 winners; Silver (Clue 2, WARNING: MAY CRACK WHILE PLAYING) 516 winners; Bronze (Clue 3, text still unknown) 450 winners. Payouts verified against the standard $3,000/$2,500/$2,000 gold/silver/bronze tier-pool floor formula: gold floors to $43.47 (reported as $43.37, likely a typo), silver $4.84, bronze $4.44 — all match exactly except gold's reported cents. Clue 4 (text still unknown): 3,358 correct — not medal-winning, since bronze was already decided at Clue 3."
+    "winnerCount": 0
   },
   {
     "date": "Friday, July 10, 2026",
     "pot": 7500,
     "format": "v2",
-    "host": "",
+    "host": "Hunter March",
     "secretItem": "THE HULK",
-    "clues": [],
+    "clues": [
+      {
+        "number": 1,
+        "text": "MISSION: CONTROL",
+        "correct": "2",
+        "guesses": "3,048",
+        "explanation": "Bruce Banner's biggest mission is to control his emotions or the Hulk comes out."
+      },
+      {
+        "number": 2,
+        "text": "IMPRESSIVE EMOTIONAL GROWTH",
+        "correct": "56",
+        "guesses": "3,592",
+        "explanation": "When the Hulk is emotional, he has impressive growth."
+      },
+      {
+        "number": 3,
+        "text": "RIPPED PANTS, RIPPED GENES",
+        "correct": "1,814",
+        "guesses": "5,729",
+        "explanation": "When the Hulk transforms, his pants rip and his changed DNA makes him muscly."
+      },
+      {
+        "number": 4,
+        "text": "WE SEE GREEN WHEN HE SEES RED",
+        "correct": "4,986",
+        "guesses": "6,436",
+        "explanation": "When he hulks out, he turns green."
+      },
+      {
+        "number": 5,
+        "text": "\"INCREDIBLE\" STAR FROM A COMIC WHOSE SMASH IS ICONIC",
+        "correct": "3,088",
+        "guesses": "3,433",
+        "explanation": "The Incredible Hulk is known for his iconic smash."
+      }
+    ],
     "goldClue": 1,
     "silverClue": 2,
     "bronzeClue": 3,
@@ -15130,43 +15185,14 @@
     "silverWinners": 56,
     "bronzeWinners": 1814,
     "totalWinners": 1872,
-    "goldPayout": 1500.0,
+    "goldPayout": 1500,
     "silverPayout": 44.64,
     "bronzePayout": 1.1,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
-    "wrongGuesses": "DNA, THERAPY, REMOTE",
+    "winnerNames": "Starfire SHP, Blue Jennings GG GG",
+    "wrongGuesses": "DNA, THERAPY, REMOTE, ANGER MANAGEMENT, INSIDE OUT",
     "winningClue": 0,
-    "winnerCount": 0,
-    "note": "Round 2 was not recorded.",
-    "noteUrl": "https://forms.gle/zzTwMu8wpZpC5zR58",
-    "partialClues": [
-      {
-        "clueNumber": 1,
-        "text": "MISSION: CONTROL",
-        "correct": 2,
-        "guesses": null
-      },
-      {
-        "clueNumber": 2,
-        "text": "IMPRESSIVE EMOTIONAL GROWTH",
-        "correct": 56,
-        "guesses": null
-      },
-      {
-        "clueNumber": 3,
-        "text": "RIPPED PANTS, RIPPED GENES",
-        "correct": 1814,
-        "guesses": 5729
-      },
-      {
-        "clueNumber": 4,
-        "text": "WE SEE GREEN WHEN HE SEES RED",
-        "correct": null,
-        "guesses": null
-      }
-    ],
-    "reportedResult": "All three tiers now confirmed: Gold (Clue 1, MISSION: CONTROL) 2 winners/$1,500.00; Silver (Clue 2, IMPRESSIVE EMOTIONAL GROWTH) 56 winners/$44.64; Bronze (Clue 3, RIPPED PANTS, RIPPED GENES) 1,814 winners/$1.10. Payouts verified exactly against the standard $3,000/$2,500/$2,000 gold/silver/bronze tier-pool floor formula. Clue 5 (text still unknown): 3,088 correct — not medal-winning, since bronze was already decided at Clue 3."
+    "winnerCount": 0
   },
   {
     "date": "Monday, July 13, 2026",

@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-07-27 (session end)
+Last updated: 2026-07-28
+
+## Most Recent Changes (2026-07-28)
+
+- **July 10, 2026 episode recovered from the later structured transcript — SMILE (R1) and THE HULK (R2), host Hunter March**: Promoted the prior "unrecorded episode" stubs into full playable `format: "v2"` game objects in `data/games-2026.json` and replaced the empty transcript stub in `data/transcripts.json` with the supplied six-section transcript. Corrected the pasted transcript's internal date typo (`Tuesday, July 28, 2026`) to the real archive date **Friday, July 10, 2026** (the intro says "Happy Friday," matching July 10). Removed the stub-only `note`/`noteUrl`/`partialClues`/`reportedResult` fields now that all five clues, host, winner counts, payouts, winner names, wrong guesses, and transcript sections are present. Final data: SMILE gold Clue 1 69 @ $43.47 / silver Clue 2 516 @ $4.84 / bronze Clue 3 450 @ $4.44, total 1,035; THE HULK gold Clue 1 2 @ $1,500.00 / silver Clue 2 56 @ $44.64 / bronze Clue 3 1,814 @ $1.10, total 1,872. Wrong guesses updated to the supplied five-item lists. `npm run audit:fix` regenerated meta and `npm run audit` passes 0/0.
 
 ## Most Recent Changes (2026-07-27, continued)
 

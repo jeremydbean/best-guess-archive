@@ -66499,33 +66499,1311 @@
   },
   {
     "date": "Friday, July 10, 2026",
-    "host": "",
-    "secretItems": [],
-    "rounds": [],
+    "host": "Hunter March",
+    "secretItems": [
+      "SMILE",
+      "THE HULK"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "SMILE"
+      },
+      {
+        "round": 2,
+        "secretItem": "THE HULK"
+      }
+    ],
     "sections": [
       {
         "tag": "Intro",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Come on everybody."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Happy Friday."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh I'm so happy to see you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm your host Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's been a great week."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got to host every day which has been very fun."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I dropped my new rap single The Rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's got to be exact and we don't accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hunter March on the mic with the high flows."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line as I say every night you want to be fast but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Felt a lot cooler in the moment."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, and a little girl named Melody taught us all to laugh again."
+          },
+          {
+            "speaker": "Melody",
+            "text": "And if you answer correctly on the third earliest clue, you win bronze and split $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That one felt cool in the moment and was cool again."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, there have been a lot of amazing ways to do the rules this week and it's not going to be easy to follow all that and finish the week strong with this finale, but I do have $15,000 that says we can do it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "My dream would be that this is the day that we get 100% correct on one of our clue fives."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm putting it out there early as opposed to dropping it on you on clue five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So please let's do this together."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not only would it be a great way to end the week, but it would be a really fun thing to rub into Howie's face when he gets back next week."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We got a clue five baby!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, with that being said, let's focus up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's make it happen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But first, the least exciting version of the rules all week, the regular rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each puzzle has three sets of winners: gold, silver and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round, we're going to load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now, it could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But remember, the clues are written like riddles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you'll get 20 seconds to submit an answer, but you only get one best guess per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not one per clue, one per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And we don't accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize spot of $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of $2,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And everyone that gets it on the third earliest clue will split the bronze pot of $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's win some money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is worth $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, $7,500 up for grabs."
+          }
+        ]
       },
       {
         "tag": "Round 1",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Curve up ahead."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Curve up ahead."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, let's think about this again."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm playing with you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "14 seconds left for you and me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Curve up ahead."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't think I've gotten it on a clue one except for one day where I think every single other person got it on clue one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, but I don't think the day is any different."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Curve up ahead."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, Ouiji A from Mississippi said baseball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Curve up ahead."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, in a strike or a pitch."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, Choosy Biscuit 209 said Kardashians."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, Choosy Biscuit and that guy are a little creepy."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Warning, may crack while playing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly, baseball's a pretty good guess again."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Someone already put that, is not saying that that's a good answer for you, but may crack while playing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Boom."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Crack a good meatball down the middle, curve up ahead."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Again, I don't think that's the answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't put that because I'm saying this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Megan 11:45 from Wisconsin said, \"Spine, they crack while playing.\""
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh, that is, I've had back surgery and my spine is somewhat fake."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So that is, uh, you've just regurgitated some fears for me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Shiny Sharon 999 said, \"Bull whip, may crack while playing.\""
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know if playing is the right word with a bull whip, but, um, yeah, good guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Shouted before someone snaps."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, this is one of those clues where I feel like we should get it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "May crack while playing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Curve up ahead."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Shouted before someone snaps."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, I have a guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I guess I have a guess, I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Shouted before someone snaps."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Frosty Saddle just said, \"Dang it.\""
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This feels really specific to like his parents getting angry when they were young."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hope you're happy...it's right under your nose."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Shouted... ah, I get it!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And all the clues make sense."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got it at the top of four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The question is, have you got it yet?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hope you're happy...it's right under your nose."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Curve up ahead."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Warning, may crack while playing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Shouted before someone snaps."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, Merman Murray put filtrum."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is the dent under your nose?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The filtrum is the dent under your nose."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Have we ever been that smart before ever?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I love your intelligence, it's just I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, might not be the right show for that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I want you guys to get it on five, I think you can."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This one is very, very straightforward and easy to spell."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Facial expression that's sighted when someone is delighted."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A facial expression that's sighted when someone is delighted."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We can all get this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Take your time by the way, when you're typing, you have so much time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Facial expression that's sighted when someone is delighted."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We have never had everyone get it right on clue five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're usually off by literally hundreds if not thousands."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So if we can get it all right, that would be the coolest thing in the world."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Facial expression that's sighted when someone is delighted."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
       },
       {
         "tag": "Round 1 Results",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was smile."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, how beautiful."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Look at all these smiles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was smile."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out who got it right and who's taking home the money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll start with clue number five."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"FACIAL EXPRESSION THAT'S SIGHTED WHEN SOMEONE IS DELIGHTED.\" A smile is a facial expression sighted when someone is delighted. 3,342 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"HOPE YOU'RE HAPPY...IT'S RIGHT UNDER YOUR NOSE!\" When a person smiles, it is right under their nose. 3,358 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"SHOUTED BEFORE SOMEONE SNAPS.\" Before someone snaps a picture, they yell smile. 450 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"WARNING: MAY CRACK WHILE PLAYING.\" When someone is having fun playing, they may crack a smile. 516 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"CURVE UP AHEAD.\" A smile is a curve up and down the head. 69 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 69 winners at $43.47 each. Silver (Clue 2): 516 winners at $4.84 each. Bronze (Clue 3): 450 winners at $4.44 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Smile everybody."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Except I'm not smiling 'cause 150 people got it wrong."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's not bad."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Listen, that's probably the closest we've ever been."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm impressed."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We have another puzzle coming up, so don't worry."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a great clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Very well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, if you think you're going home with some money tonight, I hope you're filming."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Have someone else in the room film you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Send it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We love seeing it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll put it in next week's show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's what it was."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "450 people."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congrats."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Went up a little higher than, uh, clue number three, but did anyone get it on clue number one?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's cuter when I say it than when the Joker says it, but it's kind of the same idea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Nice."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That put a smile on some faces."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "69 people going home with $43.47 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to goat 0878, Pleased 461, and a bunch more, Once Matt, Once Maddie, uh, and then warning may crack when smile."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, just under $4 or just under $5 for gold and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done."
+          }
+        ]
       },
       {
         "tag": "Round 2",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Now there's only one round left until the weekend."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So let's make this one count."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is just here to see if Hunter ever pre-reads the middle part of the script."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round two is worth $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Prize spots are the same."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,000 for gold, 2,500 for silver, and 2,000 for bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I did."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's the most Ron Burgundy thing that could have ever happened to me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And I'm glad you guys didn't do anything that would have got me cancelled."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mission: control."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm going to be honest, I didn't realize we were putting the middle part in the script."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't realize I could look at that before the show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I thought you just wanted me to look at the way it starts."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Re-look at the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't realize the middle and the end."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is the end in there?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yes, the end's there."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I doubt it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mission: control."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, that was clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Queen Maddie said girdle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is, it has one mission and that's to control."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, fabled chef said remote."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Same idea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "These are great guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Impressive emotional growth."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mission: control."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Impressive emotional growth."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Impressive emotional growth."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's always a good thing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Impressive emotional growth."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mission: control."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Impressive emotional growth."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Interesting."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hidden Aries from Connecticut kind of said what I was thinking, which is therapy, but I mean doesn't seem to be that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Little Darlin 2000 said Charlie Sheen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Too very... That's oil and water baby."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, let's go to clue three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ripped pants, ripped genes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ripped pants, ripped genes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Impressive emotional growth."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mission: control."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ripped genes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know where we're going with this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ripped genes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't even know you could rip genes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Something clever 309 said Daisy Duke, which is ripped pants, ripped the other spelling of jeans."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, and then Isa Genen 5 from North Carolina."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, this is a good North Carolina answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They wrote, \"I don't know.\""
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Repiding North Carolina, I love this, where my brother lives."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We see green when he sees red."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, I get it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Do you?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, I love all these clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, we see green when he sees red."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You have 10 seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think you can figure it out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Rip pants, rip genes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Should have given it to you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly, I say that and I had no idea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, impressive emotional growth."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All great clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We see green when he sees red."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hoverboard built."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Color blind."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a great miss right there."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five is going to rain it in for a lot of people."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five is \"incredible\" star from a comic whose smash is iconic."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, this one, I don't think everyone's going to get right, but I hope so."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You should."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A lot of people should."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "\"Incredible\" star from a comic whose smash is iconic."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, 18 seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You got this guys."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come on."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mission: control."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Impressive emotional growth."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Rip pants, rip genes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We see green when he sees red."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "\"Incredible\" star from a comic whose smash is iconic."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now, I think everyone had a chance to get this right except for Copper Goat from Moosejaw, Saskatchewan that said Hal."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They don't drink milk, they drink Malc."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They don't know the Hulk, they know Hal."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Speaking of, let's see what's inside the crystal ball."
+          }
+        ]
       },
       {
         "tag": "Round 2 Results",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was the Hulk."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hulk smash."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues fit and find out who's taking home the money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll start with clue number five."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: \"\"INCREDIBLE\" STAR FROM A COMIC WHOSE SMASH IS ICONIC.\" The Incredible Hulk is known for his iconic smash. 3,088 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: \"WE SEE GREEN WHEN HE SEES RED.\" When he hulks out, he turns green. 4,986 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: \"RIPPED PANTS, RIPPED GENES.\" When the Hulk transforms, his pants rip and his changed DNA makes him muscly. 1,814 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: \"IMPRESSIVE EMOTIONAL GROWTH.\" When the Hulk is emotional, he has impressive growth. 56 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: \"MISSION: CONTROL.\" Bruce Banner's biggest mission is to control his emotions or the Hulk comes out. 2 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 2 winners at $1500.00 each. Silver (Clue 2): 56 winners at $44.64 each. Bronze (Clue 3): 1814 winners at $1.10 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Very well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's what they wrote."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I thought by the way from ripped jeans, I didn't know that you meant like he became ripped."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I thought because of the chemical thing that happened to him it ripped his jeans."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They both work."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go with yours."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh anyway, 5,729 and guess it's 1,100, 1,814 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now that's a lot of people, but clue two and clue one, there are way less, potentially none."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, let's go to clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now the question is on clue number one, were there any Uber nerds who got it right, 'cause if that's on the front of your brain you must be, I mean it's a good thing, a comic book nerd because right now it's going to pay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Meaning those two people are each going home with $1,500 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congrats to Starfire SHP and Blue Jennings GG GG."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way guys, if you filmed yourselves winning $1,500 please send it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We would love to see it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then a bunch of people on silver getting $44.64."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Say that's not a bad way to get silver."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then on bronze a lot of people going home with a dollar from us."
+          }
+        ]
       },
       {
         "tag": "Outro",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I still can't believe he's not reading the script."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're here every weekday at 8 Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back Monday and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good night everybody."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [LIPS, BASEBALL, GOLF, MOUTH, BASEBALL BAT]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [DNA, THERAPY, REMOTE, ANGER MANAGEMENT, INSIDE OUT]"
+          }
+        ]
       }
     ]
   },
