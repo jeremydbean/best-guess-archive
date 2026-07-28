@@ -2044,5 +2044,36 @@
         "explanation": "Eyeliner goes right under your peepers or eyes."
       }
     ]
+  },
+  {
+    "date": "Tuesday, July 28, 2026",
+    "secretItem": "HAMILTON",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "A REVOLUTIONARY IDEA",
+        "explanation": "Hamilton takes place during the Revolutionary War."
+      },
+      {
+        "clueNumber": 2,
+        "text": "STAGED A HISTORIC ACHIEVEMENT",
+        "explanation": "Hamilton is a successful stage show about history."
+      },
+      {
+        "clueNumber": 3,
+        "text": "NOT YOUR DADDY'S FOUNDING FATHERS",
+        "explanation": "These founding fathers are rapping!"
+      },
+      {
+        "clueNumber": 4,
+        "text": "10 DOLLAR BILL, 11 TONYS",
+        "explanation": "Hamilton is on the $10 bill and won 11 Tonys."
+      },
+      {
+        "clueNumber": 5,
+        "text": "BROADWAY PRODUCTION WITH RAP NAMED FOR A FAMOUS AMERICAN CHAP",
+        "explanation": "Alexander Hamilton is indeed a famous American chap."
+      }
+    ]
   }
 ]
