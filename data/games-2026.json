@@ -16479,5 +16479,127 @@
         "explanation": "Taste the rainbow is the famous Skittles slogan and the candy is fruity."
       }
     ]
+  },
+  {
+    "date": "Tuesday, July 28, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "MTV",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 262,
+    "silverWinners": 749,
+    "bronzeWinners": 3264,
+    "totalWinners": 4275,
+    "goldPayout": 11.45,
+    "silverPayout": 3.33,
+    "bronzePayout": 0.61,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "ten u l, Gold duh, freaky vampire, polish thunder 3r",
+    "wrongGuesses": "CHILIS, BABY BACK RIBS, MICHAEL JORDAN, BIG BROTHER, MAGIC 8 BALL",
+    "bonus": {
+      "title": "Netflix Minigolf",
+      "desc": "Anyone with Netflix games can play. There are over 60 different levels based on Stranger Things, Squid Game, and Bridgerton, it's got pinball style action, and it is full of chaotic power ups and pranks you can pull on your opponents. It's a great game to play with your friends, family, or your co host."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "THE ANSWER HAS CHANGED",
+        "correct": "0",
+        "guesses": "2,694",
+        "explanation": "MTV used to play music videos and now they barely play music at all."
+      },
+      {
+        "number": 2,
+        "text": "DECIDED TO AIR B&B WAY BACK IN THE '90S",
+        "correct": "262",
+        "guesses": "3,102 🥇",
+        "explanation": "It aired Beavis and Butthead in the 1990s."
+      },
+      {
+        "number": 3,
+        "text": "IN REALITY, VERY SUCCESSFUL",
+        "correct": "749",
+        "guesses": "5,348 🥈",
+        "explanation": "MTV had tremendous success with reality shows like Jersey Shore."
+      },
+      {
+        "number": 4,
+        "text": "I WANT MY, I WANT MY, I WANT MY...",
+        "correct": "3,264",
+        "guesses": "6,543 🥉",
+        "explanation": "The lyrics 'I want my MTV' are from the Dire Straits song 'Money for Nothing'."
+      },
+      {
+        "number": 5,
+        "text": "CABLE CHANNEL, 3 LETTERS LONG, SHOWED THE VID FOR YOUR FAVE SONG",
+        "correct": "3,876",
+        "guesses": "4,541",
+        "explanation": "MTV is a three-letter channel that used to play music videos."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, July 28, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "JURY DUTY",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 5,
+    "silverWinners": 58,
+    "bronzeWinners": 1173,
+    "totalWinners": 1236,
+    "goldPayout": 600.0,
+    "silverPayout": 43.1,
+    "bronzePayout": 1.7,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "duvalek 6, j1, af sweater 72, x finnish him x 87, ic ur single",
+    "wrongGuesses": "MONOPOLY, COURT, BATHROOM, SONIC, UNO",
+    "bonus": {
+      "title": "Netflix Minigolf",
+      "desc": "Anyone with Netflix games can play. There are over 60 different levels based on Stranger Things, Squid Game, and Bridgerton, it's got pinball style action, and it is full of chaotic power ups and pranks you can pull on your opponents. It's a great game to play with your friends, family, or your co host."
+    },
+    "clues": [
+      {
+        "number": 1,
+        "text": "GOTTA GO!",
+        "correct": "5",
+        "guesses": "4,032 🥇",
+        "explanation": "Jury duty is mandatory so you have to go."
+      },
+      {
+        "number": 2,
+        "text": "DECISIONS, DECISIONS",
+        "correct": "58",
+        "guesses": "3,197 🥈",
+        "explanation": "After the lawyers decide who is on the jury, the jury decides the case."
+      },
+      {
+        "number": 3,
+        "text": "MIGHT HAVE YOU SWEARING",
+        "correct": "1,173",
+        "guesses": "6,150 🥉",
+        "explanation": "You get sworn in when you serve on a jury."
+      },
+      {
+        "number": 4,
+        "text": "AN OPPORTUNITY TO SPEND TIME WITH YOUR PEER GROUP",
+        "correct": "1,765",
+        "guesses": "4,277",
+        "explanation": "You serve with a jury of your peers."
+      },
+      {
+        "number": 5,
+        "text": "GET SUMMONED, THEN REPORT, BE ONE OF 12 TO SERVE IN COURT",
+        "correct": "5,087",
+        "guesses": "5,346",
+        "explanation": "You are summoned to report as one of 12 people on a jury."
+      }
+    ]
   }
 ]
