@@ -3592,6 +3592,30 @@
       "goldClue": 2,
       "silverClue": 3,
       "bronzeClue": 4
+    },
+    {
+      "date": "Tuesday, July 28, 2026",
+      "secretItem": "MTV",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 4275,
+      "clueCount": 5,
+      "goldClue": 2,
+      "silverClue": 3,
+      "bronzeClue": 4
+    },
+    {
+      "date": "Tuesday, July 28, 2026",
+      "secretItem": "JURY DUTY",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 1236,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }

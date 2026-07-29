@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-07-28
+Last updated: 2026-07-28 (session end)
+
+## Most Recent Changes (2026-07-28, continued)
+
+- **July 28, 2026 episode imported — MTV (R1) and JURY DUTY (R2), host Howie Mandel** (both `format: "v2"`). Appended to `data/games-2026.json` (now 297 games) + full transcript (now 167). Both puzzles' tiers matched the floor formula exactly, no correction needed. MTV had a non-standard tier (Clue 1 had 0 winners): gold Clue 2 (DECIDED TO AIR B&B WAY BACK IN THE '90S) 262 @ $11.45 / silver Clue 3 (IN REALITY, VERY SUCCESSFUL) 749 @ $3.33 / bronze Clue 4 (I WANT MY, I WANT MY, I WANT MY...) 3,264 @ $0.61, total 4,275. JURY DUTY was standard tiers: gold Clue 1 (GOTTA GO!) 5 @ $600.00 / silver Clue 2 (DECISIONS, DECISIONS) 58 @ $43.10 / bronze Clue 3 (MIGHT HAVE YOU SWEARING) 1,173 @ $1.70, total 1,236. **Bonus/promo**: "Netflix Minigolf" (a Howie-vs-Hunter in-studio match), attached to both rounds. Winners: `ten u l, Gold duh, freaky vampire, polish thunder 3r` (R1 gold); `duvalek 6, j1, af sweater 72, x finnish him x 87, ic ur single` (R2 gold, all 5 named). Wrong guesses: R1 `CHILIS, BABY BACK RIBS, MICHAEL JORDAN, BIG BROTHER, MAGIC 8 BALL`; R2 `MONOPOLY, COURT, BATHROOM, SONIC, UNO`. `npm run audit` passes 0/0.
 
 ## Most Recent Changes (2026-07-28)
 
