@@ -2075,5 +2075,36 @@
         "explanation": "Alexander Hamilton is indeed a famous American chap."
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 29, 2026",
+    "secretItem": "DIAMOND",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "THIS ONE HAS A LOT OF ANGLES",
+        "explanation": "Diamonds have many surfaces and facets."
+      },
+      {
+        "clueNumber": 2,
+        "text": "A KNOCKOUT IN THE RING",
+        "explanation": "The diamond is the star of an engagement ring."
+      },
+      {
+        "clueNumber": 3,
+        "text": "FROM A MINE TO \"WILL YOU BE MINE\"",
+        "explanation": "Diamonds come from mines and are a part of proposals."
+      },
+      {
+        "clueNumber": 4,
+        "text": "A HARD ROCK... OR A SOFT ROCK SINGER",
+        "explanation": "Diamonds are hard, and Neil Diamond is a singer."
+      },
+      {
+        "clueNumber": 5,
+        "text": "SHINY GEM THAT SHARES ITS NAME WITH A PLACE FOR A BASEBALL GAME",
+        "explanation": "A baseball playing area is called a diamond."
+      }
+    ]
   }
 ]
