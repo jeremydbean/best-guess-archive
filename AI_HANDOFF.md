@@ -2,6 +2,10 @@
 
 Last updated: 2026-07-29 (session end)
 
+## Most Recent Changes (2026-07-29, continued)
+
+- **Hid the Polls nav item**: Per user request, removed the "Polls" button from both the desktop nav bar and the mobile menu in `index.html` (~lines 897-902 desktop, ~917-922 mobile). The `polls` view, `renderPolls()`/`_ensureDailyPollsLoaded()` logic, `data/daily-polls.json`, and the Stats page's "Daily Polls Tracked" stat tile are all untouched — there's just no more nav entry point to reach the page directly (still reachable via `app.setView('polls')` in the console, or by restoring the nav button, if ever needed again). Verified via headless Chromium: 0 "Polls" buttons in the nav, no new console errors, other nav links still work.
+
 ## Most Recent Changes (2026-07-29)
 
 - **Daily puzzle added — Wednesday, July 29, 2026: DIAMOND**: Appended to `data/daily-puzzles.json` (now 68 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #2, "A KNOCKOUT IN THE RING"); explanations reused from the screenshot's own text, converted to sentence case to match file convention. Clues: THIS ONE HAS A LOT OF ANGLES / A KNOCKOUT IN THE RING / FROM A MINE TO "WILL YOU BE MINE" / A HARD ROCK... OR A SOFT ROCK SINGER / SHINY GEM THAT SHARES ITS NAME WITH A PLACE FOR A BASEBALL GAME. `npm run audit` passes.
