@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-07-28 (session end)
+Last updated: 2026-07-29 (session end)
+
+## Most Recent Changes (2026-07-29)
+
+- **Daily puzzle added — Wednesday, July 29, 2026: DIAMOND**: Appended to `data/daily-puzzles.json` (now 68 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #2, "A KNOCKOUT IN THE RING"); explanations reused from the screenshot's own text, converted to sentence case to match file convention. Clues: THIS ONE HAS A LOT OF ANGLES / A KNOCKOUT IN THE RING / FROM A MINE TO "WILL YOU BE MINE" / A HARD ROCK... OR A SOFT ROCK SINGER / SHINY GEM THAT SHARES ITS NAME WITH A PLACE FOR A BASEBALL GAME. `npm run audit` passes.
 
 ## Most Recent Changes (2026-07-28, continued)
 
