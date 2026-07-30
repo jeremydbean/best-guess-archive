@@ -3616,6 +3616,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Wednesday, July 29, 2026",
+      "secretItem": "BAGPIPES",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 5010,
+      "clueCount": 5,
+      "goldClue": 2,
+      "silverClue": 3,
+      "bronzeClue": 4
+    },
+    {
+      "date": "Wednesday, July 29, 2026",
+      "secretItem": "DR SEUSS",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 1239,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
