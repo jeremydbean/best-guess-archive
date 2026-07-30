@@ -2106,5 +2106,36 @@
         "explanation": "A baseball playing area is called a diamond."
       }
     ]
+  },
+  {
+    "date": "Thursday, July 30, 2026",
+    "secretItem": "CHEERIOS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "HAPPY MORNING BOWLER",
+        "explanation": "Cheer means happy & you usually eat Cheerios out of a bowl in the morning."
+      },
+      {
+        "clueNumber": 2,
+        "text": "MANY TYPES, BUT O IS UNIVERSAL",
+        "explanation": "There are many flavors of Cheerios but they're all O shaped."
+      },
+      {
+        "clueNumber": 3,
+        "text": "GETS NUTTY AROUND BEES",
+        "explanation": "Honey Nut Cheerios have a bee mascot."
+      },
+      {
+        "clueNumber": 4,
+        "text": "BREAKFAST BRAND NAME WITH A CHEER LEADER",
+        "explanation": "Its name leads off with the word \"cheer\"."
+      },
+      {
+        "clueNumber": 5,
+        "text": "POPULAR CIRCLE-SHAPED CEREAL MADE OF OATY MATERIAL",
+        "explanation": "Cheerios are a round oat-based cereal."
+      }
+    ]
   }
 ]
