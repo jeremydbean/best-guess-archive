@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-07-29 (session end)
+Last updated: 2026-07-30 (session end)
+
+## Most Recent Changes (2026-07-30)
+
+- **Daily puzzle added — Thursday, July 30, 2026: CHEERIOS**: Appended to `data/daily-puzzles.json` (now 69 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #2, "MANY TYPES, BUT O IS UNIVERSAL"); explanations reused from the screenshot's own text, converted to sentence case to match file convention. Clues: HAPPY MORNING BOWLER / MANY TYPES, BUT O IS UNIVERSAL / GETS NUTTY AROUND BEES / BREAKFAST BRAND NAME WITH A CHEER LEADER / POPULAR CIRCLE-SHAPED CEREAL MADE OF OATY MATERIAL. `npm run audit` passes.
 
 ## Most Recent Changes (2026-07-29, continued)
 
