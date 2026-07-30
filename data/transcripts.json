@@ -81566,5 +81566,979 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 29, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "BAGPIPES",
+      "DR SEUSS"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "BAGPIPES",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "CARRY ON WITH YOUR WILDEST OF DREAMS",
+          "YOU'LL KNOW IT WHEN YOU HEAR IT",
+          "WORLD-FAMOUS SQUEEZE PLAY",
+          "CREATES COLORFUL MUSIC AND PAIRS WELL WITH PLAID",
+          "TRADITIONAL SCOTTISH INSTRUMENT THAT EMITS A LOUD LAMENT"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "DR SEUSS",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "THE ANSWER RHYMES",
+          "FAMOUS FOR OFF-COLOR CONTENT",
+          "INVENTED A COUPLE OF THINGS",
+          "BELOVED AUTHOR WITH A TITLE AND MANY CLASSIC TITLES",
+          "CREATOR OF THE CAT IN THE HAT WHO HAD KIDS-BOOK WRITING DOWN PAT"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "How's it going?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello, hello, I'm your host, Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You may have noticed the last few times that I've hosted, I've been reading the rules faster and faster."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And I can tell you actually now that it was all training."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And now I'm actually ready to tell you that I'm finally here to take a shot at the world record for fastest reading of rules for a live handheld daily game show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It is highly sought after."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm all warmed up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The prompter lady has her wrist braces on."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's see if we can make some history."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here we go."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Faster than ever before, the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round, we're gonna load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Remember, the clues rhyme like a real Dr. Seuss thing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you get 20 seconds to submit an answer, but you only get one pass per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now, one per clue, one per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Submitting your guess has to be before you lock it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer, we don't accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line, if you want to be fast, you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in the correct answer on the earliest clue will split the Gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in the correct answer on the second earliest clue will split the Silver pot of $2,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that gets it right on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talking, let's play the game!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There we go, baby!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ron, did I get it?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Did I get the world record?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Are you kidding me?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round 1 is worth $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow, this is really gonna throw everyone who likes to wait a few minutes for the rules to be done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There are gonna be a lot of trouble right now."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Here's your first clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "CARRY ON WITH YOUR WILDEST OF DREAMS."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Carry on with your wildest of dreams."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What could this be again?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "For a couple months now, I have not known the answers and I'm playing with ya."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And I don't think I have it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got something in my mind."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't think it's the right answer though, it's too specific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Carry on with the, carry on with your wildest of dreams, 20 seconds is over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, Dollop Don 209 said Inception."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Carry on with your wildest of dreams, that's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, let's go to clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "YOU'LL KNOW IT WHEN YOU HEAR IT."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You'll know it when you hear it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I feel like it could be a clue for any puzzle we've ever done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If I told you the answer, you would know it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You'll know it, yeah of course I will, I just heard it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You'll know it when you hear it was clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Morgan Freeman's voice."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's been flipping flapjacks."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, you guys keep sending me these uh answers."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'd love to see 'em."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "WORLD-FAMOUS SQUEEZE PLAY."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Carry on with your, I had something in my mind on that first clue that it doesn't work for clue one, or maybe it does, carry on with your wildest of dreams."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "World-famous squeeze play."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You'll know when you hear it, carry on with your wildest of dreams."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know if you have it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Three seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I wanna see some answers coming in right now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "World-famous squeeze play."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, someone named Hunter's Hunter, I hope you win."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But the fact that I'm calling you out right now means you're probably not on this one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, but you said pillow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "World-famous squeeze play."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, pillows, I don't know if you can hear pillows, but I like it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then Rotten Thimble said Romeo and Juliet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "World-famous squeeze play."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, that's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know what the squeeze is, but I like it, it's a world-famous play."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You're on your way somewhere."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "CREATES COLORFUL MUSIC AND PAIRS WELL WITH PLAID."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I know what it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue four, I know what it is, I'm pretty sure."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "World-famous squeeze play."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, I know what it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think I know what it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Creates colorful music."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yes, I know what it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Do you guys know what it is?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bendy Bob put Green Day."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bendy Bob does not know what it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is not the answer, Bendy Bob, it's a good one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's not the correct one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number five, and yes, I was correct, are you correct?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Where were you correct, more importantly."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "TRADITIONAL SCOTTISH INSTRUMENT THAT EMITS A LOUD LAMENT."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That was, we really, I'm not even sure lament is a word."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, carry on with your wildest of dreams, you'll know when you hear it, world-famous squeeze play, creates colorful music and pairs well with plaid, that's when I got it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Traditional Scottish instrument that emits a loud lament."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They had to look up if lament worked in this way."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "For sure, the crystal ball was not positive going into this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Stephanie1986, Plano, Texas."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Close, absolutely not."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Banjo."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It literally, Stephanie, the only thing it has is instrument, and you'll know it when you hear it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I like your, I like your enthusiasm though, let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was... Oh, I know, bagpipes!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, it's bagpipes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Did you know bagpipes?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, let's find out, oh we already found out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Answer: bagpipes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues hit to find out who's taking home the money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll start at clue number five."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “TRADITIONAL SCOTTISH INSTRUMENT THAT EMITS A LOUD LAMENT.” Bagpipes are Scottish and notoriously loud. 3,039 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “CREATES COLORFUL MUSIC AND PAIRS WELL WITH PLAID.” People often wear plaid kilts while playing. 4,846 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “WORLD-FAMOUS SQUEEZE PLAY.” You squeeze a bagpipe to play it. 161 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “YOU'LL KNOW IT WHEN YOU HEAR IT.” Bagpipes have a very distinctive sound. 3 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “CARRY ON WITH YOUR WILDEST OF DREAMS.” A carry-on is a bag and your wildest dreams are pipe dreams. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 3 winners at $1,000.00 each. Silver (Clue 3): 161 winners at $15.52 each. Bronze (Clue 4): 4,846 winners at $0.41 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If anyone got this right, I will call the FBI myself."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Mad Murphy, which is the most Irish Scottish name I think I've ever seen on this show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Crow Motion 277 and Isme 30."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, if you were, if you were filming your win, which we always love when you do, please send it to @BestGuessLive on Instagram, uh, or myself at HunterMarch, I'll share it with the team and maybe we'll put it in the show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But as long as we're all here, we might as well play round two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Another $7,500 prize pot, split the same."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,000 for Gold, 2,500 for Silver, and 2,000 for Bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, ladies and gentlemen, our second round, the crystal ball got a little, a little cutesy on that first clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll see if they do it again."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "THE ANSWER RHYMES."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Feels like the crystal ball's messin' with me a little bit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Like this clue feels a lot more straightforward than the last one, but who knows, maybe it's not."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "11 seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Again, I got it on clue four on the last one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I love to try to beat myself, uh, on the second puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not on that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Maverick."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, I see some answers coming in, Maverick from Las Vegas, Nevada said Eminem."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The answer does, he does rhyme a lot."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, we've got Eminem, and then Jostled Oatmeal put hoochie coochie."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm just, the fact that that's the first rhyme that came to their head is, uh, telling."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "FAMOUS FOR OFF-COLOR CONTENT."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Eminem and hoochie coochie are still in the running."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Famous for off-color content."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The answer rhymes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Off-color content."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The answer rhymes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh, this is a hard one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And I see that it's a hard one because Deepside just wrote LeAnn Rimes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly it works really well for the first two clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mindy Map put Alfred Hitchcock, famous director, a lot of black and white movies, that's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "INVENTED A COUPLE OF THINGS."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Invented a couple of things."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Inventing one thing is hard."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Inventing a couple of things, that is something interesting about inventors."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Inventing something is so hard, but every inventor has like 300 inventions."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a huge gap in the middle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You guys should check out my stand-up tour, I'm gonna go on with that material."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's gonna, it's, it's really good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not Stanley."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not Stanley said Benjamin Franklin."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Because the answer rhymes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "BELOVED AUTHOR WITH A TITLE AND MANY CLASSIC TITLES."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Beloved author with a title and many classic titles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Invented a couple of things."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wait, I know who it is!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gah!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And I should have had it sooner."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Looking back at these, I honestly probably should have had it at number one, uh, but number three is where I feel most confident."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Beloved author with a title and many classic titles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Freeze Dried Dave wrote Stephen King."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Famous for his rhyming books."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, let's go to clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "CREATOR OF THE CAT IN THE HAT WHO HAD KIDS-BOOK WRITING DOWN PAT."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There we go."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That, that feels a, that feels a little better."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "D— you could have put any word besides instrument and you got stuck with it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, Stephen King's book about... oh wait, that's the wrong answer, okay good, I thought I just said the answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's not Stephen King."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What I was gonna say is Stephen King's book on writing is one of the best books I've ever read if you guys love Stephen King."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not the right answer again."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh man, I really, I feel like I messed up a ton of people there."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And guess what?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't care."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go, uh, let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was: Dr. Seuss!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Dr. Seuss was the right answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not Stephen King."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, that's really, really fun puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't get it until four again and I know I should've got it sooner, so I think a bunch of people might've."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number five."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “CREATOR OF THE CAT IN THE HAT WHO HAD KIDS-BOOK WRITING DOWN PAT.” He is the one and only Dr. Seuss. 3,607 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “BELOVED AUTHOR WITH A TITLE AND MANY CLASSIC TITLES.” His title is Doctor, and he has so many famous books. 2,261 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “INVENTED A COUPLE OF THINGS.” He invented Thing One and Thing Two in the Cat in the Hat. 664 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “FAMOUS FOR OFF-COLOR CONTENT.” He wrote Green Eggs and Ham, and eggs aren't green. 480 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “THE ANSWER RHYMES.” Dr. Seuss wrote rhyming children's books. 95 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 95 winners at $31.57 each. Silver (Clue 2): 480 winners at $5.20 each. Bronze (Clue 3): 664 winners at $3.01 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're here every weekday at 8 Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Goodnight!"
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [ACCORDION, TAYLOR SWIFT, ACCORDIAN, AIRPLANE, ALARM CLOCK]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [BUSTA RHYMES, EMINEM, CAT IN THE HAT, JACK BLACK, SHAKESPEARE]"
+          }
+        ]
+      }
+    ]
   }
 ]

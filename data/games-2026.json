@@ -16601,5 +16601,119 @@
         "explanation": "You are summoned to report as one of 12 people on a jury."
       }
     ]
+  },
+  {
+    "date": "Wednesday, July 29, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BAGPIPES",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 3,
+    "silverWinners": 161,
+    "bronzeWinners": 4846,
+    "totalWinners": 5010,
+    "goldPayout": 1000.0,
+    "silverPayout": 15.52,
+    "bronzePayout": 0.41,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Mad Murphy, Crow Motion 277, Isme 30",
+    "wrongGuesses": "ACCORDION, TAYLOR SWIFT, ACCORDIAN, AIRPLANE, ALARM CLOCK",
+    "clues": [
+      {
+        "number": 1,
+        "text": "CARRY ON WITH YOUR WILDEST OF DREAMS",
+        "correct": "0",
+        "guesses": "3,226",
+        "explanation": "A carry-on is a bag and your wildest dreams are pipe dreams."
+      },
+      {
+        "number": 2,
+        "text": "YOU'LL KNOW IT WHEN YOU HEAR IT",
+        "correct": "3",
+        "guesses": "2,891 🥇",
+        "explanation": "Bagpipes have a very distinctive sound."
+      },
+      {
+        "number": 3,
+        "text": "WORLD-FAMOUS SQUEEZE PLAY",
+        "correct": "161",
+        "guesses": "4,673 🥈",
+        "explanation": "You squeeze a bagpipe to play it."
+      },
+      {
+        "number": 4,
+        "text": "CREATES COLORFUL MUSIC AND PAIRS WELL WITH PLAID",
+        "correct": "4,846",
+        "guesses": "7,020 🥉",
+        "explanation": "People often wear plaid kilts while playing."
+      },
+      {
+        "number": 5,
+        "text": "TRADITIONAL SCOTTISH INSTRUMENT THAT EMITS A LOUD LAMENT",
+        "correct": "3,039",
+        "guesses": "3,500",
+        "explanation": "Bagpipes are Scottish and notoriously loud."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, July 29, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "DR SEUSS",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 95,
+    "silverWinners": 480,
+    "bronzeWinners": 664,
+    "totalWinners": 1239,
+    "goldPayout": 31.57,
+    "silverPayout": 5.2,
+    "bronzePayout": 3.01,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Lunar's Isle, Acidic Stall, Blessed Tester, Twin on Twitch",
+    "wrongGuesses": "BUSTA RHYMES, EMINEM, CAT IN THE HAT, JACK BLACK, SHAKESPEARE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "THE ANSWER RHYMES",
+        "correct": "95",
+        "guesses": "2,616 🥇",
+        "explanation": "Dr. Seuss wrote rhyming children's books."
+      },
+      {
+        "number": 2,
+        "text": "FAMOUS FOR OFF-COLOR CONTENT",
+        "correct": "480",
+        "guesses": "4,075 🥈",
+        "explanation": "He wrote Green Eggs and Ham, and eggs aren't green."
+      },
+      {
+        "number": 3,
+        "text": "INVENTED A COUPLE OF THINGS",
+        "correct": "664",
+        "guesses": "3,660 🥉",
+        "explanation": "He invented Thing One and Thing Two in the Cat in the Hat."
+      },
+      {
+        "number": 4,
+        "text": "BELOVED AUTHOR WITH A TITLE AND MANY CLASSIC TITLES",
+        "correct": "2,261",
+        "guesses": "4,998",
+        "explanation": "His title is Doctor, and he has so many famous books."
+      },
+      {
+        "number": 5,
+        "text": "CREATOR OF THE CAT IN THE HAT WHO HAD KIDS-BOOK WRITING DOWN PAT",
+        "correct": "3,607",
+        "guesses": "6,016",
+        "explanation": "He is the one and only Dr. Seuss."
+      }
+    ]
   }
 ]

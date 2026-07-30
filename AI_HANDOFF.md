@@ -4,6 +4,10 @@ Last updated: 2026-07-29 (session end)
 
 ## Most Recent Changes (2026-07-29, continued)
 
+- **July 29, 2026 episode imported — BAGPIPES (R1) and DR SEUSS (R2), host Hunter March** (both `format: "v2"`). Appended to `data/games-2026.json` (now 299 games) + full transcript (now 168). **Two 1-cent silver rounding fixes**: BAGPIPES silver was supplied as $15.53 but floorCents(2500/161) = **$15.52**; DR SEUSS silver was supplied as $5.21 but floorCents(2500/480) = **$5.20** (both audit-enforced) — corrected here; neither round's spoken dialogue restates the exact cents so nothing needed changing in the transcript. BAGPIPES had non-standard tiers (Clue 1 had 0 winners): gold Clue 2 (YOU'LL KNOW IT WHEN YOU HEAR IT) 3 @ $1,000.00 / silver Clue 3 (WORLD-FAMOUS SQUEEZE PLAY) 161 @ $15.52 / bronze Clue 4 (CREATES COLORFUL MUSIC AND PAIRS WELL WITH PLAID) 4,846 @ $0.41, total 5,010. DR SEUSS was standard tiers: gold Clue 1 (THE ANSWER RHYMES) 95 @ $31.57 / silver Clue 2 (FAMOUS FOR OFF-COLOR CONTENT) 480 @ $5.20 / bronze Clue 3 (INVENTED A COUPLE OF THINGS) 664 @ $3.01, total 1,239. No bonus/promo this episode. Winners: `Mad Murphy, Crow Motion 277, Isme 30` (R1 gold, all 3); `Lunar's Isle, Acidic Stall, Blessed Tester, Twin on Twitch` (R2 gold, among others). Wrong guesses: R1 `ACCORDION, TAYLOR SWIFT, ACCORDIAN, AIRPLANE, ALARM CLOCK`; R2 `BUSTA RHYMES, EMINEM, CAT IN THE HAT, JACK BLACK, SHAKESPEARE`. `npm run audit` passes 0/0.
+
+## Most Recent Changes (2026-07-29, continued)
+
 - **Hid the Polls nav item**: Per user request, removed the "Polls" button from both the desktop nav bar and the mobile menu in `index.html` (~lines 897-902 desktop, ~917-922 mobile). The `polls` view, `renderPolls()`/`_ensureDailyPollsLoaded()` logic, `data/daily-polls.json`, and the Stats page's "Daily Polls Tracked" stat tile are all untouched — there's just no more nav entry point to reach the page directly (still reachable via `app.setView('polls')` in the console, or by restoring the nav button, if ever needed again). Verified via headless Chromium: 0 "Polls" buttons in the nav, no new console errors, other nav links still work.
 
 ## Most Recent Changes (2026-07-29)
