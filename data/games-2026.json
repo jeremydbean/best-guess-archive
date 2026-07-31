@@ -16739,36 +16739,36 @@
       {
         "number": 1,
         "text": "FOUND IN ANYTHING AND EVERYTHING",
-        "correct": null,
-        "guesses": null,
+        "correct": "33",
+        "guesses": "4,692 🥇",
         "explanation": "The words anything and everything contain vowels."
       },
       {
         "number": 2,
         "text": "CLUE TWO HAS THREE",
-        "correct": null,
-        "guesses": null,
+        "correct": "674",
+        "guesses": "3,761 🥈",
         "explanation": "There are three vowels in the words clue two: the U, the E, and the O."
       },
       {
         "number": 3,
         "text": "LONG'S IS SHORT, TINY'S ARE LONG",
-        "correct": null,
-        "guesses": null,
+        "correct": "1,977",
+        "guesses": "4,685 🥉",
         "explanation": "The O in long is a short sounding vowel and the I in tiny is a long vowel."
       },
       {
         "number": 4,
         "text": "DOUBLED UP IN THE STREET OR IN A POOL",
-        "correct": null,
-        "guesses": null,
+        "correct": "2,057",
+        "guesses": "3,584",
         "explanation": "Street has two Es and pool has two Os, both of which are vowels."
       },
       {
         "number": 5,
         "text": "CONSONANTS NEED NOT APPLY - THE ANSWER'S AEIOU & SOMETIMES Y",
-        "correct": null,
-        "guesses": null,
+        "correct": "3,971",
+        "guesses": "4,463",
         "explanation": "If it is not a consonant, it is a vowel."
       }
     ]
@@ -16796,36 +16796,36 @@
       {
         "number": 1,
         "text": "THE PAST IS PRESENT",
-        "correct": null,
-        "guesses": null,
+        "correct": "1",
+        "guesses": "3,698 🥇",
         "explanation": "The spirits of people from the past are present in the house."
       },
       {
         "number": 2,
         "text": "YOUR ROOMMATES DON'T LIVE HERE",
-        "correct": null,
-        "guesses": null,
+        "correct": "32",
+        "guesses": "2,811 🥈",
         "explanation": "The other people who live there are not alive, so nobody lives there."
       },
       {
         "number": 3,
         "text": "A LOT TO BE AFRAID OF",
-        "correct": null,
-        "guesses": null,
+        "correct": "755",
+        "guesses": "6,155 🥉",
         "explanation": "A lot refers to a place for a house, and it is scary."
       },
       {
         "number": 4,
         "text": "A REAL ESTATE AGENT MIGHT DESCRIBE IT AS \"SOULFUL\"",
-        "correct": null,
-        "guesses": null,
+        "correct": "2,136",
+        "guesses": "5,681",
         "explanation": "The house is full of lost souls, which is what happens in a haunted house."
       },
       {
         "number": 5,
         "text": "SPOOKY DWELLING PLACE THAT HOSTS, EERIE SPIRITS AND SCARY GHOSTS",
-        "correct": null,
-        "guesses": null,
+        "correct": "2,267",
+        "guesses": "3,371",
         "explanation": "A haunted house is a spooky dwelling place that hosts eerie spirits and scary ghosts."
       }
     ]
