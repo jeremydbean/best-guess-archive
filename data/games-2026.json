@@ -16715,5 +16715,119 @@
         "explanation": "He is the one and only Dr. Seuss."
       }
     ]
+  },
+  {
+    "date": "Thursday, July 30, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "VOWELS",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 33,
+    "silverWinners": 674,
+    "bronzeWinners": 1977,
+    "totalWinners": 2684,
+    "goldPayout": 90.9,
+    "silverPayout": 3.7,
+    "bronzePayout": 1.01,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "I need to win big, Not Your Mama, Blue Bean",
+    "wrongGuesses": "THING, E, LETTERS, ATOMS, WATER",
+    "clues": [
+      {
+        "number": 1,
+        "text": "FOUND IN ANYTHING AND EVERYTHING",
+        "correct": null,
+        "guesses": null,
+        "explanation": "The words anything and everything contain vowels."
+      },
+      {
+        "number": 2,
+        "text": "CLUE TWO HAS THREE",
+        "correct": null,
+        "guesses": null,
+        "explanation": "There are three vowels in the words clue two: the U, the E, and the O."
+      },
+      {
+        "number": 3,
+        "text": "LONG'S IS SHORT, TINY'S ARE LONG",
+        "correct": null,
+        "guesses": null,
+        "explanation": "The O in long is a short sounding vowel and the I in tiny is a long vowel."
+      },
+      {
+        "number": 4,
+        "text": "DOUBLED UP IN THE STREET OR IN A POOL",
+        "correct": null,
+        "guesses": null,
+        "explanation": "Street has two Es and pool has two Os, both of which are vowels."
+      },
+      {
+        "number": 5,
+        "text": "CONSONANTS NEED NOT APPLY - THE ANSWER'S AEIOU & SOMETIMES Y",
+        "correct": null,
+        "guesses": null,
+        "explanation": "If it is not a consonant, it is a vowel."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, July 30, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "HAUNTED HOUSE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 32,
+    "bronzeWinners": 755,
+    "totalWinners": 788,
+    "goldPayout": 3000.0,
+    "silverPayout": 78.12,
+    "bronzePayout": 2.64,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Lozo22",
+    "wrongGuesses": "CEMETERY, GRAVEYARD, FUTURE, MEMORY, HISTORY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "THE PAST IS PRESENT",
+        "correct": null,
+        "guesses": null,
+        "explanation": "The spirits of people from the past are present in the house."
+      },
+      {
+        "number": 2,
+        "text": "YOUR ROOMMATES DON'T LIVE HERE",
+        "correct": null,
+        "guesses": null,
+        "explanation": "The other people who live there are not alive, so nobody lives there."
+      },
+      {
+        "number": 3,
+        "text": "A LOT TO BE AFRAID OF",
+        "correct": null,
+        "guesses": null,
+        "explanation": "A lot refers to a place for a house, and it is scary."
+      },
+      {
+        "number": 4,
+        "text": "A REAL ESTATE AGENT MIGHT DESCRIBE IT AS \"SOULFUL\"",
+        "correct": null,
+        "guesses": null,
+        "explanation": "The house is full of lost souls, which is what happens in a haunted house."
+      },
+      {
+        "number": 5,
+        "text": "SPOOKY DWELLING PLACE THAT HOSTS, EERIE SPIRITS AND SCARY GHOSTS",
+        "correct": null,
+        "guesses": null,
+        "explanation": "A haunted house is a spooky dwelling place that hosts eerie spirits and scary ghosts."
+      }
+    ]
   }
 ]

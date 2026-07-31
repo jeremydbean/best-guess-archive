@@ -82540,5 +82540,903 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, July 30, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "VOWELS",
+      "HAUNTED HOUSE"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "VOWELS",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "FOUND IN ANYTHING AND EVERYTHING",
+          "CLUE TWO HAS THREE",
+          "LONG'S IS SHORT, TINY'S ARE LONG",
+          "DOUBLED UP IN THE STREET OR IN A POOL",
+          "CONSONANTS NEED NOT APPLY - THE ANSWER'S AEIOU & SOMETIMES Y"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "HAUNTED HOUSE",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "THE PAST IS PRESENT",
+          "YOUR ROOMMATES DON'T LIVE HERE",
+          "A LOT TO BE AFRAID OF",
+          "A REAL ESTATE AGENT MIGHT DESCRIBE IT AS \"SOULFUL\"",
+          "SPOOKY DWELLING PLACE THAT HOSTS, EERIE SPIRITS AND SCARY GHOSTS"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live, I'm your host Howie Mandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thank you, sit down, sit down."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, follow me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am so excited to announce that we are releasing a collection of our most beautiful clue five poetry."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And it's at your nearest imaginary bookstore, you can get your copy of Best Guess Live presents You'll be glad you're alive when you read these poems from clue number five."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All of your favorites are in there, even classics like this one called Dentures."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your real teeth are gone, but fake, sh, put fake chompers on."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I didn't even read that well."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But it's so powerful, I get emotional when I read these things, okay?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Or the timeless masterpiece sublimely titled Diapers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Parenting would be damper without a Huggie or a Pamper."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It really paints a picture, doesn't it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Like when you listen to, and of course probably the greatest piece of rhyming verse in the history of literature, the Pulitzer Prize winning blockbuster known as Kangaroo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hoppy marsupial, you'll see at the zoopial."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "If that doesn't tug at your heartstrings, I'm not sure you even have a heart."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This incredibly totally not real book makes a great gift for someone you're honestly not that crazy about."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And speaking of things you're not that crazy about, here's the rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds, each round has one puzzle, each puzzle has three sets of winners, gold, silver, and bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round we're gonna load our crystal ball with a secret item, it could be absolutely anything, then I'm gonna give you five clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But remember the clues are like riddles, they're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And after each clue I'm gonna put 20 seconds on the clock for you to submit an answer, but you only get one best guess per round, not one per clue, one per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's gotta be the exact answer, and we do not accept typos."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bottom line, you wanna be fast, but you have to be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of $2,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it on the third earliest clue will split the bronze pot of $2,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough talk, let's win some money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is round one, $7,500 is in play."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, load that crystal ball."
+          },
+          {
+            "speaker": "Neil",
+            "text": "Okay, loading."
+          },
+          {
+            "speaker": "Neil",
+            "text": "It's all loaded."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here we go, here's your first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Found in an, found in anything and everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now, 20 seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Found in anything and everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, that's specific."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Found in anything and everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, and I'm gonna tell you what I would have typed in now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But let's see if I'm right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'll find out I'm not."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Three, two, one, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, Susky said thing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That makes sense, any thing and every thing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Grandiose Goat 4209 said Pedro Pascal."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love these answers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, clue two has three."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue two has three."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, found in anything and everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Based on the second clue, I think I was wrong on the first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm playing out loud."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, uh, Psychic John said silver, silver medal winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We'll find out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And uh, here's your third clue people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Longs is short, tinys are long."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Longs is short, tinys are long."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Found in anything and everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue two has three."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Longs is short, tinys are long."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Volatile Pickle 111 said fingernails."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Longs is short, tinys are long."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, wondering your long fingers are the short nails and the tiny fingers those are, well, I'm scratching my head with your fingernails answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Doubled up in the street or in a pool."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Found in anything and everything is clue one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue two has three."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue three says longs is short, tinys are long."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue four is doubled up in the street or the pool."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mindy for Miles said a chicken fight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Doubled up in the street or the pool."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, with that chi, I was, you know what I was thinking."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Families."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your final chance to guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, consonants need not apply the answers AEIOU and sometimes Y."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I uh, I know it, I was wrong on clue number one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'll tell you what I put in on clue number one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But it wasn't that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ten seconds left."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Longs is short, tinys are long."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue has two, clue has clue two has three."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes, ah, I'm mad at myself 'cause I would have put in the wrong answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm gonna tell you, so that's that's you're all in and time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "On clue number one when I said when it said found in anything and everything, if I was playing at home on my phone I was gonna put in Adam."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know, that's what I was gonna put in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And then uh, that I was wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And what I believe the answer is is vowel, ah, vowels."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's see, Neil open the ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes, vowels."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "See, I would have ah, why did it take me so long to get, these are good clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who has taken home more money than I would have."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “CONSONANTS NEED NOT APPLY - THE ANSWER'S AEIOU & SOMETIMES Y.” If it is not a consonant, it is a vowel. 3,971 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “DOUBLED UP IN THE STREET OR IN A POOL.” Street has two Es and pool has two Os, both of which are vowels. 2,057 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “LONG'S IS SHORT, TINY'S ARE LONG.” The O in long is a short sounding vowel and the I in tiny is a long vowel. 1,977 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “CLUE TWO HAS THREE.” There are three vowels in the words clue two: the U, the E, and the O. 674 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “FOUND IN ANYTHING AND EVERYTHING.” The words anything and everything contain vowels. 33 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 33 winners at $90.90 each. Silver (Clue 2): 674 winners at $3.70 each. Bronze (Clue 3): 1,977 winners at $1.01 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Some of the gold guessers are I need to win big, you just did, uh, Not Your Mama, and uh, Blue Bean are three of those."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And congratulations to all our win, it's not funny, I got nothing, I would have got nothing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I would be happy with a buck."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "2,000 people won a buck."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Better than a scratch off, this is more fun."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "If you enjoyed that game, I've got another one just like it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So let's play round two for another $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Prize pots are the same, 3,000 for gold, 2,500 for silver, and 2,000 for bronze."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Load that crystal ball, Neil."
+          },
+          {
+            "speaker": "Neil",
+            "text": "Hey."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is that Neil, Neil's brother?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's Neil, you changed your voice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You did, he's expanding his acting resume."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The past is present."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The past is present."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I like taking a shot at the first clue, so I'm gonna tell you what I thought of, what I would type in right now, if I was playing at home."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think I know what it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're about to find out if I really know what it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A couple of minutes, three seconds left."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Horrendous Kitten 409 said rear view mirror."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The past is present, right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And Matthew Richer said memory."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They, they're both really good answers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Really good answers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not what I was gonna type in, but I'll tell you what I was gonna type in later."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here is your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your roommates don't live here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The past is present, and your roommates don't live here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my guess doesn't fit the second clue, so I think I was wrong again."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Two seconds left, zero."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tonga Fiji said a museum."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And Molten Woods 681 said next door."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your roommates don't live here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Check next door."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A lot to be afraid of."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A lot to be afraid of."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, the past is present."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your roommates don't live here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And your third clue, a lot to be afraid of."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five seconds remaining on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Volatile Pickle 111 said age."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A lot to be afraid of."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What is age?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I have got the most age in this entire room, million dollar Deb says high school."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A real estate agent might describe it as soulful."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Past is present."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your roommates don't live here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A lot to be afraid of."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A real estate agent, describe it as soulful."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, I think I know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Va va va zoom said shoe store."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright, here's your final clue, your final chance to guess, your final shot at $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Spooky dwelling place that hosts eerie spirits and scary ghosts."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The past is present."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your roommates don't live here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A lot to be afraid of."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A real estate agent might describe it as soulful."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And spooky dwelling place that hosts eerie spirits and scary ghosts."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, when the past was present on clue number one I thought that that was uh, I was gonna say reminiscing, but I was wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And I'm gonna say that it is haunted house."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's see."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open the open the ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Haunted house!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Haunted house."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I was right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not me people."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “SPOOKY DWELLING PLACE THAT HOSTS, EERIE SPIRITS AND SCARY GHOSTS.” A haunted house is a spooky dwelling place that hosts eerie spirits and scary ghosts. 2,267 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “A REAL ESTATE AGENT MIGHT DESCRIBE IT AS “SOULFUL””. The house is full of lost souls, which is what happens in a haunted house. 2,136 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “A LOT TO BE AFRAID OF”. A lot refers to a place for a house, and it is scary. 755 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “YOUR ROOMMATES DON'T LIVE HERE”. The other people who live there are not alive, so nobody lives there. 32 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “THE PAST IS PRESENT”. The spirits of people from the past are present in the house. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1 winner at $3,000.00. Silver (Clue 2): 32 winners at $78.12 each. Bronze (Clue 3): 755 winners at $2.64 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow, $3,000 to you, Lozo22, congratulations."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is supposed to, isn't it supposed to like, isn't it supposed to, what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think it's haunted."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's haunted."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, that's it for this episode of Best Guess, oh, I want to say 32 of you are silver and you're all getting $78 and 12 cents a piece, and your bronze winners, 755 of you are each getting $2 and 64 cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, congratulations again to all our winners."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're here every weekday at 8 Eastern, 5 Pacific, so come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good night."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [THING, E, LETTERS, ATOMS, WATER]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [CEMETERY, GRAVEYARD, FUTURE, MEMORY, HISTORY]"
+          }
+        ]
+      }
+    ]
   }
 ]
