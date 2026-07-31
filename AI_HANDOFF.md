@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-07-30 (session end)
+Last updated: 2026-07-31 (session end)
+
+## Most Recent Changes (2026-07-31)
+
+- **Daily puzzle added — Friday, July 31, 2026: GUITAR**: Appended to `data/daily-puzzles.json` (now 70 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #2, "GETS A LOT OF AIR PLAY"); explanations reused from the screenshot's own text, converted to sentence case to match file convention. Clues: USUALLY STARTS WITH TWISTS AND TURNS / GETS A LOT OF AIR PLAY / CORNERSTONE OF A ROCK FORMATION / SOME STRINGS ATTACHED, USUALLY HALF A DOZEN IN FACT / INSTRUMENT TO SHRED ON OR STRUM, WITH OR WITHOUT AN ELECTRIC HUM. `npm run audit` passes.
 
 ## Most Recent Changes (2026-07-30, continued 2)
 
