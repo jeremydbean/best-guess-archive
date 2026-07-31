@@ -2137,5 +2137,36 @@
         "explanation": "Cheerios are a round oat-based cereal."
       }
     ]
+  },
+  {
+    "date": "Friday, July 31, 2026",
+    "secretItem": "GUITAR",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "USUALLY STARTS WITH TWISTS AND TURNS",
+        "explanation": "You tune the guitar before you play it."
+      },
+      {
+        "clueNumber": 2,
+        "text": "GETS A LOT OF AIR PLAY",
+        "explanation": "Lots of people play air guitar."
+      },
+      {
+        "clueNumber": 3,
+        "text": "CORNERSTONE OF A ROCK FORMATION",
+        "explanation": "An iconic musical instrument for rock bands."
+      },
+      {
+        "clueNumber": 4,
+        "text": "SOME STRINGS ATTACHED, USUALLY HALF A DOZEN IN FACT",
+        "explanation": "Guitars usually have six strings."
+      },
+      {
+        "clueNumber": 5,
+        "text": "INSTRUMENT TO SHRED ON OR STRUM, WITH OR WITHOUT AN ELECTRIC HUM",
+        "explanation": "Whether they're acoustic or electric, guitars rock."
+      }
+    ]
   }
 ]
