@@ -2,6 +2,10 @@
 
 Last updated: 2026-08-01 (session end)
 
+## Most Recent Changes (2026-08-01, continued 4)
+
+- **Set `winningClue: 1` on PITBULL/PINEAPPLE**: This leftover legacy v1 field had been carried over as `0` from the original stub template; updated it to match the confirmed `goldClue: 1` on both games. `npm run audit` passes 0/0. (Host was re-confirmed as Corrine Foxx on both — already set correctly from earlier in the session, no change needed.)
+
 ## Most Recent Changes (2026-08-01, continued 3)
 
 - **Added hover-over clue tooltips to the Database row for stub games (PITBULL/PINEAPPLE)**: The existing `data-clue-tooltip`/`db-clue-tooltip` hover mechanism in `index.html` (already used for full games and daily puzzles) wasn't wired up for `partialClues` on stub rows — clue explanations were stored but never surfaced. Added the same `data-clue-tooltip` attribute + class to the stub clue cell, matching the daily-puzzles pattern exactly. Verified via headless Chromium: hovering a stub clue now shows the popover with its explanation text, no console errors.
