@@ -135,6 +135,7 @@ A played episode with missing source material is **not** cancelled. Preserve eve
 - Put winner counts, payouts, medal clues, host, wrong guesses, and explanations in their normal structured fields as they become known.
 - If a screenshot shows the round-level player count in the upper corner, store it as numeric `totalPlayers`. This is distinct from per-clue `guesses`; never derive or overwrite one from the other when the explicit player count is available.
 - Do not use public-facing `note`, `noteUrl`, `reportedResult`, or `adminNote` fields to discuss missing sources, requests for submissions, inference history, or agent uncertainty.
+- The UI derives its public **Incomplete archive record** badge, missing-field list, and support-form link directly from `dataStatus: "partial"` plus the fields that are still null or empty. Do not hand-author that list; fill confirmed fields normally and it will shrink automatically.
 - Add one transcript placeholder with `dataStatus: "unavailable"`, confirmed `host`, `secretItems`, and `rounds` metadata, plus the six canonical sections with empty `lines` arrays. Never invent dialogue.
 - Remove the partial/unavailable statuses only when the game data and transcript are genuinely complete.
 

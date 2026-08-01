@@ -2418,6 +2418,132 @@ class App {
     return !!(g && (g.dataStatus === 'partial' || (g.secretItem && g.note && !(g.clues || []).length)));
   }
 
+  _formatNaturalList(items) {
+    const values = (items || []).filter(Boolean).map(String);
+    if (values.length < 2) return values[0] || '';
+    if (values.length === 2) return `${values[0]} and ${values[1]}`;
+    return `${values.slice(0, -1).join(', ')}, and ${values[values.length - 1]}`;
+  }
+
+  _formatClueNumberList(numbers) {
+    const sorted = [...new Set((numbers || []).map(Number).filter(n => n >= 1 && n <= 5))].sort((a, b) => a - b);
+    if (sorted.length === 5) return 'all five clues';
+    return this._formatNaturalList(sorted.map(n => `Clue ${n}`));
+  }
+
+  _hasRecordedTranscript(date) {
+    const transcript = this.transcripts.find(t => t.date === date);
+    return !!(transcript && transcript.dataStatus !== 'unavailable' &&
+      (transcript.sections || []).some(section => (section.lines || []).length));
+  }
+
+  _getIncompleteGameFields(g, { includeTranscript = true } = {}) {
+    if (!this._isPartialGame(g)) return [];
+
+    const fields = [];
+    const availableClues = (Array.isArray(g.partialClues) && g.partialClues.length) ? g.partialClues : (g.clues || []);
+    const cluesByNumber = new Map();
+    availableClues.forEach((clue, index) => {
+      const number = Number(clue?.clueNumber || clue?.number || index + 1);
+      if (number >= 1 && number <= 5) cluesByNumber.set(number, clue);
+    });
+
+    const missingText = [];
+    const missingCorrect = [];
+    const missingGuesses = [];
+    const missingExplanations = [];
+    for (let number = 1; number <= 5; number += 1) {
+      const clue = cluesByNumber.get(number);
+      if (!clue?.text?.trim()) missingText.push(number);
+      if (!this._isKnownCount(clue?.correct)) missingCorrect.push(number);
+      if (!this._isKnownCount(clue?.guesses)) missingGuesses.push(number);
+      if (!clue?.explanation?.trim()) missingExplanations.push(number);
+    }
+
+    if (!g.host?.trim()) fields.push('host');
+    if (!this._isKnownCount(g.pot)) fields.push('prize pot');
+    if (!g.format) fields.push('game format');
+    if (!this._isKnownCount(g.totalPlayers)) fields.push('round player count');
+    if (missingText.length) fields.push(`clue wording for ${this._formatClueNumberList(missingText)}`);
+    if (missingCorrect.length) fields.push(`correct-answer totals for ${this._formatClueNumberList(missingCorrect)}`);
+    if (missingGuesses.length) fields.push(`clue submission totals for ${this._formatClueNumberList(missingGuesses)}`);
+    if (missingExplanations.length) fields.push(`host explanations for ${this._formatClueNumberList(missingExplanations)}`);
+
+    if (g.format === 'v2') {
+      const tiers = [
+        { name: 'gold', clue: g.goldClue, winners: g.goldWinners, payout: g.goldPayout },
+        { name: 'silver', clue: g.silverClue, winners: g.silverWinners, payout: g.silverPayout },
+        { name: 'bronze', clue: g.bronzeClue, winners: g.bronzeWinners, payout: g.bronzePayout }
+      ];
+      const missingPlacements = tiers.filter(tier => !Number(tier.clue)).map(tier => tier.name);
+      const missingWinnerCounts = tiers.filter(tier => !this._isKnownCount(tier.winners)).map(tier => tier.name);
+      const missingPayouts = tiers.filter(tier => !this._isKnownCount(tier.payout)).map(tier => tier.name);
+      if (missingPlacements.length) fields.push(`${this._formatNaturalList(missingPlacements)} medal placement${missingPlacements.length === 1 ? '' : 's'}`);
+      if (missingWinnerCounts.length) fields.push(`${this._formatNaturalList(missingWinnerCounts)} winner count${missingWinnerCounts.length === 1 ? '' : 's'}`);
+      if (missingPayouts.length) fields.push(`${this._formatNaturalList(missingPayouts)} payout${missingPayouts.length === 1 ? '' : 's'}`);
+    } else {
+      if (!Number(g.winningClue || g.goldClue)) fields.push('winning clue');
+      if (!g.winnerPayout && !this._isKnownCount(g.goldPayout)) fields.push('winner payout');
+    }
+
+    if (!this._isKnownCount(g.totalWinners)) fields.push('total winner count');
+    if (!String(g.winnerNames || '').trim()) fields.push('winner names');
+    if (!String(g.wrongGuesses || '').trim() || String(g.wrongGuesses).trim().toUpperCase() === 'N/A') fields.push('popular wrong guesses');
+    if (includeTranscript && !this._hasRecordedTranscript(g.date)) fields.push('full episode transcript');
+    return [...new Set(fields)];
+  }
+
+  _renderIncompleteGameNotice(g, { includeTranscript = true } = {}) {
+    if (!this._isPartialGame(g)) return '';
+    const esc = value => this._escapeHtml(value);
+    const missing = this._getIncompleteGameFields(g, { includeTranscript });
+    const recordingMissing = !this._hasRecordedTranscript(g.date);
+    const intro = recordingMissing
+      ? 'A recording of this episode was not captured for the archive, so some details are still missing.'
+      : 'This archive entry is still incomplete, so some details are missing.';
+    const missingHtml = missing.length
+      ? `<div class="mt-2 text-sm leading-relaxed text-amber-50/85"><span class="font-bold text-amber-100">Still missing:</span> ${esc(this._formatNaturalList(missing))}.</div>`
+      : '';
+    return `<aside class="rounded-lg border border-amber-400/30 bg-amber-950/20 px-4 py-3 text-left" aria-label="Incomplete archive record">
+      <div class="flex items-center gap-2 text-amber-200">
+        <span class="material-symbols-outlined" style="font-size:18px;line-height:1">inventory_2</span>
+        <span class="text-xs font-black uppercase tracking-wider">Incomplete archive record</span>
+      </div>
+      <p class="mt-2 text-sm leading-relaxed text-slate-300">${esc(intro)}</p>
+      ${missingHtml}
+      <a href="https://forms.gle/zzTwMu8wpZpC5zR58" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-amber-300 hover:text-amber-100 transition">
+        <span class="material-symbols-outlined" style="font-size:16px;line-height:1">upload_file</span>
+        Upload missing information
+      </a>
+    </aside>`;
+  }
+
+  _renderIncompleteEpisodeNotice(games) {
+    const partialGames = (games || []).filter(game => this._isPartialGame(game));
+    if (!partialGames.length) return '';
+    const esc = value => this._escapeHtml(value);
+    const transcriptMissing = !this._hasRecordedTranscript(partialGames[0].date);
+    const roundRows = partialGames.map(game => {
+      const missing = this._getIncompleteGameFields(game, { includeTranscript: false });
+      return missing.length
+        ? `<li><span class="font-bold text-white">${esc(game.secretItem)}:</span> ${esc(this._formatNaturalList(missing))}.</li>`
+        : '';
+    }).filter(Boolean).join('');
+    return `<aside class="rounded-lg border border-amber-400/30 bg-amber-950/20 px-4 py-4 text-left" aria-label="Incomplete archive record">
+      <div class="flex items-center gap-2 text-amber-200">
+        <span class="material-symbols-outlined" style="font-size:18px;line-height:1">inventory_2</span>
+        <span class="text-xs font-black uppercase tracking-wider">Incomplete archive record</span>
+      </div>
+      <p class="mt-2 text-sm leading-relaxed text-slate-300">${transcriptMissing ? 'A recording of this episode was not captured for the archive, so some details are still missing.' : 'This episode record is still incomplete.'}</p>
+      ${transcriptMissing ? '<p class="mt-2 text-sm text-amber-50/85"><span class="font-bold text-amber-100">Still missing:</span> full episode transcript.</p>' : ''}
+      ${roundRows ? `<ul class="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-amber-50/80">${roundRows}</ul>` : ''}
+      <a href="https://forms.gle/zzTwMu8wpZpC5zR58" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-amber-300 hover:text-amber-100 transition">
+        <span class="material-symbols-outlined" style="font-size:16px;line-height:1">upload_file</span>
+        Upload missing information
+      </a>
+    </aside>`;
+  }
+
   _isPlayableGame(g) {
     const clueCount = Array.isArray(g.clues) ? g.clues.length : (g.clueCount ?? -1);
     return !!(g && g.secretItem && clueCount === 5 && !this._isStubGame(g));
@@ -2496,6 +2622,7 @@ class App {
         this._transcriptsError = null;
         this._transcriptsLoading = null;
         this._dbFilteredCache.clear();
+        this._dbRowHtmlCache.clear();
         if (this._activeView === 'database') this.renderDatabase();
         if (this._activeView === 'home') this.renderDataHealth();
       })
@@ -3948,6 +4075,10 @@ Rules:
     const hl = (v) => this._highlight(v, query);
     const fmtMoney = (n, decimals = 2) => '$' + Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
     const meta = this._getGameMeta(g);
+    const incompleteFields = meta.isPartial ? this._getIncompleteGameFields(g) : [];
+    const incompleteBadge = meta.isPartial
+      ? `<div class="mt-1"><span class="inline-flex items-center gap-1 rounded border border-amber-400/30 bg-amber-950/30 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wide text-amber-300" title="Still missing: ${esc(this._formatNaturalList(incompleteFields))}"><span class="material-symbols-outlined" style="font-size:11px;line-height:1">inventory_2</span>Incomplete</span></div>`
+      : '';
 
     if (meta.isStub && !g.secretItem) {
       // Genuinely cancelled show — nothing known, nothing to fill in.
@@ -4039,6 +4170,7 @@ Rules:
         <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
         <td class="px-1 py-1 font-semibold text-white align-middle leading-snug" style="max-width:200px;overflow-wrap:break-word;">
           <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>
+          ${incompleteBadge}
         </td>
         ${potCell}
         ${stubClueCells}
@@ -4090,21 +4222,23 @@ Rules:
       </td>`;
     }).join('');
 
-    const totalW = g.totalWinners || 0;
+    const totalWKnown = this._isKnownCount(g.totalWinners);
+    const totalW = totalWKnown ? this._parseCount(g.totalWinners) : 0;
+    const winnerCountText = value => this._isKnownCount(value) ? this._parseCount(value).toLocaleString() : '—';
     const winnersHtml = isV2
       ? `<div class="text-xs text-center space-y-0.5">
-          <div>🥇 <span class="font-mono text-yellow-400">${(g.goldWinners || 0).toLocaleString()}</span></div>
-          <div>🥈 <span class="font-mono text-slate-300">${(g.silverWinners || 0).toLocaleString()}</span></div>
-          <div>🥉 <span class="font-mono text-amber-600">${(g.bronzeWinners || 0).toLocaleString()}</span></div>
-          <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono whitespace-nowrap">${totalW.toLocaleString()} total</div>
+          <div>🥇 <span class="font-mono text-yellow-400">${winnerCountText(g.goldWinners)}</span></div>
+          <div>🥈 <span class="font-mono text-slate-300">${winnerCountText(g.silverWinners)}</span></div>
+          <div>🥉 <span class="font-mono text-amber-600">${winnerCountText(g.bronzeWinners)}</span></div>
+          <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono whitespace-nowrap">${totalWKnown ? `${totalW.toLocaleString()} total` : '—'}</div>
         </div>`
-      : `<div class="text-center font-mono text-slate-300">${totalW.toLocaleString()}</div>`;
+      : `<div class="text-center font-mono text-slate-300">${totalWKnown ? totalW.toLocaleString() : '—'}</div>`;
 
     // Detect redistribution scenarios: per official rules, a tier with no winners
     // has its pot redistributed to the tier above (bronze→silver or gold, silver→gold).
     // Stubs are filtered earlier so this only runs on real games.
-    const bronzeRedist = isV2 && !(g.bronzeWinners > 0);
-    const silverRedist = isV2 && !(g.silverWinners > 0);
+    const bronzeRedist = isV2 && this._isKnownCount(g.bronzeWinners) && this._parseCount(g.bronzeWinners) === 0;
+    const silverRedist = isV2 && this._isKnownCount(g.silverWinners) && this._parseCount(g.silverWinners) === 0;
     let goldTip = '', silverTip = '', bronzeTip = '';
     if (isV2 && (bronzeRedist || silverRedist)) {
       const gW = g.goldWinners || 0;
@@ -4131,10 +4265,10 @@ Rules:
     }
     const payoutsHtml = isV2
       ? `<div class="text-xs font-mono space-y-0.5" style="min-width:150px">
-          <div${goldTip   ? ` title="${esc(goldTip)}"   style="cursor:help"` : ''}>🥇 <span class="text-yellow-400">${fmtMoney(g.goldPayout)}</span></div>
-          <div${silverTip ? ` title="${esc(silverTip)}" style="cursor:help"` : ''}>🥈 <span class="text-slate-300">${silverRedist ? '—' : fmtMoney(g.silverPayout)}</span></div>
-          <div${bronzeTip ? ` title="${esc(bronzeTip)}" style="cursor:help"` : ''}>🥉 <span class="text-amber-600">${bronzeRedist ? '—' : fmtMoney(g.bronzePayout)}</span></div>
-          <div class="border-t border-slate-700 pt-0.5 text-green-400 whitespace-nowrap">${esc(g.winnerPayout || '')} total</div>
+          <div${goldTip   ? ` title="${esc(goldTip)}"   style="cursor:help"` : ''}>🥇 <span class="text-yellow-400">${this._isKnownCount(g.goldPayout) ? fmtMoney(g.goldPayout) : '—'}</span></div>
+          <div${silverTip ? ` title="${esc(silverTip)}" style="cursor:help"` : ''}>🥈 <span class="text-slate-300">${silverRedist || !this._isKnownCount(g.silverPayout) ? '—' : fmtMoney(g.silverPayout)}</span></div>
+          <div${bronzeTip ? ` title="${esc(bronzeTip)}" style="cursor:help"` : ''}>🥉 <span class="text-amber-600">${bronzeRedist || !this._isKnownCount(g.bronzePayout) ? '—' : fmtMoney(g.bronzePayout)}</span></div>
+          ${g.winnerPayout ? `<div class="border-t border-slate-700 pt-0.5 text-green-400 whitespace-nowrap">${esc(g.winnerPayout)} total</div>` : ''}
         </div>`
       : `<div class="font-mono" style="min-width:110px">
           <span class="text-green-400">${esc(g.winnerPayout || '—')}</span>
@@ -4146,9 +4280,10 @@ Rules:
       <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
       <td class="px-1 py-1 font-semibold text-white align-middle leading-snug" style="max-width:200px;overflow-wrap:break-word;">
         <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>
+        ${incompleteBadge}
         ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${hl(g.note)}</span></div>` : ''}
       </td>
-      <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${g.pot.toLocaleString()}</td>
+      <td class="px-2 py-1 ${this._isKnownCount(g.pot) ? 'text-green-400' : 'text-slate-700'} font-mono whitespace-nowrap align-middle">${this._isKnownCount(g.pot) ? `$${this._parseCount(g.pot).toLocaleString()}` : '—'}</td>
       ${clueCells}
       <td class="px-2 py-1 text-center font-bold text-slate-400 align-middle">${meta.winningClueNum || ''}</td>
       <td class="px-2 py-1 align-middle"><span class="font-mono ${meta.totalPlayers > 0 ? 'text-blue-300' : 'text-slate-700'}"${meta.reportedPlayerCountKnown ? ' title="Reported round player count"' : (meta.guessCountsComplete ? '' : ' title="Some clue submission counts are not yet known"')}>${meta.reportedPlayerCountKnown || meta.guessCountsComplete ? meta.totalPlayers.toLocaleString() : (meta.totalPlayers > 0 ? `${meta.totalPlayers.toLocaleString()} known` : '—')}</span></td>
@@ -4461,6 +4596,7 @@ Rules:
     const tierText = (emoji, clue, winners, payout, color) => winners == null
       ? `<span class="text-slate-600">${emoji} Not yet known</span>`
       : `<span class="${color}">${emoji} Clue ${clue || '—'} · ${Number(winners).toLocaleString()} · $${Number(payout || 0).toFixed(2)}</span>`;
+    const incompleteNotice = this._renderIncompleteGameNotice(g);
 
     modalContentEl.innerHTML = `
       <div class="mb-8 text-center">
@@ -4479,6 +4615,7 @@ Rules:
           ${tierText('🥉', g.bronzeClue, g.bronzeWinners, g.bronzePayout, 'text-orange-300')}
         </div>
       </div>
+      <div class="mb-5">${incompleteNotice}</div>
       <div class="mb-5 rounded-xl border border-white/5 bg-slate-900/35 px-4 py-3 sm:px-5">
         ${clueRows || '<div class="py-5 text-sm text-slate-500">Clue wording is not available yet.</div>'}
       </div>
@@ -4535,29 +4672,39 @@ Rules:
     }).join('');
 
     const fmt2 = n => Number(n).toFixed(2);
-    const silverRow = Number(g.silverWinners) > 0
+    const goldKnown = this._isKnownCount(g.goldWinners) && this._isKnownCount(g.goldPayout) && Number(g.goldClue) > 0;
+    const silverKnown = this._isKnownCount(g.silverWinners) && this._isKnownCount(g.silverPayout);
+    const bronzeKnown = this._isKnownCount(g.bronzeWinners) && this._isKnownCount(g.bronzePayout);
+    const goldRow = goldKnown
+      ? `<span class="text-yellow-300">🥇 Clue ${g.goldClue} · ${Number(g.goldWinners).toLocaleString()} · $${fmt2(g.goldPayout)}</span>`
+      : '<span class="text-yellow-300/40">🥇 Gold result not yet known</span>';
+    const silverRow = !silverKnown
+      ? '<span class="text-slate-500">🥈 Silver result not yet known</span>'
+      : Number(g.silverWinners) > 0
       ? `<span class="text-slate-200">🥈 Clue ${g.silverClue} · ${Number(g.silverWinners).toLocaleString()} · $${fmt2(g.silverPayout)}</span>`
       : `<span class="text-slate-500/50">🥈 No silver winners — pot redistributed${g.silverClue ? ` (Clue ${g.silverClue})` : ''}</span>`;
-    const bronzeRow = Number(g.bronzeWinners) > 0
+    const bronzeRow = !bronzeKnown
+      ? '<span class="text-orange-300/40">🥉 Bronze result not yet known</span>'
+      : Number(g.bronzeWinners) > 0
       ? `<span class="text-orange-300">🥉 Clue ${g.bronzeClue} · ${Number(g.bronzeWinners).toLocaleString()} · $${fmt2(g.bronzePayout)}</span>`
       : `<span class="text-orange-300/30">🥉 No bronze winners — pot redistributed${g.bronzeClue ? ` (Clue ${g.bronzeClue})` : ''}</span>`;
     const medalSummary = g.format === 'v2'
       ? `<div class="mt-5 flex flex-wrap justify-center text-xs font-bold" style="column-gap:2rem;row-gap:.65rem;line-height:1.75">
-          <span class="text-yellow-300">🥇 Clue ${g.goldClue} · ${Number(g.goldWinners).toLocaleString()} · $${fmt2(g.goldPayout)}</span>
+          ${goldRow}
           ${silverRow}
           ${bronzeRow}
         </div>`
       : `<div class="mt-4 flex justify-center">
-          <span class="text-sm font-bold text-blue-300">Won on Clue ${g.winningClue || g.goldClue} · ${(g.totalWinners).toLocaleString()} winners · ${esc(g.winnerPayout)}</span>
+          <span class="text-sm font-bold text-blue-300">${Number(g.winningClue || g.goldClue) > 0 ? `Won on Clue ${Number(g.winningClue || g.goldClue)}` : 'Winning clue not yet known'} · ${this._isKnownCount(g.totalWinners) ? `${this._parseCount(g.totalWinners).toLocaleString()} winners` : 'winner count unavailable'} · ${esc(g.winnerPayout || 'payout unavailable')}</span>
         </div>`;
 
     let redistributionHtml = '';
-    if (g.format === 'v2' && (!(Number(g.silverWinners) > 0) || !(Number(g.bronzeWinners) > 0))) {
+    const silverEmpty = g.format === 'v2' && this._isKnownCount(g.silverWinners) && Number(g.silverWinners) === 0;
+    const bronzeEmpty = g.format === 'v2' && this._isKnownCount(g.bronzeWinners) && Number(g.bronzeWinners) === 0;
+    if (g.format === 'v2' && (silverEmpty || bronzeEmpty)) {
       const floorCents = value => Math.floor(Number(value || 0) * 100) / 100;
       const gW = Number(g.goldWinners || 0);
       const sW = Number(g.silverWinners || 0);
-      const silverEmpty = !(sW > 0);
-      const bronzeEmpty = !(Number(g.bronzeWinners) > 0);
       const lines = [];
       if (silverEmpty && gW > 0) {
         const silverExtra = floorCents(2500 / gW);
@@ -4594,6 +4741,7 @@ Rules:
             Transcript
           </button>`
       : '';
+    const incompleteNotice = this._renderIncompleteGameNotice(g);
     // Keep the modal answer linked to the table: if it's already revealed in
     // the database view (clicked there, or "Reveal all" is on), show it
     // revealed here too — no extra click needed.
@@ -4612,10 +4760,10 @@ Rules:
         <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${secretHeading}</h2>
 
         <div class="mt-5 flex flex-wrap items-center justify-center text-sm" style="column-gap:2rem;row-gap:.75rem;line-height:1.7">
-          <span class="font-bold text-green-300">$${g.pot.toLocaleString()}</span>
-          <span class="font-bold text-blue-200">${esc(g.host)}</span>
+          <span class="font-bold ${this._isKnownCount(g.pot) ? 'text-green-300' : 'text-slate-500'}">${this._isKnownCount(g.pot) ? `$${this._parseCount(g.pot).toLocaleString()}` : 'Pot unavailable'}</span>
+          <span class="font-bold text-blue-200">${esc(g.host || 'Host unknown')}</span>
           ${this._isKnownCount(g.totalPlayers) ? `<span class="font-bold text-cyan-200">${this._parseCount(g.totalPlayers).toLocaleString()} players</span>` : ''}
-          <span class="font-bold text-slate-200">${Number(g.totalWinners || 0).toLocaleString()} winners</span>
+          <span class="font-bold text-slate-200">${this._isKnownCount(g.totalWinners) ? `${this._parseCount(g.totalWinners).toLocaleString()} winners` : 'Winners not yet known'}</span>
           <span class="text-xs font-black uppercase tracking-wider text-slate-400">${esc(g.format || 'classic')}</span>
         </div>
         ${medalSummary}
@@ -4652,6 +4800,7 @@ Rules:
           </div>
         </details>` : ''}
       </div>
+      ${incompleteNotice ? `<div class="mb-5">${incompleteNotice}</div>` : ''}
       <div class="mb-5 rounded-xl border border-white/5 bg-slate-900/35 px-4 py-3 sm:px-5">${cluesHtml}</div>
       ${transcriptButton ? `<div class="mb-4 flex justify-center">${transcriptButton}</div>` : ''}
       <div class="rounded-lg border border-red-500/15 bg-red-950/10 px-4 py-3 text-sm text-slate-400">
@@ -4777,7 +4926,7 @@ Rules:
       nodes.detail.innerHTML = '<div class="text-slate-400">No transcript selected.</div>';
       return;
     }
-    const relatedGames = this.games.filter(g => g.date === transcript.date && !this._isStubGame(g));
+    const relatedGames = this.games.filter(g => g.date === transcript.date && g.secretItem);
     const transcriptRounds = (transcript.rounds || []).length
       ? transcript.rounds
       : relatedGames.map((g, i) => ({ round: i + 1, secretItem: g.secretItem, host: g.host, pot: g.pot, format: g.format }));
@@ -4800,6 +4949,7 @@ Rules:
         `).join('')
       : '<span class="text-xs text-slate-500">No matching database entry found for this transcript date.</span>';
     const lineCount = (transcript.sections || []).reduce((sum, section) => sum + (section.lines || []).length, 0);
+    const incompleteEpisodeNotice = this._renderIncompleteEpisodeNotice(relatedGames);
 
     nodes.detail.innerHTML = `
       <div class="mb-6 border-b border-slate-700/60 pb-4">
@@ -4822,7 +4972,7 @@ Rules:
         </div>
       </div>
       <div class="transcript-sections">
-        ${lineCount === 0 ? `<div class="rounded-lg border border-slate-700/60 bg-slate-900/45 px-4 py-5 text-sm text-slate-400">A transcript is not available for this episode. The confirmed round details remain available from the Database links above.</div>` : (transcript.sections || []).filter(s => (s.lines || []).length).map(section => {
+        ${lineCount === 0 ? (incompleteEpisodeNotice || `<div class="rounded-lg border border-slate-700/60 bg-slate-900/45 px-4 py-5 text-sm text-slate-400">A transcript is not available for this episode. The confirmed round details remain available from the Database links above.</div>`) : (transcript.sections || []).filter(s => (s.lines || []).length).map(section => {
           const tag = section.tag || 'Transcript';
           const isResults = /Results/i.test(tag);
           const isRound = /Round/i.test(tag) && !isResults;
@@ -5673,7 +5823,8 @@ Rules:
   _normalizeGames(games) {
     for (const g of games) {
       if (typeof g.totalWinners !== 'number') {
-        g.totalWinners = Number(g.winnerCount) || 0;
+        const partialUnknown = g.dataStatus === 'partial' && g.totalWinners == null && g.winnerCount == null;
+        if (!partialUnknown) g.totalWinners = Number(g.winnerCount) || 0;
       }
     }
     this._invalidateDerivedDataCaches();
