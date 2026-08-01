@@ -2186,6 +2186,12 @@ class App {
     return parseInt(String(value || '0').replace(/[^0-9]/g, ''), 10) || 0;
   }
 
+  _isKnownCount(value) {
+    if (typeof value === 'number') return Number.isFinite(value) && value >= 0;
+    const text = String(value ?? '').trim();
+    return !!text && /\d/.test(text) && !/\d\s*[–—-]\s*\d/.test(text) && !/^(?:N|N\/A|A \/ N\/A|\?|-)$/.test(text);
+  }
+
   _parseMoneyString(value) {
     return Number(String(value || '0').replace(/[$,]/g, '')) || 0;
   }
@@ -2266,18 +2272,23 @@ class App {
 
     const clues = Array.isArray(g.clues) ? g.clues : [];
     const clueStats = clues.map((clue, index) => {
+      const correctKnown = this._isKnownCount(clue.correct);
+      const guessesKnown = this._isKnownCount(clue.guesses);
       const correct = this._parseCount(clue.correct);
       const guesses = this._parseCount(clue.guesses);
-      const pct = guesses > 0 ? ((correct / guesses) * 100).toFixed(3) : '0.000';
+      const pct = correctKnown && guessesKnown && guesses > 0 ? ((correct / guesses) * 100).toFixed(3) : null;
       return {
         clue,
         clueNumber: index + 1,
         correct,
         guesses,
+        correctKnown,
+        guessesKnown,
         pct
       };
     });
-    const totalPlayers = clueStats.reduce((sum, entry) => sum + entry.guesses, 0);
+    const totalPlayers = clueStats.reduce((sum, entry) => sum + (entry.guessesKnown ? entry.guesses : 0), 0);
+    const guessCountsComplete = clueStats.length === 5 && clueStats.every(entry => entry.guessesKnown);
     const winningClueNum = Number(g.winningClue || g.goldClue || 0);
     const hostHtml = this._escapeHtml(g.host || '—').replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson');
     const searchText = [
@@ -2294,11 +2305,13 @@ class App {
     const meta = {
       clueStats,
       totalPlayers,
+      guessCountsComplete,
       winningClueNum,
       hostHtml,
       dateValue: this._archiveDateValue(g.date),
       searchText,
-      isStub: this._isStubGame(g)
+      isStub: this._isStubGame(g),
+      isPartial: this._isPartialGame(g)
     };
     this._gameMetaCache.set(g, meta);
     return meta;
@@ -2391,12 +2404,19 @@ class App {
 
   _isStubGame(g) {
     const clueCount = Array.isArray(g.clues) ? g.clues.length : (g.clueCount ?? -1);
-    return !!(g && g.note && clueCount === 0);
+    const cancelled = !!(g && !g.secretItem && g.note && clueCount === 0);
+    const incompletePartial = !!(g && g.dataStatus === 'partial' && clueCount < 5);
+    const legacyPartial = !!(g && g.secretItem && g.note && clueCount === 0);
+    return cancelled || incompletePartial || legacyPartial;
+  }
+
+  _isPartialGame(g) {
+    return !!(g && (g.dataStatus === 'partial' || (g.secretItem && g.note && !(g.clues || []).length)));
   }
 
   _isPlayableGame(g) {
     const clueCount = Array.isArray(g.clues) ? g.clues.length : (g.clueCount ?? -1);
-    return !!(g && clueCount > 0 && !this._isStubGame(g));
+    return !!(g && g.secretItem && clueCount === 5 && !this._isStubGame(g));
   }
 
   _getPlayableGames() {
@@ -2787,7 +2807,7 @@ class App {
     if (!card || !this.games.length) return;
     const latestDate = this._latestEpisodeDate();
     this._latestDate = latestDate;
-    const rounds = this.games.filter(g => g.date === latestDate && this._isPlayableGame(g));
+    const rounds = this.games.filter(g => g.date === latestDate && !!g.secretItem);
     const dateEl = document.getElementById('latest-episode-date');
     const itemsEl = document.getElementById('latest-episode-items');
     const medalsEl = document.getElementById('latest-episode-medals');
@@ -3388,10 +3408,11 @@ Rules:
     // Total players: sum of all clue guess counts for this secret item.
     const countEl = document.getElementById('game-player-count');
     if (countEl) {
-      const totalGuesses = this.currentGame.clues.reduce((sum, c) =>
-        sum + (parseInt(String(c.guesses || '0').replace(/,/g, ''), 10) || 0), 0
-      );
-      countEl.innerText = totalGuesses.toLocaleString();
+      const gameMeta = this._getGameMeta(this.currentGame);
+      countEl.innerText = gameMeta.guessCountsComplete
+        ? gameMeta.totalPlayers.toLocaleString()
+        : (gameMeta.totalPlayers > 0 ? `${gameMeta.totalPlayers.toLocaleString()} known` : '—');
+      countEl.title = gameMeta.guessCountsComplete ? '' : 'Some clue submission counts are not yet known';
     }
 
     const hint = document.getElementById('play-rules-hint');
@@ -3826,11 +3847,13 @@ Rules:
     const statsEl = document.getElementById('result-stats-table');
     // --- Cool stats for win/lose ---
     const clueNum = (this.currentClueIndex || 0) + 1;
-    const totalPlayers = g.clues.reduce((a, c) => a + (parseInt(String(c.guesses).replace(/[^0-9]/g, '')) || 0), 0);
-    const totalCorrect = g.clues.reduce((a, c) => a + (parseInt(String(c.correct).replace(/[^0-9]/g, '')) || 0), 0);
-    const clueStats = g.clues.map((c, i) => `<div class="flex justify-between text-xs"><span>Clue ${i+1}:</span><span>${esc(c.correct)} correct / ${esc(c.guesses)} guesses</span></div>`).join('');
+    const gameMeta = this._getGameMeta(g);
+    const totalPlayers = gameMeta.totalPlayers;
+    const totalCorrect = gameMeta.clueStats.reduce((a, c) => a + (c.correctKnown ? c.correct : 0), 0);
+    const correctCountsComplete = gameMeta.clueStats.length === 5 && gameMeta.clueStats.every(c => c.correctKnown);
+    const clueStats = gameMeta.clueStats.map((c, i) => `<div class="flex justify-between text-xs"><span>Clue ${i+1}:</span><span>${c.correctKnown ? `${c.correct.toLocaleString()} correct` : 'correct count unavailable'} / ${c.guessesKnown ? `${c.guesses.toLocaleString()} guesses` : 'guess count unavailable'}</span></div>`).join('');
     // Show user's guess, clue guessed, and popular wrong guesses if available
-    let extraStats = `<div class="mt-2 text-xs text-slate-400">Total guesses: <span class="text-white font-bold">${totalPlayers.toLocaleString()}</span> &nbsp;|&nbsp; Total correct: <span class="text-white font-bold">${totalCorrect.toLocaleString()}</span></div>`;
+    let extraStats = `<div class="mt-2 text-xs text-slate-400">Total guesses: <span class="text-white font-bold">${gameMeta.guessCountsComplete ? totalPlayers.toLocaleString() : (totalPlayers > 0 ? `${totalPlayers.toLocaleString()} known` : 'Unavailable')}</span> &nbsp;|&nbsp; Total correct: <span class="text-white font-bold">${correctCountsComplete ? totalCorrect.toLocaleString() : `${totalCorrect.toLocaleString()} known`}</span></div>`;
     extraStats += `<div class="mt-2 text-xs text-slate-400">Your guess: <span class="text-white font-bold">${this.lastGuess && this.lastGuess.trim() !== '' ? esc(this.lastGuess) : '(none)'}</span> &nbsp;|&nbsp; Clue guessed: <span class="text-white font-bold">${clueNum}</span></div>`;
     if (g.wrongGuesses) {
       extraStats += `<div class="mt-2 text-xs text-red-400">Popular wrong guesses: <span class="text-white font-bold">${esc(g.wrongGuesses)}</span></div>`;
@@ -3933,13 +3956,13 @@ Rules:
     }
 
     if (meta.isStub) {
-      // Episode aired and the answer is known, but it wasn't recorded — render a
-      // normal-looking row with blanks for whatever data is still missing, plus
-      // a small "!" flag that surfaces the not-recorded note (and submit link
-      // via the details modal) instead of turning the whole row red.
+      // Partial historical recovery: render every confirmed field normally and
+      // leave genuinely unknown fields blank without exposing archive notes.
       const partialByNumber = {};
-      (Array.isArray(g.partialClues) ? g.partialClues : []).forEach(c => {
-        if (c && c.clueNumber) partialByNumber[c.clueNumber] = c;
+      const availableClues = (Array.isArray(g.partialClues) && g.partialClues.length) ? g.partialClues : (g.clues || []);
+      availableClues.forEach(c => {
+        const number = c?.clueNumber || c?.number;
+        if (number) partialByNumber[number] = c;
       });
       const fmtCount = v => {
         const n = Number(v);
@@ -3991,21 +4014,29 @@ Rules:
       const potCell = g.pot
         ? `<td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${Number(g.pot).toLocaleString()}</td>`
         : `<td class="px-2 py-1 text-slate-700 font-mono whitespace-nowrap align-middle">—</td>`;
+      const knownGuesses = Object.values(partialByNumber).filter(c => this._isKnownCount(c.guesses));
+      const knownGuessTotal = knownGuesses.reduce((sum, c) => sum + this._parseCount(c.guesses), 0);
+      const playersCell = knownGuesses.length === 5
+        ? `<td class="px-2 py-1 align-middle"><span class="font-mono text-blue-300">${knownGuessTotal.toLocaleString()}</span></td>`
+        : `<td class="px-2 py-1 align-middle"><span class="font-mono ${knownGuessTotal ? 'text-blue-300' : 'text-slate-700'}" title="Some clue submission counts are not yet known">${knownGuessTotal ? `${knownGuessTotal.toLocaleString()} known` : '—'}</span></td>`;
+      const winningCell = g.goldClue || g.winningClue
+        ? `<td class="px-2 py-1 text-center font-bold text-slate-400 align-middle">${Number(g.goldClue || g.winningClue)}</td>`
+        : dashCell;
+      const hostCell = `<td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${hl(g.host || '—')}</td>`;
       const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
         <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
         <td class="px-1 py-1 font-semibold text-white align-middle leading-snug" style="max-width:200px;overflow-wrap:break-word;">
           <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>
-          <button type="button" class="db-unrecorded-flag" data-clue-tooltip="${esc(g.note || 'Not recorded')} — click for details and to submit what you have." tabindex="0" onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}">!</button>
         </td>
         ${potCell}
         ${stubClueCells}
-        ${dashCell}
-        ${dashCell}
+        ${winningCell}
+        ${playersCell}
         ${winnersCell}
         ${payoutsCell}
-        <td class="px-1 py-1 text-slate-700 align-middle">—</td>
+        ${hostCell}
         <td class="db-details-cell px-3 py-2 text-center align-middle">
-          <button onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="db-details-button" title="View what's known about ${esc(g.secretItem)}">
+          <button onclick="app.showDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="db-details-button" title="View ${esc(g.secretItem)} details">
             <span class="material-symbols-outlined">visibility</span>
             <span>View</span>
           </button>
@@ -4038,9 +4069,12 @@ Rules:
         if (explanation.endsWith('"')) explanation = explanation.slice(0, -1);
       }
       const clueTitle = explanation ? `Clue ${i + 1}: ${explanation}` : `Clue ${i + 1}: No explanation recorded.`;
+      const correctText = clueMeta.correctKnown ? clueMeta.correct.toLocaleString() : '—';
+      const guessesText = clueMeta.guessesKnown ? clueMeta.guesses.toLocaleString() : '—';
+      const pctHtml = clueMeta.pct == null ? '' : `<span class="text-slate-500"> (${clueMeta.pct}%)</span>`;
       return `<td class="px-4 py-3 align-middle" style="min-width:200px">
         <div data-clue-tooltip="${esc(clueTitle)}" tabindex="0" class="db-clue-tooltip font-medium text-slate-200 leading-snug">${hl(clueMeta.clue.text)}</div>
-        <div class="font-mono mt-0.5 leading-snug whitespace-nowrap" style="font-size:10px"><span class="text-green-500">${clueMeta.correct.toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${clueMeta.guesses.toLocaleString()}</span>${clueMeta.clue.guessesEstimated ? `<span title="Estimated: clue 1 guess count not captured; derived so total matches Round 2 (${clueMeta.guesses.toLocaleString()} = ${(27576).toLocaleString()} − known clues)" style="cursor:help" class="text-yellow-500">*</span>` : ''}<span class="text-slate-500"> (${clueMeta.pct}%)</span>${medal ? `&nbsp;<span style="font-size:15px">${medal}</span>` : ''}</div>
+        <div class="font-mono mt-0.5 leading-snug whitespace-nowrap" style="font-size:10px"><span class="${clueMeta.correctKnown ? 'text-green-500' : 'text-slate-700'}">${correctText}</span><span class="text-slate-600"> / </span><span class="${clueMeta.guessesKnown ? 'text-slate-400' : 'text-slate-700'}">${guessesText}</span>${clueMeta.clue.guessesEstimated ? `<span title="Estimated: clue 1 guess count not captured; derived so total matches Round 2 (${clueMeta.guesses.toLocaleString()} = ${(27576).toLocaleString()} − known clues)" style="cursor:help" class="text-yellow-500">*</span>` : ''}${pctHtml}${medal ? `&nbsp;<span style="font-size:15px">${medal}</span>` : ''}</div>
       </td>`;
     }).join('');
 
@@ -4105,7 +4139,7 @@ Rules:
       <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${g.pot.toLocaleString()}</td>
       ${clueCells}
       <td class="px-2 py-1 text-center font-bold text-slate-400 align-middle">${meta.winningClueNum || ''}</td>
-      <td class="px-2 py-1 align-middle"><span class="font-mono text-blue-300">${meta.totalPlayers.toLocaleString()}</span></td>
+      <td class="px-2 py-1 align-middle"><span class="font-mono ${meta.totalPlayers > 0 ? 'text-blue-300' : 'text-slate-700'}"${meta.guessCountsComplete ? '' : ' title="Some clue submission counts are not yet known"'}>${meta.guessCountsComplete ? meta.totalPlayers.toLocaleString() : (meta.totalPlayers > 0 ? `${meta.totalPlayers.toLocaleString()} known` : '—')}</span></td>
       <td class="px-2 py-1 align-middle">${winnersHtml}</td>
       <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
       <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${hostHl}</td>
@@ -4394,62 +4428,51 @@ Rules:
     const modalContentEl = document.getElementById('modal-content');
     modalContentEl.classList.toggle('answer-revealed', secretAlreadyRevealed || !hasSecret);
 
-    const partialClues = Array.isArray(g.partialClues) ? g.partialClues : [];
-    const cluesHtml = partialClues.length
-      ? `<div class="mb-5 rounded-lg border border-blue-400/20 bg-blue-950/15 px-4 py-3 sm:px-5 text-left">
-          <div class="text-xs font-black uppercase tracking-wider text-blue-300 mb-1">What we know so far</div>
-          ${partialClues.slice().sort((a, b) => (a.clueNumber || 99) - (b.clueNumber || 99)).map(c => `
-            <div class="border-b border-slate-800/80 py-3 last:border-0">
-              <div class="flex items-center gap-2 text-xs">
-                <span class="font-black uppercase tracking-wider text-blue-300">${c.clueNumber ? `Clue ${c.clueNumber}` : 'Clue #?'}</span>
-                ${(() => {
-                  if (c.correct != null && c.guesses != null) return `<span class="text-slate-500 ml-auto">${esc(String(c.correct))} right / ${esc(String(c.guesses))} guesses</span>`;
-                  if (c.correct != null) return `<span class="text-slate-500 ml-auto">${esc(String(c.correct))} right</span>`;
-                  if (c.guesses != null) return `<span class="text-slate-500 ml-auto">${esc(String(c.guesses))} guesses</span>`;
-                  return '';
-                })()}
-              </div>
-              <p class="mt-2 text-base font-bold leading-relaxed text-white">"${esc(c.text)}"</p>
-            </div>`).join('')}
-        </div>`
-      : '';
+    const partialClues = (Array.isArray(g.partialClues) && g.partialClues.length) ? g.partialClues : (g.clues || []);
+    const sortedClues = partialClues.slice().sort((a, b) => (a.clueNumber || a.number || 99) - (b.clueNumber || b.number || 99));
+    const clueRows = sortedClues.map(c => {
+      const number = Number(c.clueNumber || c.number || 0);
+      const medal = number === Number(g.goldClue) ? '🥇' : number === Number(g.silverClue) ? '🥈' : number === Number(g.bronzeClue) ? '🥉' : '';
+      const correctText = this._isKnownCount(c.correct) ? `${esc(c.correct)} right` : 'correct count unavailable';
+      const guessesText = this._isKnownCount(c.guesses) ? `${esc(c.guesses)} guesses` : 'guess count unavailable';
+      return `<div class="border-b border-slate-800/80 px-2 py-5 last:border-0">
+        <div class="flex flex-wrap items-center gap-2 text-xs">
+          <span class="font-black uppercase tracking-wider text-blue-300">${number ? `Clue ${number}` : 'Clue'}</span>
+          ${medal ? `<span title="Winning tier" style="font-size:15px">${medal}</span>` : ''}
+          <span class="ml-auto text-slate-500">${correctText} / ${guessesText}</span>
+        </div>
+        <p class="mt-3 text-lg font-bold leading-relaxed text-white">"${esc(c.text)}"</p>
+        <p class="db-explanation mt-3 text-sm leading-7 text-slate-400">${c.explanation ? esc(c.explanation) : 'No explanation recorded.'}</p>
+      </div>`;
+    }).join('');
 
-    const resultHtml = g.reportedResult
-      ? `<div class="mb-5 rounded-lg border border-green-400/20 bg-green-950/10 px-4 py-3 text-left">
-          <div class="text-xs font-black uppercase tracking-wider text-green-300">Reported result</div>
-          <div class="mt-1 text-sm text-green-100/80">${esc(g.reportedResult)}</div>
-        </div>`
-      : '';
-
-    const wrongHtml = g.wrongGuesses
-      ? `<div class="mb-5 rounded-lg border border-red-500/15 bg-red-950/10 px-4 py-3 text-left text-sm text-slate-400">
-          <div class="text-xs font-black uppercase tracking-wider text-red-300">Wrong guesses submitted so far</div>
-          <div class="mt-2">${esc(g.wrongGuesses)}</div>
-        </div>`
-      : '';
+    const tierText = (emoji, clue, winners, payout, color) => winners == null
+      ? `<span class="text-slate-600">${emoji} Not yet known</span>`
+      : `<span class="${color}">${emoji} Clue ${clue || '—'} · ${Number(winners).toLocaleString()} · $${Number(payout || 0).toFixed(2)}</span>`;
 
     modalContentEl.innerHTML = `
-      <div class="mb-6 text-center">
+      <div class="mb-8 text-center">
         <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
         <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${secretHeading}</h2>
-        <div class="mt-4 rounded-lg border border-red-500/30 bg-red-950/20 px-4 py-4 text-left">
-          <div class="flex items-center gap-2 mb-1">
-            <span class="material-symbols-outlined text-red-400" style="font-size:18px;line-height:1">warning</span>
-            <span class="text-xs font-black uppercase tracking-wider text-red-300">Episode not recorded</span>
-          </div>
-          <p class="text-sm leading-relaxed text-red-100/80">${esc(g.note || 'This episode was not recorded.')}</p>
+        <div class="mt-5 flex flex-wrap items-center justify-center text-sm" style="column-gap:2rem;row-gap:.75rem;line-height:1.7">
+          <span class="font-bold text-green-300">${g.pot ? `$${Number(g.pot).toLocaleString()}` : 'Pot unavailable'}</span>
+          <span class="font-bold text-blue-200">${esc(g.host || 'Host unknown')}</span>
+          <span class="font-bold text-slate-200">${g.totalWinners != null ? `${Number(g.totalWinners).toLocaleString()} winners` : 'Winners not yet known'}</span>
+          <span class="text-xs font-black uppercase tracking-wider text-slate-400">${esc(g.format || 'classic')}</span>
+        </div>
+        <div class="mt-5 flex flex-wrap justify-center text-xs font-bold" style="column-gap:2rem;row-gap:.65rem;line-height:1.75">
+          ${tierText('🥇', g.goldClue, g.goldWinners, g.goldPayout, 'text-yellow-300')}
+          ${tierText('🥈', g.silverClue, g.silverWinners, g.silverPayout, 'text-slate-200')}
+          ${tierText('🥉', g.bronzeClue, g.bronzeWinners, g.bronzePayout, 'text-orange-300')}
         </div>
       </div>
-      <div class="mb-5 rounded-lg border border-yellow-400/30 bg-yellow-900/15 px-4 py-4 text-left">
-        <div class="text-sm font-bold text-yellow-200">Did you play this one, or have a screenshot of the clues?</div>
-        <p class="mt-1 text-sm text-yellow-100/70">If you won, or have any screenshots or records of the clue wording, please submit them so we can complete this entry.</p>
-        ${g.noteUrl ? `<a href="${esc(g.noteUrl)}" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1.5 rounded-md bg-yellow-500/90 hover:bg-yellow-400 text-slate-900 font-bold text-sm px-3 py-2 transition">
-          <span class="material-symbols-outlined" style="font-size:16px;line-height:1">upload</span>Submit details
-        </a>` : ''}
+      <div class="mb-5 rounded-xl border border-white/5 bg-slate-900/35 px-4 py-3 sm:px-5">
+        ${clueRows || '<div class="py-5 text-sm text-slate-500">Clue wording is not available yet.</div>'}
       </div>
-      ${resultHtml}
-      ${cluesHtml}
-      ${wrongHtml}
+      <div class="rounded-lg border border-red-500/15 bg-red-950/10 px-4 py-3 text-sm text-slate-400">
+        <div class="text-xs font-black uppercase tracking-wider text-red-300">Common wrong guesses</div>
+        <div class="mt-2">${esc(g.wrongGuesses || 'N/A')}</div>
+      </div>
     `;
   }
 
@@ -4483,13 +4506,15 @@ Rules:
       const medalPill = medal
         ? `<span title="${medal.name} clue" class="text-[10px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded border ${medal.cls}">${medal.name}</span>`
         : '';
+      const correctText = this._isKnownCount(c.correct) ? `${esc(c.correct)} right` : 'correct count unavailable';
+      const guessesText = this._isKnownCount(c.guesses) ? `${esc(c.guesses)} guesses` : 'guess count unavailable';
       return `<div class="border-b border-slate-800/80 px-2 py-6 sm:px-3 last:border-0">
         <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
           <span class="inline-flex items-center gap-2">
             <span class="font-black uppercase tracking-wider text-blue-300">Clue ${n}</span>
             ${medalPill}
           </span>
-          <span class="text-slate-500 ml-auto">${esc(c.correct)} right / ${esc(c.guesses)} guesses</span>
+          <span class="text-slate-500 ml-auto">${correctText} / ${guessesText}</span>
         </div>
         <p class="mt-4 text-lg font-bold leading-relaxed text-white">"${esc(c.text)}"</p>
         <p class="db-explanation mt-3 text-sm leading-7 text-slate-400" title="Revealed when you reveal the answer">${e ? esc(e) : 'No explanation recorded.'}</p>
@@ -4548,7 +4573,8 @@ Rules:
     const sameDayGames = this.games.filter(x => x.date === g.date && !this._isStubGame(x));
     const roundNumber = Math.max(1, sameDayGames.findIndex(x => x.secretItem === g.secretItem) + 1);
     const transcriptTarget = `Round ${roundNumber}`;
-    const transcriptButton = !this._isStubGame(g)
+    const hasTranscript = this.transcripts.some(t => t.date === g.date && (t.sections || []).some(section => (section.lines || []).length));
+    const transcriptButton = !this._isStubGame(g) && hasTranscript
       ? `<button type="button" onclick="app.openTranscriptDate('${esc(g.date)}', '${esc(transcriptTarget)}')"
             class="inline-flex items-center justify-center gap-1.5 rounded-md border border-blue-400/20 bg-blue-950/20 px-2 py-1 text-xs font-bold text-blue-200 hover:border-blue-300/45 hover:bg-blue-900/35 transition">
             <span class="material-symbols-outlined" style="font-size:14px;line-height:1">article</span>
@@ -4782,7 +4808,7 @@ Rules:
         </div>
       </div>
       <div class="transcript-sections">
-        ${(transcript.sections || []).filter(s => (s.lines || []).length).map(section => {
+        ${lineCount === 0 ? `<div class="rounded-lg border border-slate-700/60 bg-slate-900/45 px-4 py-5 text-sm text-slate-400">A transcript is not available for this episode. The confirmed round details remain available from the Database links above.</div>` : (transcript.sections || []).filter(s => (s.lines || []).length).map(section => {
           const tag = section.tag || 'Transcript';
           const isResults = /Results/i.test(tag);
           const isRound = /Round/i.test(tag) && !isResults;
@@ -4849,6 +4875,7 @@ Rules:
     const totalPot = games.reduce((sum, g) => sum + g.pot, 0);
     const totalWinners = games.reduce((sum, g) => sum + g.totalWinners, 0);
     const soloWins = games.filter(g => g.totalWinners === 1).length;
+    const completeGuessGames = games.filter(g => this._getGameMeta(g).guessCountsComplete);
     const totalGuesses = games.reduce((sum, g) => sum + this._getGameMeta(g).totalPlayers, 0);
     const clueDist = {1:0,2:0,3:0,4:0,5:0};
     games.forEach(g => {
@@ -4865,7 +4892,10 @@ Rules:
       const d = this._archiveDateObject(g.date);
       return d ? d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : (g.date.split(',')[1]?.trim() || g.date);
     });
-    const guessesData = sortedByDate.map(g => this._getGameMeta(g).totalPlayers);
+    const guessesData = sortedByDate.map(g => {
+      const meta = this._getGameMeta(g);
+      return meta.guessCountsComplete ? meta.totalPlayers : null;
+    });
     const winnersData = sortedByDate.map(g => g.totalWinners);
     // Per-tier winner counts and per-winner payouts over time, v2 games only.
     // 0/empty tiers map to null so the line shows a gap (log scale + no winners).
@@ -4952,7 +4982,7 @@ Rules:
     const biggestPot = games.reduce((a, b) => b.pot > a.pot ? b : a);
     const lowestWonEntry = games.map(g => ({ g, r: tierMin(g) })).filter(x => x.r).reduce((a, b) => b.r.amt < a.r.amt ? b : a);
     const mostWinnersGame = games.reduce((a, b) => b.totalWinners > a.totalWinners ? b : a);
-    const mostGuessesGame = games.reduce((a, g) => this._getGameMeta(g).totalPlayers > a.t ? { t: this._getGameMeta(g).totalPlayers, g } : a, { t: 0, g: null });
+    const mostGuessesGame = completeGuessGames.reduce((a, g) => this._getGameMeta(g).totalPlayers > a.t ? { t: this._getGameMeta(g).totalPlayers, g } : a, { t: 0, g: null });
     const longestItem = games.reduce((a, b) => b.secretItem.length > a.secretItem.length ? b : a);
     const shortestItem = games.reduce((a, b) => b.secretItem.length < a.secretItem.length ? b : a);
     const soloWinPct = games.length ? Math.round((soloWins / games.length) * 100) : 0;
@@ -4967,7 +4997,7 @@ Rules:
     games.forEach(g => {
       const meta = this._getGameMeta(g);
       const gameCorrect = meta.clueStats.reduce((sum, clue) => sum + clue.correct, 0);
-      if (meta.totalPlayers > 0) {
+      if (meta.guessCountsComplete && meta.totalPlayers > 0) {
         const pct = gameCorrect / meta.totalPlayers;
         if (pct < hardestGamePct) {
           hardestGamePct = pct;
@@ -5089,7 +5119,7 @@ Rules:
         {label:'Total Paid Out', val:'$' + totalPot.toLocaleString(), color:'text-green-400', icon:'payments'},
         {label:'Total Winners', val: totalWinners.toLocaleString(), color:'text-yellow-400', icon:'emoji_events'},
         {label:'Solo Wins', val: soloWins.toLocaleString(), color:'text-red-400', icon:'person'},
-        {label:'Total Guesses', val: totalGuesses.toLocaleString(), color:'text-pink-400', icon:'casino'},
+        {label:'Known Guesses', val: totalGuesses.toLocaleString(), color:'text-pink-400', icon:'casino'},
         {label:'Daily Polls Tracked', val: this.dailyPolls.length.toLocaleString(), color:'text-orange-400', icon:'poll'}
       ],
       hostRows,

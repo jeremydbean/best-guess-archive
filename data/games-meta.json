@@ -3669,27 +3669,27 @@
       "date": "Friday, July 31, 2026",
       "secretItem": "PITBULL",
       "pot": 7500,
-      "host": "Corrine Foxx",
+      "host": "Corinne Foxx",
       "format": "v2",
       "totalWinners": 124,
-      "clueCount": 0,
+      "clueCount": 5,
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3,
-      "note": "Round 1 was not recorded."
+      "dataStatus": "partial"
     },
     {
       "date": "Friday, July 31, 2026",
       "secretItem": "PINEAPPLE",
       "pot": 7500,
-      "host": "Corrine Foxx",
+      "host": "Corinne Foxx",
       "format": "v2",
       "totalWinners": 3804,
-      "clueCount": 0,
+      "clueCount": 5,
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3,
-      "note": "Round 2 was not recorded."
+      "dataStatus": "partial"
     }
   ]
 }

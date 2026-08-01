@@ -35,8 +35,9 @@ Tasks:
    - Before Monday, May 11, 2026: both rounds are usually `format: "v2"` tiered gold/silver/bronze.
    - Monday, May 11 through Tuesday, May 26, 2026: hybrid format. Round 1 is `format: "v2"`. Round 2 is `format: "v1"` classic mode: set `winningClue` to the earliest clue with correct answers, `winnerCount` and `totalWinners` to that clue's correct count, and `winnerPayout` to the per-winner share of the full $7,500 pot. Set medal winner/payout fields to `0`, with `goldClue` equal to `winningClue` for compatibility and `silverClue`/`bronzeClue` set to `0`.
    - Starting Wednesday, May 27, 2026: both rounds are `format: "v2"` tiered gold/silver/bronze.
-10. Run `npm run audit` one final time and fix every error before committing.
-11. Commit directly on `main` and push to `origin/main`. Do not create a branch.
+10. If the episode aired but source material is incomplete, do not mark it cancelled. For each confirmed round, set `dataStatus: "partial"`, preserve known facts in normal structured fields, and store unknown numeric values as JSON `null` rather than zero. Until all five clue texts are confirmed, keep `clues: []` and use `partialClues` for verified fragments; after all five are known, promote them into the normal ordered `clues` array. Add a transcript placeholder with `dataStatus: "unavailable"`, confirmed host/items/round metadata, and the six canonical sections with empty line arrays. Never invent transcript dialogue or put sourcing requests, inference notes, or internal uncertainty into public `note`, `noteUrl`, `reportedResult`, or `adminNote` fields.
+11. Run `npm run audit` one final time and fix every error before committing.
+12. Commit directly on `main` and push to `origin/main`. Do not create a branch.
 
 After finishing, report:
 - commit hash

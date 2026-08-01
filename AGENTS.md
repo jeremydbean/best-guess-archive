@@ -124,9 +124,22 @@ git commit -m "Import [DATE]: [ROUND1_ANSWER] and [ROUND2_ANSWER]"
 git push -u origin main
 ```
 
+### Partial or Missing-Recording Episode
+
+A played episode with missing source material is **not** cancelled. Preserve every confirmed fact and allow the record to become more complete over time:
+
+- Set `dataStatus: "partial"` on each affected game.
+- Require a confirmed `secretItem`; use JSON `null` for unknown counts or payouts, never `0`, an empty string, a range guess, or explanatory prose.
+- Before all five clue texts are known, keep `clues: []` and store only verified fragments in `partialClues` using `clueNumber`, `text`, and any confirmed `correct`, `guesses`, or `explanation` fields.
+- Once all five clue texts are known, move them into the normal five-entry `clues` array in clue order. Keep `dataStatus: "partial"` until the remaining game facts are complete.
+- Put winner counts, payouts, medal clues, host, wrong guesses, and explanations in their normal structured fields as they become known.
+- Do not use public-facing `note`, `noteUrl`, `reportedResult`, or `adminNote` fields to discuss missing sources, requests for submissions, inference history, or agent uncertainty.
+- Add one transcript placeholder with `dataStatus: "unavailable"`, confirmed `host`, `secretItems`, and `rounds` metadata, plus the six canonical sections with empty `lines` arrays. Never invent dialogue.
+- Remove the partial/unavailable statuses only when the game data and transcript are genuinely complete.
+
 ### Cancelled Episode
 
-If the paste says `CANCELLED`, create one stub game:
+Use this state only when the broadcast truly did not air a game. If the paste says `CANCELLED`, create one stub game:
 ```json
 {
   "date": "...", "pot": 0, "format": "v2", "host": "...",

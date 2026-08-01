@@ -83621,9 +83621,42 @@
   },
   {
     "date": "Friday, July 31, 2026",
-    "host": "Corrine Foxx",
-    "secretItems": [],
-    "rounds": [],
+    "host": "Corinne Foxx",
+    "dataStatus": "unavailable",
+    "secretItems": [
+      "PITBULL",
+      "PINEAPPLE"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "PITBULL",
+        "host": "Corinne Foxx",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "WORLD TITLE HOLDER",
+          "HOLEY COW, WHO'S MAKING THAT NOISE",
+          "PROUD OF HIS ORIGINS, BUT HAS ELUSIVE ROOTS",
+          "OFTEN FEATURED PREDOMINANTLY AT THE CLUB",
+          "\"TIMBER\" IS A FAMOUS BOP BY THIS DOG-NAMED STAR OF LATIN HIP-HOP"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "PINEAPPLE",
+        "host": "Corinne Foxx",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "TOUGH TO GET INTO",
+          "TWO TREES, THREE P'S",
+          "SPIKED PUNCH INGREDIENT",
+          "HAVE YOUR FLIPPED CAKE AND EAT IT TOO",
+          "IN CHUNKS OR A RING, THIS YELLOW FRUIT IS A HAWAIIAN THING"
+        ]
+      }
+    ],
     "sections": [
       {
         "tag": "Intro",

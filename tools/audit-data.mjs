@@ -132,6 +132,7 @@ const regeneratedMeta = games.map(g => {
   if (g.silverClue) entry.silverClue = g.silverClue;
   if (g.bronzeClue) entry.bronzeClue = g.bronzeClue;
   if (g.note) entry.note = g.note;
+  if (g.dataStatus) entry.dataStatus = g.dataStatus;
   return entry;
 });
 
@@ -162,11 +163,26 @@ for (const match of html.matchAll(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/script
 }
 
 const playableByDate = new Map();
+const recordedRoundsByDate = new Map();
 const allDates = new Set();
 for (const [index, g] of games.entries()) {
   allDates.add(g.date);
   validateArchiveDate(g.date, { index, source: 'games.json', secretItem: g.secretItem });
-  const isStub = !!g.note || (!g.secretItem && (!g.clues || !g.clues.length));
+  const clueCount = Array.isArray(g.clues) ? g.clues.length : 0;
+  const isPartial = g.dataStatus === 'partial';
+  const isCancelled = !g.secretItem && clueCount === 0;
+  const isStub = isCancelled || (isPartial && clueCount < 5) || (!!g.note && clueCount === 0);
+  if (g.dataStatus !== undefined && g.dataStatus !== 'partial') {
+    error('data-status', 'Game dataStatus must be "partial" when present', { index, date: g.date, secretItem: g.secretItem, dataStatus: g.dataStatus });
+  }
+  if (isPartial && !String(g.secretItem || '').trim()) {
+    error('partial-game-secret-item', 'Partial games must identify the confirmed secret item', { index, date: g.date, secretItem: g.secretItem });
+  }
+  if (isPartial && clueCount !== 0 && clueCount !== 5) {
+    error('partial-game-clues', 'Partial games must use partialClues until all five clues can be promoted to the normal clues array', { index, date: g.date, secretItem: g.secretItem, clueCount });
+  }
+  if (!recordedRoundsByDate.has(g.date)) recordedRoundsByDate.set(g.date, []);
+  if (g.secretItem) recordedRoundsByDate.get(g.date).push(g);
   if (!playableByDate.has(g.date)) playableByDate.set(g.date, []);
   if (!isStub) playableByDate.get(g.date).push(g);
 
@@ -209,19 +225,26 @@ for (const [index, g] of games.entries()) {
     });
   }
   if (g.format === 'v2' && !isStub) {
-    const winnerSum = Number(g.goldWinners || 0) + Number(g.silverWinners || 0) + Number(g.bronzeWinners || 0);
-    if (winnerSum !== Number(g.totalWinners || 0)) {
+    const tierNames = ['gold', 'silver', 'bronze'];
+    const winnerCountsComplete = tierNames.every(tier => g[`${tier}Winners`] !== null && g[`${tier}Winners`] !== undefined);
+    const totalWinnersKnown = g.totalWinners !== null && g.totalWinners !== undefined;
+    tierNames.forEach(tier => validateCountValue(g[`${tier}Winners`], `${tier}Winners`, { index, date: g.date, secretItem: g.secretItem }));
+    validateCountValue(g.totalWinners, 'totalWinners', { index, date: g.date, secretItem: g.secretItem });
+    const winnerSum = tierNames.reduce((sum, tier) => sum + Number(g[`${tier}Winners`] || 0), 0);
+    if (winnerCountsComplete && totalWinnersKnown && winnerSum !== Number(g.totalWinners)) {
       error('v2-winner-total', 'v2 totalWinners does not equal medal winner sum', { index, date: g.date, secretItem: g.secretItem, winnerSum, totalWinners: g.totalWinners });
     }
-    if (Number(g.silverWinners || 0) > 0 && Number(g.goldWinners || 0) === 0) {
+    if (g.silverWinners != null && g.goldWinners != null && Number(g.silverWinners) > 0 && Number(g.goldWinners) === 0) {
       error('v2-medal-tier-order', 'v2 game cannot have silver winners without gold winners', { index, date: g.date, secretItem: g.secretItem });
     }
-    if (Number(g.bronzeWinners || 0) > 0 && Number(g.silverWinners || 0) === 0) {
+    if (g.bronzeWinners != null && g.silverWinners != null && Number(g.bronzeWinners) > 0 && Number(g.silverWinners) === 0) {
       error('v2-medal-tier-order', 'v2 game cannot have bronze winners when silver has no winners', { index, date: g.date, secretItem: g.secretItem });
     }
     const medalClues = [];
-    for (const tier of ['gold', 'silver', 'bronze']) {
-      const winners = Number(g[`${tier}Winners`] || 0);
+    for (const tier of tierNames) {
+      const winnersKnown = g[`${tier}Winners`] !== null && g[`${tier}Winners`] !== undefined;
+      if (!winnersKnown) continue;
+      const winners = Number(g[`${tier}Winners`]);
       const clue = Number(g[`${tier}Clue`] || 0);
       if (winners > 0) {
         if (clue < 1 || clue > 5) {
@@ -239,15 +262,15 @@ for (const [index, g] of games.entries()) {
     if (JSON.stringify(medalClues) !== JSON.stringify([...medalClues].sort((a, b) => a - b))) {
       error('v2-medal-clue-order', 'v2 medal clue numbers must be ordered earliest-to-latest: gold, silver, bronze', { index, date: g.date, secretItem: g.secretItem, medalClues });
     }
-    if (g.winnerPayout !== '$7,500.00') {
+    if ((!isPartial || g.winnerPayout != null) && g.winnerPayout !== '$7,500.00') {
       error('v2-winner-payout', 'v2 winnerPayout must remain the full round pot string "$7,500.00"', { index, date: g.date, secretItem: g.secretItem, winnerPayout: g.winnerPayout });
     }
     for (const field of ['goldPayout', 'silverPayout', 'bronzePayout']) {
       validatePayoutValue(g[field], field, { index, date: g.date, secretItem: g.secretItem });
     }
-    const expectedPayouts = expectedV2Payouts(g);
+    const expectedPayouts = winnerCountsComplete ? expectedV2Payouts(g) : null;
     for (const field of ['goldPayout', 'silverPayout', 'bronzePayout']) {
-      if (!moneyMatches(g[field], expectedPayouts[field])) {
+      if (expectedPayouts && (!isPartial || g[field] != null) && !moneyMatches(g[field], expectedPayouts[field])) {
         error('v2-payout-math', 'v2 payout does not match base pot plus no-winner redistribution math', { index, date: g.date, secretItem: g.secretItem, field, actual: g[field], expected: expectedPayouts[field] });
       }
     }
@@ -304,6 +327,9 @@ for (const [date, rounds] of playableByDate.entries()) {
 const transcriptDates = new Set();
 for (const [index, t] of transcripts.entries()) {
   validateArchiveDate(t.date, { index, source: 'transcripts.json' });
+  if (t.dataStatus !== undefined && t.dataStatus !== 'unavailable') {
+    error('transcript-data-status', 'Transcript dataStatus must be "unavailable" when present', { index, date: t.date, dataStatus: t.dataStatus });
+  }
   if (transcriptDates.has(t.date)) error('duplicate-transcript-date', 'Duplicate transcript date', { index, date: t.date });
   transcriptDates.add(t.date);
   const tags = (t.sections || []).map(section => section.tag);
@@ -321,8 +347,12 @@ for (const [index, t] of transcripts.entries()) {
       }
     }
   }
+  const transcriptLineCount = (t.sections || []).reduce((sum, section) => sum + (section.lines || []).length, 0);
+  if (t.dataStatus === 'unavailable' && transcriptLineCount > 0) {
+    error('unavailable-transcript-lines', 'An unavailable transcript must keep all canonical section line arrays empty', { index, date: t.date, transcriptLineCount });
+  }
 
-  const relatedGames = playableByDate.get(t.date) || [];
+  const relatedGames = recordedRoundsByDate.get(t.date) || [];
   const expectedItems = relatedGames.map(g => g.secretItem);
   const actualItems = t.secretItems || [];
   if (JSON.stringify(expectedItems.map(loose)) !== JSON.stringify(actualItems.map(loose))) {
@@ -342,18 +372,20 @@ for (const [index, t] of transcripts.entries()) {
     }
   });
 
-  const resultSections = (t.sections || []).filter(section => /Results/i.test(section.tag));
-  relatedGames.forEach((game, roundIndex) => {
-    const section = resultSections[roundIndex];
-    if (!section) return;
-    const resultText = (section.lines || []).map(line => line.text || '').join('\n');
-    for (let clueIndex = 0; clueIndex < 5; clueIndex += 1) {
-      const clueText = game.clues?.[clueIndex]?.text;
-      if (clueText && !loose(resultText).includes(loose(clueText))) {
-        error('result-missing-clue', 'Result section is missing expected clue text', { date: t.date, round: roundIndex + 1, clue: clueIndex + 1, secretItem: game.secretItem, clueText });
+  if (t.dataStatus !== 'unavailable') {
+    const resultSections = (t.sections || []).filter(section => /Results/i.test(section.tag));
+    relatedGames.forEach((game, roundIndex) => {
+      const section = resultSections[roundIndex];
+      if (!section) return;
+      const resultText = (section.lines || []).map(line => line.text || '').join('\n');
+      for (let clueIndex = 0; clueIndex < 5; clueIndex += 1) {
+        const clueText = game.clues?.[clueIndex]?.text;
+        if (clueText && !loose(resultText).includes(loose(clueText))) {
+          error('result-missing-clue', 'Result section is missing expected clue text', { date: t.date, round: roundIndex + 1, clue: clueIndex + 1, secretItem: game.secretItem, clueText });
+        }
       }
-    }
-  });
+    });
+  }
 }
 
 for (const date of allDates) {
