@@ -3956,8 +3956,11 @@ Rules:
         } else if (c.guesses != null) {
           countsHtml = `<span class="text-slate-400">${fmtCount(c.guesses)} guesses</span>`;
         }
+        const explanation = c.explanation || '';
+        const tooltipAttr = explanation ? ` data-clue-tooltip="${esc(explanation)}" tabindex="0"` : '';
+        const tooltipClass = explanation ? ' db-clue-tooltip' : '';
         return `<td class="px-4 py-3 align-middle" style="min-width:200px">
-          <div class="font-medium text-slate-200 leading-snug">${hl(c.text)}</div>
+          <div${tooltipAttr} class="font-medium text-slate-200 leading-snug${tooltipClass}">${hl(c.text)}</div>
           ${countsHtml ? `<div class="font-mono mt-0.5 leading-snug whitespace-nowrap" style="font-size:10px">${countsHtml}</div>` : ''}
         </td>`;
       }).join('');
