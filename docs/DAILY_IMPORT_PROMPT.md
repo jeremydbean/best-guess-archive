@@ -21,6 +21,7 @@ Tasks:
    - gold/silver/bronze clue numbers, winner counts, and payouts for v2 games
    - winning clue, winner count, and per-winner payout for v1 classic games
    - total winners
+   - round-level `totalPlayers` when shown in a screenshot or stated on air (keep distinct from per-clue total guesses)
    - winner names
    - common wrong guesses
    - clue explanations

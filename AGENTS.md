@@ -133,6 +133,7 @@ A played episode with missing source material is **not** cancelled. Preserve eve
 - Before all five clue texts are known, keep `clues: []` and store only verified fragments in `partialClues` using `clueNumber`, `text`, and any confirmed `correct`, `guesses`, or `explanation` fields.
 - Once all five clue texts are known, move them into the normal five-entry `clues` array in clue order. Keep `dataStatus: "partial"` until the remaining game facts are complete.
 - Put winner counts, payouts, medal clues, host, wrong guesses, and explanations in their normal structured fields as they become known.
+- If a screenshot shows the round-level player count in the upper corner, store it as numeric `totalPlayers`. This is distinct from per-clue `guesses`; never derive or overwrite one from the other when the explicit player count is available.
 - Do not use public-facing `note`, `noteUrl`, `reportedResult`, or `adminNote` fields to discuss missing sources, requests for submissions, inference history, or agent uncertainty.
 - Add one transcript placeholder with `dataStatus: "unavailable"`, confirmed `host`, `secretItems`, and `rounds` metadata, plus the six canonical sections with empty `lines` arrays. Never invent dialogue.
 - Remove the partial/unavailable statuses only when the game data and transcript are genuinely complete.

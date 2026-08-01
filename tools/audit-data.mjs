@@ -131,6 +131,7 @@ const regeneratedMeta = games.map(g => {
   if (g.goldClue) entry.goldClue = g.goldClue;
   if (g.silverClue) entry.silverClue = g.silverClue;
   if (g.bronzeClue) entry.bronzeClue = g.bronzeClue;
+  if (g.totalPlayers !== null && g.totalPlayers !== undefined) entry.totalPlayers = g.totalPlayers;
   if (g.note) entry.note = g.note;
   if (g.dataStatus) entry.dataStatus = g.dataStatus;
   return entry;
@@ -181,6 +182,7 @@ for (const [index, g] of games.entries()) {
   if (isPartial && clueCount !== 0 && clueCount !== 5) {
     error('partial-game-clues', 'Partial games must use partialClues until all five clues can be promoted to the normal clues array', { index, date: g.date, secretItem: g.secretItem, clueCount });
   }
+  validateCountValue(g.totalPlayers, 'totalPlayers', { index, date: g.date, secretItem: g.secretItem });
   if (!recordedRoundsByDate.has(g.date)) recordedRoundsByDate.set(g.date, []);
   if (g.secretItem) recordedRoundsByDate.get(g.date).push(g);
   if (!playableByDate.has(g.date)) playableByDate.set(g.date, []);

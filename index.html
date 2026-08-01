@@ -2287,8 +2287,10 @@ class App {
         pct
       };
     });
-    const totalPlayers = clueStats.reduce((sum, entry) => sum + (entry.guessesKnown ? entry.guesses : 0), 0);
+    const totalGuesses = clueStats.reduce((sum, entry) => sum + (entry.guessesKnown ? entry.guesses : 0), 0);
     const guessCountsComplete = clueStats.length === 5 && clueStats.every(entry => entry.guessesKnown);
+    const reportedPlayerCountKnown = this._isKnownCount(g.totalPlayers);
+    const totalPlayers = reportedPlayerCountKnown ? this._parseCount(g.totalPlayers) : totalGuesses;
     const winningClueNum = Number(g.winningClue || g.goldClue || 0);
     const hostHtml = this._escapeHtml(g.host || '—').replace('Hunter/Anthony Anderson', 'Hunter/<br>Anthony Anderson');
     const searchText = [
@@ -2305,6 +2307,8 @@ class App {
     const meta = {
       clueStats,
       totalPlayers,
+      totalGuesses,
+      reportedPlayerCountKnown,
       guessCountsComplete,
       winningClueNum,
       hostHtml,
@@ -3409,10 +3413,12 @@ Rules:
     const countEl = document.getElementById('game-player-count');
     if (countEl) {
       const gameMeta = this._getGameMeta(this.currentGame);
-      countEl.innerText = gameMeta.guessCountsComplete
+      countEl.innerText = gameMeta.reportedPlayerCountKnown || gameMeta.guessCountsComplete
         ? gameMeta.totalPlayers.toLocaleString()
         : (gameMeta.totalPlayers > 0 ? `${gameMeta.totalPlayers.toLocaleString()} known` : '—');
-      countEl.title = gameMeta.guessCountsComplete ? '' : 'Some clue submission counts are not yet known';
+      countEl.title = gameMeta.reportedPlayerCountKnown
+        ? 'Reported round player count'
+        : (gameMeta.guessCountsComplete ? '' : 'Some clue submission counts are not yet known');
     }
 
     const hint = document.getElementById('play-rules-hint');
@@ -3848,12 +3854,15 @@ Rules:
     // --- Cool stats for win/lose ---
     const clueNum = (this.currentClueIndex || 0) + 1;
     const gameMeta = this._getGameMeta(g);
-    const totalPlayers = gameMeta.totalPlayers;
+    const totalGuesses = gameMeta.totalGuesses;
     const totalCorrect = gameMeta.clueStats.reduce((a, c) => a + (c.correctKnown ? c.correct : 0), 0);
     const correctCountsComplete = gameMeta.clueStats.length === 5 && gameMeta.clueStats.every(c => c.correctKnown);
     const clueStats = gameMeta.clueStats.map((c, i) => `<div class="flex justify-between text-xs"><span>Clue ${i+1}:</span><span>${c.correctKnown ? `${c.correct.toLocaleString()} correct` : 'correct count unavailable'} / ${c.guessesKnown ? `${c.guesses.toLocaleString()} guesses` : 'guess count unavailable'}</span></div>`).join('');
     // Show user's guess, clue guessed, and popular wrong guesses if available
-    let extraStats = `<div class="mt-2 text-xs text-slate-400">Total guesses: <span class="text-white font-bold">${gameMeta.guessCountsComplete ? totalPlayers.toLocaleString() : (totalPlayers > 0 ? `${totalPlayers.toLocaleString()} known` : 'Unavailable')}</span> &nbsp;|&nbsp; Total correct: <span class="text-white font-bold">${correctCountsComplete ? totalCorrect.toLocaleString() : `${totalCorrect.toLocaleString()} known`}</span></div>`;
+    let extraStats = `<div class="mt-2 text-xs text-slate-400">Total guesses: <span class="text-white font-bold">${gameMeta.guessCountsComplete ? totalGuesses.toLocaleString() : (totalGuesses > 0 ? `${totalGuesses.toLocaleString()} known` : 'Unavailable')}</span> &nbsp;|&nbsp; Total correct: <span class="text-white font-bold">${correctCountsComplete ? totalCorrect.toLocaleString() : `${totalCorrect.toLocaleString()} known`}</span></div>`;
+    if (gameMeta.reportedPlayerCountKnown) {
+      extraStats += `<div class="mt-2 text-xs text-slate-400">Round players: <span class="text-white font-bold">${gameMeta.totalPlayers.toLocaleString()}</span></div>`;
+    }
     extraStats += `<div class="mt-2 text-xs text-slate-400">Your guess: <span class="text-white font-bold">${this.lastGuess && this.lastGuess.trim() !== '' ? esc(this.lastGuess) : '(none)'}</span> &nbsp;|&nbsp; Clue guessed: <span class="text-white font-bold">${clueNum}</span></div>`;
     if (g.wrongGuesses) {
       extraStats += `<div class="mt-2 text-xs text-red-400">Popular wrong guesses: <span class="text-white font-bold">${esc(g.wrongGuesses)}</span></div>`;
@@ -4016,9 +4025,12 @@ Rules:
         : `<td class="px-2 py-1 text-slate-700 font-mono whitespace-nowrap align-middle">—</td>`;
       const knownGuesses = Object.values(partialByNumber).filter(c => this._isKnownCount(c.guesses));
       const knownGuessTotal = knownGuesses.reduce((sum, c) => sum + this._parseCount(c.guesses), 0);
-      const playersCell = knownGuesses.length === 5
-        ? `<td class="px-2 py-1 align-middle"><span class="font-mono text-blue-300">${knownGuessTotal.toLocaleString()}</span></td>`
-        : `<td class="px-2 py-1 align-middle"><span class="font-mono ${knownGuessTotal ? 'text-blue-300' : 'text-slate-700'}" title="Some clue submission counts are not yet known">${knownGuessTotal ? `${knownGuessTotal.toLocaleString()} known` : '—'}</span></td>`;
+      const reportedPlayerCount = this._isKnownCount(g.totalPlayers) ? this._parseCount(g.totalPlayers) : null;
+      const playersCell = reportedPlayerCount != null
+        ? `<td class="px-2 py-1 align-middle"><span class="font-mono text-blue-300" title="Reported round player count">${reportedPlayerCount.toLocaleString()}</span></td>`
+        : (knownGuesses.length === 5
+          ? `<td class="px-2 py-1 align-middle"><span class="font-mono text-blue-300">${knownGuessTotal.toLocaleString()}</span></td>`
+          : `<td class="px-2 py-1 align-middle"><span class="font-mono ${knownGuessTotal ? 'text-blue-300' : 'text-slate-700'}" title="Some clue submission counts are not yet known">${knownGuessTotal ? `${knownGuessTotal.toLocaleString()} known` : '—'}</span></td>`);
       const winningCell = g.goldClue || g.winningClue
         ? `<td class="px-2 py-1 text-center font-bold text-slate-400 align-middle">${Number(g.goldClue || g.winningClue)}</td>`
         : dashCell;
@@ -4139,7 +4151,7 @@ Rules:
       <td class="px-2 py-1 text-green-400 font-mono whitespace-nowrap align-middle">$${g.pot.toLocaleString()}</td>
       ${clueCells}
       <td class="px-2 py-1 text-center font-bold text-slate-400 align-middle">${meta.winningClueNum || ''}</td>
-      <td class="px-2 py-1 align-middle"><span class="font-mono ${meta.totalPlayers > 0 ? 'text-blue-300' : 'text-slate-700'}"${meta.guessCountsComplete ? '' : ' title="Some clue submission counts are not yet known"'}>${meta.guessCountsComplete ? meta.totalPlayers.toLocaleString() : (meta.totalPlayers > 0 ? `${meta.totalPlayers.toLocaleString()} known` : '—')}</span></td>
+      <td class="px-2 py-1 align-middle"><span class="font-mono ${meta.totalPlayers > 0 ? 'text-blue-300' : 'text-slate-700'}"${meta.reportedPlayerCountKnown ? ' title="Reported round player count"' : (meta.guessCountsComplete ? '' : ' title="Some clue submission counts are not yet known"')}>${meta.reportedPlayerCountKnown || meta.guessCountsComplete ? meta.totalPlayers.toLocaleString() : (meta.totalPlayers > 0 ? `${meta.totalPlayers.toLocaleString()} known` : '—')}</span></td>
       <td class="px-2 py-1 align-middle">${winnersHtml}</td>
       <td class="px-2 py-1 align-middle">${payoutsHtml}</td>
       <td class="px-1 py-1 text-slate-400 align-middle" style="max-width:90px;overflow:hidden;text-overflow:ellipsis;">${hostHl}</td>
@@ -4457,6 +4469,7 @@ Rules:
         <div class="mt-5 flex flex-wrap items-center justify-center text-sm" style="column-gap:2rem;row-gap:.75rem;line-height:1.7">
           <span class="font-bold text-green-300">${g.pot ? `$${Number(g.pot).toLocaleString()}` : 'Pot unavailable'}</span>
           <span class="font-bold text-blue-200">${esc(g.host || 'Host unknown')}</span>
+          ${this._isKnownCount(g.totalPlayers) ? `<span class="font-bold text-cyan-200">${this._parseCount(g.totalPlayers).toLocaleString()} players</span>` : ''}
           <span class="font-bold text-slate-200">${g.totalWinners != null ? `${Number(g.totalWinners).toLocaleString()} winners` : 'Winners not yet known'}</span>
           <span class="text-xs font-black uppercase tracking-wider text-slate-400">${esc(g.format || 'classic')}</span>
         </div>
@@ -4601,6 +4614,7 @@ Rules:
         <div class="mt-5 flex flex-wrap items-center justify-center text-sm" style="column-gap:2rem;row-gap:.75rem;line-height:1.7">
           <span class="font-bold text-green-300">$${g.pot.toLocaleString()}</span>
           <span class="font-bold text-blue-200">${esc(g.host)}</span>
+          ${this._isKnownCount(g.totalPlayers) ? `<span class="font-bold text-cyan-200">${this._parseCount(g.totalPlayers).toLocaleString()} players</span>` : ''}
           <span class="font-bold text-slate-200">${Number(g.totalWinners || 0).toLocaleString()} winners</span>
           <span class="text-xs font-black uppercase tracking-wider text-slate-400">${esc(g.format || 'classic')}</span>
         </div>
@@ -4876,7 +4890,7 @@ Rules:
     const totalWinners = games.reduce((sum, g) => sum + g.totalWinners, 0);
     const soloWins = games.filter(g => g.totalWinners === 1).length;
     const completeGuessGames = games.filter(g => this._getGameMeta(g).guessCountsComplete);
-    const totalGuesses = games.reduce((sum, g) => sum + this._getGameMeta(g).totalPlayers, 0);
+    const totalGuesses = games.reduce((sum, g) => sum + this._getGameMeta(g).totalGuesses, 0);
     const clueDist = {1:0,2:0,3:0,4:0,5:0};
     games.forEach(g => {
       const wc = Number(g.winningClue || g.goldClue);
@@ -4894,7 +4908,7 @@ Rules:
     });
     const guessesData = sortedByDate.map(g => {
       const meta = this._getGameMeta(g);
-      return meta.guessCountsComplete ? meta.totalPlayers : null;
+      return meta.guessCountsComplete ? meta.totalGuesses : null;
     });
     const winnersData = sortedByDate.map(g => g.totalWinners);
     // Per-tier winner counts and per-winner payouts over time, v2 games only.
@@ -4982,7 +4996,7 @@ Rules:
     const biggestPot = games.reduce((a, b) => b.pot > a.pot ? b : a);
     const lowestWonEntry = games.map(g => ({ g, r: tierMin(g) })).filter(x => x.r).reduce((a, b) => b.r.amt < a.r.amt ? b : a);
     const mostWinnersGame = games.reduce((a, b) => b.totalWinners > a.totalWinners ? b : a);
-    const mostGuessesGame = completeGuessGames.reduce((a, g) => this._getGameMeta(g).totalPlayers > a.t ? { t: this._getGameMeta(g).totalPlayers, g } : a, { t: 0, g: null });
+    const mostGuessesGame = completeGuessGames.reduce((a, g) => this._getGameMeta(g).totalGuesses > a.t ? { t: this._getGameMeta(g).totalGuesses, g } : a, { t: 0, g: null });
     const longestItem = games.reduce((a, b) => b.secretItem.length > a.secretItem.length ? b : a);
     const shortestItem = games.reduce((a, b) => b.secretItem.length < a.secretItem.length ? b : a);
     const soloWinPct = games.length ? Math.round((soloWins / games.length) * 100) : 0;
@@ -4997,11 +5011,11 @@ Rules:
     games.forEach(g => {
       const meta = this._getGameMeta(g);
       const gameCorrect = meta.clueStats.reduce((sum, clue) => sum + clue.correct, 0);
-      if (meta.guessCountsComplete && meta.totalPlayers > 0) {
-        const pct = gameCorrect / meta.totalPlayers;
+      if (meta.guessCountsComplete && meta.totalGuesses > 0) {
+        const pct = gameCorrect / meta.totalGuesses;
         if (pct < hardestGamePct) {
           hardestGamePct = pct;
-          hardestGame = { game: g, pct, totalCorrect: gameCorrect, totalGuesses: meta.totalPlayers };
+          hardestGame = { game: g, pct, totalCorrect: gameCorrect, totalGuesses: meta.totalGuesses };
         }
       }
       meta.clueStats.forEach(clue => {
