@@ -2,6 +2,10 @@
 
 Last updated: 2026-07-31 (session end)
 
+## Most Recent Changes (2026-07-31, continued)
+
+- **July 31, 2026 episode added as an unrecorded stub — PITBULL (R1) and PINEAPPLE (R2)**: User confirmed the two secret items but doesn't have the recording yet (no clues, winner counts, or transcript). Added two stub entries to `data/games-2026.json` (now 303 games) using the same schema as the existing "Game was cancelled" stub (April 9, 2026): `note` field set (making them stubs per `tools/audit-data.mjs`'s `isStub` check), empty `clues`/`host`/winner fields. Added a matching placeholder transcript entry to `data/transcripts.json` (now 170) with empty `secretItems`/`rounds` and all six sections present but empty (mirrors the April 9 stub's transcript shape), since `missing-transcript` requires every game date to have a transcript entry regardless of stub status. Verified via headless Chromium: both stub games load with the expected "episode not recorded" note and no console errors. `npm run audit` passes 0/0. Winner names, transcript, and per-clue data to be filled in once the recording is available.
+
 ## Most Recent Changes (2026-07-31)
 
 - **Daily puzzle added — Friday, July 31, 2026: GUITAR**: Appended to `data/daily-puzzles.json` (now 70 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #2, "GETS A LOT OF AIR PLAY"); explanations reused from the screenshot's own text, converted to sentence case to match file convention. Clues: USUALLY STARTS WITH TWISTS AND TURNS / GETS A LOT OF AIR PLAY / CORNERSTONE OF A ROCK FORMATION / SOME STRINGS ATTACHED, USUALLY HALF A DOZEN IN FACT / INSTRUMENT TO SHRED ON OR STRUM, WITH OR WITHOUT AN ELECTRIC HUM. `npm run audit` passes.
