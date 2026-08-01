@@ -2,6 +2,10 @@
 
 Last updated: 2026-07-31 (session end)
 
+## Most Recent Changes (2026-07-31, final 2)
+
+- **PINEAPPLE `partialClues` correct-counts synced to the already-confirmed tier winner counts**: Set Clue 1's `correct: 18` and Clue 2's `correct: 727`, matching `goldWinners`/`silverWinners`. `guesses` stays `null` for both (total submission counts still unknown, distinct from correct counts). Clue 3's `correct` stays `null` — bronze winners is still the unresolved 46-candidate ambiguity described above. `npm run audit` passes 0/0.
+
 ## Most Recent Changes (2026-07-31, final)
 
 - **PINEAPPLE bronze winner count still unresolved — confirmed math, not a data gap**: User asked whether the exact bronze winner count could be figured out from the $0.65 payout alone. Checked: `floorCents(2000/n) = $0.65` for 46 different integer winner counts (3,031–3,076), so this single payout figure can never uniquely resolve it the way $166.66 uniquely resolved gold to 18 winners — need either Clue 3's own correct/guesses stat or the round's total winner count to pin it down. Updated PINEAPPLE's `reportedResult` to state this plainly. Also updated the wording to reflect that gold-on-Clue-1 is now directly confirmed by the user, not just inferred by elimination. `npm run audit` passes 0/0.
