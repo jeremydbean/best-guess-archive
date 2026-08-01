@@ -4077,7 +4077,7 @@ Rules:
     const meta = this._getGameMeta(g);
     const incompleteFields = meta.isPartial ? this._getIncompleteGameFields(g) : [];
     const incompleteBadge = meta.isPartial
-      ? `<div class="mt-1"><span class="inline-flex items-center gap-1 rounded border border-amber-400/30 bg-amber-950/30 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wide text-amber-300" title="Still missing: ${esc(this._formatNaturalList(incompleteFields))}"><span class="material-symbols-outlined" style="font-size:11px;line-height:1">inventory_2</span>Incomplete</span></div>`
+      ? `<button type="button" onclick="event.stopPropagation();app.openIncompleteDetailsFromButton(this)" data-date="${esc(g.date)}" data-item="${esc(g.secretItem)}" class="ml-1.5 inline-flex shrink-0 items-center justify-center rounded-full bg-red-500 font-black text-white align-middle hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-red-300/70 transition" style="width:1rem;height:1rem;font-size:10px;line-height:1" title="Incomplete archive record. Still missing: ${esc(this._formatNaturalList(incompleteFields))}" aria-label="Open incomplete archive details for ${esc(g.secretItem)}">!</button>`
       : '';
 
     if (meta.isStub && !g.secretItem) {
@@ -4169,8 +4169,10 @@ Rules:
       const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
         <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
         <td class="px-1 py-1 font-semibold text-white align-middle leading-snug" style="max-width:200px;overflow-wrap:break-word;">
-          <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>
-          ${incompleteBadge}
+          <span class="inline-flex items-center whitespace-nowrap">
+            <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>
+            ${incompleteBadge}
+          </span>
         </td>
         ${potCell}
         ${stubClueCells}
@@ -4279,8 +4281,10 @@ Rules:
     const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
       <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
       <td class="px-1 py-1 font-semibold text-white align-middle leading-snug" style="max-width:200px;overflow-wrap:break-word;">
-        <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>
-        ${incompleteBadge}
+        <span class="inline-flex items-center whitespace-nowrap">
+          <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>
+          ${incompleteBadge}
+        </span>
         ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${hl(g.note)}</span></div>` : ''}
       </td>
       <td class="px-2 py-1 ${this._isKnownCount(g.pot) ? 'text-green-400' : 'text-slate-700'} font-mono whitespace-nowrap align-middle">${this._isKnownCount(g.pot) ? `$${this._parseCount(g.pot).toLocaleString()}` : '—'}</td>
@@ -4556,6 +4560,10 @@ Rules:
     this.showDetails(button?.dataset?.date || '', button?.dataset?.item || '');
   }
 
+  openIncompleteDetailsFromButton(button) {
+    this.showDetails(button?.dataset?.date || '', button?.dataset?.item || '', false, true);
+  }
+
   openDatabaseDetailsFromButton(button) {
     const date = button?.dataset?.date || '';
     const item = button?.dataset?.item || '';
@@ -4565,7 +4573,7 @@ Rules:
       .catch(err => this._showDataLoadError(err));
   }
 
-  _renderStubDetails(g, esc) {
+  _renderStubDetails(g, esc, focusIncomplete = false) {
     const hasSecret = !!g.secretItem;
     const secretKey = g.date + '::' + g.secretItem;
     const secretAlreadyRevealed = this._dbRevealAll || this._revealedSecrets.has(secretKey);
@@ -4615,7 +4623,7 @@ Rules:
           ${tierText('🥉', g.bronzeClue, g.bronzeWinners, g.bronzePayout, 'text-orange-300')}
         </div>
       </div>
-      <div class="mb-5">${incompleteNotice}</div>
+      <div id="modal-incomplete-section" class="mb-5${focusIncomplete ? ' rounded-lg ring-2 ring-red-400/70 shadow-lg shadow-red-950/40' : ''}">${incompleteNotice}</div>
       <div class="mb-5 rounded-xl border border-white/5 bg-slate-900/35 px-4 py-3 sm:px-5">
         ${clueRows || '<div class="py-5 text-sm text-slate-500">Clue wording is not available yet.</div>'}
       </div>
@@ -4626,14 +4634,17 @@ Rules:
     `;
   }
 
-  showDetails(date, item, focusBonus = false) {
+  showDetails(date, item, focusBonus = false, focusIncomplete = false) {
     const g = this.games.find(x => x.date === date && x.secretItem === item);
     if (!g) return;
     document.getElementById('modal-backdrop').classList.remove('hidden');
     const esc = (v) => this._escapeHtml(v);
 
     if (this._isStubGame(g)) {
-      this._renderStubDetails(g, esc);
+      this._renderStubDetails(g, esc, focusIncomplete);
+      if (focusIncomplete) {
+        setTimeout(() => document.getElementById('modal-incomplete-section')?.scrollIntoView({ block: 'center', behavior: 'smooth' }), 0);
+      }
       return;
     }
 
@@ -4800,7 +4811,7 @@ Rules:
           </div>
         </details>` : ''}
       </div>
-      ${incompleteNotice ? `<div class="mb-5">${incompleteNotice}</div>` : ''}
+      ${incompleteNotice ? `<div id="modal-incomplete-section" class="mb-5${focusIncomplete ? ' rounded-lg ring-2 ring-red-400/70 shadow-lg shadow-red-950/40' : ''}">${incompleteNotice}</div>` : ''}
       <div class="mb-5 rounded-xl border border-white/5 bg-slate-900/35 px-4 py-3 sm:px-5">${cluesHtml}</div>
       ${transcriptButton ? `<div class="mb-4 flex justify-center">${transcriptButton}</div>` : ''}
       <div class="rounded-lg border border-red-500/15 bg-red-950/10 px-4 py-3 text-sm text-slate-400">
@@ -4809,6 +4820,9 @@ Rules:
       </div>`;
     if (focusBonus && bonus) {
       setTimeout(() => document.getElementById('modal-bonus-section')?.scrollIntoView({ block: 'center', behavior: 'smooth' }), 0);
+    }
+    if (focusIncomplete && incompleteNotice) {
+      setTimeout(() => document.getElementById('modal-incomplete-section')?.scrollIntoView({ block: 'center', behavior: 'smooth' }), 0);
     }
   }
 
