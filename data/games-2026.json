@@ -16834,7 +16834,7 @@
     "date": "Friday, July 31, 2026",
     "pot": 0,
     "format": "v2",
-    "host": "",
+    "host": "Corrine Foxx",
     "secretItem": "PITBULL",
     "clues": [],
     "goldClue": 0,
@@ -16852,13 +16852,15 @@
     "wrongGuesses": "",
     "winningClue": 0,
     "winnerCount": 0,
-    "note": "This episode was not recorded yet. The secret item is known, but clues, winner counts, and the transcript are still pending."
+    "note": "Round 1 was not recorded.",
+    "noteUrl": "https://forms.gle/zzTwMu8wpZpC5zR58",
+    "partialClues": []
   },
   {
     "date": "Friday, July 31, 2026",
     "pot": 0,
     "format": "v2",
-    "host": "",
+    "host": "Corrine Foxx",
     "secretItem": "PINEAPPLE",
     "clues": [],
     "goldClue": 0,
@@ -16876,6 +16878,14 @@
     "wrongGuesses": "",
     "winningClue": 0,
     "winnerCount": 0,
-    "note": "This episode was not recorded yet. The secret item is known, but clues, winner counts, and the transcript are still pending."
+    "note": "Round 2 was not recorded.",
+    "noteUrl": "https://forms.gle/zzTwMu8wpZpC5zR58",
+    "partialClues": [
+      { "clueNumber": 1, "text": "TOUGH TO GET INTO", "correct": null, "guesses": null },
+      { "clueNumber": 2, "text": "TWO TREES, THREE P'S", "correct": null, "guesses": null },
+      { "clueNumber": 3, "text": "SPIKED PUNCH INGREDIENT", "correct": null, "guesses": null },
+      { "clueNumber": 4, "text": "HAVE YOUR FLIPPED CAKE AND EAT IT TOO", "correct": null, "guesses": null }
+    ],
+    "reportedResult": "One viewer's own answer landed on Clue 3 (\"SPIKED PUNCH INGREDIENT\") in the bronze tier, paying $0.65 — confirmed via their own \"ANSWERED ON CLUE #3\" result screen. Another viewer's own answer landed in the gold tier, paying $166.66 — the $3,000 gold pool split $166.66/winner only divides evenly at 18 winners, so gold winners is inferred as 18, likely on Clue 1 (\"TOUGH TO GET INTO\") if tiers follow the standard clue 1/2/3 gold/silver/bronze order. Clue 5 text not yet seen."
   }
 ]
