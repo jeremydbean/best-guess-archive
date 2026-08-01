@@ -2,6 +2,10 @@
 
 Last updated: 2026-07-31 (session end)
 
+## Most Recent Changes (2026-07-31, final 5)
+
+- **Added wrong guesses for both PITBULL and PINEAPPLE from the end-of-episode "Most Submitted Wrong Guesses" screen**: PITBULL (Puzzle 2): `TIGER WOODS, DJ, ATLAS, GROOT, SNOOP DOG` — all make sense as wrong guesses for Clue 1 ("WORLD TITLE HOLDER" → Tiger Woods, Atlas holding the world) and Clue 5's dog-named-star hint (Snoop Dog), confirming this puzzle really is Puzzle 2/PITBULL rather than a different day. PINEAPPLE (Puzzle 1): `PINEAPPLE UPSIDE DOWN CAKE, HAMMOCK, RUM, PEPPERMINT, SAFE` — the screenshot's own "18 players guessed the correct answer on the first clue" stat matches PINEAPPLE's already-confirmed gold count exactly, confirming Puzzle 1 = PINEAPPLE. `npm run audit` passes 0/0.
+
 ## Most Recent Changes (2026-07-31, final 4)
 
 - **Fixed stub clue winner counts not displaying when only `correct` (not `guesses`) is known**: User noticed PINEAPPLE's Clue 1/2 winner counts (18, 727) weren't showing on the Database row despite being set. Root cause: both the Database row's `stubClueCells` and the details modal's "What we know so far" block in `index.html` only rendered the count when *both* `correct` and `guesses` were non-null — with `guesses` still unknown for those clues, nothing showed at all. Changed both to render whichever of the two is available: "correct" alone shows "N correct"/"N right", "guesses" alone shows "N guesses", both together keep the original "N / N" format. Verified via headless Chromium: Database row now shows "18 correct" and "727 correct" under Clues 1/2, and the modal shows "18 right"/"727 right" — no console errors. `npm run audit` passes 0/0 (this was an `index.html` display fix, not a data change).
