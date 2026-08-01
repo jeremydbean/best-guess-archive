@@ -16829,5 +16829,53 @@
         "explanation": "A haunted house is a spooky dwelling place that hosts eerie spirits and scary ghosts."
       }
     ]
+  },
+  {
+    "date": "Friday, July 31, 2026",
+    "pot": 0,
+    "format": "v2",
+    "host": "",
+    "secretItem": "PITBULL",
+    "clues": [],
+    "goldClue": 0,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 0,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "",
+    "winnerNames": "",
+    "wrongGuesses": "",
+    "winningClue": 0,
+    "winnerCount": 0,
+    "note": "This episode was not recorded yet. The secret item is known, but clues, winner counts, and the transcript are still pending."
+  },
+  {
+    "date": "Friday, July 31, 2026",
+    "pot": 0,
+    "format": "v2",
+    "host": "",
+    "secretItem": "PINEAPPLE",
+    "clues": [],
+    "goldClue": 0,
+    "silverClue": 0,
+    "bronzeClue": 0,
+    "goldWinners": 0,
+    "silverWinners": 0,
+    "bronzeWinners": 0,
+    "totalWinners": 0,
+    "goldPayout": 0,
+    "silverPayout": 0,
+    "bronzePayout": 0,
+    "winnerPayout": "",
+    "winnerNames": "",
+    "wrongGuesses": "",
+    "winningClue": 0,
+    "winnerCount": 0,
+    "note": "This episode was not recorded yet. The secret item is known, but clues, winner counts, and the transcript are still pending."
   }
 ]
