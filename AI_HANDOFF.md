@@ -1,6 +1,13 @@
 # AI Handoff
 
-Last updated: 2026-08-01 (partial-episode standardization)
+Last updated: 2026-08-01 (Codex partial-episode changes reviewed)
+
+## Most Recent Changes (2026-08-01, Codex partial-episode changes reviewed)
+
+- **Reviewed the 6 commits made directly on `main` while this agent was out of usage** (`67ee8d5`, `efd960c`, `faeca76`, `a1b1e11`, `1e39de4`, `32fb4d6`, committed as "Jeremy Bean"). They formalize a `dataStatus: "partial"`/`"unavailable"` schema (documented in `AGENTS.md` and both `docs/DAILY_IMPORT*.md`), rewrite `tools/audit-data.mjs` to validate it, and rework `index.html` to: show the host, pot, and player count on partial games instead of leaving them blank; show a public "Incomplete archive record" notice (with an exact, auto-computed list of still-missing fields, e.g. "clue submission totals for Clue 1, Clue 2..." — no provenance/agent-note text) in Details and a small clickable **!** badge in Database; fix the Home page "Latest Episode" card to recognize PITBULL/PINEAPPLE as played rounds (it now reads round/host/winner totals from any game with a `secretItem`, instead of requiring the old stub-free "playable" check) so July 31 no longer shows "No game played / Cancelled episode."
+- **Verified all of the above in headless Chromium** against the current data: Home card now shows "PITBULL / PINEAPPLE" · "Corinne Foxx · 2 rounds · 3,928 winners"; Details modal for both games shows host, pot, 19,681 players, all tier medals, clue explanations, and the correct "Still missing" list; `npm run audit` passes 0 errors / 0 warnings.
+- **Fixed one remaining inconsistency Codex's changes didn't touch**: PITBULL Clue 4 text was spelled `"OFTEN FEATURED PREDOMINENTLY AT THE CLUB"` in `data/games-2026.json` but `"...PREDOMINANTLY..."` (correct spelling) in `data/transcripts.json`. Corrected `games-2026.json` to match the correct spelling.
+- No other gaps found — Codex's changes already cover everything from the standing user requests (host display, total players, Home widget bug, medal indication without embedded emoji, standardized partial-episode format).
 
 ## Most Recent Changes (2026-08-01, partial-episode standardization)
 
