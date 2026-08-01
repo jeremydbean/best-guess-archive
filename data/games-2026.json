@@ -16888,8 +16888,8 @@
     "note": "Round 2 was not recorded.",
     "noteUrl": "https://forms.gle/zzTwMu8wpZpC5zR58",
     "partialClues": [
-      { "clueNumber": 1, "text": "TOUGH TO GET INTO", "correct": null, "guesses": null },
-      { "clueNumber": 2, "text": "TWO TREES, THREE P'S", "correct": null, "guesses": null },
+      { "clueNumber": 1, "text": "TOUGH TO GET INTO", "correct": 18, "guesses": null },
+      { "clueNumber": 2, "text": "TWO TREES, THREE P'S", "correct": 727, "guesses": null },
       { "clueNumber": 3, "text": "SPIKED PUNCH INGREDIENT", "correct": null, "guesses": null },
       { "clueNumber": 4, "text": "HAVE YOUR FLIPPED CAKE AND EAT IT TOO", "correct": null, "guesses": null },
       { "clueNumber": 5, "text": "IN CHUNKS OR A RING, THIS YELLOW FRUIT IS A HAWAIIAN THING", "correct": null, "guesses": null }
