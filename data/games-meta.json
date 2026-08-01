@@ -3668,11 +3668,14 @@
     {
       "date": "Friday, July 31, 2026",
       "secretItem": "PITBULL",
-      "pot": 0,
+      "pot": 7500,
       "host": "Corrine Foxx",
       "format": "v2",
       "totalWinners": 0,
       "clueCount": 0,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3,
       "note": "Round 1 was not recorded."
     },
     {
@@ -3683,6 +3686,8 @@
       "format": "v2",
       "totalWinners": 0,
       "clueCount": 0,
+      "goldClue": 1,
+      "silverClue": 2,
       "bronzeClue": 3,
       "note": "Round 2 was not recorded."
     }
