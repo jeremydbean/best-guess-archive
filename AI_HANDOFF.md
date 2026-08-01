@@ -2,6 +2,10 @@
 
 Last updated: 2026-07-31 (session end)
 
+## Most Recent Changes (2026-07-31, final)
+
+- **PINEAPPLE bronze winner count still unresolved — confirmed math, not a data gap**: User asked whether the exact bronze winner count could be figured out from the $0.65 payout alone. Checked: `floorCents(2000/n) = $0.65` for 46 different integer winner counts (3,031–3,076), so this single payout figure can never uniquely resolve it the way $166.66 uniquely resolved gold to 18 winners — need either Clue 3's own correct/guesses stat or the round's total winner count to pin it down. Updated PINEAPPLE's `reportedResult` to state this plainly. Also updated the wording to reflect that gold-on-Clue-1 is now directly confirmed by the user, not just inferred by elimination. `npm run audit` passes 0/0.
+
 ## Most Recent Changes (2026-07-31, continued)
 
 - **July 31, 2026 episode added as an unrecorded stub — PITBULL (R1) and PINEAPPLE (R2)**: User confirmed the two secret items but doesn't have the recording yet (no clues, winner counts, or transcript). Added two stub entries to `data/games-2026.json` (now 303 games) using the same schema as the existing "Game was cancelled" stub (April 9, 2026): `note` field set (making them stubs per `tools/audit-data.mjs`'s `isStub` check), empty `clues`/`host`/winner fields. Added a matching placeholder transcript entry to `data/transcripts.json` (now 170) with empty `secretItems`/`rounds` and all six sections present but empty (mirrors the April 9 stub's transcript shape), since `missing-transcript` requires every game date to have a transcript entry regardless of stub status. `npm run audit` passes 0/0.
