@@ -16858,22 +16858,22 @@
   },
   {
     "date": "Friday, July 31, 2026",
-    "pot": 0,
+    "pot": 7500,
     "format": "v2",
     "host": "Corrine Foxx",
     "secretItem": "PINEAPPLE",
     "clues": [],
-    "goldClue": 0,
-    "silverClue": 0,
-    "bronzeClue": 0,
-    "goldWinners": 0,
-    "silverWinners": 0,
-    "bronzeWinners": 0,
-    "totalWinners": 0,
-    "goldPayout": 0,
-    "silverPayout": 0,
-    "bronzePayout": 0,
-    "winnerPayout": "",
+    "goldClue": null,
+    "silverClue": null,
+    "bronzeClue": 3,
+    "goldWinners": 18,
+    "silverWinners": null,
+    "bronzeWinners": null,
+    "totalWinners": null,
+    "goldPayout": 166.66,
+    "silverPayout": null,
+    "bronzePayout": 0.65,
+    "winnerPayout": "$7,500.00",
     "winnerNames": "",
     "wrongGuesses": "",
     "winningClue": 0,
@@ -16886,6 +16886,6 @@
       { "clueNumber": 3, "text": "SPIKED PUNCH INGREDIENT", "correct": null, "guesses": null },
       { "clueNumber": 4, "text": "HAVE YOUR FLIPPED CAKE AND EAT IT TOO", "correct": null, "guesses": null }
     ],
-    "reportedResult": "One viewer's own answer landed on Clue 3 (\"SPIKED PUNCH INGREDIENT\") in the bronze tier, paying $0.65 — confirmed via their own \"ANSWERED ON CLUE #3\" result screen. Another viewer's own answer landed in the gold tier, paying $166.66 — the $3,000 gold pool split $166.66/winner only divides evenly at 18 winners, so gold winners is inferred as 18, likely on Clue 1 (\"TOUGH TO GET INTO\") if tiers follow the standard clue 1/2/3 gold/silver/bronze order. Clue 5 text not yet seen."
+    "reportedResult": "One viewer's own answer landed on Clue 3 (\"SPIKED PUNCH INGREDIENT\") in the bronze tier, paying $0.65 — confirmed via their own \"ANSWERED ON CLUE #3\" result screen; the exact bronze winner count isn't known (many different winner counts floor to that same $0.65 figure). Another viewer's own answer landed in the gold tier, paying $166.66 — the $3,000 gold pool split $166.66/winner only divides evenly at 18 winners, so gold winners is set to 18; which clue (1 or 2) earned gold isn't confirmed yet. Silver tier and Clue 5 text are still unknown."
   }
 ]
