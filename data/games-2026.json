@@ -16855,13 +16855,12 @@
     "note": "Round 1 was not recorded.",
     "noteUrl": "https://forms.gle/zzTwMu8wpZpC5zR58",
     "partialClues": [
-      { "clueNumber": 1, "text": "WORLD TITLE HOLDER", "correct": null, "guesses": null },
-      { "clueNumber": 2, "text": "HOLEY COW, WHO'S MAKING THAT NOISE", "correct": null, "guesses": null },
-      { "clueNumber": 3, "text": "PROUD OF HIS ORIGINS, BUT HAS ELUSIVE ROOTS", "correct": 61, "guesses": 3579 },
-      { "clueNumber": 4, "text": "OFTEN FEATURED PREDOMINENTLY AT THE CLUB", "correct": null, "guesses": null },
-      { "clueNumber": 5, "text": "\"TIMBER\" IS A FAMOUS BOP BY THIS DOG-NAMED STAR OF LATIN HIP-HOP", "correct": null, "guesses": null }
-    ],
-    "reportedResult": "All five clue texts and the answer (PITBULL, the singer) are known. Winners occurred on clues 1, 2, and 3 (standard gold/silver/bronze order), with Clue 3 (\"PROUD OF HIS ORIGINS, BUT HAS ELUSIVE ROOTS\") getting 61 correct out of 3,579 guesses — floorCents(2000/61) = $32.78 for bronze. Gold and silver winner counts are not yet known."
+      { "clueNumber": 1, "text": "WORLD TITLE HOLDER 🥇", "correct": null, "guesses": null, "explanation": "Pitbull's nickname is \"Mr. Worldwide.\"" },
+      { "clueNumber": 2, "text": "HOLEY COW, WHO'S MAKING THAT NOISE 🥈", "correct": null, "guesses": null, "explanation": "The word \"bull\" is hiding in Pitbull's name, and bulls (like cows) are known for making loud noises." },
+      { "clueNumber": 3, "text": "PROUD OF HIS ORIGINS, BUT HAS ELUSIVE ROOTS 🥉", "correct": 61, "guesses": 3579, "explanation": "\"Pit\" refers to a fruit pit, a hidden root at the center, while Pitbull is proud of his Cuban-American roots." },
+      { "clueNumber": 4, "text": "OFTEN FEATURED PREDOMINENTLY AT THE CLUB", "correct": null, "guesses": null, "explanation": "Pitbull's music is a staple in nightclubs, known for its club-ready dance anthems." },
+      { "clueNumber": 5, "text": "\"TIMBER\" IS A FAMOUS BOP BY THIS DOG-NAMED STAR OF LATIN HIP-HOP", "correct": null, "guesses": null, "explanation": "\"Timber\" is Pitbull's hit song with Kesha, and Pitbull is also a dog breed name." }
+    ]
   },
   {
     "date": "Friday, July 31, 2026",
@@ -16888,12 +16887,11 @@
     "note": "Round 2 was not recorded.",
     "noteUrl": "https://forms.gle/zzTwMu8wpZpC5zR58",
     "partialClues": [
-      { "clueNumber": 1, "text": "TOUGH TO GET INTO", "correct": 18, "guesses": null },
-      { "clueNumber": 2, "text": "TWO TREES, THREE P'S", "correct": 727, "guesses": null },
-      { "clueNumber": 3, "text": "SPIKED PUNCH INGREDIENT", "correct": null, "guesses": null },
-      { "clueNumber": 4, "text": "HAVE YOUR FLIPPED CAKE AND EAT IT TOO", "correct": null, "guesses": null },
-      { "clueNumber": 5, "text": "IN CHUNKS OR A RING, THIS YELLOW FRUIT IS A HAWAIIAN THING", "correct": null, "guesses": null }
-    ],
-    "reportedResult": "All five clue texts are now known. One viewer's own answer landed on Clue 3 (\"SPIKED PUNCH INGREDIENT\") in the bronze tier, paying $0.65 — confirmed via their own \"ANSWERED ON CLUE #3\" result screen. The exact bronze winner count is not yet known: floorCents(2000/n) = $0.65 for 46 different winner counts (3,031 through 3,076), so this one payout figure alone doesn't uniquely resolve it the way the gold figure did — need either Clue 3's own correct/guesses stat or the round's total winner count to pin it down. A second viewer's own answer landed in the gold tier, paying $166.66, which uniquely resolves to 18 gold winners via floorCents(3000/18); confirmed directly that gold was on Clue 1 (\"TOUGH TO GET INTO\"). A third viewer (the archive owner) won on Clue 2 (\"TWO TREES, THREE P'S\"), reporting $3.44 with 727 winners — floorCents(2500/727) actually comes out to $3.43, one cent off from the reported figure, so $3.43 is used here per the standard floor formula."
+      { "clueNumber": 1, "text": "TOUGH TO GET INTO 🥇", "correct": 18, "guesses": null, "explanation": "Pineapples have a tough, spiky exterior that makes them hard to cut into." },
+      { "clueNumber": 2, "text": "TWO TREES, THREE P'S 🥈", "correct": 727, "guesses": null, "explanation": "Pineapple combines pine and apple (two trees) and contains three P's." },
+      { "clueNumber": 3, "text": "SPIKED PUNCH INGREDIENT 🥉", "correct": null, "guesses": null, "explanation": "Pineapple juice is a popular ingredient in spiked tropical punches and cocktails." },
+      { "clueNumber": 4, "text": "HAVE YOUR FLIPPED CAKE AND EAT IT TOO", "correct": null, "guesses": null, "explanation": "Pineapple upside-down cake is baked and then flipped over before serving." },
+      { "clueNumber": 5, "text": "IN CHUNKS OR A RING, THIS YELLOW FRUIT IS A HAWAIIAN THING", "correct": null, "guesses": null, "explanation": "Pineapple is a yellow fruit often served in chunks or rings and strongly associated with Hawaii." }
+    ]
   }
 ]

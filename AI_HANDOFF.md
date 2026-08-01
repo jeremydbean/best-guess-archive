@@ -2,6 +2,11 @@
 
 Last updated: 2026-07-31 (session end)
 
+## Most Recent Changes (2026-07-31, final 3)
+
+- **Removed `reportedResult` from PITBULL/PINEAPPLE — do not use this field going forward, per user instruction**: The "Reported result" green box on the stub details screen (`_renderStubDetails` in `index.html`) is no longer wanted; deleted the field entirely from both games rather than leaving it empty. **Going forward, never populate `reportedResult` on a stub game** — record any inferred/self-reported figures directly in the structured tier fields (`goldWinners`, `bronzeClue`, etc., using `null` for genuinely unknown ones) instead of prose.
+- **Added `explanation` to every known PITBULL/PINEAPPLE clue and medal emoji to the confirmed tiers**: Wrote wordplay explanations for all 10 known clues (5 per round) matching the site's usual explanation style. Since `_renderStubDetails`/the Database row don't have a dedicated medal indicator for `partialClues` (unlike the full `clues` array, which appends the emoji to `guesses`), appended the medal emoji directly to each confirmed tier clue's `text` field instead (e.g. `"TOUGH TO GET INTO 🥇"`) — the only field guaranteed to render. PITBULL: Clue 1 🥇, Clue 2 🥈, Clue 3 🥉 (all per the confirmed 1/2/3 gold/silver/bronze order). PINEAPPLE: same tiers on Clues 1/2/3. Verified via headless Chromium: the stub details modal shows all 5 clues with medals on the right ones, no "Reported result" section, no console errors. `npm run audit` passes 0/0.
+
 ## Most Recent Changes (2026-07-31, final 2)
 
 - **PINEAPPLE `partialClues` correct-counts synced to the already-confirmed tier winner counts**: Set Clue 1's `correct: 18` and Clue 2's `correct: 727`, matching `goldWinners`/`silverWinners`. `guesses` stays `null` for both (total submission counts still unknown, distinct from correct counts). Clue 3's `correct` stays `null` — bronze winners is still the unresolved 46-candidate ambiguity described above. `npm run audit` passes 0/0.
