@@ -2,6 +2,10 @@
 
 Last updated: 2026-08-01 (session end)
 
+## Most Recent Changes (2026-08-01, continued)
+
+- **PINEAPPLE bronze recorded as a range instead of left blank**: Per user request, set `bronzeWinners: "3,031–3,076"` and Clue 3's `partialClues.correct` to the same range string (rather than a single number, since floorCents(2000/n)=$0.65 for all 46 of those integers and no single value can be confirmed). **Fixed `index.html` to render this gracefully** — the Database row's `tierLine`/`stubClueCells` previously always ran `Number(value).toLocaleString()`, which would have printed "NaN" for a non-numeric range string; added a `fmtCount()` helper that falls back to displaying the raw string when `Number()` isn't finite, and made the winners-cell total show "745 + range known" instead of silently dropping the bronze range from the sum. The details modal's partialClues renderer already used `String()` rather than `Number()`, so it needed no change. Verified via headless Chromium: Database row shows "3,031–3,076 correct" and "🥉 3,031–3,076", modal shows "3,031–3,076 right", no console errors, no "NaN" anywhere. `npm run audit` passes 0/0.
+
 ## Most Recent Changes (2026-08-01)
 
 - **Daily puzzle added — Saturday, August 1, 2026: CROCS**: Appended to `data/daily-puzzles.json` (now 71 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #4, "A LOT OF AIR FLOW FOR SOMETHING CALLED CLOGS"); explanations reused from the screenshot's own text, converted to sentence case to match file convention. Clues: HAS A CUSHY JOB / NOT A REPTILE, BUT EASILY CHARMED / QUESTIONABLE STYLE BUT FEELS AMAZING FOR MILES / A LOT OF AIR FLOW FOR SOMETHING CALLED CLOGS / FOAM SANDAL SHOES WITH HOLES ABOVE THE SOLES. `npm run audit` passes.
