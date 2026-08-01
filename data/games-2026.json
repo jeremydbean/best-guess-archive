@@ -16874,7 +16874,7 @@
     "bronzeClue": 3,
     "goldWinners": 18,
     "silverWinners": 727,
-    "bronzeWinners": null,
+    "bronzeWinners": "3,031–3,076",
     "totalWinners": null,
     "goldPayout": 166.66,
     "silverPayout": 3.43,
@@ -16889,7 +16889,7 @@
     "partialClues": [
       { "clueNumber": 1, "text": "TOUGH TO GET INTO 🥇", "correct": 18, "guesses": null, "explanation": "Pineapples have a tough, spiky exterior that makes them hard to cut into." },
       { "clueNumber": 2, "text": "TWO TREES, THREE P'S 🥈", "correct": 727, "guesses": null, "explanation": "Pineapple combines pine and apple (two trees) and contains three P's." },
-      { "clueNumber": 3, "text": "SPIKED PUNCH INGREDIENT 🥉", "correct": null, "guesses": null, "explanation": "Pineapple juice is a popular ingredient in spiked tropical punches and cocktails." },
+      { "clueNumber": 3, "text": "SPIKED PUNCH INGREDIENT 🥉", "correct": "3,031–3,076", "guesses": null, "explanation": "Pineapple juice is a popular ingredient in spiked tropical punches and cocktails." },
       { "clueNumber": 4, "text": "HAVE YOUR FLIPPED CAKE AND EAT IT TOO", "correct": null, "guesses": null, "explanation": "Pineapple upside-down cake is baked and then flipped over before serving." },
       { "clueNumber": 5, "text": "IN CHUNKS OR A RING, THIS YELLOW FRUIT IS A HAWAIIAN THING", "correct": null, "guesses": null, "explanation": "Pineapple is a yellow fruit often served in chunks or rings and strongly associated with Hawaii." }
     ]

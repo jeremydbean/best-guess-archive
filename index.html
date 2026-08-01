@@ -3941,16 +3941,20 @@ Rules:
       (Array.isArray(g.partialClues) ? g.partialClues : []).forEach(c => {
         if (c && c.clueNumber) partialByNumber[c.clueNumber] = c;
       });
+      const fmtCount = v => {
+        const n = Number(v);
+        return Number.isFinite(n) ? n.toLocaleString() : esc(String(v));
+      };
       const stubClueCells = Array.from({ length: 5 }, (_, i) => {
         const c = partialByNumber[i + 1];
         if (!c) return `<td class="px-4 py-3 text-slate-700 text-center align-middle">—</td>`;
         let countsHtml = '';
         if (c.correct != null && c.guesses != null) {
-          countsHtml = `<span class="text-green-500">${Number(c.correct).toLocaleString()}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${Number(c.guesses).toLocaleString()}</span>`;
+          countsHtml = `<span class="text-green-500">${fmtCount(c.correct)}</span><span class="text-slate-600"> / </span><span class="text-slate-400">${fmtCount(c.guesses)}</span>`;
         } else if (c.correct != null) {
-          countsHtml = `<span class="text-green-500">${Number(c.correct).toLocaleString()} correct</span>`;
+          countsHtml = `<span class="text-green-500">${fmtCount(c.correct)} correct</span>`;
         } else if (c.guesses != null) {
-          countsHtml = `<span class="text-slate-400">${Number(c.guesses).toLocaleString()} guesses</span>`;
+          countsHtml = `<span class="text-slate-400">${fmtCount(c.guesses)} guesses</span>`;
         }
         return `<td class="px-4 py-3 align-middle" style="min-width:200px">
           <div class="font-medium text-slate-200 leading-snug">${hl(c.text)}</div>
@@ -3960,13 +3964,15 @@ Rules:
       const dashCell = `<td class="px-2 py-1 text-center text-slate-700 align-middle">—</td>`;
       const tierLine = (emoji, winners, colorClass) => winners == null
         ? `<div>${emoji} <span class="text-slate-700">—</span></div>`
-        : `<div>${emoji} <span class="font-mono ${colorClass}">${Number(winners).toLocaleString()}</span></div>`;
+        : `<div>${emoji} <span class="font-mono ${colorClass}">${fmtCount(winners)}</span></div>`;
       const hasAnyWinnerData = [g.goldWinners, g.silverWinners, g.bronzeWinners].some(v => v != null);
-      const knownWinnerTotal = [g.goldWinners, g.silverWinners, g.bronzeWinners].filter(v => v != null).reduce((sum, v) => sum + Number(v), 0);
+      const knownWinnerValues = [g.goldWinners, g.silverWinners, g.bronzeWinners].filter(v => v != null);
+      const hasRangeWinner = knownWinnerValues.some(v => !Number.isFinite(Number(v)));
+      const knownWinnerTotal = knownWinnerValues.filter(v => Number.isFinite(Number(v))).reduce((sum, v) => sum + Number(v), 0);
       const winnersCell = hasAnyWinnerData
         ? `<td class="px-2 py-1 align-middle"><div class="text-xs text-center space-y-0.5">
             ${tierLine('🥇', g.goldWinners, 'text-yellow-400')}${tierLine('🥈', g.silverWinners, 'text-slate-300')}${tierLine('🥉', g.bronzeWinners, 'text-amber-600')}
-            <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono whitespace-nowrap">${knownWinnerTotal.toLocaleString()} known</div>
+            <div class="border-t border-slate-700 pt-0.5 text-slate-400 font-mono whitespace-nowrap">${knownWinnerTotal.toLocaleString()}${hasRangeWinner ? ' + range' : ''} known</div>
           </div></td>`
         : dashCell;
       const payoutLine = (emoji, payout, colorClass) => payout == null
