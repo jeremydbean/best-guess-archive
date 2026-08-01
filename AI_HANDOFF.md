@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-07-31 (session end)
+Last updated: 2026-08-01 (session end)
+
+## Most Recent Changes (2026-08-01)
+
+- **Daily puzzle added — Saturday, August 1, 2026: CROCS**: Appended to `data/daily-puzzles.json` (now 71 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #4, "A LOT OF AIR FLOW FOR SOMETHING CALLED CLOGS"); explanations reused from the screenshot's own text, converted to sentence case to match file convention. Clues: HAS A CUSHY JOB / NOT A REPTILE, BUT EASILY CHARMED / QUESTIONABLE STYLE BUT FEELS AMAZING FOR MILES / A LOT OF AIR FLOW FOR SOMETHING CALLED CLOGS / FOAM SANDAL SHOES WITH HOLES ABOVE THE SOLES. `npm run audit` passes.
 
 ## Most Recent Changes (2026-07-31, final 5)
 
