@@ -2168,5 +2168,36 @@
         "explanation": "Whether they're acoustic or electric, guitars rock."
       }
     ]
+  },
+  {
+    "date": "Saturday, August 1, 2026",
+    "secretItem": "CROCS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "HAS A CUSHY JOB",
+        "explanation": "Crocs are famously comfortable."
+      },
+      {
+        "clueNumber": 2,
+        "text": "NOT A REPTILE, BUT EASILY CHARMED",
+        "explanation": "Crocs have a name that sounds like a reptile and you can attach charms to them."
+      },
+      {
+        "clueNumber": 3,
+        "text": "QUESTIONABLE STYLE BUT FEELS AMAZING FOR MILES",
+        "explanation": "They aren't the cutest, but they're super comfy."
+      },
+      {
+        "clueNumber": 4,
+        "text": "A LOT OF AIR FLOW FOR SOMETHING CALLED CLOGS",
+        "explanation": "Crocs have many holes for ventilation -- not clogged at all!"
+      },
+      {
+        "clueNumber": 5,
+        "text": "FOAM SANDAL SHOES WITH HOLES ABOVE THE SOLES",
+        "explanation": "Crocs have holes everywhere but their soles."
+      }
+    ]
   }
 ]
