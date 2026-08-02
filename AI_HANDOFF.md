@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-08-01 (Codex partial-episode changes reviewed)
+Last updated: 2026-08-02 (daily puzzle added)
+
+## Most Recent Changes (2026-08-02)
+
+- **Daily puzzle added — Sunday, August 2, 2026: MINECRAFT**: Appended to `data/daily-puzzles.json` (now 72 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #1, "NOT YOURS BUT... + ARTS AND..."). Clues: NOT YOURS BUT... + ARTS AND... / A CONSTRUCTIVE WAY TO HAVE FUN / ONCE YOU PLAY IT, YOU'LL DIG IT / FIRST HALF GOES BEFORE "SHAFT," SECOND HALF RHYMES WITH IT / BLOCKBUSTER VIDEO GAME THAT BECAME A JACK BLACK-BUSTER MOVIE. Explanations reused from the screenshot's own text, converted to sentence case to match file convention. `npm run audit` passes 0/0.
 
 ## Most Recent Changes (2026-08-01, Codex partial-episode changes reviewed)
 
