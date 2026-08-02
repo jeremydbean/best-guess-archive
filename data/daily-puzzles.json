@@ -2199,5 +2199,36 @@
         "explanation": "Crocs have holes everywhere but their soles."
       }
     ]
+  },
+  {
+    "date": "Sunday, August 2, 2026",
+    "secretItem": "MINECRAFT",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "NOT YOURS BUT... + ARTS AND...",
+        "explanation": "As in, \"not yours but mine\" and \"arts & crafts\" -- put them together, Minecraft."
+      },
+      {
+        "clueNumber": 2,
+        "text": "A CONSTRUCTIVE WAY TO HAVE FUN",
+        "explanation": "It's a game about crafting and constructing."
+      },
+      {
+        "clueNumber": 3,
+        "text": "ONCE YOU PLAY IT, YOU'LL DIG IT",
+        "explanation": "The gameplay involves digging."
+      },
+      {
+        "clueNumber": 4,
+        "text": "FIRST HALF GOES BEFORE \"SHAFT,\" SECOND HALF RHYMES WITH IT",
+        "explanation": "Mine frequently goes before shaft and craft rhymes with shaft -- Minecraft."
+      },
+      {
+        "clueNumber": 5,
+        "text": "BLOCKBUSTER VIDEO GAME THAT BECAME A JACK BLACK-BUSTER MOVIE",
+        "explanation": "Minecraft is both a massive video game and a movie."
+      }
+    ]
   }
 ]
