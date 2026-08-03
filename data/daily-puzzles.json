@@ -2230,5 +2230,36 @@
         "explanation": "Minecraft is both a massive video game and a movie."
       }
     ]
+  },
+  {
+    "date": "Monday, August 3, 2026",
+    "secretItem": "GUMMY BEAR",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "PAWS FOR EFFECT",
+        "explanation": "The candy has little paws to complete the effect of it being a bear."
+      },
+      {
+        "clueNumber": 2,
+        "text": "MY B! I THOUGHT YOU WANTED TO KNOW THE MIDDLE LETTERS",
+        "explanation": "The middle three letters of \"GUMMY BEAR\" are \"MYB\"."
+      },
+      {
+        "clueNumber": 3,
+        "text": "SOUNDS LIKE IT'S BARELY FAMOUS",
+        "explanation": "They're famous for being bear-shaped, and \"bare\" sounds like \"bear\" when you hear it."
+      },
+      {
+        "clueNumber": 4,
+        "text": "RELATIVE OF WORMS, SHARKS, & (SWEDISH) FISH",
+        "explanation": "These are all popular gummy shapes."
+      },
+      {
+        "clueNumber": 5,
+        "text": "FRUITY CANDY THAT'S FUN TO CHEW, SHAPED LIKE PADDINGTON OR BALOO",
+        "explanation": "That's the G.B. motto."
+      }
+    ]
   }
 ]

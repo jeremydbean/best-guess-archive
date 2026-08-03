@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-08-02 (daily puzzle added)
+Last updated: 2026-08-03 (daily puzzle added)
+
+## Most Recent Changes (2026-08-03)
+
+- **Daily puzzle added — Monday, August 3, 2026: GUMMY BEAR**: Appended to `data/daily-puzzles.json` (now 73 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #4, "RELATIVE OF WORMS, SHARKS, & (SWEDISH) FISH"). Clues: PAWS FOR EFFECT / MY B! I THOUGHT YOU WANTED TO KNOW THE MIDDLE LETTERS / SOUNDS LIKE IT'S BARELY FAMOUS / RELATIVE OF WORMS, SHARKS, & (SWEDISH) FISH / FRUITY CANDY THAT'S FUN TO CHEW, SHAPED LIKE PADDINGTON OR BALOO. Independently verified clue 2's premise before recording: `GUMMYBEAR` is 9 letters and its middle three are indeed `MYB`, which also confirms the canonical singular form `GUMMY BEAR` (not `GUMMY BEARS`) as the `secretItem`. Clue 5's on-screen explanation was the show's own terse aside "THAT'S THE G.B. MOTTO" (G.B. = Gummy Bear, noting that the rhyming chew/Baloo couplet reads as a slogan); recorded faithfully rather than rewritten into a fuller explanation. `npm run audit` passes 0/0.
 
 ## Most Recent Changes (2026-08-02)
 
