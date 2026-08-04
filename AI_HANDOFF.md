@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-08-03 (July 31 recording arrived; partial records promoted to complete)
+Last updated: 2026-08-03 (Database long-item overflow fixed)
+
+## Most Recent Changes (2026-08-03, continued 4)
+
+- **Fixed the longest secret item overflowing into the prize column in Database view**: `RUDOLPH THE RED-NOSED REINDEER` (30 characters, the longest item in the archive) rendered as a single unwrapped line 227px wide inside a 200px cell, spilling **31.4px** into the pot column and visually hiding the `$5,000` underneath it. Cause was a regression from the incomplete-marker work (`1e39de4`): the secret item and its `!` badge had been wrapped in `<span class="inline-flex items-center whitespace-nowrap">`, and that `whitespace-nowrap` overrode the cell's own `overflow-wrap:break-word` / `max-width:200px`, so no long item could wrap. Removed the wrapper entirely and placed the badge inline immediately after the item text — the badge does not need a flex container to stay adjacent. Applied to both row renderers (the normal row and the stub/partial row). Measured across all 340 rendered rows in headless Chromium: worst-case column overlap went from +31.4px (RUDOLPH, the only overflowing row) to −4px, i.e. every row now clears the next column. Confirmed the `!` badge still renders adjacent to the item on its final wrapped line and inside the column, by forcing a long-titled game to `dataStatus: "partial"` in memory.
 
 ## Most Recent Changes (2026-08-03, continued 3)
 
