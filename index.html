@@ -4169,10 +4169,7 @@ Rules:
       const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
         <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
         <td class="px-1 py-1 font-semibold text-white align-middle leading-snug" style="max-width:200px;overflow-wrap:break-word;">
-          <span class="inline-flex items-center whitespace-nowrap">
-            <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>
-            ${incompleteBadge}
-          </span>
+          <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>${incompleteBadge}
         </td>
         ${potCell}
         ${stubClueCells}
@@ -4281,10 +4278,7 @@ Rules:
     const html = `<tr class="hover:bg-slate-800/30 transition border-b border-slate-800/60 last:border-0">
       <td class="pl-4 pr-1 py-1 text-slate-400 font-mono text-[11px] align-middle db-col-date" title="${esc(g.date)}">${hl(g.date)}</td>
       <td class="px-1 py-1 font-semibold text-white align-middle leading-snug" style="max-width:200px;overflow-wrap:break-word;">
-        <span class="inline-flex items-center whitespace-nowrap">
-          <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>
-          ${incompleteBadge}
-        </span>
+        <span class="db-secret" data-secret-key="${esc(g.date + '::' + g.secretItem)}" tabindex="0" role="button" title="Click to reveal secret item" onclick="app.revealSecret(this)" onkeydown="app.revealSecretKey(event, this)">${hl(g.secretItem)}</span>${incompleteBadge}
         ${g.note ? `<div class="mt-0.5"><span class="inline-flex items-center gap-1 text-[9px] font-bold bg-red-900/40 text-red-400 border border-red-600/40 px-1 py-0.5 rounded-full uppercase tracking-wide"><span class="material-symbols-outlined" style="font-size:10px">warning</span>${hl(g.note)}</span></div>` : ''}
       </td>
       <td class="px-2 py-1 ${this._isKnownCount(g.pot) ? 'text-green-400' : 'text-slate-700'} font-mono whitespace-nowrap align-middle">${this._isKnownCount(g.pot) ? `$${this._parseCount(g.pot).toLocaleString()}` : '—'}</td>
