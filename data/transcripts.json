@@ -83622,28 +83622,13 @@
   {
     "date": "Friday, July 31, 2026",
     "host": "Corinne Foxx",
-    "dataStatus": "unavailable",
     "secretItems": [
-      "PITBULL",
-      "PINEAPPLE"
+      "PINEAPPLE",
+      "PITBULL"
     ],
     "rounds": [
       {
         "round": 1,
-        "secretItem": "PITBULL",
-        "host": "Corinne Foxx",
-        "pot": 7500,
-        "format": "v2",
-        "clues": [
-          "WORLD TITLE HOLDER",
-          "HOLEY COW, WHO'S MAKING THAT NOISE",
-          "PROUD OF HIS ORIGINS, BUT HAS ELUSIVE ROOTS",
-          "OFTEN FEATURED PREDOMINANTLY AT THE CLUB",
-          "\"TIMBER\" IS A FAMOUS BOP BY THIS DOG-NAMED STAR OF LATIN HIP-HOP"
-        ]
-      },
-      {
-        "round": 2,
         "secretItem": "PINEAPPLE",
         "host": "Corinne Foxx",
         "pot": 7500,
@@ -83655,32 +83640,1328 @@
           "HAVE YOUR FLIPPED CAKE AND EAT IT TOO",
           "IN CHUNKS OR A RING, THIS YELLOW FRUIT IS A HAWAIIAN THING"
         ]
+      },
+      {
+        "round": 2,
+        "secretItem": "PITBULL",
+        "host": "Corinne Foxx",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "WORLD TITLE HOLDER",
+          "HOLEY COW, WHO'S MAKING THAT SOUND!",
+          "PROUD OF HIS ORIGINS, BUT HAS ELUSIVE ROOTS",
+          "OFTEN FEATURED PROMINENTLY AT THE CLUB",
+          "\"TIMBER\" IS A FAMOUS BOP BY THIS DOG-NAMED STAR OF LATIN HIP-HOP"
+        ]
       }
     ],
     "sections": [
       {
         "tag": "Intro",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I am your host, Corinne Foxx."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Hunter and Howie's two man stage extravaganza, Clue 5: The Musical, is premiering off off off off off Broadway tonight, so I'm taking over Best Guess Live."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Thanks, guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's gonna be a great show though, if you can catch it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Hunter is very moving in the role of Neil."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Anyways, you guys, I love coming here and hosting the show."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Not only do I get to help you guys win $15,000, but I also get the epic thrill of spending some quality time with the writers."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Never before in the history of mankind has there ever been a group of people so smart and clever and hilarious and good looking."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, guys, I think you're laying it on a little thick here."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah, if I could describe the writers in my own words, I'd say they are currently present."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, it's time for the rules."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Before each round, we're gonna load up our crystal ball with a secret item and it could be anything."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And then I'll give you five clues."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "But remember, the clues are like riddles."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "They're meant to make you think."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "After each clue, you'll get 20 seconds to submit an answer."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "But you only get one best guess per round, not one per clue, one per round."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "So make sure you are confident before you lock it in, and it has to be the exact answer."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "We don't accept typos."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of $2,500."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And everyone that gets it on the third earliest clue will split the bronze pot of $2,000."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, enough talk."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's win some money."
+          }
+        ]
       },
       {
         "tag": "Round 1",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Round one is worth $7,500."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's load up that crystal ball."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Neil."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Thank you."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm learning the lore of Neil today."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, the crystal ball is loaded."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Here is your first clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: tough to get into."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, tough to get into."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, I am manifesting that I'm gonna use the money gun tonight."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "So we're gonna have a big winner."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "If you feel confident, just clue number one, you can lock in your answer."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "But there are four more clues to come, and 20 seconds is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That is time."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "ZippyMint204 said a safe."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah, that's a great... yeah, a safe is tough to get into."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "HoppingHannah said falconry."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That is a very niche thing to get into."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here is your second clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: two trees, three P's."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock start now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, tough to get into."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, two trees, three P's."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Tough to get into, you know, okay, there's a lot of things that are hard to get into."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Two trees, three P's, now I'm lost."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Now I'm completely lost."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "What is three P's?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, 20 seconds is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "LovelyWart588 said paperclip."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Two trees, three P's."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, paperclip."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "P, p, p."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I see it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, that's a great guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Took me a while."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here is your third clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three: spiked punch ingredient."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Spiked punch ingredient."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, tough to get into."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, two trees, three P's."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And clue number three, spiked punch ingredient."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "You have just 10 seconds left, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "If you're feeling good, there's still two more clues to come, and time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "BlissfulTantrum449 said hooch."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Am I too young for that?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "What's hooch?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, okay, it's booze."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That is a spiked punch ingredient."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Booze."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Here is your fourth clue, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four: have your flipped cake and eat it too."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Have your flipped cake and eat it too."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock start now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number one, tough to get into."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, two trees, three P's."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That one's still throwing me off."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, spiked punch ingredient."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four, have your flipped cake and eat it too."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I might have an idea of where we're going, but I'm never too sure."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "BritishCowboy said flapjacks, which are also pancakes, right?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Flapjacks?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Flapjacks."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here is your final clue, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "This is your final chance to guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "If you have not guessed yet, this is your time to lock in."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five: in chunks or a ring, this yellow fruit is a Hawaiian thing."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I think I've got it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five, they really like to spell it out for you, but you never know."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I could be wrong."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I usually am."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, tough to get into."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, two trees, three P's."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, spiked punch ingredient."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four, have your flipped cake and eat it too."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And clue number five, in chunks or a ring, this yellow fruit is a Hawaiian thing."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That is time is up, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's find out what was in that crystal ball."
+          }
+        ]
       },
       {
         "tag": "Round 1 Results",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I feel like I know what this is."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's pineapple!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's pineapple!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I love a prop."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's pineapple, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, 11,864 people guessed."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's look at how all the clues fit and find out who is taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “IN CHUNKS OR A RING, THIS YELLOW FRUIT IS A HAWAIIAN THING.” However you cut your pineapple, it's strongly associated with Hawaii and other tropical locations. 3,628 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “HAVE YOUR FLIPPED CAKE AND EAT IT TOO.” Pineapple upside down cake is a popular cake variety. 4,432 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “SPIKED PUNCH INGREDIENT.” Pineapples have spikes, and they're a common ingredient in fruit punch. 3,061 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “TWO TREES, THREE P'S.” Pine tree, apple tree, put those two trees together equals pineapple, and then there's three p's in pineapple. 725 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “TOUGH TO GET INTO.” A pineapple has tough skin. 18 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 18 winners at $166.66 each. Silver (Clue 2): 725 winners at $3.44 each. Bronze (Clue 3): 3,061 winners at $0.65 each."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number five."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "In chunks or a ring, this yellow fruit is a Hawaiian thing."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "However you cut your pineapple, it's strongly associated with Hawaii and other tropical locations."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "3,819 people guessed on clue number five."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "3,628 people got it right on clue number five."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, they're telling me I can put this down for everyone."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Thanks, guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Thanks."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number four."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Have your flipped cake and eat it too."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Pineapple upside down cake is a popular cake variety."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That was when I started to get my little spidey senses."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "5,922 people guessed on clue number four."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "4,432 people got it right on clue number four."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number three."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Spiked punch ingredient."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Pineapples have spikes, oh."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And they're a common ingredient in fruit punch."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Ah, 5,507 people guessed."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "3,061 people got it right on clue number three."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "But will it hold?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "But will it hold?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number two."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Two trees, three P's."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "This one threw me off."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Pine tree, apple tree, put those two trees together equals pineapple."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And then there's three P's in pineapple."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Pine tree, apple tree, pineapple, okay."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "2,168 people guessed on clue number two."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And 725 people got it right on clue number two."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "You guys are smarter than me."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, and clue number one, which was tough to get into."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "A pineapple has tough skin."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I will be blown away if anyone got it right on clue number one."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "3,126 people guessed."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "18 people got it right!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "On just tough to get into!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "There's a lot of clubs are hard to get into, it's hard to get into a lot of things."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, well congratulations to, um, onTwilight320, he's a gold guesser."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "The 18 people who got clue number one right, they will be splitting our gold pot, with $166.66."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Great job."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Our silver pot is going to our guessers on clue number two, 725 people are splitting $3.44."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And our bronze pot is going to our number three guessers, 3,061 people are going home with 65 cents."
+          }
+        ]
       },
       {
         "tag": "Round 2",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, I know this may sound crazy, but let's play round two for another $7,500."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Prize pots, they stay the same."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "$3,000 for gold, $2,500 for silver, and $2,000 for bronze."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's load that crystal ball, Neil."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Neil."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Thank you."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "From beyond."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, the crystal ball is loaded."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Here is your first clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: world title holder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number one, this is your second puzzle."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "World title holder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "There's a lot of world titles."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "People get titles for really strange things, too."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Like you can get a title for just standing on one foot, so who knows what that is."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, 20 seconds is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "RefrigeratorMe said Atlas."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "World title holder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "NinaDrives32 said Joey Chestnut."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, he's the competitive eater!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, yeah."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Like hot dogs and things like that."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah, yeah, yeah."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's see."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, here's your clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Holey cow, who's making that sound!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, world title holder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, holey cow, who's making that sound!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That sounds like my parents whenever I had a sleepover."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Telling us to be quiet."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Could be them."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And time is just about up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "MilliMagic said Harry Caray."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm not getting a lot of these references."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, it's just me, I'm 32, I feel like I should know some of this stuff."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Don't know Harry Caray."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here is your third clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three is: proud of his origins, but has elusive roots."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, world title holder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, holey cow, who's making that sound!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, proud of his origins, but has elusive roots."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I said I heard his origins, I don't know if that means anything, but it's something I picked up on."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And FuzzyButtons202 said Groot."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah, he makes a little sound too."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That's a pretty good guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here's your fourth clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four: often featured prominently at the club."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, 20 seconds are on the clock, start now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, world title holder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, holey cow, who's making that sound!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, proud of his origins, but has elusive roots."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four, often featured prominently at the club."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "The club."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Huh."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, I'm, I'm thrown off."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "MassivePipsqueak said Mickey Mouse."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, club, okay, Mickey Mouse's Clubhouse."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I was like, is Mickey Mouse at the club?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Um, Mickey Mouse Clubhouse."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Different show, different show."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, here is your final clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Remember, this is your final chance to guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "If you haven't guessed yet, this is your time."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five: \"Timber\" is a famous bop by this dog-named star of Latin hip-hop."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one, world title holder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two, holey cow, who's making that sound!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three, proud of his origins, but has elusive roots."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four, often featured prominently at the club."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five, \"Timber\" is a famous bop by this dog-named star of Latin hip-hop."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's find out what's in that crystal ball."
+          }
+        ]
       },
       {
         "tag": "Round 2 Results",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It is... oh, it's Pitbull!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Mr. 305!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "A great Halloween costume as well."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's take a look at how the clues fit and find out who is taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “\"TIMBER\" IS A FAMOUS BOP BY THIS DOG-NAMED STAR OF LATIN HIP-HOP.” \"Timber\" is a big hit from Latin hip-hop star Pitbull. 3,884 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “OFTEN FEATURED PROMINENTLY AT THE CLUB.” He has many big songs where he has a featured artist credit, and they often play his music at the club. 360 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “PROUD OF HIS ORIGINS, BUT HAS ELUSIVE ROOTS.” He proudly reps Miami, and he is iconically bald, so there is not a lot of roots happening over there. 61 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “HOLEY COW, WHO'S MAKING THAT SOUND!.” A pit is a hole, a bull is a male cow, put them together, pit bull is who is making that sound. 17 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “WORLD TITLE HOLDER.” Title as in Mr. and his nickname is Mr. Worldwide. 46 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 46 winners at $65.21 each. Silver (Clue 2): 17 winners at $147.05 each. Bronze (Clue 3): 61 winners at $32.78 each."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number five."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "\"Timber\" is a famous bop by this dog-named star of Latin hip-hop."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "\"Timber\" is a big hit from Latin hip-hop star Pitbull."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yes, all right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "5,287 people guessed on clue number five."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "3,884 people got it right on clue number five."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Great job, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "But will it hold, will it hold?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Often featured prominently at the club."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "This is the club I was thinking of."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "He has many big songs where he has a featured artist credit, and they often play his music at the club."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And they should, he's got great songs."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "3,219 people guessed on clue number four."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "360 people got it right on clue number four."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Great job, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number three was, proud of his origins, but has elusive roots."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "He proudly reps Miami, and he's iconically bald."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "There's not a lot of roots happening over there."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "3,579 people guessed on clue number three."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And 61 people got it right on clue number three."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Great job."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number two was, holey cow, who's making that sound!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Holey cow, why'd I keep saying holey moley the whole time?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, okay, all right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Holey cow, who's making that sound!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "A pit is a hole, a bull is a male cow, right, that's gotta be cow."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Put them together, pit bull is who is making that sound."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Holey, pit, hole, bull, cow."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm glitching, I'm glitching, you guys, I'm glitching."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "2,616 people guessed on clue number two."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "17 people got it right on clue number two!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That is crazy."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, and clue number one was, world title holder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Title as in Mr. And his nickname is Mr. Worldwide."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Guys, you guys are so clever."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, 3,752 people guessed on clue number one."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And 46 people got it right on clue number one!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "You guys blow me away."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Congratulations, all right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That means that the 46 people who guessed on clue number one will be splitting $65.20."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Well, each be taking home $65.20."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Our, uh, people who guessed on clue number two, 17 people will be taking home $147.05."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And the people who guessed on clue number three, 61 people will be taking home $32.78."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Great job, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Congratulations."
+          }
+        ]
       },
       {
         "tag": "Outro",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "We're here every weekday at 8 Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "So come back Monday and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Good night, you guys!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "No money gun tonight."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I will get that money gun."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I will get it again, one more time at least."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [PINEAPPLE UPSIDE DOWN CAKE, HAMMOCK, RUM, PEPPERMINT, SAFE]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [TIGER WOODS, DJ, ATLAS, GROOT, SNOOP DOG]"
+          }
+        ]
       }
     ]
   },

@@ -16835,8 +16835,65 @@
     "pot": 7500,
     "format": "v2",
     "host": "Corinne Foxx",
+    "secretItem": "PINEAPPLE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 18,
+    "silverWinners": 725,
+    "bronzeWinners": 3061,
+    "totalWinners": 3804,
+    "totalPlayers": 19681,
+    "goldPayout": 166.66,
+    "silverPayout": 3.44,
+    "bronzePayout": 0.65,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "onTwilight320",
+    "wrongGuesses": "PINEAPPLE UPSIDE DOWN CAKE, HAMMOCK, RUM, PEPPERMINT, SAFE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "TOUGH TO GET INTO",
+        "correct": "18",
+        "guesses": "3,126 🥇",
+        "explanation": "A pineapple has tough skin."
+      },
+      {
+        "number": 2,
+        "text": "TWO TREES, THREE P'S",
+        "correct": "725",
+        "guesses": "2,168 🥈",
+        "explanation": "Pine tree, apple tree, put those two trees together equals pineapple, and then there's three p's in pineapple."
+      },
+      {
+        "number": 3,
+        "text": "SPIKED PUNCH INGREDIENT",
+        "correct": "3,061",
+        "guesses": "5,507 🥉",
+        "explanation": "Pineapples have spikes, and they're a common ingredient in fruit punch."
+      },
+      {
+        "number": 4,
+        "text": "HAVE YOUR FLIPPED CAKE AND EAT IT TOO",
+        "correct": "4,432",
+        "guesses": "5,922",
+        "explanation": "Pineapple upside down cake is a popular cake variety."
+      },
+      {
+        "number": 5,
+        "text": "IN CHUNKS OR A RING, THIS YELLOW FRUIT IS A HAWAIIAN THING",
+        "correct": "3,628",
+        "guesses": "3,819",
+        "explanation": "However you cut your pineapple, it's strongly associated with Hawaii and other tropical locations."
+      }
+    ]
+  },
+  {
+    "date": "Friday, July 31, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Corinne Foxx",
     "secretItem": "PITBULL",
-    "dataStatus": "partial",
     "goldClue": 1,
     "silverClue": 2,
     "bronzeClue": 3,
@@ -16855,96 +16912,37 @@
       {
         "number": 1,
         "text": "WORLD TITLE HOLDER",
-        "correct": 46,
-        "guesses": null,
-        "explanation": "Pitbull's nickname is \"Mr. Worldwide.\""
+        "correct": "46",
+        "guesses": "3,752 🥇",
+        "explanation": "Title as in Mr. and his nickname is Mr. Worldwide."
       },
       {
         "number": 2,
-        "text": "HOLEY COW, WHO'S MAKING THAT NOISE",
-        "correct": 17,
-        "guesses": null,
-        "explanation": "A pit is a hole, and a cow may be a bull; together they point to Pitbull, the music star making the noise."
+        "text": "HOLEY COW, WHO'S MAKING THAT SOUND!",
+        "correct": "17",
+        "guesses": "2,616 🥈",
+        "explanation": "A pit is a hole, a bull is a male cow, put them together, pit bull is who is making that sound."
       },
       {
         "number": 3,
         "text": "PROUD OF HIS ORIGINS, BUT HAS ELUSIVE ROOTS",
-        "correct": 61,
-        "guesses": 3579,
-        "explanation": "Pitbull is proud of his Cuban-American origins, but because he is bald, his hair roots are elusive."
+        "correct": "61",
+        "guesses": "3,579 🥉",
+        "explanation": "He proudly reps Miami, and he is iconically bald, so there is not a lot of roots happening over there."
       },
       {
         "number": 4,
-        "text": "OFTEN FEATURED PREDOMINANTLY AT THE CLUB",
-        "correct": null,
-        "guesses": null,
-        "explanation": "Pitbull's music is a staple in nightclubs, known for its club-ready dance anthems."
+        "text": "OFTEN FEATURED PROMINENTLY AT THE CLUB",
+        "correct": "360",
+        "guesses": "3,219",
+        "explanation": "He has many big songs where he has a featured artist credit, and they often play his music at the club."
       },
       {
         "number": 5,
         "text": "\"TIMBER\" IS A FAMOUS BOP BY THIS DOG-NAMED STAR OF LATIN HIP-HOP",
-        "correct": null,
-        "guesses": null,
-        "explanation": "\"Timber\" is Pitbull's hit song with Kesha, and Pitbull is also a dog breed name."
-      }
-    ]
-  },
-  {
-    "date": "Friday, July 31, 2026",
-    "pot": 7500,
-    "format": "v2",
-    "host": "Corinne Foxx",
-    "secretItem": "PINEAPPLE",
-    "dataStatus": "partial",
-    "goldClue": 1,
-    "silverClue": 2,
-    "bronzeClue": 3,
-    "goldWinners": 18,
-    "silverWinners": 725,
-    "bronzeWinners": 3061,
-    "totalWinners": 3804,
-    "totalPlayers": 19681,
-    "goldPayout": 166.66,
-    "silverPayout": 3.44,
-    "bronzePayout": 0.65,
-    "winnerPayout": "$7,500.00",
-    "winnerNames": "",
-    "wrongGuesses": "PINEAPPLE UPSIDE DOWN CAKE, HAMMOCK, RUM, PEPPERMINT, SAFE",
-    "clues": [
-      {
-        "number": 1,
-        "text": "TOUGH TO GET INTO",
-        "correct": 18,
-        "guesses": null,
-        "explanation": "Pineapples have a tough, spiky exterior that makes them hard to cut into."
-      },
-      {
-        "number": 2,
-        "text": "TWO TREES, THREE P'S",
-        "correct": 725,
-        "guesses": null,
-        "explanation": "Pineapple combines pine and apple (two trees) and contains three P's."
-      },
-      {
-        "number": 3,
-        "text": "SPIKED PUNCH INGREDIENT",
-        "correct": 3061,
-        "guesses": null,
-        "explanation": "Pineapple juice is a popular ingredient in spiked tropical punches and cocktails."
-      },
-      {
-        "number": 4,
-        "text": "HAVE YOUR FLIPPED CAKE AND EAT IT TOO",
-        "correct": null,
-        "guesses": null,
-        "explanation": "Pineapple upside-down cake is baked and then flipped over before serving."
-      },
-      {
-        "number": 5,
-        "text": "IN CHUNKS OR A RING, THIS YELLOW FRUIT IS A HAWAIIAN THING",
-        "correct": null,
-        "guesses": null,
-        "explanation": "Pineapple is a yellow fruit often served in chunks or rings and strongly associated with Hawaii."
+        "correct": "3,884",
+        "guesses": "5,287",
+        "explanation": "\"Timber\" is a big hit from Latin hip-hop star Pitbull."
       }
     ]
   },
