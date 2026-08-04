@@ -2622,7 +2622,7 @@ class App {
         this._transcriptsError = null;
         this._transcriptsLoading = null;
         this._dbFilteredCache.clear();
-        this._dbRowHtmlCache.clear();
+        this._dbRowHtmlCache = new WeakMap();
         if (this._activeView === 'database') this.renderDatabase();
         if (this._activeView === 'home') this.renderDataHealth();
       })

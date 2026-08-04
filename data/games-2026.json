@@ -16947,5 +16947,119 @@
         "explanation": "Pineapple is a yellow fruit often served in chunks or rings and strongly associated with Hawaii."
       }
     ]
+  },
+  {
+    "date": "Monday, August 3, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "SCISSORS",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 655,
+    "silverWinners": 545,
+    "bronzeWinners": 723,
+    "totalWinners": 1923,
+    "goldPayout": 4.58,
+    "silverPayout": 4.58,
+    "bronzePayout": 2.76,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "TrickyRescuer102, Gemini'sGremlin, IndependentChief",
+    "wrongGuesses": "ZIPPER, PIZZA, CLIPPERS, ELECTION, RELAY RACE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "UNITE TO DIVIDE",
+        "correct": "655",
+        "guesses": "3,967 🥇",
+        "explanation": "When the blades unite, that is when you cut things and divide them."
+      },
+      {
+        "number": 2,
+        "text": "THEY WIN SOME, THEY LOSE SOME",
+        "correct": "545",
+        "guesses": "3,850 🥈",
+        "explanation": "Scissors beats paper, but loses to rock."
+      },
+      {
+        "number": 3,
+        "text": "A RISKY RUNNING MATE",
+        "correct": "723",
+        "guesses": "3,838 🥉",
+        "explanation": "Running with scissors is dangerous."
+      },
+      {
+        "number": 4,
+        "text": "HAS A SILENT “C” YOU COULD JUST TRIM RIGHT OUT",
+        "correct": "1,414",
+        "guesses": "2,420",
+        "explanation": "The “c” in scissors is silent and can be trimmed right out."
+      },
+      {
+        "number": 5,
+        "text": "HANDHELD TWO-BLADE SNIPPING TOOL USED BY BARBERS & KIDS AT SCHOOL",
+        "correct": "6,750",
+        "guesses": "7,411",
+        "explanation": "For haircuts or art class, scissors are the snipping tool of choice."
+      }
+    ]
+  },
+  {
+    "date": "Monday, August 3, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "THE PRICE IS RIGHT",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 36,
+    "silverWinners": 964,
+    "bronzeWinners": 768,
+    "totalWinners": 1768,
+    "goldPayout": 83.33,
+    "silverPayout": 2.59,
+    "bronzePayout": 2.6,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "NumbChuckle33, asking for a friend, Gfunk29",
+    "wrongGuesses": "SIA, HAND SANITIZER, DEODORANT, ROLLER COASTER, PERFUME",
+    "clues": [
+      {
+        "number": 1,
+        "text": "DOWN FOR CHEAP THRILLS",
+        "correct": "0",
+        "guesses": "4,705",
+        "explanation": "You come on down from the audience to compete in a thrilling game show about everyday prices and deals."
+      },
+      {
+        "number": 2,
+        "text": "POPULAR SOAP ALTERNATIVE",
+        "correct": "36",
+        "guesses": "3,304 🥇",
+        "explanation": "It is a daytime TV show you can watch instead of a soap opera."
+      },
+      {
+        "number": 3,
+        "text": "WHERE IT'S WISE TO UNDERESTIMATE",
+        "correct": "964",
+        "guesses": "5,109 🥈",
+        "explanation": "If you go over the price, you are out, so it is better to underestimate."
+      },
+      {
+        "number": 4,
+        "text": "ONE DOLLAR CAN GO A LONG WAY",
+        "correct": "768",
+        "guesses": "2,996 🥉",
+        "explanation": "Guessing one dollar can get you on the stage, and landing on the dollar on the wheel gets you extra money."
+      },
+      {
+        "number": 5,
+        "text": "IS THIS GAME SHOW FUN? VERY! JUST ASK BOB BARKER OR DREW CAREY",
+        "correct": "5,048",
+        "guesses": "5,555",
+        "explanation": "Bob Barker and Drew Carey are both iconic hosts of The Price Is Right."
+      }
+    ]
   }
 ]
