@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-08-03 (Database long-item overflow fixed)
+Last updated: 2026-08-04 (daily puzzle added)
+
+## Most Recent Changes (2026-08-04)
+
+- **Daily puzzle added — Tuesday, August 4, 2026: TUBA**: Appended to `data/daily-puzzles.json` (now 74 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #2, "CHECK OUT A BUT IN THE MIRROR"). Clues: THAT'S A LOW BLOW! / CHECK OUT A BUT IN THE MIRROR / HEAVY METAL BAND MEMBER / HARD TO MOVE BUT OFTEN FOUND MARCHING / MUSICAL INSTRUMENT OF GREAT MASS - SHINY, DEEP & MADE OF BRASS. Verified clue 2's premise before recording: `A BUT` with the space removed is `ABUT`, which reversed is exactly `TUBA`. Clue 5 follows the usual rhyming-giveaway pattern (mass / brass). `npm run audit` passes 0/0.
 
 ## Most Recent Changes (2026-08-03, continued 4)
 
