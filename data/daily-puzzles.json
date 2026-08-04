@@ -2261,5 +2261,36 @@
         "explanation": "That's the G.B. motto."
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 4, 2026",
+    "secretItem": "TUBA",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "THAT'S A LOW BLOW!",
+        "explanation": "They are the lowest-sounding brass instrument."
+      },
+      {
+        "clueNumber": 2,
+        "text": "CHECK OUT A BUT IN THE MIRROR",
+        "explanation": "If you reverse \"A BUT\" you get TUBA!"
+      },
+      {
+        "clueNumber": 3,
+        "text": "HEAVY METAL BAND MEMBER",
+        "explanation": "They're heavy, made of brass and a key part of orchestras."
+      },
+      {
+        "clueNumber": 4,
+        "text": "HARD TO MOVE BUT OFTEN FOUND MARCHING",
+        "explanation": "They are big and used in marching bands."
+      },
+      {
+        "clueNumber": 5,
+        "text": "MUSICAL INSTRUMENT OF GREAT MASS - SHINY, DEEP & MADE OF BRASS",
+        "explanation": "We just described all the major things about this major instrument!"
+      }
+    ]
   }
 ]
