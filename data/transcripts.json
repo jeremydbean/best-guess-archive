@@ -83683,5 +83683,1319 @@
         "lines": []
       }
     ]
+  },
+  {
+    "date": "Monday, August 3, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "SCISSORS",
+      "THE PRICE IS RIGHT"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "SCISSORS",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "UNITE TO DIVIDE",
+          "THEY WIN SOME, THEY LOSE SOME",
+          "A RISKY RUNNING MATE",
+          "HAS A SILENT “C” YOU COULD JUST TRIM RIGHT OUT",
+          "HANDHELD TWO-BLADE SNIPPING TOOL USED BY BARBERS & KIDS AT SCHOOL"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "THE PRICE IS RIGHT",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "DOWN FOR CHEAP THRILLS",
+          "POPULAR SOAP ALTERNATIVE",
+          "WHERE IT'S WISE TO UNDERESTIMATE",
+          "ONE DOLLAR CAN GO A LONG WAY",
+          "IS THIS GAME SHOW FUN? VERY! JUST ASK BOB BARKER OR DREW CAREY"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am your host."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But don't clap yet."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now, I'm Howie Mandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "People get so excited 'cause they know what's about to come."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know that some of you are watching me tonight now and thinking, wait a minute, I think I recognize something from another television show."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And you are totally right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Those of you in the greater Omaha area know that that map moonlights on Channel 5 Action Weather with Gooch Bumgartner."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mappy back here has a lot of range."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He spent six seasons as Mark Harmon's screensaver on NCIS, and some of our older players may remember his pivotal role in the 1983 Matthew Broderick thriller WarGames."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Impressive body of work."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now, while our non-older players google Matthew Broderick, I'll go ahead and read the rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, we're gonna load the crystal ball with a secret item."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It could be absolutely anything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Then, here's what I'm gonna do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm gonna give you five clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But remember, the clues, they're like riddles."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And after each clue, we'll put 20 seconds on the clock for you to submit an answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you only get one Best Guess per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not one per clue, one per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's gotta be the exact answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're not accepting typos tonight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Correct?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Correct!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I knew it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bottom line, you want to be fast, but you gotta be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the Gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the Silver pot of $2,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Enough talk, let's win some money."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one, $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neal, you know what you do best."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Load that ball, buddy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There he is, he's loading the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You guys are all getting ready."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open those thinking caps."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now here is your first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Unite to divide."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your first 20 seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Unite to divide."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Counting down."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10 seconds remaining."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Submissions already coming in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Unite to divide."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One second."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "SNHoblin21 said, um, Oreo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, you have to unite it to divide it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Numerator... uh... NiftyBiscuit387 said Numerator and denominator."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Numerator and denominator."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, I wasn't reading that right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I wasn't great in math."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's, uh, is that calculus?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know what it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Math."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They win some, they lose some."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Unite to divide."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They win some, they lose some."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10 seconds remaining."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Over 4,000 submissions already."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And zero, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "ModestCredenza991 said Carolina Panthers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "True."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A risky running mate."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Unite to divide."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They win some, they lose some."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And this third clue, a risky running mate."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3, 2, 1."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "BGJTPA says socks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Does that, is that a risky running mate?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and LittleBrian77 said cramp."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Has a silent “c” you could just trim right out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Unite to divide."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They win some, they lose some."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number three, a risky running mate."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And clue four, it has a silent “c” you could just trim right out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up on your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, ForgetfulMuffin221 said Steve Buscemi."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Right, you could just take that “c” right out of there, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my god."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your final clue, final chance, final shot at $7,500 in our first round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue five."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Handheld two-blade snipping tool used by barbers and kids at school."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Unite to divide."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They win some, they lose some."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A risky running mate."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Has a silent “c” you could just trim right out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And handheld two-blade snipping tool used by barbers and kids at school."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, I, I, I like the guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is it good that I guess before we open the ball, Neal?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Really?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, you open the ball, and then I'm gonna guess."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, cut that ball open with your SCISSORS!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's find out how, uh, the clues fit and who is taking all that money home."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “HANDHELD TWO-BLADE SNIPPING TOOL USED BY BARBERS & KIDS AT SCHOOL.” For haircuts or art class, scissors are the snipping tool of choice. 6,750 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “HAS A SILENT “C” YOU COULD JUST TRIM RIGHT OUT.” The “c” in scissors is silent and can be trimmed right out. 1,414 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “A RISKY RUNNING MATE.” Running with scissors is dangerous. 723 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “THEY WIN SOME, THEY LOSE SOME.” Scissors beats paper, but loses to rock. 545 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “UNITE TO DIVIDE.” When the blades unite, that's when you cut things and divide them. 655 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 655 winners at $4.58 each. Silver (Clue 2): 545 winners at $4.58 each. Bronze (Clue 3): 723 winners at $2.76 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Handheld two-blade snipping tool used by barbers and kids at school."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, for haircuts, art class, scissors are the snipping tool of choice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That makes sense."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "7,411 guesses on that fifth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "6,750 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue four, has a silent “c” you could just trim right out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The “c” in scissors is silent, and I don't even know why it's there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Why is it there?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's just trim it right out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh, 2,420 people guessed."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "1,414 got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is, uh, my favorite of all the clues, a risky running mate."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Running with scissors is dangerous."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That was the biggest warning I got as a kid."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Don't run with scissors!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Have you ever seen people running with scissors?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Has anybody ever run by going, ah, I'm gonna be late for my arts and crafts!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know what, why that is a rule."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But anyway, uh, 3,838 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "723 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They win some, they lose some."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Scissors beats paper, but loses to rock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Rock, paper, scissors."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,850 guesses, 545 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright, that's the standard, that's the gold standard right now, unless you people got it on the first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Unite to divide."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "When the blades unite, that's when you cut things and divide them."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,967 guesses on that first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "655 of you got it correct!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow, each of you gold guessers getting $4.58."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "TrickyRescuer102, Gemini'sGremlin, IndependentChief, I'm not gonna name all of you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, the 545 of you are silver winners each getting $4.58."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How is that, they got the same amount!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's amazing!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's like we split it right in half with scissors."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "723 bronze winners are each getting $2.76."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's the good news."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's good money, this is a fun game, and there's like over already almost 2,000 winners, and we're only halfway through today's game."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "For you pessimists, the show is half over, as I just said."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "For you optimists, we still got half of the show to go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "For the realists, the time remaining in the show is roughly equivalent to the time that already passed."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's play round two for another $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "$3,000 for gold, $2,500 for silver, and $2,000 for bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neal, load that ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, thing loaded now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That was fun."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I like that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I like when there's a lot of winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know it means something when, you know, there's only two winners in the gold, but when 600 people are all—it's just more happy people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Down for cheap thrills."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Down for cheap thrills."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, people are submitting."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "People have ideas."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'll be honest, I don't have an idea yet."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5 seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "FrostyChopper77 said Sia."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "CardboardHelicopter said Mother Goose."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, down."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Goose down."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "For cheap thrills."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Popular soap alternative."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I want to know this answer, because I spend half the day with my soap."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What else can I use?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anything to keep myself clean."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5 seconds remaining on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "MovingPictures37 said stank."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "If you're not using the soap, you got your own stank."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's popular."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Where it's wise to underestimate."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Down for cheap thrills."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Popular soap alternative."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Where it's wise to underestimate."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10 seconds remaining on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10,000 submissions already."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Squintz1111 said cologne."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, you want to underestimate."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A lot of those people, a lot, that gets me at Starbucks in the morning."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There is a guy in line in front of me that almost knocks me out every day."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And he's got this, he tells me he got it from a, I'm kidding."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, ChosenSwamp109, I'm not kidding."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He shows me every day how close he got to the..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You smell like a beautiful soap alternative!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I now I'm sweating."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm serious."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm not, that wasn't even a joke."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I feel like I insulted somebody."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I didn't."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, anyway, let's move on."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, clue number four."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One dollar can go a long way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sid, you smell beautiful."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh god."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost uh, 15,000 submissions already."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up on this one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "DavidDares44 said Thailand."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One dollar goes a long way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I have a feeling that some of you like to play the game and some of you are just answering questions."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Final chance, final shot at $7,500 for today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number five."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is this game show fun? Very! Just ask Bob Barker or Drew Carey."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good point."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm not supposed to add to the clues, but we added another country to this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Canada, you're on board."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what I'm talking about."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "American show."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But okay, 10 seconds left."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And uh, 4, 3, 2, 1."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, MacQuino514 said Jeopardy!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Drew Carey, Bob Barker, and me in Canada?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what, let's, let's break the tension."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neal, open the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is THE PRICE IS RIGHT!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "True, there's Bob."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You don't have a picture of me from the Canadian show?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I hosted in Canada, it's called The Price Is Right tonight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you couldn't get a picture of me?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know who you could have called."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who is taking the prize."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “IS THIS GAME SHOW FUN? VERY! JUST ASK BOB BARKER OR DREW CAREY.” Bob Barker and Drew Carey are both iconic hosts of The Price Is Right. 5,048 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “ONE DOLLAR CAN GO A LONG WAY.” Guessing one dollar can get you on the stage, and landing on the dollar on the wheel gets you extra money. 768 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “WHERE IT'S WISE TO UNDERESTIMATE.” If you go over the price, you are out, so it is better to underestimate. 964 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “POPULAR SOAP ALTERNATIVE.” It is a daytime TV show you can watch instead of a soap opera. 36 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “DOWN FOR CHEAP THRILLS.” You come on down from the audience to compete in a thrilling game show about everyday prices and deals. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 36 winners at $83.33 each. Silver (Clue 3): 964 winners at $2.59 each. Bronze (Clue 4): 768 winners at $2.60 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, clue number five."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is the game show fun?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Very!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Just ask Bob Barker and Drew Carey."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You just couldn't find anything, you can't find anything to rhyme with Howie."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, they're both iconic hosts of The Price Is Right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So am I."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh, we had uh, 5,555 guesses, 5,048 of you got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A dollar can go a long way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know guessing uh, one dollar can get you on the stage if the other contestants all go over, plus if you land on the dollar on the wheel you get extra money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Because I'm a host, I know how that works."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A dollar goes a long way."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, so anyway, uh, 2,996 guesses, 768 of you are the new gold standard right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Are you standing there, or are we about to find out where it is wise to underestimate?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Where it, well it, because you're, if you go over, you're out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You can't, you got to always, it's better to be underestimating."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm telling you how to win."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I hosted."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5,109 of you guessed, 964 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Popular soap alternative."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now it makes sense."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a daytime TV show you can watch instead of a soap opera."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Instead of my soap, I'm gonna watch the game."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,304 of you guessed, 36 of you guessed correctly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Down for cheap thrills."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You come on down from the audience to compete in a thrilling game show about everyday prices and deals."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Come on down!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4,705 of you came on down to try your best at your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All of you, go back up, because none of you got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So our gold standards are the uh, 36 people each getting $83.33."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, third clue is the silver people, 964 of you are getting $2.59."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the bronze people, 768 of you are getting $2.60."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations gold guessers, NumbChuckle33, asking for a friend, and Gfunk29."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "And that is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all the winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We are here every weekday at 8 Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So come on back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Goodnight!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How do you not know I host The Price Is Right tonight in Canada?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How could you leave me out of it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm right here!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm right here, is this not a clue enough for you people?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "See you later people."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [ZIPPER, PIZZA, CLIPPERS, ELECTION, RELAY RACE]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [SIA, HAND SANITIZER, DEODORANT, ROLLER COASTER, PERFUME]"
+          }
+        ]
+      }
+    ]
   }
 ]

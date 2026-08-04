@@ -3692,6 +3692,30 @@
       "bronzeClue": 3,
       "totalPlayers": 19681,
       "dataStatus": "partial"
+    },
+    {
+      "date": "Monday, August 3, 2026",
+      "secretItem": "SCISSORS",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 1923,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, August 3, 2026",
+      "secretItem": "THE PRICE IS RIGHT",
+      "pot": 7500,
+      "host": "Howie Mandel",
+      "format": "v2",
+      "totalWinners": 1768,
+      "clueCount": 5,
+      "goldClue": 2,
+      "silverClue": 3,
+      "bronzeClue": 4
     }
   ]
 }
