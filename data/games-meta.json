@@ -3667,20 +3667,6 @@
     },
     {
       "date": "Friday, July 31, 2026",
-      "secretItem": "PITBULL",
-      "pot": 7500,
-      "host": "Corinne Foxx",
-      "format": "v2",
-      "totalWinners": 124,
-      "clueCount": 5,
-      "goldClue": 1,
-      "silverClue": 2,
-      "bronzeClue": 3,
-      "totalPlayers": 19681,
-      "dataStatus": "partial"
-    },
-    {
-      "date": "Friday, July 31, 2026",
       "secretItem": "PINEAPPLE",
       "pot": 7500,
       "host": "Corinne Foxx",
@@ -3690,8 +3676,20 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3,
-      "totalPlayers": 19681,
-      "dataStatus": "partial"
+      "totalPlayers": 19681
+    },
+    {
+      "date": "Friday, July 31, 2026",
+      "secretItem": "PITBULL",
+      "pot": 7500,
+      "host": "Corinne Foxx",
+      "format": "v2",
+      "totalWinners": 124,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3,
+      "totalPlayers": 19681
     },
     {
       "date": "Monday, August 3, 2026",
