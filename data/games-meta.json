@@ -3714,6 +3714,30 @@
       "goldClue": 2,
       "silverClue": 3,
       "bronzeClue": 4
+    },
+    {
+      "date": "Tuesday, August 4, 2026",
+      "secretItem": "PICKLE",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 5277,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 3,
+      "bronzeClue": 4
+    },
+    {
+      "date": "Tuesday, August 4, 2026",
+      "secretItem": "OLYMPICS",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 2027,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }

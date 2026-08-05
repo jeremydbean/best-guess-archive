@@ -17059,5 +17059,119 @@
         "explanation": "Bob Barker and Drew Carey are both iconic hosts of The Price Is Right."
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 4, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "PICKLE",
+    "goldClue": 1,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 1,
+    "silverWinners": 248,
+    "bronzeWinners": 5028,
+    "totalWinners": 5277,
+    "goldPayout": 3000,
+    "silverPayout": 10.08,
+    "bronzePayout": 0.39,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Dreamy Music 688",
+    "wrongGuesses": "NEW YEARS EVE, POPSICLE, EARTH, ICE CREAM, TIMES SQUARE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "USED TO BE A LOT COOLER",
+        "correct": "1",
+        "guesses": "3,389 🥇",
+        "explanation": "Pickles start out as cucumbers, relating to the phrase cool as a cucumber."
+      },
+      {
+        "number": 2,
+        "text": "WE KINDA DROPPED THE BALL ON THIS ONE",
+        "correct": "0",
+        "guesses": "3,888",
+        "explanation": "Dropping the word ball from pickleball leaves you with pickle."
+      },
+      {
+        "number": 3,
+        "text": "HAS AN “ICK,” BUT WILL HAVE YOU SAYING “YUM”",
+        "correct": "248",
+        "guesses": "3,278 🥈",
+        "explanation": "The word pickle contains the letters I-C-K."
+      },
+      {
+        "number": 4,
+        "text": "THE EXPECTING MAY CRAVE ONE WITH ICE CREAM, UNEXPECTEDLY",
+        "correct": "5,028",
+        "guesses": "6,719 🥉",
+        "explanation": "Pickles and ice cream are a classic pregnancy craving."
+      },
+      {
+        "number": 5,
+        "text": "SOUR, SWEET, OR KOSHER DILL: HIT THE DELI AND GET YOUR FILL",
+        "correct": "3,457",
+        "guesses": "3,669",
+        "explanation": "Sour, sweet, and kosher dill are three classic styles of pickles."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, August 4, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "OLYMPICS",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 59,
+    "silverWinners": 376,
+    "bronzeWinners": 1592,
+    "totalWinners": 2027,
+    "goldPayout": 50.84,
+    "silverPayout": 6.64,
+    "bronzePayout": 1.25,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Sicily, Money Maker",
+    "wrongGuesses": "LEAP YEAR, OLYMPIC, GRADUATION, INSTAGRAM, POLICE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "INSPIRING REWARDS PROGRAM",
+        "correct": "59",
+        "guesses": "2,405 🥇",
+        "explanation": "The gold, silver, and bronze medals inspire the athletes."
+      },
+      {
+        "number": 2,
+        "text": "MORE THAN ONE PHOTO FINISH",
+        "correct": "376",
+        "guesses": "3,673 🥈",
+        "explanation": "The word finishes with pics, sounding like more than one photo."
+      },
+      {
+        "number": 3,
+        "text": "ONE O, FIVE O'S",
+        "correct": "1,592",
+        "guesses": "3,866 🥉",
+        "explanation": "The word has one O, and the logo is five interlocking rings resembling O's."
+      },
+      {
+        "number": 4,
+        "text": "WHERE SUMMER AND WINTER HAPPEN EVERY FOUR YEARS",
+        "correct": "4,853",
+        "guesses": "6,682",
+        "explanation": "The Summer and Winter Olympics occur every four years."
+      },
+      {
+        "number": 5,
+        "text": "WORLDWIDE ATHLETIC GAMES FAMED FOR MEDALS, RINGS, & FLAMES",
+        "correct": "3,674",
+        "guesses": "3,955",
+        "explanation": "Medals, rings, and flames are the three iconic symbols of the games."
+      }
+    ]
   }
 ]
