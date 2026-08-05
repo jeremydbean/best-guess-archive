@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-04 (daily puzzle added)
+Last updated: 2026-08-04 (episode imported)
+
+## Most Recent Changes (2026-08-04, continued)
+
+- **Live episode imported — Tuesday, August 4, 2026 (PICKLE / OLYMPICS), host Hunter March**: Two v2 rounds added to `data/games-2026.json` plus a 380-line transcript. All six tier payouts recomputed with `floorCents` rather than trusting the supplied figures; every one matched, as did both `totalWinners` sums. Both secret items are new to the archive. `npm run audit:fix && npm run audit` passes 0/0 (343 games, 172 transcripts).
+- **Round 1 is an unusual shape worth noting**: clue 2 (`WE KINDA DROPPED THE BALL ON THIS ONE`, the pickleball-minus-ball wordplay) drew 3,888 guesses and **zero** correct answers, so the medal tiers land on clues **1, 3, and 4** rather than 1/2/3. This is *not* a pot redistribution — redistribution applies when a *tier* has no winners, and here all three tiers do; clue 2 is simply skipped when assigning tiers, and the pots stay at the full $3,000/$2,500/$2,000. Clue 1 was then solved by exactly **one** player, who takes the entire gold pot of $3,000 (`Dreamy Music 688`). Stored `goldPayout` as the bare integer `3000` to match the archive's existing 92 whole-dollar payout values.
+- **Transcript has an unusually long Intro (103 lines)** because an app outage during the open forced the show to run a "best of" reel mid-broadcast. That reel is transcribed inline and brings in `Speaker 1` / `Speaker 2` / `Speaker 3` (all already-established speaker labels in this archive) plus stray clue readings from *other* episodes ("the truth hurts", "can be very nosey", "extremely far-sighted in one eye"). Those stray clues live only in the Intro, so they cannot affect the audit's `result-missing-clue` check, which reads Results sections only.
+- **One structural normalization**: the host's sign-off ("That's it for this episode… Good night!") arrived at the tail of the raw Round 2 Results block. Filed those seven lines under `Outro` instead, matching how every other episode in the archive is sectioned. No wording was changed.
+- **Not discrepancies, for the record**: Hunter says "a little over $50" for gold and "$6.60 each" for silver in round 2, where the verified values are $50.84 and $6.64. Both are casual on-air approximations rather than stated-precise-but-wrong figures, so nothing was flagged or adjusted.
+- **⚠️ Pre-existing display inconsistency spotted (not introduced here, not fixed)**: the same payout renders as `$3,000.00` in the Database row (which uses `toLocaleString`) but `$3000.00` in the details modal (which uses bare `toFixed(2)` via the `fmt2` helper). PICKLE's $3,000 gold makes it visible, but it affects **44 games** in the archive that have any payout ≥ $1,000. Left alone as out of scope for a data import; a one-line change to the modal's `fmt2` would align them.
 
 ## Most Recent Changes (2026-08-04)
 
