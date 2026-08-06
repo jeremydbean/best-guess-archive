@@ -2323,5 +2323,36 @@
         "explanation": "Libraries are big, comfortable, and full of books."
       }
     ]
+  },
+  {
+    "date": "Thursday, August 6, 2026",
+    "secretItem": "DESERT",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "BAKED MULTI-GRAINS",
+        "explanation": "There are many grains of sand that have been baking in the sun."
+      },
+      {
+        "clueNumber": 2,
+        "text": "ADD A LETTER FOR SOMETHING MUCH SWEETER",
+        "explanation": "If you add an \"S\" to desert, you get dessert."
+      },
+      {
+        "clueNumber": 3,
+        "text": "WHERE EVERYONE BECOMES AN OASIS FAN",
+        "explanation": "If you are in a desert, you will surely love an oasis."
+      },
+      {
+        "clueNumber": 4,
+        "text": "IT COULD PROBABLY USE A SHOWER",
+        "explanation": "Deserts are by definition very dry."
+      },
+      {
+        "clueNumber": 5,
+        "text": "NAME SOME, SHALL WE? HOW ABOUT THE SAHARA OR MOJAVE?",
+        "explanation": "Those are famous deserts."
+      }
+    ]
   }
 ]
