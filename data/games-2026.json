@@ -17173,5 +17173,119 @@
         "explanation": "Medals, rings, and flames are the three iconic symbols of the games."
       }
     ]
+  },
+  {
+    "date": "Wednesday, August 5, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "SHAKESPEARE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 6,
+    "silverWinners": 32,
+    "bronzeWinners": 499,
+    "totalWinners": 537,
+    "goldPayout": 500,
+    "silverPayout": 78.12,
+    "bronzePayout": 4,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "EpicMamaRaleigh, MillieEyes966, OdorlessPasta",
+    "wrongGuesses": "DIRECTOR, WIZARD OF OZ, SHAKESPEAR, STUNT DOUBLE, JAKE FROM STATE FARM",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BEHIND THE SCENES",
+        "correct": "6",
+        "guesses": "2,736 🥇",
+        "explanation": "He is the guy behind the scenes."
+      },
+      {
+        "number": 2,
+        "text": "MADE A QUESTIONABLE LIFE CHOICE",
+        "correct": "32",
+        "guesses": "2,894 🥈",
+        "explanation": "He created the line 'To be or not to be.'"
+      },
+      {
+        "number": 3,
+        "text": "NO MATTER THE WORK, HE'LL GIVE YOU A GOOD QUOTE",
+        "correct": "499",
+        "guesses": "5,254 🥉",
+        "explanation": "His classic works are endlessly quotable."
+      },
+      {
+        "number": 4,
+        "text": "MASTER OF WORDPLAY WHO COINED LOTS OF WORDS IN LOTS OF PLAYS",
+        "correct": "5,188",
+        "guesses": "6,550",
+        "explanation": "He coined countless words we still use in modern English in his plays."
+      },
+      {
+        "number": 5,
+        "text": "FAMOUS BRITISH THEATRICAL FELLOW WHO GAVE US HAMLET AND OTHELLO",
+        "correct": "2,384",
+        "guesses": "2,809",
+        "explanation": "If you were paying attention in school, you know it is Shakespeare."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, August 5, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "WAFFLE HOUSE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 3,
+    "silverWinners": 22,
+    "bronzeWinners": 58,
+    "totalWinners": 83,
+    "goldPayout": 1000,
+    "silverPayout": 113.63,
+    "bronzePayout": 34.48,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "BackupCamel, SlimOnion3, QuirkBaby",
+    "wrongGuesses": "RV, SUN, ENERGIZER BUNNY, GENERATOR, KITCHEN",
+    "clues": [
+      {
+        "number": 1,
+        "text": "24/7 BATTERY POWER",
+        "correct": "3",
+        "guesses": "3,813 🥇",
+        "explanation": "Waffle House is always open and provides calories in the form of waffle batter."
+      },
+      {
+        "number": 2,
+        "text": "I DUNNO, MAYBE AN APARTMENT'S BETTER",
+        "correct": "22",
+        "guesses": "3,126 🥈",
+        "explanation": "It is written in the voice of someone waffling about a house."
+      },
+      {
+        "number": 3,
+        "text": "HOME OF THE IRON CHEF",
+        "correct": "58",
+        "guesses": "3,608 🥉",
+        "explanation": "Their chefs are usually waffle irons."
+      },
+      {
+        "number": 4,
+        "text": "LOTS IN COMMON WITH IHOP, INCLUDING ITS SECOND WORD",
+        "correct": "1,305",
+        "guesses": "3,968",
+        "explanation": "They are both breakfast chains and each one's second word is 'House.'"
+      },
+      {
+        "number": 5,
+        "text": "BREAKFAST CHAIN BY THE SIDE OF THE ROAD, NAMED FOR AN EGGO ABODE",
+        "correct": "4,163",
+        "guesses": "4,830",
+        "explanation": "The abode of an Eggo is a waffle house."
+      }
+    ]
   }
 ]

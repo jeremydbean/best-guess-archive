@@ -2292,5 +2292,36 @@
         "explanation": "We just described all the major things about this major instrument!"
       }
     ]
+  },
+  {
+    "date": "Wednesday, August 5, 2026",
+    "secretItem": "LIBRARY",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "A TOTAL FREE-FOR-ALL",
+        "explanation": "Public libraries are free for all to use."
+      },
+      {
+        "clueNumber": 2,
+        "text": "EVERYONE GETS CARDED",
+        "explanation": "Don't forget your library card."
+      },
+      {
+        "clueNumber": 3,
+        "text": "OFFERS HIGH-INTEREST STUDENT LOANS",
+        "explanation": "They loan students books that they have a great interest in learning about."
+      },
+      {
+        "clueNumber": 4,
+        "text": "WATCH YOUR VOLUME AMONG THE VOLUMES",
+        "explanation": "You have to be quiet in the library among the volumes of books."
+      },
+      {
+        "clueNumber": 5,
+        "text": "BUILDING WITH MANY COZY NOOKS WHERE YOU CAN READ & CHECK OUT BOOKS",
+        "explanation": "Libraries are big, comfortable, and full of books."
+      }
+    ]
   }
 ]
