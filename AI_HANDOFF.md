@@ -1,6 +1,13 @@
 # AI Handoff
 
-Last updated: 2026-08-04 (episode imported)
+Last updated: 2026-08-05 (daily puzzle + episode imported)
+
+## Most Recent Changes (2026-08-05)
+
+- **Daily puzzle added — Wednesday, August 5, 2026: LIBRARY**: Appended to `data/daily-puzzles.json` (now 75 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #3, "OFFERS HIGH-INTEREST STUDENT LOANS"). Clues: A TOTAL FREE-FOR-ALL / EVERYONE GETS CARDED / OFFERS HIGH-INTEREST STUDENT LOANS / WATCH YOUR VOLUME AMONG THE VOLUMES / BUILDING WITH MANY COZY NOOKS WHERE YOU CAN READ & CHECK OUT BOOKS. Clue 5 follows the usual rhyming-giveaway pattern (nooks / books).
+- **Live episode imported — Wednesday, August 5, 2026 (SHAKESPEARE / WAFFLE HOUSE), host Hunter March**: Two v2 rounds added to `data/games-2026.json` plus a 259-line transcript. All six tier payouts recomputed with `floorCents` rather than trusting the supplied figures; every one matched, as did both `totalWinners` sums. Both secret items are new to the archive, and both rounds have the straightforward gold/silver/bronze = clue 1/2/3 shape. Whole-dollar payouts stored as bare ints per existing convention (`500`, `1000`, and bronze `4` — `floorCents(2000/499)` is 4.008, which floors to exactly $4.00; small integer payouts already have precedent in the data at 60 and 80).
+- **Transcript note**: the Intro again runs long (71 lines) because a second night of app-outage trouble had the show play a winners-reaction montage before round 1. That montage is transcribed inline under `Player 1` through `Player 5` speaker labels. This episode's raw transcript already had a properly separated Outro, so no section normalization was needed (unlike Aug 4).
+- **⚠️ Same pre-existing display inconsistency recurred (still not fixed)**: WAFFLE HOUSE's $1,000 gold renders as `$1000.00` in the details modal but `$1,000.00` in the Database row — the modal's `fmt2` helper uses a bare `toFixed(2)` while the row uses `toLocaleString`. This is the second consecutive episode to surface it; the affected-game count is now 46. Still left alone as out of scope for a data import.
 
 ## Most Recent Changes (2026-08-04, continued)
 
