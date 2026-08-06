@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-08-05 (daily puzzle + episode imported)
+Last updated: 2026-08-06 (daily puzzle added)
+
+## Most Recent Changes (2026-08-06)
+
+- **Daily puzzle added — Thursday, August 6, 2026: DESERT**: Appended to `data/daily-puzzles.json` (now 76 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #3, "WHERE EVERYONE BECOMES AN OASIS FAN"). Clues: BAKED MULTI-GRAINS / ADD A LETTER FOR SOMETHING MUCH SWEETER / WHERE EVERYONE BECOMES AN OASIS FAN / IT COULD PROBABLY USE A SHOWER / NAME SOME, SHALL WE? HOW ABOUT THE SAHARA OR MOJAVE?. Verified clue 2's premise before recording: inserting a single `S` into `DESERT` does yield `DESSERT` (the only other single-`S` insertion that forms a word is `DESERTS`, which the clue's "much sweeter" wording rules out). Clue 5 keeps the usual rhyming-giveaway shape (shall we / Mojave). `npm run audit` passes 0/0.
 
 ## Most Recent Changes (2026-08-05)
 
