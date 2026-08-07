@@ -1,6 +1,18 @@
 # AI Handoff
 
-Last updated: 2026-08-06 (money formatting unified)
+Last updated: 2026-08-06 (July 21 + July 1 backfilled from recordings)
+
+## Most Recent Changes (2026-08-06, continued 3)
+
+- **July 21, 2026 (HAMMOCK / NASA) — transcript recovered**: this date was the archive's one hollow transcript, 12 auto-derived summary lines and **zero** spoken dialogue. Now **145 lines / 131 spoken**, all six sections populated, including a guest video segment under a second speaker label (`Mooney`). Also filled `winnerNames` for both rounds (previously empty) and replaced NASA clue 2's public-facing placeholder ("Explanation pending — connection to NASA not yet confirmed") with the actual wordplay: NASA hides across the word gap in **tuNA SAlad, vienNA SAusage, bologNA SAndwiches** (verified by string containment, indices 2/4/5).
+- **What was deliberately NOT taken from the July 21 recording**: the archive's clue text, per-clue counts, and wrong guesses are screenshot-sourced, and the house rule in `docs/DAILY_IMPORT_PROMPT.md` is that screenshots beat audio. The recording's audio-derived versions were less accurate (`BALONEY` for `BOLOGNA`, `DOUBLE TREE` for `DOUBLETREE`, `A FEDERAL ORGANIZATION` for the card's `FEDERAL ORG.`) and its `wrongGuesses` were **empty**, which would have destroyed good data. All kept as-is.
+- **Two conflicts resolved in the archive's favour, one still open**:
+  - HAMMOCK clue 5 guesses — recording said **194**, archive says **1,904**. 194 is impossible (the clue has 1,735 *correct*, and guesses can never be fewer than correct). Archive kept.
+  - The archive's guess counts were independently corroborated by the host's on-air running totals: "over 14,000" ↔ 14,107 through clue 2; "more than 20,000" ↔ 20,002 through clue 3; "over 12,000" ↔ 11,959; "24,000 of you guessed" ↔ 23,477 round-2 total.
+  - ⚠️ **Still open** — NASA clue 5 correct: archive **5,801** vs recording **5,081**, a clean digit transposition with no arithmetic cross-check available (clue 5 is not a medal tier, so it does not feed `totalWinners`). Archive kept per the screenshot rule, but unresolved.
+- **July 1, 2026 (HOT AIR BALLOON / TYPO) — surgical patch only**: filled both rounds' `wrongGuesses`, which were empty and on the known-gaps list, and added a third gold guesser (`Coffee`) to TYPO's `winnerNames`. The transcript was **not** replaced: the archive's existing one (110 lines, well segmented across all six sections) is materially better than the supplied one, which arrived as ~25 run-on blobs with the outro duplicated into three different sections.
+- **July 1 conflicts left in the archive's favour**: clue 1 guesses — archive **5,409** vs recording **5,049** (transposition; the audio transcription renders it as a truncated "5,49" in both places it appears, so it cannot arbitrate). Secret item stays `HOT AIR BALLOON` rather than the recording's hyphenated `HOT-AIR BALLOON`, since the stored form is screenshot-sourced and is what the transcript cross-reference checks bind to.
+- Nice corroboration on July 1: the host remarks it is "the first day where Silver and Bronze are both going home with 56 cents", and `floorCents(2500/4461)` and `floorCents(2000/3546)` do both land on exactly **$0.56**.
 
 ## Most Recent Changes (2026-08-06, continued 2)
 
