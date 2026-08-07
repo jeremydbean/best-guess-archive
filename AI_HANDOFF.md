@@ -1,7 +1,18 @@
 # AI Handoff
 
-Last updated: 2026-08-06 (Dec 17 enriched; split-N/A corruption repaired)
+Last updated: 2026-08-06 (NotebookLM audio backfill pass)
 
+## Most Recent Changes (2026-08-06, continued 5)
+
+- **NotebookLM audio backfill — 44 queries in, 6 usable values out.** Applied: UGLY SWEATER c3 guesses **4,340** (Dec 19), PINOCCHIO c5 guesses **7,753** (Dec 22), CURLING IRON c1 guesses **16,000** (Dec 24), CAVITY c3 guesses **14,242** (Dec 29), KENTUCKY DERBY c2 guesses **10,259** and correct **6** (Jan 1), and SPARKLER `winnerNames` (May 7). Every value was checked before writing: each new guess count is >= that clue's correct count, and each sits inside the range of its round's other clue counts.
+- **The pass validated itself on 14 independent anchors.** Its notes quoted correct counts for CHATGPT (91/584/719), MOUNT RUSHMORE (48/127), S'MORES (1,838), TITANIC (30), GOODYEAR BLIMP (388), BIRTHDAY CAKE (45/175/662), PARIS HILTON (655) and MONOPOLY (15/2,516). **All 14 match the archive exactly** — strong evidence it was reading the right episodes rather than confabulating.
+- **The anti-inference rule earned its keep twice.** It withheld a garbled "3,55" (PINOCCHIO c4) and a garbled "7,31" on TELESCOPE c2, explicitly noting the latter was "likely 7,031 but omitted per strict rules". Both correctly returned `NOT_STATED` rather than a guessed number.
+- **KENTUCKY DERBY c2 correct=6 does not disturb the v1 tier logic**: clue 1 remains the earliest clue with winners (2 correct, and `floorCents(5000/2)` = the recorded $2,500.00), so `winningClue` stays 1 and those 6 players correctly win nothing.
+- **⚠️ The strategic finding: audio is close to exhausted for guess counts.** 38 of 44 queries returned `NOT_STATED`, and the notes show why — again and again the host announced the *correct* count and simply never said the total. The pass declared itself "audio only — cannot read on-screen text". **Remaining guess counts are a screenshot job, not an audio job**; re-running audio over these dates will not produce more. Winner names and wrong guesses also came back almost entirely empty (only SPARKLER), which points the same way.
+- Also confirmed: **Dec 8, 2025 round 1 (BARBIE) audio is missing** — only the round 2 (PICKLEBALL) recording exists. And **Jul 31, 2026 returned `EPISODE_NOT_FOUND`**, consistent with the long-standing knowledge that that episode was never recorded.
+- Remaining gaps after this pass: **78 guess counts, 7 correct counts, 12 winner-name slots, 4 wrong-guess slots.**
+
+## Most Recent Changes (2026-08-06, continued 4)
 ## Most Recent Changes (2026-08-06, continued 4)
 
 - **Repaired a data corruption affecting 8 clue slots across 4 months**: a literal `"N/A"` had been split across two fields during some early import, leaving `correct: "N"` and `guesses: "A / N/A"`. Both fields now read a clean `"N/A"`. Affected: SANDCASTLE c5 (Dec 30), CAVITY c5 (Dec 29), CRUTCHES c3 (Dec 25), RUDOLPH c4 + c5 (Dec 17), BOWLING c5 (Dec 16), KENTUCKY DERBY c2 + c5 (Jan 1). Found incidentally while checking a Gemini backfill result — worth grepping for similar split-token damage if other odd field values turn up.

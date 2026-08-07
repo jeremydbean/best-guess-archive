@@ -8518,8 +8518,8 @@
       },
       {
         "text": "TEAMS OF TWO BECOME ONE",
-        "correct": "N/A",
-        "guesses": "N/A",
+        "correct": "6",
+        "guesses": "10,259",
         "explanation": "Teams of two become one - \"the horse and the jockey are working together it's always they become one it's not the horse the horse and the jockey are one\""
       },
       {
@@ -9723,7 +9723,7 @@
     "silverPayout": 1.07,
     "bronzePayout": 0,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "Mashe Ray, cool editor, Little Tur",
     "wrongGuesses": "JENGA, MIND, THIRD EYE, MINI FRIDGE, ATM, SIXTH SENSE",
     "clues": [
       {
