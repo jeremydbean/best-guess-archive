@@ -26,4 +26,9 @@ jobs:
           git checkout main
           git merge --no-ff origin/${{ github.ref_name }} -m "Auto-merge ${{ github.ref_name }} into main"
           git push origin main
-          git push origin --delete ${{ github.ref_name }}
+          # Branch cleanup is best-effort. When two commits are pushed in quick
+          # succession, both runs merge fine but the second finds the branch
+          # already deleted by the first. That must not fail the run — the merge
+          # has already succeeded by this point.
+          git push origin --delete ${{ github.ref_name }} || \
+            echo "Branch ${{ github.ref_name }} already deleted; nothing to clean up."
