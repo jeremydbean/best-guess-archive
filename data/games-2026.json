@@ -3923,7 +3923,7 @@
     "bronzePayout": 0,
     "winnerPayout": "$5,000.00",
     "winnerNames": "GNOVABORN, PERRYANDMIKA",
-    "wrongGuesses": "",
+    "wrongGuesses": "COW, WATER, SLIME, PEAR, PIG",
     "winningClue": 1,
     "winnerCount": 2
   },
@@ -7365,7 +7365,7 @@
     "bronzePayout": 0,
     "winnerPayout": "$416.66",
     "winnerNames": "Mr bean 54, Super Sam R, Q Spark Licko 85",
-    "wrongGuesses": "",
+    "wrongGuesses": "UNDERWEAR, PINK PANTHER, JAMES BOND, 007, INSPECTOR GADGET",
     "winningClue": 3,
     "winnerCount": 12
   },
@@ -8013,7 +8013,7 @@
     "bronzePayout": 0,
     "winnerPayout": "$4.41",
     "winnerNames": "Names not read",
-    "wrongGuesses": "",
+    "wrongGuesses": "ROSE, ARROW, AIRPLANE, HEART, ROSES",
     "winningClue": 1,
     "winnerCount": 1132
   },
@@ -10762,7 +10762,7 @@
     "bronzePayout": 0,
     "winnerPayout": "$2,500.00",
     "winnerNames": "Sunny for Days, King Nar Feller Knight",
-    "wrongGuesses": ""
+    "wrongGuesses": "PICTURE, BUGS BUNNY, MUSIC, EXTREME, SONG"
   },
   {
     "date": "Wednesday, May 20, 2026",
