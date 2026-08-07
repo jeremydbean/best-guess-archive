@@ -13,7 +13,6 @@ Last updated: 2026-08-06 (NotebookLM audio backfill pass)
 - Remaining gaps after this pass: **78 guess counts, 7 correct counts, 12 winner-name slots, 4 wrong-guess slots.**
 
 ## Most Recent Changes (2026-08-06, continued 4)
-## Most Recent Changes (2026-08-06, continued 4)
 
 - **Repaired a data corruption affecting 8 clue slots across 4 months**: a literal `"N/A"` had been split across two fields during some early import, leaving `correct: "N"` and `guesses: "A / N/A"`. Both fields now read a clean `"N/A"`. Affected: SANDCASTLE c5 (Dec 30), CAVITY c5 (Dec 29), CRUTCHES c3 (Dec 25), RUDOLPH c4 + c5 (Dec 17), BOWLING c5 (Dec 16), KENTUCKY DERBY c2 + c5 (Jan 1). Found incidentally while checking a Gemini backfill result — worth grepping for similar split-token damage if other odd field values turn up.
 - **Dec 17, 2025 transcript enriched from the recording — 70 → 212 lines**: Intro 9→44, Round 1 23→96, Round 1 Results 7→41. This is the episode with the week-two technical meltdown, where clues auto-advanced out from under the host; the recovered dialogue captures the whole thing. **Round 2, Round 2 Results and Outro were deliberately kept**, because the recording only covered the pre-break portion and the stored round-2 text is better segmented (21 lines averaging 253 chars vs the supplied 17 run-on blobs averaging ~330 and peaking at ~700).
