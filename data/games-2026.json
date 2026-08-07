@@ -8518,8 +8518,8 @@
       },
       {
         "text": "TEAMS OF TWO BECOME ONE",
-        "correct": "N",
-        "guesses": "A / N/A",
+        "correct": "N/A",
+        "guesses": "N/A",
         "explanation": "Teams of two become one - \"the horse and the jockey are working together it's always they become one it's not the horse the horse and the jockey are one\""
       },
       {
@@ -8536,8 +8536,8 @@
       },
       {
         "text": "DON'T STOP FOR LONG THESE HORSES RUN FOR ROSES",
-        "correct": "N",
-        "guesses": "A / N/A",
+        "correct": "N/A",
+        "guesses": "N/A",
         "explanation": "Don't stop for long these horses run for roses - \"like a furlong right these horses run for the roses a furlong is the unit of measurement that the in the horse race and the Kentucky Derby they run for the roses\""
       }
     ],
