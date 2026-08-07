@@ -1,6 +1,13 @@
 # AI Handoff
 
-Last updated: 2026-08-06 (NotebookLM audio backfill pass)
+Last updated: 2026-08-06 (all wrong-guess gaps closed from screenshots)
+
+## Most Recent Changes (2026-08-06, continued 6)
+
+- **All four missing "Most Submitted Wrong Guesses" sets filled from screenshots — `wrongGuesses` gaps are now zero.** EIFFEL TOWER (Jan 8): ROSE, ARROW, AIRPLANE, HEART, ROSES. VICTORIA'S SECRET (Jan 16): UNDERWEAR, PINK PANTHER, JAMES BOND, 007, INSPECTOR GADGET. MADISON SQUARE GARDEN (Mar 3): COW, WATER, SLIME, PEAR, PIG. BAD BUNNY (May 19): PICTURE, BUGS BUNNY, MUSIC, EXTREME, SONG. Each transcript's Outro note lines were regenerated to match.
+- **The sibling-round anchor validated every capture.** Each screenshot shows both puzzles, so the round we already had confirmed the episode: May 19's PUZZLE 1 reproduced the stored MAGNET list *exactly* (HUG, HUDDLE, UMBRELLA, STAR WARS, FISHING), and clue text confirmed the rest — EIFFEL TOWER's "ENDLESSLY ROMANTIC...TO A POINT" explains rose/heart/arrow, UNICYCLE's "INTIMIDATING ROCK 'N ROLL STAR" explains Ozzy/Gene Simmons/Elvis, and MADISON SQUARE GARDEN's "DOESN'T PRODUCE PRODUCE" explains cow/pear/pig. A Jan 8 YouTube screenshot also carried the on-card highlight "1132 players guessed the correct answer on the first clue", matching EIFFEL TOWER clue 1's stored correct count of 1,132 exactly.
+- **⚠️ Discovered inconsistency — early `wrongGuesses` are a different kind of data.** The on-screen card shows exactly **five** entries per puzzle, and modern v2 entries match it exactly (MAGNET). But several early v1 entries hold **longer** lists that do *not* match the card: REVENGE stores 8 (YO-YO, MIRROR, TENNIS, CONTACTS, WINK, HOCKEY, ELEPHANT, NO IDEA) where the card shows BOOMERANG, MIRROR, WINK, REFLECTION, KARMA — only two overlap. UNICYCLE stores 11, SNOOZE BUTTON 6. Entries like "NO IDEA", "A LION", "A CAT", "AN ELEPHANT" (indefinite articles, conversational phrasing) read as **host ad-lib callouts during play**, not card entries. So the field currently mixes two sources across eras. Left as-is pending a decision: the longer lists are real information, just not the same statistic. Worth resolving before anyone treats `wrongGuesses` as uniform.
+- **Not recorded**: the Jan 8 card also showed a live player counter of **11,977**. Deliberately not written to `totalPlayers` — that counter reads concurrent players at the results screen, which is not obviously the same statistic (Jan 8's per-clue guess totals sum to 72,782 and 66,098), and this is the same ambiguity already flagged for PINEAPPLE.
 
 ## Most Recent Changes (2026-08-06, continued 5)
 

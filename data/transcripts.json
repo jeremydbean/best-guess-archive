@@ -7118,6 +7118,14 @@
           {
             "speaker": "Howie Mandel",
             "text": "Congratulations again to every one of the winners. We are here every weekday at 8 Eastern, 5 Pacific. Hunter will be back tomorrow to finish out the week, but I’m telling you, there are things coming up. Don’t miss one day inclusive! That—well, that’s technically not true, but you get it. Anyway… whoa! Is that a wire? Good night!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [ROSE, ARROW, AIRPLANE, HEART, ROSES]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [STEAK, CARROTS, MOSH PIT, PANDA, SUSHI, CHER, A LION, WOLF, A CAT, THRONE, AN ELEPHANT]"
           }
         ]
       }
@@ -8782,6 +8790,14 @@
           {
             "speaker": "Howie Mandel",
             "text": "We’re here every weekday at 8 Eastern, 5 Pacific. Wild Wednesdays are coming back, so come back Monday and don’t forget to bring your—don’t forget to bring your best guest. Good night, everybody! Stop it! Stop it! Stop it! Hey! Do you want me?"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [UNDERWEAR, PINK PANTHER, JAMES BOND, 007, INSPECTOR GADGET]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [SMOKE SIGNALS, MOP, DOG TREATS, DEFIBRILLATOR, SLEEP, NO]"
           }
         ]
       }
@@ -16981,6 +16997,14 @@
           {
             "speaker": "Howie Mandel",
             "text": "I approve that message. We’ll see you tomorrow! Good night!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [YO-YO, MIRROR, TENNIS, CONTACTS, WINK, HOCKEY, ELEPHANT, NO IDEA]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [COW, WATER, SLIME, PEAR, PIG]"
           }
         ]
       }
@@ -34381,7 +34405,7 @@
           },
           {
             "speaker": null,
-            "text": "Popular wrong guesses, Round 2: []"
+            "text": "Popular wrong guesses, Round 2: [PICTURE, BUGS BUNNY, MUSIC, EXTREME, SONG]"
           }
         ]
       }
