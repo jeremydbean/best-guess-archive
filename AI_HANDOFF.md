@@ -1,6 +1,14 @@
 # AI Handoff
 
-Last updated: 2026-08-06 (July 21 + July 1 backfilled from recordings)
+Last updated: 2026-08-06 (Dec 17 enriched; split-N/A corruption repaired)
+
+## Most Recent Changes (2026-08-06, continued 4)
+
+- **Repaired a data corruption affecting 8 clue slots across 4 months**: a literal `"N/A"` had been split across two fields during some early import, leaving `correct: "N"` and `guesses: "A / N/A"`. Both fields now read a clean `"N/A"`. Affected: SANDCASTLE c5 (Dec 30), CAVITY c5 (Dec 29), CRUTCHES c3 (Dec 25), RUDOLPH c4 + c5 (Dec 17), BOWLING c5 (Dec 16), KENTUCKY DERBY c2 + c5 (Jan 1). Found incidentally while checking a Gemini backfill result — worth grepping for similar split-token damage if other odd field values turn up.
+- **Dec 17, 2025 transcript enriched from the recording — 70 → 212 lines**: Intro 9→44, Round 1 23→96, Round 1 Results 7→41. This is the episode with the week-two technical meltdown, where clues auto-advanced out from under the host; the recovered dialogue captures the whole thing. **Round 2, Round 2 Results and Outro were deliberately kept**, because the recording only covered the pre-break portion and the stored round-2 text is better segmented (21 lines averaging 253 chars vs the supplied 17 run-on blobs averaging ~330 and peaking at ~700).
+- **Dec 17's remaining 7 guess-count gaps are confirmed unrecoverable from audio.** Two independent Gemini passes (one per video — the show broke mid-episode and resumed at 5:20) both returned `NOT_STATED`. Round 1 clues 2/4/5 were never announced because the technical fault ate the timers; Round 2 clues 2–5 were never announced because the host read out only correct counts that night. Recovered numbers that *were* spoken corroborate the archive exactly: "346 submitted answers" ↔ stored 346, "6,594 people guessed" ↔ stored 6,594, "2,165 people tried to guess" ↔ stored 2,165.
+- **⚠️ Method note for future backfills**: the first Gemini pass wrongly concluded "Round 2 was postponed / not broadcast" and returned a transcript containing only round 1. The archive disproved it — the stored Round 2 opens with "Start broadcast. Come on everybody, we're live!", the 5:20 resumption. A second pass over the second video corrected it. Also, Gemini stated plainly that it **cannot read the on-screen results card**, only spoken audio. So `NOT_STATED` means "not spoken", *not* "not in the video" — where a guess count is displayed but never read aloud, **screenshots of the results screen are the only way to get it**, and an audio pass will never find it no matter how many times it is run.
+- **Dec 16, 2025 recording does not exist** (confirmed by the user and by `EPISODE_NOT_FOUND` on both passes). Its 9 gaps are permanent; do not re-hunt it.
 
 ## Most Recent Changes (2026-08-06, continued 3)
 
