@@ -1,6 +1,10 @@
 # AI Handoff
 
-Last updated: 2026-08-06 (all wrong-guess gaps closed from screenshots)
+Last updated: 2026-08-07 (daily puzzle added)
+
+## Most Recent Changes (2026-08-07)
+
+- **Daily puzzle added — Friday, August 7, 2026: JIM CARREY**: Appended to `data/daily-puzzles.json` (now 77 entries). Screenshot showed all five clues with explanations pre-expanded (answered on clue #2, "GOT BIG WITH A DUMB IDEA"). Clues: THE ONE TRUE MAN / GOT BIG WITH A DUMB IDEA / HE STOLE FROM WHO? / FAMOUS FOR JOKIN', THIS GUY IS SMOKIN'! / ACTOR WHO'S COMEDICALLY EFFECTIVE AS ACE VENTURA, PET DETECTIVE. Clue 1 is a nice one — "THE ONE TRUE MAN" splits to TRUE MAN → Truman Show. Clue 5 keeps the usual rhyming-giveaway shape (effective / detective). Explanations reused from the screenshot's own text in sentence case; clue 3's "the Who's" apostrophe is the show's own rendering, left as displayed. `npm run audit` passes 0/0.
 
 ## Most Recent Changes (2026-08-06, continued 6)
 
