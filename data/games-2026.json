@@ -14279,7 +14279,7 @@
     "bronzePayout": 0.56,
     "winnerPayout": "$7,500.00",
     "winnerNames": "MlyC, Poison Ivy, Dramatic Cake, Bumpy Birdie",
-    "wrongGuesses": "",
+    "wrongGuesses": "BREAD, NATIONAL ANTHEM, YEAST, DOUGH, SOURDOUGH",
     "adminNote": "“Balloon” was also accepted as a correct answer for this puzzle.",
     "clues": [
       {
@@ -14340,8 +14340,8 @@
     "silverPayout": 27.17,
     "bronzePayout": 3.75,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "CordialTea, SlimOnion",
-    "wrongGuesses": "",
+    "winnerNames": "CordialTea, SlimOnion, Coffee",
+    "wrongGuesses": "FLAT, BURP, BURPING, YELLING, NO",
     "clues": [
       {
         "number": 1,
@@ -15919,7 +15919,7 @@
     "silverPayout": 1.01,
     "bronzePayout": 1.29,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "Takai, Biggins 1000, Diver JC1950, Medium Pigeon 52",
     "wrongGuesses": "SWING, ROCKING CHAIR, RECLINER, HYPNOSIS, VACATION",
     "clues": [
       {
@@ -15976,7 +15976,7 @@
     "silverPayout": 3.62,
     "bronzePayout": 6.71,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "Madame Bell One, Muddy Granite 161, Zack Polly",
     "wrongGuesses": "ROOSTER, BREAD, SUN, YEAST, CHICKEN",
     "clues": [
       {
@@ -15991,7 +15991,7 @@
         "text": "FOUND IN TUNA SALAD, VIENNA SAUSAGE, & BOLOGNA SANDWICHES",
         "correct": "347",
         "guesses": "4,348 🥇",
-        "explanation": "Explanation pending — connection to NASA not yet confirmed."
+        "explanation": "Each of those foods hides the letters NASA across the gap between its two words: tuNA SAlad, vienNA SAusage, bologNA SAndwiches."
       },
       {
         "number": 3,
