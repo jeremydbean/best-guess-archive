@@ -2354,5 +2354,36 @@
         "explanation": "Those are famous deserts."
       }
     ]
+  },
+  {
+    "date": "Friday, August 7, 2026",
+    "secretItem": "JIM CARREY",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "THE ONE TRUE MAN",
+        "explanation": "He starred in The Truman Show."
+      },
+      {
+        "clueNumber": 2,
+        "text": "GOT BIG WITH A DUMB IDEA",
+        "explanation": "He became famous with Dumb and Dumber."
+      },
+      {
+        "clueNumber": 3,
+        "text": "HE STOLE FROM WHO?",
+        "explanation": "As the Grinch, he stole from the Who's."
+      },
+      {
+        "clueNumber": 4,
+        "text": "FAMOUS FOR JOKIN', THIS GUY IS SMOKIN'!",
+        "explanation": "\"Smokin!\" was a famous catch phrase from The Mask."
+      },
+      {
+        "clueNumber": 5,
+        "text": "ACTOR WHO'S COMEDICALLY EFFECTIVE AS ACE VENTURA, PET DETECTIVE",
+        "explanation": "It's Jim Carrey! Alrighty then!"
+      }
+    ]
   }
 ]
