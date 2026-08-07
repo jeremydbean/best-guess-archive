@@ -88974,5 +88974,851 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, August 6, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "MARS",
+      "HONEYMOON"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "MARS",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "THE NEXT BIG THING",
+          "MOVE YOUR ARMS AROUND",
+          "FOUR LETTERS LONG, FOURTH IN A SERIES",
+          "WE'RE NOT TALKING ABOUT BRUNO",
+          "IT'S RED LIKE A POMEGRANATE, BUT IT'S NOT A FRUIT - IT'S A PLANET"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "HONEYMOON",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "NOT A SINGLE THING TO DO",
+          "SWEET AND OUT OF THIS WORLD",
+          "RESULT OF A PRENUPTIAL AGREEMENT",
+          "YOU LOVE BIRDS MUST BE TRIPPIN'",
+          "ROMANTIC GETAWAY FOR TWO, RIGHT AFTER YOU SAY “I DO”"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello, how are we?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to the show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm your host Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We are going to try something new tonight based on a suggestion from one of you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yesterday a poster on Reddit shared an idea that the host should write their guesses down on a white board so that we can actually play along."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Listen, I think you're making it seem like a fun play-along, I think you guys are testing me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And I'm happy to play along with this, uh, I love this idea, so for tonight we have the official Best Guess Live host whiteboard right here."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you guys want one just like this, go to any store ever that sells whiteboards, it's the most special."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, but now I'm playing just like you, don't worry, not eligible for the prize money, uh, and considering how good I am at this game, I don't think that's a worry anyway."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, with that being said, get ready to share in some triumph, or mock me endlessly, we should have some fun."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "First the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds, each round has one puzzle, each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round we're gonna load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Remember the clues, I'm trying to draw a horse without looking right now... they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, after each clue you'll get 20 seconds to submit an answer but you only get one best guess per round, not one per clue, one per round so make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer and we don't accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I literally have been drawing for like 30 seconds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We might need a new marker."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Listen, they tried to sabotage me, but I caught it with the horse test."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, anyway, bottom line you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the Gold prize pot and throw it in 3, 2, 1... there we go."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in the correct answer on the earliest, uh, second earliest clue will split the Silver pot of $2,500 and everyone that gets it on the third earliest clue will split the, now it's gonna be way harder to draw a horse, I got barely any time left, uh, Bronze spot of $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk, let's win some money!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Woo!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round 1 is worth $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before we load the crystal ball, that's a horse."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, way less applause than I thought I was gonna get."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, here we go."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, ladies and gentlemen, I'm playing along with you guys."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got my puzzle board right here."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one, the next big thing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I know it, 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't make it so easy on the day I have the whiteboard."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The next big thing, I know it..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No, I don't know it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm actually gonna really try."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I could have done a bit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You guys have done plenty of bits for me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I could have wasted my guess on a bit for you, not gonna do it, too competitive."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The next big thing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Speaking of absolutely wasting a guess, someone said Best Guess Live the Movie."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I genuinely would love if you guys did some real guesses for this game where you get money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Move your arms around."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The next big thing, move your arms around."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, I want to see some good guesses coming in here."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Move your arms around."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I can't see your guesses, by the way, until after the timer has ended."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I have like barely, I have like five seconds, but I got to finish typing before the end, or it doesn't count."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Move your arms around, the next big thing, I don't have one yet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Delicate Anvil 209 said YMCA."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You definitely move your arms around, I don't imagine YMCAs are the next big thing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Cruisin and Yo 13 said muscles, move your arms around, the next big thing, that's honestly a good guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three might give it to us, though."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Four letters long, fourth in a series."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Four letters long, fourth in a series."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Fourth in a series..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Man, I don't know, the next big thing, move your arms around."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, looks like I'm moving on to clue number four with ya."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Four letters long and fourth in a series, really Riley put four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly, really Riley, uh, that's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I love that one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Speaking of, clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're not talking about Bruno."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're not talking about the next big thing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Move your arms... I know what it is!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, God, I should have had it sooner."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Trying to see if you guys can tell what I'm writing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I hope not."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly, I think someone got it on two, at the very least."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, we're not talking about Bruno."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Moldy Hat put Borat."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Different Sacha Baron Cohen characters."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good, very good, but clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's red like a pomegranate, but it's not a fruit, it's a planet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No, it's just a planet, but, it's a planet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds, your final 20 seconds for this first puzzle starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And seeing that does indeed make me think I might be close, but I won't spoil it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Who knows if I got it right, who knows if you got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I do think there is a chance we should all get this one right, though, on clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't think it'll happen, but I do think it's possible."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's red like a pomegranate, but it's not a fruit, it's a planet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answer was Mars!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yes, it, yeah, there we go!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And what did I put?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm just kidding, I wrote Mars earlier, yeah, I got it!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got it because of clue four, and I'll tell you what I was thinking, but I think a lot of people probably thought the same thing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll start with clue number five though."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “IT'S RED LIKE A POMEGRANATE, BUT IT'S NOT A FRUIT - IT'S A PLANET.” Mars is famously known as the red planet. 4,809 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “WE'RE NOT TALKING ABOUT BRUNO.” The answer is Mars the planet, not the singer Bruno Mars. 5,847 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “FOUR LETTERS LONG, FOURTH IN A SERIES.” The word Mars has four letters and it is the fourth planet from the sun. 335 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “MOVE YOUR ARMS AROUND.” Rearranging the letters in the word arms spells Mars. 49 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “THE NEXT BIG THING.” Planets are huge, and Mars is the next planet after Earth as you move away from the sun. 41 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 41 winners at $73.17 each. Silver (Clue 2): 49 winners at $51.02 each. Bronze (Clue 3): 335 winners at $5.97 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "41 people going home with $73 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a Netflix subscription for a few months."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then we have, uh, clue two, 49 people going home with $50."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And even on clue three, $6 to our 335 people getting 6 bucks each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not bad, 41 getting 73 dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Inquisitive Cat, BC5389, and Prince Omelet, much more."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "If you didn't win that round, I have something to make you feel better."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's another $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There we go, yeah, prize pots the same, 3,000 for Gold, 2,500 for Silver, 2,000 for Bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, here we go."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Throw load it up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And I'm playing again with you guys."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not a single thing to do."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Actually bummed that I just erased Mars 'cause it would still work."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mars has some of the worst nightlife."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, three seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not a single thing to do, ah, why did we have to move to Mars, Mom?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Crispy Veggies 11 said retirement."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, retirement, not a single thing to do, okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Best Wife 22 said date."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not a single thing to do... you should go on different dates."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I know things to do."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, clue number two, sweet and out of this world."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sweet and out of this world."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not a single thing to do, sweet and out of this world."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Man, three seconds left, sweet, out of this world."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, okay, sweet and out of this world, Hungry Hungry Bill put Alf."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I guess, very sweet, very out of this world."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, let's go to clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Result of a prenuptial agreement."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Result of a prenuptial agreement."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sweet and out of this world, not a single thing to do."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm gonna get it on clue four again I fear."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Result of a prenuptial agreement... result of a prenuptial agreement."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't get it in time, okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds over, result of a prenuptial agreement."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Golden Bunny put doubt."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good, that's really good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, okay, let's go to clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You love birds must be trippin'."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You love birds must be the next big thing... move your arms... I know what it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "God, I should have had it sooner."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Trying to see if you guys can tell what I'm writing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I hope not."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly, I think someone got it on two at the very least."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You love birds must be trippin'."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's get to clue number five, here we go."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Romantic getaway for two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Right after you say I do."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow, okay, they all make way more sense now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds, your final 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We can still get it people."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We can still get it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now, listen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Smarty pants, I think we all got it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The answer was... a honeymoon!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now, I spelled it wrong, but you guys get the idea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's pretty good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honeymoon."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Just kidding, I don't spell like that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, I just wanted to know what it would be like."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues hit to find out who's taking home the money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Start with clue number five, romantic getaway for two, right after you say I do."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “ROMANTIC GETAWAY FOR TWO, RIGHT AFTER YOU SAY “I DO”.” A honeymoon is a romantic getaway taken right after getting married. 5,443 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “YOU LOVE BIRDS MUST BE TRIPPIN'.” Newlyweds are known as love birds and they are taking a trip for their honeymoon. 1,816 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “RESULT OF A PRENUPTIAL AGREEMENT.” Couples plan their honeymoon together before they get married. 789 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “SWEET AND OUT OF THIS WORLD.” Honey is sweet, and the moon is out of this world. 355 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “NOT A SINGLE THING TO DO.” You have to be married to go on your honeymoon, meaning you are no longer single. 110 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 110 winners at $27.27 each. Silver (Clue 2): 355 winners at $7.04 each. Bronze (Clue 3): 789 winners at $2.53 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gold medal, $27.27 to Rad Bernie, Dear Harold, well I'm being good to you guys, hey good to know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then uh a bunch of Silver winners, 355 getting $7 each, it's a coffee."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "789 people getting $2.53, that's a drip."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners, we're here every weekday at 8 Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Goodnight!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [WAVE, QUAD, YMCA, HUG, ENCANTO]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [MARRIAGE, WEDDING, DIVORCE, DATE, TWIX]"
+          }
+        ]
+      }
+    ]
   }
 ]

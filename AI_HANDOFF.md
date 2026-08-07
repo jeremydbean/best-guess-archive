@@ -1,6 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-08-06 (daily puzzle added)
+Last updated: 2026-08-06 (daily puzzle + episode imported)
+
+## Most Recent Changes (2026-08-06, continued)
+
+- **Live episode imported — Thursday, August 6, 2026 (MARS / HONEYMOON), host Hunter March**: Two v2 rounds added to `data/games-2026.json` plus a 194-line transcript. All six tier payouts recomputed with `floorCents`; every one matched, as did both `totalWinners` sums. Both rounds have the plain gold/silver/bronze = clue 1/2/3 shape, and both secret items are new to the archive. Also verified MARS's two checkable clue claims rather than taking them on trust: clue 2's anagram holds (`sorted("ARMS") == sorted("MARS")`), and clue 3 is right on both counts (`MARS` is four letters, and Mars is the fourth planet from the sun). `npm run audit:fix && npm run audit` passes 0/0 (347 games, 174 transcripts).
+- **One structural normalization**: seven round-two setup lines ("If you didn't win that round…" through "And I'm playing again with you guys.") arrived at the tail of the raw Round 1 Results block. Moved them to the head of the `Round 2` section, which is where every other episode in the archive keeps its "another $7,500 / prize pots are the same / load the crystal ball" boilerplate — confirmed against Aug 3, Aug 4 and Aug 5 before moving. No wording changed.
+- **⚠️ Probable transcription artifact left in place, flagged for checking**: in `Round 2`, the clue-4 passage ("You love birds must be the next big thing... move your arms... I know what it is." / "God, I should have had it sooner." / "Trying to see if you guys can tell what I'm writing." / "I hope not." / "Honestly, I think someone got it on two at the very least.") is a near-verbatim duplicate of the round-1 clue-4 passage, and its first line incongruously mixes round 2's clue with round 1's clues. This looks like a bleed/duplication in the source transcription rather than something the host actually said twice. Recorded faithfully rather than deleted, since it cannot be verified without the recording — worth a check against the audio.
 
 ## Most Recent Changes (2026-08-06)
 
