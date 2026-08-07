@@ -17287,5 +17287,119 @@
         "explanation": "The abode of an Eggo is a waffle house."
       }
     ]
+  },
+  {
+    "date": "Thursday, August 6, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MARS",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 41,
+    "silverWinners": 49,
+    "bronzeWinners": 335,
+    "totalWinners": 425,
+    "goldPayout": 73.17,
+    "silverPayout": 51.02,
+    "bronzePayout": 5.97,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Inquisitive Cat, BC5389, Prince Omelet",
+    "wrongGuesses": "WAVE, QUAD, YMCA, HUG, ENCANTO",
+    "clues": [
+      {
+        "number": 1,
+        "text": "THE NEXT BIG THING",
+        "correct": "41",
+        "guesses": "1,660 🥇",
+        "explanation": "Planets are huge, and Mars is the next planet after Earth as you move away from the sun."
+      },
+      {
+        "number": 2,
+        "text": "MOVE YOUR ARMS AROUND",
+        "correct": "49",
+        "guesses": "3,572 🥈",
+        "explanation": "Rearranging the letters in the word arms spells Mars."
+      },
+      {
+        "number": 3,
+        "text": "FOUR LETTERS LONG, FOURTH IN A SERIES",
+        "correct": "335",
+        "guesses": "3,413 🥉",
+        "explanation": "The word Mars has four letters and it is the fourth planet from the sun."
+      },
+      {
+        "number": 4,
+        "text": "WE'RE NOT TALKING ABOUT BRUNO",
+        "correct": "5,847",
+        "guesses": "7,236",
+        "explanation": "The answer is Mars the planet, not the singer Bruno Mars."
+      },
+      {
+        "number": 5,
+        "text": "IT'S RED LIKE A POMEGRANATE, BUT IT'S NOT A FRUIT - IT'S A PLANET",
+        "correct": "4,809",
+        "guesses": "5,120",
+        "explanation": "Mars is famously known as the red planet."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, August 6, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "HONEYMOON",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 110,
+    "silverWinners": 355,
+    "bronzeWinners": 789,
+    "totalWinners": 1254,
+    "goldPayout": 27.27,
+    "silverPayout": 7.04,
+    "bronzePayout": 2.53,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Rad Bernie, Dear Harold",
+    "wrongGuesses": "MARRIAGE, WEDDING, DIVORCE, DATE, TWIX",
+    "clues": [
+      {
+        "number": 1,
+        "text": "NOT A SINGLE THING TO DO",
+        "correct": "110",
+        "guesses": "3,655 🥇",
+        "explanation": "You have to be married to go on your honeymoon, meaning you are no longer single."
+      },
+      {
+        "number": 2,
+        "text": "SWEET AND OUT OF THIS WORLD",
+        "correct": "355",
+        "guesses": "3,194 🥈",
+        "explanation": "Honey is sweet, and the moon is out of this world."
+      },
+      {
+        "number": 3,
+        "text": "RESULT OF A PRENUPTIAL AGREEMENT",
+        "correct": "789",
+        "guesses": "4,928 🥉",
+        "explanation": "Couples plan their honeymoon together before they get married."
+      },
+      {
+        "number": 4,
+        "text": "YOU LOVE BIRDS MUST BE TRIPPIN'",
+        "correct": "1,816",
+        "guesses": "4,098",
+        "explanation": "Newlyweds are known as love birds and they are taking a trip for their honeymoon."
+      },
+      {
+        "number": 5,
+        "text": "ROMANTIC GETAWAY FOR TWO, RIGHT AFTER YOU SAY “I DO”",
+        "correct": "5,443",
+        "guesses": "5,618",
+        "explanation": "A honeymoon is a romantic getaway taken right after getting married."
+      }
+    ]
   }
 ]
