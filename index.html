@@ -2196,6 +2196,16 @@ class App {
     return Number(String(value || '0').replace(/[$,]/g, '')) || 0;
   }
 
+  // Money digits with thousands separators, no leading "$". Every dollar
+  // amount on the site goes through here so a $3,000 payout never renders as
+  // "3000.00" in one view and "3,000.00" in another.
+  _money(value, decimals = 2) {
+    return Number(value || 0).toLocaleString(undefined, {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals
+    });
+  }
+
   _invalidateDerivedDataCaches() {
     this._dataVersion += 1;
     this._gameMetaCache = new WeakMap();
@@ -4073,7 +4083,7 @@ Rules:
 
     const esc = (v) => this._escapeHtml(v);
     const hl = (v) => this._highlight(v, query);
-    const fmtMoney = (n, decimals = 2) => '$' + Number(n || 0).toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+    const fmtMoney = (n, decimals = 2) => '$' + this._money(n, decimals);
     const meta = this._getGameMeta(g);
     const incompleteFields = meta.isPartial ? this._getIncompleteGameFields(g) : [];
     const incompleteBadge = meta.isPartial
@@ -4249,17 +4259,17 @@ Rules:
       const bronzeExtra = (bronzeRedist && bronzeEligible > 0) ? Math.floor(2000 / bronzeEligible * 100) / 100 : 0;
       const silverExtra = (silverRedist && gW > 0) ? Math.floor(2500 / gW * 100) / 100 : 0;
       const goldParts = [];
-      if (bronzeRedist) goldParts.push(`$${bronzeExtra.toFixed(2)} bronze redistribution`);
-      if (silverRedist) goldParts.push(`$${silverExtra.toFixed(2)} silver redistribution`);
-      goldTip = `Base $${goldBase.toFixed(2)} (gold pot ÷ ${gW.toLocaleString()} winners) + ${goldParts.join(' + ')}. Per official rules.`;
+      if (bronzeRedist) goldParts.push(`$${this._money(bronzeExtra)} bronze redistribution`);
+      if (silverRedist) goldParts.push(`$${this._money(silverExtra)} silver redistribution`);
+      goldTip = `Base $${this._money(goldBase)} (gold pot ÷ ${gW.toLocaleString()} winners) + ${goldParts.join(' + ')}. Per official rules.`;
       if (bronzeRedist && !silverRedist) {
-        silverTip = `Base $${silverBase.toFixed(2)} (silver pot ÷ ${sW.toLocaleString()} winners) + $${bronzeExtra.toFixed(2)} bronze redistribution. Per official rules.`;
-        bronzeTip = `No bronze winner — per official rules, the $2,000 bronze pot was redistributed to all ${(gW + sW).toLocaleString()} gold+silver winners ($${bronzeExtra.toFixed(2)} each added to their payout).`;
+        silverTip = `Base $${this._money(silverBase)} (silver pot ÷ ${sW.toLocaleString()} winners) + $${this._money(bronzeExtra)} bronze redistribution. Per official rules.`;
+        bronzeTip = `No bronze winner — per official rules, the $2,000 bronze pot was redistributed to all ${(gW + sW).toLocaleString()} gold+silver winners ($${this._money(bronzeExtra)} each added to their payout).`;
       } else if (silverRedist && !bronzeRedist) {
-        silverTip = `No silver winner — per official rules, the $2,500 silver pot was redistributed to all ${gW.toLocaleString()} gold winners ($${silverExtra.toFixed(2)} each added to their payout).`;
+        silverTip = `No silver winner — per official rules, the $2,500 silver pot was redistributed to all ${gW.toLocaleString()} gold winners ($${this._money(silverExtra)} each added to their payout).`;
       } else {
-        silverTip = `No silver winner — per official rules, the $2,500 silver pot was redistributed to all ${gW.toLocaleString()} gold winners ($${silverExtra.toFixed(2)} each). Bronze pot also redistributed to gold ($${bronzeExtra.toFixed(2)} each).`;
-        bronzeTip = `No bronze winner — per official rules, the $2,000 bronze pot cascaded up to all ${gW.toLocaleString()} gold winners ($${bronzeExtra.toFixed(2)} each), since silver also had no winners.`;
+        silverTip = `No silver winner — per official rules, the $2,500 silver pot was redistributed to all ${gW.toLocaleString()} gold winners ($${this._money(silverExtra)} each). Bronze pot also redistributed to gold ($${this._money(bronzeExtra)} each).`;
+        bronzeTip = `No bronze winner — per official rules, the $2,000 bronze pot cascaded up to all ${gW.toLocaleString()} gold winners ($${this._money(bronzeExtra)} each), since silver also had no winners.`;
       }
     }
     const payoutsHtml = isV2
@@ -4597,7 +4607,7 @@ Rules:
 
     const tierText = (emoji, clue, winners, payout, color) => winners == null
       ? `<span class="text-slate-600">${emoji} Not yet known</span>`
-      : `<span class="${color}">${emoji} Clue ${clue || '—'} · ${Number(winners).toLocaleString()} · $${Number(payout || 0).toFixed(2)}</span>`;
+      : `<span class="${color}">${emoji} Clue ${clue || '—'} · ${Number(winners).toLocaleString()} · $${this._money(payout)}</span>`;
     const incompleteNotice = this._renderIncompleteGameNotice(g);
 
     modalContentEl.innerHTML = `
@@ -4676,7 +4686,7 @@ Rules:
       </div>`;
     }).join('');
 
-    const fmt2 = n => Number(n).toFixed(2);
+    const fmt2 = n => this._money(n);
     const goldKnown = this._isKnownCount(g.goldWinners) && this._isKnownCount(g.goldPayout) && Number(g.goldClue) > 0;
     const silverKnown = this._isKnownCount(g.silverWinners) && this._isKnownCount(g.silverPayout);
     const bronzeKnown = this._isKnownCount(g.bronzeWinners) && this._isKnownCount(g.bronzePayout);
@@ -4713,13 +4723,13 @@ Rules:
       const lines = [];
       if (silverEmpty && gW > 0) {
         const silverExtra = floorCents(2500 / gW);
-        lines.push(`No silver winners: the $2,500 silver pool redistributed to ${gW.toLocaleString()} gold winner${gW === 1 ? '' : 's'}, adding $${silverExtra.toFixed(2)} each.`);
+        lines.push(`No silver winners: the $2,500 silver pool redistributed to ${gW.toLocaleString()} gold winner${gW === 1 ? '' : 's'}, adding $${this._money(silverExtra)} each.`);
       }
       if (bronzeEmpty) {
         const recipients = silverEmpty ? gW : gW + sW;
         const bronzeExtra = recipients > 0 ? floorCents(2000 / recipients) : 0;
         const recipientLabel = silverEmpty ? 'gold' : 'gold and silver';
-        lines.push(`No bronze winners: the $2,000 bronze pool redistributed to ${recipients.toLocaleString()} ${recipientLabel} winner${recipients === 1 ? '' : 's'}, adding $${bronzeExtra.toFixed(2)} each.`);
+        lines.push(`No bronze winners: the $2,000 bronze pool redistributed to ${recipients.toLocaleString()} ${recipientLabel} winner${recipients === 1 ? '' : 's'}, adding $${this._money(bronzeExtra)} each.`);
       }
       if (lines.length) {
         redistributionHtml = `<div class="mt-4 rounded-lg border border-cyan-400/20 bg-cyan-950/15 px-3 py-3 text-left">

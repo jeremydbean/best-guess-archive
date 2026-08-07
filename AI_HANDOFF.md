@@ -1,6 +1,13 @@
 # AI Handoff
 
-Last updated: 2026-08-06 (daily puzzle + episode imported)
+Last updated: 2026-08-06 (money formatting unified)
+
+## Most Recent Changes (2026-08-06, continued 2)
+
+- **Fixed inconsistent money formatting between the Database and the details modal**: the same payout rendered as `$3,000.00` in a Database row but `$3000.00` in the details modal, because the row used `toLocaleString` while the modal used a bare `toFixed(2)`. Rather than patching the one visible spot, added a single `_money(value, decimals = 2)` helper next to `_parseMoneyString()` and routed **all twelve** money call sites through it — the modal's `fmt2`, the Database row's `fmtMoney`, the stub/partial `tierText`, and all eight redistribution tooltip/explanation strings. `toFixed(2)` no longer appears anywhere in `index.html`.
+- **Why the wider scope**: the redistribution strings can also exceed $1,000 (an empty tier redistributing $2,500 or $2,000 to a single gold winner), so fixing only the medal summary would have left the identical bug in less-visited paths.
+- **Verified in headless Chromium**: PICKLE's single-winner gold now reads `$3,000.00` in the modal, matching its Database row exactly; WAFFLE HOUSE reads `$1,000.00`. Small values are unchanged (`4.00`, `73.17`, `0.65`). No archived game currently has an empty tier, so the redistribution paths were exercised by forcing an empty silver and bronze on a game in memory only — tooltips rendered `$3,000.00 / $2,500.00 / $2,000.00` correctly with no console errors, and the game was restored afterwards. `npm run audit` passes 0/0.
+- Minor pre-existing wart noticed but not changed: the Database redistribution tooltip says "all 1 gold winners" where the modal's equivalent line correctly says "1 gold winner".
 
 ## Most Recent Changes (2026-08-06, continued)
 
