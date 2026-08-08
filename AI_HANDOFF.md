@@ -1,6 +1,14 @@
 # AI Handoff
 
-Last updated: 2026-08-07 (Aug 7 partial episode + two null-handling fixes)
+Last updated: 2026-08-08 (Aug 7 episode promoted from partial; VELCRO daily puzzle)
+
+## Most Recent Changes (2026-08-08)
+
+- **Daily puzzle added — Saturday, August 8, 2026: VELCRO**: `data/daily-puzzles.json` now holds 78 entries. Clues: GET A GRIP / A FASTEN-ATING HOOKUP LEADS TO... / ...A LOUD BREAK-UP / IT'S A SNAP BUT IT'S NOT A SNAP / CAN'T TIE YOUR SHOES? THIS STICKY MATERIAL GETS RID OF YOUR BLUES. Clues **2 and 3 are a deliberately linked pair** — the ellipses run one sentence across two cards ("a fasten-ating hookup leads to... ...a loud break-up"), which is unusual for this puzzle and is preserved verbatim. Clue 5 keeps the usual rhyming-giveaway shape (shoes / blues).
+- **Friday, August 7, 2026 (LAS VEGAS / JENGA) promoted from partial** once the recording arrived. All ten count pairs, both medal sweeps, payouts, winner names and host explanations are now filled, and the transcript replaced the `dataStatus: "unavailable"` placeholder with **263 lines across all six sections**. The one previously-confirmed count pair, LAS VEGAS clue 5 at 2,603/2,386, matched the recording exactly, as did both wrong-guess sets and the round order derived from the wrong-guesses card.
+- **Every payout was recomputed rather than accepted.** All six `floorCents` results reproduce the supplied figures exactly: R1 gold `3000/3` = $1,000, silver `2500/99` = $25.25, bronze `2000/6265` = $0.31; R2 gold `3000/3` = $1,000, silver `2500/3` = $833.33, bronze `2000/65` = $30.76. Each tier's winner count was also checked against its clue's own correct count (3/99/6,265 and 3/3/65), the tier sums reproduce `totalWinners` (6,367 and 71), and `guesses >= correct` holds on all ten clues. The host's spoken asides corroborate independently — "31 cents", "$30.76 to 65 people", "over 800 dollars".
+- **⚠️ One field is still open: the host.** The recording never names them and the supplied transcript labels every line generically as `Host`, so both rounds keep `host: ""` and `dataStatus: "partial"`. That is deliberate, not an oversight — the UI derives its incomplete-record badge from `dataStatus` plus the still-empty fields, so the entry now advertises exactly one missing item and will self-heal the moment the name is filled in. Note that the recent run alternates Hunter March / Howie Mandel with guests (Corinne Foxx hosted Jul 31), so it cannot be inferred from the schedule. The intro aside — "when I did the auditions for this show, the showrunner, all he wanted me to do is get that line right" — points away from a celebrity guest, but that is inference and was **not** written to the record.
+- `npm run audit` now passes **0 errors / 0 warnings**; the 10 `missing-explanation` warnings that were expected while Aug 7 was partial are resolved. 349 games · 175 transcripts · 78 daily puzzles.
 
 ## Most Recent Changes (2026-08-07, continued)
 

@@ -3793,8 +3793,11 @@
       "pot": 7500,
       "host": "",
       "format": "v2",
-      "totalWinners": null,
+      "totalWinners": 6367,
       "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3,
       "totalPlayers": 18643,
       "dataStatus": "partial"
     },
@@ -3804,8 +3807,11 @@
       "pot": 7500,
       "host": "",
       "format": "v2",
-      "totalWinners": null,
+      "totalWinners": 71,
       "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3,
       "totalPlayers": 19022,
       "dataStatus": "partial"
     }
