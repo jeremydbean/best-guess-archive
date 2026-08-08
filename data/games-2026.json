@@ -17401,5 +17401,123 @@
         "explanation": "A honeymoon is a romantic getaway taken right after getting married."
       }
     ]
+  },
+  {
+    "date": "Friday, August 7, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "",
+    "secretItem": "LAS VEGAS",
+    "dataStatus": "partial",
+    "goldClue": null,
+    "silverClue": null,
+    "bronzeClue": null,
+    "goldWinners": null,
+    "silverWinners": null,
+    "bronzeWinners": null,
+    "totalWinners": null,
+    "totalPlayers": 18643,
+    "goldPayout": null,
+    "silverPayout": null,
+    "bronzePayout": null,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "OPEN SESAME, PLEASE, EPCOT, CASINO, VIVA LAS VEGAS",
+    "clues": [
+      {
+        "number": 1,
+        "text": "YOU KNOW THE SECRET PHRASE",
+        "correct": null,
+        "guesses": null,
+        "explanation": ""
+      },
+      {
+        "number": 2,
+        "text": "THE GAS IS ON THE RIGHT",
+        "correct": null,
+        "guesses": null,
+        "explanation": ""
+      },
+      {
+        "number": 3,
+        "text": "WHERE THE SAHARA IS MINUTES FROM THE EIFFEL TOWER",
+        "correct": null,
+        "guesses": null,
+        "explanation": ""
+      },
+      {
+        "number": 4,
+        "text": "HOT SPOT FOR STRIP POKER",
+        "correct": null,
+        "guesses": null,
+        "explanation": ""
+      },
+      {
+        "number": 5,
+        "text": "\"VIVA\" THIS PLACE FROM AN ELVIS DITTY, ALSO KNOWN AS SIN CITY",
+        "correct": "2,386",
+        "guesses": "2,603",
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "date": "Friday, August 7, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "",
+    "secretItem": "JENGA",
+    "dataStatus": "partial",
+    "goldClue": null,
+    "silverClue": null,
+    "bronzeClue": null,
+    "goldWinners": null,
+    "silverWinners": null,
+    "bronzeWinners": null,
+    "totalWinners": null,
+    "totalPlayers": 19022,
+    "goldPayout": null,
+    "silverPayout": null,
+    "bronzePayout": null,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "ELEVATOR, LEGOS, INSTAGRAM, LEGO, SNAPCHAT",
+    "clues": [
+      {
+        "number": 1,
+        "text": "YOU'RE ALWAYS CHANGING YOUR STORY",
+        "correct": null,
+        "guesses": null,
+        "explanation": ""
+      },
+      {
+        "number": 2,
+        "text": "TAKEOUT ORDER WITH NO CHICKEN FINGERS",
+        "correct": null,
+        "guesses": null,
+        "explanation": ""
+      },
+      {
+        "number": 3,
+        "text": "EASY TO PICK UP, A PAIN TO PICK UP",
+        "correct": null,
+        "guesses": null,
+        "explanation": ""
+      },
+      {
+        "number": 4,
+        "text": "A TOWERING ACHIEVEMENT OF THE TOY INDUSTRY",
+        "correct": null,
+        "guesses": null,
+        "explanation": ""
+      },
+      {
+        "number": 5,
+        "text": "HASBRO PARTY GAME THAT ROCKS IF YOU LIKE STACKING WOODEN BLOCKS",
+        "correct": null,
+        "guesses": null,
+        "explanation": ""
+      }
+    ]
   }
 ]
