@@ -17409,55 +17409,55 @@
     "host": "",
     "secretItem": "LAS VEGAS",
     "dataStatus": "partial",
-    "goldClue": null,
-    "silverClue": null,
-    "bronzeClue": null,
-    "goldWinners": null,
-    "silverWinners": null,
-    "bronzeWinners": null,
-    "totalWinners": null,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 3,
+    "silverWinners": 99,
+    "bronzeWinners": 6265,
+    "totalWinners": 6367,
     "totalPlayers": 18643,
-    "goldPayout": null,
-    "silverPayout": null,
-    "bronzePayout": null,
+    "goldPayout": 1000,
+    "silverPayout": 25.25,
+    "bronzePayout": 0.31,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "MrsGrey, JoyfulScooter, CurlyOddball",
     "wrongGuesses": "OPEN SESAME, PLEASE, EPCOT, CASINO, VIVA LAS VEGAS",
     "clues": [
       {
         "number": 1,
         "text": "YOU KNOW THE SECRET PHRASE",
-        "correct": null,
-        "guesses": null,
-        "explanation": ""
+        "correct": "3",
+        "guesses": "2,815 🥇",
+        "explanation": "You know the famous phrase about keeping secrets, what happens in Vegas stays in Vegas."
       },
       {
         "number": 2,
         "text": "THE GAS IS ON THE RIGHT",
-        "correct": null,
-        "guesses": null,
-        "explanation": ""
+        "correct": "99",
+        "guesses": "1,831 🥈",
+        "explanation": "The word gas is on the right side of the name Las Vegas."
       },
       {
         "number": 3,
         "text": "WHERE THE SAHARA IS MINUTES FROM THE EIFFEL TOWER",
-        "correct": null,
-        "guesses": null,
-        "explanation": ""
+        "correct": "6,265",
+        "guesses": "8,313 🥉",
+        "explanation": "There's a replica Eiffel Tower at the Paris Las Vegas casino, and the Sahara is another casino."
       },
       {
         "number": 4,
         "text": "HOT SPOT FOR STRIP POKER",
-        "correct": null,
-        "guesses": null,
-        "explanation": ""
+        "correct": "3,817",
+        "guesses": "4,542",
+        "explanation": "It's a hot desert where you can play poker on the Las Vegas Strip."
       },
       {
         "number": 5,
-        "text": "\"VIVA\" THIS PLACE FROM AN ELVIS DITTY, ALSO KNOWN AS SIN CITY",
+        "text": "“VIVA” THIS PLACE FROM AN ELVIS DITTY, ALSO KNOWN AS SIN CITY",
         "correct": "2,386",
         "guesses": "2,603",
-        "explanation": ""
+        "explanation": "Elvis sang about Sin City in his famous song Viva Las Vegas."
       }
     ]
   },
@@ -17468,55 +17468,55 @@
     "host": "",
     "secretItem": "JENGA",
     "dataStatus": "partial",
-    "goldClue": null,
-    "silverClue": null,
-    "bronzeClue": null,
-    "goldWinners": null,
-    "silverWinners": null,
-    "bronzeWinners": null,
-    "totalWinners": null,
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 3,
+    "silverWinners": 3,
+    "bronzeWinners": 65,
+    "totalWinners": 71,
     "totalPlayers": 19022,
-    "goldPayout": null,
-    "silverPayout": null,
-    "bronzePayout": null,
+    "goldPayout": 1000,
+    "silverPayout": 833.33,
+    "bronzePayout": 30.76,
     "winnerPayout": "$7,500.00",
-    "winnerNames": "",
+    "winnerNames": "Quatzferrous405, ClickyRoll751, Pharaoh1966",
     "wrongGuesses": "ELEVATOR, LEGOS, INSTAGRAM, LEGO, SNAPCHAT",
     "clues": [
       {
         "number": 1,
         "text": "YOU'RE ALWAYS CHANGING YOUR STORY",
-        "correct": null,
-        "guesses": null,
-        "explanation": ""
+        "correct": "3",
+        "guesses": "5,552 🥇",
+        "explanation": "This game involves moving blocks to different levels, like stories in a building."
       },
       {
         "number": 2,
         "text": "TAKEOUT ORDER WITH NO CHICKEN FINGERS",
-        "correct": null,
-        "guesses": null,
-        "explanation": ""
+        "correct": "3",
+        "guesses": "1,976 🥈",
+        "explanation": "If you want to take out the blocks in the right order, you don't want shaky fingers from being scared like a little chicken."
       },
       {
         "number": 3,
         "text": "EASY TO PICK UP, A PAIN TO PICK UP",
-        "correct": null,
-        "guesses": null,
-        "explanation": ""
+        "correct": "65",
+        "guesses": "3,840 🥉",
+        "explanation": "It's an easy game to learn, but it's a pain when it all falls and you gotta pick 'em all up."
       },
       {
         "number": 4,
         "text": "A TOWERING ACHIEVEMENT OF THE TOY INDUSTRY",
-        "correct": null,
-        "guesses": null,
-        "explanation": ""
+        "correct": "3,173",
+        "guesses": "6,411",
+        "explanation": "It's a tower building game, or a tower destroying game depending on if you're playing with my nephew."
       },
       {
         "number": 5,
         "text": "HASBRO PARTY GAME THAT ROCKS IF YOU LIKE STACKING WOODEN BLOCKS",
-        "correct": null,
-        "guesses": null,
-        "explanation": ""
+        "correct": "2,570",
+        "guesses": "3,024",
+        "explanation": "Hopefully it doesn't rock too hard or your tower might fall."
       }
     ]
   }

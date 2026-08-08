@@ -2385,5 +2385,36 @@
         "explanation": "It's Jim Carrey! Alrighty then!"
       }
     ]
+  },
+  {
+    "date": "Saturday, August 8, 2026",
+    "secretItem": "VELCRO",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "GET A GRIP",
+        "explanation": "Velcro grips to the opposite Velcro it touches."
+      },
+      {
+        "clueNumber": 2,
+        "text": "A FASTEN-ATING HOOKUP LEADS TO...",
+        "explanation": "Velcro is a fastener that uses tiny hooks and loops."
+      },
+      {
+        "clueNumber": 3,
+        "text": "...A LOUD BREAK-UP",
+        "explanation": "Velcro makes a distinct sound when the two sides are ripped apart."
+      },
+      {
+        "clueNumber": 4,
+        "text": "IT'S A SNAP BUT IT'S NOT A SNAP",
+        "explanation": "It's very easy to use but it isn't actually a snap."
+      },
+      {
+        "clueNumber": 5,
+        "text": "CAN'T TIE YOUR SHOES? THIS STICKY MATERIAL GETS RID OF YOUR BLUES",
+        "explanation": "Velcro straps help secure shoes."
+      }
+    ]
   }
 ]
