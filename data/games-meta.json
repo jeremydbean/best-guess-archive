@@ -3791,29 +3791,27 @@
       "date": "Friday, August 7, 2026",
       "secretItem": "LAS VEGAS",
       "pot": 7500,
-      "host": "",
+      "host": "Hunter March",
       "format": "v2",
       "totalWinners": 6367,
       "clueCount": 5,
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3,
-      "totalPlayers": 18643,
-      "dataStatus": "partial"
+      "totalPlayers": 18643
     },
     {
       "date": "Friday, August 7, 2026",
       "secretItem": "JENGA",
       "pot": 7500,
-      "host": "",
+      "host": "Hunter March",
       "format": "v2",
       "totalWinners": 71,
       "clueCount": 5,
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3,
-      "totalPlayers": 19022,
-      "dataStatus": "partial"
+      "totalPlayers": 19022
     }
   ]
 }
