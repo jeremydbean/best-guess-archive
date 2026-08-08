@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-08 (Aug 7 episode promoted from partial; VELCRO daily puzzle)
+Last updated: 2026-08-08 (Aug 7 episode fully complete; VELCRO daily puzzle)
+
+## Most Recent Changes (2026-08-08, continued)
+
+- **Aug 7's host confirmed as Hunter March by the user — the episode is now fully complete.** `dataStatus: "partial"` is removed from both rounds, and the transcript's 249 generic `Host` speaker labels were rewritten to the name, matching the convention every other transcript uses. **There are now zero partial entries anywhere in the archive.**
+- The name could not be derived from the data and was not guessed. Worth recording why, for the next time a recording arrives without one: the schedule gives no answer (the surrounding run alternates Hunter March / Howie Mandel and Corinne Foxx guest-hosted Jul 31), and the only usable signal was the intro aside "when I did the auditions for this show, the showrunner, all he wanted me to do is get that line right", which suggests a permanent host over a booked celebrity guest. That was enough to ask a pointed question, not enough to write to the archive.
 
 ## Most Recent Changes (2026-08-08)
 
