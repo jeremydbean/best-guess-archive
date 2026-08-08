@@ -1,6 +1,16 @@
 # AI Handoff
 
-Last updated: 2026-08-07 (daily puzzle added)
+Last updated: 2026-08-07 (Aug 7 partial episode + two null-handling fixes)
+
+## Most Recent Changes (2026-08-07, continued)
+
+- **Live episode partially imported — Friday, August 7, 2026 (LAS VEGAS / JENGA)**, from screenshots only. An `.mp3` of the broadcast was supplied but **could not be processed**: there is no speech-to-text tooling in this environment and audio is not a readable format here. The recording still needs to go through the usual Gemini/NotebookLM path to fill the rest.
+- **Round order was established from the wrong-guesses card, not assumed.** That card labels PUZZLE 1 / PUZZLE 2: puzzle 1's list (OPEN SESAME, PLEASE, EPCOT, CASINO, VIVA LAS VEGAS) matches LAS VEGAS clue 1 "YOU KNOW THE SECRET PHRASE" and clue 3's Sahara/Eiffel misdirect, while puzzle 2's (ELEVATOR, LEGOS, INSTAGRAM, LEGO, SNAPCHAT) matches JENGA clue 1 "YOU'RE ALWAYS CHANGING YOUR STORY" and clue 3 "EASY TO PICK UP, A PAIN TO PICK UP". So **round 1 = LAS VEGAS, round 2 = JENGA**.
+- **What is confirmed**: all ten clue texts, both wrong-guess sets, `totalPlayers` (18,643 / 19,022 from the upper-corner counters), and one count pair — LAS VEGAS clue 5 at 2,603 guesses / 2,386 correct. `format: "v2"` is confirmed by the gold medal badge on the results card, and `pot: 7500` is an invariant across all 156 v2 games. Everything else is `null` per the partial standard: host, medal placements, winner counts, payouts, winner names, and the other nine count pairs.
+- **⚠️ Two null-handling bugs found and fixed, both surfaced by this being the first partial record with an unknown winner total:**
+  - `renderLatestEpisodeCard()` summed `Number(g.totalWinners || 0)` and rendered "**0 winners**" on the home page — asserting as fact that nobody won an episode people demonstrably won. It now checks `_isKnownCount` across the rounds and renders "winners not yet known" when any is unknown.
+  - The meta builder in `tools/audit-data.mjs` wrote `totalWinners: g.totalWinners || 0`, collapsing a legitimate `null` to `0` before it ever reached the page. Since the home card reads `games-meta.json`, the null never survived the trip. It now preserves null explicitly. Only the two Aug 7 entries are affected archive-wide; every other entry is unchanged.
+- Verified in headless Chromium: home card reads "Host unknown · 2 rounds · winners not yet known", home totals still compute (no NaN), Database rows carry the red **!** incomplete badge with em-dashes for unknown counts, data health reads "Looks clean", no console errors. `npm run audit` passes with 0 errors (10 `missing-explanation` warnings are expected for a partial record).
 
 ## Most Recent Changes (2026-08-07)
 

@@ -2968,8 +2968,13 @@ class App {
     }
     if (metaEl) {
       const hostText = [...new Set(rounds.map(g => g.host).filter(Boolean))].join(', ') || 'Host unknown';
-      const winnerTotal = rounds.reduce((sum, g) => sum + Number(g.totalWinners || 0), 0);
-      metaEl.innerText = rounds.length ? `${hostText} · ${rounds.length} rounds · ${winnerTotal.toLocaleString()} winners` : 'Cancelled episode';
+      // Only claim a winner total when every round actually reports one. A
+      // partial record has null totalWinners, and summing that to 0 would
+      // assert "0 winners" for an episode people demonstrably won.
+      const winnersKnown = rounds.every(g => this._isKnownCount(g.totalWinners));
+      const winnerTotal = rounds.reduce((sum, g) => sum + this._parseCount(g.totalWinners), 0);
+      const winnerText = winnersKnown ? `${winnerTotal.toLocaleString()} winners` : 'winners not yet known';
+      metaEl.innerText = rounds.length ? `${hostText} · ${rounds.length} rounds · ${winnerText}` : 'Cancelled episode';
     }
     card.classList.remove('hidden');
   }

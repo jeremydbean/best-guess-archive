@@ -125,7 +125,10 @@ const regeneratedMeta = games.map(g => {
     pot: g.pot,
     host: g.host ?? null,
     format: g.format,
-    totalWinners: g.totalWinners || 0,
+    // Preserve an unknown winner total as null. Collapsing it to 0 here would
+    // make the meta layer assert "0 winners" for a partial record, which the
+    // home page then renders as fact.
+    totalWinners: (g.totalWinners === null || g.totalWinners === undefined) ? null : g.totalWinners,
     clueCount: (g.clues || []).length
   };
   if (g.goldClue) entry.goldClue = g.goldClue;

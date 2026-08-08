@@ -3786,6 +3786,28 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Friday, August 7, 2026",
+      "secretItem": "LAS VEGAS",
+      "pot": 7500,
+      "host": "",
+      "format": "v2",
+      "totalWinners": null,
+      "clueCount": 5,
+      "totalPlayers": 18643,
+      "dataStatus": "partial"
+    },
+    {
+      "date": "Friday, August 7, 2026",
+      "secretItem": "JENGA",
+      "pot": 7500,
+      "host": "",
+      "format": "v2",
+      "totalWinners": null,
+      "clueCount": 5,
+      "totalPlayers": 19022,
+      "dataStatus": "partial"
     }
   ]
 }

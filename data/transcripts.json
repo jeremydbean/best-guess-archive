@@ -90956,5 +90956,70 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Friday, August 7, 2026",
+    "dataStatus": "unavailable",
+    "host": "",
+    "secretItems": [
+      "LAS VEGAS",
+      "JENGA"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "LAS VEGAS",
+        "host": "",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "YOU KNOW THE SECRET PHRASE",
+          "THE GAS IS ON THE RIGHT",
+          "WHERE THE SAHARA IS MINUTES FROM THE EIFFEL TOWER",
+          "HOT SPOT FOR STRIP POKER",
+          "\"VIVA\" THIS PLACE FROM AN ELVIS DITTY, ALSO KNOWN AS SIN CITY"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "JENGA",
+        "host": "",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "YOU'RE ALWAYS CHANGING YOUR STORY",
+          "TAKEOUT ORDER WITH NO CHICKEN FINGERS",
+          "EASY TO PICK UP, A PAIN TO PICK UP",
+          "A TOWERING ACHIEVEMENT OF THE TOY INDUSTRY",
+          "HASBRO PARTY GAME THAT ROCKS IF YOU LIKE STACKING WOODEN BLOCKS"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": []
+      },
+      {
+        "tag": "Round 1",
+        "lines": []
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": []
+      },
+      {
+        "tag": "Round 2",
+        "lines": []
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": []
+      },
+      {
+        "tag": "Outro",
+        "lines": []
+      }
+    ]
   }
 ]
