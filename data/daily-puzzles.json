@@ -2416,5 +2416,36 @@
         "explanation": "Velcro straps help secure shoes."
       }
     ]
+  },
+  {
+    "date": "Sunday, August 9, 2026",
+    "secretItem": "PINBALL",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "SPRING INTO ACTION",
+        "explanation": "You spring the ball into the game to start a round."
+      },
+      {
+        "clueNumber": 2,
+        "text": "CONSTANT BUMPER TO BUMPER TRAFFIC",
+        "explanation": "The ball is constantly hitting all of the bumpers."
+      },
+      {
+        "clueNumber": 3,
+        "text": "HAS FOUR LEGS AND TWO FLIPPERS",
+        "explanation": "As in four table legs and the two flippers you use to hit the pinballs."
+      },
+      {
+        "clueNumber": 4,
+        "text": "IT SURE SOUNDS LIKE BOWLING FOR A GAME THAT ISN'T",
+        "explanation": "It's a totally different activity involving pins and a ball."
+      },
+      {
+        "clueNumber": 5,
+        "text": "A SILVER SPHERE MUST RICOCHET IN THIS ARCADE GAME YOU LOVE TO PLAY",
+        "explanation": "Pinball is a classic arcade game."
+      }
+    ]
   }
 ]
