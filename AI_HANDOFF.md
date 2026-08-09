@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-08 (Aug 7 episode fully complete; VELCRO daily puzzle)
+Last updated: 2026-08-09 (PINBALL daily puzzle)
+
+## Most Recent Changes (2026-08-09)
+
+- **Daily puzzle added — Sunday, August 9, 2026: PINBALL**: `data/daily-puzzles.json` now holds 79 entries. Clues: SPRING INTO ACTION / CONSTANT BUMPER TO BUMPER TRAFFIC / HAS FOUR LEGS AND TWO FLIPPERS / IT SURE SOUNDS LIKE BOWLING FOR A GAME THAT ISN'T / A SILVER SPHERE MUST RICOCHET IN THIS ARCADE GAME YOU LOVE TO PLAY. Answered on clue 2. Clue 3's misdirect is the good one — "four legs and two flippers" reads as an animal until you realise it is the table's legs and the player's flippers. Clue 5 keeps the usual rhyming-giveaway shape (ricochet / play). PINBALL had not been used before, in either the dailies or the live games.
+
 
 ## Most Recent Changes (2026-08-08, continued)
 
