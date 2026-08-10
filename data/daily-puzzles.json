@@ -2447,5 +2447,36 @@
         "explanation": "Pinball is a classic arcade game."
       }
     ]
+  },
+  {
+    "date": "Monday, August 10, 2026",
+    "secretItem": "HOURGLASS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "TELL ME WHEN",
+        "explanation": "An hourglass tells you the time — literally, when it is."
+      },
+      {
+        "clueNumber": 2,
+        "text": "LET'S TAKE IT FROM THE TOP",
+        "explanation": "An hourglass works by letting gravity take sand from the top chamber to the bottom."
+      },
+      {
+        "clueNumber": 3,
+        "text": "NAMESAKE OF A WORLD-RENOWNED FIGURE",
+        "explanation": "We've all heard of an hourglass figure."
+      },
+      {
+        "clueNumber": 4,
+        "text": "WHEN IT GRAINS, IT POURS",
+        "explanation": "Grains of sand pour through the hourglass."
+      },
+      {
+        "clueNumber": 5,
+        "text": "TIMEPIECE WITH NO GEARS OR HAND; JUST TWO CHAMBERS & FALLING SAND",
+        "explanation": "It's like a clock, but sandier."
+      }
+    ]
   }
 ]

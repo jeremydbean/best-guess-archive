@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-09 (PINBALL daily puzzle)
+Last updated: 2026-08-10 (HOURGLASS daily puzzle)
+
+## Most Recent Changes (2026-08-10)
+
+- **Daily puzzle added — Monday, August 10, 2026: HOURGLASS**: `data/daily-puzzles.json` now holds 80 entries. Clues: TELL ME WHEN / LET'S TAKE IT FROM THE TOP / NAMESAKE OF A WORLD-RENOWNED FIGURE / WHEN IT GRAINS, IT POURS / TIMEPIECE WITH NO GEARS OR HAND; JUST TWO CHAMBERS & FALLING SAND. Answered on clue 2. Clue 4 is the pun of the set ("when it grains, it pours"), and clue 3 leans on "hourglass figure" without ever saying it. Clue 5's semicolon and ampersand are the card's own punctuation and are kept verbatim. Clue 1's explanation uses an em dash, matching the 47 other dashed explanations in the file (no explanation in the file uses a spaced hyphen). HOURGLASS had not been used before, in either the dailies or the live games.
+
 
 ## Most Recent Changes (2026-08-09)
 
