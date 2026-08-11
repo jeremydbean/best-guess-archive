@@ -17517,5 +17517,119 @@
         "explanation": "Hopefully it doesn't rock too hard or your tower might fall."
       }
     ]
+  },
+  {
+    "date": "Monday, August 10, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "GRAPES",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 10,
+    "silverWinners": 84,
+    "bronzeWinners": 1862,
+    "totalWinners": 1956,
+    "goldPayout": 300,
+    "silverPayout": 29.76,
+    "bronzePayout": 1.07,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "BitingPlant619, Ryger, BleakPeacock",
+    "wrongGuesses": "BANANA, BANANA PEEL, DONKEY KONG, SCALE, MARIO KART",
+    "clues": [
+      {
+        "number": 1,
+        "text": "STEP ON IT!",
+        "correct": "10",
+        "guesses": "3,631 🥇",
+        "explanation": "People step on grapes to make wine."
+      },
+      {
+        "number": 2,
+        "text": "I'M SO MAD AT THESE GORILLAS",
+        "correct": "84",
+        "guesses": "3,593 🥈",
+        "explanation": "Saying grr when you are mad and combining it with gorillas being apes makes grr-apes."
+      },
+      {
+        "number": 3,
+        "text": "THEY'RE SOUR WHEN YOU ARE",
+        "correct": "1,862",
+        "guesses": "3,759 🥉",
+        "explanation": "The phrase sour grapes describes a sour feeling about someone else's accomplishments."
+      },
+      {
+        "number": 4,
+        "text": "A BUNCH OF SEEDY INDIVIDUALS",
+        "correct": "2,666",
+        "guesses": "4,825",
+        "explanation": "Grapes come in a bunch and have seeds."
+      },
+      {
+        "number": 5,
+        "text": "JUICY FRUIT THAT FILLS YOUR BELLY & CAN BE MADE INTO WINE OR JELLY",
+        "correct": "5,114",
+        "guesses": "5,377",
+        "explanation": "Grapes are a juicy fruit that can be made into wine or jelly."
+      }
+    ]
+  },
+  {
+    "date": "Monday, August 10, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "WHISTLE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 15,
+    "silverWinners": 26,
+    "bronzeWinners": 1099,
+    "totalWinners": 1140,
+    "goldPayout": 200,
+    "silverPayout": 96.15,
+    "bronzePayout": 1.81,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "NinjaArmadillo, Cable, HotDish, TristanRedhorn",
+    "wrongGuesses": "TRUMPET, FLUTE, SMOKE DETECTOR, SIREN, ALARM CLOCK",
+    "clues": [
+      {
+        "number": 1,
+        "text": "HIGH ALERT",
+        "correct": "15",
+        "guesses": "4,025 🥇",
+        "explanation": "A whistle makes a high-pitched noise that alerts you to something."
+      },
+      {
+        "number": 2,
+        "text": "FACE THE MUSIC",
+        "correct": "26",
+        "guesses": "3,713 🥈",
+        "explanation": "A whistle is music that your face makes."
+      },
+      {
+        "number": 3,
+        "text": "A SHARP BLOW THAT DOESN'T LEAVE A MARK",
+        "correct": "1,099",
+        "guesses": "6,660 🥉",
+        "explanation": "A whistle is a sharp noise made by blowing air, which does not leave a mark."
+      },
+      {
+        "number": 4,
+        "text": "SHRILL AND DEFINITELY NOT SILENT - UNLIKE ITS H AND ITS T",
+        "correct": "1,080",
+        "guesses": "2,223",
+        "explanation": "A whistle is loud, but the word itself has a silent H and a silent T."
+      },
+      {
+        "number": 5,
+        "text": "PURSE YOUR LIPS AND GO BERSERK, MAKING THIS SOUND WHILE YOU WORK",
+        "correct": "5,189",
+        "guesses": "5,460",
+        "explanation": "You purse your lips to whistle, like the song Whistle While You Work."
+      }
+    ]
   }
 ]
