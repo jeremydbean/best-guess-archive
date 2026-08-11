@@ -3812,6 +3812,30 @@
       "silverClue": 2,
       "bronzeClue": 3,
       "totalPlayers": 19022
+    },
+    {
+      "date": "Monday, August 10, 2026",
+      "secretItem": "GRAPES",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 1956,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, August 10, 2026",
+      "secretItem": "WHISTLE",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 1140,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }

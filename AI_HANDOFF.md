@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-10 (HOURGLASS daily puzzle)
+Last updated: 2026-08-11 (Aug 10 live episode: GRAPES / WHISTLE)
+
+## Most Recent Changes (2026-08-11)
+
+- **Live episode imported — Monday, August 10, 2026 (GRAPES / WHISTLE)**, hosted by Hunter March, complete on arrival: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 215-line transcript across all six sections. Archive now holds 351 games · 176 transcripts.
+- **⚠️ One payout in the paste does not survive `floorCents` — WHISTLE's bronze.** Five of the six reproduce exactly (GRAPES `3000/10`=$300, `2500/84`=$29.76, `2000/1862`=$1.07; WHISTLE `3000/15`=$200, `2500/26`=$96.15), but WHISTLE bronze came in as **$1.82** against 1,099 winners, and `2000/1099` floors to **$1.81**. $1.82 is arithmetically impossible at that headcount: 1,099 × $1.82 = $2,000.18, which overruns the $2,000 bronze pool. Only 1,093–1,098 winners would produce $1.82.
+- **Resolved as $1.81, since confirmed by the user against the source.** The computed figure was stored before the confirmation arrived, on the reasoning that 1,099 is attested twice in the paste — as `bronzeWinners` *and* as clue 3's own correct count — while the payout appeared once, making the single-source figure the likelier transcription slip. That held. The count 1,099 is therefore correct as stored, and $1.82 was simply a bad transcription. Worth noting the check is not discretionary either way: `v2-payout-math` enforces `floorCents`, so $1.82 alongside 1,099 winners would have failed the audit outright.
+- Also of note: WHISTLE clue 4 has **fewer** correct answers than clue 3 (1,080 vs 1,099) on barely a third of the guess volume (2,223 vs 6,660). Not a violation and not corrected — clue 3's "a sharp blow that doesn't leave a mark" evidently cracked the puzzle for most players, leaving clue 4 a thin field. Worth remembering before anyone assumes correct counts rise monotonically.
+- Clue text keeps the card's own punctuation: GRAPES clue 5's `&` and WHISTLE clue 4's spaced hyphen (`NOT SILENT - UNLIKE ITS H AND ITS T`), which matches the existing MARS clue 5 precedent.
+
 
 ## Most Recent Changes (2026-08-10)
 
