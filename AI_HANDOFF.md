@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-11 (Aug 10 live episode: GRAPES / WHISTLE)
+Last updated: 2026-08-11 (OCEAN daily puzzle; Aug 10 live episode)
+
+## Most Recent Changes (2026-08-11, continued)
+
+- **Daily puzzle added — Tuesday, August 11, 2026: OCEAN**: `data/daily-puzzles.json` now holds 81 entries. Clues: THINK DEEPLY / ONE AND FIVE AT ONCE / IT HAS A KING-SIZE BED (AND THE KING IS POSEIDON) / TRAVEL ON IT IN A CANOE, MIX UP ITS LETTERS TO SPELL CANOE / BODY OF WATER THAT'S SALTY & GIGANTIC: THINK PACIFIC OR ATLANTIC. Answered on clue 3. Clue 4's anagram claim was verified rather than trusted — CANOE and OCEAN are genuine anagrams. Clue 2 is the sharpest of the set, and clue 3 doubles up (ocean bed / Poseidon as king) in a way most cards don't. Explanations use straight double quotes, matching the 19 other quoted explanations in the file; none use curly quotes. OCEAN had not been used before, in either the dailies or the live games.
+
 
 ## Most Recent Changes (2026-08-11)
 

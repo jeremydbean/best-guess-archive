@@ -2478,5 +2478,36 @@
         "explanation": "It's like a clock, but sandier."
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 11, 2026",
+    "secretItem": "OCEAN",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "THINK DEEPLY",
+        "explanation": "The ocean is deep."
+      },
+      {
+        "clueNumber": 2,
+        "text": "ONE AND FIVE AT ONCE",
+        "explanation": "The five \"different\" oceans are actually all interconnected."
+      },
+      {
+        "clueNumber": 3,
+        "text": "IT HAS A KING-SIZE BED (AND THE KING IS POSEIDON)",
+        "explanation": "The ocean bed is big, and Poseidon is the king of the ocean in Greek myth."
+      },
+      {
+        "clueNumber": 4,
+        "text": "TRAVEL ON IT IN A CANOE, MIX UP ITS LETTERS TO SPELL CANOE",
+        "explanation": "\"Canoe\" is an anagram of \"ocean\"."
+      },
+      {
+        "clueNumber": 5,
+        "text": "BODY OF WATER THAT'S SALTY & GIGANTIC: THINK PACIFIC OR ATLANTIC",
+        "explanation": "The Pacific and the Atlantic are our two biggest oceans."
+      }
+    ]
   }
 ]
