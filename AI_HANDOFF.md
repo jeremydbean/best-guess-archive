@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-12 (Shows Hosted panel; polls stat removed)
+Last updated: 2026-08-12 (ZENDAYA daily puzzle; Shows Hosted panel)
+
+## Most Recent Changes (2026-08-12, continued 2)
+
+- **Daily puzzle added — Wednesday, August 12, 2026: ZENDAYA**: `data/daily-puzzles.json` now holds 82 entries. Clues: OFF TO A CALM START / FASHION ICON WHO USED TO BE QUITE MOUSY / A STAR FROM A TO Z WITH A NAME FROM Z TO A / RECENTLY GOT GODDESS-Y IN CHRISTOPHER NOLAN'S ODYSSEY / ACTRESS WHO MADE THE WORLD SWOON IN EUPHORIA, CHALLENGERS, & DUNE. Answered on clue 3. The set builds the name in pieces — clue 1 gives the first syllable (zen), clue 3 gives the first and last letters — which is unusual; most puzzles hint at the thing, not its spelling. Clue 2's "mousy" is a Disney Channel pun, not a description. Clue 1's explanation uses an em dash per file convention (the card shows a spaced hyphen); clue 4's title quotation uses straight double quotes, matching the other quoted explanations. ZENDAYA had not been used before, in either the dailies or the live games.
+
 
 ## Most Recent Changes (2026-08-12, continued)
 
