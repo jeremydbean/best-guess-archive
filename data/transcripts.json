@@ -93008,5 +93008,1127 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 11, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "QR CODE",
+      "MICKEY MOUSE"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "QR CODE",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "YOU CAN CRACK THIS BEFORE STU",
+          "GIVES WHEN YOU TAKE",
+          "THE MOST ACCESSIBLE CORNERS OF THE INTERNET",
+          "IMAGE THAT TOOK MANY A MENU OFF THE MENU",
+          "SCANNABLE SQUARE OF BLACK & WHITE THAT'LL BRING YOU TO A WEBSITE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "MICKEY MOUSE",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "YOU KNOW HOW TO SPELL THIS",
+          "THE HEAD OF A KINGDOM",
+          "HAPPENS TO SHARE A LAST NAME WITH HIS GIRLFRIEND",
+          "“YOU LIKE MY WHITE-BUTTONED RED SHORTS? GIMME A HIGH FOUR!”",
+          "RODENT MASCOT WHO REPS HIS BRAND FROM DISNEY WORLD TO DISNEYLAND"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Song",
+            "text": "100... 99... everybody realign... get the party going on time... Looking in the mirror like 3, 2, 1, I'm ready... Baby I'm just having fun... Gonna make it 'cause I won... Sippin' on somethin' like 3, 2, 1, I'm ready..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "How's it going?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello, hello."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm your host, Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now, last night was my 100th night hosting this show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sure, most shows would have celebrated their host's 100th episode."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But around here, we do things a little different."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "In other words, everyone forgot."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But that's okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm not upset about it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Instead, we're gonna celebrate my 101st episode!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "In the script it said underwhelming."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't realize it would be that underwhelming."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But you know what's overwhelming?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's get to 'em."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each round has one puzzle, but each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round, we're gonna load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But remember, the clues are written like riddles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you'll get 20 seconds to submit an answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But you only get one best guess per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I want one per clue, one per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer, and we don't accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in the correct answer on the earliest clue will split the Gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in the correct answer on the second earliest clue will split the Silver pot of $2,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And everyone that gets it on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk for my 101st episode."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's win some money!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "$7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright ladies and gentlemen, good luck."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I hope you win."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I hope you win."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm playing along with ya."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You can crack this before Stu."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You can crack this before Stu."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You guys that you finished the clue?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I just want to be sure."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is intentional, and again, if you're confused, just know I'm right there with you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But it will make sense."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It does 99% of the time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You can crack this before Stu."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You can crack this before S-T-U."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't get anything, maybe you did."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hook The Wife from Chesapeake, Virginia said egg."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, I think it's one of the most classically crackable things."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gives when you take."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly, egg is kind of a great an-... don't probably put egg."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm not saying put egg."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But egg is a great answer because when you take an egg, when you crack it, you take away essentially the eggness of the egg, but it gives you egg."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I believe that was Confucius."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gives when you take."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sir1990 from Dallas, Texas said IRS."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gives when you take."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "True, very true."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, and then BrendaBrat55 put a sucker."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gives when you take."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I like that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The most accessible corners of the internet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The most accessible corners of the internet?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't even know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gives when you take."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You can crack this before Stu."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And now, the most accessible corners of the internet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The most accessible corners of the internet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Magic Capybara, who I believe we've seen before, said Google."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "100% a very accessible corner of the internet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Most accessible corners of the internet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "LionsClaire put the dark web."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think they misheard “most”."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Image that took many a menu off the menu."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gives when you take."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You can crack this before Stu."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Image that took many a menu off the menu."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think I've got something."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't clue 4, that's better than I've been doing lately, we'll see if it holds for the fifth and final clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Scannable square of black and white that'll bring you to a website."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Your final 20 seconds for today, starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now keep in mind, there's another puzzle right after this, so if you didn't write this amazing answer that I wrote... there's another one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We can play in just a minute."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then we can play tomorrow, and the next day, and the next day."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Also, to everyone playing on Reddit, hello."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Discord, hello."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Playing with your friends and family, hello."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hope you guys are doing good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A scannable square of black and white that'll bring you to a website."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answer was: A QR code."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There you go."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And if you guys happened to have scanned the QR code for the guy on the far right, you would have gotten an extra $10,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And if you didn't, no worries."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, let's take a look at how the clues fit in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Just kidding."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, anyway."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “SCANNABLE SQUARE OF BLACK & WHITE THAT'LL BRING YOU TO A WEBSITE.” You can scan the QR code to go wherever you are trying to go. 6,557 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “IMAGE THAT TOOK MANY A MENU OFF THE MENU.” Many restaurants now have QR codes for digital menus and no longer use paper menus. 2,212 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “THE MOST ACCESSIBLE CORNERS OF THE INTERNET.” A QR code usually has four corners and lets you access the internet. 399 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “GIVES WHEN YOU TAKE.” When you take a picture of a QR code, it gives you a link or other information. 165 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “YOU CAN CRACK THIS BEFORE STU.” The letters Q and R come before S, T, and U in the alphabet, and you can crack a code. 106 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 106 winners at $28.30 each. Silver (Clue 2): 165 winners at $15.15 each. Bronze (Clue 3): 399 winners at $5.01 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Very well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Impressive."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which by the way, is where I put QR codes, so I got one today, which is more than most days."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Very well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Really well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That was not an easy clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is a great clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm actually... I'm pretty impressed by that one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh, that is so impressive."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "106 people getting $28.30 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Step's Whisk Piñata, 98e, Juicifer, 19, Daddy Pancakes, crazy user names."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gives when you take, Silver, 165 people going home with $15 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then even Bronze going home with $5 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "For everyone who didn't win, your redemption arc starts right now."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "$7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,000 for Gold, 2,500 for Silver."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "My goal, by the way, I like setting goals before each puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm going for a clue three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What are you going for?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let us know right now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You know how to spell this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You know how to spell this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You know how to spell this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I wrote it in time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm counting it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hefty Howell said my name."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You do know how to spell your name, hopefully."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Moldy Labrador went really obvious and just wrote this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which would be... we'd be bold on clue one to give you that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The head of a kingdom."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, good luck everybody."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "None of us had submitted our answer yet, so that's good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The head of a kingdom."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Eddie Boy 36 said B."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, yeah, yeah, the bee kingdom, that's... those are kingdoms."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Even Lawyer 994 from Porter, Texas said lion."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Definitely the head of the kingdom."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You know how to spell lion."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, and then the king is just another answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We got... you know how to spell this?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is it this?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Head of a kingdom?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "King?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Happens to share a last name with his girlfriend."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Happens to share a last name with his girlfriend."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The head of a kingdom."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You know how to spell this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, maybe the you know how to spell this... when someone said B, from a spelling bee, the head of a kingdom, that's interesting."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Still not correct."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Happens to share a last name with his girlfriend."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bobby Brisket put Gary A Vark."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What a good use... what a good use of your guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thank you for entertaining us."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You like my white-buttoned red shorts? Gimme a high four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, I think a lot of people are gonna get it right now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If not... wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And by the way, it looked like I was writing down an answer earlier."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Got it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You like my white-buttoned red shorts? Gimme a high four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Marginal Mindy said the 50s?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Do you guys remember back in the 50s where everyone was missing a finger?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, okay, we'll go to clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Rodent mascot who reps his brand from Disney World to Disneyland."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Rodent mascot who reps his brand from Disney World to Disneyland."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I had to get the rhyme right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Your final 20 seconds for today starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'll read it one more time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Rodent mascot... I think that's okay at this point."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think that's got to be okay at this point."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Rodent mascot who reps his brand from Disney World to Disneyland."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is that good?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I haven't been to Disneyland in a long time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think a lot of people must have got it on four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A lot of people got it on five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answer was: Mickey Mouse."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now, by the way, people have been making fun of my ears for years."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So now, you see how small my actual ears are, bullies."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, the answer was Mickey Mouse."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'll show you what I put."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I put Mickey, but my stepdad Mickey... he watches the show a lot, I wanted to shout him out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "He's a good guy."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues fit, find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “RODENT MASCOT WHO REPS HIS BRAND FROM DISNEY WORLD TO DISNEYLAND.” Mice are rodents and Mickey is the iconic mascot. 3,918 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: ““YOU LIKE MY WHITE-BUTTONED RED SHORTS? GIMME A HIGH FOUR!”.” Mickey wears red shorts with white buttons and has four fingers on each hand. 4,752 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “HAPPENS TO SHARE A LAST NAME WITH HIS GIRLFRIEND.” He and Minnie both have the last name Mouse. 840 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “THE HEAD OF A KINGDOM.” His head is a famous symbol of Disney, including their Magic Kingdom theme park. 120 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “YOU KNOW HOW TO SPELL THIS.” The famous Mickey Mouse Club theme song taught a lot of people how to spell Mickey Mouse. 16 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 16 winners at $187.50 each. Silver (Clue 2): 120 winners at $20.83 each. Bronze (Clue 3): 840 winners at $2.38 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Do we know if that's their real last name?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We got a such a big research team here."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, what?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, it's their stage name."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But did anyone get it right on clue number one?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which means 16 people are going home with $187.50."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to JMillie14, Majestic B Jones, BelugaLuga and a bunch more."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue two, head of a kingdom, $20 going to each of those winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then even on Bronze going home with a little over 2 bucks."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to all of our winners, you guys did a great job."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're here every weekday at 8 Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good night!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [GOOGLE, EGG, CODE, JOKE, BARCODE]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [KING, CROWN, LION, THIS, ALPHABET]"
+          }
+        ]
+      }
+    ]
   }
 ]
