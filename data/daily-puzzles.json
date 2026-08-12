@@ -2509,5 +2509,36 @@
         "explanation": "The Pacific and the Atlantic are our two biggest oceans."
       }
     ]
+  },
+  {
+    "date": "Wednesday, August 12, 2026",
+    "secretItem": "ZENDAYA",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "OFF TO A CALM START",
+        "explanation": "You're nice and calm if you're feeling zen — her first syllable."
+      },
+      {
+        "clueNumber": 2,
+        "text": "FASHION ICON WHO USED TO BE QUITE MOUSY",
+        "explanation": "This stylish A-lister got her start at the Disney Channel."
+      },
+      {
+        "clueNumber": 3,
+        "text": "A STAR FROM A TO Z WITH A NAME FROM Z TO A",
+        "explanation": "She's a celeb from top to bottom, and her name starts with Z and ends with A."
+      },
+      {
+        "clueNumber": 4,
+        "text": "RECENTLY GOT GODDESS-Y IN CHRISTOPHER NOLAN'S ODYSSEY",
+        "explanation": "She plays Athena in 2026's \"The Odyssey\"."
+      },
+      {
+        "clueNumber": 5,
+        "text": "ACTRESS WHO MADE THE WORLD SWOON IN EUPHORIA, CHALLENGERS, & DUNE",
+        "explanation": "Those are just a few of her big TV shows and movies."
+      }
+    ]
   }
 ]
