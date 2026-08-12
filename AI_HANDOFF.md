@@ -1,6 +1,17 @@
 # AI Handoff
 
-Last updated: 2026-08-12 (Aug 11 live episode: QR CODE / MICKEY MOUSE)
+Last updated: 2026-08-12 (Shows Hosted panel; polls stat removed)
+
+## Most Recent Changes (2026-08-12, continued)
+
+- **Removed the "Daily Polls Tracked" KPI from the stats page.** It was the last poll-derived figure on a public view. `data/daily-polls.json`, the polls view template, and `renderPolls()` are all left intact — only the stats tile is gone.
+- **New "Shows Hosted" panel on the stats page**, above Host Comparison: shows, solo, shared, first and latest date per host, sorted by shows.
+- **This exists because the old table was being read as an episode count and isn't one.** Its "Games" column tallies *game entries*, and every episode stores one entry per round, so the number runs about double the nights a host actually worked — Hunter March showed 221 there against 114 real dates. That column is now labelled **Rounds** (and its sub-caption says "rounds"), and the new panel carries the by-date count.
+- **Shared nights reach the archive two different ways, and both are handled.** Some are stored as one combined host string (`"Hunter March, Anthony Anderson"`, Jan 26; `"Howie Mandel, Hunter March"`, Apr 24), and some as two rounds on the same date with *different* single hosts — Dec 8, 2025 is the only example, Hunter on BARBIE and Howie Mandel on PICKLEBALL. The panel gathers distinct host names per date, so both forms credit each host correctly. A per-entry tally treats a combined string as a separate person entirely, which is part of why the old numbers looked wrong.
+- **Reconciles exactly**: 171 solo credits + 5 shared dates = 176 episodes played. The remaining archive date is **April 9, 2026, cancelled** — excluded because the stats view filters stubs, and nobody hosted a show that did not happen. The panel's footnote states both the shared-night rule and the cancelled exclusion, and both counts are computed, never hardcoded.
+- Current standings: Hunter March 114 (111 solo, 3 shared), Howie Mandel 56 (52 solo, 4 shared), Corinne Foxx 6, Anthony Anderson 2, Alexa Bliss 1, Austin Show 1, Jade Catapa 1.
+- Verified in headless Chromium at 390/768/1280px: rows and footnote render, zero poll references remain on the stats view, no new console errors, and no layout overflow introduced (the page-level overflow seen in testing is present on `HEAD` too and originates outside `#view-container`).
+
 
 ## Most Recent Changes (2026-08-12)
 
