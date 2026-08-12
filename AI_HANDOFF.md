@@ -1,6 +1,16 @@
 # AI Handoff
 
-Last updated: 2026-08-11 (OCEAN daily puzzle; Aug 10 live episode)
+Last updated: 2026-08-12 (Aug 11 live episode: QR CODE / MICKEY MOUSE)
+
+## Most Recent Changes (2026-08-12)
+
+- **Live episode imported — Tuesday, August 11, 2026 (QR CODE / MICKEY MOUSE)**, hosted by Hunter March, complete on arrival: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 263-line transcript across all six sections. Archive now holds 353 games · 177 transcripts. This was Hunter March's self-described **101st episode** (the show forgot his 100th).
+- **⚠️ Two payouts in the paste did not survive `floorCents`, and the cause is now a named pattern worth watching for.** QR CODE silver arrived as **$15.00** against 165 winners (`2500/165` = **$15.15**) and bronze as **$5.00** against 399 (`2000/399` = **$5.01**). Both stored as computed.
+- **The tell: the host rounds round numbers out loud.** He says "165 people going home with **$15** each" and "even Bronze going home with **$5** each", but gives gold precisely as "**$28.30** each" — because $28.30 has no round form to shorten to. An audio-derived pass takes the spoken figure, so **payouts that arrive as suspiciously clean whole dollars are the ones to recompute first**. The arithmetic confirms it independently: $15.00 would strand $25 of the silver pool and $5.00 would strand $5 of bronze, and the show always divides the pot down to the cent. Same failure mode as Aug 10's WHISTLE bronze ($1.82 for $1.81), which the user confirmed resolved in favour of the computed value.
+- **MICKEY MOUSE clue 4 is a spoken-in-character line** — the card wraps the whole clue in quotation marks (`“YOU LIKE MY WHITE-BUTTONED RED SHORTS? GIMME A HIGH FOUR!”`), stored with curly quotes per clue-text house style.
+- **⚠️ QR CODE's `winnerNames` may be mis-split and is worth a screenshot check.** Stored as supplied — `Step's Whisk Piñata, 98e, Juicifer, 19, Daddy Pancakes` — but `98e` and `19` read like fragments of adjacent usernames rather than names in their own right (plausibly `…Piñata98e` and `Juicifer19`, which would make it four winners, not five). The host only says the list aloud and calls them "crazy user names", so audio cannot settle it. Not altered, because splitting or merging on a hunch would encode a guess as fact.
+- Also of note, and the second day running: **MICKEY MOUSE clue 4 has more correct answers than clue 5** (4,752 vs 3,918). As with Aug 10's WHISTLE, correct counts do not rise monotonically across clues — clue 4's costume giveaway simply solved it for most players before the clue-5 rhyme landed.
+
 
 ## Most Recent Changes (2026-08-11, continued)
 

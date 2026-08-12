@@ -17631,5 +17631,119 @@
         "explanation": "You purse your lips to whistle, like the song Whistle While You Work."
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 11, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "QR CODE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 106,
+    "silverWinners": 165,
+    "bronzeWinners": 399,
+    "totalWinners": 670,
+    "goldPayout": 28.3,
+    "silverPayout": 15.15,
+    "bronzePayout": 5.01,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Step's Whisk Piñata, 98e, Juicifer, 19, Daddy Pancakes",
+    "wrongGuesses": "GOOGLE, EGG, CODE, JOKE, BARCODE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "YOU CAN CRACK THIS BEFORE STU",
+        "correct": "106",
+        "guesses": "2,622 🥇",
+        "explanation": "The letters Q and R come before S, T, and U in the alphabet, and you can crack a code."
+      },
+      {
+        "number": 2,
+        "text": "GIVES WHEN YOU TAKE",
+        "correct": "165",
+        "guesses": "2,395 🥈",
+        "explanation": "When you take a picture of a QR code, it gives you a link or other information."
+      },
+      {
+        "number": 3,
+        "text": "THE MOST ACCESSIBLE CORNERS OF THE INTERNET",
+        "correct": "399",
+        "guesses": "3,239 🥉",
+        "explanation": "A QR code usually has four corners and lets you access the internet."
+      },
+      {
+        "number": 4,
+        "text": "IMAGE THAT TOOK MANY A MENU OFF THE MENU",
+        "correct": "2,212",
+        "guesses": "4,358",
+        "explanation": "Many restaurants now have QR codes for digital menus and no longer use paper menus."
+      },
+      {
+        "number": 5,
+        "text": "SCANNABLE SQUARE OF BLACK & WHITE THAT'LL BRING YOU TO A WEBSITE",
+        "correct": "6,557",
+        "guesses": "7,576",
+        "explanation": "You can scan the QR code to go wherever you are trying to go."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, August 11, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MICKEY MOUSE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 16,
+    "silverWinners": 120,
+    "bronzeWinners": 840,
+    "totalWinners": 976,
+    "goldPayout": 187.5,
+    "silverPayout": 20.83,
+    "bronzePayout": 2.38,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "JMillie14, Majestic B Jones, BelugaLuga",
+    "wrongGuesses": "KING, CROWN, LION, THIS, ALPHABET",
+    "clues": [
+      {
+        "number": 1,
+        "text": "YOU KNOW HOW TO SPELL THIS",
+        "correct": "16",
+        "guesses": "4,068 🥇",
+        "explanation": "The famous Mickey Mouse Club theme song taught a lot of people how to spell Mickey Mouse."
+      },
+      {
+        "number": 2,
+        "text": "THE HEAD OF A KINGDOM",
+        "correct": "120",
+        "guesses": "4,248 🥈",
+        "explanation": "His head is a famous symbol of Disney, including their Magic Kingdom theme park."
+      },
+      {
+        "number": 3,
+        "text": "HAPPENS TO SHARE A LAST NAME WITH HIS GIRLFRIEND",
+        "correct": "840",
+        "guesses": "2,853 🥉",
+        "explanation": "He and Minnie both have the last name Mouse."
+      },
+      {
+        "number": 4,
+        "text": "“YOU LIKE MY WHITE-BUTTONED RED SHORTS? GIMME A HIGH FOUR!”",
+        "correct": "4,752",
+        "guesses": "6,285",
+        "explanation": "Mickey wears red shorts with white buttons and has four fingers on each hand."
+      },
+      {
+        "number": 5,
+        "text": "RODENT MASCOT WHO REPS HIS BRAND FROM DISNEY WORLD TO DISNEYLAND",
+        "correct": "3,918",
+        "guesses": "4,232",
+        "explanation": "Mice are rodents and Mickey is the iconic mascot."
+      }
+    ]
   }
 ]
