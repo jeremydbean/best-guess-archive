@@ -17745,5 +17745,119 @@
         "explanation": "Mice are rodents and Mickey is the iconic mascot."
       }
     ]
+  },
+  {
+    "date": "Wednesday, August 12, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "BUTTERFLY",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 16,
+    "silverWinners": 55,
+    "bronzeWinners": 1127,
+    "totalWinners": 1198,
+    "goldPayout": 187.5,
+    "silverPayout": 45.45,
+    "bronzePayout": 1.77,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Koopa94, PhillyForRealy, AlienGrowth674",
+    "wrongGuesses": "HUG, BEE, ROSE, MISTLETOE, RELATIONSHIP",
+    "clues": [
+      {
+        "number": 1,
+        "text": "HAS ROOM FOR GROWTH",
+        "correct": "16",
+        "guesses": "4,883 🥇",
+        "explanation": "A butterfly has a cocoon, which is a room to grow in."
+      },
+      {
+        "number": 2,
+        "text": "MIGHT PRECEDE A KISS",
+        "correct": "55",
+        "guesses": "4,414 🥈",
+        "explanation": "A butterfly kiss is one done with the eyelashes."
+      },
+      {
+        "number": 3,
+        "text": "SPREAD, SPREAD YOUR WINGS",
+        "correct": "1,127",
+        "guesses": "5,141 🥉",
+        "explanation": "Butter is a spread and butterflies spread their wings to fly."
+      },
+      {
+        "number": 4,
+        "text": "MIGHTY MORPHIN' FLOWER RANGERS",
+        "correct": "1,264",
+        "guesses": "3,511",
+        "explanation": "Butterflies go through metamorphosis and range around gardens for flower nectar."
+      },
+      {
+        "number": 5,
+        "text": "INSECT THAT'S LOVELY TO SEE; IT'S COLORFUL AND IT FLOATS LIKE ALI",
+        "correct": "3,198",
+        "guesses": "4,053",
+        "explanation": "Muhammad Ali famously said he floated like a butterfly."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, August 12, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "MUMMY",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 871,
+    "silverWinners": 1780,
+    "bronzeWinners": 1040,
+    "totalWinners": 3691,
+    "goldPayout": 3.44,
+    "silverPayout": 1.4,
+    "bronzePayout": 1.92,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "50Bear13, SusieQ65, OceanKid15",
+    "wrongGuesses": "SKELETON, KING TUT, FUNERAL, MOTH, CATERPILLAR",
+    "clues": [
+      {
+        "number": 1,
+        "text": "REMAINS TO BE SEEN",
+        "correct": "871",
+        "guesses": "6,604 🥇",
+        "explanation": "Mummies are dead bodies that are shown in museums."
+      },
+      {
+        "number": 2,
+        "text": "BOUND TO STICK AROUND",
+        "correct": "1,780",
+        "guesses": "5,891 🥈",
+        "explanation": "A mummy's body is bound up so it does not decompose."
+      },
+      {
+        "number": 3,
+        "text": "MIGHT SCARE A BRITISH CHILD INTO SAYING ITS NAME",
+        "correct": "1,040",
+        "guesses": "3,416 🥉",
+        "explanation": "A scared British child might call for their mom by saying mummy."
+      },
+      {
+        "number": 4,
+        "text": "IT'S NOT BUTTERFLY AGAIN, BUT IT IS A MONARCH IN A COCOON",
+        "correct": "911",
+        "guesses": "2,839",
+        "explanation": "Mummies are often monarchs cocooned in bandages and tombs."
+      },
+      {
+        "number": 5,
+        "text": "PHARAOH WHO HAS MET THEIR DOOM, PRESERVED WITH BANDAGES IN A TOMB",
+        "correct": "2,882",
+        "guesses": "3,339",
+        "explanation": "A pharaoh preserved in a sarcophagus is a mummy."
+      }
+    ]
   }
 ]

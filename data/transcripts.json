@@ -94130,5 +94130,1183 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Wednesday, August 12, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "BUTTERFLY",
+      "MUMMY"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "BUTTERFLY",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "HAS ROOM FOR GROWTH",
+          "MIGHT PRECEDE A KISS",
+          "SPREAD, SPREAD YOUR WINGS",
+          "MIGHTY MORPHIN' FLOWER RANGERS",
+          "INSECT THAT'S LOVELY TO SEE; IT'S COLORFUL AND IT FLOATS LIKE ALI"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "MUMMY",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "REMAINS TO BE SEEN",
+          "BOUND TO STICK AROUND",
+          "MIGHT SCARE A BRITISH CHILD INTO SAYING ITS NAME",
+          "IT'S NOT BUTTERFLY AGAIN, BUT IT IS A MONARCH IN A COCOON",
+          "PHARAOH WHO HAS MET THEIR DOOM, PRESERVED WITH BANDAGES IN A TOMB"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm your host, Howie Mandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And after a long day at the clue farm, there's nothing more satisfying than serving the freshest, juiciest clues directly to you, the players."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Our farm-to-cell-phone philosophy ensures that only the highest quality clues make it into our puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And you can rest assured that each clue is completely organic, non-GMO certified, and almost 50% cruelty-free."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love when the people who wrote it laugh at their own stuff."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sure, it's a lot of work making clues this way, but it's worth it because you're worth it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Plus, I look great in overalls."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Like a hillbilly Chris Hemsworth."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think it's more like a before and after."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's Chris Hemsworth after two months of sepsis."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sadly, you can't grow crops without fertilizer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So here's the rules: Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now, before each round, we're going to load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It could be absolutely anything, and then I'm going to give you five clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But remember, the clues, they're riddles."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And after each clue, you're going to get 20 seconds to submit an answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you only get one best guess per round, not one per clue, one per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, so make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's got to be the exact answer, and we're not accepting typos tonight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bottom line, you want to be fast, but you've got to be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer at the earliest clue will split the Gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the Silver pot of $2,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a lot of money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's a lot of talking."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's win some money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round 1 is worth $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, load the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, you didn't see I dropped the thing out of my ear."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There's somebody talking to me the whole time."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm not just coming up with this stuff myself."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your first clue, okay?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "HAS ROOM FOR GROWTH."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They've given me a whiteboard here so that I can guess and play along."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds on the clock starting now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "HAS ROOM FOR GROWTH."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, we're out of time."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "WackyFuneral441 said dermatologist."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Cause something's growing, that's what you go into the room, and they pop it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "MIGHT PRECEDE A KISS."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Has room for growth."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I already put in my guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, 10 seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Might precede a kiss."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's a guess, but I'm not allowed to erase it, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ulysses805 said love."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Aw, and BlissfulBen20 said high five."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can you imagine that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "High five!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "SPREAD, SPREAD YOUR WINGS."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Has room for growth, might precede a kiss, spread, spread your wings."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Caterpillar."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Already over 9,000 people, and I put it on the first... what do you think I'm wrong about?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "MoltenLarry77 said Red Bull."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Really?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is that their, is that their logo?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I've never seen a commercial for it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Gives you wings?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't, I haven't seen a sponsor."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Are they a sponsor?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I hate them."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "MIGHTY MORPHIN' FLOWER RANGERS."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mighty morphin' flower rangers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Has room for growth."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Might precede a kiss."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Spread, spread your wings."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is where I know I went wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mighty morphin' flower rangers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "NimbleOx104 said hippies."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mighty morphin' flower rangers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, and here's your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your final chance to guess, your final shot at this $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is... INSECT THAT'S LOVELY TO SEE; IT'S COLORFUL AND IT FLOATS LIKE ALI."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That clue went... hopefully you didn't... I know somebody... I feel like there's going to be big money right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Don't you feel like big money?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can you hear the cha-chinging?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Two, one, time is up."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, let's find out what's in the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, open the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, butterfly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't... I'm embarrassed."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know if you can read that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can you read that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It says 'my man stuff'."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There's room for growth!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It sometimes precedes a kiss!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Spreads like wings!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And it morphs into a flower rang... anyway, let's, let's take a look at how the clues fit and find out who is taking the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “INSECT THAT'S LOVELY TO SEE; IT'S COLORFUL AND IT FLOATS LIKE ALI.” Muhammad Ali famously said he floated like a butterfly. 3,198 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “MIGHTY MORPHIN' FLOWER RANGERS.” Butterflies go through metamorphosis and range around gardens for flower nectar. 1,264 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “SPREAD, SPREAD YOUR WINGS.” Butter is a spread and butterflies spread their wings to fly. 1,127 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “MIGHT PRECEDE A KISS.” A butterfly kiss is one done with the eyelashes. 55 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “HAS ROOM FOR GROWTH.” A butterfly has a cocoon, which is a room to grow in. 16 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 16 winners at $187.50 each. Silver (Clue 2): 55 winners at $45.45 each. Bronze (Clue 3): 1,127 winners at $1.77 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here we are."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Insect that's lovely to see, it's colorful and it floats like a bee, Muhammad Ali famously said that he floated like a butterfly, alright?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And, uh, 4,053 of you guessed, 3,198 of you guessed correctly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, this makes sense, clue number four, mighty morphin' flower rangers, right, they go through a metamorphosis and, uh, range around your garden sipping flower nectar."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And range around your garden?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Who wrote the answer, range, is that you?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They fly around, and they go from flower... range around?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, so 3,511 of you guessed."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "1,264 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Spread, spread your wings."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Butter is a spread."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Spread your wings means fly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Butterfly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And there you go."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5,141, 5141 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "1,127 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Range around... okay... okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Might precede a kiss."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "As in a butterfly kiss, which is the one you do with your eyelashes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You ever, you ever do that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I do that to, to my wife, and I end up, anyway, it doesn't matter."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, uh, 4,414 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "55 of you guessed correctly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I once got pink eye from butterfly kissing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway, um, uh, clue number one, has room for growth, a butterfly has a cocoon, which is a room to grow in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, 4,883 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "16 of you are each!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's the Gold!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You are each splitting $187.50 for each one of you!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "In the Silver, uh, 55 of you are each, uh, getting $45.45."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And this is beautiful, the Bronze winners, 1,127 people are each getting a buck 77."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The Gold guessers, congratulations to Koopa94, Gold guesser PhillyForRealy, and also AlienGrowth674, and all the rest of you, congratulations on your big, on your big win."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, it is now... this is the middle, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're in the middle of the show?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Lots of things have the best stuff in the middle, like jelly donuts, or Oreos, or the, the Star Wars movies, right, best stuff in the middle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So let's take a moment and just savor the, the middle before we move on to the, the Round 2."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Just kinda, middle."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,000 for Gold, 2,500 for Silver, and 2,000 for Bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, load the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, well, let's get ready to try again."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And now, here is our first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "REMAINS TO BE SEEN."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Remains to be seen, the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Remains to be seen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Always trying to get my first guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, KiltedDonut143 said the Odyssey 2."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's so true, that's great."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is our second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "BOUND TO STICK AROUND."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now, 20 seconds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Remains to be seen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bound to stick around."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "My answer still works."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I always go for the first guess, four seconds, three, two, one, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "BlazingTooth said boomerang."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bound to stick around, comes around."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, BlackRose said a tie."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I've got one on."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bound, my own waist."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "MIGHT SCARE A BRITISH CHILD INTO SAYING ITS NAME."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my... No, I'm wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Remains to be seen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bound to stick around."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Might scare a British child into saying its name."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "FriendlyKyle54 said Paddington Bear."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Will scare a British child into saying its name?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What's your name?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here is your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "IT'S NOT BUTTERFLY AGAIN, BUT IT IS A MONARCH IN A COCOON."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I was so... I was almost right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No, it's not."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm, wait till you see what I came up with."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you got it now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my god."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Remains to be seen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bound to stick around."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Might scare a British child."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, LincolnHighRoll said, uh, Voldemort."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And ViralVince233 said Mothra."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And then here's the final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Final chance for tonight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "To walk away with big money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, PHARAOH WHO HAS MET THEIR DOOM, PRESERVED WITH BANDAGES IN A TOMB."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, time is up."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "All the answers have been submitted."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, show us what it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A mummy!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what I, you want to... it's a mummy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Do you know what, you know what I said?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Look what I said."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I said cadaver."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Which is a, isn't that a mummy?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I wouldn't win with this, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I tried, I was close."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm proud of myself, and I'm the only one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's take a look at how the clues fit and find out who's taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “PHARAOH WHO HAS MET THEIR DOOM, PRESERVED WITH BANDAGES IN A TOMB.” A pharaoh preserved in a sarcophagus is a mummy. 2,882 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “IT'S NOT BUTTERFLY AGAIN, BUT IT IS A MONARCH IN A COCOON.” Mummies are often monarchs cocooned in bandages and tombs. 911 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “MIGHT SCARE A BRITISH CHILD INTO SAYING ITS NAME.” A scared British child might call for their mom by saying mummy. 1,040 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “BOUND TO STICK AROUND.” A mummy's body is bound up so it does not decompose. 1,780 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “REMAINS TO BE SEEN.” Mummies are dead bodies that are shown in museums. 871 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 871 winners at $3.44 each. Silver (Clue 2): 1,780 winners at $1.40 each. Bronze (Clue 3): 1,040 winners at $1.92 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, clue number five, pharaoh who has met their doom, preserved with bandages in a tomb."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, we've been looking for an opportunity to say sar... oh, don't do that to me, sarcophagus."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Sarcophagus."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is that the name of a mummy?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Of a pharaoh?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "If that's the coffin, the sarcophagus."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And we've been looking for an opportunity?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you know that that's what it is, it's a, and the box is a sarcophagus."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm not well-read."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm just well, I read well, but I'm not well-read."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh, 3,339 of you guessed, 2,882 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, clue number four, it's not a butterfly again, but it is a monarch in a cocoon."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, that makes sense."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mummies are often kings, a monarch or queens, cocooned in bandages and tombs or in the sarcophagus."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, 2,839 of you, uh, took your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "911 of you were correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Might scare a British child into saying its name."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A British child who was scared by a mummy might call for their mom by saying, mummy!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mummy!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mummy!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That makes you laugh, that's so funny."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, uh, 3,416 guesses on that one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "1,040 of you used that clue wisely."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This makes sense, bound to stick around, the body is bound up so that it sticks around, it doesn't decompose, alright?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5,891 guesses on that one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "1,780 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Remains to be seen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mummies are dead bodies that get shown in museums, that's why I said cadaver, that's where I put the cadaver, which it is, but it's actually a mummy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "6,604 guesses on that one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "871 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow, so that is it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You each are getting $3.44 for your Gold."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, some of those Gold guessers are 50Bear13, SusieQ65, OceanKid15, and many more."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, the Silver winners, 1,780 of you are each getting a buck 40."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And, uh, 1,040 Bronze winners are each getting a buck 92."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So that's like a, oh, more than 3,000 winners tonight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think that's a really good... Give yourselves a hand."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all the winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're here every weekday at 8pm Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So come back tomorrow, and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Am I here tomorrow?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'll be here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Goodnight, people."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [HUG, BEE, ROSE, MISTLETOE, RELATIONSHIP]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [SKELETON, KING TUT, FUNERAL, MOTH, CATERPILLAR]"
+          }
+        ]
+      }
+    ]
   }
 ]
