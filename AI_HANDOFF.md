@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-13 (NEW! badge removed; Aug 12 live episode)
+Last updated: 2026-08-13 (DRAIN daily puzzle; NEW! badge removed)
+
+## Most Recent Changes (2026-08-13, continued 2)
+
+- **Daily puzzle added — Thursday, August 13, 2026: DRAIN**: `data/daily-puzzles.json` now holds 83 entries. Clues: TAKE IT AWAY! / HIGH-LEVEL CHANGE AGENT / USEFUL AFTER RAIN, MOSTLY MADE OF RAIN / IF YOU DON'T KNOW IT BY NOW, YOUR CHANCES ARE CIRCLING IT / OUTLET IN A SINK OR TUB FOR GETTING RID OF LIQUID, GLUB GLUB GLUB. **Answered on clue 5** — the first daily in this run to go the full distance; the recent ones were solved on clue 2 or 3. Clue 3's wordplay was verified rather than trusted: DRAIN minus its D is exactly RAIN. Clue 4 is the unusual one — it needles the player about still not having it, which no other card in the file does. Explanations use straight double quotes for the quoted words, matching file convention. DRAIN had not been used before, in either the dailies or the live games.
+
 
 ## Most Recent Changes (2026-08-13, continued)
 

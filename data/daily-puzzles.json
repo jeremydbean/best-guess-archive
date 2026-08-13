@@ -2540,5 +2540,36 @@
         "explanation": "Those are just a few of her big TV shows and movies."
       }
     ]
+  },
+  {
+    "date": "Thursday, August 13, 2026",
+    "secretItem": "DRAIN",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "TAKE IT AWAY!",
+        "explanation": "A drain's job is taking away liquid."
+      },
+      {
+        "clueNumber": 2,
+        "text": "HIGH-LEVEL CHANGE AGENT",
+        "explanation": "When the water level is high, a drain changes it and makes it lower."
+      },
+      {
+        "clueNumber": 3,
+        "text": "USEFUL AFTER RAIN, MOSTLY MADE OF RAIN",
+        "explanation": "The word \"drain\" is mostly made of the word \"rain\"."
+      },
+      {
+        "clueNumber": 4,
+        "text": "IF YOU DON'T KNOW IT BY NOW, YOUR CHANCES ARE CIRCLING IT",
+        "explanation": "Surely you know the expression \"circling the drain\"."
+      },
+      {
+        "clueNumber": 5,
+        "text": "OUTLET IN A SINK OR TUB FOR GETTING RID OF LIQUID, GLUB GLUB GLUB",
+        "explanation": "There's nothing like the sweet sound of a drain at work."
+      }
+    ]
   }
 ]
