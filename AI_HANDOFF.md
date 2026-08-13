@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-13 (Aug 12 live episode: BUTTERFLY / MUMMY)
+Last updated: 2026-08-13 (NEW! badge removed; Aug 12 live episode)
+
+## Most Recent Changes (2026-08-13, continued)
+
+- **Removed the blinking NEW! badge from the Daily Puzzles tab** in the Database view. It was a pulsing amber pill on the tab button, and the feature is no longer new. The tab keeps its entry count, which still renders — verified in headless Chromium: "Live Games 355" / "Daily Puzzles 82", 82 rows after switching tabs, no console errors. The only `animate-pulse` left in the file is the unrelated "Incoming..." loading state.
+
 
 ## Most Recent Changes (2026-08-13)
 
