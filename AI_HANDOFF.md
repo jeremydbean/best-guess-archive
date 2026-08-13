@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-12 (ZENDAYA daily puzzle; Shows Hosted panel)
+Last updated: 2026-08-13 (Aug 12 live episode: BUTTERFLY / MUMMY)
+
+## Most Recent Changes (2026-08-13)
+
+- **Live episode imported — Wednesday, August 12, 2026 (BUTTERFLY / MUMMY)**, hosted by Howie Mandel, complete on arrival: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 277-line transcript across all six sections. Archive now holds 355 games · 178 transcripts.
+- **All six payouts reproduced exactly on the first pass** — BUTTERFLY `3000/16`=$187.50, `2500/55`=$45.45, `2000/1127`=$1.77; MUMMY `3000/871`=$3.44, `2500/1780`=$1.40, `2000/1040`=$1.92 — the first episode in four days with no payout to correct. The host also read all three MUMMY figures aloud precisely ("$3.44", "a buck 40", "a buck 92"), so nothing needed the rounded-speech check that caught Aug 10 and Aug 11.
+- **⚠️ Removed a duplicated block from the supplied Round 2 transcript.** Ten lines appeared verbatim twice — once after clue 4 and again after clue 5 — differing only in transcription noise ("I was so... I was almost right" vs "I was so, I was almost right", and a three-line recap collapsed into one). Kept the **clue 4** copy: "But you got it now" is a direct response to clue 4's *"IT'S NOT BUTTERFLY AGAIN, BUT IT IS A MONARCH IN A COCOON"*, and the block is followed there by the two wrong-guess callouts that always follow a timer. Clue 5 keeps its own framing lines and closing timer. Verbatim repeats including interjections like "Oh my god" are a transcription artifact, not speech — worth checking for on future audio-derived pastes.
+- **MUMMY's correct counts are the most scrambled in the archive so far**: 871 → 1,780 → 1,040 → 911 → 2,882 across clues 1–5. Silver therefore pays **less** than bronze ($1.40 vs $1.92) because more players solved on clue 2 than clue 3. That inversion is not new — 9 earlier v2 rounds do it, including both July 21 rounds — but this is the widest swing, and it is a third consecutive episode where correct counts do not climb monotonically.
+- Clue text keeps the card's own punctuation, including BUTTERFLY clue 5's semicolon. Kept verbatim in the transcript: Howie misreads that clue aloud as "floats like a **bee**" before correcting himself to Ali, and his garbled "16 of you are each!" — both are what was said.
+
 
 ## Most Recent Changes (2026-08-12, continued 2)
 
