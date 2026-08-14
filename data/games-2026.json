@@ -17859,5 +17859,119 @@
         "explanation": "A pharaoh preserved in a sarcophagus is a mummy."
       }
     ]
+  },
+  {
+    "date": "Thursday, August 13, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "YO YO",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 114,
+    "silverWinners": 157,
+    "bronzeWinners": 1965,
+    "totalWinners": 2236,
+    "goldPayout": 26.31,
+    "silverPayout": 15.92,
+    "bronzePayout": 1.01,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Young Tayla, Talia, Vibrant Fjord 693, Pool Queen",
+    "wrongGuesses": "CLOCK, ROAD, FISHING, HIGHWAY, REPEAT",
+    "clues": [
+      {
+        "number": 1,
+        "text": "REPETITIVE AND REPETITIVE",
+        "correct": "114",
+        "guesses": "3,226 🥇",
+        "explanation": "You do an up and down motion again and again, and the name yo is also repetitive."
+      },
+      {
+        "number": 2,
+        "text": "A LINE IN THE MIDDLE AND A LINE IN THE MIDDLE",
+        "correct": "157",
+        "guesses": "4,206 🥈",
+        "explanation": "A physical yo-yo has a string in the middle of it, and the word yo-yo has a hyphen in the middle of it."
+      },
+      {
+        "number": 3,
+        "text": "UNWINDING AND UNWINDING",
+        "correct": "1,965",
+        "guesses": "6,104 🥉",
+        "explanation": "Throwing a yo-yo can be fun and relaxing as you unwind the string."
+      },
+      {
+        "number": 4,
+        "text": "WALK THE DOG 'ROUND THE WORLD? CHILD'S PLAY!",
+        "correct": "5,706",
+        "guesses": "6,316",
+        "explanation": "Walking the dog and around the world are two classic yo-yo tricks."
+      },
+      {
+        "number": 5,
+        "text": "TOY ON A STRING THAT'LL DO A TRICK IF YOU GIVE YOUR WRIST A FLICK",
+        "correct": "1,483",
+        "guesses": "1,587",
+        "explanation": "A yo-yo is a toy on a string that performs tricks when you flick your wrist."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, August 13, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "STARBUCKS",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 80,
+    "silverWinners": 287,
+    "bronzeWinners": 1093,
+    "totalWinners": 1460,
+    "goldPayout": 37.5,
+    "silverPayout": 8.71,
+    "bronzePayout": 1.82,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Gavil Pear 906, Furious Manor 128, Chow Pickle",
+    "wrongGuesses": "PILLSBURY, OCEAN, SPINACH, POPEYE, PILLSBURY DOUGH BOY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "A CELEBRITY BEFORE THE DOUGH",
+        "correct": "80",
+        "guesses": "3,851 🥇",
+        "explanation": "A celebrity is a star, and dough means money or bucks, combining to make Starbucks."
+      },
+      {
+        "number": 2,
+        "text": "POPULAR GREEN ENERGY SOURCE",
+        "correct": "287",
+        "guesses": "4,122 🥈",
+        "explanation": "The Starbucks branding is green, and the coffee makes you feel energized or caffeinated."
+      },
+      {
+        "number": 3,
+        "text": "HOME OF THE NOT-SO-LITTLE MERMAID",
+        "correct": "1,093",
+        "guesses": "4,194 🥉",
+        "explanation": "The Starbucks logo features a famous mermaid."
+      },
+      {
+        "number": 4,
+        "text": "I'M CONFUSED: DOES “TALL” MEAN “SMALL” IN ITALIAN?",
+        "correct": "4,124",
+        "guesses": "5,206",
+        "explanation": "Tall is one of the smallest drink sizes at Starbucks, which has many drinks with Italian names."
+      },
+      {
+        "number": 5,
+        "text": "CHAIN WHOSE COFFEE IS NICE IN A GRANDE LATTE WITH PUMPKIN SPICE",
+        "correct": "3,562",
+        "guesses": "3,748",
+        "explanation": "Starbucks is a coffee chain famous for its grande pumpkin spice lattes."
+      }
+    ]
   }
 ]
