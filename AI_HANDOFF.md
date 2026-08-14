@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-14 (Aug 13 live episode: YO YO / STARBUCKS)
+Last updated: 2026-08-14 (MARTINI daily puzzle; Aug 13 live episode)
+
+## Most Recent Changes (2026-08-14, continued)
+
+- **Daily puzzle added — Friday, August 14, 2026: MARTINI**: `data/daily-puzzles.json` now holds 84 entries. Clues: THIS ONE'S MULTIPLE CHOICE / OFTEN ENDS IN A V / ELEGANT WAY TO LIFT YOUR SPIRITS / 7-LETTER DRINK FOR 007 / DRY OR DIRTY COCKTAIL WITH CLASS IN AN ICONICALLY-SHAPED GLASS. Answered on clue 4. Clue 4's letter count was verified rather than trusted — MARTINI is exactly seven letters, and the clue pairs that against 007. Clue 2 is the neatest: "often ends in a V" reads as spelling until the explanation turns it into the glass shape. Clue 5's explanation is unusual in that it comments on the clue's own form ("memorizing this little poem…") rather than explaining the answer — the rhyming clue-5 giveaway is normally left unremarked. Clue 1's trailing ellipsis is the card's own and is kept. MARTINI had not been used before, in either the dailies or the live games.
+
 
 ## Most Recent Changes (2026-08-14)
 
