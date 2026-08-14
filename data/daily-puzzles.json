@@ -2571,5 +2571,36 @@
         "explanation": "There's nothing like the sweet sound of a drain at work."
       }
     ]
+  },
+  {
+    "date": "Friday, August 14, 2026",
+    "secretItem": "MARTINI",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "THIS ONE'S MULTIPLE CHOICE",
+        "explanation": "You have to choose gin or vodka, dry or dirty, shaken or stirred, olive or lemon..."
+      },
+      {
+        "clueNumber": 2,
+        "text": "OFTEN ENDS IN A V",
+        "explanation": "When you're finished making a martini, you serve it in a V-shaped glass."
+      },
+      {
+        "clueNumber": 3,
+        "text": "ELEGANT WAY TO LIFT YOUR SPIRITS",
+        "explanation": "Martinis contain alcoholic spirits and you lift them to drink them."
+      },
+      {
+        "clueNumber": 4,
+        "text": "7-LETTER DRINK FOR 007",
+        "explanation": "Martini is seven letters long and James Bond loved them."
+      },
+      {
+        "clueNumber": 5,
+        "text": "DRY OR DIRTY COCKTAIL WITH CLASS IN AN ICONICALLY-SHAPED GLASS",
+        "explanation": "Memorizing this little poem should be mandatory for bartenders."
+      }
+    ]
   }
 ]
