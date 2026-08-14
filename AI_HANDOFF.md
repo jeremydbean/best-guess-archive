@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-13 (DRAIN daily puzzle; NEW! badge removed)
+Last updated: 2026-08-14 (Aug 13 live episode: YO YO / STARBUCKS)
+
+## Most Recent Changes (2026-08-14)
+
+- **Live episode imported — Thursday, August 13, 2026 (YO YO / STARBUCKS)**, hosted by Howie Mandel, complete on arrival: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 245-line transcript across all six sections. Archive now holds 357 games · 179 transcripts. **All six payouts reproduced exactly** — `3000/114`=$26.31, `2500/157`=$15.92, `2000/1965`=$1.01, `3000/80`=$37.50, `2500/287`=$8.71, `2000/1093`=$1.82 — second clean episode running.
+- **⚠️ `secretItem` is stored as supplied, `"YO YO"`, but the episode's own clue contradicts it.** Clue 2 is "A LINE IN THE MIDDLE AND A LINE IN THE MIDDLE", and its explanation reads "the word yo-yo has a **hyphen** in the middle of it" — the clue does not work unless the answer is spelled `YO-YO`. The host also says "yo-yo" throughout. Left unchanged because the paste is the only source for this date and no screenshot exists; changing it would be inference. **If a results card ever shows `YO-YO`, that is a one-field fix.** Note the archive already writes the hyphenated form in five older `wrongGuesses` lists (and `YOYO` once), but those are player-typed strings and settle nothing about card rendering.
+- **⚠️ Removed a duplicated block from Round 1 — the same artifact as Aug 12, now twice in two days.** Eight lines ("Ah here's where I got it on the fourth…" through "Okay um time is up.") appeared after clue 4 and again after clue 5, with the second copy collapsing the first three lines into one run-on. Kept the **clue 4** copy: "here's where I got it on the fourth" and "I think you all have it now" both describe clue 4, which is where the count spikes to 5,706. Clue 5 keeps its own framing and closing timer. **This is now a known failure mode of the audio-derived pastes — check every new transcript for verbatim repeated runs before importing.**
+- **Transcript speaker labels normalised from the generic `"Host"` to `"Howie Mandel"`.** Unlike Aug 7, this needed no guesswork: the intro says "I'm your host, Howie Mandel" outright.
+- **A fourth consecutive episode with non-monotonic correct counts.** YO YO clue 4 took 5,706 — the giveaway trick clue — leaving clue 5 with just 1,483 correct on 1,587 guesses, since nearly everyone had already locked in. STARBUCKS does the same at clue 4 (4,124) versus clue 5 (3,562). Treat rising correct counts as a non-assumption.
+
 
 ## Most Recent Changes (2026-08-13, continued 2)
 

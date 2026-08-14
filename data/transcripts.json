@@ -95308,5 +95308,1055 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, August 13, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "YO YO",
+      "STARBUCKS"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "YO YO",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "REPETITIVE AND REPETITIVE",
+          "A LINE IN THE MIDDLE AND A LINE IN THE MIDDLE",
+          "UNWINDING AND UNWINDING",
+          "WALK THE DOG 'ROUND THE WORLD? CHILD'S PLAY!",
+          "TOY ON A STRING THAT'LL DO A TRICK IF YOU GIVE YOUR WRIST A FLICK"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "STARBUCKS",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "A CELEBRITY BEFORE THE DOUGH",
+          "POPULAR GREEN ENERGY SOURCE",
+          "HOME OF THE NOT-SO-LITTLE MERMAID",
+          "I'M CONFUSED: DOES “TALL” MEAN “SMALL” IN ITALIAN?",
+          "CHAIN WHOSE COFFEE IS NICE IN A GRANDE LATTE WITH PUMPKIN SPICE"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm your host, Howie Mandel and I've got a treat for you tonight."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The other day in our daily polls, we asked you what behind the scenes of Best Guess Live moment would you like to see most?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And it was a close vote, but the number one answer was clue writers, clue writing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, ask and ye shall receive."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They don't know that we did this, but we hid a camera in the clue writers' room so you can get an unfiltered look at them in action and see how they come up with those amazing clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Take a look at this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my gosh look at them."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Look at them."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's Steven and Shelley."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That was Steven and Shelley."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Fascinating."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Those writers do such good work."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The only problem is our janitors keep quitting."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway I hope you enjoyed that little surprise and now for something completely unsurprising: the rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, Neil is gonna load the crystal ball with a secret item."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, you were on the vote thing too, but we'll talk about that later."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Then I'm going to give you five clues, but remember the clues are like riddles."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And after each clue you're gonna get 20 seconds to submit an answer but you only get one best guess per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not one per clue, one per round, people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's gotta be the exact answer and we're not accepting typos."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That was spelled wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay bottom line, you wanna be fast, but you have to be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the Gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the Silver pot of $2,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is enough talking."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's win some money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round 1, $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, load that ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Got my guessing board here too."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright, so, $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's the first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Repetitive and repetitive."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'll try a first clue here let me see if I got this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Repetitive and repetitive."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm done."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You guys done?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wide Variable 820 said walking."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Left right left right left right left right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh Trendy Wicker 409 the rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A line in the middle and a line in the middle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't think I did it right then."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Line in the middle and a line in the middle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Repetitive and repetitive."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Seem to be going down the same path."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Two, one, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Carlton Capybara said a ladder."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Million Manatees said fishing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You're a theme guy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Million Manatees."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Unwinding and unwinding."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And I'm gonna say this again."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your time starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Repetitive and repetitive."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A line in the middle and a line in the middle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Unwinding and unwinding."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Count down."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's see what my second answer was."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It won't count."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "First answer doesn't count either."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh Vampire Girl 1995 said a road."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And Drama King 44 said an old sweater."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Starts unravelling and unwinding."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Have you ever had it totally unwind?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't think that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Walk the dog 'round the world, child's play."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ah here's where I got it on the fourth, but I guessed it on one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I changed it on two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Then I got it on four."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm playing with a whole new set of rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think you all have it now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Five seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Almost 20,000 submitted answers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay um time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "80 C's Grinch said Morse code."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Dot dot dash."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Normal Freak 227 said Marmaduke."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Walk around the world child play."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's the final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Final chance to guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Toy on a string that'll do a trick if you give your wrist a flick."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay um time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh you wanna find out what's in the crystal ball?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, open the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yo-yo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a yo-yo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is a yo-yo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You so you know at the beginning when it said repetitive repetitive I wrote down stutter."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a stutter."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And then I thought a line through casting like casting fish."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And then I got yo-yo on four."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not stunna not applause."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I took three guesses and I got it right near the end it's not worth."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can I break the mic?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hit the mic."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay let's take a look and see how they fit I broke the microphone."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “TOY ON A STRING THAT'LL DO A TRICK IF YOU GIVE YOUR WRIST A FLICK.” A yo-yo is a toy on a string that performs tricks when you flick your wrist. 1,483 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “WALK THE DOG 'ROUND THE WORLD? CHILD'S PLAY!.” Walking the dog and around the world are two classic yo-yo tricks. 5,706 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “UNWINDING AND UNWINDING.” Throwing a yo-yo can be fun and relaxing as you unwind the string. 1,965 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “A LINE IN THE MIDDLE AND A LINE IN THE MIDDLE.” A physical yo-yo has a string in the middle of it, and the word yo-yo has a hyphen in the middle of it. 157 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “REPETITIVE AND REPETITIVE.” You do an up and down motion again and again, and the name yo is also repetitive. 114 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 114 winners at $26.31 each. Silver (Clue 2): 157 winners at $15.92 each. Bronze (Clue 3): 1,965 winners at $1.01 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to our gold guessers, each of you getting $26.31."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh silver guessers, 157 of you are getting $15.92, and 1,965 of you bronze guessers are getting $1.01."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So that's good."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The gold guessers Young Tayla, Talia, Vibrant Fjord 693 and the Pool Queen are just some of our gold guessers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I hinted at this a little early."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before we start round two I wanna can I surprise them with another thing?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Do we have a second?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, the number two answer when we did that poll I said there was a poll, Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The number two answer, you're gonna love this Neil they love you, was can we get a look at Neil loading the crystal ball?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They want to see what that's like."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And it was such a close vote I said why can't we just record that and show them?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So here's some security camera footage of Neil doing what Neil does best, loading up the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, show 'em how you work."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There he is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's like watching Beethoven compose or Mrs. Butterworth make waffles."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You're amazing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You are amazing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love what you do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Put a shirt on."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, time for round two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "$3,000 for Gold, $2,500 for Silver, and $2,000 for Bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's load that crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This was all erased for me, so I'm starting from scratch just like you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And here is your first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A celebrity before the dough."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A celebrity before the dough."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hmm."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10 seconds left."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Breathless Bologna said the Pillsbury regular boy."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before the dough, I get it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Misty Pumpkin 528 said cookie."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Aw."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is nice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I just went aw cause you did."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know why that's aw."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Popular green energy source."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A celebrity before the dough, popular green energy source."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Lines in a quagmire."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Green..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3, 2, 1, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh Fiendish Angel 11 said Guy Gardner."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't know who that is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well the Green Lantern."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Which is a superhero Marvel?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is it a Marvel thing?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "DC."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's what I meant."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I had no idea who Guy Gardner is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh to me like who's out there trimming our hedges?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh that's Guy Gardner."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Home of the not so little mermaid."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "15 seconds left."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "A celebrity before the dough..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Brash Whisper 49 Atlantis."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not Atlantis."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Fatlantis."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Are you mermaid shaming?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm confused: does tall mean small in Italian?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh ah oh uh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright Looming Joy 209 said piccolo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's Italian for small?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Isn't that a musical instrument?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tiny musical instrument is a piccolo?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Does that gardener guy play one?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I've never I feel like I'm on another planet right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your final clue, final chance to guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Chain whose coffee is nice in a grande latte with pumpkin spice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright 5 seconds left."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Does tall mean small in Italian?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not so little mermaid, fat... oh I got it, got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's find out what's in the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I know what's in the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Show 'em Neil."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Starbucks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I ended up putting Starbucks at the end that's what I put at the end but I had I don't know for the whole time."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I didn't know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I didn't know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The only thing you know is my name hard to say?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I go to Starbucks every day and they go 'and your name?' and it's the same place and it's always they write Howdy, Howly, Harry."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Nobody has ever said Howie in Starbucks to me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anyway let's take a look at how the clues fit and find out who has taken home the big money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Who won a latte?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's find out."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “CHAIN WHOSE COFFEE IS NICE IN A GRANDE LATTE WITH PUMPKIN SPICE.” Starbucks is a coffee chain famous for its grande pumpkin spice lattes. 3,562 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “I'M CONFUSED: DOES “TALL” MEAN “SMALL” IN ITALIAN?.” Tall is one of the smallest drink sizes at Starbucks, which has many drinks with Italian names. 4,124 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “HOME OF THE NOT-SO-LITTLE MERMAID.” The Starbucks logo features a famous mermaid. 1,093 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “POPULAR GREEN ENERGY SOURCE.” The Starbucks branding is green, and the coffee makes you feel energized or caffeinated. 287 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “A CELEBRITY BEFORE THE DOUGH.” A celebrity is a star, and dough means money or bucks, combining to make Starbucks. 80 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 80 winners at $37.50 each. Silver (Clue 2): 287 winners at $8.71 each. Bronze (Clue 3): 1,093 winners at $1.82 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,851 guesses on that first one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "80 of you, 80 of you got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That means you are the gold guessers, each of you getting $37.50."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And gold guessers like Gavil Pear 906, Furious Manor 128, Chow Pickle, congratulations."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You're all great gold guessers and I'm so proud of you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh the silver guessers, 287 of you are each getting $8.71."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the bronze, 1,093 of you are all getting a buck 82."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's a lot of winners again and that's almost 1500 winners or 1300 winners today I like that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The more the merrier."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is it for us for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all the winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're here every weekday at 8 Eastern 5 Pacific."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Goodnight everybody."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Still bald."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [CLOCK, ROAD, FISHING, HIGHWAY, REPEAT]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [PILLSBURY, OCEAN, SPINACH, POPEYE, PILLSBURY DOUGH BOY]"
+          }
+        ]
+      }
+    ]
   }
 ]
