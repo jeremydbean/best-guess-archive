@@ -1,6 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-08-15 (home page series-news bubble; SERIES FINALE ANNOUNCED)
+Last updated: 2026-08-15 (FLOSS daily puzzle; series-news bubble)
+
+## Most Recent Changes (2026-08-15, continued 2)
+
+- **Daily puzzle added — Saturday, August 15, 2026: FLOSS**: `data/daily-puzzles.json` now holds 85 entries. Clues: WORKS IN THE TRENCHES / FREES THE TRAPPED FROM A TRAP / PAIRS WELL WITH POPCORN / STARTS WITH A FAIL, ENDS IN A LOSS / THIS STRING'S A GO-BETWEEN THAT KEEPS YOUR TEETH NICE & CLEAN. Answered on clue 3. Clue 4's wordplay was verified rather than trusted: F + LOSS is exactly FLOSS, and the clue reads the F as a failing grade. Clue 2 works "trap" twice over — the food trap and the shut-your-trap sense — which is why its explanation carries a nested quotation, written with straight double quotes per file convention. Clue 1's "trenches" is the sharpest misdirect in the set. FLOSS had not been used before, in either the dailies or the live games.
+- Note that daily puzzles are still arriving on weekends even though the live show is weekdays only, so expect them to continue past the **August 28** series finale unless they visibly stop.
+
 
 ## Most Recent Changes (2026-08-15, continued)
 

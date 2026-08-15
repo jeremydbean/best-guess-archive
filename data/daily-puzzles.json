@@ -2602,5 +2602,36 @@
         "explanation": "Memorizing this little poem should be mandatory for bartenders."
       }
     ]
+  },
+  {
+    "date": "Saturday, August 15, 2026",
+    "secretItem": "FLOSS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "WORKS IN THE TRENCHES",
+        "explanation": "Floss goes in between your teeth."
+      },
+      {
+        "clueNumber": 2,
+        "text": "FREES THE TRAPPED FROM A TRAP",
+        "explanation": "Loosens trapped food particles from your mouth, also known as a trap. As in, \"shut your trap\"."
+      },
+      {
+        "clueNumber": 3,
+        "text": "PAIRS WELL WITH POPCORN",
+        "explanation": "Popcorn often gets stuck in your teeth making you need to floss."
+      },
+      {
+        "clueNumber": 4,
+        "text": "STARTS WITH A FAIL, ENDS IN A LOSS",
+        "explanation": "Floss starts with F, as in a failing grade, and ends with loss."
+      },
+      {
+        "clueNumber": 5,
+        "text": "THIS STRING'S A GO-BETWEEN THAT KEEPS YOUR TEETH NICE & CLEAN",
+        "explanation": "Floss is everybody's favorite tooth string."
+      }
+    ]
   }
 ]
