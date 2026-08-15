@@ -1,6 +1,20 @@
 # AI Handoff
 
-Last updated: 2026-08-14 (MARTINI daily puzzle; Aug 13 live episode)
+Last updated: 2026-08-15 (Aug 14 live episode; SERIES FINALE ANNOUNCED)
+
+## Most Recent Changes (2026-08-15)
+
+### ⚠️ The show is ending — final episode is Friday, August 28, 2026
+
+Announced by Hunter March between rounds on Aug 14 and captured in that transcript: *"we wanted to let you know that Friday, August 28th will be our final episode. But rest assured, we will be right here with a chance to win $15,000 every weekday between now and then."* That is **ten more weekday episodes** — Aug 17–21 and Aug 24–28. The `$15,000` figure is the two-round episode total at the existing `pot: 7500` per round, **not** a prize change; do not read it as a new format. Plan the remaining imports around a fixed, known end date, and expect the daily puzzles to stop around the same time.
+
+- **Live episode imported — Friday, August 14, 2026 (MATT DAMON / BIG BEN)**, hosted by Hunter March: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 265-line transcript across all six sections. Archive now holds 359 games · 180 transcripts.
+- **⚠️ Two payouts corrected, and the transcript settles them outright.** The paste gave MATT DAMON gold as **$63.83** and silver as **$138.89**; `floorCents` gives **$63.82** (`3000/47`) and **$138.88** (`2500/18`) — and the host reads both aloud as exactly "$63.82" and "$138.88". So this is the **opposite** of the Aug 10/11 pattern: there the spoken figure was rounded and the computed one was right; here the *paste* rounded up and the spoken figure was right. Either way the computed value won. **The rule holds regardless of which source looks cleaner: always recompute.**
+- **⚠️ BIG BEN clue 5 has no explanation** — the source supplies an empty string and the host never gives one on air. Left empty rather than invented, so `npm run audit` reports **1 expected `missing-explanation` warning** for this date. Fill it if a results-card screenshot ever surfaces.
+- **The archive independently corroborates the host's series-retrospective numbers**, which is the best whole-archive validation to date: he cites **11.9 million guesses** and the archive's known clue slots sum to **11,937,014** (matching to three significant figures, with 78 slots still unknown); he cites **"almost 4 million" won** against a stored prize total of **$3,834,998**; and **"almost 400 puzzles"** against 358 playable rounds.
+- **MATT DAMON pays gold *under* silver** — $63.82 to 47 gold winners versus $138.88 to just 18 silver. Clue 2 ("FEATURE OF MANY SAVINGS ACCOUNTS", the *mat* pun) was the hardest clue in the round despite coming second. That inversion has 8 earlier precedents, most recently PITBULL on Jul 31.
+- Kept verbatim as spoken: the host says "you're going home with **$60.39**" for BIG BEN gold, where the correct figure is $16.39 (`3000/183`) — an audible slip or transcription error. The stored payout is $16.39; the transcript line is left as said, matching how Howie's "floats like a bee" misread was handled on Aug 12.
+
 
 ## Most Recent Changes (2026-08-14, continued)
 
