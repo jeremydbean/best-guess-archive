@@ -1,6 +1,14 @@
 # AI Handoff
 
-Last updated: 2026-08-15 (Aug 14 live episode; SERIES FINALE ANNOUNCED)
+Last updated: 2026-08-15 (home page series-news bubble; SERIES FINALE ANNOUNCED)
+
+## Most Recent Changes (2026-08-15, continued)
+
+- **Added a "Series News" bubble to the home page**, between the title and the action buttons, announcing that Best Guess Live ends Friday, August 28, 2026. Amber-accented panel with a `campaign` icon, headline, body, and a small attribution line ("Announced on air by Hunter March, Friday, August 14, 2026") so the claim is sourced rather than floating.
+- **It is self-updating and needs no maintenance after the finale.** `renderHomeNews()` counts the weekday episodes still to air — skipping weekends, since the show ran Monday–Friday — and rewrites itself to past tense once the date passes: *"Best Guess Live has ended. The final episode aired on Friday, August 28, 2026. This archive stays online…"*. **Nobody has to remember to come back and edit this.** The finale-day copy is a third variant that drops the "until then" phrasing, which read wrong when only one episode remained.
+- Verified in headless Chromium at four simulated clock positions (today, finale day, the day after, and a month later) and at 390/768/1280px: correct copy in every case, panel within the viewport at all widths, no console errors. Currently renders "10 weekday episodes left, finale included", matching Aug 17–21 and Aug 24–28.
+- Note when reviewing local screenshots: the Material Symbols icon font is served from Google Fonts, which the sandbox proxy blocks, so **every** icon on the site renders as its literal name (`campaign`, `live_tv`, …) in local captures. That is an environment artifact, not a layout bug.
+
 
 ## Most Recent Changes (2026-08-15)
 
