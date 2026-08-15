@@ -17973,5 +17973,119 @@
         "explanation": "Starbucks is a coffee chain famous for its grande pumpkin spice lattes."
       }
     ]
+  },
+  {
+    "date": "Friday, August 14, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MATT DAMON",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 47,
+    "silverWinners": 18,
+    "bronzeWinners": 56,
+    "totalWinners": 121,
+    "goldPayout": 63.82,
+    "silverPayout": 138.88,
+    "bronzePayout": 35.71,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Mike Cat, Civil Onion, Uncanny Train",
+    "wrongGuesses": "INTEREST, JASON BOURNE, INHERITANCE, WILL SMITH, MONEY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "WILL TO SUCCEED",
+        "correct": "47",
+        "guesses": "1,932 🥇",
+        "explanation": "His big breakthrough role was Good Will Hunting."
+      },
+      {
+        "number": 2,
+        "text": "FEATURE OF MANY SAVINGS ACCOUNTS",
+        "correct": "18",
+        "guesses": "4,023 🥈",
+        "explanation": "A savings account can literally have a mat."
+      },
+      {
+        "number": 3,
+        "text": "MASS ORIGINS, MASS APPEAL",
+        "correct": "56",
+        "guesses": "3,864 🥉",
+        "explanation": "He is from Massachusetts."
+      },
+      {
+        "number": 4,
+        "text": "BOURNE AGAIN AND AGAIN",
+        "correct": "2,313",
+        "guesses": "4,605",
+        "explanation": "He starred as Jason Bourne in four films."
+      },
+      {
+        "number": 5,
+        "text": "STILL OBLIVIOUS? HE STARRED IN THE MARTIAN & JUST PLAYED ODYSSEUS",
+        "correct": "2,992",
+        "guesses": "3,712",
+        "explanation": "That is movie star Matt Damon."
+      }
+    ]
+  },
+  {
+    "date": "Friday, August 14, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BIG BEN",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 183,
+    "silverWinners": 1125,
+    "bronzeWinners": 1331,
+    "totalWinners": 2639,
+    "goldPayout": 16.39,
+    "silverPayout": 2.22,
+    "bronzePayout": 1.5,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Zora Lundgren, Mercedes",
+    "wrongGuesses": "BEN AFFLECK, BATMAN, MOUNT RUSHMORE, CLOCK, MONA LISA",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ANOTHER FAMOUS FACE",
+        "correct": "183",
+        "guesses": "3,945 🥇",
+        "explanation": "A clock has a face and this is a very famous one."
+      },
+      {
+        "number": 2,
+        "text": "AFFLECK IS HUGE RIGHT NOW!",
+        "correct": "1,125",
+        "guesses": "4,102 🥈",
+        "explanation": "Affleck is in Ben, huge as in big, and right now because it tells you what it is right now."
+      },
+      {
+        "number": 3,
+        "text": "HAS AN ENORMOUS HAND IN THE PRESENT MOMENT",
+        "correct": "1,331",
+        "guesses": "4,369 🥉",
+        "explanation": "The minute's hand is real long, and it tells you the exact time."
+      },
+      {
+        "number": 4,
+        "text": "IF YOU'RE IN LONDON, TIME'S UP",
+        "correct": "5,257",
+        "guesses": "6,128",
+        "explanation": "It is in London and it is literally up in the air."
+      },
+      {
+        "number": 5,
+        "text": "A MASSIVE BELL IN A BRITISH TOWER GIVES YOU THE MINUTES & THE HOUR",
+        "correct": "1,378",
+        "guesses": "1,700",
+        "explanation": ""
+      }
+    ]
   }
 ]
