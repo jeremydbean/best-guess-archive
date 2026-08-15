@@ -1009,6 +1009,18 @@ document.addEventListener('focusout', function(e) {
       </h1>
     </div>
 
+    <div id="home-news" class="mx-auto mt-8 w-full max-w-2xl rounded-2xl border border-amber-400/30 bg-gradient-to-br from-amber-950/40 via-slate-900/60 to-slate-900/60 px-6 py-5 text-left shadow-lg shadow-amber-950/20 hidden">
+      <div class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-amber-300 shrink-0" style="font-size:22px">campaign</span>
+        <div class="min-w-0">
+          <div class="text-[0.7rem] font-black uppercase tracking-[0.18em] text-amber-300">Series News</div>
+          <div id="home-news-headline" class="mt-1 text-white font-display text-xl sm:text-2xl font-bold leading-tight"></div>
+          <p id="home-news-body" class="mt-2 text-sm leading-relaxed text-slate-300"></p>
+          <p class="mt-2 text-xs text-slate-500">Announced on air by Hunter March, Friday, August 14, 2026.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="home-actions flex flex-col gap-4 justify-center mt-10">
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <button class="btn-primary px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 group shadow-lg shadow-blue-950/30" onclick="app.startRandomGame()">
@@ -2959,9 +2971,45 @@ class App {
       if (g) this._animateHomeStat(g, uniqueDatesCount, v => v.toLocaleString(), 700);
       if (w) this._animateHomeStat(w, totalWinners, v => v.toLocaleString(), 850);
       this.renderLatestEpisodeCard();
+      this.renderHomeNews();
       this.renderDataHealth();
       });
     });
+  }
+
+  // Hunter March announced on Friday, August 14, 2026 that the show ends on
+  // Friday, August 28. The bubble counts down the weekday episodes left and
+  // rewrites itself to past tense once that date passes, so nobody has to
+  // remember to come back and edit it.
+  renderHomeNews() {
+    const box = document.getElementById('home-news');
+    if (!box) return;
+    const headlineEl = document.getElementById('home-news-headline');
+    const bodyEl = document.getElementById('home-news-body');
+
+    const finale = new Date(2026, 7, 28, 12, 0, 0, 0);
+    const today = new Date();
+    today.setHours(12, 0, 0, 0);
+
+    // Count the weekdays still to air, finale included. The show ran Monday
+    // to Friday, so weekends are skipped rather than assumed.
+    let remaining = 0;
+    for (let d = new Date(today); d <= finale; d.setDate(d.getDate() + 1)) {
+      const day = d.getDay();
+      if (day !== 0 && day !== 6) remaining += 1;
+    }
+    const finaleText = 'Friday, August 28, 2026';
+
+    if (today > finale) {
+      headlineEl.innerText = 'Best Guess Live has ended';
+      bodyEl.innerText = `The final episode aired on ${finaleText}. This archive stays online — every episode, transcript and daily puzzle is still here to browse and replay.`;
+    } else {
+      headlineEl.innerText = `Best Guess Live ends ${finaleText}`;
+      bodyEl.innerText = remaining === 1
+        ? 'The finale airs tonight at 8pm ET / 5pm PT. This archive will record it like every episode before it, and stays online afterwards.'
+        : `${remaining} weekday episodes left, finale included. New episodes air every weekday at 8pm ET / 5pm PT until then, and this archive will keep recording them right through the last one.`;
+    }
+    box.classList.remove('hidden');
   }
 
   _latestEpisodeDate() {
