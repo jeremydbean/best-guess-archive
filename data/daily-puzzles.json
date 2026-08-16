@@ -2633,5 +2633,36 @@
         "explanation": "Floss is everybody's favorite tooth string."
       }
     ]
+  },
+  {
+    "date": "Sunday, August 16, 2026",
+    "secretItem": "FRISBEE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "NOT A UFO!",
+        "explanation": "Frisbees are very easily identifiable."
+      },
+      {
+        "clueNumber": 2,
+        "text": "IF BEERS GOT MIXED UP",
+        "explanation": "Frisbee is an anagram of \"if beers\"."
+      },
+      {
+        "clueNumber": 3,
+        "text": "GETS SOME DISTANCE AFTER A BRIEF FLING",
+        "explanation": "It goes far with a quick fling."
+      },
+      {
+        "clueNumber": 4,
+        "text": "GOES BEFORE GOLF AND HAS AN ULTIMATE SPORTS ENDING",
+        "explanation": "The word frisbee goes before golf as in frisbee golf and after ultimate as in ultimate frisbee."
+      },
+      {
+        "clueNumber": 5,
+        "text": "BRAND NAME YOU SURELY KNOW FOR A FLYING DISC THAT'S FUN TO THROW",
+        "explanation": "Frisbee is the #1 name in flying disc technology."
+      }
+    ]
   }
 ]

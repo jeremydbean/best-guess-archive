@@ -1,6 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-08-15 (FLOSS daily puzzle; series-news bubble)
+Last updated: 2026-08-16 (FRISBEE daily puzzle)
+
+## Most Recent Changes (2026-08-16)
+
+- **Daily puzzle added — Sunday, August 16, 2026: FRISBEE**: `data/daily-puzzles.json` now holds 86 entries. Clues: NOT A UFO! / IF BEERS GOT MIXED UP / GETS SOME DISTANCE AFTER A BRIEF FLING / GOES BEFORE GOLF AND HAS AN ULTIMATE SPORTS ENDING / BRAND NAME YOU SURELY KNOW FOR A FLYING DISC THAT'S FUN TO THROW. Answered on clue 2. The anagram was verified rather than trusted — FRISBEE and IF BEERS both sort to B,E,E,F,I,R,S. Clue 4 is the neat one, hinging the answer on *both* sides of a compound (frisbee golf / ultimate frisbee), and clue 1's "not a UFO" inverts the usual flying-disc misdirect by ruling it out. Clue 2's quoted phrase uses straight double quotes per file convention. FRISBEE had not been used before, in either the dailies or the live games.
+- Second weekend daily in a row, confirming the dailies run seven days a week while the live show is weekdays only.
+
 
 ## Most Recent Changes (2026-08-15, continued 2)
 
