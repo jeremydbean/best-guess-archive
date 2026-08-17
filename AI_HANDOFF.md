@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-16 (FRISBEE daily puzzle)
+Last updated: 2026-08-17 (WHEEL OF FORTUNE daily puzzle)
+
+## Most Recent Changes (2026-08-17)
+
+- **Daily puzzle added — Monday, August 17, 2026: WHEEL OF FORTUNE**: `data/daily-puzzles.json` now holds 87 entries. Clues: A COSTLY IOU / THE WRITING'S ON THE WALL / REINVENTED WHAT YOU DON'T REINVENT / MANY KNOW THE ANSWER'S DOWN PAT / GAME SHOW WITH VANNA & RYAN, SPIN TO FIND WHERE LETTERS ARE HIDIN'. **Answered on clue 1** — the first clue-1 solve in this run of dailies, and a fair one: "A COSTLY IOU" hides the vowels I, O and U in a phrase about buying them. Clue 3 is the other strong one, since "reinvent the wheel" is the exact idiom for a pointless act. Clue 4's "down pat" carries the Pat Sajak reference. Clue 3's mid-sentence ellipsis is the card's own spacing and is kept. No collision — the archive holds FERRIS WHEEL (daily, Jun 16) and FORTUNE COOKIE (live, Apr 16), but neither is this item.
+
 
 ## Most Recent Changes (2026-08-16)
 
