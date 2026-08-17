@@ -2664,5 +2664,36 @@
         "explanation": "Frisbee is the #1 name in flying disc technology."
       }
     ]
+  },
+  {
+    "date": "Monday, August 17, 2026",
+    "secretItem": "WHEEL OF FORTUNE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "A COSTLY IOU",
+        "explanation": "Contestants buy vowels in Wheel of Fortune."
+      },
+      {
+        "clueNumber": 2,
+        "text": "THE WRITING'S ON THE WALL",
+        "explanation": "The puzzles are literally up on a wall."
+      },
+      {
+        "clueNumber": 3,
+        "text": "REINVENTED WHAT YOU DON'T REINVENT",
+        "explanation": "It reinvented the wheel...and the game hangman."
+      },
+      {
+        "clueNumber": 4,
+        "text": "MANY KNOW THE ANSWER'S DOWN PAT",
+        "explanation": "Longtime host Pat Sajak retired in 2024."
+      },
+      {
+        "clueNumber": 5,
+        "text": "GAME SHOW WITH VANNA & RYAN, SPIN TO FIND WHERE LETTERS ARE HIDIN'",
+        "explanation": "Ryan Seacrest took over as host and Vanna White is still there."
+      }
+    ]
   }
 ]
