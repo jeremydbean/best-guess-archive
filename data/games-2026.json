@@ -18087,5 +18087,119 @@
         "explanation": ""
       }
     ]
+  },
+  {
+    "date": "Monday, August 17, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "SLAM DUNK",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 126,
+    "silverWinners": 1444,
+    "bronzeWinners": 1745,
+    "totalWinners": 3315,
+    "goldPayout": 23.8,
+    "silverPayout": 1.73,
+    "bronzePayout": 1.14,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "SaltyRooster144, VividCape750, Sunshine7625",
+    "wrongGuesses": "BASKETBALL, SNOW, MAIL, SKATEBOARD, BABY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "SHOVE IT!",
+        "correct": "0",
+        "guesses": "2,923",
+        "explanation": "You shove the ball into the basket."
+      },
+      {
+        "number": 2,
+        "text": "FAMOUSLY DELIVERED BY AIR",
+        "correct": "126",
+        "guesses": "4,503 🥇",
+        "explanation": "Air Jordan used to deliver a lot of slam dunks."
+      },
+      {
+        "number": 3,
+        "text": "STUNT A JAZZ PLAYER MIGHT PERFORM",
+        "correct": "1,444",
+        "guesses": "4,513 🥈",
+        "explanation": "It's a stunt performed by a player for the Utah Jazz."
+      },
+      {
+        "number": 4,
+        "text": "CRITICIZE, THEN DIP A DONUT",
+        "correct": "1,745",
+        "guesses": "2,881 🥉",
+        "explanation": "Criticize is to slam, and when you dip a donut you dunk it."
+      },
+      {
+        "number": 5,
+        "text": "JAM THE B-BALL THROUGH THE HOOP: TOMAHAWK, WINDMILL, OR ALLEY-OOP",
+        "correct": "3,721",
+        "guesses": "5,401",
+        "explanation": "Those are three varieties of slam dunks."
+      }
+    ]
+  },
+  {
+    "date": "Monday, August 17, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "HARRY POTTER",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 35,
+    "silverWinners": 315,
+    "bronzeWinners": 970,
+    "totalWinners": 1320,
+    "goldPayout": 85.71,
+    "silverPayout": 7.93,
+    "bronzePayout": 2.06,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "RickySpanish741, PullDelicious, MediumPigeon52",
+    "wrongGuesses": "HANGMAN, GUMBY, SUSHI, CINNAMON, GROOT",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ICONIC STICK FIGURE",
+        "correct": "35",
+        "guesses": "7,017 🥇",
+        "explanation": "Harry uses a stick for a wand and rides a broomstick."
+      },
+      {
+        "number": 2,
+        "text": "COMES WITH A SIDE OF GINGER",
+        "correct": "315",
+        "guesses": "6,485 🥈",
+        "explanation": "His best friend is Ron Weasley, a redhead, and he later marries Ron's sister, also a redhead."
+      },
+      {
+        "number": 3,
+        "text": "SOUNDS LIKE YOUR CERAMICS TEACHER NEEDS TO SHAVE",
+        "correct": "970",
+        "guesses": "2,800 🥉",
+        "explanation": "A ceramics teacher as in a potter needs a shave as in hairy."
+      },
+      {
+        "number": 4,
+        "text": "CHARMING KID WHO WAS POPULAR FOR A SPELL",
+        "correct": "2,947",
+        "guesses": "3,654",
+        "explanation": "He's a wizard who casts spells and charms and he's super popular."
+      },
+      {
+        "number": 5,
+        "text": "HIS GRYFFINDOR CREST IS LION-Y, HIS BEST BUDS ARE RON & HERMIONE",
+        "correct": "1,792",
+        "guesses": "1,937",
+        "explanation": "That's Harry's house at Hogwarts and who he always hangs with."
+      }
+    ]
   }
 ]
