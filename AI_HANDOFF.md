@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-17 (WHEEL OF FORTUNE daily puzzle)
+Last updated: 2026-08-18 (Aug 17 live episode: SLAM DUNK / HARRY POTTER)
+
+## Most Recent Changes (2026-08-18)
+
+- **Live episode imported — Monday, August 17, 2026 (SLAM DUNK / HARRY POTTER)**, hosted by Howie Mandel: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 253-line transcript across all six sections. Archive now holds 361 games · 181 transcripts. **All six payouts reproduced exactly.** Nine episodes left after this one.
+- **⚠️ SLAM DUNK clue 1 drew 2,923 guesses and ZERO correct, so every medal tier shifts down a clue** — gold on clue 2, silver on clue 3, bronze on clue 4. **The medal emoji follow the tier, not the clue number**, so 🥇🥈🥉 sit on clues 2/3/4 here. The import derives the tiers from the counts (the three earliest clues anyone solved) and asserts them against the supplied values rather than assuming 1/2/3 — a fixed-position assumption would have put the medals on the wrong clues and mispaid gold by a factor of ten. This is well-precedented: **26 v2 rounds have a non-clue-1 gold**, most recently THE PRICE IS RIGHT on Aug 3, and 178 clue slots archive-wide store `correct: "0"`.
+- Also of note: the show accepted **DUNK** as well as the full SLAM DUNK — Howie says "We took dunk too" on air. The archive stores the card's `SLAM DUNK`; the alternate is only in the transcript.
+- HARRY POTTER clue 1 pulled **7,017 guesses**, the highest clue-1 volume in recent memory, for just 35 correct — "ICONIC STICK FIGURE" reads as Hangman or a doodle, which is exactly what the popular wrong guesses show (HANGMAN, GUMBY, GROOT).
+- The transcript carries the audience Q&A about the ending, played as a bit: Howie reads only the answers ("Yes. No. Sometimes. I wouldn't. Recommend it.") without the questions. Kept verbatim.
+
 
 ## Most Recent Changes (2026-08-17)
 
