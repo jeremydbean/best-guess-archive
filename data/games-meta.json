@@ -3956,6 +3956,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Tuesday, August 18, 2026",
+      "secretItem": "THUMB",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 3067,
+      "clueCount": 5,
+      "goldClue": 2,
+      "silverClue": 3,
+      "bronzeClue": 4
+    },
+    {
+      "date": "Tuesday, August 18, 2026",
+      "secretItem": "MOVIE THEATER",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 2229,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }

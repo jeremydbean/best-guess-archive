@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-18 (Aug 17 live episode: SLAM DUNK / HARRY POTTER)
+Last updated: 2026-08-19 (Aug 18 live episode: THUMB / MOVIE THEATER)
+
+## Most Recent Changes (2026-08-19)
+
+- **Live episode imported — Tuesday, August 18, 2026 (THUMB / MOVIE THEATER)**, hosted by Hunter March: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 254-line transcript across all six sections. Archive now holds 363 games · 182 transcripts. Eight episodes left after this one.
+- **⚠️ Four of the six payouts in the paste were rounded up, and the host confirms three of the corrections outright.** THUMB silver `2500/51` = **$49.01** (paste $49.02) and bronze `2000/2990` = **$0.66** (paste $0.67, host: *"a lot of people going home with **66 cents**"*); MOVIE THEATER silver `2500/906` = **$2.75** (paste $2.76, host: *"**$2.75** on clue 2"*) and bronze `2000/1053` = **$1.89** (paste $1.90, host: *"**$1.89** on clue number 3"*). Gold was correct in both rounds. **This paste source rounds half-up rather than flooring — it has now done so on Aug 14 and Aug 18, four errors in this one alone. Recompute every payout, every time.**
+- **Second consecutive episode with a zero-correct clue 1.** THUMB clue 1 ("WE KEPT IT SHORT") drew 2,200 guesses and none right, so tiers shift to clues 2/3/4 and the medal emoji move with them. Hunter builds real suspense out of it on air — *"are they going home with gold or did someone get it on clue number 1?"* — before revealing exactly zero. The import derives tiers from the counts and asserts against the supplied values, as on Aug 17.
+- THUMB's clue 3 → clue 2 fall is the steepest in recent memory: 5,379 guesses / 51 correct down to 2,971 / 26. Hunter calls it "a massive drop" on air.
+- Kept verbatim: Hunter misreads MOVIE THEATER clue 3's guess count as a correct count ("4,637 got it right. 1,053 got it right. Sorry, I keep messing that up"), and jokes "We gotta get rid of this show" against the stored 4,637 guesses / 1,053 correct.
+
 
 ## Most Recent Changes (2026-08-18)
 

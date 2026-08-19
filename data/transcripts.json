@@ -98570,5 +98570,1091 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 18, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "THUMB",
+      "MOVIE THEATER"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "THUMB",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "WE KEPT IT SHORT",
+          "UP FOR A FIGHT",
+          "TAKE THAT, SUCKER!",
+          "B QUIET, I'M TRYING TO HITCHHIKE!",
+          "THIS DIGIT IS OPPOSABLE; FOR GRIPPING, IT'S INDISPOSABLE!"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "MOVIE THEATER",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "ROOM WITH A VIEW",
+          "GREAT FOR PEOPLE WATCHING",
+          "WHERE PHILADELPHIA, CHICAGO, AND FARGO USED TO BE",
+          "PLACE TO SEE E.T. WITH “E T” IN THE MIDDLE OF ITS NAME",
+          "THIS BUILDING WHERE YOU VIEW A FLICK IS A FILM LOVER'S TOP PICK"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello, how are we?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome, I'm your host Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I have been overwhelmed by the messages, posts, comments from all of you since we announced the end of the show is coming..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's get the rules out of the way."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each puzzle has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round, we're going to load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you'll get 20 seconds to submit an answer..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of $2,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And everyone that gets it on the third earliest clue will split the bronze pot of $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round 1 is worth $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We kept it short."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We kept it short."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gorgeous Greg 22 said buzz cut."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's keeping it short..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 2."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Up for a fight."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We kept it short."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Up for a fight."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Shaking Cake 109 said Top Gun."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's great..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 3."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Take that, sucker."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Holding it tight to the chest."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue 3, take that, sucker."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bogus Panther 740 said toddler."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Frosty Driveway 33 said karate chop."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, these are good guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 4."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "B quiet, I'm trying to hitchhike."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, be quiet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm trying to hitchhike."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ghost Waffle just said the voices."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm rooting for you, Ghost Waffle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I hope you get out of this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 5."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This digit is opposable."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "For gripping, it's indisposable."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow, I should have had it so much sooner."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Darcy, I'm with you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I couldn't feel more Darcy right now if I tried."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We kept it short."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Up for a fight."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Take that, sucker."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Be quiet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm trying to hitchhike."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This digit is opposable."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "For gripping, it's indisposable."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That was clue number 5."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Your first puzzle..."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was a thumb."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not just any thumb, those thumbs."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “THIS DIGIT IS OPPOSABLE; FOR GRIPPING, IT'S INDISPOSABLE!.” A thumb is an opposable digit used for gripping. 4,757 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “B QUIET, I'M TRYING TO HITCHHIKE!.” The letter B in thumb is silent, and you use your thumb to hitchhike. 2,990 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “TAKE THAT, SUCKER!.” Thumb suckers take their thumb into their mouth to suck on it. 51 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “UP FOR A FIGHT.” You point your thumb up at the beginning of a thumb war. 26 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “WE KEPT IT SHORT.” Most humans have thumbs that are shorter than their other fingers. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 26 winners at $115.38 each. Silver (Clue 3): 51 winners at $49.01 each. Bronze (Clue 4): 2,990 winners at $0.66 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 5."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This digit is opposable."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "For gripping, it's indisposable."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "5,260 guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "4,757 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow, these are great clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 4."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Be quiet, I'm trying to hitchhike."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The b in thumb is very quiet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's so silent that it's silent."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And you use your thumb to hitchhike."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a great clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "4,395."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "2,990 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, clue 4 is what happens when the clue writers can't decide which clue to get rid of."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They just combine both of them."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, clue number 3."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Take that, sucker."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thumb suckers take their thumb into their mouth and they suck on their thumb."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which is why I said a baby."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which also, be quiet baby, I'm trying to hitchhike."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "5,379 guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "51 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow, that is a massive drop."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And it's going to drop again because clue 2, up for a fight."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You point your thumb up at the beginning of a thumb war."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I like that one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Up for a fight."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Put it up for a thumb war fight."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "2,971 guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "26 people got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now the question is, are they going home with gold or did someone get it on clue number 1?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We kept it short."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Most humans have thumbs that are shorter than their other fingers."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We being the proverbial universe."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We kept it short for you guys."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "2,200 guesses out of the 2,200 guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Exactly zero people got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which means those 26 people on clue number 2 are going home with 115 dollars each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Raven Bandit, Brief Deer, Diamond Gong, and more."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then 51 people going home with 50 bucks each on take that sucker."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then a lot of people going home with 66 cents on clue number 4."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Let's play two for Tuesday just like we do on every other day."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time for round 2."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,000 for gold, 2,500 silver, 2,000 for bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good luck, ladies and gentlemen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm rooting for ya."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm erasing a baby and preparing for puzzle 2."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 1 is, room with a view."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Brilliant Rug 498 said interrogation."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ooh, that is a good room with a sneaky view."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is it correct?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's see."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 2."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great for people watching."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I put something."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know if we've already done it, though."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I wrote it at the very last second."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great for people watching."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Austin, from Austin, Texas, Judy Tune said window."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Exactly."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Vincent Leap said binoculars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Those are for people... well, to channels, not doing that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, let's go to clue number 3."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Where Philadelphia, Chicago, and Fargo used to be."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "God, now I think I know what it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And I'm going to write my second guess underneath."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't get it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is one, you know, if I were really playing, I'd call my mom and be like, log on."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I figured it out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enter this answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Where Philadelphia, Chicago, and Fargo used to be."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hairy Breakfast 33 said the 80s."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Durable Taffy, Queen Nut Creek, Arizona said Canada."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Chicago is in Canada?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Nobody knows."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number 4."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A place to see ET with ET in the middle of its name."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which means, hold on."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I did get it on 3, but I got it on 3 after also getting it wrong on 2, so that might not be..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That might not be counting this one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And the goal is I want to get it on 2 anyway."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Go big or go home."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, place to see ET with ET in the middle of its name."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This honestly doesn't leave a lot of answers that could be wrong."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Except for Rainy Nights, who put Netflix."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which is not a bad guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But I don't know if it's going to apply to clue number 5."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 5 is, this building where you view a flick is a film lover's top pick."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, as you guys have your last 20 seconds, again, I love seeing your messages."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I want to shout them out in tomorrow's show and the next show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anything you have to say, send me a message and I will read through them."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'll send you guys responses as quickly as I can get to them, but I love reading them."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And we love sharing them on the show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thanks again for playing."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This building where you view a flick is a film lover's top pick."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was movie theater."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The movie theater."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's brilliant."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, let's find out who's going home with the money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll start with clue number 5."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “THIS BUILDING WHERE YOU VIEW A FLICK IS A FILM LOVER'S TOP PICK.” A movie theater is a building where film lovers go to view a flick. 1,368 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “PLACE TO SEE E.T. WITH “E T” IN THE MIDDLE OF ITS NAME.” E.T. is a movie, and the letters E and T are in the middle of the word theater. 1,152 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “WHERE PHILADELPHIA, CHICAGO, AND FARGO USED TO BE.” Philadelphia, Chicago, and Fargo are titles of movies that played in theaters. 1,053 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “GREAT FOR PEOPLE WATCHING.” A movie theater is a great place to people watch. 906 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “ROOM WITH A VIEW.” A movie theater is a room where you view a movie. 270 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 270 winners at $11.11 each. Silver (Clue 2): 906 winners at $2.75 each. Bronze (Clue 3): 1,053 winners at $1.89 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This building where you view a flick is a film lover's top pick."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,212 guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "1,368 people got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's really impressive."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue 4."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A place to see ET with ET in the middle of its name."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "ET is a movie and the letters E and T are also in the middle of the word theater."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,888 guess, 1,152 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which is where I got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But I'll save my other guess for clue 2 when I put it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 3."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Where Philadelphia, Chicago, and Fargo used to be."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Those are the titles of three movies that are all once played in theaters."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "4,637 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "1,053 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sorry, I keep messing that up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We gotta get rid of this show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I keep messing it up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No, um..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, clue number 2."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great for people watching."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It is a great place for people who are watching movies."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "6,197 guessed."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "906 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now I got theater on 3, but I did put zoo for great for people watching."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "More from the animal side."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, but, still counts."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Still wrong."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number 1."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Room with a view."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a room where you view a movie."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now this is a great clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "2,915 guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Out of the 2,915 guesses, 270 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to all the people who guessed movie theater on clue 1."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You're getting $11.11."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, that's a lucky number."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Neat for Girl, Connor, Little Birth, and much more."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A bunch of you are going home with $2.75 on clue 2."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And $1.89 on clue number 3."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're here every weekday at 8 Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good night!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [PUNCH, BOXING, LOLLIPOP, THUMBS UP, KNOCKOUT]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [THEATER, THEATRE, BROADWAY, TELEVISION, TV]"
+          }
+        ]
+      }
+    ]
   }
 ]

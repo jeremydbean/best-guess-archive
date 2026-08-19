@@ -18201,5 +18201,119 @@
         "explanation": "That's Harry's house at Hogwarts and who he always hangs with."
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 18, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "THUMB",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 26,
+    "silverWinners": 51,
+    "bronzeWinners": 2990,
+    "totalWinners": 3067,
+    "goldPayout": 115.38,
+    "silverPayout": 49.01,
+    "bronzePayout": 0.66,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Raven Bandit, Brief Deer, Diamond Gong",
+    "wrongGuesses": "PUNCH, BOXING, LOLLIPOP, THUMBS UP, KNOCKOUT",
+    "clues": [
+      {
+        "number": 1,
+        "text": "WE KEPT IT SHORT",
+        "correct": "0",
+        "guesses": "2,200",
+        "explanation": "Most humans have thumbs that are shorter than their other fingers."
+      },
+      {
+        "number": 2,
+        "text": "UP FOR A FIGHT",
+        "correct": "26",
+        "guesses": "2,971 🥇",
+        "explanation": "You point your thumb up at the beginning of a thumb war."
+      },
+      {
+        "number": 3,
+        "text": "TAKE THAT, SUCKER!",
+        "correct": "51",
+        "guesses": "5,379 🥈",
+        "explanation": "Thumb suckers take their thumb into their mouth to suck on it."
+      },
+      {
+        "number": 4,
+        "text": "B QUIET, I'M TRYING TO HITCHHIKE!",
+        "correct": "2,990",
+        "guesses": "4,395 🥉",
+        "explanation": "The letter B in thumb is silent, and you use your thumb to hitchhike."
+      },
+      {
+        "number": 5,
+        "text": "THIS DIGIT IS OPPOSABLE; FOR GRIPPING, IT'S INDISPOSABLE!",
+        "correct": "4,757",
+        "guesses": "5,260",
+        "explanation": "A thumb is an opposable digit used for gripping."
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, August 18, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MOVIE THEATER",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 270,
+    "silverWinners": 906,
+    "bronzeWinners": 1053,
+    "totalWinners": 2229,
+    "goldPayout": 11.11,
+    "silverPayout": 2.75,
+    "bronzePayout": 1.89,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Neat for Girl, Connor, Little Birth",
+    "wrongGuesses": "THEATER, THEATRE, BROADWAY, TELEVISION, TV",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ROOM WITH A VIEW",
+        "correct": "270",
+        "guesses": "2,915 🥇",
+        "explanation": "A movie theater is a room where you view a movie."
+      },
+      {
+        "number": 2,
+        "text": "GREAT FOR PEOPLE WATCHING",
+        "correct": "906",
+        "guesses": "6,197 🥈",
+        "explanation": "A movie theater is a great place to people watch."
+      },
+      {
+        "number": 3,
+        "text": "WHERE PHILADELPHIA, CHICAGO, AND FARGO USED TO BE",
+        "correct": "1,053",
+        "guesses": "4,637 🥉",
+        "explanation": "Philadelphia, Chicago, and Fargo are titles of movies that played in theaters."
+      },
+      {
+        "number": 4,
+        "text": "PLACE TO SEE E.T. WITH “E T” IN THE MIDDLE OF ITS NAME",
+        "correct": "1,152",
+        "guesses": "3,888",
+        "explanation": "E.T. is a movie, and the letters E and T are in the middle of the word theater."
+      },
+      {
+        "number": 5,
+        "text": "THIS BUILDING WHERE YOU VIEW A FLICK IS A FILM LOVER'S TOP PICK",
+        "correct": "1,368",
+        "guesses": "3,212",
+        "explanation": "A movie theater is a building where film lovers go to view a flick."
+      }
+    ]
   }
 ]
