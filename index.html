@@ -620,6 +620,81 @@
     padding: 1.5rem;
     scroll-margin-top: 6rem;
   }
+  /* End-of-series notice, mirroring the in-app card: dark banner headline over
+     a white body. Written as real CSS rather than Tailwind utilities because
+     tailwind.css here is a pre-built, pruned stylesheet — arbitrary values like
+     from-[#241a6b] are not in it and would silently do nothing. */
+  .news-card {
+    max-width: 34rem;
+    margin: 2rem auto 0;
+    border-radius: 1.75rem;
+    overflow: hidden;
+    background: #ffffff;
+    border: 2px solid rgba(255,255,255,0.85);
+    box-shadow: 0 24px 60px rgba(8,14,40,0.55);
+    text-align: left;
+  }
+  .news-card-banner {
+    background: linear-gradient(180deg, #241a6b 0%, #1e2fb0 62%, #1f45d8 100%);
+    padding: 1.75rem 1.5rem 2.25rem;
+  }
+  .news-card-banner h2 {
+    color: #fff;
+    text-align: center;
+    font-weight: 800;
+    line-height: 1.15;
+    font-size: clamp(1.35rem, 4.2vw, 1.85rem);
+    margin: 0;
+  }
+  .news-card-body {
+    background: #fff;
+    border-radius: 1.5rem 1.5rem 0 0;
+    margin-top: -1.25rem;
+    padding: 1.5rem 1.5rem 1.5rem;
+  }
+  .news-card-body p {
+    color: #1e293b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+  .news-card-body p:last-child { margin-bottom: 0; }
+  .news-card-body strong { font-weight: 800; color: #0f172a; }
+  .news-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .news-card-actions { flex-direction: row; }
+    .news-card-actions > * { flex: 1 1 0; }
+  }
+  .news-card-btn {
+    display: block;
+    border: 0;
+    border-radius: 0.75rem;
+    padding: 0.8rem 1.25rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: filter 0.15s ease;
+  }
+  .news-card-btn:hover { filter: brightness(1.08); }
+  .news-card-btn.is-support { background: linear-gradient(180deg, #f0a020 0%, #e08a10 100%); }
+  .news-card-btn.is-dismiss { background: linear-gradient(180deg, #3aa8f5 0%, #1f7fe0 100%); }
+  /* Needs to outrank `.news-card-body p` above, which would otherwise win on
+     specificity and force this back to body size with no top margin. */
+  .news-card-body p.news-card-foot {
+    margin: 1.1rem 0 0;
+    text-align: center;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    color: #64748b;
+  }
   .latest-medal-strip {
     display: flex;
     flex-wrap: wrap;
@@ -1009,15 +1084,20 @@ document.addEventListener('focusout', function(e) {
       </h1>
     </div>
 
-    <div id="home-news" class="mx-auto mt-8 w-full max-w-2xl rounded-2xl border border-amber-400/30 bg-gradient-to-br from-amber-950/40 via-slate-900/60 to-slate-900/60 px-6 py-5 text-left shadow-lg shadow-amber-950/20 hidden">
-      <div class="flex items-start gap-3">
-        <span class="material-symbols-outlined text-amber-300 shrink-0" style="font-size:22px">campaign</span>
-        <div class="min-w-0">
-          <div class="text-[0.7rem] font-black uppercase tracking-[0.18em] text-amber-300">Series News</div>
-          <div id="home-news-headline" class="mt-1 text-white font-display text-xl sm:text-2xl font-bold leading-tight"></div>
-          <p id="home-news-body" class="mt-2 text-sm leading-relaxed text-slate-300"></p>
-          <p class="mt-2 text-xs text-slate-500">Announced on air by Hunter March, Friday, August 14, 2026.</p>
+    <!-- Mirrors the in-app end-of-series notice: dark banner headline over a
+         white card. The white body is deliberate contrast against the dark
+         site, matching the original. -->
+    <div id="home-news" class="news-card hidden">
+      <div class="news-card-banner">
+        <h2 id="home-news-headline" class="font-display"></h2>
+      </div>
+      <div class="news-card-body">
+        <div id="home-news-body"></div>
+        <div class="news-card-actions">
+          <a id="home-news-support" class="news-card-btn is-support" href="https://help.netflix.com/contactus" target="_blank" rel="noopener">Contact Netflix Support</a>
+          <button type="button" class="news-card-btn is-dismiss" onclick="app.dismissHomeNews()">Got It</button>
         </div>
+        <p class="news-card-foot">Notice reproduced from the Best Guess Live app. This archive is fan-made and unaffiliated with Netflix — it cannot process payouts.</p>
       </div>
     </div>
 
@@ -2987,29 +3067,44 @@ class App {
     const headlineEl = document.getElementById('home-news-headline');
     const bodyEl = document.getElementById('home-news-body');
 
-    const finale = new Date(2026, 7, 28, 12, 0, 0, 0);
+    if (localStorage.getItem('bgl_news_dismissed') === '1') return;
+    const supportEl = document.getElementById('home-news-support');
+
+    const finale = new Date(2026, 7, 28, 12, 0, 0, 0);      // Fri Aug 28, 2026
+    const appCloses = new Date(2026, 8, 30, 12, 0, 0, 0);    // Wed Sep 30, 2026
     const today = new Date();
     today.setHours(12, 0, 0, 0);
 
-    // Count the weekdays still to air, finale included. The show ran Monday
-    // to Friday, so weekends are skipped rather than assumed.
-    let remaining = 0;
-    for (let d = new Date(today); d <= finale; d.setDate(d.getDate() + 1)) {
-      const day = d.getDay();
-      if (day !== 0 && day !== 6) remaining += 1;
-    }
-    const finaleText = 'Friday, August 28, 2026';
-
-    if (today > finale) {
-      headlineEl.innerText = 'Best Guess Live has ended';
-      bodyEl.innerText = `The final episode aired on ${finaleText}. This archive stays online — every episode, transcript and daily puzzle is still here to browse and replay.`;
+    // Three phases, so the notice stays true on its own: before the finale it
+    // reads as the app's does; between the finale and the app shutdown the
+    // claim deadline is the live part; afterwards both dates are past and only
+    // the archive remains.
+    const para = [];
+    if (today <= finale) {
+      headlineEl.innerText = 'BEST GUESS LIVE IS COMING TO AN END.';
+      para.push('After an incredible run, the final episode airs <strong>Friday, August 28th</strong>.');
+      para.push('The app will stay open through <strong>Wednesday, September 30</strong> so make sure to go claim any outstanding winnings as soon as possible!');
+    } else if (today <= appCloses) {
+      headlineEl.innerText = 'BEST GUESS LIVE HAS ENDED.';
+      para.push('The final episode aired on <strong>Friday, August 28th</strong>.');
+      para.push('The app stays open through <strong>Wednesday, September 30</strong> — claim any outstanding winnings before then.');
     } else {
-      headlineEl.innerText = `Best Guess Live ends ${finaleText}`;
-      bodyEl.innerText = remaining === 1
-        ? 'The finale airs tonight at 8pm ET / 5pm PT. This archive will record it like every episode before it, and stays online afterwards.'
-        : `${remaining} weekday episodes left, finale included. New episodes air every weekday at 8pm ET / 5pm PT until then, and this archive will keep recording them right through the last one.`;
+      headlineEl.innerText = 'BEST GUESS LIVE HAS ENDED.';
+      para.push('The final episode aired on <strong>Friday, August 28th</strong>, and the app closed on <strong>Wednesday, September 30</strong>.');
+      para.push('Every episode, transcript and daily puzzle is still here to browse and replay.');
+      if (supportEl) supportEl.classList.add('hidden');
     }
+    // Only worth offering while there is still a payout window to ask about.
+    if (today <= appCloses) para.push('If you have questions about a payout, Netflix support can help.');
+
+    bodyEl.innerHTML = para.map(p => `<p>${p}</p>`).join('');
     box.classList.remove('hidden');
+  }
+
+  dismissHomeNews() {
+    const box = document.getElementById('home-news');
+    if (box) box.classList.add('hidden');
+    try { localStorage.setItem('bgl_news_dismissed', '1'); } catch (err) { /* private mode */ }
   }
 
   _latestEpisodeDate() {

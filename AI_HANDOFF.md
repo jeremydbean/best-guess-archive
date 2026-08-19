@@ -1,6 +1,17 @@
 # AI Handoff
 
-Last updated: 2026-08-19 (MARDI GRAS daily puzzle; Aug 18 live episode)
+Last updated: 2026-08-19 (home news card rebuilt to match the in-app notice)
+
+## Most Recent Changes (2026-08-19, continued 2)
+
+- **Rebuilt the home page end-of-series notice to match the official in-app card**, using the app's own wording supplied by the user: dark blue gradient banner with the centred headline "BEST GUESS LIVE IS COMING TO AN END.", a white body panel overlapping it, and an amber / blue button row. Adds the **app shutdown date — Wednesday, September 30** — which the on-air announcement never mentioned; that is the claim deadline for outstanding winnings and is the genuinely useful new fact here.
+- **⚠️ MAJOR GOTCHA — `tailwind.css` is a pre-built, pruned stylesheet checked into the repo, not a CDN or JIT build.** Arbitrary-value utilities (`from-[#241a6b]`, `rounded-[1.75rem]`, `text-slate-800`, `brightness-110`, `sm:flex-row`) are **not in it and silently do nothing in production**. The first attempt at this card used them and rendered as unstyled dark-on-dark — caught only because the local screenshot showed it. The card is now real CSS in the `<style>` block (`.news-card*`), matching how `.glass-panel`, `.home-stat-panel` and `.latest-episode-card` are already done. **Before using a Tailwind class that is not already somewhere in the file, grep `tailwind.css` for it.**
+- **A CSS specificity bug was caught the same way**: `.news-card-body p` (0,1,1) outranks `.news-card-foot` (0,1,0), so the footnote silently inherited body size and lost its top margin. Now scoped as `.news-card-body p.news-card-foot`; verified computed at 11.52px against 15.2px body.
+- **Still self-updating, now across three phases** — before Aug 28 (as the app words it), between the finale and Sep 30 (past-tense episode, live claim deadline), and after Sep 30 (both dates past, support button and payout line removed since there is nothing left to claim). No maintenance needed at either date.
+- **"Got It" dismisses and persists** via `localStorage` key `bgl_news_dismissed`, wrapped in try/catch for private-mode browsers.
+- **Two honesty edits against the source**, both deliberate: the button reads **Contact Netflix Support** and links to `help.netflix.com/contactus` rather than an unqualified "Contact Support", and a footnote states the archive is fan-made, unaffiliated with Netflix, and cannot process payouts. A fan site must not appear to be the party handling real money claims.
+- Verified in headless Chromium at 390px and 900px across all three phases: correct copy, no overflow, no console errors, dismissal persists across reload.
+
 
 ## Most Recent Changes (2026-08-19, continued)
 
