@@ -1,6 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-08-19 (Aug 18 live episode: THUMB / MOVIE THEATER)
+Last updated: 2026-08-19 (MARDI GRAS daily puzzle; Aug 18 live episode)
+
+## Most Recent Changes (2026-08-19, continued)
+
+- **Daily puzzle added — Tuesday, August 18, 2026: MARDI GRAS**: `data/daily-puzzles.json` now holds 88 entries. Clues: EASY DOES IT / TURNS TO ASH AT MIDNIGHT / OVERWEIGHT BEFORE HUMP DAY / A SLOW PARADE LEADS TO A FAST START / FESTIVE DAY OF PURPLE, GREEN, & GOLD WITH HANDFULS OF BEADS TO HOLD. Answered on clue 3. Clue 4 is the best of the set — "a slow parade leads to a fast start" turns on *fast* meaning the Lent fast, not speed. Clue 3's explanation keeps the card's equals-sign shorthand ("Overweight = fat; before hump day = Tuesday") rather than being rewritten to prose. MARDI GRAS had not been used before, in either the dailies or the live games.
+- **⚠️ Dating note for late-evening screenshots.** This one arrived at 00:25 UTC on Aug 19, which is Tuesday **evening** in US time zones — so the correct date is Aug 18, not the UTC calendar day. It was confirmed by checking coverage rather than assumed: the dailies run Aug 1–17 with **no gaps**, so Aug 18 was the only open slot. Dating it Aug 19 would have left Aug 18 permanently missing and mislabelled this entry. **When `date -u` is shortly past midnight, check the run for the gap before dating a daily.**
+
 
 ## Most Recent Changes (2026-08-19)
 

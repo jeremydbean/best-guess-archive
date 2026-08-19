@@ -2695,5 +2695,36 @@
         "explanation": "Ryan Seacrest took over as host and Vanna White is still there."
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 18, 2026",
+    "secretItem": "MARDI GRAS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "EASY DOES IT",
+        "explanation": "The Big Easy is a common nickname for New Orleans and that city does Mardi Gras."
+      },
+      {
+        "clueNumber": 2,
+        "text": "TURNS TO ASH AT MIDNIGHT",
+        "explanation": "The end of Fat Tuesday marks the beginning of Ash Wednesday."
+      },
+      {
+        "clueNumber": 3,
+        "text": "OVERWEIGHT BEFORE HUMP DAY",
+        "explanation": "Overweight = fat; before hump day = Tuesday."
+      },
+      {
+        "clueNumber": 4,
+        "text": "A SLOW PARADE LEADS TO A FAST START",
+        "explanation": "Mardi Gras features a famous parade and the end marks the start of the fasting season."
+      },
+      {
+        "clueNumber": 5,
+        "text": "FESTIVE DAY OF PURPLE, GREEN, & GOLD WITH HANDFULS OF BEADS TO HOLD",
+        "explanation": "People catch and throw beads on Mardi Gras."
+      }
+    ]
   }
 ]
