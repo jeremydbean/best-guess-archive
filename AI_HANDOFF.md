@@ -1,6 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-08-19 (home news card rebuilt to match the in-app notice)
+Last updated: 2026-08-19 (BEETLEJUICE daily puzzle; home news card rebuilt)
+
+## Most Recent Changes (2026-08-19, continued 3)
+
+- **Daily puzzle added — Wednesday, August 19, 2026: BEETLEJUICE**: `data/daily-puzzles.json` now holds 89 entries. Clues: THIRD TIME'S THE CHARM... / ...THE ANSWER WILL COME TO YOU / SOUNDS LIKE A FRUITY DRINK FOR BUG LOVERS / BLACK AND WHITE MOVIE STAR WHO'S SCARILY FUNNY / TIM BURTON'S GHOSTLY CRETIN, PLAYED TWICE BY MICHAEL KEATON. Answered on clue 2.
+- **Clues 1 and 2 are a deliberately linked pair**, one sentence split across two cards by ellipses ("Third time's the charm... ...the answer will come to you") — and the pair doubles as the answer's own mechanic, since saying the name three times summons him. That is the second linked pair in the file, after VELCRO (Aug 8, clues 2–3); both are preserved verbatim rather than tidied into standalone clues. Clue 3 is the wordplay one (beetle + juice), and clue 4's "black and white movie star" misdirects toward old cinema before the suit explains it. BEETLEJUICE had not been used before, in either the dailies or the live games.
+
 
 ## Most Recent Changes (2026-08-19, continued 2)
 

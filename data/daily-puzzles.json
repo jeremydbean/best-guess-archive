@@ -2726,5 +2726,36 @@
         "explanation": "People catch and throw beads on Mardi Gras."
       }
     ]
+  },
+  {
+    "date": "Wednesday, August 19, 2026",
+    "secretItem": "BEETLEJUICE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "THIRD TIME'S THE CHARM...",
+        "explanation": "If you say his name three times, he appears by magic."
+      },
+      {
+        "clueNumber": 2,
+        "text": "...THE ANSWER WILL COME TO YOU",
+        "explanation": "When you summon him, he materializes right next to you."
+      },
+      {
+        "clueNumber": 3,
+        "text": "SOUNDS LIKE A FRUITY DRINK FOR BUG LOVERS",
+        "explanation": "Juice is a fruity drink and a beetle is a bug."
+      },
+      {
+        "clueNumber": 4,
+        "text": "BLACK AND WHITE MOVIE STAR WHO'S SCARILY FUNNY",
+        "explanation": "He wears a black and white suit and his movie is a horror comedy."
+      },
+      {
+        "clueNumber": 5,
+        "text": "TIM BURTON'S GHOSTLY CRETIN, PLAYED TWICE BY MICHAEL KEATON",
+        "explanation": "Michael Keaton played the mischievous ghost Beetlejuice twice."
+      }
+    ]
   }
 ]
