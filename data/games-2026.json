@@ -18315,5 +18315,119 @@
         "explanation": "A movie theater is a building where film lovers go to view a flick."
       }
     ]
+  },
+  {
+    "date": "Wednesday, August 19, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "DRAGON",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 317,
+    "silverWinners": 1046,
+    "bronzeWinners": 935,
+    "totalWinners": 2298,
+    "goldPayout": 9.46,
+    "silverPayout": 2.39,
+    "bronzePayout": 2.13,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Sparkly Avatar, Trifling Viper, Enormous Aroma",
+    "wrongGuesses": "IMAGINE DRAGONS, SAMUEL L JACKSON, DREAM, JOHN LENNON, SAMUEL JACKSON",
+    "clues": [
+      {
+        "number": 1,
+        "text": "IMAGINE THAT",
+        "correct": "317",
+        "guesses": "2,764 🥇",
+        "explanation": "Dragons are classic fantasy creatures, and combining them with “imagine” makes the famous band Imagine Dragons."
+      },
+      {
+        "number": 2,
+        "text": "HUGE FANS OF BURNING MAN",
+        "correct": "1,046",
+        "guesses": "3,151 🥈",
+        "explanation": "Dragons are huge and they love setting people on fire."
+      },
+      {
+        "number": 3,
+        "text": "LIKE SNAKES AND A PLANE, NOT “SNAKES ON A PLANE”",
+        "correct": "935",
+        "guesses": "3,635 🥉",
+        "explanation": "Dragons are serpents like snakes and they fly like a plane."
+      },
+      {
+        "number": 4,
+        "text": "PUFF WAS A MAGIC ONE (AS OPPOSED TO ALL THE OTHERS)",
+        "correct": "8,724",
+        "guesses": "9,768",
+        "explanation": "Puff the Magic Dragon is a famous song character."
+      },
+      {
+        "number": 5,
+        "text": "FIREBREATHERS WITH WINGS FROM GAME OF THRONES & LORD OF THE RINGS",
+        "correct": "1,533",
+        "guesses": "1,649",
+        "explanation": "Firebreathing dragons with wings appear in both Game of Thrones and Lord of the Rings."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, August 19, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "LAST NAME",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 12,
+    "silverWinners": 449,
+    "bronzeWinners": 1579,
+    "totalWinners": 2040,
+    "goldPayout": 250,
+    "silverPayout": 5.56,
+    "bronzePayout": 1.26,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Night Banjin, Crazy Tom 216, Bumpy Moose aka My Camel",
+    "wrongGuesses": "LAMB, MARRIAGE, NAME, SECRET, BOUQUET",
+    "clues": [
+      {
+        "number": 1,
+        "text": "PASS IT ON",
+        "correct": "12",
+        "guesses": "3,914 🥇",
+        "explanation": "You pass on your last name to your descendants."
+      },
+      {
+        "number": 2,
+        "text": "OFTEN SACRIFICED AT AN ALTAR",
+        "correct": "449",
+        "guesses": "5,738 🥈",
+        "explanation": "When you get married at an altar, you might change your last name."
+      },
+      {
+        "number": 3,
+        "text": "YOU MAY NOT KNOW THIS ABOUT ZENDAYA",
+        "correct": "1,579",
+        "guesses": "4,231 🥉",
+        "explanation": "Zendaya is a celebrity whose last name, Coleman, is not widely known."
+      },
+      {
+        "number": 4,
+        "text": "MIGHT COME AFTER APRIL, MAY, JUNE, OR STEVE",
+        "correct": "651",
+        "guesses": "2,073",
+        "explanation": "April, May, June, and Steve can all be first names that precede a last name."
+      },
+      {
+        "number": 5,
+        "text": "NOT YOUR MIDDLE OR YOUR GIVEN - THINK SMITH, JONES, GARCIA, PIVEN",
+        "correct": "3,697",
+        "guesses": "4,919",
+        "explanation": "Smith, Jones, Garcia, and Piven are all examples of common last names."
+      }
+    ]
   }
 ]
