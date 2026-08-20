@@ -2757,5 +2757,36 @@
         "explanation": "Michael Keaton played the mischievous ghost Beetlejuice twice."
       }
     ]
+  },
+  {
+    "date": "Thursday, August 20, 2026",
+    "secretItem": "SPHERE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "YOU'RE SURROUNDED!",
+        "explanation": "The Sphere surrounds everyone in attendance."
+      },
+      {
+        "clueNumber": 2,
+        "text": "THE FUTURE IS BRIGHT, ESPECIALLY AT NIGHT",
+        "explanation": "It's futuristic and very bright — even in the day but especially when it's dark."
+      },
+      {
+        "clueNumber": 3,
+        "text": "CUTTING-EDGE, BUT HAS NO EDGES",
+        "explanation": "It's a technological marvel, and traditional spheres have no edges."
+      },
+      {
+        "clueNumber": 4,
+        "text": "THEATER IN THE ROUND? YOU BET!",
+        "explanation": "It's a round theater located in Las Vegas, where you bet."
+      },
+      {
+        "clueNumber": 5,
+        "text": "VEGAS ORB VENUE THAT'S A WHOLE NEW BALL GAME",
+        "explanation": "It's an entertainment venue in Vegas, and it's shaped like a ball."
+      }
+    ]
   }
 ]
