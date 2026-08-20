@@ -1,6 +1,16 @@
 # AI Handoff
 
-Last updated: 2026-08-19 (BEETLEJUICE daily puzzle; home news card rebuilt)
+Last updated: 2026-08-20 (Aug 19 live episode: DRAGON / LAST NAME)
+
+## Most Recent Changes (2026-08-20)
+
+- **Live episode imported — Wednesday, August 19, 2026 (DRAGON / LAST NAME)**, hosted by Hunter March: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 281-line transcript across all six sections. Archive now holds 365 games · 183 transcripts. **All six payouts reproduced exactly** — no corrections needed, unlike Aug 14 and Aug 18.
+- **DRAGON clue 4 set a record: 8,724 correct on 9,768 guesses**, an 89% hit rate and the highest correct count anywhere in the archive. "PUFF WAS A MAGIC ONE (AS OPPOSED TO ALL THE OTHERS)" simply gave it away, which then starved clue 5 down to 1,533 correct because nearly everyone had locked in. Hunter says so live: "I feel like a lot of people got it on four."
+- **DRAGON is also non-monotonic in the middle**: clue 2 took 1,046 correct but clue 3 only 935, so silver ($2.39) pays more than bronze ($2.13) *and* has more winners. Tier order follows clue position, never the counts.
+- **A nice internal cross-reference**: LAST NAME clue 3 is "YOU MAY NOT KNOW THIS ABOUT ZENDAYA" — and ZENDAYA was the daily puzzle answer exactly one week earlier, on Wednesday, August 12. Both are in the archive.
+- The transcript opens with the show's **blooper reel** premiere, and Hunter loses track of when it ends ("I'm your host Hunter Million. Dang it!"), so the Intro section carries the reel's own dialogue. Kept verbatim, as is his Outro slip of "8pm **Pacific**" for Eastern, and his count of "7 more weekdays" — which is right from that night: Aug 20, 21, 24, 25, 26, 27, 28.
+- Curly quotes used for the two clue-internal quotations (DRAGON clue 3's film title, clue 1's explanation of "imagine"), matching the eight other curly-quoted explanations in the recent data rather than the legacy straight-quoted v1 style.
+
 
 ## Most Recent Changes (2026-08-19, continued 3)
 
