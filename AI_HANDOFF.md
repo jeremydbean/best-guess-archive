@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-20 (Aug 19 live episode: DRAGON / LAST NAME)
+Last updated: 2026-08-20 (SPHERE daily puzzle; Aug 19 live episode)
+
+## Most Recent Changes (2026-08-20, continued)
+
+- **Daily puzzle added — Thursday, August 20, 2026: SPHERE**: `data/daily-puzzles.json` now holds 90 entries — the 90th daily. Clues: YOU'RE SURROUNDED! / THE FUTURE IS BRIGHT, ESPECIALLY AT NIGHT / CUTTING-EDGE, BUT HAS NO EDGES / THEATER IN THE ROUND? YOU BET! / VEGAS ORB VENUE THAT'S A WHOLE NEW BALL GAME. Answered on clue 2. Clue 3 is the best of the set, using "cutting-edge" against the literal absence of edges. Clue 1 reads as a police warning until the venue explains it. Two normalisations to file convention: the card's curly apostrophe in "THAT'S" is stored straight, matching every other clue text, and clue 2's spaced hyphen becomes an em dash, matching the other dashed explanations. SPHERE had not been used before in either the dailies or the live games — note the archive does hold LAS VEGAS as a live secret item (Aug 7), which this clue set repeatedly gestures at without being it.
+
 
 ## Most Recent Changes (2026-08-20)
 
