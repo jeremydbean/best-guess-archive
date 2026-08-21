@@ -18429,5 +18429,119 @@
         "explanation": "Smith, Jones, Garcia, and Piven are all examples of common last names."
       }
     ]
+  },
+  {
+    "date": "Thursday, August 20, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MIRROR",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 7,
+    "silverWinners": 1051,
+    "bronzeWinners": 2083,
+    "totalWinners": 3141,
+    "goldPayout": 428.57,
+    "silverPayout": 2.37,
+    "bronzePayout": 0.96,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Cuddly Console 189, I Love Giraffes 11, Chubby Dryer 879",
+    "wrongGuesses": "COMMERCIAL, BOOMERANG, BRB, PANCAKE, TERMINATOR",
+    "clues": [
+      {
+        "number": 1,
+        "text": "BE RIGHT BACK",
+        "correct": "7",
+        "guesses": "3,188 🥇",
+        "explanation": "A mirror's entire state of being is right back at you."
+      },
+      {
+        "number": 2,
+        "text": "COMMON VANITY PLATE",
+        "correct": "1,051",
+        "guesses": "2,743 🥈",
+        "explanation": "A mirror is a plate of glass you make sure you look good in."
+      },
+      {
+        "number": 3,
+        "text": "YOU'LL FLIP WHEN YOU SEE IT",
+        "correct": "2,083",
+        "guesses": "5,068 🥉",
+        "explanation": "Your image in a mirror is flipped."
+      },
+      {
+        "number": 4,
+        "text": "CONSTANTLY CHECKED OUT AT THE GYM",
+        "correct": "2,225",
+        "guesses": "3,693",
+        "explanation": "People are always checking out the mirror at a gym."
+      },
+      {
+        "number": 5,
+        "text": "HANGING IN A BATHROOM OR CAR, THIS GLASS REFLECTS THINGS AS THEY ARE",
+        "correct": "4,883",
+        "guesses": "5,141",
+        "explanation": "A mirror hangs in a bathroom or car and reflects things as they are."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, August 20, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "KEANU REEVES",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 53,
+    "silverWinners": 296,
+    "bronzeWinners": 1031,
+    "totalWinners": 1380,
+    "goldPayout": 56.6,
+    "silverPayout": 8.44,
+    "bronzePayout": 1.93,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Gnarly Alpaca, Clean Newt 275, Gramps",
+    "wrongGuesses": "PEE, SPEED LIMIT, UNO, NEO, JOHN TRAVOLTA",
+    "clues": [
+      {
+        "number": 1,
+        "text": "THIS IS THE ONE",
+        "correct": "53",
+        "guesses": "2,753 🥇",
+        "explanation": "Keanu Reeves played Neo, also known as the one, in the Matrix films."
+      },
+      {
+        "number": 2,
+        "text": "ALWAYS GOING TO THE JOHN",
+        "correct": "296",
+        "guesses": "3,799 🥈",
+        "explanation": "He has played characters named John, such as John Wick, Johnny Utah, John Constantine, and Johnny Mnemonic."
+      },
+      {
+        "number": 3,
+        "text": "COULDN'T GO UNDER 50, NOW IS OVER 60",
+        "correct": "1,031",
+        "guesses": "4,073 🥉",
+        "explanation": "He is 61 years old and had to keep the bus over 50 miles per hour in Speed."
+      },
+      {
+        "number": 4,
+        "text": "GAVE A MOST EXCELLENT TED TALK",
+        "correct": "2,140",
+        "guesses": "3,846",
+        "explanation": "He played Ted in Bill and Ted's Excellent Adventure."
+      },
+      {
+        "number": 5,
+        "text": "CHILL ACTOR DUDE YOU ALL KNOW, INSIDE THE MATRIX HE SAYS “WHOA”",
+        "correct": "2,708",
+        "guesses": "3,626",
+        "explanation": "He is a chill actor who says whoa inside the Matrix."
+      }
+    ]
   }
 ]

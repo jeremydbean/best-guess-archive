@@ -1,6 +1,16 @@
 # AI Handoff
 
-Last updated: 2026-08-20 (SPHERE daily puzzle; Aug 19 live episode)
+Last updated: 2026-08-21 (Aug 20 live episode: MIRROR / KEANU REEVES)
+
+## Most Recent Changes (2026-08-21)
+
+- **Live episode imported — Thursday, August 20, 2026 (MIRROR / KEANU REEVES)**, hosted by Hunter March: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 237-line transcript across all six sections. Archive now holds 367 games · 184 transcripts. **All six payouts reproduced exactly.** Six episodes left.
+- **⚠️ POSSIBLE CROSS-EPISODE CONTAMINATION — MIRROR clue 5's count pair.** It arrived as `correct: 4,883` / `guesses: 5,141`, and **both of those exact numbers already sit in the archive on Aug 12**, as BUTTERFLY's clue 1 guesses (4,883) and clue 3 guesses (5,141) — where Howie audibly stutters the second one ("5,141, 5141 guesses"). Two exact four-digit matches recurring as a pair is not a chance-level coincidence, and it suggests the transcription pass may have carried numbers over from a previous episode's context.
+- **Stored as supplied anyway, for three reasons**: the pair is internally plausible (a 95% hit rate is normal for a clue-5 giveaway), `guesses >= correct` holds, and this paste is the only source for the date. Changing it would invent data. **This is the single value in the recent run most worth checking against a results-card screenshot.**
+- **Why the corroboration is missing here**: unlike every other recent episode, this transcript's Results sections contain **no per-clue count narration at all** — Hunter goes straight from the reveal to congratulating the winners, so nothing is spoken aloud to check the numbers against. The six payouts verifying does independently confirm the clue 1/2/3 correct counts, but clue 4 and 5 counts and every `guesses` value are uncorroborated for this date.
+- MIRROR clue 1 is brutal — "BE RIGHT BACK" took just **7** correct out of 3,188 guesses, paying $428.57, the largest gold payout in weeks. Hunter guessed "spine" and narrates at length why it fit clues 1, 3 and 4.
+- Kept verbatim: Hunter reveals the answer early by accident ("And then this dang old mirror... Whoops, just said it"), and his Outro sign-off "8 Eastern, 5 Pacific, 3 AM Turkey time". His "six more weekdays" is correct from that night: Aug 21, 24, 25, 26, 27, 28.
+
 
 ## Most Recent Changes (2026-08-20, continued)
 
