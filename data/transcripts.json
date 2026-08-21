@@ -100850,5 +100850,1023 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, August 20, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "MIRROR",
+      "KEANU REEVES"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "MIRROR",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "BE RIGHT BACK",
+          "COMMON VANITY PLATE",
+          "YOU'LL FLIP WHEN YOU SEE IT",
+          "CONSTANTLY CHECKED OUT AT THE GYM",
+          "HANGING IN A BATHROOM OR CAR, THIS GLASS REFLECTS THINGS AS THEY ARE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "KEANU REEVES",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "THIS IS THE ONE",
+          "ALWAYS GOING TO THE JOHN",
+          "COULDN'T GO UNDER 50, NOW IS OVER 60",
+          "GAVE A MOST EXCELLENT TED TALK",
+          "CHILL ACTOR DUDE YOU ALL KNOW, INSIDE THE MATRIX HE SAYS “WHOA”"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "How we doing everybody?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, I'm your host Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I want to thank everyone again for reaching out and sending me so many nice messages since we announced the show is ending."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I want to give a special shoutout to Kelly who sent me a message about how much she enjoyed playing with her mother."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "She wrote, 'I just wanted to thank you for hosting Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It was so much fun and such a good bonding experience for me and my mother."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We played together every Tuesday and Wednesday and had a fun time even when we won 30 cents."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "She's almost 70, so it's a nice memory.'"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Kelly, I just want to say on behalf of all of us, what were you doing Mondays, Thursdays, and Fridays?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The show was going!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No, I'm just kidding."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a really sweet message."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thank you so much for sending it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "While you try to come up with an acceptable answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here are the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each round is one puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round, we're gonna load our crystal ball with a secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But remember, the clues are written like riddles, they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you'll get 20 seconds to submit an answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But you only get one Best Guess per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not one per clue, one per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And we don't accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in the correct answer on the earliest clue will split the Gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks it in on the second earliest clue will split the Silver pot of $2,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And everyone that gets it on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's win some money!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is for $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Take this for me, good sir."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thank you so much."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm going for clue two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's my mission before the end of this show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: Be right back."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Be right back."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm going to go for it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It might be too obvious."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll see."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Be right back, flippant hamster 21 said chiropractor."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That definitely helps your back be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, maybe, we're not sure."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: Common vanity plate."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Common vanity plate."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't think mine's good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Immediately."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Almost right away."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Maybe we'll see."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There's a chance that this comes around, but I highly doubt it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, common vanity plate."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bristle bunny, so I was thinking fine china."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then Gray Aquarius 471 said buffet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a common vanity plate for sure."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, let's go to clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You'll flip when you see it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You'll flip when you see it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly, mine still works for this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mine works specifically for clue three and not for clue two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know if that's how the show works, but that's where I'm at now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Seven seconds left."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Four, three, two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Times up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You'll flip when you see it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Grizzly Fred 20, weekend at Bernie's 2."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Absolutely."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Chalky merman 181 from Alton, Texas said record."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You'll flip when you see it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, you'll flip a record when you see it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: Constantly checked out at the gym."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Be right back, common vanity plate, you'll flip when you see it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Maybe mine does work still."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There's a chance."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got it on one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There's a really bad chance I got it on one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Times up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Constantly checked out at the gym."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Trout mask from Hood River, Oregon said terminator."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Constantly checked out at the gym, yeah terminator."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Spacious trunk said my wife Betsy."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gotta get those ins."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Whenever you can you gotta get my wife Betsy in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five, your fifth and final clue for this first puzzle: Hanging in a bathroom or car, this glass reflects things as they are."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "My bad."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm gonna tell you what I had."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Just uh, in the interim."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "When I saw be right back, I put spine."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Which really worked for."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It also worked for you'll flip when you see it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you saw your spine outside of your body, you'd flip."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And constantly checked out at the gym?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "When you're doing any lift, you're like checking your posture."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then this dang old mirror."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, let's find out what's inside the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Whoops, just said it."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The answer was a mirror!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Leave it till the final couple weeks to start spilling the answer before I should."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The answer was a mirror."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The question is who got it on what clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Again, this is puzzle one, of two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at clue five."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “HANGING IN A BATHROOM OR CAR, THIS GLASS REFLECTS THINGS AS THEY ARE.” A mirror hangs in a bathroom or car and reflects things as they are. 4,883 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “CONSTANTLY CHECKED OUT AT THE GYM.” People are always checking out the mirror at a gym. 2,225 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “YOU'LL FLIP WHEN YOU SEE IT.” Your image in a mirror is flipped. 2,083 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “COMMON VANITY PLATE.” A mirror is a plate of glass you make sure you look good in. 1,051 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “BE RIGHT BACK.” A mirror's entire state of being is right back at you. 7 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 7 winners at $428.57 each. Silver (Clue 2): 1,051 winners at $2.37 each. Bronze (Clue 3): 2,083 winners at $0.96 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Cuddly Console 189, I Love Giraffes 11, Chubby Dryer 879, and a bunch more."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Common vanity plate, still going home with $2.37."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then our clue threeers, bronze, 96 cents each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And you earned it."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "You know the drill, time to play round two for another $7,500!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "$3,000 for gold, $2,500 for silver, $2,000 for bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Erase your spine."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone would have flipped if I saw my spine outside of my body, but apparently the clue writers thought different."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: This is the one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ooh, I had a guess right when I read it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is the one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I had a guess when I read it, and that usually means."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "someone else is going to guess it, and I'm going to read it, and that means that it was not the correct guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's how it always goes for me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is the one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "How could this be the one where I get it in one?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm going to hold onto my guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Times up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is the one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't test me 11 said Uno."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is the one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two: Always going to the John."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is the one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Always going to the John."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got to think of some Johns."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Who are Johns?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Always going to the John."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Always going to the John."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Noisy pillow 22 said janitor."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "True."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Always going to the John."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, clue number three: Couldn't go under 50, now is over 60."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Couldn't go under 50, now is over 60."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Couldn't go under 50."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "My dad on the front nine."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "He doesn't watch the show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "He's in another country."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, times up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Couldn't go under 50, now is over 60."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Honestly that does work for my dad."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Rock on 99 said Sammy Hagar."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Very yeah."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Cincinnati Ohio Leah Grace K said grease."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Couldn't go under 50, now is over 60."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, I don't know if you guys know this, but in the first Grease movie, all the actors were on average 50 years old in that movie, and now they're all over 60."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: Gave a most excellent TED talk."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't know it on one!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Kind of."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "ish."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gave a most excellent TED talk."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Dang, I was so."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I had it in my head, and I just didn't put it on one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I had it on adjacent, I think it was an adjacent."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, such a bummer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Cause they still would have been impressed with myself had I gotten it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Instead."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here we are."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gave a most excellent TED talk."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The most excellent TED talk ever."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Minute streamer says the pope."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Most excellent, my dude."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, Briny Soda 33 said Teddy Ruxpin."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A lot of people I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, we'll go to clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Chill actor dude you all know, inside the Matrix he says 'whoa'."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I will say."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "my guess was the Matrix on clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And it would have been not correct, but still I would have been proud."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Instead I wrote nothing, and I got it on four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I assume."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'll be getting zero dollars for this guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds is up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answer was Keanu Reeves!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, all the clues are so good now that I'm looking back."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right, let's start at clue number five."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “CHILL ACTOR DUDE YOU ALL KNOW, INSIDE THE MATRIX HE SAYS “WHOA”.” He is a chill actor who says whoa inside the Matrix. 2,708 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “GAVE A MOST EXCELLENT TED TALK.” He played Ted in Bill and Ted's Excellent Adventure. 2,140 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “COULDN'T GO UNDER 50, NOW IS OVER 60.” He is 61 years old and had to keep the bus over 50 miles per hour in Speed. 1,031 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “ALWAYS GOING TO THE JOHN.” He has played characters named John, such as John Wick, Johnny Utah, John Constantine, and Johnny Mnemonic. 296 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “THIS IS THE ONE.” Keanu Reeves played Neo, also known as the one, in the Matrix films. 53 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 53 winners at $56.60 each. Silver (Clue 2): 296 winners at $8.44 each. Bronze (Clue 3): 1,031 winners at $1.93 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But congratulations, gold medalists: Gnarly Alpaca, Clean Newt 275, Gramps."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great username."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "And that is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We are here for six more weekdays."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not enough time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm going to miss you guys."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "8 Eastern, 5 Pacific, 3 AM Turkey time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow, don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good night!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [COMMERCIAL, BOOMERANG, BRB, PANCAKE, TERMINATOR]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [PEE, SPEED LIMIT, UNO, NEO, JOHN TRAVOLTA]"
+          }
+        ]
+      }
+    ]
   }
 ]
