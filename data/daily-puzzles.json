@@ -2788,5 +2788,36 @@
         "explanation": "It's an entertainment venue in Vegas, and it's shaped like a ball."
       }
     ]
+  },
+  {
+    "date": "Friday, August 21, 2026",
+    "secretItem": "SUN",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "PERFORMS IN THE ROUND",
+        "explanation": "The sun is a round mass and it performs by heating the earth."
+      },
+      {
+        "clueNumber": 2,
+        "text": "ALWAYS THE CENTER OF ATTENTION",
+        "explanation": "The entire planet rotates around it."
+      },
+      {
+        "clueNumber": 3,
+        "text": "DON'T MAKE EYE CONTACT WITH THIS STAR",
+        "explanation": "Staring at the sun will hurt your eyes."
+      },
+      {
+        "clueNumber": 4,
+        "text": "BRIGHT FOR FUN UNTIL THE DAY IS DONE",
+        "explanation": "We love having fun in the sun!"
+      },
+      {
+        "clueNumber": 5,
+        "text": "IT'S HOT & A LITTLE GAUDY, EARTH ROTATES AROUND THIS CELESTIAL BODY",
+        "explanation": "The sun is brilliant and shows off its solar rays."
+      }
+    ]
   }
 ]
