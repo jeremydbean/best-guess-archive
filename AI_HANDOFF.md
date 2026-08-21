@@ -1,6 +1,13 @@
 # AI Handoff
 
-Last updated: 2026-08-21 (Aug 20 live episode: MIRROR / KEANU REEVES)
+Last updated: 2026-08-21 (SUN daily puzzle; Aug 20 live episode)
+
+## Most Recent Changes (2026-08-21, continued)
+
+- **Daily puzzle added — Friday, August 21, 2026: SUN**: `data/daily-puzzles.json` now holds 91 entries. Clues: PERFORMS IN THE ROUND / ALWAYS THE CENTER OF ATTENTION / DON'T MAKE EYE CONTACT WITH THIS STAR / BRIGHT FOR FUN UNTIL THE DAY IS DONE / IT'S HOT & A LITTLE GAUDY, EARTH ROTATES AROUND THIS CELESTIAL BODY. Answered on clue 3. Clue 3 is the sharpest — "this star" reads as a celebrity until "eye contact" turns literal. The card's curly apostrophe in "IT'S" is stored straight, matching every other clue text.
+- **Two clue-set notes worth recording.** First, `PERFORMS IN THE ROUND` echoes yesterday's SPHERE clue 4 (`THEATER IN THE ROUND? YOU BET!`) — the same phrase carrying a different pun on consecutive days. Second, clue 5's explanation ("shows off its solar rays") explains *brilliant/gaudy* but not the clue's own "Earth rotates around this celestial body" half, and clue 2's explanation says "the entire planet rotates around it" — singular, where the sun holds all eight. Both are the card's own wording and are stored unaltered.
+- No exact collision: SUN is new, though the archive already holds SUNSET (daily) plus SUNBURN and SUNGLASSES (live games).
+
 
 ## Most Recent Changes (2026-08-21)
 
