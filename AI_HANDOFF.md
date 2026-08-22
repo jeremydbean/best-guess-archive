@@ -1,6 +1,11 @@
 # AI Handoff
 
-Last updated: 2026-08-22 (Aug 21 live episode: BUMPER CARS / STEVIE WONDER)
+Last updated: 2026-08-22 (KEYBOARD daily puzzle; Aug 21 live episode)
+
+## Most Recent Changes (2026-08-22, continued)
+
+- **Daily puzzle added — Saturday, August 22, 2026: KEYBOARD**: `data/daily-puzzles.json` now holds 92 entries. Clues: ALL-ACCESS PASS / MIND-BODY CONNECTION / PLENTY OF SPACE AT THE BAR / HOME TO SOME UNDERHANDED CHARACTERS / DEVICE THAT'S NICE FOR COMPUTER-BUTTON GLUTTONS. **Answered on clue 1** — the second clue-1 solve in the dailies, after WHEEL OF FORTUNE on Aug 17. Clue 4 is the best of the set: "underhanded characters" reads as villains before the explanation makes it literal (characters on keys under your hands). Clue 3 does the same trick with "space at the bar". The card's curly apostrophe in "THAT'S" is stored straight, matching every other clue text. KEYBOARD is new to both the dailies and the live games; nearest existing items are CUTTING BOARD, SKATEBOARD and SURFBOARD (live) and TURKEY LEG (daily).
+
 
 ## Most Recent Changes (2026-08-22)
 
