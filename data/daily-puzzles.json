@@ -2819,5 +2819,36 @@
         "explanation": "The sun is brilliant and shows off its solar rays."
       }
     ]
+  },
+  {
+    "date": "Saturday, August 22, 2026",
+    "secretItem": "KEYBOARD",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "ALL-ACCESS PASS",
+        "explanation": "It allows you to access the internet and everything that comes with it."
+      },
+      {
+        "clueNumber": 2,
+        "text": "MIND-BODY CONNECTION",
+        "explanation": "Your mind tells your fingers what to type."
+      },
+      {
+        "clueNumber": 3,
+        "text": "PLENTY OF SPACE AT THE BAR",
+        "explanation": "The space bar is the biggest key on the board."
+      },
+      {
+        "clueNumber": 4,
+        "text": "HOME TO SOME UNDERHANDED CHARACTERS",
+        "explanation": "The alphabet characters are on keys that sit under your hands."
+      },
+      {
+        "clueNumber": 5,
+        "text": "DEVICE THAT'S NICE FOR COMPUTER-BUTTON GLUTTONS",
+        "explanation": "It's the computer accessory with the most buttons."
+      }
+    ]
   }
 ]
