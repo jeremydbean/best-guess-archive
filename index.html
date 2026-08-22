@@ -620,10 +620,70 @@
     padding: 1.5rem;
     scroll-margin-top: 6rem;
   }
-  /* End-of-series notice, mirroring the in-app card: dark banner headline over
-     a white body. Written as real CSS rather than Tailwind utilities because
-     tailwind.css here is a pre-built, pruned stylesheet — arbitrary values like
-     from-[#241a6b] are not in it and would silently do nothing. */
+  /* Compact end-of-series banner, mirroring the one on the app's home screen:
+     white kicker over a gold date, with a "tap for details" pill. Tapping opens
+     the full notice card below in the shared modal. No host photo — the app's
+     banner has one and this archive has no such asset to use. */
+  .news-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: 34rem;
+    margin: 2rem auto 0;
+    padding: 1.05rem 1.25rem;
+    border: 0;
+    border-radius: 1.25rem;
+    background: linear-gradient(135deg, #2f6fe0 0%, #2757cf 55%, #1f45b8 100%);
+    box-shadow: 0 14px 34px rgba(12,32,96,0.45);
+    cursor: pointer;
+    text-align: left;
+    transition: filter 0.15s ease, transform 0.15s ease;
+  }
+  .news-banner:hover { filter: brightness(1.07); transform: translateY(-1px); }
+  .news-banner-text { display: block; min-width: 0; }
+  .news-banner-kicker {
+    display: block;
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+  }
+  .news-banner-date {
+    display: block;
+    margin-top: 0.1rem;
+    color: #ffd54a;
+    font-weight: 800;
+    font-size: 0.95rem;
+    line-height: 1.25;
+  }
+  .news-banner-cta {
+    display: inline-block;
+    margin-top: 0.7rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+  }
+  .news-banner-sparkles {
+    flex: 0 0 auto;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: right;
+  }
+  .news-banner-sparkles i { display: block; font-style: normal; font-size: 1.35rem; color: rgba(255,255,255,0.85); }
+
+  /* Full notice, shown in the modal when the banner is tapped: dark banner
+     headline over a white body, as the app's dialog has it. Written as real CSS
+     rather than Tailwind utilities because tailwind.css here is a pre-built,
+     pruned stylesheet — arbitrary values like from-[#241a6b] are not in it and
+     would silently do nothing. */
   .news-card {
     max-width: 34rem;
     margin: 2rem auto 0;
@@ -634,6 +694,9 @@
     box-shadow: 0 24px 60px rgba(8,14,40,0.55);
     text-align: left;
   }
+  /* The card only ever renders inside the modal now, which supplies its own
+     padding, so drop the standalone top margin there. */
+  #modal-content .news-card { margin: 0 auto; }
   .news-card-banner {
     background: linear-gradient(180deg, #241a6b 0%, #1e2fb0 62%, #1f45d8 100%);
     padding: 1.75rem 1.5rem 2.25rem;
@@ -1087,19 +1150,14 @@ document.addEventListener('focusout', function(e) {
     <!-- Mirrors the in-app end-of-series notice: dark banner headline over a
          white card. The white body is deliberate contrast against the dark
          site, matching the original. -->
-    <div id="home-news" class="news-card hidden">
-      <div class="news-card-banner">
-        <h2 id="home-news-headline" class="font-display"></h2>
-      </div>
-      <div class="news-card-body">
-        <div id="home-news-body"></div>
-        <div class="news-card-actions">
-          <a id="home-news-support" class="news-card-btn is-support" href="https://help.netflix.com/contactus" target="_blank" rel="noopener">Contact Netflix Support</a>
-          <button type="button" class="news-card-btn is-dismiss" onclick="app.dismissHomeNews()">Got It</button>
-        </div>
-        <p class="news-card-foot">Notice reproduced from the Best Guess Live app. This archive is fan-made and unaffiliated with Netflix — it cannot process payouts.</p>
-      </div>
-    </div>
+    <button type="button" id="home-news" class="news-banner hidden" onclick="app.openHomeNews()" aria-label="Series news — tap for details">
+      <span class="news-banner-text">
+        <span id="home-news-kicker" class="news-banner-kicker"></span>
+        <span id="home-news-date" class="news-banner-date"></span>
+        <span class="news-banner-cta">TAP FOR DETAILS</span>
+      </span>
+      <span class="news-banner-sparkles" aria-hidden="true">✦<i>✦</i>✦</span>
+    </button>
 
     <div class="home-actions flex flex-col gap-4 justify-center mt-10">
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -3061,50 +3119,76 @@ class App {
   // Friday, August 28. The bubble counts down the weekday episodes left and
   // rewrites itself to past tense once that date passes, so nobody has to
   // remember to come back and edit it.
-  renderHomeNews() {
-    const box = document.getElementById('home-news');
-    if (!box) return;
-    const headlineEl = document.getElementById('home-news-headline');
-    const bodyEl = document.getElementById('home-news-body');
-
-    if (localStorage.getItem('bgl_news_dismissed') === '1') return;
-    const supportEl = document.getElementById('home-news-support');
-
+  // Builds both halves of the end-of-series notice from one set of dates: the
+  // compact home banner, and the full card the banner opens in the modal.
+  // Three phases keep it true without maintenance — before the finale it reads
+  // as the app's does, between the finale and the app shutdown the claim
+  // deadline is the live part, and afterwards both dates are past and only the
+  // archive remains.
+  _homeNewsContent() {
     const finale = new Date(2026, 7, 28, 12, 0, 0, 0);      // Fri Aug 28, 2026
     const appCloses = new Date(2026, 8, 30, 12, 0, 0, 0);    // Wed Sep 30, 2026
     const today = new Date();
     today.setHours(12, 0, 0, 0);
 
-    // Three phases, so the notice stays true on its own: before the finale it
-    // reads as the app's does; between the finale and the app shutdown the
-    // claim deadline is the live part; afterwards both dates are past and only
-    // the archive remains.
     const para = [];
+    let kicker, date, headline;
     if (today <= finale) {
-      headlineEl.innerText = 'BEST GUESS LIVE IS COMING TO AN END.';
+      kicker = 'BEST GUESS LIVE LAST EPISODE';
+      date = 'FRIDAY, AUG 28TH.';
+      headline = 'BEST GUESS LIVE IS COMING TO AN END.';
       para.push('After an incredible run, the final episode airs <strong>Friday, August 28th</strong>.');
       para.push('The app will stay open through <strong>Wednesday, September 30</strong> so make sure to go claim any outstanding winnings as soon as possible!');
     } else if (today <= appCloses) {
-      headlineEl.innerText = 'BEST GUESS LIVE HAS ENDED.';
+      kicker = 'BEST GUESS LIVE HAS ENDED';
+      date = 'CLAIM WINNINGS BY SEP 30TH.';
+      headline = 'BEST GUESS LIVE HAS ENDED.';
       para.push('The final episode aired on <strong>Friday, August 28th</strong>.');
       para.push('The app stays open through <strong>Wednesday, September 30</strong> — claim any outstanding winnings before then.');
     } else {
-      headlineEl.innerText = 'BEST GUESS LIVE HAS ENDED.';
+      kicker = 'BEST GUESS LIVE HAS ENDED';
+      date = 'FINAL EPISODE AUG 28, 2026.';
+      headline = 'BEST GUESS LIVE HAS ENDED.';
       para.push('The final episode aired on <strong>Friday, August 28th</strong>, and the app closed on <strong>Wednesday, September 30</strong>.');
       para.push('Every episode, transcript and daily puzzle is still here to browse and replay.');
-      if (supportEl) supportEl.classList.add('hidden');
     }
     // Only worth offering while there is still a payout window to ask about.
-    if (today <= appCloses) para.push('If you have questions about a payout, Netflix support can help.');
+    const showSupport = today <= appCloses;
+    if (showSupport) para.push('If you have questions about a payout, Netflix support can help.');
 
-    bodyEl.innerHTML = para.map(p => `<p>${p}</p>`).join('');
+    return { kicker, date, headline, para, showSupport };
+  }
+
+  renderHomeNews() {
+    const box = document.getElementById('home-news');
+    if (!box) return;
+    const { kicker, date } = this._homeNewsContent();
+    const kickerEl = document.getElementById('home-news-kicker');
+    const dateEl = document.getElementById('home-news-date');
+    if (kickerEl) kickerEl.innerText = kicker;
+    if (dateEl) dateEl.innerText = date;
     box.classList.remove('hidden');
   }
 
-  dismissHomeNews() {
-    const box = document.getElementById('home-news');
-    if (box) box.classList.add('hidden');
-    try { localStorage.setItem('bgl_news_dismissed', '1'); } catch (err) { /* private mode */ }
+  openHomeNews() {
+    const { headline, para, showSupport } = this._homeNewsContent();
+    const esc = v => this._escapeHtml(v);
+    const support = showSupport
+      ? '<a class="news-card-btn is-support" href="https://help.netflix.com/contactus" target="_blank" rel="noopener">Contact Netflix Support</a>'
+      : '';
+    document.getElementById('modal-content').innerHTML = `
+      <div class="news-card">
+        <div class="news-card-banner"><h2 class="font-display">${esc(headline)}</h2></div>
+        <div class="news-card-body">
+          ${para.map(p => `<p>${p}</p>`).join('')}
+          <div class="news-card-actions">
+            ${support}
+            <button type="button" class="news-card-btn is-dismiss" onclick="app.closeModal()">Got It</button>
+          </div>
+          <p class="news-card-foot">Notice reproduced from the Best Guess Live app. This archive is fan-made and unaffiliated with Netflix — it cannot process payouts.</p>
+        </div>
+      </div>`;
+    document.getElementById('modal-backdrop').classList.remove('hidden');
   }
 
   _latestEpisodeDate() {
