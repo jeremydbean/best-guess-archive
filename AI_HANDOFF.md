@@ -1,6 +1,16 @@
 # AI Handoff
 
-Last updated: 2026-08-22 (KEYBOARD daily puzzle; Aug 21 live episode)
+Last updated: 2026-08-22 (home notice restyled as the in-app banner)
+
+## Most Recent Changes (2026-08-22, continued 2)
+
+- **Reworked the home page end-of-series notice into the app's two-step shape**: the always-visible element is now the **compact blue banner** from the app's home screen — white kicker "BEST GUESS LIVE LAST EPISODE" over a gold "FRIDAY, AUG 28TH." with a "TAP FOR DETAILS" pill — and tapping it opens the **full white notice card** in the site's shared modal (`#modal-backdrop` / `#modal-content`), which is what the home page showed inline before.
+- **Both halves are generated from one function**, `_homeNewsContent()`, so the banner text and the card text can never drift apart. It returns the kicker, date line, headline, paragraphs, and a `showSupport` flag; `renderHomeNews()` uses the first two, `openHomeNews()` uses the rest. Still three self-updating phases, and the banner's date line changes with them: "FRIDAY, AUG 28TH." → "CLAIM WINNINGS BY SEP 30TH." → "FINAL EPISODE AUG 28, 2026."
+- **"Got It" now closes the modal** rather than permanently hiding the notice, and the `bgl_news_dismissed` localStorage flag is gone. That matches the app, where the banner is persistent and the dialog is dismissible — and the banner is small enough not to need a permanent hide.
+- **No host photo.** The app's banner has a cut-out of Hunter and Howie; the archive has no such asset and one must not be fabricated, so the right side carries three sparkle glyphs instead, which is what the app puts around the photo anyway.
+- `#modal-content .news-card { margin: 0 auto; }` drops the card's standalone top margin now that it only ever renders inside the modal's own padding.
+- Verified in headless Chromium at 390px and 900px across all three phases: banner renders and fits, tapping opens the modal with the right phase copy, the support button correctly disappears after Sep 30, "Got It" closes the modal and leaves the banner in place, no console errors.
+
 
 ## Most Recent Changes (2026-08-22, continued)
 
