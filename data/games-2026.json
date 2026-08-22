@@ -18543,5 +18543,119 @@
         "explanation": "He is a chill actor who says whoa inside the Matrix."
       }
     ]
+  },
+  {
+    "date": "Friday, August 21, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "BUMPER CARS",
+    "goldClue": 2,
+    "silverClue": 3,
+    "bronzeClue": 4,
+    "goldWinners": 206,
+    "silverWinners": 1055,
+    "bronzeWinners": 933,
+    "totalWinners": 2194,
+    "goldPayout": 14.56,
+    "silverPayout": 2.36,
+    "bronzePayout": 2.14,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "UnevenGangway, ClockworkStitch, GiftWrapAvocado",
+    "wrongGuesses": "TESLA, NASCAR, DEMOLITION DERBY, CREDIT CARD, ELECTRIC CAR",
+    "clues": [
+      {
+        "number": 1,
+        "text": "CHARGE!",
+        "correct": "0",
+        "guesses": "3,288",
+        "explanation": "The cars are charged with electricity and then driven to charge into other cars."
+      },
+      {
+        "number": 2,
+        "text": "YOU CAN CRASH HERE IF YOU WANT",
+        "correct": "206",
+        "guesses": "3,798 🥇",
+        "explanation": "Bumper cars involve an activity where the goal is crashing into things."
+      },
+      {
+        "number": 3,
+        "text": "YOU WON'T WANNA TAKE A BRAKE",
+        "correct": "1,055",
+        "guesses": "1,522 🥈",
+        "explanation": "Riders keep moving and avoid braking to prevent getting slammed by others."
+      },
+      {
+        "number": 4,
+        "text": "EVERYONE IS A DODGE RAM DRIVER",
+        "correct": "933",
+        "guesses": "3,260 🥉",
+        "explanation": "In bumper cars, drivers are either dodging or ramming each other."
+      },
+      {
+        "number": 5,
+        "text": "AMUSEMENT PARK RIDE WHERE PEOPLE COLLIDE",
+        "correct": "2,952",
+        "guesses": "3,315",
+        "explanation": "Bumper cars are an amusement park ride where people collide."
+      }
+    ]
+  },
+  {
+    "date": "Friday, August 21, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Howie Mandel",
+    "secretItem": "STEVIE WONDER",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 2,
+    "silverWinners": 3,
+    "bronzeWinners": 22,
+    "totalWinners": 27,
+    "goldPayout": 1500,
+    "silverPayout": 833.33,
+    "bronzePayout": 90.9,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "RoadArugula, RightCougar830",
+    "wrongGuesses": "DWAYNE JOHNSON, THE ROCK, MICHAEL JACKSON, KID ROCK, RAY CHARLES",
+    "clues": [
+      {
+        "number": 1,
+        "text": "INFORMAL START, CURIOUS ENDING",
+        "correct": "2",
+        "guesses": "2,381 🥇",
+        "explanation": "Stevie is an informal nickname and wondering means to be curious."
+      },
+      {
+        "number": 2,
+        "text": "PUSHED TO SUCCEED AT AN EARLY AGE",
+        "correct": "3",
+        "guesses": "3,227 🥈",
+        "explanation": "He was a child prodigy who found success by pushing piano keys and was known as Little Stevie Wonder."
+      },
+      {
+        "number": 3,
+        "text": "THIS SUPERSTAR REALLY ROCKS! LIKE, REALLY",
+        "correct": "22",
+        "guesses": "5,499 🥉",
+        "explanation": "He has a distinctive way of rocking back and forth while playing."
+      },
+      {
+        "number": 4,
+        "text": "YOU SEE HIM IN SHADES, YOU HEAR HIM IN SUNSHINE",
+        "correct": "511",
+        "guesses": "3,051",
+        "explanation": "He famously wears sunglasses and sang the hit song “You Are the Sunshine of My Life”."
+      },
+      {
+        "number": 5,
+        "text": "ICONIC R&B MUSICIAN WHO SINGS “ISN'T SHE LOVELY” & “SUPERSTITION”",
+        "correct": "3,414",
+        "guesses": "4,145",
+        "explanation": "Stevie Wonder is an iconic R&B musician known for his huge hit songs “Isn't She Lovely” and “Superstition”."
+      }
+    ]
   }
 ]

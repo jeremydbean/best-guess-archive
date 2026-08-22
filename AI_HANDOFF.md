@@ -1,6 +1,16 @@
 # AI Handoff
 
-Last updated: 2026-08-21 (SUN daily puzzle; Aug 20 live episode)
+Last updated: 2026-08-22 (Aug 21 live episode: BUMPER CARS / STEVIE WONDER)
+
+## Most Recent Changes (2026-08-22)
+
+- **Live episode imported — Friday, August 21, 2026 (BUMPER CARS / STEVIE WONDER)**, hosted by Howie Mandel: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 263-line transcript across all six sections. Archive now holds 369 games · 185 transcripts. **Five episodes left — Aug 24, 25, 26, 27, 28.**
+- **All six payouts reproduced exactly, and unusually the host reads every single one aloud** — "$14.56", "$2.36", "$2.14", "$1,500", "$833.33", "$90.90" — so this is the best-corroborated payout set in the recent run, the opposite of Aug 20 where nothing was spoken.
+- **BUMPER CARS clue 1 ("CHARGE!") drew 3,288 guesses and zero correct**, the third zero-correct clue 1 in five episodes, so tiers shift to clues 2/3/4 with the medals following. Howie makes a point of it: "Can you imagine that? Not one of you got it correct."
+- **STEVIE WONDER is a genuine outlier — 27 total winners**, the third-smallest in the entire v2 era (behind BART SIMPSON's 15 and DRIVING RANGE's 17) and the smallest since April. Its clue 1/2/3 correct counts are **2 / 3 / 22**, paying $1,500 / $833.33 / $90.90. Note `winnerNames` holds exactly two names, matching the two gold winners rather than being a sample.
+- **Both Results sections narrate the counts *before* the summary card**, unlike most episodes, so the regenerated card lines are inserted after the narration rather than before it. Worth checking placement per-episode rather than assuming.
+- Kept verbatim: Howie's Neil bit (he asks Neil on camera to "read the rules" and Neil reads them silently — "I should have asked, do you want to come on the show and read the rules **out loud**?"), his own near-miss ("My screen says bumper cars, I said bumper car"), and his self-correction that the clue-5 total "should be 2,953 of us". His "five more weekdays" is correct from that night.
+
 
 ## Most Recent Changes (2026-08-21, continued)
 

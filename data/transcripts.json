@@ -101868,5 +101868,1127 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Friday, August 21, 2026",
+    "host": "Howie Mandel",
+    "secretItems": [
+      "BUMPER CARS",
+      "STEVIE WONDER"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "BUMPER CARS",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "CHARGE!",
+          "YOU CAN CRASH HERE IF YOU WANT",
+          "YOU WON'T WANNA TAKE A BRAKE",
+          "EVERYONE IS A DODGE RAM DRIVER",
+          "AMUSEMENT PARK RIDE WHERE PEOPLE COLLIDE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "STEVIE WONDER",
+        "host": "Howie Mandel",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "INFORMAL START, CURIOUS ENDING",
+          "PUSHED TO SUCCEED AT AN EARLY AGE",
+          "THIS SUPERSTAR REALLY ROCKS! LIKE, REALLY",
+          "YOU SEE HIM IN SHADES, YOU HEAR HIM IN SUNSHINE",
+          "ICONIC R&B MUSICIAN WHO SINGS “ISN'T SHE LOVELY” & “SUPERSTITION”"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live, I'm your host, Howie Mandel!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Our last show is going to be one week from tonight, and a lot of you, a lot of you have been asking about Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I thought tonight would be a great chance for all of you to meet him."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So I asked Neil if he wanted to come on the show in front of the camera and read the rules, and guess what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He said yes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So... you ask and you shall receive."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here he is, please welcome... Neil!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow, go ahead Neil, read the rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh... uh, this was, uh, my mistake."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, I should have asked, do you want to come on the show and read the rules out loud?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh, well this, uh, this worked out great, didn't it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh, Neil, everybody!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "If you want something done right, I guess you gotta do it yourself."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here are the rules."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "See how it's done, Neil?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before each round, we're gonna load our crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not we, Neil is gonna load the crystal ball with a secret item."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It could be absolutely anything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Then I'm gonna give you five clues."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But remember, the clues are riddles, they're meant to make you think."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So after each clue, 20 seconds are going to be given on the clock for you to submit an answer."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But you only get one guess per round, not one per clue, one per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in, 'cause it's gotta be the exact answer, and we're not accepting typos."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bottom line: you want to be fast, but you gotta be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the Gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm trying to put my hands around it, there we are."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the Silver pot of $2,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it right on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's enough talk."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's win some money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Show us what you do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, this is worth $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, put the book down, and load the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, the ball is being loaded."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good work, Neil."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here is your first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Am I into how to play a lot?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um... CHARGE!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And 20 seconds goes up on the clock right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, while this 20 seconds is on, I wanna say a special happy birthday wish to our, our, this guy here named Eric, and his grandmother is turning how old?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "97 years old today."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So since he's 97, I know you're watching, so I'm just gonna call out your name... STELLA!!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I didn't do that because of the movie, I did that because she's 97 and she's hard of hearing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Happy birthday, sweetie."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, uh, 20 seconds is up on the first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, the first... it was charge was the clue, and CreekSlam6 said Visa."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Like a credit card."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here's your second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "YOU CAN CRASH HERE IF YOU WANT."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Charge... and crash here... if you want."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bumper cars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, CA69420, or California69420, is that what you're saying you are?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, he said a laptop."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and DrivingBrandy24 said a bean bag chair."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You're laughing, but I think those are both good answers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, okay, here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "YOU WON'T WANNA TAKE A BRAKE."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts n-- What?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You won't wanna take a break?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You won't wanna take a brake, and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Charge... you can crash here if you want to... you won't wanna take a brake."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bumper cars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4... 3... 2... 1."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "ForeverFran83, guess what her answer was."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Old KitKat bar."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Break, you got... how did he get me a break... give me a break... I can't sing that."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stop."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I've done something wrong and I don't know what it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "EVERYONE IS A DODGE RAM DRIVER."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, and uh, the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, there's 5 seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm trying to think of it... I bet a lot of you are a lot smarter than me and you have it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, uh, GolfGuy77 said Texas."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "BetterGloves832 said airbags."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, here is the, uh, fifth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is your final clue, your final chance in this round to get the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "AMUSEMENT PARK RIDE WHERE PEOPLE COLLIDE."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm so proud of myself!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got it!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And uh... charge... you can crash here if you want to... you won't wanna take a brake... everyone is a Dodge Ram driver... amusement park ride where people collide... and uh, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So you wanna find out uh, what's in the crystal ball?"
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think I'm correct, but I'll have Neil open it first."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, open the ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It is... Bumper cars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "My screen says bumper cars, I said bumper car."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Would I get, would I win?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Did I win?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my god!!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, let's take a look at how the clues fit and find out who's taking the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Am I taking any money?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, all right, amusement park ride where people collide, that is bumper cars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So that makes sense, 3,315 of you guessed, 2,952 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I don't think I'm on that list, it should be 2,953 of us."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh clue number four, everyone is a Dodge Ram driver, you're either dodging or you're ramming, right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So 3,260 of you guessed, 933 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You won't wanna take a brake, it's fun, and if you brake you will get slammed, so you gotta keep moving, and also I never hit the brakes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I wanna slam them hard."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what I'm gonna hit them."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I do, it's my favorite ride, you know that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "1,522 of you guessed, 1,055 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, you can crash here if you want, it's an activity where the goal is crashing into things."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Why would you go on bumper cars and not wanna crash?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,798 of you guessed, 206 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "All right, that's the second clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The first clue was charge."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now, how does it work?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You charge them with electricity, and then you charge them into other car... cars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Charge at other drivers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Charge!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,288 guesses on that first one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Can you imagine that?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Not one of you got it correct."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “AMUSEMENT PARK RIDE WHERE PEOPLE COLLIDE.” Bumper cars are an amusement park ride where people collide. 2,952 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “EVERYONE IS A DODGE RAM DRIVER.” In bumper cars, drivers are either dodging or ramming each other. 933 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “YOU WON'T WANNA TAKE A BRAKE.” Riders keep moving and avoid braking to prevent getting slammed by others. 1,055 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “YOU CAN CRASH HERE IF YOU WANT.” Bumper cars involve an activity where the goal is crashing into things. 206 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “CHARGE!.” The cars are charged with electricity and then driven to charge into other cars. 0 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 2): 206 winners at $14.56 each. Silver (Clue 3): 1,055 winners at $2.36 each. Bronze (Clue 4): 933 winners at $2.14 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So our Gold guessers are in clue number two, there's 206 of you each taking $14.56."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Your uh Silver winners, there's 1055 of you are each getting $2.36, and the Bronze winners, 933 of you each getting $2.14."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations Gold guessers UnevenGangway and ClockworkStitch and GiftWrapAvocado and all the rest of you, you guys are smart."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's a... here's a, a, a question for you."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How is a wagon wheel like a basketball?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's Round 2!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Professional comedian."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Been saving that one for months, and uh... wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,000 for Gold, 2,500 for Silver, 2,000 for Bronze."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, load it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Right, there it goes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's all loaded, and here is your first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "INFORMAL START, CURIOUS ENDING."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Informal start, curious ending."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Informal start, curious ending."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5 seconds left on the clock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "One, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "ShowsAndStew said a shotgun wedding."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "An informal start... you're marrying her!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, uh, clue number two."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "PUSHED TO SUCCEED AT AN EARLY AGE."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Already got almost 2,000 guesses in on that first clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pushed to succeed at an early age."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "355 said Tarzan."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh... pushed to succeed at an early age."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tarzan?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, other people are saying the swing."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Succeed!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ah... bouncy, you don't wanna show me that anymore?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, fine."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your third... there was another one I was gonna read, but somebody wants to go home because it's Friday night."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, here's your third clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "THIS SUPERSTAR REALLY ROCKS! LIKE, REALLY."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Informal start, curious ending."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pushed to succeed at an early age."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This superstar really rocks, like really."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You see him in shades, you hear him in sunshine."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is he coughing?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Said The Rock."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Xavier, X-avier... said Polaris."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Polaris?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The North Star."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This superstar really rocks, like, really."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Polaris."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everybody has more schooling here than me."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "YOU SEE HIM IN SHADES, YOU HEAR HIM IN SUNSHINE."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Informal start, curious ending."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pushed to succeed at an early age."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This superstar really rocks, like really."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You see him in shades... you hear him in sunshine."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "JollyDoiley109 said solar-powered radio."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and here's your final clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Final chance to guess, final shot this week at $7,500."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "ICONIC R&B MUSICIAN WHO SINGS “ISN'T SHE LOVELY” & “SUPERSTITION”."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Informal start, curious ending."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pushed to succeed in early age."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Superstar really rocks, like really."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You see him in shades, you hear him in sunshine."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, it spends so much... let's find out what's in the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "I've got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stevie Wonder."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stevie Wonder!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love... I love Stevie Wonder."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love Stevie Wonder."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, let's find out uh how the clues fit and who's taking all the money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, iconic R&B musician who sings isn't she lovely, better than that, and superstition, those are two of his many huge songs."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He's definitely no one hit, one wonder."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "See what they did there?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I delivered."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, 4,145 guesses, 3,414 of you got that correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, you see him in shades, you hear him in sunshine."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You see him in, he always wears sunglasses, and he made the hit, You Are the Sunshine of My Life."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, 3,051 guesses, 511 of you got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This superstar really rocks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Like, really."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He has a distinctive way of rocking."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Back and forth when he plays."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, so anyway, 5,499 of you guessed, 22 of you got the correct guess right there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pushed to succeed at an early age, you know he was a child prodigy who became successful by pushing piano keys."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, he was known as Little Stevie Wonder right at the beginning, yeah."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "He was a child, I used to watch him."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's how old I am."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Um, 3,227 of you guessed, 3 of you guessed correctly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my gosh."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Setting some big money here."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Somebody's taking some big money into this weekend."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Informal start, curious ending."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stevie is an informal nickname, and if you're wondering something, you're curious."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stevie Wonder."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It makes sense!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "2,381 of you guessed on that first guess."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “ICONIC R&B MUSICIAN WHO SINGS “ISN'T SHE LOVELY” & “SUPERSTITION”.” Stevie Wonder is an iconic R&B musician known for his huge hit songs “Isn't She Lovely” and “Superstition”. 3,414 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “YOU SEE HIM IN SHADES, YOU HEAR HIM IN SUNSHINE.” He famously wears sunglasses and sang the hit song “You Are the Sunshine of My Life”. 511 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “THIS SUPERSTAR REALLY ROCKS! LIKE, REALLY.” He has a distinctive way of rocking back and forth while playing. 22 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “PUSHED TO SUCCEED AT AN EARLY AGE.” He was a child prodigy who found success by pushing piano keys and was known as Little Stevie Wonder. 3 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “INFORMAL START, CURIOUS ENDING.” Stevie is an informal nickname and wondering means to be curious. 2 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 2 winners at $1,500.00 each. Silver (Clue 2): 3 winners at $833.33 each. Bronze (Clue 3): 22 winners at $90.90 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Two of you are splitting the big money, which means each of you are taking $1,500!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's the Gold."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Gold guessers RoadArugula and RightCougar830, you're gonna have a great weekend."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is not too shabby either, our Silver winners, there's only three of you each taking $833.33."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's a lot of money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And this is great, 22 Bronze winners, $90.90 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What a big money day."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What a big money day."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We're here to, uh, we're gonna be here for five more weekdays, at 8 Eastern, 5 Pacific."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Come back Monday."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tell your friends and warn a lot of people to save you some money."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes, uh, and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good night."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Have a good weekend."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [TESLA, NASCAR, DEMOLITION DERBY, CREDIT CARD, ELECTRIC CAR]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [DWAYNE JOHNSON, THE ROCK, MICHAEL JACKSON, KID ROCK, RAY CHARLES]"
+          }
+        ]
+      }
+    ]
   }
 ]
