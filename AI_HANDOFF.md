@@ -1,6 +1,17 @@
 # AI Handoff
 
-Last updated: 2026-08-22 (home notice restyled as the in-app banner)
+Last updated: 2026-08-24 (WEDDING DRESS daily; missing-daily standard added)
+
+## Most Recent Changes (2026-08-24)
+
+- **New standard: a daily puzzle nobody captured is now recorded as a placeholder** rather than left as a silent gap, mirroring how a missing episode is handled. Schema and rules are written up in `AGENTS.md` § "Missing Daily Puzzle": `dataStatus: "missing"` with an empty `secretItem` and an empty `clues` array, kept in normal date position.
+- **The audit enforces it both ways** — `"missing"` is the only accepted `dataStatus`, and a placeholder must leave `secretItem` and `clues` empty. Both guards were tested by deliberately breaking the entry: setting a `secretItem` raises `daily-puzzle-missing-secret-item`, and `dataStatus: "partial"` raises `daily-puzzle-data-status`. **Never part-fill a placeholder** — no guessed answers, no half-remembered clues.
+- **The Database view renders the row**, showing "Puzzle not archived" with a link to the existing feedback form. As with partial episodes, that text is **derived, not hand-authored into the data**.
+- **Placeholders never inflate coverage.** A new `_archivedDailyCount()` excludes them, and the tab count, the "N puzzles" label and the stats page's `actualDailyCount` (which drives the missing-days figure) all route through it. Without that, recording a gap would have made the archive look one puzzle *more* complete than it is.
+- **Daily puzzle added — Sunday, August 23, 2026: MISSING.** Not captured; placeholder only.
+- **Daily puzzle added — Monday, August 24, 2026: WEDDING DRESS**: 94 entries in the file, **93 actually archived**. Clues: SINGLE-USE PRODUCT / HERE SHE COMES, HERE IT COMES / MARRIAGE MATERIAL FOR A LUCKY LADY / IT GETS ALTERED BEFORE IT GETS ALTARED / BRIDE'S GOWN THAT'S OFTEN WHITE, WORN ON HER MARRIAGE DAY & NIGHT. Answered on clue 3. Clue 4's altered/altared homophone is the best of the set.
+- **⚠️ `secretItem` is a judgement call here — the card never states the answer.** Its explanations use *both* "wedding gown" (clue 1) and "the dress" (clues 2 and 5). Stored as **WEDDING DRESS** because clue 5's text says "BRIDE'S **GOWN**", and clue-5 giveaways consistently avoid the answer's own words — so "gown" being *in* the clue argues it is not in the answer — and clue 5's explanation ends "we hope you said yes to **the dress**". If a source ever shows WEDDING GOWN, it is a one-field fix.
+
 
 ## Most Recent Changes (2026-08-22, continued 2)
 

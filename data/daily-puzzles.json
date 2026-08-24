@@ -2850,5 +2850,42 @@
         "explanation": "It's the computer accessory with the most buttons."
       }
     ]
+  },
+  {
+    "date": "Sunday, August 23, 2026",
+    "secretItem": "",
+    "dataStatus": "missing",
+    "clues": []
+  },
+  {
+    "date": "Monday, August 24, 2026",
+    "secretItem": "WEDDING DRESS",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "SINGLE-USE PRODUCT",
+        "explanation": "You only wear a wedding gown once! (Hopefully)"
+      },
+      {
+        "clueNumber": 2,
+        "text": "HERE SHE COMES, HERE IT COMES",
+        "explanation": "Here comes the bride, and her dress along with her."
+      },
+      {
+        "clueNumber": 3,
+        "text": "MARRIAGE MATERIAL FOR A LUCKY LADY",
+        "explanation": "Material as in fabric."
+      },
+      {
+        "clueNumber": 4,
+        "text": "IT GETS ALTERED BEFORE IT GETS ALTARED",
+        "explanation": "Before you head to the altar, you're probably visiting the seamstress for alterations."
+      },
+      {
+        "clueNumber": 5,
+        "text": "BRIDE'S GOWN THAT'S OFTEN WHITE, WORN ON HER MARRIAGE DAY & NIGHT",
+        "explanation": "When choosing your answer, we hope you said yes to the dress."
+      }
+    ]
   }
 ]
