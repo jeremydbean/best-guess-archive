@@ -415,6 +415,26 @@ if (!Array.isArray(dailyPuzzles)) {
     if (dailyDates.has(puzzle?.date)) error('duplicate-daily-puzzle-date', 'Duplicate daily puzzle date', { index, date: puzzle?.date });
     dailyDates.add(puzzle?.date);
 
+    // A day whose puzzle was never captured is recorded as a placeholder rather
+    // than left as a silent gap in the run, mirroring how a missing episode is
+    // handled. Everything below is skipped for it: there is no answer and there
+    // are no clues to validate, and half-filling one is worse than leaving it
+    // plainly empty until somebody supplies the real card.
+    if (puzzle?.dataStatus !== undefined && puzzle.dataStatus !== 'missing') {
+      error('daily-puzzle-data-status', 'Daily puzzle dataStatus must be "missing" when present', { index, date: puzzle?.date, dataStatus: puzzle.dataStatus });
+    }
+    if (puzzle?.dataStatus === 'missing') {
+      if (String(puzzle?.secretItem || '').trim()) {
+        error('daily-puzzle-missing-secret-item', 'A missing daily puzzle must leave secretItem empty', { index, date: puzzle?.date });
+      }
+      if (Array.isArray(puzzle?.clues) ? puzzle.clues.length : true) {
+        if (!Array.isArray(puzzle?.clues) || puzzle.clues.length) {
+          error('daily-puzzle-missing-clues', 'A missing daily puzzle must have an empty clues array', { index, date: puzzle?.date });
+        }
+      }
+      continue;
+    }
+
     const item = String(puzzle?.secretItem || '').trim();
     if (!item) {
       error('daily-puzzle-secret-item', 'Daily puzzle is missing secretItem', { index, date: puzzle?.date });

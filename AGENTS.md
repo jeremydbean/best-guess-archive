@@ -183,6 +183,25 @@ The Best Guess app releases one new practice puzzle per day. These are separate 
 - Do **not** run `npm run audit:fix` for daily-puzzle-only edits because there is no meta file to regenerate.
 - Do run `npm run audit`; it validates daily puzzle dates, ordering, all-caps secret items/clues, exact five-clue shape, duplicate dates, and rejects live-game-only clue fields (`correct` and `guesses`).
 
+### Missing Daily Puzzle
+
+The app publishes one puzzle a day with no gaps, so a day nobody screenshotted is a hole in a known-continuous run, not an absence of data. Record it rather than skipping the date — a skipped date is indistinguishable from a day that never existed, and it silently disappears from the run.
+
+```json
+{
+  "date": "Sunday, August 23, 2026",
+  "secretItem": "",
+  "dataStatus": "missing",
+  "clues": []
+}
+```
+
+- `dataStatus: "missing"` is the only value the audit accepts, and it requires `secretItem` to be an empty string and `clues` to be an empty array. **Never part-fill one** — do not guess the answer from a later reference, and do not add clues you have not seen. The audit rejects both.
+- Placeholders keep their normal date position in the file (oldest first, newest last) so the run stays continuous.
+- The Database view renders the row itself, with a "Puzzle not archived" note and a link to the feedback form. **Do not hand-author that text into the data**, exactly as with partial episodes.
+- Placeholders are excluded from the archived-puzzle count everywhere (`_archivedDailyCount()`), so recording a gap never makes coverage look better than it is.
+- To fill one in later, replace the whole entry with a normal puzzle object — drop `dataStatus`, set `secretItem`, and add the five clues.
+
 ### Commit
 
 ```bash

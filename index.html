@@ -2861,6 +2861,11 @@ class App {
     return this._dailyPollsLoading;
   }
 
+  // Daily puzzles we actually hold, excluding placeholders for uncaptured days.
+  _archivedDailyCount() {
+    return this.dailyPuzzles.filter(p => p.dataStatus !== 'missing').length;
+  }
+
   _renderDailyTableRows(puzzles, query = '') {
     const esc = (v) => this._escapeHtml(v);
     const hl = (v) => this._highlight(String(v), query);
@@ -2868,6 +2873,19 @@ class App {
       return `<tr><td colspan="7" class="text-center py-12 text-slate-400">${query ? 'No puzzles match your search.' : 'No daily puzzles yet.'}</td></tr>`;
     }
     return [...puzzles].reverse().map(p => {
+      // A day nobody captured. Show the gap plainly and point at the existing
+      // feedback form, rather than hiding the date or padding it with blanks.
+      if (p.dataStatus === 'missing') {
+        return `<tr class="hover:bg-white/5 transition-colors bg-amber-950/15">
+          <td class="px-4 py-3 text-amber-200/80 font-mono text-[11px] db-col-date whitespace-nowrap">${hl(p.date)}</td>
+          <td colspan="6" class="px-4 py-3 text-sm text-amber-100/80">
+            <span class="material-symbols-outlined align-middle text-amber-300" style="font-size:16px;line-height:1">help</span>
+            <span class="font-bold text-amber-100">Puzzle not archived.</span>
+            This day's daily puzzle was never captured.
+            <a href="https://forms.gle/zzTwMu8wpZpC5zR58" target="_blank" rel="noopener" class="underline text-amber-200 hover:text-white font-semibold">Have a screenshot? Send it in.</a>
+          </td>
+        </tr>`;
+      }
       const cluesHtml = [1,2,3,4,5].map(n => {
         const c = p.clues.find(x => x.clueNumber === n);
         const text = c ? c.text : '—';
@@ -4583,12 +4601,12 @@ Rules:
     const liveFiltered = this._getFilteredGames(filter, this._dbSort || { key: 'date', dir: 'desc' });
     const dailyFiltered = this._dailyPuzzlesLoaded
       ? (filter
-          ? this.dailyPuzzles.filter(p => [p.date, p.secretItem, ...p.clues.map(c => c.text)].join(' ').toLowerCase().includes(filter))
+          ? this.dailyPuzzles.filter(p => [p.date, p.secretItem, ...(p.clues || []).map(c => c.text)].join(' ').toLowerCase().includes(filter))
           : this.dailyPuzzles)
       : [];
 
     if (nodes.tabLiveCount) nodes.tabLiveCount.innerText = filter ? `${liveFiltered.length} match${liveFiltered.length !== 1 ? 'es' : ''}` : `${this.games.length}`;
-    if (nodes.tabDailyCount) nodes.tabDailyCount.innerText = filter ? `${dailyFiltered.length} match${dailyFiltered.length !== 1 ? 'es' : ''}` : `${this.dailyPuzzles.length}`;
+    if (nodes.tabDailyCount) nodes.tabDailyCount.innerText = filter ? `${dailyFiltered.length} match${dailyFiltered.length !== 1 ? 'es' : ''}` : `${this._archivedDailyCount()}`;
 
     // --- Cross-tab hint ---
     if (nodes.crossHint) {
@@ -4650,8 +4668,8 @@ Rules:
         <th class="px-4 py-2 whitespace-nowrap">Answer</th>
         <th class="px-4 py-2">Clue 1</th><th class="px-4 py-2">Clue 2</th><th class="px-4 py-2">Clue 3</th><th class="px-4 py-2">Clue 4</th><th class="px-4 py-2">Clue 5</th>`;
       if (nodes.count) nodes.count.innerText = filter
-        ? `Showing ${dailyFiltered.length} of ${this.dailyPuzzles.length} puzzles`
-        : `${this.dailyPuzzles.length} puzzle${this.dailyPuzzles.length !== 1 ? 's' : ''}`;
+        ? `Showing ${dailyFiltered.length} of ${this._archivedDailyCount()} puzzles`
+        : `${this._archivedDailyCount()} puzzle${this._archivedDailyCount() !== 1 ? 's' : ''}`;
       if (nodes.body) nodes.body.innerHTML = this._renderDailyTableRows(dailyFiltered, filter);
     }
 
@@ -5325,7 +5343,10 @@ Rules:
     const dailyPuzzleStart = new Date('2026-05-23T00:00:00');
     const todayMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
     const expectedDailyCount = Math.max(0, Math.floor((todayMidnight - dailyPuzzleStart) / (1000 * 60 * 60 * 24)) + 1);
-    const actualDailyCount = this.dailyPuzzles.length;
+    // Placeholders for days nobody captured are not puzzles we hold, so they
+    // must not count towards coverage — otherwise recording a gap would make
+    // the archive look one puzzle more complete than it is.
+    const actualDailyCount = this._archivedDailyCount();
     const dailyMissing = expectedDailyCount - actualDailyCount;
     const sortedByDate = [...games].sort((a, b) => this._getGameMeta(a).dateValue - this._getGameMeta(b).dateValue);
     const timeLabels = sortedByDate.map(g => {
