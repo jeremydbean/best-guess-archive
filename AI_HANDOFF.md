@@ -1,6 +1,14 @@
 # AI Handoff
 
-Last updated: 2026-08-25 (Aug 24 live episode: PENGUIN / BATMAN)
+Last updated: 2026-08-25 (SNOW GLOBE fills the Aug 23 gap; Aug 24 episode)
+
+## Most Recent Changes (2026-08-25, continued)
+
+- **The Aug 23 placeholder is filled — Sunday, August 23, 2026: SNOW GLOBE.** Supplied from a spreadsheet export titled "BGL 8-23-26 Daily Game", which matches the placeholder date exactly. Clues: IT'S A SMALL WORLD / WEATHER CONTROL DEVICE / SHAKEN AND STIRRED / A WINTER BALL YOU CAN ENJOY AT HOME / JIGGLE THIS GLASS ORB IN YOUR HAND FOR FLURRIES ON DEMAND. **There are now zero placeholders and 94 archived dailies.**
+- **The fill-in worked exactly as `AGENTS.md` describes** — the whole entry was replaced with a normal puzzle object, dropping `dataStatus` and keeping its chronological slot between KEYBOARD (Aug 22) and WEDDING DRESS (Aug 24). The tab count went from 93 back to 94 on its own, since `_archivedDailyCount()` simply stopped excluding it. **The missing-daily standard has now been exercised end to end: recorded as a gap, then filled from a later source.**
+- **⚠️ Clue order is reversed in this source format.** The spreadsheet export lists clues **1→5 top to bottom**, the opposite of the in-app result screenshots, which run 5→1. Confirmed by the rhyming giveaway ("JIGGLE THIS GLASS ORB…FLURRIES ON DEMAND") appearing **last** rather than first. Check which way a source runs before importing — reversing it silently would invert every clue number.
+- **No explanations in this view**, and the daily schema makes them optional, so none were invented. This is the first daily stored with clue text only; if the app screenshot for Aug 23 ever turns up, the explanations can be added without touching anything else.
+
 
 ## Most Recent Changes (2026-08-25)
 
