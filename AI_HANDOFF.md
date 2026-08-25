@@ -1,6 +1,17 @@
 # AI Handoff
 
-Last updated: 2026-08-24 (WEDDING DRESS daily; missing-daily standard added)
+Last updated: 2026-08-25 (Aug 24 live episode: PENGUIN / BATMAN)
+
+## Most Recent Changes (2026-08-25)
+
+- **Live episode imported — Monday, August 24, 2026 (PENGUIN / BATMAN)**, hosted by Hunter March: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 214-line transcript. Archive now holds 371 games · 186 transcripts. **Four episodes left — Aug 25, 26, 27, 28.**
+- **⚠️ Two PENGUIN payouts were rounded up in the paste** — silver `2500/79` = **$31.64** (paste $31.65) and bronze `2000/669` = **$2.98** (paste $2.99). The host confirms bronze outright: *"2 dollars and 98 cents on bronze."* Same half-up pattern as Aug 14, 18 and 21.
+- **PENGUIN clue 1 had exactly ONE correct answer**, taking the entire $3,000 gold pool — `Andrea RDR`, the only single-winner gold in the v2 era. The clue was "HUNTER MARCH FAN COMMUNITY", a pun on the host's own name (penguins hunt fish, march, and huddle in communities) that Hunter himself did not solve.
+- **BATMAN's guess counts arrived empty and were filled from the audio afterwards** (user-supplied from the Round 2 results): clues 2–5 at 6,559 / 6,398 / 4,359 / 1,900. Every one satisfies `guesses >= correct`, and the hit-rate curve climbs cleanly — 5.6% → 29.4% → 41.0% → 72.4% → 95.1%. Clue 1's supplied 2,260 matched the already-stored value, independently corroborating the set.
+- **⚠️ New audit rule learned the hard way — never put a medal emoji on an `"N/A"` guess value.** While the counts were still unknown they were stored as `"N/A"` (the archive's established form for an unknown count in an otherwise-complete round, 56 prior instances), but clues 2 and 3 are the silver and bronze tiers, and ` 🥈`/` 🥉` on a non-numeric value fails `count-value`. **No prior entry had ever hit this** — all 56 existing `N/A` values sit on non-medal clues. Now documented in `AGENTS.md`; the emoji is display-only, since the tier lives in `silverClue`/`bronzeClue`.
+- **BATMAN clue 5 has no explanation.** The source supplied *"The host notes that the clue simply states Batman's alter ego and villains"* — that describes the host, not the card, so it is a transcription artifact and was not stored. This is the second expected `missing-explanation` warning, alongside Aug 14.
+- The Intro is a **fan-submitted rules supercut**, so the transcript carries sixteen `Fan 1`…`Fan 16` speaker labels reading the rules in turn — the largest cast of non-host speakers in any transcript.
+
 
 ## Most Recent Changes (2026-08-24)
 

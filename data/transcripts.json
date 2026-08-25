@@ -102990,5 +102990,931 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Monday, August 24, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "PENGUIN",
+      "BATMAN"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "PENGUIN",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "HUNTER MARCH FAN COMMUNITY",
+          "A WRITER TO START, THEY'RE FAMOUS FOR DEEP DIVES",
+          "YOU GUYS FOLLOW THE SOUTH BEACH DIET? VERY COOL!",
+          "FOUND ON ICEBERGS AND PITTSBURGH",
+          "BIRDS WHO WADDLE JUST LIKE DUCKS, CAN'T FLY, AND ROCK A TUX"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "BATMAN",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "TOTALLY POWERLESS",
+          "MAJOR DISRUPTER IN DC",
+          "BLACK BELT WITH A YELLOW BELT",
+          "WINGED MAN WITH WINGED BOY WING MAN",
+          "HIS ALTER EGO IS BRUCE WAYNE, BUT DON'T TELL JOKER, PENGUIN, OR BANE!"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live, hello!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, that's right baby."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A few weeks back I asked you to send us videos of you reading the rules, well we've highlighted a few on the show, but we got more responses than shows we have left, so we put together a super cut of your submissions."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So I get to take a break for a minute or so while you handle business."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's get used to this."
+          },
+          {
+            "speaker": "Fan 1",
+            "text": "This is Best Guess Live."
+          },
+          {
+            "speaker": "Fan 2",
+            "text": "Let's do the rules."
+          },
+          {
+            "speaker": "Fan 3",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Fan 4",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Fan 5",
+            "text": "Each puzzle has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Fan 6",
+            "text": "Before each round, we're gonna load our crystal ball with the secret item."
+          },
+          {
+            "speaker": "Fan 7",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Fan 8",
+            "text": "Then I'll give you five clues, but remember the clues are like riddles, they're meant to make you think."
+          },
+          {
+            "speaker": "Fan 9",
+            "text": "After each clue, you're gonna get 20 seconds to guess your answer."
+          },
+          {
+            "speaker": "Fan 10",
+            "text": "But you only get one guess per round, not per clue, per round."
+          },
+          {
+            "speaker": "Fan 11",
+            "text": "To make sure you're confident before you lock it in, it has to be the exact answer and don't accept typos."
+          },
+          {
+            "speaker": "Fan 12",
+            "text": "So once they click, and you have to be locked."
+          },
+          {
+            "speaker": "Fan 13",
+            "text": "All the people who lock in the correct answer on the first earliest clue are going to split the gold prize of $3,000."
+          },
+          {
+            "speaker": "Fan 14",
+            "text": "Anyone that locks in a correct answer on the second earliest clue will split the silver pot of $2,500."
+          },
+          {
+            "speaker": "Fan 15",
+            "text": "If you answer correctly on the third earliest clue you win bronze, split $2,000."
+          },
+          {
+            "speaker": "Fan 16",
+            "text": "Enough talk, let's win some money!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, that was so great!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That was amazing, why did we wait till this week to do this?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Like I literally just relaxed that whole time, and shout out to all the people uh in the video, thank you for sending those in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Shaut out Tony, uh our Barry Allen fan, thank you, I've seen you in the Discord, appreciate ya."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Some BGL swag is on its way to all of you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's play round one, $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thank you so much."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Ladies and gentlemen, it is Monday, the final Monday of Best Guess Live, which is sad."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So clue number one I just saw this for the first time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hunter March fan community."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What are the odds?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, I don't even want to say."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think I have a guess, let's see if this is good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I have a feeling the writers have joked about doing this the entire time but I don't know if they've done it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue one, Hunter March uh fan community."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Shaky Shaker from Salt Lake City, Utah said Reddit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Win A Piece Of Howie said Discord, those are great guesses, by the way thank you for all the sweet messages."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, yeah but I don't I don't know if that's it, I'm looking at clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I I thought the answer was this, clue two rules it out, Hunter March fan community, I thought they were gonna write Hunter's Mom."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, I don't think they did, I hope not, otherwise I just spoiled it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A writer to start, they're famous for deep dives."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A writer to start, they're famous for deep dives."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Writer to start... they're famous... and I put it on two... I'm gonna pick my first fun username."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Buster Kitten, great username, said Jacques Cousteau."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Definitely a writer to start, famous for deep dives."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And famously the first person ever in the Hunter March fan community."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You guys follow the South Beach Diet?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Very cool!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't even know what the South Beach Diet is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hunter March fan community."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A writer to start, they're famous for deep dives."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You guys follow the South Beach Diet?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Cool, very cool, very cool, not just cool, very cool."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm sticking with what I got here."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three, Fruity Aries from Perryville, Missouri said TMZ."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Baby Jellybean said Miami Heat."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The South Beach Diet, listen to Miami."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Found on icebergs and Pittsburgh."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a great clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know what it's for, but it's a great clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I know, I know what it is, but why... why is it one?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm gonna write the actual answer underneath my my initial guess so, doesn't count, but I still like it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four, found on icebergs and Pittsburgh."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Busy Libra, Pine Grove, Kentucky, lettuce."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, iceberg lettuce, one of the freshest lettuces you can ever have."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Pittsburgh lettuce?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't do it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Fifth and final clue for this first puzzle of our last week."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Birds who waddle just like ducks, can't fly, and rock a tux."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds, your final 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now usually at this point I'm like 'Oh man I get it I get it I get it.'"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "How does it have anything to do with the Hunter March fan community?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If any of you know I'm gonna be really impressed."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A writer to start, they're famous for deep dives, I get that part I guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A writer to start, okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Fifth and final clue done, let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was penguins!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's nice to see you Batman."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is very, this is probably a 400 dollar stuffed animal, this thing is huge."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues fit, find out who's taking home the money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll start with clue number five."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “BIRDS WHO WADDLE JUST LIKE DUCKS, CAN'T FLY, AND ROCK A TUX.” Penguins are flightless birds who are black and white and waddle. 4,347 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “FOUND ON ICEBERGS AND PITTSBURGH.” Penguins mostly live in icy areas, and the NHL team in Pittsburgh is the Penguins. 4,723 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “YOU GUYS FOLLOW THE SOUTH BEACH DIET? VERY COOL!.” They commonly live and eat on the beaches of Antarctica, where it is very cool. 669 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “A WRITER TO START, THEY'RE FAMOUS FOR DEEP DIVES.” Penguin starts with pen, a writer, and they are excellent divers. 79 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “HUNTER MARCH FAN COMMUNITY.” Penguins are fans of hunting fish and marching, and they huddle up in groups like communities. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1 winner at $3,000.00 each. Silver (Clue 2): 79 winners at $31.64 each. Bronze (Clue 3): 669 winners at $2.98 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I did write penguin, I also wrote BGL as my other guess on a writer to start, famous deep divers that's okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Some would say cold."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's impressive, that was not an easy clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Neither was this next one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is a tough, tough clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, I think all the people that did get it right on this got it on the deep dive part, and nobody got it on a writer to start."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way if you think you got it right on this first clue I hope you're filming yourself because this will be a fun one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is a, you guys, I thought there was gonna be something about me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um, that is a fantastic clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "By the way, if you want to be part of the Hunter March fan community head to my Instagram."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But right now, just for right now, on clue number one, there we go, there we go, a little walk is there which means wow, one person."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What a great way to start the week is going home with $3000, and that is Andrea RDR."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I really hope you filmed yourself cause this would be a great video to play for the end of the week."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bunch of people going home with 32 dollars on silver and 2 dollars and 98 cents on bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm gonna give you both of these."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you don't mind."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I really hard to maneuver this down."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Looking not getting reported to Pan."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Let's finish our last Monday strong by playing round two for another 7,500 dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Prize pot is the same, 3000 for gold, 2500 for silver, 2000 for bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Again, last week, I'm going for getting it on two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm playing with you right now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I've ruled out Hunter's Mom and penguins."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's all the help I get."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here's your first clue, clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Totally powerless."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Totally powerless."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "To... tally... pow... erless."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That does not help at all, save your energy."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Totally powerless."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Times up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Totally powerless, Kelifi for some reason wrote M&M."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Totally powerless, maybe has a song like that I don't know, Slap Bracelet 81 says King Charles."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a good guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Powerless, very powerless."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Major disrupter in DC."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Major disrupter in DC."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That I should have something there."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Major disrupter in DC... okay... I did it, major disrupter in DC."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Dunky Do 16 said The Filibuster."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It is a major disrupter in DC."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Black belt with a yellow belt."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wait, black belt with a yellow belt."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Major disrupter in DC."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What the heck?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Black belt with a yellow belt."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is a great guess, black belt with a yellow belt, Tiny Loot just put B."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's great, it's very true."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh Kobe Lee put an eel, black belt with a yellow belt, these are good guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But clue four might get us closer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Winged man with winged boy wing man."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Dang."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got I'm wrong."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Totally powerless, major disrupter in DC, black belt with a yellow belt."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "When it said major disrupter in DC I wrote AC."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well more cause of Tesla versus Ben Franklin but yeah AC DC I guessed."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Winged man with winged boy wing man."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I just I have no idea how you got to this but Cant Be Pete said Scrooge McDuck."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Does he have a winged boy winged man?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh he's got oh, great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Turns out it can be Pete."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay let's go to clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "His alter ego is Bruce Wayne, but don't tell Joker, Penguin, or Bane."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey, tied to the first clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds, your final 20 seconds for this first day of puzzles starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "His alter ego is Bruce Wayne, but don't tell the Joker, Penguin, or Bane."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hey by the way to everyone playing on Discord and Reddit, thank you guys so much, I'm gonna just be uh shouting out all of our players, the people playing at home, not on Discord and Reddit, I love you guys."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone playing the game."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I should have wrote a speech."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh no, 20 seconds is over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "His alter ego is Bruce Wayne, but don't tell Joker, Penguin, or Bane."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was! Batman."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thank you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at how the clues fit, find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “HIS ALTER EGO IS BRUCE WAYNE, BUT DON'T TELL JOKER, PENGUIN, OR BANE!.” 1,807 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “WINGED MAN WITH WINGED BOY WING MAN.” Batman's cape resembles a bat's wings and his partner or wingman is Robin the boy wonder, who is bird themed. 3,158 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “BLACK BELT WITH A YELLOW BELT.” Batman is a martial artist and his iconic utility belt is traditionally depicted as yellow. 2,621 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “MAJOR DISRUPTER IN DC.” He is a popular figure in the DC Comics universe and constantly thwarts the plans of bad guys. 1,931 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “TOTALLY POWERLESS.” Batman is a superhero but he has no superpowers, he is powerless. 127 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 127 winners at $23.62 each. Silver (Clue 2): 1,931 winners at $1.29 each. Bronze (Clue 3): 2,621 winners at $0.76 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's the first time I've realized Robin is also bird themed by the way."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Never knew that before."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Guys have been my wingman for years."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before I reveal this last clue I should reveal who I actually am."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But I bet nobody knew this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm actually Superman."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Just kidding all right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So all the people who won tonight, silver, bronze, gold, congratulations."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Flying Giant going home with gold, Yuren Yeti and a bunch more guys, this is day one of our last week of Best Guess Live, it's gonna be a fun week, we got more fun Batman impressions uh no we actually have a lot of really fun stuff."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "So stay tuned this week, come back every day, tell your friends, we're gonna have some fun."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Follow me at Hunter March on Instagram, I want to chat with you guys, send me your messages I would love to see em."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congrats to our winners, we're here for four more weekdays at 8 Eastern 5 Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good night!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [REDDIT, DISCORD, JAMES CAMERON, LETTUCE, INSTAGRAM]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [BLACKOUT, BEE, ROBIN, BATTERY, JOKER]"
+          }
+        ]
+      }
+    ]
   }
 ]

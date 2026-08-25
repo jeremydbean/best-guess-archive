@@ -4052,6 +4052,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Monday, August 24, 2026",
+      "secretItem": "PENGUIN",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 749,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Monday, August 24, 2026",
+      "secretItem": "BATMAN",
+      "pot": 7500,
+      "host": "Hunter March",
+      "format": "v2",
+      "totalWinners": 4679,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }
