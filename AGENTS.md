@@ -78,6 +78,8 @@ Use the schema in `AI_HANDOFF.md`. Use `pot: 7500` unless the user specifies oth
 
 Medal emoji in the `guesses` field: append ` 🥇` after the number for the gold clue, ` 🥈` for the silver clue, and ` 🥉` for the bronze clue. Non-winner clues have no emoji. Every playable round still has exactly five clue objects. If a tier had no winners, set that tier's winner count and payout to `0`; omit that tier's medal clue field or set it to `0`.
 
+Unknown counts in an otherwise-complete round use the literal string `"N/A"` — this is distinct from a `dataStatus: "partial"` record, which uses JSON `null`. **Never append a medal emoji to an `"N/A"` value**: the audit parses that field as a number and ` 🥉` on a non-numeric value fails `count-value`. Nothing is lost by leaving it bare, since the tier is already recorded in `goldClue`/`silverClue`/`bronzeClue` and the emoji is only a display marker.
+
 `winnerPayout` is typically `"$7,500.00"` for v2 rounds. Do not change it to a per-tier amount when a silver or bronze pool is redistributed.
 
 For Round 2 classic mode, set `winningClue` to the earliest clue with correct answers, set `winnerCount` and `totalWinners` to that clue's correct count, and set `winnerPayout` to the per-winner share of the full round pot. Keep `goldClue` equal to `winningClue` for compatibility, and set `goldWinners`, `silverWinners`, `bronzeWinners`, `goldPayout`, `silverPayout`, and `bronzePayout` to `0`.

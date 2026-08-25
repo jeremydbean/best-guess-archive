@@ -18657,5 +18657,119 @@
         "explanation": "Stevie Wonder is an iconic R&B musician known for his huge hit songs “Isn't She Lovely” and “Superstition”."
       }
     ]
+  },
+  {
+    "date": "Monday, August 24, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "PENGUIN",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 79,
+    "bronzeWinners": 669,
+    "totalWinners": 749,
+    "goldPayout": 3000,
+    "silverPayout": 31.64,
+    "bronzePayout": 2.98,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Andrea RDR",
+    "wrongGuesses": "REDDIT, DISCORD, JAMES CAMERON, LETTUCE, INSTAGRAM",
+    "clues": [
+      {
+        "number": 1,
+        "text": "HUNTER MARCH FAN COMMUNITY",
+        "correct": "1",
+        "guesses": "3,219 🥇",
+        "explanation": "Penguins are fans of hunting fish and marching, and they huddle up in groups like communities."
+      },
+      {
+        "number": 2,
+        "text": "A WRITER TO START, THEY'RE FAMOUS FOR DEEP DIVES",
+        "correct": "79",
+        "guesses": "2,743 🥈",
+        "explanation": "Penguin starts with pen, a writer, and they are excellent divers."
+      },
+      {
+        "number": 3,
+        "text": "YOU GUYS FOLLOW THE SOUTH BEACH DIET? VERY COOL!",
+        "correct": "669",
+        "guesses": "3,554 🥉",
+        "explanation": "They commonly live and eat on the beaches of Antarctica, where it is very cool."
+      },
+      {
+        "number": 4,
+        "text": "FOUND ON ICEBERGS AND PITTSBURGH",
+        "correct": "4,723",
+        "guesses": "6,344",
+        "explanation": "Penguins mostly live in icy areas, and the NHL team in Pittsburgh is the Penguins."
+      },
+      {
+        "number": 5,
+        "text": "BIRDS WHO WADDLE JUST LIKE DUCKS, CAN'T FLY, AND ROCK A TUX",
+        "correct": "4,347",
+        "guesses": "4,583",
+        "explanation": "Penguins are flightless birds who are black and white and waddle."
+      }
+    ]
+  },
+  {
+    "date": "Monday, August 24, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "BATMAN",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 127,
+    "silverWinners": 1931,
+    "bronzeWinners": 2621,
+    "totalWinners": 4679,
+    "goldPayout": 23.62,
+    "silverPayout": 1.29,
+    "bronzePayout": 0.76,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Flying Giant, Yuren Yeti",
+    "wrongGuesses": "BLACKOUT, BEE, ROBIN, BATTERY, JOKER",
+    "clues": [
+      {
+        "number": 1,
+        "text": "TOTALLY POWERLESS",
+        "correct": "127",
+        "guesses": "2,260 🥇",
+        "explanation": "Batman is a superhero but he has no superpowers, he is powerless."
+      },
+      {
+        "number": 2,
+        "text": "MAJOR DISRUPTER IN DC",
+        "correct": "1,931",
+        "guesses": "6,559 🥈",
+        "explanation": "He is a popular figure in the DC Comics universe and constantly thwarts the plans of bad guys."
+      },
+      {
+        "number": 3,
+        "text": "BLACK BELT WITH A YELLOW BELT",
+        "correct": "2,621",
+        "guesses": "6,398 🥉",
+        "explanation": "Batman is a martial artist and his iconic utility belt is traditionally depicted as yellow."
+      },
+      {
+        "number": 4,
+        "text": "WINGED MAN WITH WINGED BOY WING MAN",
+        "correct": "3,158",
+        "guesses": "4,359",
+        "explanation": "Batman's cape resembles a bat's wings and his partner or wingman is Robin the boy wonder, who is bird themed."
+      },
+      {
+        "number": 5,
+        "text": "HIS ALTER EGO IS BRUCE WAYNE, BUT DON'T TELL JOKER, PENGUIN, OR BANE!",
+        "correct": "1,807",
+        "guesses": "1,900",
+        "explanation": ""
+      }
+    ]
   }
 ]
