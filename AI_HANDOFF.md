@@ -1,6 +1,12 @@
 # AI Handoff
 
-Last updated: 2026-08-25 (SNOW GLOBE fills the Aug 23 gap; Aug 24 episode)
+Last updated: 2026-08-25 (SPIDER WEB daily; SNOW GLOBE fills the Aug 23 gap)
+
+## Most Recent Changes (2026-08-25, continued 2)
+
+- **Daily puzzle added — Tuesday, August 25, 2026: SPIDER WEB**: `data/daily-puzzles.json` now holds 95 entries, all archived. Clues: IT'S A TRAP! / FLIES IN A HOLDING PATTERN / FOR THE CHARLOTTE OF THE GROUP THREAD / WE HAVE NO DOUBT YOU'VE WALKED INTO ONE OF THESE BEFORE / NET OF STICKY SILKEN THREAD THAT KEEPS EIGHT-LEGGED CREATURES FED. Answered on clue 2.
+- Clue 4 is the sharpest — "we have **no doubt**" is doing double duty, since the explanation points at No Doubt's 1995 song "Spiderwebs". Clue 3 works "thread" both ways (Charlotte's Web and a group message thread). Clue 4's quoted song title uses straight double quotes per file convention. SPIDER WEB is new; the archive already holds SPIDER-MAN as a live secret item, which is a different item.
+
 
 ## Most Recent Changes (2026-08-25, continued)
 

@@ -2907,5 +2907,36 @@
         "explanation": "When choosing your answer, we hope you said yes to the dress."
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 25, 2026",
+    "secretItem": "SPIDER WEB",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "IT'S A TRAP!",
+        "explanation": "They trap bugs!"
+      },
+      {
+        "clueNumber": 2,
+        "text": "FLIES IN A HOLDING PATTERN",
+        "explanation": "Flies get held in the patterns of spider webs."
+      },
+      {
+        "clueNumber": 3,
+        "text": "FOR THE CHARLOTTE OF THE GROUP THREAD",
+        "explanation": "Charlotte as in Charlotte's Web."
+      },
+      {
+        "clueNumber": 4,
+        "text": "WE HAVE NO DOUBT YOU'VE WALKED INTO ONE OF THESE BEFORE",
+        "explanation": "Remember the 1995 song \"Spiderwebs\" by the band No Doubt?"
+      },
+      {
+        "clueNumber": 5,
+        "text": "NET OF STICKY SILKEN THREAD THAT KEEPS EIGHT-LEGGED CREATURES FED",
+        "explanation": "We hope you got caught up in our spider web poem."
+      }
+    ]
   }
 ]
