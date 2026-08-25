@@ -2853,9 +2853,29 @@
   },
   {
     "date": "Sunday, August 23, 2026",
-    "secretItem": "",
-    "dataStatus": "missing",
-    "clues": []
+    "secretItem": "SNOW GLOBE",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "IT'S A SMALL WORLD"
+      },
+      {
+        "clueNumber": 2,
+        "text": "WEATHER CONTROL DEVICE"
+      },
+      {
+        "clueNumber": 3,
+        "text": "SHAKEN AND STIRRED"
+      },
+      {
+        "clueNumber": 4,
+        "text": "A WINTER BALL YOU CAN ENJOY AT HOME"
+      },
+      {
+        "clueNumber": 5,
+        "text": "JIGGLE THIS GLASS ORB IN YOUR HAND FOR FLURRIES ON DEMAND"
+      }
+    ]
   },
   {
     "date": "Monday, August 24, 2026",
