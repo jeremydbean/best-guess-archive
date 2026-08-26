@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-25 (SPIDER WEB daily; SNOW GLOBE fills the Aug 23 gap)
+Last updated: 2026-08-26 (Aug 25 live episode: MULLET / K-POP)
+
+## Most Recent Changes (2026-08-26)
+
+- **Live episode imported — Tuesday, August 25, 2026 (MULLET / K-POP)**, hosted by Hunter March: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 227-line transcript. Archive now holds 373 games · 187 transcripts. **Three episodes left — Aug 26, 27, 28.**
+- **⚠️ K-POP bronze is the first payout where the HOST is wrong too, and it is provably impossible.** Both the paste and Hunter say **$5.09**, but `floorCents(2000, 392)` = **$5.10**, and **no integer winner count can produce $5.09 from a $2,000 pool at all** — 391 gives $5.11, 392 gives $5.10, 393 gives $5.08. $5.09 simply is not a reachable value, so it cannot be right whatever the source says, and storing it would fail `v2-payout-math` outright. Stored **$5.10**.
+- **This is a genuinely new failure mode.** Every earlier correction (Aug 10, 14, 18, 21, 24) was a paste that rounded half-up while the spoken figure was right, or vice versa — one source was always correct. Here **both agree and both are wrong**, which points at the show's own results card rather than the transcription. **The arithmetic is the authority, not the number of sources agreeing.** The other five payouts this episode all reproduce exactly, three of them confirmed aloud ($32.60, $69.76, $21.92).
+- **MULLET clue 5 has no explanation** — the source supplied "The host does not provide a direct explanation for this clue", which describes the broadcast rather than the card. Same artifact as BATMAN clue 5 on Aug 24, left empty rather than stored. `npm run audit` now reports **3 expected `missing-explanation` warnings** (Aug 14, Aug 24, Aug 25).
+- The Intro carries a good bit of archive lore: Hunter reveals a player, **Donnie7777, has submitted "the rock" 174 times since March** and never once been right, then promises it will not be the answer — and opens Round 1's results by fake-revealing "The Rock!" as a joke. THE ROCK duly appears in K-POP's popular wrong guesses.
+
 
 ## Most Recent Changes (2026-08-25, continued 2)
 
