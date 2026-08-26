@@ -1,6 +1,13 @@
 # AI Handoff
 
-Last updated: 2026-08-26 (Aug 25 live episode: MULLET / K-POP)
+Last updated: 2026-08-26 (Aug 26 daily puzzle: AUGUST)
+
+## Most Recent Changes (2026-08-26, continued)
+
+- **Daily puzzle added — Wednesday, August 26, 2026: AUGUST**: `data/daily-puzzles.json` now holds 96 entries, all archived. Clues: IT'S NO HOLIDAY / IN EIGHTH PLACE, YEAR AFTER YEAR / THE ONLY TIME 31 COMES AFTER 31 / SUMMER MONTH THAT ENDS IN A PUFF OF WIND / IT'S BETWEEN JULY & SEPTEMBER AND CAN FEEL AS HOT AS AN EMBER. Answered on clue 2.
+- Clue 4's wordplay checks out — the last four letters of AUGUST are GUST. Clue 4's quoted word uses straight double quotes per file convention.
+- **⚠️ Clue 3's card text is imprecise, and is stored verbatim anyway.** "The only 31-day month to follow another 31-day month" is true only *within* a calendar year — January also follows a 31-day month (December). Flagged, not corrected: card wording is stored as broadcast.
+
 
 ## Most Recent Changes (2026-08-26)
 
