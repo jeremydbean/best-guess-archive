@@ -103916,5 +103916,983 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 25, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "MULLET",
+      "K-POP"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "MULLET",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "COMBINATION LOCKS",
+          "SOUNDS LIKE YOU'RE GONNA THINK IT OVER",
+          "THE LONG AND THE SHORT OF IT",
+          "THE BEST OF BOTH WORLDS AT THE BARBER",
+          "BUSINESS UP FRONT, PARTY IN THE BACK: THIS 'DO GETS LOTS OF FLAK"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "K-POP",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "A SIDE OF STEAK AND A SODA",
+          "GOES WELL WITH XL-SIZED FANNY PACKS",
+          "MANY OF THE PERFORMERS HAVE SOUTHERN ACCENTS",
+          "FAMOUS BEFORE DEMON HUNTERS",
+          "GENRE FOR BLACKPINK AND BTS: MUSIC FANS, TAKE YOUR BEST GUESS!"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello, how you doing?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm your host Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now there are a lot of different strategies when it comes to playing this game."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Some of you submit the first thing clue one makes you think of."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Some of you wait until a few clues until you're certain."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then some of you just pick one thing and submit that over and over and over again until you think you're gonna get it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "In fact, some people do get it that way on clue one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "For example, uh, there's a player named Donnie7777 who has been submitting the same answer for almost every puzzle since March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They have submitted the rock as their answer 174 times."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The rock has been the answer zero times."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yesterday, in fact, they guessed the rock uh on Batman, which was not a bad guess, it was not correct, but since there's only a few shows left, I wanted to let Donnie, as well as the rest of you, know that the rock will not be appearing in the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm sorry, I'm sorry, no offense to Mr. Johnson, he just didn't make the cut."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know what the answers will be, but I've been assured it will not be the rock."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So Donnie, you are now free to actually pay attention to the clues and guess anything else."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I hope that helps."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "For the rest of you, just as a heads up, it also will not be my wife Betsy, so stop saying it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Stop that, stop."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, and now the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds, each round has one puzzle, each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round we're gonna load our crystal ball with the secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Remember the clues are written like riddles, they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you'll get 20 seconds to submit an answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But you only get one Best Guess per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not one per clue, one per round, so make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer, and we do not accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line: you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the Gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks it in on the second earliest clue will split the Silver pot of $2,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And everyone that gets it on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is for $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's win some money people!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good luck."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And for those of you wondering if that strategy has ever worked, of guessing the same thing every day?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yes, at some point, for some people, it has, and they've actually won money."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But, it is not the rock tonight, so don't do that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm playing along with you."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one: combination locks."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Combination locks."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Combination locks."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm looking towards the crew to see if they'll mouth something for me, give me the answers, they don't, they never do."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Combination locks."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one, CraftyDuck65 said that bridge in Paris."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yes, where there's all those love locks on there."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's graffiti, but it's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, we'll go to clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sounds like you're gonna think it over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sounds like you're gonna think it over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Combination locks."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sounds like you're gonna think it over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mullet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What is this whole game if I think it over too many times and I don't know what to put?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sounds like you're gonna think it over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sounds like you're gonna think it over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "FuzzyCheese wrote, um... yeah, that's what happens when you think it over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's go to clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The long and the short of it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The long and the short of it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The long and the short of it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm gonna guess it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is it correct?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Probably not."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The long and the short of it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "OnceUponADime put measuring tape."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is it correct?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll find out in just a minute."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue four: the best of both worlds at the barber."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The best of both worlds at the barber."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I know what a barber is, if that's why you guys are laughing, I'm aware of what a barber is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm trying to think, the best of both worlds, sounds like you're gonna think it over..."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds is over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "VoteForPedro from Modesto, California said fade."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, a fade, you get a good fade at the barber, that's, that's the good, and then the bad would be if he fought you and you caught a fade from your barber."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "GrannySmith11 said quartet."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, barbershop quartet, that's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Business up front, party in the back: this 'do gets lots of flak."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm just looking at all of the puzzles now, all of the clues."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I... I was... I was on the right track, I just, I didn't get specific enough."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good luck."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "In fact, I think a lot of people are even gonna have a hard time here on clue five, 'cause... you know what it is, 100%."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds is over."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball in just a second."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was... The Rock!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Donnie!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't do anything crazy!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It was a joke!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't do anything crazy Donnie, it was a bit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The answer is not the rock."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was a mullet!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh, and they all look so good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Why do they get flak?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, let's start with clue number five: business up front, party in the back, this 'do gets lots of flak."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “BUSINESS UP FRONT, PARTY IN THE BACK: THIS 'DO GETS LOTS OF FLAK.” 3,362 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “THE BEST OF BOTH WORLDS AT THE BARBER.” A mullet features two different lengths of hair. 2,187 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “THE LONG AND THE SHORT OF IT.” The haircut is short in the front and long in the back. 1,014 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “SOUNDS LIKE YOU'RE GONNA THINK IT OVER.” The phrase “mull it” sounds like mullet. 564 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “COMBINATION LOCKS.” The word locks refers to hair, as a mullet combines two styles. 92 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 92 winners at $32.60 each. Silver (Clue 2): 564 winners at $4.43 each. Bronze (Clue 3): 1,014 winners at $1.97 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know what worlds, but it is the best of them."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I wrote haircut there, so I was on the right path, but wasn't the right one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There's not to be a big drop though."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is a great guess, or that's a great clue, well done puzzle writers."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I was thinking haircut on this, I didn't get it, the question is out of 3,882 people, how many did?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to those 92 people going home with $32.60."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to Unicorn214, ElPresidente, and uneducatedguess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a good username."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, it's time for round two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,000 for Gold, 2,500 for Silver, and 2,000 for Bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball... now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, crystal ball is relaxing today a little bit, it's got senioritis."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, you know what's funny is I almost did a 'the answer is the rock' before I revealed the crystal ball, so... I almost ruined that whole bit, uh, to do the bit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here's your first clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A side of steak and a soda."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A side of steak and a soda."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A side of steak and a soda."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "In case you guys ever think to yourselves like, oh man, I feel so dumb today, I can't figure this one out."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You've seen me feel dumb every day now, and I'm here."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, a side of steak and a soda."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "HarloDonuts, parlor donuts, put Ikea, cause you get those little meatballs, you get the soda, maybe there's another thing to it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "CrispyFred said lunch."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Right on the nose, CrispyFred, you nailed it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Goes well with XL-sized fanny packs."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Goes well with XL-sized fanny packs."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "StraightForklift598 from Clermont, Florida said Costco."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is the, one of the only places where you can get XL-sized fanny packs at any point."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And a side of steak and a soda, hot dog, that's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "BrilliantEcho wrote XL-sized fanny packs, which I don't know if that's just their username, going into effect, but it's a good guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, clue number three: many of the performers have southern accents."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That is so specific, and it makes me think I should know it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "XL-sized fanny packs, southern accents... Oh my gosh, I'm not gonna get it on three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Many of the performers have southern accents."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gary did it, said NCIS New Orleans."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That would be a great show."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four: famous before demon hunters."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Famous before demon hunters."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Are we talking K-pop demon hunters?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Are we talking actual demon hunters?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Famous before... many of the performers have southern accents?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got nothin."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Famous before demon hunters."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "NancyDances said demons."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Can't have demon hunters without the demons, that's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five... oh my gosh, now I get it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five: genre for Blackpink and BTS: music fans, take your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds, your final 20 seconds on this Tuesday starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Genre for Blackpink and BTS, music fans take your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We've got a side of steak and soda, goes well with XL-sized fanny packs, many of the performers have southern accents, famous before demon hunters."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh, it all makes sense... except for the first one, and the second one to me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But I think they will at some point."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh listen, one of my favorite parts about Best Guess Live is that sometimes people, you wonder, is it a misspelling, or do they actually think it's this?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sometimes it's a real toss up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Like WillySatire458 from St. Louis, Missouri who wrote K-poo."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's one of those things."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Did he misspell it?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Or does he think that genre is called K-poo?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was K-pop!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The correct answer was K-pop."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The question is who got it right, on what clues, who's going home with the money?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll start with clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Genre for Blackpink and BTS, music fans take your best guess."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “GENRE FOR BLACKPINK AND BTS: MUSIC FANS, TAKE YOUR BEST GUESS!.” Blackpink and BTS are two of the most world famous K-pop groups. 4,622 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “FAMOUS BEFORE DEMON HUNTERS.” K-pop comes before demon hunters in the Netflix movie K-pop Demon Hunters. 2,530 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “MANY OF THE PERFORMERS HAVE SOUTHERN ACCENTS.” The home of the K-pop industry is Seoul, South Korea, representing southern accents. 392 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “GOES WELL WITH XL-SIZED FANNY PACKS.” The genre has massively huge packs of devoted fans, or XL-sized fan-ny packs. 114 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “A SIDE OF STEAK AND A SODA.” The letter K is on the side of the word steak, and a soda is called pop. 43 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 43 winners at $69.76 each. Silver (Clue 2): 114 winners at $21.92 each. Bronze (Clue 3): 392 winners at $5.10 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great job."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I thought by the way at this clue you guys were gonna make it The Rock from that one photo where he's got the fanny pack."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I was like, that would have been so mean."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great, very good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh, okay, clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hold on one more second."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let me try to understand 'cause they're not even reading, they're just hearing me say it confused."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let me see, hold on, the letter K is over on the side of the word steak, so it's a side of steak, and that side is particularly the K."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And a soda, which is pop."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, great job."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great job."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sometimes I go 'do I have to have a conversation with the writers after this?'"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No, today, that was great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "A side of steak and soda, 2,039 guesses."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Out of the 2,039 guesses, only 43 people got it right!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to a bunch of people."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "43, ZooTrain, uh MikeTTheBoss, congratulations."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "FableE is 69 dollars and 76 cents."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "uh cents."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then we have Silver going home with 21.92, Bronze going home with 5.09."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations again to all of our winners, we're here for three more weekdays at 8 eastern 5 pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thank you guys so much for tuning in every day."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We really appreciate it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We really love you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I love ya."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Come back tomorrow, don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Goodnight!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [HAIR, SAFE, LOCKER, ESCAPE ROOM, DREADS]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [RODEO, THE ROCK, POP, BTS, COUNTRY]"
+          }
+        ]
+      }
+    ]
   }
 ]

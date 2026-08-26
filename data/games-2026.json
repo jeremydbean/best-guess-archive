@@ -18771,5 +18771,119 @@
         "explanation": ""
       }
     ]
+  },
+  {
+    "date": "Tuesday, August 25, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MULLET",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 92,
+    "silverWinners": 564,
+    "bronzeWinners": 1014,
+    "totalWinners": 1670,
+    "goldPayout": 32.6,
+    "silverPayout": 4.43,
+    "bronzePayout": 1.97,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Unicorn214, ElPresidente, uneducatedguess",
+    "wrongGuesses": "HAIR, SAFE, LOCKER, ESCAPE ROOM, DREADS",
+    "clues": [
+      {
+        "number": 1,
+        "text": "COMBINATION LOCKS",
+        "correct": "92",
+        "guesses": "3,882 🥇",
+        "explanation": "The word locks refers to hair, as a mullet combines two styles."
+      },
+      {
+        "number": 2,
+        "text": "SOUNDS LIKE YOU'RE GONNA THINK IT OVER",
+        "correct": "564",
+        "guesses": "3,133 🥈",
+        "explanation": "The phrase “mull it” sounds like mullet."
+      },
+      {
+        "number": 3,
+        "text": "THE LONG AND THE SHORT OF IT",
+        "correct": "1,014",
+        "guesses": "5,212 🥉",
+        "explanation": "The haircut is short in the front and long in the back."
+      },
+      {
+        "number": 4,
+        "text": "THE BEST OF BOTH WORLDS AT THE BARBER",
+        "correct": "2,187",
+        "guesses": "4,364",
+        "explanation": "A mullet features two different lengths of hair."
+      },
+      {
+        "number": 5,
+        "text": "BUSINESS UP FRONT, PARTY IN THE BACK: THIS 'DO GETS LOTS OF FLAK",
+        "correct": "3,362",
+        "guesses": "3,903",
+        "explanation": ""
+      }
+    ]
+  },
+  {
+    "date": "Tuesday, August 25, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "K-POP",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 43,
+    "silverWinners": 114,
+    "bronzeWinners": 392,
+    "totalWinners": 549,
+    "goldPayout": 69.76,
+    "silverPayout": 21.92,
+    "bronzePayout": 5.1,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "ZooTrain, MikeTTheBoss, FableE",
+    "wrongGuesses": "RODEO, THE ROCK, POP, BTS, COUNTRY",
+    "clues": [
+      {
+        "number": 1,
+        "text": "A SIDE OF STEAK AND A SODA",
+        "correct": "43",
+        "guesses": "2,039 🥇",
+        "explanation": "The letter K is on the side of the word steak, and a soda is called pop."
+      },
+      {
+        "number": 2,
+        "text": "GOES WELL WITH XL-SIZED FANNY PACKS",
+        "correct": "114",
+        "guesses": "3,079 🥈",
+        "explanation": "The genre has massively huge packs of devoted fans, or XL-sized fan-ny packs."
+      },
+      {
+        "number": 3,
+        "text": "MANY OF THE PERFORMERS HAVE SOUTHERN ACCENTS",
+        "correct": "392",
+        "guesses": "4,173 🥉",
+        "explanation": "The home of the K-pop industry is Seoul, South Korea, representing southern accents."
+      },
+      {
+        "number": 4,
+        "text": "FAMOUS BEFORE DEMON HUNTERS",
+        "correct": "2,530",
+        "guesses": "4,465",
+        "explanation": "K-pop comes before demon hunters in the Netflix movie K-pop Demon Hunters."
+      },
+      {
+        "number": 5,
+        "text": "GENRE FOR BLACKPINK AND BTS: MUSIC FANS, TAKE YOUR BEST GUESS!",
+        "correct": "4,622",
+        "guesses": "5,661",
+        "explanation": "Blackpink and BTS are two of the most world famous K-pop groups."
+      }
+    ]
   }
 ]
