@@ -2938,5 +2938,36 @@
         "explanation": "We hope you got caught up in our spider web poem."
       }
     ]
+  },
+  {
+    "date": "Wednesday, August 26, 2026",
+    "secretItem": "AUGUST",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "IT'S NO HOLIDAY",
+        "explanation": "There are no federal holidays in August."
+      },
+      {
+        "clueNumber": 2,
+        "text": "IN EIGHTH PLACE, YEAR AFTER YEAR",
+        "explanation": "August is the eighth month."
+      },
+      {
+        "clueNumber": 3,
+        "text": "THE ONLY TIME 31 COMES AFTER 31",
+        "explanation": "It's the only 31-day month to follow another 31-day month."
+      },
+      {
+        "clueNumber": 4,
+        "text": "SUMMER MONTH THAT ENDS IN A PUFF OF WIND",
+        "explanation": "A puff of wind is a gust, like \"August\" ends with."
+      },
+      {
+        "clueNumber": 5,
+        "text": "IT'S BETWEEN JULY & SEPTEMBER AND CAN FEEL AS HOT AS AN EMBER",
+        "explanation": "August can be mighty toasty."
+      }
+    ]
   }
 ]
