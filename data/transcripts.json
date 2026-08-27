@@ -104894,5 +104894,959 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Wednesday, August 26, 2026",
+    "host": "Corinne Foxx",
+    "secretItems": [
+      "ZIPPER",
+      "MILKSHAKE"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "ZIPPER",
+        "host": "Corinne Foxx",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "LIKE PULLING TEETH",
+          "A FLY MIGHT LAND ON IT",
+          "QUICK MERGER IN THE FASHION WORLD",
+          "YKK... IYKYK!",
+          "FROM COTTON TO LEATHER, THIS METAL DEVICE JOINS FABRIC TOGETHER"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "MILKSHAKE",
+        "host": "Corinne Foxx",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "THIS WHOLE THING MAKES ME SHUDDER",
+          "MIXED RESULTS WITH MANY FIVE-STAR REVIEWS",
+          "YOUR GRANDMOTHER GOT SERVED BY A REAL JERK",
+          "FOR COUPLES WHO WANNA SPOON ON THE FIRST DATE",
+          "ICE CREAM DRINK YOU SLURP RIGHT UP, OFTEN SERVED IN A STEEL CUP"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I am your host, Corinne Foxx."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I love that."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Hunter and Howie are getting full-body kelp and mayonnaise wraps to get ready for the final show on Friday, so I am taking over tonight."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And you guys, this is—this is bittersweet for me."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It is my last time hosting the show."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Boo, which is sad, but I am thrilled that I get one more chance to be up here and offer up $15,000!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And the best part is that since it's my last night, I get to cut loose, let my hair down a little bit, do literally anything I really want to do."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And according to the script, what I really want to do is read the rules."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Each puzzle has three sets of winners: Gold, Silver, and Bronze."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Before each round, we're going to load up our crystal ball with a secret item, and it could be anything."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And then I will give you five clues, but remember: the clues are like riddles."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "They're meant to make you think."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "After each clue, you'll get 20 seconds to submit an answer, but you only get one best guess per round."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Not one per clue, one per round."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "So, make sure you are confident before you lock it in, and it has to be the exact answer."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "We do not accept typos."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Bottom line: you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Everyone that locks in the correct answer on the earliest clue will split the Gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Everyone that locks in the correct answer on the second earliest clue will split the Silver prize pot of $2,500, and everyone that gets it right on the third earliest clue will split the Bronze pot of $2,000."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, enough talk."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's win some money!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, round one is worth $7,500."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's load up that crystal ball!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, here we go."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I have my own guess this time."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm allowed to guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm very, very excited."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, clue number one."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Here's your first clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: like pulling teeth."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: like pulling teeth."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, like pulling teeth."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Remember, this is just clue number one."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "We still have four more to go."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I usually get it around clue number five at the very, very last second."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "But I'm going to try my best to guess before clue number five this time."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, four seconds on the clock, and your time is just about up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number one, like pulling teeth."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Dentist?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, Fresh Broccoli said dentist, right?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "They pull teeth all day long."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "DreamyDuck211 said Milk Duds."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, those—those will pull your teeth out for sure."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, those are some great guesses."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Here is your second clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm not quite there yet, I'm not going to guess yet."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: a fly might land on it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number one: like pulling teeth."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: a fly might land on it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, Milk Duds is starting to make a little bit more sense."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I don't feel like I can guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I don't know how you guys get it this early."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, your time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "OldSandals667 said donkey."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "VeryBerry98 said potato salad."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah, okay, a fly might land on that."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, those are some good guesses."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here is your third clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three: quick merger in the fashion world."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: like pulling teeth."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: a fly might land on it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three: quick merger in the fashion world."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, guys, see this is why I guess on clue number five, because I'm completely lost now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three really threw me off."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Gosh, I'm not anywhere close."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "MartianJoe said runway."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, yeah, fashion world."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Harry's Train 34 said H&M."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh yeah, merging, H&M, okay."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I like where you're headed."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, here's your fourth clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "YKK... IYKYK!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Did I say that right?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I feel like I'm at the eye doctor, and I'm like, 'Wait, okay, what?'"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, 20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I will try to read: YKK... IYKYK!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Did I get it?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, I do think I know what that last one is."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Like pulling teeth."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I don't feel confident."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I don't feel confident."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "WobblyChimney501 did and said, 'Oh, well, is that Greek? Question mark.'"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah, that felt like Greek or Latin or something, not English."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, here is your final clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "This is your final chance to guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I said I was going to guess before clue number five, but I can't, you guys, I never can."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, clue number five: from cotton to leather, this metal device joins fabric together."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, 20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: like pulling teeth."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: a fly might land on it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three: quick merger in the fashion world."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four: YKK... IYKYK!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And clue number five: from cotton to leather, this metal device joins fabric together."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Time is up!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I got nothing."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Nothing."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you know what, let's find out what's in the crystal ball, because I got to know, you guys."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "This is a zipper!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's a zipper."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's a zipper."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "When I tell you I was nowhere near that."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, let's take a look at how the clues fit and find out who is taking home the money."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm going to put this away."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “FROM COTTON TO LEATHER, THIS METAL DEVICE JOINS FABRIC TOGETHER.” A zipper is a metal device that joins fabric together. 2,807 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “YKK... IYKYK!.” YKK is the world's largest zipper manufacturer, and IYKYK stands for if you know you know. 2,470 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “QUICK MERGER IN THE FASHION WORLD.” Zippers are on clothing and quickly merge together when closed. 3,711 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “A FLY MIGHT LAND ON IT.” The fly of a pair of pants rests upon a zipper. 1,032 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “LIKE PULLING TEETH.” Zippers have metal teeth that pull together to fasten. 237 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 237 winners at $12.65 each. Silver (Clue 2): 1,032 winners at $2.42 each. Bronze (Clue 3): 3,711 winners at $0.53 each."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, that means that 237 people are taking home $12.65."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Congratulations!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "1,032 people are taking home $2.42, and 3,711 people are taking home 53 cents."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Great job, you guys!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Congratulations to Shoe Live Crew, our gold guesser, Dragon Dagger 25, another gold guesser, and I'm a Big Boy 22301, another gold guesser."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Great job, you guys!"
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, it is time for round number two for another $7,500."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Prize pots are the same: $3,000 for Gold, $2,500 for Silver, and $2,000 for Bronze."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I'm guessing on clue number one, you guys, it's my final puzzle, I'm doing it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I didn't guess last time, and I regret it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, I'm locked and loaded."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Here's your first clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: this whole thing makes me shudder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And I'm typing along with you right now, clue number one."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "We're going for it."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, putting it to the side."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "You have just about 10 seconds left."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "You don't have to guess on clue number one like me."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I definitely got it wrong, so maybe wait out a little bit longer."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Somebody guessed camera."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh yeah, there's a shutter, shutter speed, that's a camera thing."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "FriendlyWendy76 said babysitting."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, that could make you shudder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Depends on the kids, it could make you shudder for sure."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, here is your second clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: mixed results with many five-star reviews."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: this whole thing makes me shudder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: mixed results with many five-star reviews."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "So, my guess now makes no sense."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And that's why guessing on clue number one is very risky."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Luckily, I have no skin in the game, I can't really play."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, time is just about up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Somebody guessed the sun?"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "The sun."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "NorthernDwight33 said an Uber driver."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Mixed results, I've had mixed results with some five-star reviews, for sure, for sure."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, here is your third clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three: your grandmother got served by a real jerk."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: this whole thing makes me shudder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: mixed results with many five-star reviews."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three: your grandmother got served by a real jerk."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Aw, real jerks aren't very sweet to your grandma."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I don't like that."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, time is up."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "MightySoup45 said Step Up 6: The Home."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Oh, they got served, they got served."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I love that interpretation, I love that."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, here is your fourth clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four: for couples who wanna spoon on the first date."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: this whole thing makes me shudder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: mixed results with many five-star reviews."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three: your grandmother got served by a real jerk."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four: for couples who wanna spoon on the first date."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, KiwiJoker5 said scary movie."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Okay, that's a great first date, get all cozy, shudder, I see."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "TremendousPony303 said shame."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Shame."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Shame."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, you guys, here is your final clue."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "This is your final chance to guess on this puzzle if you haven't locked it in yet, this is your time to do so."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's clue number five, usually when I start to put it together."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number five is: ice cream drink you slurp right up, often served in a steel cup."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, there it is."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, 20 seconds on the clock starts now."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number one: this whole thing makes me shudder."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number two: mixed results with many five-star reviews."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number three: your grandmother got served by a real jerk."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Clue number four: for couples who wanna spoon on the first date."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "And clue number five: ice cream drink you slurp right up, often served in a steel cup."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Yeah, my guess was wrong, and that's why I host the show."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, time is up, you guys."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Let's find out what was in that crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "It's a milkshake, of course!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Of course it's a milkshake."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "I guessed window."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That's not anywhere close."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Shutter, that was the only thing I could think of was shutter."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "All right, let's take a look at how the clues fit and find out who is taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “ICE CREAM DRINK YOU SLURP RIGHT UP, OFTEN SERVED IN A STEEL CUP.” Milkshakes are ice cream drinks often served in a stainless steel cup. 3,442 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “FOR COUPLES WHO WANNA SPOON ON THE FIRST DATE.” Sharing a milkshake is a classic date activity often eaten with a spoon. 867 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “YOUR GRANDMOTHER GOT SERVED BY A REAL JERK.” Milkshakes were traditionally served by soda jerks. 552 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “MIXED RESULTS WITH MANY FIVE-STAR REVIEWS.” Milkshakes are the result of mixing ingredients in a blender and are very popular. 101 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “THIS WHOLE THING MAKES ME SHUDDER.” Whole refers to whole milk and shudder refers to shake, forming milkshake. 12 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 12 winners at $250.00 each. Silver (Clue 2): 101 winners at $24.75 each. Bronze (Clue 3): 552 winners at $3.62 each."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That is so impressive, so impressive!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That means our gold pot guessers are taking home $250, our silver pot is taking home $24.75, and our bronze are taking home $3.62, you guys!"
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That's it!"
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "That is it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Congratulations again to all of our winners."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "We will be here for two more days at 8:00 Eastern, 5:00 Pacific."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Come back tomorrow, and don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Thank you, good night, I've had the time of my life doing this show."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "You guys are the best."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Feels so cruel and so bad."
+          },
+          {
+            "speaker": "Corinne Foxx",
+            "text": "Congratulations!"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [DENTIST, APPLE, RUNWAY, NEEDLE, BELT]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [ICE CREAM, WINDOW, CAMERA, YELP, HURRICANE]"
+          }
+        ]
+      }
+    ]
   }
 ]
