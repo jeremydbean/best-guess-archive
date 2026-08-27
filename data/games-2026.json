@@ -18885,5 +18885,119 @@
         "explanation": "Blackpink and BTS are two of the most world famous K-pop groups."
       }
     ]
+  },
+  {
+    "date": "Wednesday, August 26, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Corinne Foxx",
+    "secretItem": "ZIPPER",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 237,
+    "silverWinners": 1032,
+    "bronzeWinners": 3711,
+    "totalWinners": 4980,
+    "goldPayout": 12.65,
+    "silverPayout": 2.42,
+    "bronzePayout": 0.53,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "Shoe Live Crew, Dragon Dagger 25, I'm a Big Boy 22301",
+    "wrongGuesses": "DENTIST, APPLE, RUNWAY, NEEDLE, BELT",
+    "clues": [
+      {
+        "number": 1,
+        "text": "LIKE PULLING TEETH",
+        "correct": "237",
+        "guesses": "2,592 🥇",
+        "explanation": "Zippers have metal teeth that pull together to fasten."
+      },
+      {
+        "number": 2,
+        "text": "A FLY MIGHT LAND ON IT",
+        "correct": "1,032",
+        "guesses": "3,832 🥈",
+        "explanation": "The fly of a pair of pants rests upon a zipper."
+      },
+      {
+        "number": 3,
+        "text": "QUICK MERGER IN THE FASHION WORLD",
+        "correct": "3,711",
+        "guesses": "5,733 🥉",
+        "explanation": "Zippers are on clothing and quickly merge together when closed."
+      },
+      {
+        "number": 4,
+        "text": "YKK... IYKYK!",
+        "correct": "2,470",
+        "guesses": "3,388",
+        "explanation": "YKK is the world's largest zipper manufacturer, and IYKYK stands for if you know you know."
+      },
+      {
+        "number": 5,
+        "text": "FROM COTTON TO LEATHER, THIS METAL DEVICE JOINS FABRIC TOGETHER",
+        "correct": "2,807",
+        "guesses": "4,823",
+        "explanation": "A zipper is a metal device that joins fabric together."
+      }
+    ]
+  },
+  {
+    "date": "Wednesday, August 26, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Corinne Foxx",
+    "secretItem": "MILKSHAKE",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 12,
+    "silverWinners": 101,
+    "bronzeWinners": 552,
+    "totalWinners": 665,
+    "goldPayout": 250,
+    "silverPayout": 24.75,
+    "bronzePayout": 3.62,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "ICE CREAM, WINDOW, CAMERA, YELP, HURRICANE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "THIS WHOLE THING MAKES ME SHUDDER",
+        "correct": "12",
+        "guesses": "5,187 🥇",
+        "explanation": "Whole refers to whole milk and shudder refers to shake, forming milkshake."
+      },
+      {
+        "number": 2,
+        "text": "MIXED RESULTS WITH MANY FIVE-STAR REVIEWS",
+        "correct": "101",
+        "guesses": "3,729 🥈",
+        "explanation": "Milkshakes are the result of mixing ingredients in a blender and are very popular."
+      },
+      {
+        "number": 3,
+        "text": "YOUR GRANDMOTHER GOT SERVED BY A REAL JERK",
+        "correct": "552",
+        "guesses": "4,011 🥉",
+        "explanation": "Milkshakes were traditionally served by soda jerks."
+      },
+      {
+        "number": 4,
+        "text": "FOR COUPLES WHO WANNA SPOON ON THE FIRST DATE",
+        "correct": "867",
+        "guesses": "4,139",
+        "explanation": "Sharing a milkshake is a classic date activity often eaten with a spoon."
+      },
+      {
+        "number": 5,
+        "text": "ICE CREAM DRINK YOU SLURP RIGHT UP, OFTEN SERVED IN A STEEL CUP",
+        "correct": "3,442",
+        "guesses": "3,996",
+        "explanation": "Milkshakes are ice cream drinks often served in a stainless steel cup."
+      }
+    ]
   }
 ]

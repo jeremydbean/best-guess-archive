@@ -4100,6 +4100,30 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Wednesday, August 26, 2026",
+      "secretItem": "ZIPPER",
+      "pot": 7500,
+      "host": "Corinne Foxx",
+      "format": "v2",
+      "totalWinners": 4980,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
+    },
+    {
+      "date": "Wednesday, August 26, 2026",
+      "secretItem": "MILKSHAKE",
+      "pot": 7500,
+      "host": "Corinne Foxx",
+      "format": "v2",
+      "totalWinners": 665,
+      "clueCount": 5,
+      "goldClue": 1,
+      "silverClue": 2,
+      "bronzeClue": 3
     }
   ]
 }

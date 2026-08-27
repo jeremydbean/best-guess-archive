@@ -1,6 +1,17 @@
 # AI Handoff
 
-Last updated: 2026-08-26 (Aug 26 daily puzzle: AUGUST)
+Last updated: 2026-08-27 (Aug 26 live episode: ZIPPER / MILKSHAKE)
+
+## Most Recent Changes (2026-08-27)
+
+- **Live episode imported — Wednesday, August 26, 2026 (ZIPPER / MILKSHAKE)**, hosted by **Corinne Foxx**: all ten count pairs, both medal sweeps, wrong guesses, and a 221-line transcript. Archive now holds 375 games · 188 transcripts. **Two episodes left — Aug 27, 28.**
+- **All six payouts reproduced exactly on the first pass** — no rounding corrections needed, and the host reads five of the six aloud ($12.65, $2.42, "53 cents", $250, $24.75, $3.62). First clean payout set since Aug 21.
+- **Corinne Foxx's last show.** She says so in the intro, and this is her 7th hosting date (13 rounds total), third among hosts behind Hunter March's 120 and Howie Mandel's 61. Hunter and Howie return for the Aug 28 finale.
+- **MILKSHAKE clue 1 is the standout**: 12 correct out of 5,187 guesses — a 0.23% hit rate — paying **$250.00** each, the largest non-solo gold payout in the recent run. The clue is a pure double pun ("**whole** thing makes me **shudder**" → whole milk + shake).
+- **ZIPPER's counts are non-monotonic**: clue 3 drew 3,711 correct, more than clue 4's 2,470 or clue 5's 2,807. "QUICK MERGER IN THE FASHION WORLD" broke the puzzle open, and clue 4's "YKK... IYKYK!" was narrower than the plain-language clue 5. Tier order still follows clue position, not counts, so bronze (clue 3) has by far the most winners at $0.53 each.
+- **MILKSHAKE has no `winnerNames`** — none are read out, the host goes straight from payouts to the outro. Left empty, as on 13 other entries, rather than filled from the chat callouts, which name guessers rather than winners.
+- Every explanation was supplied for all ten clues, so the audit still reports only the **3 pre-existing `missing-explanation` warnings** (Aug 14, 24, 25) — none from this episode.
+
 
 ## Most Recent Changes (2026-08-26, continued)
 
