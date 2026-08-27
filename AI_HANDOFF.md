@@ -1,6 +1,13 @@
 # AI Handoff
 
-Last updated: 2026-08-27 (Aug 26 live episode: ZIPPER / MILKSHAKE)
+Last updated: 2026-08-27 (Aug 27 daily puzzle: FROZEN)
+
+## Most Recent Changes (2026-08-27, continued)
+
+- **Daily puzzle added — Thursday, August 27, 2026: FROZEN**: `data/daily-puzzles.json` now holds 97 entries, all archived. Clues: IT ENDS CALMLY / POSES A CONSTRUCTIVE QUESTION / ITS SONGS WILL GIVE YOU GOOSE BUMPS AND SO WOULD ITS SETTING / IT'S DISNEY ON ICE / ANIMATED FILM WITH LOTS OF SNOW, AND ELSA SINGING "LET IT GO". Answered on clue 3.
+- Clue 1 is the cleverest — fro**ZEN** ends with "zen", which means calm — and clue 2's "constructive question" is "Do You Want to Build a Snowman". Song titles are title-cased in the explanations per the SPIDER WEB precedent, since the source cards are all-caps and carry no casing of their own.
+- Clue 4's card is circular as written ("Frozen is a Disney movie and ice as in frozen"), stored verbatim rather than tidied. FROZEN is new to both the daily and live sets.
+
 
 ## Most Recent Changes (2026-08-27)
 

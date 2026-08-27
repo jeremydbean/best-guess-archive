@@ -2969,5 +2969,36 @@
         "explanation": "August can be mighty toasty."
       }
     ]
+  },
+  {
+    "date": "Thursday, August 27, 2026",
+    "secretItem": "FROZEN",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "IT ENDS CALMLY",
+        "explanation": "The name ends with \"zen,\" which means calm."
+      },
+      {
+        "clueNumber": 2,
+        "text": "POSES A CONSTRUCTIVE QUESTION",
+        "explanation": "\"Do You Want to Build a Snowman\" is one of its memorable songs."
+      },
+      {
+        "clueNumber": 3,
+        "text": "ITS SONGS WILL GIVE YOU GOOSE BUMPS AND SO WOULD ITS SETTING",
+        "explanation": "The music is beautiful, the setting is cold."
+      },
+      {
+        "clueNumber": 4,
+        "text": "IT'S DISNEY ON ICE",
+        "explanation": "Frozen is a Disney movie and ice as in frozen."
+      },
+      {
+        "clueNumber": 5,
+        "text": "ANIMATED FILM WITH LOTS OF SNOW, AND ELSA SINGING \"LET IT GO\"",
+        "explanation": "\"Let It Go\" is the film's monster hit."
+      }
+    ]
   }
 ]
