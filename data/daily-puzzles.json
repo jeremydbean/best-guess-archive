@@ -3000,5 +3000,36 @@
         "explanation": "\"Let It Go\" is the film's monster hit."
       }
     ]
+  },
+  {
+    "date": "Friday, August 28, 2026",
+    "secretItem": "MAGIC 8 BALL",
+    "clues": [
+      {
+        "clueNumber": 1,
+        "text": "DON'T COUNT ON IT",
+        "explanation": "\"Don't count on it\" is one of the actual responses, and it doesn't give real advice so... don't count on it."
+      },
+      {
+        "clueNumber": 2,
+        "text": "A POOL TOY THAT'S NOT A POOL TOY",
+        "explanation": "It's a toy based on something from a pool table, not a swimming pool."
+      },
+      {
+        "clueNumber": 3,
+        "text": "OLD-SCHOOL ANSWERING MACHINE WITH SHAKY EFFECTIVENESS",
+        "explanation": "It's a vintage toy that answers you when you shake it."
+      },
+      {
+        "clueNumber": 4,
+        "text": "IS IT GOOD FOR YES OR NO QUESTIONS? ASK AGAIN LATER",
+        "explanation": "It does not give you yes or no answers, only phrases like \"Ask again later\"."
+      },
+      {
+        "clueNumber": 5,
+        "text": "A SUPERNATURAL BILLIARD SPHERE, WHOSE REPLIES AREN'T ALWAYS CLEAR",
+        "explanation": "That's a Magic 8 Ball!"
+      }
+    ]
   }
 ]
