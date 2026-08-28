@@ -1,6 +1,14 @@
 # AI Handoff
 
-Last updated: 2026-08-28 (Aug 27 live episode: MICHAEL JORDAN / MERYL STREEP)
+Last updated: 2026-08-28 (Aug 28 daily puzzle: MAGIC 8 BALL)
+
+## Most Recent Changes (2026-08-28, continued)
+
+- **Daily puzzle added — Friday, August 28, 2026: MAGIC 8 BALL**: `data/daily-puzzles.json` now holds 98 entries, all archived. Clues: DON'T COUNT ON IT / A POOL TOY THAT'S NOT A POOL TOY / OLD-SCHOOL ANSWERING MACHINE WITH SHAKY EFFECTIVENESS / IS IT GOOD FOR YES OR NO QUESTIONS? ASK AGAIN LATER / A SUPERNATURAL BILLIARD SPHERE, WHOSE REPLIES AREN'T ALWAYS CLEAR. Answered on clue 2.
+- **This is the daily for the day of the series finale.** Clues 1 and 4 are both self-referential — each card *is* one of the toy's canned responses ("Don't count on it", "Ask again later") — which is the neatest construction in the recent daily run.
+- Stored as `MAGIC 8 BALL` with the numeral, matching the card. No collision: neither MAGIC 8 BALL, 8 BALL, nor MAGIC EIGHT BALL appears anywhere in the daily or live sets.
+- The screenshot carries a "Reconnecting… Tap this area to try again" banner across the top. That is an app connectivity artifact, not part of the puzzle, and nothing was read from it.
+
 
 ## Most Recent Changes (2026-08-28)
 
