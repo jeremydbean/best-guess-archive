@@ -1,6 +1,18 @@
 # AI Handoff
 
-Last updated: 2026-08-27 (Aug 27 daily puzzle: FROZEN)
+Last updated: 2026-08-28 (Aug 27 live episode: MICHAEL JORDAN / MERYL STREEP)
+
+## Most Recent Changes (2026-08-28)
+
+- **Live episode imported — Thursday, August 27, 2026 (MICHAEL JORDAN / MERYL STREEP)**, hosted by Hunter March: all ten count pairs, both medal sweeps, winner names, wrong guesses, and a 266-line transcript. Archive now holds 377 games · 189 transcripts. **One episode left — the Friday, August 28 finale.**
+- **One payout corrected: MICHAEL JORDAN silver arrived as $833.00 where `floorCents(2500, 3)` gives $833.33.** The host also says "$833 each" aloud, but that is verbal shorthand for the same figure and not an independent source — the paste's data and its transcript are one transcription pass. $833.33 is the only value consistent with a $2,500 pool split three ways. The other five payouts reproduced exactly.
+- **Both rounds had a single gold winner taking the whole $3,000 pool** — AirBearness89 on MICHAEL JORDAN, KJIN LAW on MERYL STREEP. The first episode in the archive with solo gold in both rounds.
+- **Both clue 1s are near-impossible**: 1 correct from 3,980 guesses (0.03%) and 1 from 2,167 (0.05%). Both clue 2s are barely easier at 3 and 4 correct. These are the two lowest-yield opening pairs in the v2 era, and the puzzles only break open on clue 3.
+- MERYL STREEP clue 1 ("AFTER ME, A HIDDEN TREE" → **ME**RYL, S**TREE**P) is a pure letter puzzle; MICHAEL JORDAN clue 3 is the numeral string "1 23 45 6" (best of all time, jerseys 23 and 45, six rings).
+- Clue text uses curly double quotes to match every quoted clue since Aug 6; apostrophes stay straight. Two clues carry them: JORDAN 5 (“AIR”) and STREEP 3 (“MIA!”).
+- The transcript opens with six theme-song lines, labelled **Singer** to match the archive's existing label rather than the paste's "Song". Round 1 Results also carries a likely mis-hearing — Hunter says "M and E started getting really confusing" while explaining why he wrote MJ, where he plainly means M and J — stored verbatim.
+- `wrongGuesses` for Round 1 includes **MICHEAL JORDAN**, the misspelling, which the show counts as wrong since it does not accept typos. Kept exactly as supplied.
+
 
 ## Most Recent Changes (2026-08-27, continued)
 

@@ -18999,5 +18999,119 @@
         "explanation": "Milkshakes are ice cream drinks often served in a stainless steel cup."
       }
     ]
+  },
+  {
+    "date": "Thursday, August 27, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MICHAEL JORDAN",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 3,
+    "bronzeWinners": 214,
+    "totalWinners": 218,
+    "goldPayout": 3000,
+    "silverPayout": 833.33,
+    "bronzePayout": 9.34,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "AirBearness89",
+    "wrongGuesses": "TEETH, THE ROCK, MICHEAL JORDAN, LIPS, LEBRON JAMES",
+    "clues": [
+      {
+        "number": 1,
+        "text": "FAMOUSLY IN SHAPE",
+        "correct": "1",
+        "guesses": "3,980 🥇",
+        "explanation": "The Air Jordan logo for the Jumpman is a very famous shape."
+      },
+      {
+        "number": 2,
+        "text": "THE ANSWER MIGHT BE ON THE TIP OF YOUR TONGUE",
+        "correct": "3",
+        "guesses": "3,974 🥈",
+        "explanation": "If you are wearing Air Jordans, he will be on the tongue of your shoe."
+      },
+      {
+        "number": 3,
+        "text": "1 23 45 6",
+        "correct": "214",
+        "guesses": "3,561 🥉",
+        "explanation": "The number one player of all time wore number 23 and 45 and won six rings."
+      },
+      {
+        "number": 4,
+        "text": "ATHLETE WHO ACTED WITH BUGS WHEN HE GOT THE ACTING BUG",
+        "correct": "4,704",
+        "guesses": "6,253",
+        "explanation": "He starred in Space Jam with Bugs Bunny."
+      },
+      {
+        "number": 5,
+        "text": "'90S GOAT WHO HOOPED WITH FLAIR & REALLY EARNED THE NICKNAME “AIR”",
+        "correct": "2,355",
+        "guesses": "2,867",
+        "explanation": "He is Air Jordan."
+      }
+    ]
+  },
+  {
+    "date": "Thursday, August 27, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "host": "Hunter March",
+    "secretItem": "MERYL STREEP",
+    "goldClue": 1,
+    "silverClue": 2,
+    "bronzeClue": 3,
+    "goldWinners": 1,
+    "silverWinners": 4,
+    "bronzeWinners": 276,
+    "totalWinners": 281,
+    "goldPayout": 3000,
+    "silverPayout": 625,
+    "bronzePayout": 7.24,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "KJIN LAW",
+    "wrongGuesses": "ANNE HATHAWAY, MIA FARROW, DREW BARRYMORE, MILEY CYRUS, SHIRLEY TEMPLE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "AFTER ME, A HIDDEN TREE",
+        "correct": "1",
+        "guesses": "2,167 🥇",
+        "explanation": "The letters M and E are the first two letters of Meryl, and the word tree is hidden in Streep."
+      },
+      {
+        "number": 2,
+        "text": "ACCLAIMED CHILD ACTOR",
+        "correct": "4",
+        "guesses": "2,173 🥈",
+        "explanation": "She was Oscar nominated for playing Julia Child."
+      },
+      {
+        "number": 3,
+        "text": "IF SHE WERE M.I.A., IT WOULD JUST BE “MIA!”",
+        "correct": "276",
+        "guesses": "3,050 🥉",
+        "explanation": "She played the mama in Mamma Mia!, so without her it would just be Mia."
+      },
+      {
+        "number": 4,
+        "text": "BACK IN FASHION AGAIN THIS YEAR",
+        "correct": "765",
+        "guesses": "3,397",
+        "explanation": "The Devil Wears Prada 2 came out in 2026."
+      },
+      {
+        "number": 5,
+        "text": "MOVIE STAR OF TOP STATURE - SHE WON OSCARS AS KRAMER & THATCHER",
+        "correct": "2,108",
+        "guesses": "4,613",
+        "explanation": "She is considered one of the greatest actors ever and has more Oscar nominations than anyone."
+      }
+    ]
   }
 ]

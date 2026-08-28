@@ -105848,5 +105848,1139 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Thursday, August 27, 2026",
+    "host": "Hunter March",
+    "secretItems": [
+      "MICHAEL JORDAN",
+      "MERYL STREEP"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "MICHAEL JORDAN",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "FAMOUSLY IN SHAPE",
+          "THE ANSWER MIGHT BE ON THE TIP OF YOUR TONGUE",
+          "1 23 45 6",
+          "ATHLETE WHO ACTED WITH BUGS WHEN HE GOT THE ACTING BUG",
+          "'90S GOAT WHO HOOPED WITH FLAIR & REALLY EARNED THE NICKNAME “AIR”"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "MERYL STREEP",
+        "host": "Hunter March",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "AFTER ME, A HIDDEN TREE",
+          "ACCLAIMED CHILD ACTOR",
+          "IF SHE WERE M.I.A., IT WOULD JUST BE “MIA!”",
+          "BACK IN FASHION AGAIN THIS YEAR",
+          "MOVIE STAR OF TOP STATURE - SHE WON OSCARS AS KRAMER & THATCHER"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": [
+          {
+            "speaker": "Singer",
+            "text": "Come on everybody we're live."
+          },
+          {
+            "speaker": "Singer",
+            "text": "Get the party going on time."
+          },
+          {
+            "speaker": "Singer",
+            "text": "Looking in the mirror like three, two, one, I'm ready."
+          },
+          {
+            "speaker": "Singer",
+            "text": "Baby I'm half past fun."
+          },
+          {
+            "speaker": "Singer",
+            "text": "Doing it 'cause I want."
+          },
+          {
+            "speaker": "Singer",
+            "text": "Catching my fit like three, two, one, I'm ready."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Hello!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "How are you?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I missed ya."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm your host, Hunter March."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is a historic moment."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm about to announce some daily poll results for the very last time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But, but, but, but, this is a big one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We asked you to pick a name for our little dancing squirrel, and you have made your choice."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "May I have the envelope, please?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ladies and gentlemen, the official name of the dancing squirrel is... Gary!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What were the choices?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Gary?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Listen, alright, I support it, I support it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's great that we finally gave him a name right before we put him back into storage."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yes, alright, that's where he goes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And now I'm also proud to present for the second to the last time ever, the rules."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each episode of Best Guess Live has two rounds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each round has one puzzle."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Each puzzle has three sets of winners, gold, silver, and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round, we're gonna load our crystal ball with the secret item."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It could be anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Then I'll give you five clues, but remember, the clues are written like riddles, they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After each clue, you'll get 20 seconds to submit an answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But you only get one Best Guess per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Not one per clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One per round."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It has to be the exact answer, and we don't accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of $2,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And everyone that gets it on the third earliest clue will split the bronze pot of $2,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Enough talk."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's win some money!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Round one is for $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Good luck, ladies and gentlemen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Second to last day of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's unfortunate."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's really sad, but I'm rooting for us."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Again, my goal for the last couple weeks has been to get it within three or two, I forget."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If it was two, I'm expanding it to three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Two is very hard."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Famously in shape."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Famously in shape."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I feel like I remember this clue from the very beginning."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Maybe from like a puzzle we never used?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We used something like this."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Famously in shape."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Grinning Mule 45 said the Pentagon."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Famously in shape."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Titularly in shape."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The answer might be on the tip of your tongue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "My first guess does not work for clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The answer might be on the tip of your tongue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sean's Bald Sack, they... what, what are they gonna do, cancel us?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, he said pizza."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then Plenty of Brad said a flag pole."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The answer might be, ah, 'cause it could stick in the winter, that's great."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One, two three, four five, six."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I want to throw out guesses, but times up, I'm not getting it in three on this one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Primary Phantom 16 from Nome, Alaska, or Nome, Alaska, forgive me from here, said teeth."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "One, two, three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "In some parts of the states, that is how they have to count the teeth."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, okay, Howdy Brian 23 said seven."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Athlete who acted with bugs when he got the acting bug."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, okay, 20 seconds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Your fourth 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The answer might be on the tip of your tongue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Athlete who acted with bugs when he got the acting bug."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ah, I knew it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But then I thought about it more."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Athlete who acted with bugs when he got the acting bug."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh my gosh."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you guys were here a couple days ago, we called out that someone has guessed The Rock every single day since the beginning of the show, I think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And for this puzzle, there are so many people who wrote The Rock."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "When did he, when did he act with bugs?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "He was the Scorpion King in the first movie."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I thought you guys were being really disrespectful to the rest of the Fast and Furious."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, anyway."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five, your fifth and final clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "'90s GOAT who hooped with flair and really earned the nickname 'Air'."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yes, that is right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't write it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'll write it now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "When did he act with bugs?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now I guess it's just, trying to, aren't they not just animals?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Or the other spellings right?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I shouldn't just."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "How does the tip of your tongue?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I got it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anyway, let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Correct answer was Michael Jordan."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, that's right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You got him."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now, I did write Michael Jordan."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "For some reason, M and E started getting really confusing in my head."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So I wrote MJ just to be safe."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But did you get it right?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If so, on what clue?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's find out right now."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “'90S GOAT WHO HOOPED WITH FLAIR & REALLY EARNED THE NICKNAME “AIR”.” He is Air Jordan. 2,355 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “ATHLETE WHO ACTED WITH BUGS WHEN HE GOT THE ACTING BUG.” He starred in Space Jam with Bugs Bunny. 4,704 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “1 23 45 6.” The number one player of all time wore number 23 and 45 and won six rings. 214 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “THE ANSWER MIGHT BE ON THE TIP OF YOUR TONGUE.” If you are wearing Air Jordans, he will be on the tongue of your shoe. 3 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “FAMOUSLY IN SHAPE.” The Air Jordan logo for the Jumpman is a very famous shape. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1 winner at $3,000.00 each. Silver (Clue 2): 3 winners at $833.33 each. Bronze (Clue 3): 214 winners at $9.34 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to one person going home with $3,000."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That person's name is AirBearness89."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They've got Air in the title."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They've got Bearness in the title."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "They deserve it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then three people on clue two going home with $833 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's for you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And then on bronze, we got people going home with $9.34."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's for you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Before we start round two, one of our producers received a request from a player named Anna."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anna and her boyfriend Rob from Wisconsin play Best Guess Live every day together, and she asked if I could pass on a special message to Rob."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So here it goes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Rob."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Rob."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I am... I know I'm so lucky to have you in my life."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And... oh, it's not to do like a fake proposal, just to submit it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't wanna do it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't wanna do it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's where it ended."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, I feel like that's the kind of thing honestly though, you could've just said to him."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You're playing with him right now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You could just turn to him."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But I'm happy it came from me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Rob, I love ya."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Happy congratulations to Rob and Anna on your sh- on your sweet message."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, let's get into round two for another $7,500."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Prize pots are the same."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "3,000 for gold, 2,500 for silver, 2,000 for bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's load the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Brother."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, here we go ladies and gentlemen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After me, a hidden tree."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And just because we're coming up to the end of the show, tomorrow being our last episode, I'm giving all of you this extra five to ten seconds to think about the answer, and they're telling me to go, go, go."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, after me, a hidden tree."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After me, a hidden tree."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Could we tilt the camera down a little bit so I look taller?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Just, it's almost the end of the show, just a little bit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Tilt, no he said no."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Tilt it down a little bit."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thank you, whoa, big guy!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thank you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Makes you feel really good."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Why don't we do this the whole time?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After me, a hidden tree."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, step cut 222 said shadow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After me, a hidden tree, shadow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a good guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Could be correct."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Maybe not."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number two."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Acclaimed child actor."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After me, a hidden tree."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You could go back to what it was before."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't have to be this tall."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's going to my head honestly."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm starting to act a little machismo."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Do you think?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think I overdid it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Whatever."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After me, a hidden tree, two acclaimed child actor."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Acclaimed child actor."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Furious Gravy said Ralph Wiggum."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is that the chief's daughter or chief's son in uh, in The Simpsons?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Acclaimed child actor."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After me, a hidden tree."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If she were M.I.A., it would just be Mia."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If she were M.I.A., it would just be Mia."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If she were... Yeah, without an I."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Acclaimed child actor."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "After me, a hidden tree."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, is it Elijah V- Elijah Wood?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's an R, Hunter."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, clue number three, if she were M.I.A., it would just be Mia."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Betty Straw 74 said Gloria Estefan."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Back in fashion again this year."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, I feel like clue three should give it to us a little more."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If she were M.I.A., it would just be Mia, with an exclamation point."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Mia."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Meryl Streep!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If she were M.I.A., it would just be Mia."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I have no idea."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Back in fashion this year."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thunder Dan 227 said Winona Ryder."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh yeah, back in fashion, acclaimed child actor, famously after, there is a hidden tree wherever she goes."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue number five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Your fifth and final clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Movie star of top stature."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "She won Oscars as Kramer and Thatcher."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Your final 20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think I know it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Back in fashion again this year."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, I do know it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I did get it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, okay, here we go, I got it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, that's it, let's find out what's inside the crystal ball."
+          }
+        ]
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Meryl Streep!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What the?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I spelled it right?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I definitely spelled it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I just always put a big space in between M-E and R-Y-L."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't erase anything."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I also, me bragging at getting it on five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Listen, I'm proud."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's take a look at the clues and find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “MOVIE STAR OF TOP STATURE - SHE WON OSCARS AS KRAMER & THATCHER.” She is considered one of the greatest actors ever and has more Oscar nominations than anyone. 2,108 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “BACK IN FASHION AGAIN THIS YEAR.” The Devil Wears Prada 2 came out in 2026. 765 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “IF SHE WERE M.I.A., IT WOULD JUST BE “MIA!”.” She played the mama in Mamma Mia!, so without her it would just be Mia. 276 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “ACCLAIMED CHILD ACTOR.” She was Oscar nominated for playing Julia Child. 4 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “AFTER ME, A HIDDEN TREE.” The letters M and E are the first two letters of Meryl, and the word tree is hidden in Streep. 1 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 1 winner at $3,000.00 each. Silver (Clue 2): 4 winners at $625.00 each. Bronze (Clue 3): 276 winners at $7.24 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to one person going home with $3,000, their name is KJIN LAW, our gold guesser."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And four people on clue two going home with $625 each."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Congratulations to those four."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And on bronze, $7.24."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm out of, I'm out of ammo."
+          }
+        ]
+      },
+      {
+        "tag": "Outro",
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Guys, that is it for the second to last episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Again, we got another episode tomorrow, but I do just wanna say thank you so much for playing along with us this entire time."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "If you started back in December, if you joined in this week, whatever it is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We love that you're here."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Tomorrow we got a really fun episode."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We're excited to see you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "8 PM."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "5 Pacific."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't forget to bring your Best Guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good night everybody."
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [TEETH, THE ROCK, MICHEAL JORDAN, LIPS, LEBRON JAMES]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [ANNE HATHAWAY, MIA FARROW, DREW BARRYMORE, MILEY CYRUS, SHIRLEY TEMPLE]"
+          }
+        ]
+      }
+    ]
   }
 ]
