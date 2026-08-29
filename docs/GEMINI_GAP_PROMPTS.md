@@ -47,39 +47,193 @@ Total: **38 dates** still need something. Nothing is left to verify by eye.
 
 ---
 
-## § NotebookLM — one sweep for everything
+## § NotebookLM — nine small prompts
 
-If the transcripts are loaded into NotebookLM, this single prompt harvests every
-outstanding value in one pass, and is short enough for its input box (~1.2k
-chars). It replaces the 38 per-date Gemini prompts below — use whichever suits
-the tool you have open.
+**⚠️ A single combined sweep does not work.** It timed out, and when it did
+answer it returned an entirely fabricated table: every date was paired with the
+wrong answer, and three answers (SLOTH, ANCHORMAN, CAST) do not exist in the
+archive at all. Not one row was usable. Run these nine instead, one at a time.
 
-If the reply truncates, run it again asking for one list at a time.
+Each one names the expected answer for every date and tells the model to report
+`MISMATCH` rather than substitute an episode — that guard is what the failed
+sweep lacked. **Check the answer names in the reply against the ones in the
+prompt before sending anything on.**
+
+
+### A1 of 5 — counts
 
 ```
-For each episode below, use the segment after the answer is revealed where the host reviews each clue and announces winners. Output rows only — no preamble, no commentary, no source citations.
+Best Guess Live. For each episode below, use the part after the answer is revealed where the host reviews each clue. Output rows only, nothing else.
 
-LIST A — per-clue numbers. One row per round:
+Format, one row per round:
 DATE | ANSWER | 1:guesses/correct | 2:g/c | 3:g/c | 4:g/c | 5:g/c
-Dates: Dec 9, 10, 11, 12, 15, 16, 17, 18, 22, 25, 26, 29, 30 (2025); Jan 1, 13, 15 (2026); Feb 17 (2026).
 
-LIST B — winner usernames only. One row per round:
-DATE | ANSWER | WINNERS: name, name, name
-Dates (all 2026): Jan 20; Feb 6, 12, 26; Mar 25, 31; Apr 1, 20; May 1, 8; Jun 5, 9, 15, 24, 26, 29; Jul 31; Aug 26.
+Episodes:
+- Dec 9, 2025 — CHATGPT and MOUNT RUSHMORE
+- Dec 10, 2025 — JAMES BOND and S'MORES
+- Dec 11, 2025 — M&MS and TITANIC
+- Dec 12, 2025 — GOODYEAR BLIMP and BIRTHDAY CAKE
 
-LIST C — one explanation each:
-DATE | ANSWER | CLUE 5 MEANING: what the host says clue 5 meant
-Dates (2026): Aug 14 (BIG BEN); Aug 24 (BATMAN); Aug 25 (MULLET). If the host never explains clue 5, write null.
+I have given you the correct answer for each episode. Verify it before answering: if the episode you find for a date has a DIFFERENT answer, write MISMATCH and the answer you actually found, and move on. Never substitute a different episode, and never answer for a date that is not listed.
 
-Rules:
-- Copy numbers exactly as the host says them, digits only.
-- Write null for anything the host never says out loud. Never estimate a number, and never work one back from a prize amount or a payout.
-- If an episode is not in my sources, skip it silently — do not guess it.
+Copy numbers exactly as the host says them, digits only. Write null if he never says one. Never estimate a number or work it back from a prize amount.
 ```
 
-This covers everything outstanding. The one question a transcript could never
-answer — the on-screen spelling of YO-YO — has since been settled from a
-screenshot.
+### A2 of 5 — counts
+
+```
+Best Guess Live. For each episode below, use the part after the answer is revealed where the host reviews each clue. Output rows only, nothing else.
+
+Format, one row per round:
+DATE | ANSWER | 1:guesses/correct | 2:g/c | 3:g/c | 4:g/c | 5:g/c
+
+Episodes:
+- Dec 15, 2025 — PARIS HILTON and MONOPOLY
+- Dec 16, 2025 — THE GRINCH and BOWLING
+- Dec 17, 2025 — RUDOLPH THE RED-NOSED REINDEER and OREO
+- Dec 18, 2025 — KING KONG and FRENCH FRIES
+
+I have given you the correct answer for each episode. Verify it before answering: if the episode you find for a date has a DIFFERENT answer, write MISMATCH and the answer you actually found, and move on. Never substitute a different episode, and never answer for a date that is not listed.
+
+Copy numbers exactly as the host says them, digits only. Write null if he never says one. Never estimate a number or work it back from a prize amount.
+```
+
+### A3 of 5 — counts
+
+```
+Best Guess Live. For each episode below, use the part after the answer is revealed where the host reviews each clue. Output rows only, nothing else.
+
+Format, one row per round:
+DATE | ANSWER | 1:guesses/correct | 2:g/c | 3:g/c | 4:g/c | 5:g/c
+
+Episodes:
+- Dec 22, 2025 — PINOCCHIO and WILL FERRELL
+- Dec 25, 2025 — GARBAGE TRUCK and CRUTCHES
+- Dec 26, 2025 — BAGGAGE CLAIM and ICE CUBE TRAY
+- Dec 29, 2025 — WONDER WOMAN and CAVITY
+
+I have given you the correct answer for each episode. Verify it before answering: if the episode you find for a date has a DIFFERENT answer, write MISMATCH and the answer you actually found, and move on. Never substitute a different episode, and never answer for a date that is not listed.
+
+Copy numbers exactly as the host says them, digits only. Write null if he never says one. Never estimate a number or work it back from a prize amount.
+```
+
+### A4 of 5 — counts
+
+```
+Best Guess Live. For each episode below, use the part after the answer is revealed where the host reviews each clue. Output rows only, nothing else.
+
+Format, one row per round:
+DATE | ANSWER | 1:guesses/correct | 2:g/c | 3:g/c | 4:g/c | 5:g/c
+
+Episodes:
+- Dec 30, 2025 — MCDONALD'S and SANDCASTLE
+- Jan 1, 2026 — KENTUCKY DERBY and JOKE
+- Jan 13, 2026 — ENGAGEMENT RING and PEPPERONI
+- Jan 15, 2026 — COSTCO and HARMONICA
+
+I have given you the correct answer for each episode. Verify it before answering: if the episode you find for a date has a DIFFERENT answer, write MISMATCH and the answer you actually found, and move on. Never substitute a different episode, and never answer for a date that is not listed.
+
+Copy numbers exactly as the host says them, digits only. Write null if he never says one. Never estimate a number or work it back from a prize amount.
+```
+
+### A5 of 5 — counts
+
+```
+Best Guess Live. For each episode below, use the part after the answer is revealed where the host reviews each clue. Output rows only, nothing else.
+
+Format, one row per round:
+DATE | ANSWER | 1:guesses/correct | 2:g/c | 3:g/c | 4:g/c | 5:g/c
+
+Episodes:
+- Feb 17, 2026 — PARADE and MOON
+
+I have given you the correct answer for each episode. Verify it before answering: if the episode you find for a date has a DIFFERENT answer, write MISMATCH and the answer you actually found, and move on. Never substitute a different episode, and never answer for a date that is not listed.
+
+Copy numbers exactly as the host says them, digits only. Write null if he never says one. Never estimate a number or work it back from a prize amount.
+```
+
+### B1 of 3 — winner names
+
+```
+Best Guess Live. For each round below, find where the host reads out the winners' usernames after announcing the payout. Output rows only, nothing else.
+
+Format, one row per round:
+DATE | ANSWER | WINNERS: name, name, name
+
+Rounds:
+- Jan 20, 2026 — AVOCADO
+- Feb 6, 2026 — SCARECROW
+- Feb 12, 2026 — PENCIL SHARPENER
+- Feb 26, 2026 — TABLE LEAF
+- Mar 25, 2026 — QUICKSAND
+- Mar 31, 2026 — SNOOP DOGG
+
+I have given you the correct answer for each episode. Verify it before answering: if the episode you find for a date has a DIFFERENT answer, write MISMATCH and the answer you actually found, and move on. Never substitute a different episode, and never answer for a date that is not listed.
+
+Spell usernames exactly as said. Write null if the host names no winners for that round. Do not invent names.
+```
+
+### B2 of 3 — winner names
+
+```
+Best Guess Live. For each round below, find where the host reads out the winners' usernames after announcing the payout. Output rows only, nothing else.
+
+Format, one row per round:
+DATE | ANSWER | WINNERS: name, name, name
+
+Rounds:
+- Apr 1, 2026 — SUNGLASSES
+- Apr 20, 2026 — MUHAMMAD ALI
+- May 1, 2026 — ZOOM
+- May 1, 2026 — JUMPING JACKS
+- May 8, 2026 — LEBRON JAMES
+- Jun 5, 2026 — SUNBURN
+- Jun 5, 2026 — TOM HANKS
+- Jun 9, 2026 — TACO BELL
+
+I have given you the correct answer for each episode. Verify it before answering: if the episode you find for a date has a DIFFERENT answer, write MISMATCH and the answer you actually found, and move on. Never substitute a different episode, and never answer for a date that is not listed.
+
+Spell usernames exactly as said. Write null if the host names no winners for that round. Do not invent names.
+```
+
+### B3 of 3 — winner names
+
+```
+Best Guess Live. For each round below, find where the host reads out the winners' usernames after announcing the payout. Output rows only, nothing else.
+
+Format, one row per round:
+DATE | ANSWER | WINNERS: name, name, name
+
+Rounds:
+- Jun 15, 2026 — SEATBELT
+- Jun 24, 2026 — NIGHTMARE
+- Jun 26, 2026 — POPCORN
+- Jun 29, 2026 — MARIO
+- Jul 31, 2026 — PITBULL
+- Aug 26, 2026 — MILKSHAKE
+
+I have given you the correct answer for each episode. Verify it before answering: if the episode you find for a date has a DIFFERENT answer, write MISMATCH and the answer you actually found, and move on. Never substitute a different episode, and never answer for a date that is not listed.
+
+Spell usernames exactly as said. Write null if the host names no winners for that round. Do not invent names.
+```
+
+### C of 1 — clue-5 explanations
+
+```
+Best Guess Live. For each round below, find where the host reviews clue 5 after the answer is revealed, and tell me how he explains what clue 5 meant. Output rows only, nothing else.
+
+Format:
+DATE | ANSWER | CLUE 5 MEANING: ...
+
+Rounds:
+- Aug 14, 2026 — BIG BEN
+- Aug 24, 2026 — BATMAN
+- Aug 25, 2026 — MULLET
+
+I have given you the correct answer for each episode. Verify it before answering: if the episode you find for a date has a DIFFERENT answer, write MISMATCH and the answer you actually found, and move on. Never substitute a different episode, and never answer for a date that is not listed.
+
+Quote the host's own words. If he reads clue 5 out but never explains it, write null — do not explain the wordplay yourself.
+```
 
 ---
 

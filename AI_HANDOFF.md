@@ -1,6 +1,19 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (expandable answer categories; 7 mis-files corrected)
+Last updated: 2026-08-29 (NotebookLM sweep failed; split into nine guarded prompts)
+
+## Most Recent Changes (2026-08-29, continued 13)
+
+- **⚠️⚠️ The single NotebookLM sweep prompt failed badly, and its output was NOT imported. Treat any NotebookLM reply as untrusted until every date/answer pair is checked.**
+- It first timed out, then returned a confidently formatted table in which **every single row was wrong**:
+  - Every date was paired with the wrong answer — Dec 9 given as PICKLEBALL (really Dec 8), Dec 10 as KFC (really Feb 4, 2026), Dec 11 as SPARKLER (really May 7, 2026), Dec 30 as ZIPPER (really **Aug 26, 2026**).
+  - **Three answers — SLOTH, ANCHORMAN, CAST — do not exist anywhere in the archive.** They cannot be missing episodes either: the archive has **zero weekday gaps** between Dec 8, 2025 and Aug 28, 2026, and Dec 8 looks like the premiere. Almost certainly hallucinated.
+  - It also invented a three-round episode on Dec 15.
+- **Root cause: the failed prompt gave dates only, with no expected answer, so nothing anchored the model to the right episode.** The per-date Gemini blocks never had this problem because each names its answers.
+- Replaced with **nine small prompts** (5 count chunks of 4 dates, 3 winner-name chunks, 1 explanations), each ≤880 chars. Every one now names the expected answer per date and instructs the model to output `MISMATCH` plus what it actually found rather than substitute an episode.
+- **The one useful check on any of these replies is the answer name, not the numbers.** A wrong number looks plausible; a wrong answer name is instantly visible against the prompt. Verify pairs first, numbers second.
+- Nothing from the failed reply reached the archive. The two `null` answers it did return (May 1 JUMPING JACKS winner names, Aug 14 BIG BEN clue-5 meaning) are plausible but came from the same unreliable run, so they were **not** acted on either.
+
 
 ## Most Recent Changes (2026-08-29, continued 12)
 
