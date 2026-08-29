@@ -1,6 +1,22 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (home notice restyled to the app's wrap screen)
+Last updated: 2026-08-29 (Aug 28 finale imported as a partial record)
+
+## Most Recent Changes (2026-08-29, continued)
+
+- **Series finale imported — Friday, August 28, 2026 (CRYSTAL BALL / SINK) as `dataStatus: "partial"`.** Archive now holds 379 games · 190 transcripts across 190 dates. **The run is complete: every episode date from the premiere to the finale is now represented.**
+- **⚠️ The finale capture's numbers are internally impossible and none of them were stored.** Every one of the twenty guess counts arrived as `0`, and:
+  - CRYSTAL BALL clue 1 claims **142 correct against 0 guesses** — a round cannot have more correct answers than submissions.
+  - CRYSTAL BALL reports **142 gold winners paying $0.00**, where `floorCents(3000, 142)` is **$21.12**.
+  - SINK reports **every clue at 0 correct yet 1 silver winner** — and silver winners without gold winners fails the audit's own `v2-medal-tier-order` rule outright.
+  - SINK's silver pays **$2.88** for that 1 winner, where a lone winner takes the entire $2,500 pool. $2.88 corresponds to roughly **866–868** winners, not one.
+- **This is the archive's first `partial` record**, so the schema documented in AGENTS.md § "Partial or Missing-Recording Episode" ran for the first time. Kept: both secret items, all ten clue texts, all ten explanations, and both wrong-guess lists — all coherent. Nulled: every count, every payout, all medal placements, winner names, host. `0` is never a stand-in for unknown.
+- **`host` is empty, not "Speaker".** The paste labels every line "Speaker", which is a transcription placeholder rather than a name, and the finale's actual host is not established anywhere in the source.
+- **Transcript stored as a `dataStatus: "unavailable"` placeholder** with the six canonical sections and no lines. The supplied transcript had an empty Intro, four garbled fragments across both rounds, and results lines built from the same unusable numbers — the standard forbids inventing or half-keeping dialogue.
+- Verified in headless Chromium: the incomplete-record notice derives correctly from the full shard record (host, player count, per-clue counts, medal placements, winner counts, payouts, total, winner names, transcript), and clue wording, explanations and wrong guesses correctly drop off the missing list. The home page reads **"Host unknown · 2 rounds · winners not yet known"** and total prize money is unchanged at $3,984,998 — the partial contributes nothing it cannot support.
+- **⚠️ Worth knowing for the next partial**: `_getIncompleteGameFields()` over-reports when handed a *meta* record rather than a loaded shard record, since `games-meta.json` deliberately carries no `clues` or `wrongGuesses`. It then lists clue wording, explanations and wrong guesses as missing when they are present. The views that show the notice all run against loaded shards, so nothing is wrong on the site today, but do not call it against `app.games` before a shard load.
+- **Still wanted for this date**: a clean results capture for both rounds, the host, and a real transcript. The public "Incomplete archive record" badge and its upload link already ask for exactly this.
+
 
 ## Most Recent Changes (2026-08-29)
 
