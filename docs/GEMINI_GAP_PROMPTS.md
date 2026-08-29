@@ -25,63 +25,37 @@ than an honest gap.
 | Missing `correct` counts | 7 | Same window, same cause. |
 | Missing winner names | 20 | Scattered Jan–Aug 2026. Usernames the host reads out. |
 | Missing clue-5 explanation | 3 | Aug 14, 24, 25, 2026 — may genuinely not exist; see below. |
-| Known-bad values to re-check | 3 | Feb 17, Aug 13, Aug 20, 2026 — watched by hand, see § Verification. |
+| Known-bad values to re-check | 2 | Aug 13 and Aug 20, 2026 — watched by hand, see § Verification. |
 
-Total: **37 dates** need something from Gemini, plus **3** checked by hand.
+Total: **38 dates** need something from Gemini, plus **2** checked by hand.
 
-*Resolved: Apr 8, 2026 (SKUNK clue 5) — real figures 2,202 correct of 2,504
-guesses; the stored `254` was `2,504` with a digit dropped.*
+**Resolved so far**
+
+- *Apr 8, 2026 (SKUNK clue 5) — real figures 2,202 correct of 2,504 guesses; the
+  stored `254` was `2,504` with a digit dropped.*
+- *Feb 17, 2026 (PARADE / MOON) — the full transcript confirmed that every
+  `correct` value was already right and that PARADE's entire guesses column had
+  been overwritten with MOON's. Real PARADE guesses are 50,982 / 13,447 / 6,361 /
+  6,821 for clues 2–5. Two figures stay unknown and are listed below: PARADE
+  clue 1 (the host says it, but the source transcript garbles it to "6,63") and
+  MOON clue 5 (never stated aloud).*
 
 ---
 
 ## § Verification — watch these yourself
 
-Three dates hold a value that is probably wrong. These are worth watching
-directly rather than handing to Gemini: each is a single results screen, and the
-question is "what number is on the card", which the eye settles faster than a
-prompt does.
-
-Figures already confirmed by payout arithmetic are marked **confirmed** — skip
-those, they cannot be wrong.
-
-### Tuesday, February 17, 2026 — PARADE / MOON
-
-**The whole guesses column is duplicated across both rounds**, not just the one
-impossible clue. Both rounds are stored with the identical sequence
-19,058 / 12,758 / 11,658 / 4,438 / 1,910, which cannot be a coincidence — one
-round's column was written over the other's. So both rounds need reading.
-
-PARADE — read off the Round 1 results card:
-
-| Clue | Stored correct | Stored guesses | Need |
-| --- | --- | --- | --- |
-| 1 | 19 — **confirmed** ($8,888 ÷ 19 = $467.78) | 19,058 | guesses only |
-| 2 | 37 | 12,758 | both |
-| 3 | 53 | 11,658 | both |
-| 4 | 2,664 | 4,438 | both |
-| 5 | **5,316** | **1,910** | both — this is the impossible pair |
-
-MOON — read off the Round 2 results card:
-
-| Clue | Stored correct | Stored guesses | Need |
-| --- | --- | --- | --- |
-| 1 | 1,047 — **confirmed** ($18,888 ÷ 1,047 = $18.04) | 19,058 | guesses only |
-| 2 | 4,373 | 12,758 | guesses only |
-| 3 | 6,916 | 11,658 | guesses only |
-| 4 | 2,255 | 4,438 | guesses only |
-| 5 | 1,910 | **1,910** | both — correct equals guesses, a 100% hit rate |
-
-Shortest version: **every guess count on this episode, plus PARADE clues 2–5
-correct and MOON clue 5 correct.** The two clue-1 correct counts are settled.
+Two dates hold a value that is probably wrong, and both are quicker to settle by
+eye than by prompt.
 
 ### Thursday, August 20, 2026 — MIRROR
 
 Clue 5 is stored as 4,883 correct of 5,141 guesses. Both of those exact numbers
-also appear on Aug 12 (BUTTERFLY), so they were probably carried across.
+also appear on Aug 12 (BUTTERFLY), so they were probably carried across — the
+same failure that hit Feb 17.
 
 Need: **the correct and guess counts for all five clues** on the MIRROR results
-card. Nothing here is confirmed by arithmetic — MIRROR's payouts derive from the
-medal tiers, not from clue 5 — so the whole card is worth a look.
+card. Nothing here is confirmed by arithmetic, since MIRROR's payouts derive from
+the medal tiers rather than clue 5, so the whole card is worth a look.
 
 ### Thursday, August 13, 2026 — YO YO
 
@@ -101,7 +75,6 @@ Aug 14 (BIG BEN), Aug 24 (BATMAN) and Aug 25 (MULLET) are each missing the
 explanation for clue 5 — always the rhyming giveaway clue. The pattern suggests
 the host simply does not explain the final clue when it gives the answer away,
 in which case **`null` is the correct answer and these three can be closed**.
-The prompts below ask directly, so one viewing settles it either way.
 
 ---
 
@@ -455,6 +428,25 @@ This episode is already archived — I do not need a transcript or a re-import. 
 - Do not re-transcribe the episode and do not return any field I did not ask for.
 
 **Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Thursday, February 12, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Tuesday, February 17, 2026 — PARADE / MOON
+
+```
+Best Guess Live, Tuesday, February 17, 2026. Round 1 answer was PARADE. Round 2 answer was MOON.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (PARADE): `guesses` (total submissions) for clue 1
+- Round 2 (MOON): `guesses` (total submissions) for clue 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Tuesday, February 17, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
 ```
 
 ### Thursday, February 26, 2026 — SNEEZE / TABLE LEAF

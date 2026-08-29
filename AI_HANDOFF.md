@@ -1,6 +1,19 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (SKUNK clue 5 corrected from the video)
+Last updated: 2026-08-29 (Feb 17 guesses column rebuilt from the full transcript)
+
+## Most Recent Changes (2026-08-29, continued 9)
+
+- **Feb 17, 2026 resolved from the full episode transcript. The suspicion was right, and bigger than the one impossible clue: PARADE's entire guesses column had been overwritten with MOON's.**
+- **Every `correct` value in both rounds was already correct.** Only the guesses column was ever wrong — a useful reminder that a single bad field does not mean the record is bad.
+- **MOON's guesses were right for clues 1–4** and are unchanged. Its clue 5 was storing `1,910`, which is MOON's own *correct* count — the host never states clue 5's guess count, so it is now `N/A`.
+- PARADE's real guesses, as read out on air: clue 2 **50,982**, clue 3 **13,447**, clue 4 **6,361**, clue 5 **6,821**. Clue 1 is now `N/A` — the host does say it, but the source transcript garbles it to "6,63", which is not a recoverable number.
+- **⚠️ PARADE clue 2's 50,982 is stored as spoken but is worth a second look.** It is roughly four times clue 1's and gives a 0.07% hit rate (37 correct), which breaks the usual shape where submissions fall off across the round. The transcript states it unambiguously, so it is stored rather than "corrected" — doubt about shape is not evidence.
+- **`impossible-clue-counts` is now clear.** The audit is back to the 3 expected `missing-explanation` warnings and nothing else.
+- No payout impact: both rounds are v1 with `winningClue: 1`, and both clue-1 correct counts were already confirmed by arithmetic ($8,888 ÷ 19 = $467.78, $18,888 ÷ 1,047 = $18.04).
+- Useful corroboration for future work: MOON's per-clue guesses sum to 47,912 against the host's spoken "50,000 submitted guesses" for the round, so **per-clue guess counts sum to the round total** — a cheap sanity check on any future counts.
+- `docs/GEMINI_GAP_PROMPTS.md` regenerated: Feb 17 moves out of § Verification into the normal gap list with just two missing figures, leaving Aug 13 and Aug 20 as the only hand-watch items. Now 38 Gemini blocks + 2 hand-watch.
+
 
 ## Most Recent Changes (2026-08-29, continued 8)
 
