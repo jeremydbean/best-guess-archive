@@ -25,68 +25,73 @@ than an honest gap.
 | Missing `correct` counts | 7 | Same window, same cause. |
 | Missing winner names | 20 | Scattered Jan–Aug 2026. Usernames the host reads out. |
 | Missing clue-5 explanation | 3 | Aug 14, 24, 25, 2026 — may genuinely not exist; see below. |
-| Known-bad values to re-read | 1 | Feb 17, 2026 — impossible counts, see § Verification. |
-| Judgement calls | 2 | Aug 13 and Aug 20, 2026 — see § Verification. |
+| Known-bad values to re-check | 3 | Feb 17, Aug 13, Aug 20, 2026 — watched by hand, see § Verification. |
 
-Total: **37 dates** need something, plus **3** that need a value checked rather
-than filled.
+Total: **37 dates** need something from Gemini, plus **3** checked by hand.
 
 *Resolved: Apr 8, 2026 (SKUNK clue 5) — real figures 2,202 correct of 2,504
 guesses; the stored `254` was `2,504` with a digit dropped.*
 
 ---
 
-## § Verification — check these, do not fill them
+## § Verification — watch these yourself
 
-These three already hold a value. I need to know whether the stored value is
-right, so the prompt asks Gemini to report what is on screen and nothing more.
+Three dates hold a value that is probably wrong. These are worth watching
+directly rather than handing to Gemini: each is a single results screen, and the
+question is "what number is on the card", which the eye settles faster than a
+prompt does.
 
-### Tuesday, February 17, 2026 — PARADE (impossible counts)
+Figures already confirmed by payout arithmetic are marked **confirmed** — skip
+those, they cannot be wrong.
 
-```
-Best Guess Live, Tuesday, February 17, 2026, Round 1, answer PARADE. My records
-say clue 5 had 5,316 correct answers out of 1,910 total guesses, which is
-impossible. I also suspect this round's guess counts were copied from Round 2
-(MOON) by mistake, since both rounds are recorded with the identical sequence
-19058 / 12758 / 11658 / 4438.
+### Tuesday, February 17, 2026 — PARADE / MOON
 
-Read both results cards on this episode and give me, separately for Round 1
-(PARADE) and Round 2 (MOON), the correct count and the total guess count shown
-for all five clues. If a figure is not shown on screen, say null for it. Do not
-copy figures between the two rounds.
+**The whole guesses column is duplicated across both rounds**, not just the one
+impossible clue. Both rounds are stored with the identical sequence
+19,058 / 12,758 / 11,658 / 4,438 / 1,910, which cannot be a coincidence — one
+round's column was written over the other's. So both rounds need reading.
 
-Output one JSON object and nothing else:
-{"parade": {"correct": [..5..], "guesses": [..5..]}, "moon": {"correct": [..5..], "guesses": [..5..]}}
-```
+PARADE — read off the Round 1 results card:
 
-### Thursday, August 13, 2026 — YO YO (spelling)
+| Clue | Stored correct | Stored guesses | Need |
+| --- | --- | --- | --- |
+| 1 | 19 — **confirmed** ($8,888 ÷ 19 = $467.78) | 19,058 | guesses only |
+| 2 | 37 | 12,758 | both |
+| 3 | 53 | 11,658 | both |
+| 4 | 2,664 | 4,438 | both |
+| 5 | **5,316** | **1,910** | both — this is the impossible pair |
 
-```
-Best Guess Live, Thursday, August 13, 2026, Round 1. The answer is a toy on a
-string. I need the exact on-screen spelling of the answer as it appears when the
-crystal ball opens and on the results card: is it written "YO YO", "YO-YO", or
-"YOYO"?
+MOON — read off the Round 2 results card:
 
-Clue 2 was "SOUNDS LIKE YOU'RE GONNA THINK IT OVER" — quote the host's spoken
-explanation of that clue too, since it may hinge on the hyphen.
+| Clue | Stored correct | Stored guesses | Need |
+| --- | --- | --- | --- |
+| 1 | 1,047 — **confirmed** ($18,888 ÷ 1,047 = $18.04) | 19,058 | guesses only |
+| 2 | 4,373 | 12,758 | guesses only |
+| 3 | 6,916 | 11,658 | guesses only |
+| 4 | 2,255 | 4,438 | guesses only |
+| 5 | 1,910 | **1,910** | both — correct equals guesses, a 100% hit rate |
 
-Output one JSON object and nothing else:
-{"onScreenSpelling": "...", "clue2Explanation": "..."}
-```
+Shortest version: **every guess count on this episode, plus PARADE clues 2–5
+correct and MOON clue 5 correct.** The two clue-1 correct counts are settled.
 
-### Thursday, August 20, 2026 — MIRROR (suspected copied counts)
+### Thursday, August 20, 2026 — MIRROR
 
-```
-Best Guess Live, Thursday, August 20, 2026, Round 1, answer MIRROR. My records
-say clue 5 had 4,883 correct out of 5,141 guesses. Both of those exact numbers
-also appear in a different episode (Aug 12, BUTTERFLY), so I think they were
-carried over by mistake.
+Clue 5 is stored as 4,883 correct of 5,141 guesses. Both of those exact numbers
+also appear on Aug 12 (BUTTERFLY), so they were probably carried across.
 
-Read the Round 1 results card and give me the correct count and total guess count
-shown for all five clues. If a figure is not shown on screen, say null for it.
+Need: **the correct and guess counts for all five clues** on the MIRROR results
+card. Nothing here is confirmed by arithmetic — MIRROR's payouts derive from the
+medal tiers, not from clue 5 — so the whole card is worth a look.
 
-Output one JSON object and nothing else: {"correct": [..5..], "guesses": [..5..]}
-```
+### Thursday, August 13, 2026 — YO YO
+
+Not a number question. Need:
+
+1. The **exact on-screen spelling** when the crystal ball opens and on the
+   results card: `YO YO`, `YO-YO`, or `YOYO`?
+2. The host's spoken explanation of clue 2, *"SOUNDS LIKE YOU'RE GONNA THINK IT
+   OVER"* — the wordplay may depend on the hyphen, which is why the spelling
+   matters.
 
 ---
 
