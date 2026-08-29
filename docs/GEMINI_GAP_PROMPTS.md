@@ -237,6 +237,21 @@ Quote the host's own words. If he reads clue 5 out but never explains it, write 
 
 ---
 
+## § Disputed values — not imported, need a second look
+
+Returned by a NotebookLM run whose answer names all checked out, but each of
+these is shape-anomalous and single-sourced, so none was stored. Re-ask or watch
+before acting.
+
+| Date | Round | Clue | Stored | Reply said | Why it was not taken |
+| --- | --- | --- | --- | --- | --- |
+| Dec 12, 2025 | GOODYEAR BLIMP | 1 guesses | 2,542 | 25,542 | Other clues are 2,000 and 3,000; 25,542 is ten times the round's shape. |
+| Dec 11, 2025 | M&MS | 2 guesses | 2,094 | 294 | Other clues are 3,249 and 2,832; 294 is an order out. |
+| Dec 9, 2025 | CHATGPT | 5 guesses | *(unknown)* | 719 | Equals its own `correct` exactly — a 100% hit rate, the same artifact that was proven wrong on Feb 17's MOON clue 5. |
+| Dec 10, 2025 | S'MORES | 5 guesses | *(unknown)* | 11,996 | Other clues run 1,335–1,880. Guess counts fall across a round in every verified example; a 6× spike on clue 5 does not fit. |
+
+---
+
 ## § Verification — all resolved
 
 Nothing left to check by eye. For the record:
