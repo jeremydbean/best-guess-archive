@@ -737,6 +737,27 @@
   }
   .news-card-body p:last-child { margin-bottom: 0; }
   .news-card-body strong { font-weight: 800; color: #fff; }
+  /* Finale crew photo. The figure is removed outright if no candidate file
+     resolves (see _finalePhotoHtml), so a missing asset shows nothing rather
+     than a broken-image icon. */
+  .news-card-photo {
+    margin: 1.5rem 0 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 10px 28px rgba(8,14,40,0.45);
+  }
+  .news-card-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .news-card-photo figcaption {
+    padding: 0.6rem 0.85rem 0.7rem;
+    font-size: 0.72rem;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.8);
+  }
   .news-card-actions {
     display: flex;
     flex-direction: column;
@@ -3231,6 +3252,7 @@ class App {
         <div class="news-card-body">
           <h2 class="font-display">${esc(headline)}</h2>
           ${para.map(p => `<p>${p}</p>`).join('')}
+          ${this._finalePhotoHtml()}
           <div class="news-card-actions">
             ${support}
             <button type="button" class="news-card-btn is-dismiss" onclick="app.closeModal()">Got It</button>
@@ -3762,6 +3784,33 @@ Rules:
 
   _alsoAcceptedList(game) {
     return String(game?.alsoAccepted || '').split(',').map(s => s.trim()).filter(Boolean);
+  }
+
+  // The finale crew photo, shown in the end-of-series card. Tries each
+  // candidate extension in turn and drops the whole figure if none loads, so
+  // the card degrades to exactly what it looked like before rather than
+  // rendering a broken image.
+  _finalePhotoHtml() {
+    const sources = ['assets/finale/crew-photo.jpg', 'assets/finale/crew-photo.png'];
+    return `<figure class="news-card-photo" data-sources="${this._escapeHtml(JSON.stringify(sources))}" data-source-index="0">
+      <img src="${sources[0]}" alt="The Best Guess Live cast and crew together on set after the final episode."
+           onerror="app.advanceFinalePhoto(this)">
+      <figcaption>The cast and crew on set for the final episode, Friday, August 28, 2026 — the moment Howie and Hunter called everyone in front of the camera.</figcaption>
+    </figure>`;
+  }
+
+  advanceFinalePhoto(img) {
+    const fig = img.closest('.news-card-photo');
+    if (!fig) return;
+    let sources = [];
+    try { sources = JSON.parse(fig.dataset.sources || '[]'); } catch { sources = []; }
+    const next = Number(fig.dataset.sourceIndex || 0) + 1;
+    if (next < sources.length) {
+      fig.dataset.sourceIndex = String(next);
+      img.src = sources[next];
+      return;
+    }
+    fig.remove();
   }
 
   // Carries the `db-explanation` class purely for its spoiler gating: an

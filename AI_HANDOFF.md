@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (THE KITCHEN SINK answer + accepted-alternate support)
+Last updated: 2026-08-29 (finale crew photo wired into the end-of-series card)
+
+## Most Recent Changes (2026-08-29, continued 5)
+
+- **The end-of-series card can now show the finale cast-and-crew photo**, between the two paragraphs and the buttons, with a caption tying it to the Outro moment where Howie and Hunter call everyone in front of the camera.
+- **⚠️ The image file itself is NOT in the repo yet.** The user sent the photo twice, but it arrives only as an inline image in the conversation — nothing is written to disk, so there was no file to copy in. **`assets/finale/crew-photo.jpg` (or `.png`) still needs to be added.** A photograph of real people cannot be reconstructed or regenerated, so this is genuinely blocked on the file.
+- **The card degrades to nothing rather than to a broken image.** `_finalePhotoHtml()` emits a `<figure>` carrying its candidate paths in `data-sources`; `advanceFinalePhoto()` walks `.jpg` → `.png` on each `error` event and calls `fig.remove()` when the list is exhausted. Verified with no asset present: `figurePresent: false`, caption text absent, no console errors. Verified with a placeholder in place: figure and caption render.
+- **Dropping the file in is the only remaining step** — no code edit is needed to turn it on. `assets/finale/README.md` documents that on the spot, next to where the file goes.
+- The photo lives only in the modal card, never in the home banner.
+
 
 ## Most Recent Changes (2026-08-29, continued 4)
 
