@@ -1216,24 +1216,11 @@ document.addEventListener('focusout', function(e) {
         <div id="data-health-summary" class="mt-2 text-slate-400 text-sm">Open data health to run checks.</div>
       </div>
       <div class="mt-6 pt-5 border-t border-slate-700/50">
-        <div class="flex items-center justify-between mb-2">
-          <div class="home-stat-label text-xs text-green-300">Gemini Import Prompt</div>
-          <button onclick="app.copyGeminiPrompt(this)" class="inline-flex items-center gap-1 text-xs px-3 py-1 rounded-lg border border-slate-600 text-slate-300 hover:border-green-400/50 hover:text-white transition">
-            <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
-            Copy
-          </button>
+        <div class="home-stat-label text-xs text-green-300 mb-2">Archive Status</div>
+        <div class="flex items-start gap-2 text-sm text-slate-300 leading-relaxed">
+          <span class="material-symbols-outlined text-green-400 shrink-0" style="font-size:18px">inventory_2</span>
+          <span>The series archive is finalized through Friday, August 28, 2026. Scheduled importing is off; future changes are historical corrections only.</span>
         </div>
-        <div class="text-xs text-slate-400">Paste into Gemini with raw transcript + screenshots to get exact clue text, wrong guesses, and a formatted transcript ready to import.</div>
-      </div>
-      <div class="mt-5 pt-5 border-t border-slate-700/50">
-        <div class="flex items-center justify-between mb-2">
-          <div class="home-stat-label text-xs text-green-300">Plaud Audio Prompt</div>
-          <button onclick="app.copyPlaudPrompt(this)" class="inline-flex items-center gap-1 text-xs px-3 py-1 rounded-lg border border-slate-600 text-slate-300 hover:border-green-400/50 hover:text-white transition">
-            <span class="material-symbols-outlined" style="font-size:14px">content_copy</span>
-            Copy
-          </button>
-        </div>
-        <div class="text-xs text-slate-400">Use with an audio-only transcript to produce the structured text that Gemini/Codex can import cleanly.</div>
       </div>
     </div>
   </div>
@@ -2062,6 +2049,11 @@ document.addEventListener('focusout', function(e) {
 
 <!-- STATS -->
 <template id="view-stats">
+<style>
+  #stats-clue-ladder { grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 640px) { #stats-clue-ladder { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { #stats-clue-ladder { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+</style>
 <div class="fade-in space-y-8 pb-20">
   <div class="flex justify-end">
     <button id="refresh-stats-btn" class="btn-primary px-4 py-2 rounded font-bold text-sm shadow hover:shadow-blue-500/20 transition">Refresh Stats</button>
@@ -2102,7 +2094,7 @@ document.addEventListener('focusout', function(e) {
       <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
         <span class="material-symbols-outlined text-yellow-400">bar_chart</span> Winning Clue Distribution
       </h3>
-      <p class="text-xs text-slate-400 mb-4">How many games were decided on each clue number.</p>
+      <p class="text-xs text-slate-400 mb-4">How many rounds were decided on each clue number.</p>
       <div style="height:280px;position:relative">
         <canvas id="chart-clue-dist"></canvas>
       </div>
@@ -2138,6 +2130,16 @@ document.addEventListener('focusout', function(e) {
         <canvas id="chart-payout-clue"></canvas>
       </div>
     </div>
+  </div>
+
+  <!-- Clue-by-clue conversion across the complete series -->
+  <div class="glass-panel p-6 rounded-xl">
+    <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <span class="material-symbols-outlined text-cyan-400">stairs</span> How the Clues Opened Up
+    </h3>
+    <p class="text-xs text-slate-400 mb-4">Correct-answer rate at each clue, using every round with a known submission count for that clue.</p>
+    <div id="stats-clue-ladder" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3"></div>
+    <p id="stats-clue-ladder-note" class="text-xs text-slate-500 mt-4 leading-relaxed"></p>
   </div>
 
   <!-- Shows Hosted -->
@@ -2198,9 +2200,9 @@ document.addEventListener('focusout', function(e) {
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <div class="glass-panel p-6 rounded-xl border-t-4 border-red-500">
       <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
-        <span class="material-symbols-outlined text-red-500">dangerous</span> Hardest Games
+        <span class="material-symbols-outlined text-red-500">dangerous</span> Hardest Rounds
       </h3>
-      <p class="text-xs text-slate-400 mb-4">Games where winners weren't crowned until the very last clues.</p>
+      <p class="text-xs text-slate-400 mb-4">Rounds where winners weren't crowned until the very last clues.</p>
       <ul class="space-y-3" id="stats-hardest-list"></ul>
     </div>
     <div class="glass-panel p-6 rounded-xl border-t-4 border-green-500">
@@ -2288,7 +2290,7 @@ document.addEventListener('focusout', function(e) {
       </div>
       <div class="text-center p-4 bg-slate-800/50 rounded-lg">
         <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 mb-1 truncate" id="stat-v2-games">0</div>
-        <div class="text-xs md:text-sm text-slate-400 uppercase tracking-widest">v2 Games</div>
+        <div class="text-xs md:text-sm text-slate-400 uppercase tracking-widest">v2 Rounds</div>
       </div>
       <div class="text-center p-4 bg-slate-800/50 rounded-lg min-w-0">
         <div class="text-xl sm:text-2xl md:text-4xl font-bold text-green-400 mb-1 truncate" id="stat-total-pot">$0</div>
@@ -2532,6 +2534,8 @@ class App {
       nodes.hostShows = document.getElementById('stats-host-shows');
       nodes.hostShowsNote = document.getElementById('stats-host-shows-note');
       nodes.records = document.getElementById('stats-records-grid');
+      nodes.clueLadder = document.getElementById('stats-clue-ladder');
+      nodes.clueLadderNote = document.getElementById('stats-clue-ladder-note');
       nodes.answerIntro = document.getElementById('stats-answer-intro');
       nodes.answerShape = document.getElementById('stats-answer-shape');
       nodes.answerCategories = document.getElementById('stats-answer-categories');
@@ -3516,257 +3520,6 @@ class App {
         <div class="mt-3 text-xs text-slate-400">
           Missing transcripts: ${missingTranscripts.length} · Duplicate transcript dates: ${duplicateTranscriptDates.length} · Section issues: ${sectionIssues.length} · Partial-day bonuses: ${partialBonusDates.length}
         </div>`;
-    }
-  }
-
-  _copyText(text, label) {
-    const done = () => alert(`${label} copied.`);
-    if (navigator.clipboard?.writeText) {
-      navigator.clipboard.writeText(text).then(done).catch(() => window.prompt(`Copy ${label}:`, text));
-    } else {
-      window.prompt(`Copy ${label}:`, text);
-    }
-  }
-
-  copyDailyImportPrompt() {
-    this._copyText('Use docs/DAILY_IMPORT_PROMPT.md with the raw transcript in incoming/YYYY-MM-DD.txt. Then run npm run audit:fix && npm run audit, commit on main, and push origin main.', 'Daily import prompt');
-  }
-
-  copyAuditCommand() {
-    this._copyText('npm run audit:fix && npm run audit', 'Audit command');
-  }
-
-  copyGeminiPrompt(btn) {
-    const p = `This is your instruction set for processing a Best Guess Live episode (Netflix game show, two rounds).
-
-**Before anything else, check what is attached to THIS message:**
-- If this message already has an audio file (e.g. an .mp3 from a Plaud device) and/or screenshots attached, DO NOT reply "Ready" and DO NOT wait. Begin processing immediately using the instructions below, and your very first reply must be the finished JSON object — nothing else.
-- Only if NOTHING is attached to this message: reply with exactly "Ready — send the audio and screenshots." and wait for my next message. That message will contain the episode audio (or pasted transcript text) plus the screenshots. As soon as it arrives, process it immediately — do not acknowledge it, do not ask again, just output the JSON.
-
-In other words: never ask for a transcript or screenshots that are already attached, and never stop at "Ready" once material has been provided.
-
----
-
-I will provide the episode audio (or transcript text) plus screenshots of the on-screen clue cards, results screens, and popular wrong guesses screens.
-
-**Sources — read carefully:**
-- The transcript source may arrive as an attached audio file (e.g. an .mp3 from a Plaud device) OR as pasted text. If an audio file is attached, transcribe the ENTIRE recording yourself, word for word, from the first second to the last — that audio IS the transcript. Do not wait for a separate text transcript, and do not ask me to paste one.
-- CRITICAL — transcribe the audio IN FULL. Do not summarize, condense, paraphrase, skip, or truncate any part of it. Capture every sentence the host actually says: the intro banter, the rules read-out, each clue read, the host's per-clue commentary, the reactions to individual player guesses (by username), every reveal, the between-rounds promo, and the outro. A short, partial, or "highlights" transcript is a failure — if the recording runs several minutes, the transcript must contain the host's words for that entire runtime. Do not invent or fill in words you cannot hear; transcribe only what is actually said, but transcribe all of it.
-- Always use the screenshots (never the audio) as the source of truth for: each clue card's exact wording and spelling, the correct/guess counts, the payout tiers, and the popular wrong guesses. The audio only supplies spoken dialogue and the host's clue explanations.
-- If the audio and a screenshot ever disagree on a clue's wording or spelling, the screenshot wins.
-
-Use today's date for the \`date\` field unless I explicitly specify a different date in my follow-up message.
-
-Output a single JSON object with these top-level keys: \`date\`, \`rounds\`, \`transcript\`, and optionally \`bonus\`. Output JSON only. No markdown fences. No commentary before or after.
-
-**\`date\`**: \`"Weekday, Month D, YYYY"\`. Use today's date unless explicitly stated otherwise.
-
-**Format/prizing**: Use the broadcast if it explicitly announces different rules. Otherwise use these date rules: before Monday, May 11, 2026, both rounds are usually tiered v2 (Gold/Silver/Bronze); Monday, May 11 through Tuesday, May 26, 2026 uses hybrid format with Round 1 v2 and Round 2 classic v1; starting Wednesday, May 27, 2026, both rounds are v2 tiered. In classic v1, do not create Silver/Bronze winners; identify the single winning clue as the earliest clue with correct answers, the winner count as that clue's correct count, and the payout as $7,500 divided among those winners (round to nearest cent).
-
-**\`rounds\`**: An object with \`round1\` and \`round2\`. Each contains all structured game data for that round.
-
-v2 (tiered Gold/Silver/Bronze) shape:
-\`\`\`json
-"round1": {
-  "secretItem": "ANSWER IN ALL CAPS",
-  "host": "Howie Mandel",
-  "format": "v2",
-  "clues": [
-    {"number": 1, "text": "EXACT SCREEN TEXT", "correct": "N", "guesses": "N,NNN", "explanation": "One sentence from host explaining the connection."},
-    {"number": 2, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
-    {"number": 3, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
-    {"number": 4, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
-    {"number": 5, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."}
-  ],
-  "goldClue": 1,
-  "silverClue": 2,
-  "bronzeClue": 3,
-  "goldWinners": 123,
-  "silverWinners": 456,
-  "bronzeWinners": 789,
-  "totalWinners": 1368,
-  "goldPayout": 60.98,
-  "silverPayout": 16.45,
-  "bronzePayout": 9.51,
-  "winnerPayout": "$7,500.00",
-  "winnerNames": "Name1, Name2, Name3",
-  "wrongGuesses": "WORD1, WORD2, WORD3"
-}
-\`\`\`
-
-v1 (classic mode) shape:
-\`\`\`json
-"round2": {
-  "secretItem": "ANSWER IN ALL CAPS",
-  "host": "Howie Mandel",
-  "format": "v1",
-  "clues": [
-    {"number": 1, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
-    {"number": 2, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
-    {"number": 3, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
-    {"number": 4, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."},
-    {"number": 5, "text": "...", "correct": "N", "guesses": "N,NNN", "explanation": "..."}
-  ],
-  "winningClue": 2,
-  "goldClue": 2,
-  "silverClue": 0,
-  "bronzeClue": 0,
-  "winnerCount": 146,
-  "goldWinners": 0,
-  "silverWinners": 0,
-  "bronzeWinners": 0,
-  "totalWinners": 146,
-  "goldPayout": 0,
-  "silverPayout": 0,
-  "bronzePayout": 0,
-  "winnerPayout": "$51.36",
-  "winnerNames": "Name1, Name2",
-  "wrongGuesses": "WORD1, WORD2"
-}
-\`\`\`
-
-**Field rules:**
-- \`clues[].text\`: exact ALL CAPS text from screenshots only — never from audio
-- \`clues[].correct\`: exact number string from results screenshots (e.g. \`"146"\`)
-- \`clues[].guesses\`: exact comma-formatted string from results screenshots (e.g. \`"6,998"\`)
-- \`clues[].explanation\`: one sentence summarizing the host's explanation of why this clue points to the answer; write it in present tense (e.g. "A sidewalk is a paved path near the street.")
-- \`goldClue\`, \`silverClue\`, \`bronzeClue\`: clue number 1–5 from the results screenshots showing payout tiers. If a tier had no winners, use \`0\` and set its winners and payout to \`0\`. Empty tiers cascade from the bottom: bronze can be empty alone, or silver+bronze both empty. Silver cannot be empty while bronze has winners.
-- \`goldWinners\`, \`silverWinners\`, \`bronzeWinners\`: winner counts per tier. \`totalWinners\` must equal their sum.
-- \`goldPayout\`, \`silverPayout\`, \`bronzePayout\`: numeric dollar amount per winner (e.g. \`60.98\`), from screenshots.
-- \`winnerPayout\`: always \`"$7,500.00"\` for v2 rounds; per-winner share string for v1 (e.g. \`"$51.36"\`).
-- \`winnerNames\`: comma-separated string of winner names as announced by the host. Use \`""\` if none announced.
-- \`wrongGuesses\`: comma-separated ALL CAPS string from screenshots only. Use \`""\` if none shown.
-- For v1: set \`goldClue\` equal to \`winningClue\`; set \`silverClue\`, \`bronzeClue\` to \`0\`; set all medal winner/payout fields to \`0\`.
-
-**\`bonus\`** (optional): include only if the episode announces a special promo or bonus prize.
-\`\`\`json
-"bonus": {"title": "Promo Name", "desc": "Full description. May use <br> and <b> tags for line breaks and bold."}
-\`\`\`
-Omit \`bonus\` entirely if there is no promo.
-
-**\`transcript\`**: Full verbatim transcript.
-\`\`\`json
-"transcript": {
-  "date": "same as above",
-  "secretItems": ["ROUND 1 ANSWER", "ROUND 2 ANSWER"],
-  "rounds": [
-    {"round": 1, "secretItem": "ROUND 1 ANSWER"},
-    {"round": 2, "secretItem": "ROUND 2 ANSWER"}
-  ],
-  "sections": [
-    {"tag": "Intro",           "lines": [...]},
-    {"tag": "Round 1",         "lines": [...]},
-    {"tag": "Round 1 Results", "lines": [...]},
-    {"tag": "Round 2",         "lines": [...]},
-    {"tag": "Round 2 Results", "lines": [...]},
-    {"tag": "Outro",           "lines": [...]}
-  ]
-}
-\`\`\`
-
-**Line format**: \`{"speaker": "Host Name", "text": "exact words"}\` for spoken lines. \`{"speaker": null, "text": "..."}\` only for the structured lines described below. Use each speaker's full identified name consistently. If there are guest hosts or multiple hosts, use their names once identified; if a speaker is not identified, use a stable neutral label such as "Host 1", "Guest", or "Speaker".
-
-**Results sections** must follow this exact order every time:
-1. Attributed reveal line(s) — host announces the answer
-2. Attributed transition banter
-3. Five null-speaker clue recap lines, **Clue 5 → Clue 1** (reverse order):
-   \`{"speaker": null, "text": "Clue N: \\"EXACT SCREEN TEXT.\\" One-sentence explanation from host. N got it right."}\`
-   Use the exact ALL CAPS clue text from screenshots in recap lines, not what was spoken.
-4. One null-speaker medal summary line:
-   \`{"speaker": null, "text": "Gold (Clue X): N winners at $X.XX each. Silver (Clue Y): N winners at $X.XX each. Bronze (Clue Z): N winners at $X.XX each."}\`
-   When a medal has exactly 1 winner: \`"1 winner at $X.XX"\` — no "each".
-   For a classic v1 result section, use one null-speaker classic summary line instead:
-   \`{"speaker": null, "text": "Classic mode (Clue X): N winners at $X.XX each."}\`
-   When classic mode has exactly 1 winner: \`"1 winner at $X.XX"\` — no "each".
-5. Remaining attributed banter — congratulations, winner names, transitions
-
-**Outro**: Append these two null-speaker lines at the very end:
-\`{"speaker": null, "text": "Popular wrong guesses, Round 1: [GUESS, GUESS, ...]"}\`
-\`{"speaker": null, "text": "Popular wrong guesses, Round 2: [GUESS, GUESS, ...]"}\`
-
-**Rules**:
-- One sentence per line. Never paraphrase — exact words only.
-- Clue text in recap lines must come from screenshots, not audio.
-- For Monday, May 11 through Tuesday, May 26, 2026 hybrid episodes, Round 1 should have a Gold/Silver/Bronze summary and Round 2 should have the Classic mode summary unless the episode explicitly announces different rules. Starting Wednesday, May 27, 2026, both rounds should have Gold/Silver/Bronze summaries unless the episode explicitly announces different rules.
-- Do not add lines that weren't spoken. Do not merge sentences.
-- Output JSON only. No markdown fences. No commentary before or after.`;
-    if (navigator.clipboard?.writeText) {
-      navigator.clipboard.writeText(p).then(() => {
-        const orig = btn.innerHTML;
-        btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px">check</span> Copied';
-        btn.classList.add('text-green-400', 'border-green-500/50');
-        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('text-green-400', 'border-green-500/50'); }, 2000);
-        window.open('https://gemini.google.com', '_blank');
-      }).catch(() => window.prompt('Copy Gemini prompt:', p));
-    } else {
-      window.prompt('Copy Gemini prompt:', p);
-    }
-  }
-
-  copyPlaudPrompt(btn) {
-    const p = `You are transcribing a Best Guess Live episode for structured archival import. This is a Netflix game show: two rounds, each with five clues revealed one at a time, players guess a secret item, then a crystal ball opens to reveal the answer and prize payouts.
-
-Output in this exact structure:
-
-DATE: [Weekday, Month D, YYYY — use today's date unless stated otherwise]
-HOST: [Howie Mandel or Hunter March and/or guest hosts who identify themselves by name]
-ROUND 1 ANSWER: [secret item revealed when crystal ball opens]
-ROUND 2 ANSWER: [secret item revealed when crystal ball opens]
-ROUND 1 FORMAT: [v2 tiered unless the episode says otherwise]
-ROUND 2 FORMAT: [Before Monday, May 11, 2026 usually v2 tiered. Monday, May 11 through Tuesday, May 26, 2026 use v1 classic unless the episode says otherwise. Starting Wednesday, May 27, 2026 use v2 tiered unless the episode says otherwise.]
-
----
-
-[INTRO]
-Host Name: [verbatim sentence]
-Host Name: [verbatim sentence]
-
-[ROUND 1]
-Host Name: [verbatim sentence]
-
-[ROUND 1 RESULTS]
-Host Name: [verbatim sentence]
-CLUE COUNTS: Clue 5: [N] correct / [N] total guesses | Clue 4: [N] correct / [N] total guesses | Clue 3: [N] correct / [N] total guesses | Clue 2: [N] correct / [N] total guesses | Clue 1: [N] correct / [N] total guesses
-WINNER DATA: Gold [N] winner(s) at $[X] each | Silver [N] winner(s) at $[X] each | Bronze [N] winner(s) at $[X] each
-WINNER NAMES: [all names read aloud]
-
-[ROUND 2]
-Host Name: [verbatim sentence]
-
-[ROUND 2 RESULTS]
-Host Name: [verbatim sentence]
-CLUE COUNTS: Clue 5: [N] correct / [N] total guesses | Clue 4: [N] correct / [N] total guesses | Clue 3: [N] correct / [N] total guesses | Clue 2: [N] correct / [N] total guesses | Clue 1: [N] correct / [N] total guesses
-WINNER DATA V2: Gold [N] winner(s) at $[X] each | Silver [N] winner(s) at $[X] each | Bronze [N] winner(s) at $[X] each
-WINNER DATA V1 CLASSIC: Winning Clue [1-5] | Winner Count [N] | Winner Payout $[X] each | Total Pot $7,500
-WINNER NAMES: [all names read aloud]
-
-[OUTRO]
-Host Name: [verbatim sentence]
-BONUS PRIZE: [exact description and price if a weekly bonus prize is announced, otherwise omit]
-
----
-
-Rules:
-- Every spoken sentence is its own labeled line. One sentence per line. Never merge or paraphrase.
-- Include every joke, tangent, time countdown, and transition — nothing skipped.
-- When the host calls out a player's wrong guess, capture it: Host Name: "[Username] said [guess]."
-- In Results sections, capture the host's explanation for each clue exactly as spoken before the CLUE COUNTS line.
-- Capture payout amounts and winner names exactly as announced. If the host says "each" or "a piece," note it.
-- Use each speaker's full identified name on every spoken line. If there are guest hosts or multiple hosts, use their names once identified. If a speaker is not identified by name in the audio, use a neutral label such as "Host 1", "Host 2", "Guest", or "Speaker" consistently until identified.
-- Infer clue spelling as best as possible from audio only. If spelling or punctuation is uncertain, add [?] immediately after the uncertain word or phrase.
-- Do not include any information that is not spoken aloud. If popular wrong guesses, clue wording, counts, or payouts are not spoken clearly, write [not spoken] or [unclear] rather than guessing.
-- Monday, May 11 through Tuesday, May 26, 2026, Round 2 is classic mode unless the episode says otherwise: only the earliest clue with any correct answers wins, and those winners split the full $7,500 pot. Starting Wednesday, May 27, 2026, Round 2 is v2 tiered unless the episode says otherwise.
-- For v2 tiered rounds, fill WINNER DATA V2 and leave WINNER DATA V1 CLASSIC as "not applicable."
-- If a silver or bronze v2 tier has no winners, write 0 winners at $0 and keep all five clue counts.`;
-    if (navigator.clipboard?.writeText) {
-      navigator.clipboard.writeText(p).then(() => {
-        const orig = btn.innerHTML;
-        btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px">check</span> Copied';
-        btn.classList.add('text-green-400', 'border-green-500/50');
-        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('text-green-400', 'border-green-500/50'); }, 2000);
-      }).catch(() => window.prompt('Copy Plaud prompt:', p));
-    } else {
-      window.prompt('Copy Plaud prompt:', p);
     }
   }
 
@@ -5661,6 +5414,23 @@ Rules:
     const soloWins = games.filter(g => g.totalWinners === 1).length;
     const completeGuessGames = games.filter(g => this._getGameMeta(g).guessCountsComplete);
     const totalGuesses = games.reduce((sum, g) => sum + this._getGameMeta(g).totalGuesses, 0);
+    const clueLadder = [1, 2, 3, 4, 5].map(clueNumber => ({ clueNumber, correct: 0, guesses: 0, rounds: 0 }));
+    games.forEach(g => {
+      this._getGameMeta(g).clueStats.forEach(clue => {
+        const clueNumber = Number(clue.clueNumber);
+        const correct = Number(clue.correct);
+        const guesses = Number(clue.guesses);
+        if (clueNumber < 1 || clueNumber > 5 || !Number.isFinite(correct) || !Number.isFinite(guesses) || guesses <= 0) return;
+        const row = clueLadder[clueNumber - 1];
+        row.correct += correct;
+        row.guesses += guesses;
+        row.rounds += 1;
+      });
+    });
+    clueLadder.forEach(row => { row.rate = row.guesses ? (row.correct / row.guesses) * 100 : 0; });
+    const knownClueCorrect = clueLadder.reduce((sum, row) => sum + row.correct, 0);
+    const knownClueGuesses = clueLadder.reduce((sum, row) => sum + row.guesses, 0);
+    const overallClueRate = knownClueGuesses ? (knownClueCorrect / knownClueGuesses) * 100 : 0;
     const clueDist = {1:0,2:0,3:0,4:0,5:0};
     games.forEach(g => {
       const wc = Number(g.winningClue || g.goldClue);
@@ -5823,16 +5593,39 @@ Rules:
     const biggestPot = games.reduce((a, b) => b.pot > a.pot ? b : a);
     const lowestWonEntry = games.map(g => ({ g, r: tierMin(g) })).filter(x => x.r).reduce((a, b) => b.r.amt < a.r.amt ? b : a);
     const mostWinnersGame = games.reduce((a, b) => b.totalWinners > a.totalWinners ? b : a);
+    const winnersByDate = new Map();
+    games.forEach(g => winnersByDate.set(g.date, (winnersByDate.get(g.date) || 0) + Number(g.totalWinners || 0)));
+    const mostWinnersShow = [...winnersByDate.entries()].reduce((best, [date, winners]) => {
+      if (!best || winners > best.winners) {
+        return { date, winners, items: games.filter(g => g.date === date).map(g => g.secretItem) };
+      }
+      return best;
+    }, null);
     const mostGuessesGame = completeGuessGames.reduce((a, g) => this._getGameMeta(g).totalGuesses > a.t ? { t: this._getGameMeta(g).totalGuesses, g } : a, { t: 0, g: null });
     const longestItem = games.reduce((a, b) => b.secretItem.length > a.secretItem.length ? b : a);
     const shortestItem = games.reduce((a, b) => b.secretItem.length < a.secretItem.length ? b : a);
     const soloWinPct = games.length ? Math.round((soloWins / games.length) * 100) : 0;
     const avgPotVal = games.length ? Math.round(totalPot / games.length) : 0;
+    const sortedWinnerCounts = games.map(g => Number(g.totalWinners || 0)).sort((a, b) => a - b);
+    const middleWinnerIndex = Math.floor(sortedWinnerCounts.length / 2);
+    const medianWinners = sortedWinnerCounts.length
+      ? (sortedWinnerCounts.length % 2
+          ? sortedWinnerCounts[middleWinnerIndex]
+          : Math.round((sortedWinnerCounts[middleWinnerIndex - 1] + sortedWinnerCounts[middleWinnerIndex]) / 2))
+      : 0;
+    const allAnswerKeys = [
+      ...games.map(g => this._normalizeAnswer(g.secretItem)),
+      ...this.dailyPuzzles.filter(p => p.dataStatus !== 'missing').map(p => this._normalizeAnswer(p.secretItem))
+    ].filter(Boolean);
+    const uniqueAnswerCount = new Set(allAnswerKeys).size;
     const c1games = clueDist[1];
     const c1pct = games.length ? Math.round((c1games / games.length) * 100) : 0;
-    const totalCorrect = games.reduce((sum, g) => sum + this._getGameMeta(g).clueStats.reduce((inner, clue) => inner + clue.correct, 0), 0);
+    const totalCorrect = knownClueCorrect;
     let hardestClue = null;
     let hardestCluePct = 1;
+    let highestRateClue = null;
+    let highestRateCluePct = -1;
+    let biggestClueReveal = null;
     let hardestGame = null;
     let hardestGamePct = 1;
     games.forEach(g => {
@@ -5851,6 +5644,13 @@ Rules:
           if (pct < hardestCluePct) {
             hardestCluePct = pct;
             hardestClue = { game: g, clue, pct };
+          }
+          if (pct <= 1 && pct > highestRateCluePct) {
+            highestRateCluePct = pct;
+            highestRateClue = { game: g, clue, pct };
+          }
+          if (!biggestClueReveal || clue.correct > biggestClueReveal.clue.correct) {
+            biggestClueReveal = { game: g, clue, pct };
           }
         }
       });
@@ -5912,14 +5712,20 @@ Rules:
     const records = [
       {icon:'monetization_on', color:'text-yellow-400', label:'Biggest Single Pot', val:'$' + biggestPot.pot.toLocaleString(), sub: biggestPot.secretItem + ' · ' + biggestPot.date},
       {icon:'arrow_downward', color:'text-slate-400', label:'Lowest Amount Won', val: lowestWonEntry ? '$' + lowestWonEntry.r.amt.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : 'N/A', sub: lowestWonEntry ? (lowestWonEntry.r.tier ? lowestWonEntry.r.tier + ' · ' : '') + lowestWonEntry.g.secretItem + ' · ' + lowestWonEntry.g.date : ''},
-      {icon:'people', color:'text-green-400', label:'Most Winners in One Game', val: mostWinnersGame.totalWinners.toLocaleString(), sub: mostWinnersGame.secretItem + ' · ' + mostWinnersGame.date},
+      {icon:'people', color:'text-green-400', label:'Most Winners in One Round', val: mostWinnersGame.totalWinners.toLocaleString(), sub: mostWinnersGame.secretItem + ' · ' + mostWinnersGame.date},
       {icon:'dangerous', color:'text-red-400', label:'Hardest Clue (Lowest %)', val: hardestClue ? hardestClue.clue.clue.text : 'N/A', sub: hardestClue ? `Clue ${hardestClue.clue.clueNumber} · ${hardestClue.game.secretItem} · ${hardestClue.game.date} · ${(hardestClue.pct * 100).toFixed(3)}% correct (${hardestClue.clue.correct}/${hardestClue.clue.guesses})` : ''},
       {icon:'lock', color:'text-blue-400', label:'Hardest Secret Item', val: hardestGame ? hardestGame.game.secretItem : 'N/A', sub: hardestGame ? `${hardestGame.game.date} · ${(hardestGame.pct * 100).toFixed(3)}% correct overall (${hardestGame.totalCorrect}/${hardestGame.totalGuesses})` : ''},
-      {icon:'person', color:'text-red-400', label:'Solo Wins', val: `${soloWins} games (${soloWinPct}%)`, sub:'Exactly 1 winner took the whole pot'},
-      {icon:'casino', color:'text-blue-400', label:'Most Guessed Episode', val: `${mostGuessesGame.t.toLocaleString()} guesses`, sub: `${mostGuessesGame.g?.secretItem || ''} · ${mostGuessesGame.g?.date || ''}`.trim()},
-      {icon:'bolt', color:'text-yellow-300', label:'Clue 1 Wins', val: `${c1games} games (${c1pct}%)`, sub:'More than half of all games are decided on the very first clue'},
-      {icon:'check', color:'text-emerald-400', label:'Total Correct Guesses', val: totalCorrect.toLocaleString(), sub:`Across all clues in all ${games.length} games`},
-      {icon:'trending_up', color:'text-orange-400', label:'Avg Prize Pot', val:'$' + avgPotVal.toLocaleString(), sub:`Across all ${games.length} archived episodes`},
+      {icon:'person', color:'text-red-400', label:'Solo Wins', val: `${soloWins} rounds (${soloWinPct}%)`, sub:'Exactly 1 winner took the whole pot'},
+      {icon:'casino', color:'text-blue-400', label:'Most Guessed Round', val: `${mostGuessesGame.t.toLocaleString()} guesses`, sub: `${mostGuessesGame.g?.secretItem || ''} · ${mostGuessesGame.g?.date || ''}`.trim()},
+      {icon:'bolt', color:'text-yellow-300', label:'Clue 1 Wins', val: `${c1games} rounds (${c1pct}%)`, sub:'More than half of all rounds were decided on the very first clue'},
+      {icon:'percent', color:'text-cyan-400', label:'Overall Clue Hit Rate', val: `${overallClueRate.toFixed(1)}%`, sub:`${totalCorrect.toLocaleString()} correct from ${knownClueGuesses.toLocaleString()} known clue submissions`},
+      {icon:'groups', color:'text-green-300', label:'Most Winners in One Show', val: mostWinnersShow ? mostWinnersShow.winners.toLocaleString() : 'N/A', sub: mostWinnersShow ? `${mostWinnersShow.items.join(' / ')} · ${mostWinnersShow.date}` : ''},
+      {icon:'new_releases', color:'text-pink-300', label:'Biggest Single-Clue Reveal', val: biggestClueReveal ? `${biggestClueReveal.clue.correct.toLocaleString()} correct` : 'N/A', sub: biggestClueReveal ? `Clue ${biggestClueReveal.clue.clueNumber} · ${biggestClueReveal.game.secretItem} · ${biggestClueReveal.game.date}` : ''},
+      {icon:'verified', color:'text-emerald-300', label:'Highest Clue Hit Rate', val: highestRateClue ? `${(highestRateClue.pct * 100).toFixed(1)}%` : 'N/A', sub: highestRateClue ? `Clue ${highestRateClue.clue.clueNumber} · ${highestRateClue.game.secretItem} · ${highestRateClue.clue.correct.toLocaleString()}/${highestRateClue.clue.guesses.toLocaleString()} · ${highestRateClue.game.date}` : ''},
+      {icon:'check', color:'text-emerald-400', label:'Total Correct Guesses', val: totalCorrect.toLocaleString(), sub:`Across known clues in all ${games.length} played rounds`},
+      {icon:'trending_up', color:'text-orange-400', label:'Avg Prize Pot', val:'$' + avgPotVal.toLocaleString(), sub:`Across all ${games.length} played rounds`},
+      {icon:'align_vertical_center', color:'text-blue-300', label:'Median Winners per Round', val: medianWinners.toLocaleString(), sub:'The midpoint round after sorting the whole series by winner count'},
+      {icon:'fingerprint', color:'text-purple-300', label:'No Repeat Answers', val: `${uniqueAnswerCount.toLocaleString()} unique`, sub:`All ${allAnswerKeys.length.toLocaleString()} live-round and daily-puzzle answers were different`},
       {icon:'text_fields', color:'text-purple-400', label:'Longest Secret Item', val: longestItem.secretItem, sub:`${longestItem.secretItem.length} chars · ${longestItem.date}`},
       {icon:'abc', color:'text-pink-400', label:'Shortest Secret Item', val: shortestItem.secretItem, sub:`${shortestItem.secretItem.length} chars · ${shortestItem.date}`}
     ];
@@ -5954,12 +5760,12 @@ Rules:
       cacheKey,
       kpis: [
         {label:'Daily Puzzles Archived', val: actualDailyCount.toLocaleString(), color:'text-purple-400', icon:'extension', warn: dailyMissing > 0 ? `${dailyMissing} date${dailyMissing !== 1 ? 's' : ''} missing` : null},
-        {label:'Total Games', val: totalGames.toLocaleString(), color:'text-blue-400', icon:'sports_esports'},
+        {label:'Episode Dates', val: totalGames.toLocaleString(), color:'text-blue-400', icon:'event'},
         {label:'Total Rounds', val: totalRounds.toLocaleString(), color:'text-blue-400', icon:'casino'},
         {label:'v1 Rounds', val: v1Rounds.toLocaleString(), color:'text-slate-300', icon:'casino'},
         {label:'v2 Rounds', val: v2Rounds.toLocaleString(), color:'text-yellow-400', icon:'workspace_premium'},
-        {label:'Days Under New Rules', val: daysSinceNewRules.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
-        {label:'Days On Air', val: daysSinceLaunch.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
+        {label:'v2 Era Span', val: `${daysSinceNewRules.toLocaleString()} days`, color:'text-pink-400', icon:'calendar_month'},
+        {label:'Series Span', val: `${daysSinceLaunch.toLocaleString()} days`, color:'text-pink-400', icon:'date_range'},
         {label:'Total Paid Out', val:'$' + totalPot.toLocaleString(), color:'text-green-400', icon:'payments'},
         {label:'Total Winners', val: totalWinners.toLocaleString(), color:'text-yellow-400', icon:'emoji_events'},
         {label:'Solo Wins', val: soloWins.toLocaleString(), color:'text-red-400', icon:'person'},
@@ -5971,6 +5777,9 @@ Rules:
       hostedShowCount,
       cancelledShowCount,
       records,
+      clueLadder,
+      knownClueCorrect,
+      knownClueGuesses,
       hardest,
       easiest,
       fewestEntries,
@@ -6410,6 +6219,20 @@ Rules:
       if (cancelled) parts.push(`${cancelled} cancelled night${cancelled === 1 ? ' is' : 's are'} left out, since no game was played.`);
       nodes.hostShowsNote.innerText = parts.join(' ');
     }
+    if (nodes.clueLadder) {
+      nodes.clueLadder.innerHTML = stats.clueLadder.map(row => {
+        const barWidth = Math.max(2, Math.min(100, row.rate));
+        return `<div class="bg-slate-800/50 rounded-lg border border-slate-700/30 p-4 min-w-0">
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-cyan-300">Clue ${row.clueNumber}</span>
+            <span class="text-lg font-bold text-white">${row.rate.toFixed(1)}%</span>
+          </div>
+          <div class="h-1.5 rounded-full bg-slate-700 overflow-hidden mb-3"><div class="h-full rounded-full bg-cyan-400" style="width:${barWidth}%"></div></div>
+          <div class="text-xs text-slate-400 leading-relaxed"><strong class="text-slate-200">${row.correct.toLocaleString()}</strong> correct<br>${row.guesses.toLocaleString()} submissions<br>${row.rounds.toLocaleString()} rounds with data</div>
+        </div>`;
+      }).join('');
+    }
+    if (nodes.clueLadderNote) nodes.clueLadderNote.innerText = `${stats.knownClueCorrect.toLocaleString()} correct answers from ${stats.knownClueGuesses.toLocaleString()} known clue submissions. Unknown historical counts are excluded instead of treated as zero.`;
     this._renderAnswerProfile(nodes, stats.answerProfile, esc);
     if (nodes.records) nodes.records.innerHTML = stats.records.map(r => `<div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/30"><div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined ${r.color}" style="font-size:18px">${esc(r.icon)}</span><span class="text-xs text-slate-500 uppercase tracking-widest">${esc(r.label)}</span></div><div class="font-bold text-white leading-snug">${esc(r.val)}</div><div class="text-xs text-slate-500 mt-1 leading-snug">${esc(r.sub)}</div></div>`).join('');
     if (nodes.hardest) nodes.hardest.innerHTML = stats.hardest.map(g => { const last = g.format === 'v2' ? (g.bronzeClue || g.goldClue) : (g.winningClue || g.goldClue || '?'); return `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0"><div><div class="font-bold text-white">${esc(g.secretItem)}</div><div class="text-xs text-slate-500">${esc(g.date)}</div></div><div class="text-right shrink-0 ml-4"><div class="text-red-400 font-bold text-sm bg-red-900/20 px-2 py-1 rounded">Clue ${esc(last)}</div><div class="text-xs text-slate-500 mt-1">${g.totalWinners.toLocaleString()} winners</div></div></li>`; }).join('');

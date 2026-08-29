@@ -1,6 +1,18 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (answer taxonomy reviewed and rebuilt)
+Last updated: 2026-08-29 (series archive finalized)
+
+## Most Recent Changes (2026-08-29, continued 15)
+
+- **Best Guess Live ended on Friday, August 28, 2026.** Treat the repository as a fixed historical archive: no episodes, transcripts, daily puzzles, or daily polls may be added after the finale date. Historical corrections and backfills remain welcome.
+- Removed `.github/workflows/auto-import.yml` entirely. This permanently stops the twice-daily scheduled runner and prevents unnecessary YouTube requests, dependency installs, or Claude API calls now that there are no new episodes.
+- Removed the Gemini/Plaud import buttons and their now-dead embedded prompt methods from the Data Health popup, replacing them with a final-series status note. Historical recovery prompts remain in `docs/`, but the public maintenance surface no longer implies that daily episodes are expected.
+- Added post-series audit errors for games, transcripts, daily puzzles, and daily polls so a future agent cannot accidentally manufacture records after the finale.
+- Confirmed all run-length and daily-puzzle coverage calculations are anchored to the archive's last stored date, not the current clock. They will remain stable as calendar time passes.
+- Clarified Stats labels: `Episode Dates` replaces the misleading `Total Games`; `Series Span` and `v2 Era Span` replace labels that sounded like live counters; `v2 Rounds` replaces `v2 Games` in Quick Breakdown.
+- Added **How the Clues Opened Up**, a five-step series-wide ladder showing correct answers, submissions, hit rate, and data coverage for each clue number.
+- Added six final-series records: overall clue hit rate, most winners in one show, biggest single-clue reveal, highest clue hit rate, median winners per round, and the all-answers uniqueness count. All values are derived from archive data rather than hardcoded.
+- Updated `AGENTS.md` and all import/transcription guides to state that they are historical-recovery tools only and that scheduled importing must not be restored.
 
 ## Most Recent Changes (2026-08-29, continued 14)
 

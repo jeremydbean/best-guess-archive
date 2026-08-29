@@ -1,5 +1,7 @@
 # Plaud Audio Prompt
 
+> **Archive status:** The series ended on Friday, August 28, 2026. This prompt is retained only for transcribing historical recordings from on or before that date.
+
 Use this with Plaud or another audio-only transcription tool. It should only use what can be heard in the episode audio, and it should mark anything uncertain instead of inventing it.
 
 ```text

@@ -1,5 +1,7 @@
 # Daily Import Workflow
 
+> **Archive status:** The series ended on Friday, August 28, 2026. This workflow is retained only for historical corrections and backfills. Do not add later dates or restore scheduled importing.
+
 Use this when you have a raw Plaud, YouTube, or AI transcript dump.
 
 1. Put the raw transcript in `incoming/YYYY-MM-DD.txt`.

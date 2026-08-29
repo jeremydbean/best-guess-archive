@@ -9,6 +9,7 @@ const writeJson = (path, value) => fs.writeFileSync(path, `${JSON.stringify(valu
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const datePattern = new RegExp(`^(${weekdayNames.join('|')}), (${monthNames.join('|')}) (\\d{1,2}), (\\d{4})$`);
+const seriesFinaleDate = 'Friday, August 28, 2026';
 const loose = value => String(value || '')
   .normalize('NFKD')
   .replace(/[’']/g, '')
@@ -30,6 +31,7 @@ let metaRaw = readJson('data/games-meta.json');
 let meta = Array.isArray(metaRaw) ? metaRaw : (metaRaw.games || []);
 const transcripts = readJson('data/transcripts.json');
 const dailyPuzzles = fs.existsSync('data/daily-puzzles.json') ? readJson('data/daily-puzzles.json') : [];
+const dailyPolls = fs.existsSync('data/daily-polls.json') ? readJson('data/daily-polls.json') : [];
 const issues = [];
 const fixes = [];
 const warn = (code, message, context = {}) => issues.push({ level: 'warn', code, message, ...context });
@@ -172,6 +174,9 @@ const allDates = new Set();
 for (const [index, g] of games.entries()) {
   allDates.add(g.date);
   validateArchiveDate(g.date, { index, source: 'games.json', secretItem: g.secretItem });
+  if (archiveDateValue(g.date) > archiveDateValue(seriesFinaleDate)) {
+    error('post-series-game', `No episode can be added after the ${seriesFinaleDate} series finale`, { index, date: g.date, secretItem: g.secretItem });
+  }
   const clueCount = Array.isArray(g.clues) ? g.clues.length : 0;
   const isPartial = g.dataStatus === 'partial';
   const isCancelled = !g.secretItem && clueCount === 0;
@@ -339,6 +344,9 @@ for (const [date, rounds] of playableByDate.entries()) {
 const transcriptDates = new Set();
 for (const [index, t] of transcripts.entries()) {
   validateArchiveDate(t.date, { index, source: 'transcripts.json' });
+  if (archiveDateValue(t.date) > archiveDateValue(seriesFinaleDate)) {
+    error('post-series-transcript', `No transcript can be added after the ${seriesFinaleDate} series finale`, { index, date: t.date });
+  }
   if (t.dataStatus !== undefined && t.dataStatus !== 'unavailable') {
     error('transcript-data-status', 'Transcript dataStatus must be "unavailable" when present', { index, date: t.date, dataStatus: t.dataStatus });
   }
@@ -400,6 +408,17 @@ for (const [index, t] of transcripts.entries()) {
   }
 }
 
+if (!Array.isArray(dailyPolls)) {
+  error('daily-polls-shape', 'data/daily-polls.json must be a flat array');
+} else {
+  for (const [index, poll] of dailyPolls.entries()) {
+    validateArchiveDate(poll?.date, { index, source: 'daily-polls.json', question: poll?.question });
+    if (archiveDateValue(poll?.date) > archiveDateValue(seriesFinaleDate)) {
+      error('post-series-daily-poll', `No daily poll can be added after the ${seriesFinaleDate} series finale`, { index, date: poll?.date, question: poll?.question });
+    }
+  }
+}
+
 for (const date of allDates) {
   if (!transcriptDates.has(date)) error('missing-transcript', 'Game date has no transcript entry', { date });
 }
@@ -414,6 +433,9 @@ if (!Array.isArray(dailyPuzzles)) {
 } else {
   for (const [index, puzzle] of dailyPuzzles.entries()) {
     validateArchiveDate(puzzle?.date, { index, source: 'daily-puzzles.json', secretItem: puzzle?.secretItem });
+    if (archiveDateValue(puzzle?.date) > archiveDateValue(seriesFinaleDate)) {
+      error('post-series-daily-puzzle', `No daily puzzle can be added after the ${seriesFinaleDate} series finale`, { index, date: puzzle?.date, secretItem: puzzle?.secretItem });
+    }
     const currentDateValue = archiveDateValue(puzzle?.date);
     if (currentDateValue && previousDailyDateValue && currentDateValue < previousDailyDateValue) {
       error('daily-puzzles-order', 'Daily puzzles must be stored oldest first, newest last', { index, date: puzzle?.date });

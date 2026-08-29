@@ -1,5 +1,7 @@
 # Daily Import Prompt
 
+> **Archive status:** The series ended on Friday, August 28, 2026. Use this prompt only to repair or backfill an episode that actually aired on or before that date. Never create a later episode.
+
 Paste this to Claude or Codex with the raw transcript path or the transcript text.
 
 ```text

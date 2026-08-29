@@ -2,6 +2,15 @@
 
 This repository uses a main-only workflow and is often edited by more than one coding agent.
 
+## Series Closed
+
+Best Guess Live ended with its final episode on **Friday, August 28, 2026**. The archive is now a fixed historical record.
+
+- Do not add episode, transcript, daily-puzzle, or daily-poll dates after August 28, 2026.
+- The scheduled YouTube/Claude auto-import workflow has been removed and must not be re-enabled.
+- Continue to correct and backfill existing records when better historical evidence becomes available.
+- Keep statistics derived from archive dates and stored records. Never use the current date to extend the run, infer missing broadcasts, or manufacture coverage gaps.
+
 ## Before You Start
 
 - Read `AI_HANDOFF.md`.
@@ -39,9 +48,9 @@ git pull --rebase origin main
 
 ---
 
-## Daily Game Import Procedure
+## Historical Game Backfill Procedure
 
-Preferred path for raw transcript imports:
+Use this only to repair or complete an episode that aired on or before August 28, 2026. Preferred path for raw transcript imports:
 - Save the raw dump as `incoming/YYYY-MM-DD.txt`.
 - Use `docs/DAILY_IMPORT_PROMPT.md` as the agent prompt/checklist.
 - Use `docs/IMPORT_REPORT_TEMPLATE.md` when a fuller import report is useful.
