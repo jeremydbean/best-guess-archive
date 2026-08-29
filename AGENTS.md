@@ -82,7 +82,7 @@ Unknown counts in an otherwise-complete round use the literal string `"N/A"` —
 
 `winnerPayout` is typically `"$7,500.00"` for v2 rounds. Do not change it to a per-tier amount when a silver or bronze pool is redistributed.
 
-**`data/answer-categories.json`** maps every playable `secretItem` — live rounds and daily puzzles alike — to one category, and drives the stats page's "Anatomy of an Answer" panel. Categories are **hand-assigned on purpose**: a keyword rule mis-files MARS (planet, not the bar), CLUE (board game, not a hint), PRINCE (musician, not royalty) and PITBULL (rapper, not dog). The audit enforces both directions — `answer-category-missing` fires when an answer has no category, `answer-category-orphan` when the file names an answer that no longer exists — so **adding or renaming an answer fails the audit until the category file is updated too.** Current categories: People & Characters, Food & Drink, Everyday Objects, Places & Landmarks, Brands & Companies, Sports & Games, Screen & Stage, Animals & Nature, Ideas & Feelings, Body & Health, Transportation.
+**`data/answer-categories.json`** maps every playable `secretItem` — live rounds and daily puzzles alike — to one category, and drives the stats page's "Anatomy of an Answer" panel. Categories are **hand-assigned from clue context on purpose**: keyword rules mis-file MARS (planet, not the bar), CLUE (board game, not a hint), PRINCE (musician, not royalty), PITBULL (rapper, not dog), SPHERE (Las Vegas venue, not a generic shape), and TITANIC (ship, not merely the movie). The audit enforces both directions — `answer-category-missing` fires when an answer has no category, `answer-category-orphan` when the file names an answer that no longer exists — so **adding or renaming an answer fails the audit until the category file is updated too.** Current categories: Animals & Creatures; Body, Health & Appearance; Brands & Organizations; Clothing & Accessories; Entertainment & Culture; Events & Experiences; Food & Drink; Household & Everyday Objects; Ideas, Language & Actions; Nature, Space & Weather; People & Characters; Places & Landmarks; Sports, Games & Recreation; Technology & Digital Life; Transportation & Travel.
 
 **Renaming a `secretItem`** touches four places, and the audit will fail if you miss the last one: the year shard (`data/games-YYYY.json`), both `secretItems` and `rounds[].secretItem` in `data/transcripts.json`, and the key in `data/answer-categories.json` (`answer-category-orphan` fires otherwise). `data/games-meta.json` regenerates itself via `npm run audit:fix`. Grep all of `data/` for the old string before committing.
 
@@ -217,7 +217,7 @@ The app publishes one puzzle a day with no gaps, so a day nobody screenshotted i
 ```bash
 git add data/daily-puzzles.json
 git commit -m "Add daily puzzle [DATE]: [SECRET_ITEM]"
-git push -u origin <session-branch>
+git push origin main
 ```
 
 ---

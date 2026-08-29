@@ -1,6 +1,16 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (NotebookLM sweep failed; split into nine guarded prompts)
+Last updated: 2026-08-29 (answer taxonomy reviewed and rebuilt)
+
+## Most Recent Changes (2026-08-29, continued 14)
+
+- **Rebuilt the Stats page's "Anatomy of an Answer" taxonomy after reviewing all 476 answers.** The old 11-category model forced 112 unrelated answers into `Everyday Objects` and blurred distinct ideas such as animals vs space, clothing vs body care, events vs abstract ideas, and technology vs media.
+- The new 15-category model is: Animals & Creatures; Body, Health & Appearance; Brands & Organizations; Clothing & Accessories; Entertainment & Culture; Events & Experiences; Food & Drink; Household & Everyday Objects; Ideas, Language & Actions; Nature, Space & Weather; People & Characters; Places & Landmarks; Sports, Games & Recreation; Technology & Digital Life; Transportation & Travel.
+- New split across all 476 answers: People & Characters 78 (16.4%); Sports, Games & Recreation 54 (11.3%); Food & Drink 47 (9.9%); Household & Everyday Objects 46 (9.7%); Entertainment & Culture 38 (8.0%); Places & Landmarks 35 (7.4%); Body, Health & Appearance 34 (7.1%); Transportation & Travel 27 (5.7%); Ideas, Language & Actions 25 (5.3%); Brands & Organizations 20 (4.2%); Nature, Space & Weather 18 (3.8%); Animals & Creatures 15 (3.2%); Clothing & Accessories 14 (2.9%); Technology & Digital Life 14 (2.9%); Events & Experiences 11 (2.3%).
+- **Ambiguous answers were checked against their stored clues rather than assigned by their names.** Examples: `SPHERE` is the Las Vegas venue → Places & Landmarks; `TITANIC` is the ship → Transportation & Travel; `BARBIE` is the character → People & Characters; `6 7` is the meme → Entertainment & Culture; `BAKER'S DOZEN` is a quantity → Ideas, Language & Actions; `ICE CREAM TRUCK` is a vehicle → Transportation & Travel; `MIRAGE` and `QUICKSAND` → Nature, Space & Weather.
+- The Stats UI required no hard-coded category changes: it derives category names, counts, percentages, bars, and expandable answer chips directly from `data/answer-categories.json`.
+- The audit now enforces the 15 allowed category names with `answer-category-invalid`, preventing a typo or one-off label from silently creating another stats bucket.
+- Corrected the stale Daily Puzzle commit example in `AGENTS.md` so it follows the repository's main-only workflow (`git push origin main`).
 
 ## Most Recent Changes (2026-08-29, continued 13)
 

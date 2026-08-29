@@ -480,6 +480,23 @@ if (!Array.isArray(dailyPuzzles)) {
 // Answer" percentages would silently drift the moment an answer is added or
 // renamed — the panel would keep rendering, just quietly incomplete.
 const answerCategories = fs.existsSync('data/answer-categories.json') ? readJson('data/answer-categories.json') : null;
+const answerCategoryNames = new Set([
+  'Animals & Creatures',
+  'Body, Health & Appearance',
+  'Brands & Organizations',
+  'Clothing & Accessories',
+  'Entertainment & Culture',
+  'Events & Experiences',
+  'Food & Drink',
+  'Household & Everyday Objects',
+  'Ideas, Language & Actions',
+  'Nature, Space & Weather',
+  'People & Characters',
+  'Places & Landmarks',
+  'Sports, Games & Recreation',
+  'Technology & Digital Life',
+  'Transportation & Travel',
+]);
 if (answerCategories) {
   if (typeof answerCategories !== 'object' || Array.isArray(answerCategories)) {
     error('answer-categories-shape', 'data/answer-categories.json must be an object of answer -> category');
@@ -491,9 +508,12 @@ if (answerCategories) {
         error('answer-category-missing', 'Answer has no category in data/answer-categories.json', { secretItem: item });
       }
     }
-    for (const item of Object.keys(answerCategories)) {
+    for (const [item, category] of Object.entries(answerCategories)) {
       if (!playableItems.has(item)) {
         error('answer-category-orphan', 'data/answer-categories.json names an answer that no longer exists', { secretItem: item });
+      }
+      if (!answerCategoryNames.has(category)) {
+        error('answer-category-invalid', 'Answer uses a category outside the documented taxonomy', { secretItem: item, category });
       }
     }
   }
