@@ -237,6 +237,14 @@ Quote the host's own words. If he reads clue 5 out but never explains it, write 
 
 ---
 
+## § Not in NotebookLM
+
+**Dec 16, 2025 (THE GRINCH / BOWLING)** was silently absent from an otherwise
+clean reply covering Dec 15–18 — the notebook appears not to hold that
+transcript. Worth adding before re-running the Dec 15–18 batch.
+
+---
+
 ## § Disputed values — not imported, need a second look
 
 Returned by a NotebookLM run whose answer names all checked out, but each of
@@ -249,6 +257,7 @@ before acting.
 | Dec 11, 2025 | M&MS | 2 guesses | 2,094 | 294 | Other clues are 3,249 and 2,832; 294 is an order out. |
 | Dec 9, 2025 | CHATGPT | 5 guesses | *(unknown)* | 719 | Equals its own `correct` exactly — a 100% hit rate, the same artifact that was proven wrong on Feb 17's MOON clue 5. |
 | Dec 10, 2025 | S'MORES | 5 guesses | *(unknown)* | 11,996 | Other clues run 1,335–1,880. Guess counts fall across a round in every verified example; a 6× spike on clue 5 does not fit. |
+| Dec 15, 2025 | PARIS HILTON | 2 guesses | 11,286 | 2,200 | Round has 237 on clue 1 and 4,000 on clue 5; neither figure sits comfortably between them and both are single-sourced. |
 
 ---
 
