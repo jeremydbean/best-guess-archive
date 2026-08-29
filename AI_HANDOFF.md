@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (Feb 17 guesses column rebuilt from the full transcript)
+Last updated: 2026-08-29 (Aug 20 verified clean — the contamination flag was wrong)
+
+## Most Recent Changes (2026-08-29, continued 10)
+
+- **Aug 20, 2026 checked against the full transcript: nothing was wrong. No data changed.** All twenty count figures across MIRROR and KEANU REEVES match what is stored, and all six payouts reproduce exactly ($428.57 / $2.37 / $0.96 and $56.60 / $8.44 / $1.93).
+- **⚠️ The long-standing "MIRROR clue 5 may be contaminated" flag is retired as a false alarm.** MIRROR clue 5 really did draw 4,883 correct on 5,141 guesses. Those two numbers also appear on Aug 12, but **as BUTTERFLY's guess counts on clues 1 and 3** — a different role in a different position. A genuine copy-paste error puts numbers in the *same* role, which is exactly what Feb 17 did (PARADE's guesses column matched MOON's guesses column, index for index). **Matching values in mismatched roles is weak evidence; matching values in the same role is strong.** That distinction is the useful takeaway.
+- KEANU REEVES clue 5's stored 2,708 is corroborated: the transcript garbles it to "2,78", consistent with a dropped digit from 2,708, and 2,708 of 3,626 is a 74.7% hit rate.
+- Two flags raised in earlier sessions have now both been settled by transcript, and they went opposite ways — Feb 17 was real and worse than suspected, Aug 20 was nothing. Flagging rather than silently "fixing" was right in both cases.
+- **Only one verification item remains: Aug 13 YO YO's on-screen spelling.** It is not a number question.
+
 
 ## Most Recent Changes (2026-08-29, continued 9)
 
