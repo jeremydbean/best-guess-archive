@@ -222,8 +222,15 @@ for (const [index, g] of games.entries()) {
       if (clueNumber !== expectedNumber) {
         error('clue-number', 'Playable clue number is out of order', { index, date: g.date, secretItem: g.secretItem, clue: expectedNumber, actual: clue.number });
       }
-      validateCountValue(clue.correct, 'correct', { index, date: g.date, secretItem: g.secretItem, clue: expectedNumber }, { allowLegacyUnknown: true });
-      validateCountValue(clue.guesses, 'guesses', { index, date: g.date, secretItem: g.secretItem, clue: expectedNumber }, { allowLegacyUnknown: true });
+      const correctCount = validateCountValue(clue.correct, 'correct', { index, date: g.date, secretItem: g.secretItem, clue: expectedNumber }, { allowLegacyUnknown: true });
+      const guessCount = validateCountValue(clue.guesses, 'guesses', { index, date: g.date, secretItem: g.secretItem, clue: expectedNumber }, { allowLegacyUnknown: true });
+      // A clue cannot be solved by more people than submitted an answer to it.
+      // Warn rather than error: two v1 rounds already carry this and the real
+      // counts are unrecoverable, so failing the build would block every future
+      // import over historical data nobody can fix.
+      if (Number.isFinite(correctCount) && Number.isFinite(guessCount) && guessCount < correctCount) {
+        warn('impossible-clue-counts', 'Clue reports more correct answers than total guesses', { index, date: g.date, secretItem: g.secretItem, clue: expectedNumber, correct: correctCount, guesses: guessCount });
+      }
       if (!String(clue.explanation || '').trim()) {
         warn('missing-explanation', 'Playable clue is missing an explanation', { index, date: g.date, secretItem: g.secretItem, clue: clueIndex + 1 });
       }
@@ -465,6 +472,30 @@ if (!Array.isArray(dailyPuzzles)) {
         }
       }
     });
+  }
+}
+
+// Every answer the stats page charts must carry a category, and no category
+// entry may name an answer that does not exist. Without this the "Anatomy of an
+// Answer" percentages would silently drift the moment an answer is added or
+// renamed — the panel would keep rendering, just quietly incomplete.
+const answerCategories = fs.existsSync('data/answer-categories.json') ? readJson('data/answer-categories.json') : null;
+if (answerCategories) {
+  if (typeof answerCategories !== 'object' || Array.isArray(answerCategories)) {
+    error('answer-categories-shape', 'data/answer-categories.json must be an object of answer -> category');
+  } else {
+    const playableItems = new Set(games.filter(g => g.secretItem && (g.clues || []).length === 5).map(g => g.secretItem));
+    dailyPuzzles.forEach(p => { if (p?.secretItem) playableItems.add(p.secretItem); });
+    for (const item of playableItems) {
+      if (!String(answerCategories[item] || '').trim()) {
+        error('answer-category-missing', 'Answer has no category in data/answer-categories.json', { secretItem: item });
+      }
+    }
+    for (const item of Object.keys(answerCategories)) {
+      if (!playableItems.has(item)) {
+        error('answer-category-orphan', 'data/answer-categories.json names an answer that no longer exists', { secretItem: item });
+      }
+    }
   }
 }
 

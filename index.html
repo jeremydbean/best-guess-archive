@@ -810,6 +810,22 @@
     line-height: 1.5;
     color: rgba(255,255,255,0.72);
   }
+  /* Answer-category bars. Real CSS, not Tailwind utilities: tailwind.css here
+     is pre-built and pruned, and from-emerald-500 / to-teal-400 / text-emerald-300
+     are all absent from it — the fill rendered invisible on the first pass. */
+  .answer-bar {
+    margin-top: 0.3rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: rgba(30, 41, 59, 0.9);
+    overflow: hidden;
+  }
+  .answer-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #10b981 0%, #2dd4bf 100%);
+  }
+  .answer-pct { font-weight: 700; color: #6ee7b7; }
   .latest-medal-strip {
     display: flex;
     flex-wrap: wrap;
@@ -2187,6 +2203,17 @@ document.addEventListener('focusout', function(e) {
     <div id="stats-redistrib" class="grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
   </div>
 
+  <!-- Anatomy of an Answer -->
+  <div class="glass-panel p-6 rounded-xl">
+    <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <span class="material-symbols-outlined text-emerald-400">category</span> Anatomy of an Answer
+    </h3>
+    <p class="text-xs text-slate-400 mb-4" id="stats-answer-intro"></p>
+    <div id="stats-answer-shape" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-6"></div>
+    <ul class="space-y-2" id="stats-answer-categories"></ul>
+    <p class="text-[11px] text-slate-500 mt-4 leading-relaxed" id="stats-answer-note"></p>
+  </div>
+
   <!-- Most Reused Clue Text -->
   <div class="glass-panel p-6 rounded-xl">
     <h3 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
@@ -2463,6 +2490,10 @@ class App {
       nodes.hostShows = document.getElementById('stats-host-shows');
       nodes.hostShowsNote = document.getElementById('stats-host-shows-note');
       nodes.records = document.getElementById('stats-records-grid');
+      nodes.answerIntro = document.getElementById('stats-answer-intro');
+      nodes.answerShape = document.getElementById('stats-answer-shape');
+      nodes.answerCategories = document.getElementById('stats-answer-categories');
+      nodes.answerNote = document.getElementById('stats-answer-note');
       nodes.hardest = document.getElementById('stats-hardest-list');
       nodes.easiest = document.getElementById('stats-easiest-list');
       nodes.fewest = document.getElementById('stats-fewest-list');
@@ -2873,6 +2904,28 @@ class App {
     return this._transcriptsLoading;
   }
 
+  // Answer categories are curated data, not derived from keywords — a heuristic
+  // would mis-file half of these (MARS the planet vs MARS the bar, CLUE the
+  // board game, PRINCE the musician). The audit enforces full coverage.
+  _ensureAnswerCategoriesLoaded() {
+    if (this._answerCategoriesLoaded) return Promise.resolve();
+    if (this._answerCategoriesLoading) return this._answerCategoriesLoading;
+    this._answerCategoriesLoading = fetch('./data/answer-categories.json?_=' + Date.now())
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then(data => {
+        this.answerCategories = (data && typeof data === 'object') ? data : {};
+        this._answerCategoriesLoaded = true;
+        this._answerCategoriesLoading = null;
+      })
+      .catch(err => {
+        console.error('Could not load answer-categories.json:', err);
+        this.answerCategories = {};
+        this._answerCategoriesLoading = null;
+        throw err;
+      });
+    return this._answerCategoriesLoading;
+  }
+
   _ensureDailyPuzzlesLoaded() {
     if (this._dailyPuzzlesLoaded) return Promise.resolve();
     if (this._dailyPuzzlesLoading) return this._dailyPuzzlesLoading;
@@ -3102,7 +3155,9 @@ class App {
       }
     }
     if (name === 'stats') {
-      Promise.all([this._ensureFullGamesLoaded(), this._ensureDailyPuzzlesLoaded(), this._ensureDailyPollsLoaded().catch(() => {})])
+      Promise.all([this._ensureFullGamesLoaded(), this._ensureDailyPuzzlesLoaded(),
+                   this._ensureAnswerCategoriesLoaded().catch(() => {}),
+                   this._ensureDailyPollsLoaded().catch(() => {})])
         .then(() => this.renderStats())
         .catch(err => this._showDataLoadError(err));
     }
@@ -5417,10 +5472,112 @@ Rules:
   }
 
   // ==================== STATS ====================
+
+  // What the show actually chose to hide in the crystal ball, across every
+  // answer it ever used — the category mix plus the shape of the words
+  // themselves. Live rounds and dailies are counted together and separately,
+  // since the two sets never share an answer.
+  _renderAnswerProfile(nodes, p, esc) {
+    if (!nodes.answerCategories) return;
+    if (!p || !p.categories.length) {
+      // Categories are a separate fetch; if it failed, say so rather than
+      // rendering an empty panel that reads like the show had no answers.
+      if (nodes.answerIntro) nodes.answerIntro.innerText = 'Answer categories could not be loaded.';
+      nodes.answerCategories.innerHTML = '';
+      if (nodes.answerShape) nodes.answerShape.innerHTML = '';
+      if (nodes.answerNote) nodes.answerNote.innerText = '';
+      return;
+    }
+    if (nodes.answerIntro) {
+      nodes.answerIntro.innerText =
+        `Every answer the show ever used — ${p.liveTotal.toLocaleString()} live rounds and ${p.dailyTotal} daily puzzles, `
+        + `${p.uniqueTotal.toLocaleString()} of them and not one repeated.`;
+    }
+    const tile = (val, label) => `<div class="bg-slate-800/50 rounded-lg border border-slate-700/30 p-3 text-center">
+      <div class="text-lg font-bold text-white leading-tight truncate" title="${esc(String(val))}">${esc(String(val))}</div>
+      <div class="text-[10px] text-slate-400 uppercase tracking-wider mt-1 leading-tight">${esc(label)}</div></div>`;
+    if (nodes.answerShape) {
+      const pct = n => `${Math.round((n / p.total) * 100)}%`;
+      nodes.answerShape.innerHTML = [
+        tile(pct(p.single), 'One word'),
+        tile(pct(p.multi), 'Two or more'),
+        tile(p.avgLetters, 'Avg letters'),
+        tile(p.longest, `Longest (${p.longest.length})`),
+        tile(p.shortest, `Shortest (${p.shortest.length})`),
+        tile(`${p.lettersUsed}/26`, 'Starting letters')
+      ].join('');
+    }
+    const max = p.categories[0].count || 1;
+    nodes.answerCategories.innerHTML = p.categories.map(c => `
+      <li>
+        <div class="flex flex-wrap items-baseline justify-between gap-x-3 text-sm">
+          <span class="font-bold text-white">${esc(c.name)}</span>
+          <span class="text-slate-400">
+            <span class="answer-pct">${c.pct.toFixed(1)}%</span>
+            <span class="text-xs"> · ${c.count} (${c.live} live · ${c.daily} daily)</span>
+          </span>
+        </div>
+        <div class="answer-bar"><div class="answer-bar-fill" style="width:${(c.count / max) * 100}%"></div></div>
+      </li>`).join('');
+    if (nodes.answerNote) {
+      const digits = p.withDigits.length ? p.withDigits.join(', ') : 'none';
+      nodes.answerNote.innerText =
+        `Bars are scaled to the largest category; percentages are of all ${p.categorised.toLocaleString()} answers. `
+        + `${p.withPunct} answers carry punctuation, and only ${p.withDigits.length} contain a digit (${digits}). `
+        + `Categories are hand-assigned — a keyword rule would mis-file MARS, CLUE and PRINCE.`;
+    }
+  }
+
+  _buildAnswerProfile(games) {
+    const cats = this.answerCategories || {};
+    const live = games.map(g => g.secretItem).filter(Boolean);
+    const daily = (this.dailyPuzzles || []).map(p => p.secretItem).filter(Boolean);
+    const all = [...live, ...daily];
+    if (!all.length) return null;
+
+    const tally = items => items.reduce((m, i) => {
+      const c = cats[i];
+      if (c) m[c] = (m[c] || 0) + 1;
+      return m;
+    }, {});
+    const liveBy = tally(live);
+    const dailyBy = tally(daily);
+    const categorised = all.filter(i => cats[i]).length;
+    const categories = Object.keys({ ...liveBy, ...dailyBy })
+      .map(name => ({ name, live: liveBy[name] || 0, daily: dailyBy[name] || 0, count: (liveBy[name] || 0) + (dailyBy[name] || 0) }))
+      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+      .map(c => ({ ...c, pct: categorised ? (c.count / categorised) * 100 : 0 }));
+
+    const letters = s => s.replace(/[^A-Z0-9]/gi, '').length;
+    const longest = all.reduce((a, b) => (b.length > a.length ? b : a));
+    const shortest = all.reduce((a, b) => (b.length < a.length ? b : a));
+    const multi = all.filter(i => i.trim().split(/\s+/).length > 1).length;
+    const withDigits = all.filter(i => /[0-9]/.test(i));
+    const withPunct = all.filter(i => /[^A-Z0-9 ]/i.test(i));
+    const initials = new Set(all.map(i => i[0].toUpperCase()).filter(ch => /[A-Z]/.test(ch)));
+
+    return {
+      categories,
+      categorised,
+      total: all.length,
+      liveTotal: live.length,
+      dailyTotal: daily.length,
+      uniqueTotal: new Set(all).size,
+      multi,
+      single: all.length - multi,
+      avgLetters: (all.reduce((s, i) => s + letters(i), 0) / all.length).toFixed(1),
+      longest,
+      shortest,
+      withDigits,
+      withPunct: withPunct.length,
+      lettersUsed: initials.size
+    };
+  }
+
   _getStatsData() {
     // No figure below depends on the current date any more, so the cache key
     // no longer carries one — it only ever forced a needless daily recompute.
-    const cacheKey = `${this._dataVersion}|dp${this.dailyPuzzles.length}|poll${this.dailyPolls.length}`;
+    const cacheKey = `${this._dataVersion}|dp${this.dailyPuzzles.length}|poll${this.dailyPolls.length}|ac${Object.keys(this.answerCategories || {}).length}`;
     if (this._statsCache && this._statsCache.cacheKey === cacheKey) return this._statsCache;
 
     const games = this.games.filter(g => !this._getGameMeta(g).isStub);
@@ -5470,6 +5627,7 @@ Rules:
     // the archive look one puzzle more complete than it is.
     const actualDailyCount = this._archivedDailyCount();
     const dailyMissing = expectedDailyCount - actualDailyCount;
+    const answerProfile = this._buildAnswerProfile(games);
     const sortedByDate = [...games].sort((a, b) => this._getGameMeta(a).dateValue - this._getGameMeta(b).dateValue);
     const timeLabels = sortedByDate.map(g => {
       const d = this._archiveDateObject(g.date);
@@ -5764,6 +5922,7 @@ Rules:
       redistStats,
       reusedClues,
       topWrongGuesses,
+      answerProfile,
       charts: {
         sortedByDate,
         timeLabels,
@@ -6193,6 +6352,7 @@ Rules:
       if (cancelled) parts.push(`${cancelled} cancelled night${cancelled === 1 ? ' is' : 's are'} left out, since no game was played.`);
       nodes.hostShowsNote.innerText = parts.join(' ');
     }
+    this._renderAnswerProfile(nodes, stats.answerProfile, esc);
     if (nodes.records) nodes.records.innerHTML = stats.records.map(r => `<div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/30"><div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined ${r.color}" style="font-size:18px">${esc(r.icon)}</span><span class="text-xs text-slate-500 uppercase tracking-widest">${esc(r.label)}</span></div><div class="font-bold text-white leading-snug">${esc(r.val)}</div><div class="text-xs text-slate-500 mt-1 leading-snug">${esc(r.sub)}</div></div>`).join('');
     if (nodes.hardest) nodes.hardest.innerHTML = stats.hardest.map(g => { const last = g.format === 'v2' ? (g.bronzeClue || g.goldClue) : (g.winningClue || g.goldClue || '?'); return `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0"><div><div class="font-bold text-white">${esc(g.secretItem)}</div><div class="text-xs text-slate-500">${esc(g.date)}</div></div><div class="text-right shrink-0 ml-4"><div class="text-red-400 font-bold text-sm bg-red-900/20 px-2 py-1 rounded">Clue ${esc(last)}</div><div class="text-xs text-slate-500 mt-1">${g.totalWinners.toLocaleString()} winners</div></div></li>`; }).join('');
     if (nodes.easiest) nodes.easiest.innerHTML = stats.easiest.map(g => `<li class="flex justify-between items-center border-b border-slate-700/50 pb-3 last:border-0"><div><div class="font-bold text-white">${esc(g.secretItem)}</div><div class="text-xs text-slate-500">${esc(g.date)}</div></div><div class="text-right shrink-0 ml-4"><div class="text-green-400 font-bold text-sm bg-green-900/20 px-2 py-1 rounded">${g.totalWinners.toLocaleString()}</div><div class="text-xs text-slate-500 mt-1">winners</div></div></li>`).join('');
