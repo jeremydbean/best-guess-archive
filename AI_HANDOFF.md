@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (Aug 20 verified clean — the contamination flag was wrong)
+Last updated: 2026-08-29 (YO YO → YO-YO; every verification flag now closed)
+
+## Most Recent Changes (2026-08-29, continued 11)
+
+- **Aug 13, 2026 Round 1 renamed from `YO YO` to `YO-YO`**, settled by a screenshot of the on-screen answer card, which is hyphenated. This is what clue 2's stored explanation had implied all along — *"the word yo-yo has a hyphen in the middle of it"* — so the data was arguing with itself until now.
+- **⚠️ Renaming a `secretItem` touches four files, not one.** `data/games-2026.json`, both the `secretItems` array and `rounds[].secretItem` in `data/transcripts.json`, **and `data/answer-categories.json`** — the audit's `answer-category-orphan` rule fails the build if the category key is left behind. `games-meta.json` regenerates via `npm run audit:fix`. Grep the whole `data/` directory for the old string before committing.
+- No `alsoAccepted` entry was needed: `_normalizeAnswer()` strips non-alphanumerics, so `YO-YO` and `YO YO` both reduce to `yoyo` and Play mode already accepted either.
+- **Every verification flag raised in this session or earlier is now closed.** Apr 8 SKUNK (digit dropped), Feb 17 PARADE (guesses column overwritten), Aug 20 MIRROR (false alarm), Aug 13 YO-YO (spelling). Two were real, one was a transcription slip, one was nothing.
+- **Outstanding work is now purely additive** — 56 guess counts, 7 correct counts, 20 winner names and 3 clue-5 explanations, all across 38 dates. Nothing in the archive is known to be *wrong* any more, only incomplete.
+
 
 ## Most Recent Changes (2026-08-29, continued 10)
 
