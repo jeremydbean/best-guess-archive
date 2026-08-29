@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (Gemini gap-fill prompts for the 37 incomplete dates)
+Last updated: 2026-08-29 (SKUNK clue 5 corrected from the video)
+
+## Most Recent Changes (2026-08-29, continued 8)
+
+- **SKUNK clue 5 (Wednesday, April 8, 2026) corrected from the source video: 2,202 correct of 2,504 guesses.** Stored was 2,222 correct of **254** guesses — so *both* figures were wrong, and the guess count was `2,504` with a digit dropped. That single missing digit is what made the round look impossible.
+- **`impossible-clue-counts` is down to one**: Feb 17, 2026 PARADE clue 5 (5,316 correct of 1,910 guesses) is still outstanding. Audit now reports 4 warnings, not 5.
+- No payout impact. SKUNK is v1 with `winningClue: 1` and `winnerCount: 134`, so the $37.31 payout comes from clue 1 and never touched clue 5. `pot` is 5000 on this round, not 7500 — 5000/134 = $37.31, which still reproduces exactly.
+- Sanity check passed before storing: 2,202/2,504 is an 87.9% hit rate on clue 5, against 49% on clue 4 and 71% on clue 3 — rising into the giveaway clue, which is the normal shape.
+- `docs/GEMINI_GAP_PROMPTS.md` updated: the SKUNK verification block is removed, the header tally reads 3 verification blocks instead of 4, and the resolution is recorded inline so nobody re-checks a settled figure.
+
 
 ## Most Recent Changes (2026-08-29, continued 7)
 

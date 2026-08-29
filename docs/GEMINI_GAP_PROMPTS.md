@@ -25,33 +25,21 @@ than an honest gap.
 | Missing `correct` counts | 7 | Same window, same cause. |
 | Missing winner names | 20 | Scattered Jan–Aug 2026. Usernames the host reads out. |
 | Missing clue-5 explanation | 3 | Aug 14, 24, 25, 2026 — may genuinely not exist; see below. |
-| Known-bad values to re-read | 2 | Apr 8 and Feb 17, 2026 — impossible counts, see § Verification. |
+| Known-bad values to re-read | 1 | Feb 17, 2026 — impossible counts, see § Verification. |
 | Judgement calls | 2 | Aug 13 and Aug 20, 2026 — see § Verification. |
 
-Total: **37 dates** need something, plus **4** that need a value checked rather
+Total: **37 dates** need something, plus **3** that need a value checked rather
 than filled.
+
+*Resolved: Apr 8, 2026 (SKUNK clue 5) — real figures 2,202 correct of 2,504
+guesses; the stored `254` was `2,504` with a digit dropped.*
 
 ---
 
 ## § Verification — check these, do not fill them
 
-These four already hold a value. I need to know whether the stored value is
+These three already hold a value. I need to know whether the stored value is
 right, so the prompt asks Gemini to report what is on screen and nothing more.
-
-### Wednesday, April 8, 2026 — SKUNK (impossible counts)
-
-```
-Best Guess Live, Wednesday, April 8, 2026, Round 1, answer SKUNK. My records say
-clue 5 had 2,222 correct answers out of 254 total guesses, which is impossible —
-more people cannot get it right than answered.
-
-Read the Round 1 results card and tell me the two figures actually shown for
-clue 5: the correct count and the total guess count. If either is not shown on
-screen, say null for it. Do not reconcile the numbers or reason about which is
-more plausible — just report what is displayed.
-
-Output one JSON object and nothing else: {"clue5Correct": N, "clue5Guesses": N}
-```
 
 ### Tuesday, February 17, 2026 — PARADE (impossible counts)
 
