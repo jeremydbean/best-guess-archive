@@ -5418,7 +5418,9 @@ Rules:
 
   // ==================== STATS ====================
   _getStatsData() {
-    const cacheKey = `${this._dataVersion}|${new Date().toDateString()}|dp${this.dailyPuzzles.length}|poll${this.dailyPolls.length}`;
+    // No figure below depends on the current date any more, so the cache key
+    // no longer carries one — it only ever forced a needless daily recompute.
+    const cacheKey = `${this._dataVersion}|dp${this.dailyPuzzles.length}|poll${this.dailyPolls.length}`;
     if (this._statsCache && this._statsCache.cacheKey === cacheKey) return this._statsCache;
 
     const games = this.games.filter(g => !this._getGameMeta(g).isStub);
@@ -5427,12 +5429,18 @@ Rules:
     const totalRounds = games.length;
     const v1Rounds = games.filter(g => g.format !== 'v2').length;
     const v2Rounds = games.filter(g => g.format === 'v2').length;
-    const today = new Date();
     const v2Dates = [...new Set(games.filter(g => g.format === 'v2').map(g => g.date))].sort((a, b) => this._compareArchiveDates(a, b));
     const firstV2Date = v2Dates.length ? this._archiveDateObject(v2Dates[0]) : null;
-    const firstDate = uniqueDates.length ? this._archiveDateObject([...uniqueDates].sort((a, b) => this._compareArchiveDates(a, b))[0]) : null;
-    const daysSinceNewRules = firstV2Date ? Math.max(0, Math.ceil((today - firstV2Date) / (1000 * 60 * 60 * 24))) : 0;
-    const daysSinceLaunch = firstDate ? Math.max(0, Math.ceil((today - firstDate) / (1000 * 60 * 60 * 24))) : 0;
+    const sortedDates = [...uniqueDates].sort((a, b) => this._compareArchiveDates(a, b));
+    const firstDate = sortedDates.length ? this._archiveDateObject(sortedDates[0]) : null;
+    // The series ended with the Aug 28, 2026 finale, so these spans are measured
+    // against the archive's own last date rather than `new Date()`. Measured
+    // against today they would tick upward forever, eventually reporting a show
+    // that ran for thousands of days.
+    const lastDate = sortedDates.length ? this._archiveDateObject(sortedDates[sortedDates.length - 1]) : null;
+    const daySpan = (from, to) => (from && to ? Math.max(0, Math.round((to - from) / 86400000)) : 0);
+    const daysSinceNewRules = daySpan(firstV2Date, lastDate);
+    const daysSinceLaunch = daySpan(firstDate, lastDate);
     const totalPot = games.reduce((sum, g) => sum + g.pot, 0);
     const totalWinners = games.reduce((sum, g) => sum + g.totalWinners, 0);
     const soloWins = games.filter(g => g.totalWinners === 1).length;
@@ -5443,9 +5451,20 @@ Rules:
       const wc = Number(g.winningClue || g.goldClue);
       if (wc >= 1 && wc <= 5) clueDist[wc] += 1;
     });
-    const dailyPuzzleStart = new Date('2026-05-23T00:00:00');
-    const todayMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-    const expectedDailyCount = Math.max(0, Math.floor((todayMidnight - dailyPuzzleStart) / (1000 * 60 * 60 * 24)) + 1);
+    // Noon, to match _archiveDateObject: comparing a midnight anchor against a
+    // noon date leaves a half day in the difference, which rounds up and
+    // overstates the window by one.
+    const dailyPuzzleStart = new Date(2026, 4, 23, 12, 0, 0, 0);
+    // Frozen to the last daily the archive has a date for, not to today. The
+    // dailies ended with the series; measuring the window against the current
+    // date would manufacture one new "missing" puzzle every day forever, for
+    // days on which no puzzle was ever published.
+    const dailyDates = this.dailyPuzzles.map(p => p.date).filter(Boolean)
+      .sort((a, b) => this._compareArchiveDates(a, b));
+    const lastDailyDate = dailyDates.length ? this._archiveDateObject(dailyDates[dailyDates.length - 1]) : null;
+    const expectedDailyCount = lastDailyDate
+      ? Math.max(0, Math.round((lastDailyDate - dailyPuzzleStart) / 86400000) + 1)
+      : 0;
     // Placeholders for days nobody captured are not puzzles we hold, so they
     // must not count towards coverage — otherwise recording a gap would make
     // the archive look one puzzle more complete than it is.
@@ -5723,8 +5742,8 @@ Rules:
         {label:'Total Rounds', val: totalRounds.toLocaleString(), color:'text-blue-400', icon:'casino'},
         {label:'v1 Rounds', val: v1Rounds.toLocaleString(), color:'text-slate-300', icon:'casino'},
         {label:'v2 Rounds', val: v2Rounds.toLocaleString(), color:'text-yellow-400', icon:'workspace_premium'},
-        {label:'Days Since New Rules Launch', val: daysSinceNewRules.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
-        {label:'Days Since Launch', val: daysSinceLaunch.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
+        {label:'Days Under New Rules', val: daysSinceNewRules.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
+        {label:'Days On Air', val: daysSinceLaunch.toLocaleString(), color:'text-pink-400', icon:'calendar_month'},
         {label:'Total Paid Out', val:'$' + totalPot.toLocaleString(), color:'text-green-400', icon:'payments'},
         {label:'Total Winners', val: totalWinners.toLocaleString(), color:'text-yellow-400', icon:'emoji_events'},
         {label:'Solo Wins', val: soloWins.toLocaleString(), color:'text-red-400', icon:'person'},
