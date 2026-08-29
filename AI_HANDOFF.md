@@ -1,6 +1,16 @@
 # AI Handoff
 
-Last updated: 2026-08-28 (Aug 28 daily puzzle: MAGIC 8 BALL)
+Last updated: 2026-08-29 (home notice restyled to the app's wrap screen)
+
+## Most Recent Changes (2026-08-29)
+
+- **Home end-of-series notice restyled to match the app's "That's a wrap" screen.** The card is now a single deep-purple-to-sky gradient panel with centred white copy, six margin sparkles and a gold call to action, replacing the old dark-banner-over-white-body layout. `.news-card-banner` is gone; the headline moved inside `.news-card-body` as an `h2`.
+- Wording now follows the app's final screen across all three phases: "That's a wrap on Best Guess Live!", "Our final episode aired **Friday, August 28th**. Thank you for playing, guessing, and celebrating with us every night — it's been a blast." and "**The app stays open through Wednesday, September 30th.** If you have outstanding winnings to claim, now's the time." The pre-finale phase keeps its own first line and the post-Sep-30 phase swaps the second for the archive line.
+- The banner kicker for the post-finale phases became `THAT'S A WRAP ON BEST GUESS LIVE`; the gold date line is unchanged.
+- **Two deliberate departures from the app remain.** Its gold button opens a claim flow this archive has no way to stand in for, so the button reads **Claim via Netflix Support** and points at Netflix help rather than imitating a control that would dead-end. The app's "Questions about a payout? Contact Support" line is reproduced underneath, and the fan-made/cannot-process-payouts footnote stays.
+- **⚠️ Sparkles are absolutely positioned and were overlapping the copy on the first pass** — glyphs landed on "you", "guessing" and the Got It button. They are now pinned inside the body's 1.75rem side padding (≤3% / ≥97%), and `.news-card-sparkles` carries `pointer-events: none` so it can never swallow a tap meant for the support link or the dismiss button.
+- Verified in headless Chromium at 900px and 390px: correct phase copy, no horizontal overflow, no console errors beyond the sandbox's blocked Google Fonts.
+
 
 ## Most Recent Changes (2026-08-28, continued)
 
