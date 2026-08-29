@@ -5,9 +5,9 @@ Last updated: 2026-08-29 (finale crew photo wired into the end-of-series card)
 ## Most Recent Changes (2026-08-29, continued 5)
 
 - **The end-of-series card can now show the finale cast-and-crew photo**, between the two paragraphs and the buttons, with a caption tying it to the Outro moment where Howie and Hunter call everyone in front of the camera.
-- **⚠️ The image file itself is NOT in the repo yet.** The user sent the photo twice, but it arrives only as an inline image in the conversation — nothing is written to disk, so there was no file to copy in. **`assets/finale/crew-photo.jpg` (or `.png`) still needs to be added.** A photograph of real people cannot be reconstructed or regenerated, so this is genuinely blocked on the file.
-- **The card degrades to nothing rather than to a broken image.** `_finalePhotoHtml()` emits a `<figure>` carrying its candidate paths in `data-sources`; `advanceFinalePhoto()` walks `.jpg` → `.png` on each `error` event and calls `fig.remove()` when the list is exhausted. Verified with no asset present: `figurePresent: false`, caption text absent, no console errors. Verified with a placeholder in place: figure and caption render.
-- **Dropping the file in is the only remaining step** — no code edit is needed to turn it on. `assets/finale/README.md` documents that on the spot, next to where the file goes.
+- **The photo is live at `assets/bglcrew.png`** (1080×1080), committed by the user directly to `main`. The temporary `assets/finale/` directory and its README were removed — that path was a guess made while the file was unavailable, and keeping two conventions for one asset would only mislead.
+- **⚠️ The image never reached this session as a file.** It was sent twice in conversation but nothing was written to the uploads directory, so there was no file to copy in; a photograph of real people cannot be reconstructed or regenerated. The user resolved it by committing it to the repo. **If an asset is needed again, ask for a repo commit rather than an inline paste.**
+- **The card still degrades to nothing rather than to a broken image.** `_finalePhotoHtml()` emits a `<figure>` carrying its candidate paths in `data-sources`; `advanceFinalePhoto()` advances through them on each `error` event and calls `fig.remove()` once exhausted. Verified in both states — with no asset present the figure and caption are absent entirely; with the real file the image loads at its natural 1080×1080.
 - The photo lives only in the modal card, never in the home banner.
 
 
