@@ -1,6 +1,18 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (Aug 28 finale imported as a partial record)
+Last updated: 2026-08-29 (Aug 28 finale promoted to a complete record)
+
+## Most Recent Changes (2026-08-29, continued 2)
+
+- **The finale is complete. A clean capture arrived and the partial placeholders were replaced in place** — same chronological slot, `dataStatus` dropped from both games and from the transcript. **No partial or unavailable records remain anywhere in the archive.** 379 games · 190 transcripts · 190 dates · 98 daily puzzles.
+- **All six payouts reproduced exactly on the first pass**, and the earlier reverse-engineering was vindicated: SINK's $2.88 needed 866–868 silver winners, and the real count is **866**. `floorCents(2500, 866)` = $2.88 exactly.
+- **⚠️ The per-round hosts in the paste do not survive its own transcript, and were not used.** It assigns Round 1 to Howie Mandel and Round 2 to Hunter March, but the intro says outright *"we thought since this is such a historic night, we should host together"* and the two trade clue reads inside both rounds. Both rounds are stored as **`Howie Mandel, Hunter March`** — the archive's comma-joined co-host form, reusing the exact existing string so the stats page does not split into a new variant. This is the fifth co-hosted date, after Jan 26, Mar 3, Apr 15 and Apr 24.
+- **CRYSTAL BALL inverts the medal tiers**: silver pays **$35.21** to 71 winners while gold pays **$21.12** to 142. Clue 2 was *harder* than clue 1, so the smaller pool split fewer ways. Tier order follows clue position, not payout size.
+- SINK clue 1 ("DROP BY GORDON RAMSAY'S PLACE" — drop means sink, and the two sit side by side in "kitchen sink") took **10 correct from 4,293 guesses**, 0.23%, paying **$300** each. Howie calls it out on air as the obligatory finale brain-buster.
+- Both answers are self-referential send-offs: CRYSTAL BALL is the show's own prop, and SINK completes "everything but the kitchen sink" — which the writers confirm on air was the point.
+- **⚠️ Speaker attribution in the source is unreliable in places and was stored as supplied, not corrected.** The Outro is attributed almost entirely to Howie Mandel including lines that are plainly Hunter's (*"You guys can find Howie and myself on social… @huntermarch @howiemandel"*), and Round 2 opens with a swapped *"Good luck, Howie." / "Good luck, Hunter."* pair. Re-attributing at scale would be inventing; the intro's deliberate name-swap bit (*"I'm Hunter March" / "I'm Howie Mandel"*) means a plausible-looking swap is not proof of an error either.
+- **The run's final totals: 190 episode dates, 378 rounds, $3,984,998 in prize money, 432,209 winners.** The finale alone paid 5,780.
+
 
 ## Most Recent Changes (2026-08-29, continued)
 

@@ -106985,8 +106985,7 @@
   },
   {
     "date": "Friday, August 28, 2026",
-    "dataStatus": "unavailable",
-    "host": "",
+    "host": "Howie Mandel, Hunter March",
     "secretItems": [
       "CRYSTAL BALL",
       "SINK"
@@ -106995,6 +106994,7 @@
       {
         "round": 1,
         "secretItem": "CRYSTAL BALL",
+        "host": "Howie Mandel, Hunter March",
         "pot": 7500,
         "format": "v2",
         "clues": [
@@ -107008,6 +107008,7 @@
       {
         "round": 2,
         "secretItem": "SINK",
+        "host": "Howie Mandel, Hunter March",
         "pot": 7500,
         "format": "v2",
         "clues": [
@@ -107022,27 +107023,1653 @@
     "sections": [
       {
         "tag": "Intro",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "Welcome to Best Guess Live!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's, this is your line now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, hey, hey, I'm Hunter March, uh, and this is me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm Howie Mandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Tonight is the last episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, we thought since this is such a historic night, we should host together."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, makes sense before we start the game though, we did want to take a second to say thank you to everyone who has played this game with us, watching you win and seeing the community you have created has been very, very, very fulfilling."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We also want to send a special thank you to all of you who have been so active in being part of the show, whether you sent us a video or posted your thoughts on Discord and Reddit, we we appreciate them."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We really do."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Give yourselves a hand."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, yeah, this has been a completely unique experience and we've tried some things that had never been done before."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And we tried some things that uh it shouldn't shouldn't be done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "True."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Most importantly, we had a lot of fun."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, I hate to disagree with you in front of everybody right now, but I think the most important thing is that uh uh that they have won almost 4 million dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "But can you like really put a price on fun?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Four million dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "All right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's a that's fair."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Fair enough."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Fair enough."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Speaking of money, we have exactly fifteen thousand dollars left in the prize account, ready to put it up for grabs?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes, but we can't skip over my favorite part."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Ladies and gentlemen for one final time, the rules!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, each episode of Best Guess Live has two rounds, each round has one puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each puzzle has three sets of winners: gold, silver, and bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Before each round, we're gonna load our crystal ball with a secret item, it could be absolutely anything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Then I'll give you five clues, but remember the clues are written like riddles, they're meant to make you think."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And after each clue, you'll get 20 seconds to submit an answer, but you only get one Best Guess per round, not per clue, one per round."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So make sure you're confident before you lock it in."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It has to be the exact answer, we do not accept typos."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Bottom line, you want to be fast, but you have to be right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Everyone that locks in a correct answer on the earliest clue will split the gold prize pot of 3,000 dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Everyone that locks in a correct answer on the second earliest clue will split the silver pot of 2,500 dollars."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And everyone that gets it on the third earliest clue will split the bronze pot of 2,000 dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, enough talk."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Let's win some money!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's an idea."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Round one, 7,500 dollars for the taking."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, load the ball!"
+          }
+        ]
       },
       {
         "tag": "Round 1",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Good luck Howie."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm playing against you today."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Usually I can only play the game when you're hosting."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh really?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So this will be fun for us to go head to head."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll see who's smarter you or me, okay?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your first clue, okay?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anything can happen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds on the clock right now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm also just taking into consideration that this is the last episode."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anything can happen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We have 10 seconds left on the clock."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anything can happen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I guess we can't come up with an answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Nothing can happen for us yet, uh, but anything else can happen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Fragile Curtsey from Hockley, Texas said Google."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anything can happen there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Frilly Work Boot said Florida."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What a great, great, great answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anything can happen there."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here's your second clue, you read it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "There's no question."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anything can happen, there's no question."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anything can happen, there's no question."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Both putting down an answer on the second clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "2 seconds left on the clock."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "1, time is up."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Aqua Maltese 195 said Answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Technically, yeah, there's no question if you got the answer, and then Bearded Dad 10 from Fayetteville, North Carolina said exclamation."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, that wouldn't be a question, that would be an exclamation."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This is a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, really?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We'll see if that holds for clue number 3."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, can barely contain itself."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds on the clock, start now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think I figured out what it was too late."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Which is unfortunate because I've been trying to get it within three for the last month."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And now, you wrote something down you think you're wrong."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anything can happen, there's no question, can barely contain itself."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think I know what it is, and I think I got it wrong."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's okay, maybe somebody else got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Speedy Hum 549 from Burbank, California said genie."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Dapper Fridge 408 said The Container Store."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know that's my favorite store."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The Container Store?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "My wife and I and the family, we spend all the time... buying containers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That is great."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's a good story."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I agree with you, that's the best store."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue four, gets loaded every day at work."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Now..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm just gonna write something down for funsies."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got it wrong, I'll take credit."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Forgot to say the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I've been giving them extra time these last couple weeks."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know, you keep doing that and you're gonna get yourself fired."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't want to get fired."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright, well we'll see how things go Monday."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Two seconds left on the clock."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anything can happen, there's no question, can barely contain itself, gets loaded every day at work."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Chilly Flames said my wife Betsy."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Fantastic."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here's your final clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is the final shot at 7,500 dollars in this first round, and that is orb that opens after clue 5 on every episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I got it too late, we all got it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The clock starts now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I still got it wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I put Neil."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, but I think I know it now, so that's on me."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anything can happen, there's no question, can barely contain itself, gets loaded every day at work, orb that opens after every clue, episode of Best Guess Live."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, well, let's find out what's in the, in the..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "In the what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "In the what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil, find out."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open the, open the what?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You know what to open."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Open the what?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Is that the crystal ball?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes!"
+          }
+        ]
       },
       {
         "tag": "Round 1 Results",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Oh! It's everything! It's the universe!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a sweat... every answer. Oh it is the crystal ball!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I started with Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I started with Best Guess Live. I went to crystal ball and then you went landed on Neil."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I landed on Neil. Who revealed it for us."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, that is, by the way, the crystal ball, I will say, really relished that moment and uh it did not want the show to go away. It was like I'm gonna take a little while."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Um alright let's take a look at the clues and find out who's taking home the money."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “ORB THAT OPENS AFTER CLUE 5 ON EVERY EP OF BEST GUESS LIVE.” The crystal ball is the orb that opens after clue five. 3,778 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “GETS LOADED EVERY DAY AT WORK.” The crystal ball gets loaded with answers every day. 1,721 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “CAN BARELY CONTAIN ITSELF.” A crystal ball contains answers and barely contains itself. 395 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “THERE'S NO QUESTION.” A crystal ball provides answers so there is no question. 71 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “ANYTHING CAN HAPPEN.” A crystal ball represents a future where anything can happen. 142 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 142 winners at $21.12 each. Silver (Clue 2): 71 winners at $35.21 each. Bronze (Clue 3): 395 winners at $5.06 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue five, orb that opens after clue 5 on every episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Of course we rhymed for this one because it was the crystal ball."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Right, that makes sense."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So uh 4,436 of you guessed on that final clue, 3,778 of you got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great job."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm fascinated that 700 people got it wrong."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, I'm not supposed to say anything negative about you, but I'm not coming back Monday."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm pretty sure 700 people spelled crystal with an i."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Really?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "My guess is there's probably quite a few of you."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Fourth clue, gets loaded every day at work."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We can't play without Neil loading the ball every day with the answers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4,687 guesses, 1,721 got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Can barely contain itself, the crystal ball contains all of our answers, and now, it is an answer, so it had to contain itself, but..."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh, I see what happened there."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, so 3,914 of you guessed, 395 of you got it correct."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Clue two, there's no question."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The crystal ball only reveals answers."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's the one place where there is no question."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yes."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4,397 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I thought there'd be more on this honestly."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Only 71 people got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Why did you think there'd be more correct?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We both guessed on two and got it wrong."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am not by any means close to the smartest player playing this game."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I've learned that the last month."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, but I thought more people would get it because it's the last day and it was a, it's a good guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Anything can happen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Anything can happen."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, anything from a joke to a baker's dozen to bobbing for apples."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "By the way, you guys don't realize this, bobbing for apples was a hard-fought battle internally of whether or not we should do it, we did it, everyone hated it, so if you guys are wondering why bobbing for apples has been a joke so often, it's because for us it's funny anyway."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Thank you Discord."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, 3,727 guesses, Howie, how many people got it right?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "142 of you!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "142 well done."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Each of you taking 21 dollars and 12 cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations family."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Hershey, Tree Branch 42."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Wow, those are the, some of the 142."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, the silver winners, 71 of them, are taking 35 dollars and 21 cents each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, the bronze winners... what was happening there?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Cues aren't my strength."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, you want to tell 'em?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, yeah, bronze you're getting 5 dollars, which isn't bad for bronze, I will say."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "395 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, 395 not bad."
+          }
+        ]
       },
       {
         "tag": "Round 2",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Alright, this is it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Ladies and gentlemen, this is our very last puzzle ever on Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And because it's our last puzzle ever, we're doing it just for this puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Prize pots are exactly the same."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "3,000 for gold, 2,500 for silver, 2,000 for bronze."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh, wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I wonder what's gonna be the answer to our last puzzle."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's what I just read."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Isn't that what everybody's doing?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah, yeah, yeah, we're all wondering."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, it seems like we've already done pretty much everything."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "The only way to find out, let's load the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Neil!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Good luck, Howie."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Good luck, Hunter."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clue number one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Drop by Gordon Ramsay's place."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "20 seconds starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "What do I feel like you have dropped by Gordon Ramsay's place?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I'm not at his house, but I've been to his restaurant."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "We've gotten something about his house or his restaurant."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I don't know."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Drop by Gordon Ramsay's place."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "5 seconds left on the clock."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Man, I don't even know what this place is called."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, but somebody knows what he's famous for cooking."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Very Heather says Beef Wellington."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Mind Bullets DK said Netflix."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You've already done that."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here's your second clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "At your disposal."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "20 seconds on the clock starting right now."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "At your disposal."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Drop by Gordon Ramsay's place."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "At your disposal."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "At your disposal."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thought of something easier than this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, this is so hard."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It really is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Alright."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "But once we hear the answers we'll know exactly what it is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "At your disposal."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bruner Bird from Harker Heights, Texas said rat, for some reason."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, and Drifting Pier 309 said Bumble."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm at your disposal."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It really is."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, clue number three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You want me to read it?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Great place to see the Dawn."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, and the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great place to see the Dawn."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "At your disposal."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Drop by Gordon Ramsay's place."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great place to see the dawn."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Why is this so squeaky?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's driving me nuts."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "What are you doing?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Sorry, I was excited, I think I got an answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, great place to see the Dawn."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Quietly Bright said still in bed."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Great place to see the dawn."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It really is."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Here's your fourth clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "For dishwashers without dishwashers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And the clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I feel pretty good about my answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I gotta say."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I uh, I've been trying to get it on three."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Within three, for the last three weeks-ish or four weeks."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I think you're starting to get the hang of it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You are starting to get into the flow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "How good does that feel?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Monday I'm gonna crush it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, Grizzly Cakes 546 for dishwashers without dishwashers, Grizzly Cake said paper plates."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It's a great guess."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Here's your final clue."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "This is your final guess, your final ever, final chance at 7,500 dollars."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You're never gonna get a chance like this again in your life."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The clue is this cleaning basin by the stove completes our answer treasure trove."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I did, I think I did get it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I am surprised we went with this for the last puzzle ever."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Clock starts now."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Why?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I like how we did the old switcheroo."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We said crystal ball, get ready for the next one."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I love it."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Really thrown for a loop."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You almost got me, but you didn't."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I think I got it on three."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You did?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "And I rhymed."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't, I got it on five."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I'm pretty sure I got it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Time's up."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "You got it?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Well I got the answer."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay, let's see what it is, let's find out what's inside the crystal ball."
+          }
+        ]
       },
       {
         "tag": "Round 2 Results",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Hunter March",
+            "text": "Neil? The correct answer was. The kitchen sink!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I said sink on three!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Did it count? I said sink on five, but before that I wrote crack. That's the best place to see the dawn! Is at the crack of dawn!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay. You saved yourself there really well. No. I worked on it for a second. Um, alright. Great. Let's see how the clues fit and who's taking the money. Yes."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 5: “THIS CLEANING BASIN BY THE STOVE COMPLETES OUR ANSWER TREASURE TROVE.” The phrase everything but the kitchen sink completes the treasure trove. 1,609 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 4: “FOR DISHWASHERS WITHOUT DISHWASHERS.” People without dishwashers must wash dishes in the sink. 2,258 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 3: “GREAT PLACE TO SEE THE DAWN.” Dawn is a brand of dish soap used at the sink. 4,296 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 2: “AT YOUR DISPOSAL.” A garbage disposal is located inside a sink. 866 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Clue 1: “DROP BY GORDON RAMSAY'S PLACE.” Gordon Ramsay works in a kitchen which has a sink. 10 got it right."
+          },
+          {
+            "speaker": null,
+            "text": "Gold (Clue 1): 10 winners at $300.00 each. Silver (Clue 2): 866 winners at $2.88 each. Bronze (Clue 3): 4,296 winners at $0.46 each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "This cleaning basin by the stove, uh, completes our answer treasure trove."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Before this we'd done everything but the kitchen sink."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Nice."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Now you get it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Oh!"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "1950 of you guessed on that one, 1609 got it correct."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Again, well done."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "That's pretty good."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, the fourth clue, uh, for dishwashers without dishwashers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Okay, yeah, that if you don't have a dishwasher, you're gonna be washing dishes in the sink people."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, 3,761 guesses, 2,258 got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Great place to see the Dawn."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I... I got crack of dawn."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't uh, I didn't know."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The kitchen sink is where you can see Dawn, it's a dish soap."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "It's a that's a Dawn dish soap."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I didn't... I didn't, I was stupid."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Okay."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "No, don't."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Don't attack yourself."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "7,828 guesses, this is where I got it."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "So am I one of the, am I alone, am I did I do really well?"
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, no, a lot of people got it here."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, 4,296 people got it right."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Wow, so many people on clue 3."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "I still feel, listen, I'm not proud of myself."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "Uh, clue two, at your disposal."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "The disposal is in the sink."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "There's a disposal right there in the sink."
+          },
+          {
+            "speaker": "Hunter March",
+            "text": "4,657 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, 4,657 guesses, only 866 got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Are you our final group of gold guessers?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's see."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Uh, drop by Gordon Ramsay's place."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Drop can mean sink."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Gordon Ramsay's place is the kitchen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're by each other in the phrase kitchen sink."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're by."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're by each other, they're by each other."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "It wasn't."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Could you read that for me?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, drop can mean sink, Gordon Ramsay's place is the kitchen."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "They're by each other in the phrase kitchen sink."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4,293 people guessed."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I will say I get it, but it wouldn't have been a Best Guess Live finale if we didn't have one really, really hard clue."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "So let's see how many people got it right out of those 4,293 guesses."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Howie?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You know what?"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "My favorite number."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Pick a number from one to ten."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "8."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No, 10."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10 of you got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10 of you got it right."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "10 people going home with 300 dollars each."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "That silver basket, 866 people going home with 2, 2 dollars and 88 cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "4,296 of you going home with 46 cents."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Congratulations to our final, uh, gold guessers."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Silver basket, 7, 4, 8."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stevie McFly, going to sleep... well."
+          }
+        ]
       },
       {
         "tag": "Outro",
-        "lines": []
+        "lines": [
+          {
+            "speaker": "Howie Mandel",
+            "text": "That's uh... That's it, that's it for this episode of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Well, that's it for all of Best Guess Live."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah, thank you again for all being a part of this."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "You guys can find Howie and myself on social, send us messages about what you loved about the show @huntermarch @howiemandel."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "And uh, we really really really appreciate, and we wanted to give our final thanks to the staff, all the people that made this happen, uh they're all here, they're an incredible group of this, this is the team."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Get on camera everybody!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "I want people to see who did this!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Yeah you guys should meet everybody."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Stay in between those, those lines, stay in between the white lines."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh wow."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Try to fit in the crystal ball."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Just get, get further back."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Let's do a different, I guess there's only one thing left to say, get in, our boss, let's get that away."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "No matter where you guys go from here, don't forget to bring your best guess."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "We really, really, really love you guys and we appreciate everything that you guys gave to this beautiful show, and this beautiful community."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Thank you again."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "With that, good night."
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Oh my god, good night baby!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Bye our crew everybody!"
+          },
+          {
+            "speaker": "Howie Mandel",
+            "text": "Is it something I said?"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 1: [JEOPARDY, PRINTER, DREAM, LAS VEGAS, SURPRISE]"
+          },
+          {
+            "speaker": null,
+            "text": "Popular wrong guesses, Round 2: [KITCHEN, NETFLIX, GARBAGE, LAS VEGAS, GARBAGE DISPOSAL]"
+          }
+        ]
       }
     ]
   }
