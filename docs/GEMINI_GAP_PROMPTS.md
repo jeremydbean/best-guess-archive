@@ -48,6 +48,42 @@ Total: **38 dates** need something from Gemini, plus **1** checked by hand.
 
 ---
 
+## § NotebookLM — one sweep for everything
+
+If the transcripts are loaded into NotebookLM, this single prompt harvests every
+outstanding value in one pass, and is short enough for its input box (~1.2k
+chars). It replaces the 38 per-date Gemini prompts below — use whichever suits
+the tool you have open.
+
+If the reply truncates, run it again asking for one list at a time.
+
+```
+For each episode below, use the segment after the answer is revealed where the host reviews each clue and announces winners. Output rows only — no preamble, no commentary, no source citations.
+
+LIST A — per-clue numbers. One row per round:
+DATE | ANSWER | 1:guesses/correct | 2:g/c | 3:g/c | 4:g/c | 5:g/c
+Dates: Dec 9, 10, 11, 12, 15, 16, 17, 18, 22, 25, 26, 29, 30 (2025); Jan 1, 13, 15 (2026); Feb 17 (2026).
+
+LIST B — winner usernames only. One row per round:
+DATE | ANSWER | WINNERS: name, name, name
+Dates (all 2026): Jan 20; Feb 6, 12, 26; Mar 25, 31; Apr 1, 20; May 1, 8; Jun 5, 9, 15, 24, 26, 29; Jul 31; Aug 26.
+
+LIST C — one explanation each:
+DATE | ANSWER | CLUE 5 MEANING: what the host says clue 5 meant
+Dates (2026): Aug 14 (BIG BEN); Aug 24 (BATMAN); Aug 25 (MULLET). If the host never explains clue 5, write null.
+
+Rules:
+- Copy numbers exactly as the host says them, digits only.
+- Write null for anything the host never says out loud. Never estimate a number, and never work one back from a prize amount or a payout.
+- If an episode is not in my sources, skip it silently — do not guess it.
+```
+
+The YO YO spelling is deliberately not in here: a transcript cannot show what is
+printed on screen, and the clue-2 explanation that would settle it is already
+stored ("the word yo-yo has a hyphen in the middle of it").
+
+---
+
 ## § Verification — watch these yourself
 
 One item left, and it is not a number.
