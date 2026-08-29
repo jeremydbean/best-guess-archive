@@ -19113,5 +19113,121 @@
         "explanation": "She is considered one of the greatest actors ever and has more Oscar nominations than anyone."
       }
     ]
+  },
+  {
+    "date": "Friday, August 28, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "dataStatus": "partial",
+    "host": "",
+    "secretItem": "CRYSTAL BALL",
+    "goldClue": null,
+    "silverClue": null,
+    "bronzeClue": null,
+    "goldWinners": null,
+    "silverWinners": null,
+    "bronzeWinners": null,
+    "totalWinners": null,
+    "goldPayout": null,
+    "silverPayout": null,
+    "bronzePayout": null,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "JEOPARDY, PRINTER, DREAM, LAS VEGAS, SURPRISE",
+    "clues": [
+      {
+        "number": 1,
+        "text": "ANYTHING CAN HAPPEN",
+        "correct": null,
+        "guesses": null,
+        "explanation": "A crystal ball represents a future where anything can happen."
+      },
+      {
+        "number": 2,
+        "text": "THERE'S NO QUESTION",
+        "correct": null,
+        "guesses": null,
+        "explanation": "A crystal ball provides answers so there is no question."
+      },
+      {
+        "number": 3,
+        "text": "CAN BARELY CONTAIN ITSELF",
+        "correct": null,
+        "guesses": null,
+        "explanation": "A crystal ball contains answers and barely contains itself."
+      },
+      {
+        "number": 4,
+        "text": "GETS LOADED EVERY DAY AT WORK",
+        "correct": null,
+        "guesses": null,
+        "explanation": "The crystal ball gets loaded with answers every day."
+      },
+      {
+        "number": 5,
+        "text": "ORB THAT OPENS AFTER CLUE 5 ON EVERY EP OF BEST GUESS LIVE",
+        "correct": null,
+        "guesses": null,
+        "explanation": "The crystal ball is the orb that opens after clue five."
+      }
+    ]
+  },
+  {
+    "date": "Friday, August 28, 2026",
+    "pot": 7500,
+    "format": "v2",
+    "dataStatus": "partial",
+    "host": "",
+    "secretItem": "SINK",
+    "goldClue": null,
+    "silverClue": null,
+    "bronzeClue": null,
+    "goldWinners": null,
+    "silverWinners": null,
+    "bronzeWinners": null,
+    "totalWinners": null,
+    "goldPayout": null,
+    "silverPayout": null,
+    "bronzePayout": null,
+    "winnerPayout": "$7,500.00",
+    "winnerNames": "",
+    "wrongGuesses": "KITCHEN, NETFLIX, GARBAGE, LAS VEGAS, GARBAGE DISPOSAL",
+    "clues": [
+      {
+        "number": 1,
+        "text": "DROP BY GORDON RAMSAY'S PLACE",
+        "correct": null,
+        "guesses": null,
+        "explanation": "Gordon Ramsay works in a kitchen which has a sink."
+      },
+      {
+        "number": 2,
+        "text": "AT YOUR DISPOSAL",
+        "correct": null,
+        "guesses": null,
+        "explanation": "A garbage disposal is located inside a sink."
+      },
+      {
+        "number": 3,
+        "text": "GREAT PLACE TO SEE THE DAWN",
+        "correct": null,
+        "guesses": null,
+        "explanation": "Dawn is a brand of dish soap used at the sink."
+      },
+      {
+        "number": 4,
+        "text": "FOR DISHWASHERS WITHOUT DISHWASHERS",
+        "correct": null,
+        "guesses": null,
+        "explanation": "People without dishwashers must wash dishes in the sink."
+      },
+      {
+        "number": 5,
+        "text": "THIS CLEANING BASIN BY THE STOVE COMPLETES OUR ANSWER TREASURE TROVE",
+        "correct": null,
+        "guesses": null,
+        "explanation": "The phrase everything but the kitchen sink completes the treasure trove."
+      }
+    ]
   }
 ]

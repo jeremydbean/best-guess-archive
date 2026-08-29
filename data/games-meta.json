@@ -4148,6 +4148,26 @@
       "goldClue": 1,
       "silverClue": 2,
       "bronzeClue": 3
+    },
+    {
+      "date": "Friday, August 28, 2026",
+      "secretItem": "CRYSTAL BALL",
+      "pot": 7500,
+      "host": "",
+      "format": "v2",
+      "totalWinners": null,
+      "clueCount": 5,
+      "dataStatus": "partial"
+    },
+    {
+      "date": "Friday, August 28, 2026",
+      "secretItem": "SINK",
+      "pot": 7500,
+      "host": "",
+      "format": "v2",
+      "totalWinners": null,
+      "clueCount": 5,
+      "dataStatus": "partial"
     }
   ]
 }

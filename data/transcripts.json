@@ -106982,5 +106982,68 @@
         ]
       }
     ]
+  },
+  {
+    "date": "Friday, August 28, 2026",
+    "dataStatus": "unavailable",
+    "host": "",
+    "secretItems": [
+      "CRYSTAL BALL",
+      "SINK"
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "secretItem": "CRYSTAL BALL",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "ANYTHING CAN HAPPEN",
+          "THERE'S NO QUESTION",
+          "CAN BARELY CONTAIN ITSELF",
+          "GETS LOADED EVERY DAY AT WORK",
+          "ORB THAT OPENS AFTER CLUE 5 ON EVERY EP OF BEST GUESS LIVE"
+        ]
+      },
+      {
+        "round": 2,
+        "secretItem": "SINK",
+        "pot": 7500,
+        "format": "v2",
+        "clues": [
+          "DROP BY GORDON RAMSAY'S PLACE",
+          "AT YOUR DISPOSAL",
+          "GREAT PLACE TO SEE THE DAWN",
+          "FOR DISHWASHERS WITHOUT DISHWASHERS",
+          "THIS CLEANING BASIN BY THE STOVE COMPLETES OUR ANSWER TREASURE TROVE"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "tag": "Intro",
+        "lines": []
+      },
+      {
+        "tag": "Round 1",
+        "lines": []
+      },
+      {
+        "tag": "Round 1 Results",
+        "lines": []
+      },
+      {
+        "tag": "Round 2",
+        "lines": []
+      },
+      {
+        "tag": "Round 2 Results",
+        "lines": []
+      },
+      {
+        "tag": "Outro",
+        "lines": []
+      }
+    ]
   }
 ]
