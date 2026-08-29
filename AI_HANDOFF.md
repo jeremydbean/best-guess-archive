@@ -1,6 +1,32 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (finale crew photo wired into the end-of-series card)
+Last updated: 2026-08-29 (date-driven stats frozen; "Anatomy of an Answer" added)
+
+## Most Recent Changes (2026-08-29, continued 6)
+
+### Frozen the date-driven stats
+
+- **Days On Air, Days Under New Rules and the daily-puzzle window all measured against `new Date()` and climbed forever.** All three now measure against the archive's own last date. Verified identical at 2026-08-29, 2026-10-15, 2027-06-01 and 2031-01-01: **263 days on air, 137 under new rules, 98 dailies, nothing missing.**
+- **⚠️ The daily window was already wrong, not just future-risky.** It counted one uncaptured puzzle for Aug 29 and would have added another every day — inventing missing puzzles for days on which none was ever published.
+- Renamed the two tiles from "Days Since …", since they are spans, not live counters, and dropped the date from the stats cache key.
+- **⚠️ `dailyPuzzleStart` had to move to noon.** `_archiveDateObject` returns noon; against a midnight anchor the half-day difference rounded up and overstated the window by one. Any future date arithmetic against archive dates must anchor at noon.
+- **`daysSinceNewRules` is 137, not 141.** The first v2 *entry* is Apr 9, 2026, but that is the cancelled game; the first v2 round actually played is Apr 13. The stats correctly exclude stubs — do not "correct" this to 141.
+- The only remaining live date read is the news card's Sep 30 transition, which is **deliberate** — after the app closes, "claim your winnings now" becomes false and the copy must change.
+
+### New stats section: "Anatomy of an Answer"
+
+- **`data/answer-categories.json`** maps all **476** answers (378 live + 98 daily) to one of 11 categories. Hand-assigned on purpose — a keyword rule mis-files MARS, CLUE, PRINCE and PITBULL. The audit enforces coverage both ways (`answer-category-missing` / `answer-category-orphan`), so adding or renaming an answer now fails the audit until the category file is updated.
+- Split across all 476: Everyday Objects 23.5%, People & Characters 16.8%, Food & Drink 10.3%, Ideas & Feelings 10.1%, Places & Landmarks 9.0%, Sports & Games 7.4%, Screen & Stage 6.3%, Animals & Nature 5.9%, Brands & Companies 4.4%, Body & Health 3.4%, Transportation 2.9%.
+- Answer shape: **60% one word**, 40% two or more, 8.5 letters average, longest RUDOLPH THE RED-NOSED REINDEER (30), shortest ATM (3), **all 26 letters used as an opener**, 17 answers with punctuation, only 3 with a digit (7-ELEVEN, 6 7, MAGIC 8 BALL).
+- **Not one answer ever repeated** across 476 puzzles, and the live and daily sets share none.
+- **⚠️ The bars hit the pruned-Tailwind trap again.** `from-emerald-500`, `to-teal-400`, `bg-emerald-500` and `text-emerald-300` are all absent from `tailwind.css`, so the fill and percentage rendered invisible on the first pass. Rewritten as real CSS (`.answer-bar`, `.answer-bar-fill`, `.answer-pct`). **Grep `tailwind.css` before using any unfamiliar utility.**
+
+### Data validation sweep
+
+- **Every v2 payout in the archive reproduces exactly** once the no-winner redistribution rule is applied — 0 mismatches across all 378 played rounds. `totalWinners` matches the medal sum everywhere. Total pot **$3,984,998** and **432,209** winners both match the site.
+- **⚠️ Two pre-existing impossible clue counts found, and deliberately left alone**: SKUNK clue 5 (Apr 8, 2026) reports 2,222 correct on 254 guesses, and PARADE clue 5 (Feb 17, 2026) reports 5,316 on 1,910. Both are v1. PARADE's looks like a copy artifact — its whole guesses column is identical to MOON's on the same date, and 1,910 is MOON's clue 5 *correct* value. The true figures are unrecoverable, so a new **`impossible-clue-counts` warning** surfaces them instead. It is a warning, not an error, so historical damage cannot block future imports. **Never invent a number to clear it.**
+- **⚠️ Mobile "overflow" on the stats page is a sandbox artifact, not a bug.** The blocked Google Fonts icon font makes `material-symbols-outlined` spans render their literal keyword ("calendar_month"), inflating widths. With icons sized realistically, scrollWidth equals clientWidth at 390px. Do not chase it.
+
 
 ## Most Recent Changes (2026-08-29, continued 5)
 
