@@ -3791,7 +3791,7 @@ Rules:
   // the card degrades to exactly what it looked like before rather than
   // rendering a broken image.
   _finalePhotoHtml() {
-    const sources = ['assets/finale/crew-photo.jpg', 'assets/finale/crew-photo.png'];
+    const sources = ['assets/bglcrew.png'];
     return `<figure class="news-card-photo" data-sources="${this._escapeHtml(JSON.stringify(sources))}" data-source-index="0">
       <img src="${sources[0]}" alt="The Best Guess Live cast and crew together on set after the final episode."
            onerror="app.advanceFinalePhoto(this)">
