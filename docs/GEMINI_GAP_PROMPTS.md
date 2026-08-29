@@ -25,9 +25,8 @@ than an honest gap.
 | Missing `correct` counts | 7 | Same window, same cause. |
 | Missing winner names | 20 | Scattered Jan–Aug 2026. Usernames the host reads out. |
 | Missing clue-5 explanation | 3 | Aug 14, 24, 25, 2026 — may genuinely not exist; see below. |
-| Judgement call | 1 | Aug 13, 2026 — YO YO spelling, see § Verification. |
 
-Total: **38 dates** need something from Gemini, plus **1** checked by hand.
+Total: **38 dates** still need something. Nothing is left to verify by eye.
 
 **Resolved so far**
 
@@ -78,25 +77,25 @@ Rules:
 - If an episode is not in my sources, skip it silently — do not guess it.
 ```
 
-The YO YO spelling is deliberately not in here: a transcript cannot show what is
-printed on screen, and the clue-2 explanation that would settle it is already
-stored ("the word yo-yo has a hyphen in the middle of it").
+This covers everything outstanding. The one question a transcript could never
+answer — the on-screen spelling of YO-YO — has since been settled from a
+screenshot.
 
 ---
 
-## § Verification — watch these yourself
+## § Verification — all resolved
 
-One item left, and it is not a number.
+Nothing left to check by eye. For the record:
 
-### Thursday, August 13, 2026 — YO YO
-
-Not a number question. Need:
-
-1. The **exact on-screen spelling** when the crystal ball opens and on the
-   results card: `YO YO`, `YO-YO`, or `YOYO`?
-2. The host's spoken explanation of clue 2, *"SOUNDS LIKE YOU'RE GONNA THINK IT
-   OVER"* — the wordplay may depend on the hyphen, which is why the spelling
-   matters.
+- **Apr 8, 2026 — SKUNK clue 5.** Real figures 2,202 correct of 2,504 guesses; the
+  stored `254` was `2,504` with a digit dropped.
+- **Feb 17, 2026 — PARADE / MOON.** PARADE's whole guesses column had been
+  overwritten with MOON's. Every `correct` value was already right.
+- **Aug 20, 2026 — MIRROR / KEANU REEVES.** False alarm; all twenty figures and
+  all six payouts were already correct.
+- **Aug 13, 2026 — YO-YO.** The on-screen answer card is hyphenated, so
+  `secretItem` moved from `YO YO` to `YO-YO`. This also matches clue 2's stored
+  explanation, which turns on "the word yo-yo has a hyphen in the middle of it".
 
 ---
 

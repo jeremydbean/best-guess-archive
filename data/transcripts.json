@@ -95313,13 +95313,13 @@
     "date": "Thursday, August 13, 2026",
     "host": "Howie Mandel",
     "secretItems": [
-      "YO YO",
+      "YO-YO",
       "STARBUCKS"
     ],
     "rounds": [
       {
         "round": 1,
-        "secretItem": "YO YO",
+        "secretItem": "YO-YO",
         "host": "Howie Mandel",
         "pot": 7500,
         "format": "v2",
