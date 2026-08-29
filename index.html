@@ -621,7 +621,7 @@
     scroll-margin-top: 6rem;
   }
   /* Compact end-of-series banner, mirroring the one on the app's home screen:
-     white kicker over a gold date, with a "tap for details" pill. Tapping opens
+     white headline over a gold date, with a "tap for details" pill. Tapping opens
      the full notice card below in the shared modal. No host photo — the app's
      banner has one and this archive has no such asset to use. */
   .news-banner {
@@ -643,20 +643,21 @@
   }
   .news-banner:hover { filter: brightness(1.07); transform: translateY(-1px); }
   .news-banner-text { display: block; min-width: 0; }
-  .news-banner-kicker {
+  /* Carries the card's own headline verbatim, so the two can never drift. */
+  .news-banner-headline {
     display: block;
     color: #fff;
     font-weight: 800;
-    font-size: 0.95rem;
-    line-height: 1.25;
+    font-size: clamp(1.05rem, 3.4vw, 1.3rem);
+    line-height: 1.2;
     letter-spacing: 0.01em;
   }
   .news-banner-date {
     display: block;
-    margin-top: 0.1rem;
+    margin-top: 0.3rem;
     color: #ffd54a;
     font-weight: 800;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.25;
   }
   .news-banner-cta {
@@ -1182,7 +1183,7 @@ document.addEventListener('focusout', function(e) {
          site, matching the original. -->
     <button type="button" id="home-news" class="news-banner hidden" onclick="app.openHomeNews()" aria-label="Series news — tap for details">
       <span class="news-banner-text">
-        <span id="home-news-kicker" class="news-banner-kicker"></span>
+        <span id="home-news-headline" class="news-banner-headline"></span>
         <span id="home-news-date" class="news-banner-date"></span>
         <span class="news-banner-cta">TAP FOR DETAILS</span>
       </span>
@@ -3180,22 +3181,19 @@ class App {
     today.setHours(12, 0, 0, 0);
 
     const para = [];
-    let kicker, date, headline;
+    let date, headline;
     if (today <= finale) {
-      kicker = 'BEST GUESS LIVE LAST EPISODE';
-      date = 'FRIDAY, AUG 28TH.';
+      date = 'Final episode Friday, Aug 28th.';
       headline = 'Best Guess Live is coming to an end.';
       para.push('After an incredible run, the final episode airs <strong>Friday, August 28th</strong>. Thank you for playing, guessing, and celebrating with us every night — it\'s been a blast.');
       para.push('<strong>The app stays open through Wednesday, September 30th.</strong> If you have outstanding winnings to claim, now\'s the time.');
     } else if (today <= appCloses) {
-      kicker = 'THAT\'S A WRAP ON BEST GUESS LIVE';
-      date = 'CLAIM WINNINGS BY SEP 30TH.';
+      date = 'Claim winnings by Sep 30th.';
       headline = 'That\'s a wrap on Best Guess Live!';
       para.push('Our final episode aired <strong>Friday, August 28th</strong>. Thank you for playing, guessing, and celebrating with us every night — it\'s been a blast.');
       para.push('<strong>The app stays open through Wednesday, September 30th.</strong> If you have outstanding winnings to claim, now\'s the time.');
     } else {
-      kicker = 'THAT\'S A WRAP ON BEST GUESS LIVE';
-      date = 'FINAL EPISODE AUG 28, 2026.';
+      date = 'Final episode Aug 28, 2026.';
       headline = 'That\'s a wrap on Best Guess Live!';
       para.push('Our final episode aired <strong>Friday, August 28th</strong>. Thank you for playing, guessing, and celebrating with us every night — it\'s been a blast.');
       para.push('The app closed on <strong>Wednesday, September 30th</strong>, but every episode, transcript and daily puzzle is still here to browse and replay.');
@@ -3203,16 +3201,19 @@ class App {
     // Only worth offering while there is still a payout window to ask about.
     const showSupport = today <= appCloses;
 
-    return { kicker, date, headline, para, showSupport };
+    return { date, headline, para, showSupport };
   }
 
+  // The banner leads with the card's own headline rather than a separate
+  // kicker, so the home screen carries the message itself and tapping it only
+  // expands on what is already showing.
   renderHomeNews() {
     const box = document.getElementById('home-news');
     if (!box) return;
-    const { kicker, date } = this._homeNewsContent();
-    const kickerEl = document.getElementById('home-news-kicker');
+    const { date, headline } = this._homeNewsContent();
+    const headlineEl = document.getElementById('home-news-headline');
     const dateEl = document.getElementById('home-news-date');
-    if (kickerEl) kickerEl.innerText = kicker;
+    if (headlineEl) headlineEl.innerText = headline;
     if (dateEl) dateEl.innerText = date;
     box.classList.remove('hidden');
   }

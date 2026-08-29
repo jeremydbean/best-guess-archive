@@ -1,6 +1,15 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (Aug 28 finale promoted to a complete record)
+Last updated: 2026-08-29 (home banner now leads with the wrap headline)
+
+## Most Recent Changes (2026-08-29, continued 3)
+
+- **The home banner now carries the message itself instead of a separate label.** It leads with **"That's a wrap on Best Guess Live!"** in title case, over the gold "Claim winnings by Sep 30th." line and the TAP FOR DETAILS pill. Tapping still opens the full gradient card, which is unchanged.
+- **The banner headline is the card's `headline` string verbatim — the separate `kicker` field is gone.** `_homeNewsContent()` now returns `{ date, headline, para, showSupport }`, and both halves of the notice read the same string, so the banner and the card cannot drift apart. Renamed `news-banner-kicker` → `news-banner-headline` and `#home-news-kicker` → `#home-news-headline` to match.
+- Headline sizing is `clamp(1.05rem, 3.4vw, 1.3rem)` so it stays on two lines at 390px and one line at 900px; the date line dropped to 0.9rem with more space above it so the headline reads as primary.
+- The gold date lines moved to sentence case to sit under a title-case headline: "Final episode Friday, Aug 28th." / "Claim winnings by Sep 30th." / "Final episode Aug 28, 2026."
+- Verified in headless Chromium at 900px and 390px: banner and card headlines match exactly, no horizontal overflow, no console errors.
+
 
 ## Most Recent Changes (2026-08-29, continued 2)
 
