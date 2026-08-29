@@ -679,84 +679,114 @@
   }
   .news-banner-sparkles i { display: block; font-style: normal; font-size: 1.35rem; color: rgba(255,255,255,0.85); }
 
-  /* Full notice, shown in the modal when the banner is tapped: dark banner
-     headline over a white body, as the app's dialog has it. Written as real CSS
-     rather than Tailwind utilities because tailwind.css here is a pre-built,
-     pruned stylesheet — arbitrary values like from-[#241a6b] are not in it and
-     would silently do nothing. */
+  /* Full notice, shown in the modal when the banner is tapped. Mirrors the
+     app's end-of-series screen: one deep purple-to-sky gradient panel with
+     centred white copy, scattered sparkles and a gold call-to-action. Written
+     as real CSS rather than Tailwind utilities because tailwind.css here is a
+     pre-built, pruned stylesheet — arbitrary values like from-[#241a6b] are not
+     in it and would silently do nothing. */
   .news-card {
+    position: relative;
     max-width: 34rem;
     margin: 2rem auto 0;
     border-radius: 1.75rem;
     overflow: hidden;
-    background: #ffffff;
-    border: 2px solid rgba(255,255,255,0.85);
+    background: linear-gradient(180deg, #170e3c 0%, #241a6b 24%, #1e3aa8 54%, #2f7fd8 80%, #63bdf5 100%);
+    border: 2px solid rgba(255,255,255,0.18);
     box-shadow: 0 24px 60px rgba(8,14,40,0.55);
-    text-align: left;
+    text-align: center;
   }
   /* The card only ever renders inside the modal now, which supplies its own
      padding, so drop the standalone top margin there. */
   #modal-content .news-card { margin: 0 auto; }
-  .news-card-banner {
-    background: linear-gradient(180deg, #241a6b 0%, #1e2fb0 62%, #1f45d8 100%);
-    padding: 1.75rem 1.5rem 2.25rem;
+  /* Sparkles sit behind the copy, so they must never swallow a tap meant for
+     the support link or the dismiss button. */
+  .news-card-sparkles { position: absolute; inset: 0; pointer-events: none; }
+  .news-card-sparkles i {
+    position: absolute;
+    font-style: normal;
+    line-height: 1;
+    color: rgba(255,255,255,0.7);
   }
-  .news-card-banner h2 {
+  /* Kept inside the body's 1.75rem side padding so a glyph never lands on a
+     letter or a button edge — the app scatters them in the same margins. */
+  .news-card-sparkles i:nth-child(1) { top: 27%; left: 2%;  font-size: 0.95rem; }
+  .news-card-sparkles i:nth-child(2) { top: 20%; right: 2.5%; font-size: 0.7rem; }
+  .news-card-sparkles i:nth-child(3) { top: 37%; right: 1.5%; font-size: 1.05rem; }
+  .news-card-sparkles i:nth-child(4) { top: 45%; left: 2.5%; font-size: 0.7rem; }
+  .news-card-sparkles i:nth-child(5) { top: 60%; right: 2%; font-size: 0.9rem; }
+  .news-card-sparkles i:nth-child(6) { top: 72%; left: 1.5%; font-size: 0.8rem; }
+  .news-card-body {
+    position: relative;
+    padding: 2.5rem 1.75rem 2rem;
+  }
+  .news-card-body h2 {
+    margin: 0 0 1.5rem;
     color: #fff;
-    text-align: center;
     font-weight: 800;
     line-height: 1.15;
-    font-size: clamp(1.35rem, 4.2vw, 1.85rem);
-    margin: 0;
-  }
-  .news-card-body {
-    background: #fff;
-    border-radius: 1.5rem 1.5rem 0 0;
-    margin-top: -1.25rem;
-    padding: 1.5rem 1.5rem 1.5rem;
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem);
+    text-shadow: 0 2px 12px rgba(6,10,40,0.45);
   }
   .news-card-body p {
-    color: #1e293b;
-    font-size: 0.95rem;
+    color: rgba(255,255,255,0.92);
+    font-size: 1rem;
     line-height: 1.6;
-    margin: 0 0 1rem;
+    margin: 0 0 1.15rem;
   }
   .news-card-body p:last-child { margin-bottom: 0; }
-  .news-card-body strong { font-weight: 800; color: #0f172a; }
+  .news-card-body strong { font-weight: 800; color: #fff; }
   .news-card-actions {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    margin-top: 1.5rem;
-  }
-  @media (min-width: 640px) {
-    .news-card-actions { flex-direction: row; }
-    .news-card-actions > * { flex: 1 1 0; }
+    margin-top: 1.75rem;
   }
   .news-card-btn {
     display: block;
     border: 0;
-    border-radius: 0.75rem;
-    padding: 0.8rem 1.25rem;
+    border-radius: 0.9rem;
+    padding: 1rem 1.25rem;
     text-align: center;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 0.95rem;
-    color: #fff;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;
-    transition: filter 0.15s ease;
+    transition: filter 0.15s ease, transform 0.15s ease;
   }
-  .news-card-btn:hover { filter: brightness(1.08); }
-  .news-card-btn.is-support { background: linear-gradient(180deg, #f0a020 0%, #e08a10 100%); }
-  .news-card-btn.is-dismiss { background: linear-gradient(180deg, #3aa8f5 0%, #1f7fe0 100%); }
-  /* Needs to outrank `.news-card-body p` above, which would otherwise win on
-     specificity and force this back to body size with no top margin. */
+  .news-card-btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
+  .news-card-btn.is-support {
+    background: linear-gradient(180deg, #ffdd7a 0%, #f5b62c 52%, #e79b12 100%);
+    color: #4a2c00;
+    /* The app's gold button carries an inset lighter panel rather than a border. */
+    box-shadow: inset 0 0 0 3px rgba(255,255,255,0.45), 0 8px 22px rgba(10,20,60,0.35);
+  }
+  .news-card-btn.is-dismiss {
+    background: rgba(255,255,255,0.14);
+    color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.45);
+  }
+  /* Both of these need to outrank `.news-card-body p` above, which would
+     otherwise win on specificity and force them back to body size and margin. */
+  .news-card-body p.news-card-ask {
+    margin: 1.5rem 0 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .news-card-ask a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .news-card-ask a:hover { color: #ffe9a8; }
   .news-card-body p.news-card-foot {
-    margin: 1.1rem 0 0;
-    text-align: center;
+    margin: 1.25rem 0 0;
     font-size: 0.72rem;
     line-height: 1.5;
-    color: #64748b;
+    color: rgba(255,255,255,0.72);
   }
   .latest-medal-strip {
     display: flex;
@@ -3154,25 +3184,24 @@ class App {
     if (today <= finale) {
       kicker = 'BEST GUESS LIVE LAST EPISODE';
       date = 'FRIDAY, AUG 28TH.';
-      headline = 'BEST GUESS LIVE IS COMING TO AN END.';
-      para.push('After an incredible run, the final episode airs <strong>Friday, August 28th</strong>.');
-      para.push('The app will stay open through <strong>Wednesday, September 30</strong> so make sure to go claim any outstanding winnings as soon as possible!');
+      headline = 'Best Guess Live is coming to an end.';
+      para.push('After an incredible run, the final episode airs <strong>Friday, August 28th</strong>. Thank you for playing, guessing, and celebrating with us every night — it\'s been a blast.');
+      para.push('<strong>The app stays open through Wednesday, September 30th.</strong> If you have outstanding winnings to claim, now\'s the time.');
     } else if (today <= appCloses) {
-      kicker = 'BEST GUESS LIVE HAS ENDED';
+      kicker = 'THAT\'S A WRAP ON BEST GUESS LIVE';
       date = 'CLAIM WINNINGS BY SEP 30TH.';
-      headline = 'BEST GUESS LIVE HAS ENDED.';
-      para.push('The final episode aired on <strong>Friday, August 28th</strong>.');
-      para.push('The app stays open through <strong>Wednesday, September 30</strong> — claim any outstanding winnings before then.');
+      headline = 'That\'s a wrap on Best Guess Live!';
+      para.push('Our final episode aired <strong>Friday, August 28th</strong>. Thank you for playing, guessing, and celebrating with us every night — it\'s been a blast.');
+      para.push('<strong>The app stays open through Wednesday, September 30th.</strong> If you have outstanding winnings to claim, now\'s the time.');
     } else {
-      kicker = 'BEST GUESS LIVE HAS ENDED';
+      kicker = 'THAT\'S A WRAP ON BEST GUESS LIVE';
       date = 'FINAL EPISODE AUG 28, 2026.';
-      headline = 'BEST GUESS LIVE HAS ENDED.';
-      para.push('The final episode aired on <strong>Friday, August 28th</strong>, and the app closed on <strong>Wednesday, September 30</strong>.');
-      para.push('Every episode, transcript and daily puzzle is still here to browse and replay.');
+      headline = 'That\'s a wrap on Best Guess Live!';
+      para.push('Our final episode aired <strong>Friday, August 28th</strong>. Thank you for playing, guessing, and celebrating with us every night — it\'s been a blast.');
+      para.push('The app closed on <strong>Wednesday, September 30th</strong>, but every episode, transcript and daily puzzle is still here to browse and replay.');
     }
     // Only worth offering while there is still a payout window to ask about.
     const showSupport = today <= appCloses;
-    if (showSupport) para.push('If you have questions about a payout, Netflix support can help.');
 
     return { kicker, date, headline, para, showSupport };
   }
@@ -3191,18 +3220,28 @@ class App {
   openHomeNews() {
     const { headline, para, showSupport } = this._homeNewsContent();
     const esc = v => this._escapeHtml(v);
+    // The app's gold button opens its own claim flow, which a fan archive has no
+    // way to stand in for, so the call to action points at the people who can
+    // actually settle a payout instead of imitating a button that would dead-end.
     const support = showSupport
-      ? '<a class="news-card-btn is-support" href="https://help.netflix.com/contactus" target="_blank" rel="noopener">Contact Netflix Support</a>'
+      ? '<a class="news-card-btn is-support" href="https://help.netflix.com/contactus" target="_blank" rel="noopener">Claim via Netflix Support</a>'
+      : '';
+    const ask = showSupport
+      ? `<p class="news-card-ask">Questions about a payout?
+           <a href="https://help.netflix.com/contactus" target="_blank" rel="noopener">Contact Support</a>
+         </p>`
       : '';
     document.getElementById('modal-content').innerHTML = `
       <div class="news-card">
-        <div class="news-card-banner"><h2 class="font-display">${esc(headline)}</h2></div>
+        <span class="news-card-sparkles" aria-hidden="true"><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i></span>
         <div class="news-card-body">
+          <h2 class="font-display">${esc(headline)}</h2>
           ${para.map(p => `<p>${p}</p>`).join('')}
           <div class="news-card-actions">
             ${support}
             <button type="button" class="news-card-btn is-dismiss" onclick="app.closeModal()">Got It</button>
           </div>
+          ${ask}
           <p class="news-card-foot">Notice reproduced from the Best Guess Live app. This archive is fan-made and unaffiliated with Netflix — it cannot process payouts.</p>
         </div>
       </div>`;
