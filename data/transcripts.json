@@ -106988,7 +106988,7 @@
     "host": "Howie Mandel, Hunter March",
     "secretItems": [
       "CRYSTAL BALL",
-      "SINK"
+      "THE KITCHEN SINK"
     ],
     "rounds": [
       {
@@ -107007,7 +107007,7 @@
       },
       {
         "round": 2,
-        "secretItem": "SINK",
+        "secretItem": "THE KITCHEN SINK",
         "host": "Howie Mandel, Hunter March",
         "pot": 7500,
         "format": "v2",
