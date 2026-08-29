@@ -1,6 +1,30 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (date-driven stats frozen; "Anatomy of an Answer" added)
+Last updated: 2026-08-29 (Gemini gap-fill prompts for the 37 incomplete dates)
+
+## Most Recent Changes (2026-08-29, continued 7)
+
+- **Added `docs/GEMINI_GAP_PROMPTS.md`** — one copy-pasteable prompt per episode date that still has a hole, for pasting into Gemini alongside that date's YouTube video. **41 blocks: 37 gap-fill, 4 verification.**
+- **These are deliberately NOT the full-episode import prompt.** Every date is already imported, so each prompt names only the specific missing fields. Less room to invent, and a reply small enough to eye-check.
+- The doc is **generated from the data, not hand-written**, and was verified against it: every date with a real gap has a block, and no block names a gap that does not exist. Regenerate it after any import rather than editing by hand.
+- Rule blocks are conditional — a winner-names-only ask does not carry "do not round", and an explanation ask carries "quote the host's actual words, do not write your own".
+- **The four verification blocks ask Gemini to report, not to reconcile**: Apr 8 SKUNK and Feb 17 PARADE (impossible counts), Aug 13 YO YO (on-screen spelling), Aug 20 MIRROR (counts suspected copied from Aug 12). The PARADE prompt asks for both rounds separately, since its guesses column is identical to MOON's and may have been copied wholesale.
+- **⚠️ The doc tells the user to hand replies back rather than merging them.** Counts must be re-checked against `floorCents()` before being stored — a guess count that contradicts a stored payout has to be caught, not written.
+- **`null` is an accepted answer throughout.** The archive already has a convention for an unknown count (`"N/A"`), and a fabricated number is far worse than an honest gap.
+- Standing theory recorded in the doc: the three missing clue-5 explanations (Aug 14, 24, 25) are all on the rhyming giveaway clue, so the host most likely never explains it. If Gemini confirms `null`, those three can be closed permanently.
+
+### Outstanding gaps as of this entry
+
+| Gap | Count | Where |
+| --- | --- | --- |
+| Missing `guesses` counts | 56 clues / 16 dates | Dec 9, 2025 – Jan 15, 2026 |
+| Missing `correct` counts | 7 clues | same window |
+| Missing winner names | 20 rounds | scattered Jan–Aug 2026 |
+| Missing clue-5 explanation | 3 | Aug 14, 24, 25, 2026 |
+| Impossible counts | 2 | Apr 8 SKUNK c5, Feb 17 PARADE c5 |
+
+Every date has a transcript; none are missing outright.
+
 
 ## Most Recent Changes (2026-08-29, continued 6)
 

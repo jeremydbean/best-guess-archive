@@ -1,0 +1,770 @@
+# Gemini gap-fill prompts
+
+One prompt per episode date that still has a hole in the archive. Paste a block
+into Gemini together with that date's YouTube video.
+
+These are **not** the full-episode import prompt (`docs/DAILY_IMPORT_PROMPT.md` /
+the "Copy Gemini Prompt" button). Every date below is already imported — these
+ask only for the specific fields that are missing, so Gemini has far less room
+to invent, and the reply is small enough to check by eye.
+
+**When a reply comes back, hand it to Claude as-is.** Do not merge it yourself:
+counts get re-checked against `floorCents()` before anything is written, and a
+guess count that contradicts a stored payout has to be caught, not stored.
+
+**If Gemini answers `null` for something, that is a good answer** — it means the
+figure was never on screen. Send the `null` through; the archive already has a
+convention for unknown counts (`"N/A"`) and a fabricated number is much worse
+than an honest gap.
+
+## What is outstanding
+
+| Gap | Dates | Notes |
+| --- | --- | --- |
+| Missing `guesses` counts | 16 | Dec 9, 2025 – Jan 15, 2026. Early episodes; the results card often showed correct-only. |
+| Missing `correct` counts | 7 | Same window, same cause. |
+| Missing winner names | 20 | Scattered Jan–Aug 2026. Usernames the host reads out. |
+| Missing clue-5 explanation | 3 | Aug 14, 24, 25, 2026 — may genuinely not exist; see below. |
+| Known-bad values to re-read | 2 | Apr 8 and Feb 17, 2026 — impossible counts, see § Verification. |
+| Judgement calls | 2 | Aug 13 and Aug 20, 2026 — see § Verification. |
+
+Total: **37 dates** need something, plus **4** that need a value checked rather
+than filled.
+
+---
+
+## § Verification — check these, do not fill them
+
+These four already hold a value. I need to know whether the stored value is
+right, so the prompt asks Gemini to report what is on screen and nothing more.
+
+### Wednesday, April 8, 2026 — SKUNK (impossible counts)
+
+```
+Best Guess Live, Wednesday, April 8, 2026, Round 1, answer SKUNK. My records say
+clue 5 had 2,222 correct answers out of 254 total guesses, which is impossible —
+more people cannot get it right than answered.
+
+Read the Round 1 results card and tell me the two figures actually shown for
+clue 5: the correct count and the total guess count. If either is not shown on
+screen, say null for it. Do not reconcile the numbers or reason about which is
+more plausible — just report what is displayed.
+
+Output one JSON object and nothing else: {"clue5Correct": N, "clue5Guesses": N}
+```
+
+### Tuesday, February 17, 2026 — PARADE (impossible counts)
+
+```
+Best Guess Live, Tuesday, February 17, 2026, Round 1, answer PARADE. My records
+say clue 5 had 5,316 correct answers out of 1,910 total guesses, which is
+impossible. I also suspect this round's guess counts were copied from Round 2
+(MOON) by mistake, since both rounds are recorded with the identical sequence
+19058 / 12758 / 11658 / 4438.
+
+Read both results cards on this episode and give me, separately for Round 1
+(PARADE) and Round 2 (MOON), the correct count and the total guess count shown
+for all five clues. If a figure is not shown on screen, say null for it. Do not
+copy figures between the two rounds.
+
+Output one JSON object and nothing else:
+{"parade": {"correct": [..5..], "guesses": [..5..]}, "moon": {"correct": [..5..], "guesses": [..5..]}}
+```
+
+### Thursday, August 13, 2026 — YO YO (spelling)
+
+```
+Best Guess Live, Thursday, August 13, 2026, Round 1. The answer is a toy on a
+string. I need the exact on-screen spelling of the answer as it appears when the
+crystal ball opens and on the results card: is it written "YO YO", "YO-YO", or
+"YOYO"?
+
+Clue 2 was "SOUNDS LIKE YOU'RE GONNA THINK IT OVER" — quote the host's spoken
+explanation of that clue too, since it may hinge on the hyphen.
+
+Output one JSON object and nothing else:
+{"onScreenSpelling": "...", "clue2Explanation": "..."}
+```
+
+### Thursday, August 20, 2026 — MIRROR (suspected copied counts)
+
+```
+Best Guess Live, Thursday, August 20, 2026, Round 1, answer MIRROR. My records
+say clue 5 had 4,883 correct out of 5,141 guesses. Both of those exact numbers
+also appear in a different episode (Aug 12, BUTTERFLY), so I think they were
+carried over by mistake.
+
+Read the Round 1 results card and give me the correct count and total guess count
+shown for all five clues. If a figure is not shown on screen, say null for it.
+
+Output one JSON object and nothing else: {"correct": [..5..], "guesses": [..5..]}
+```
+
+---
+
+## § A note on the three missing explanations
+
+Aug 14 (BIG BEN), Aug 24 (BATMAN) and Aug 25 (MULLET) are each missing the
+explanation for clue 5 — always the rhyming giveaway clue. The pattern suggests
+the host simply does not explain the final clue when it gives the answer away,
+in which case **`null` is the correct answer and these three can be closed**.
+The prompts below ask directly, so one viewing settles it either way.
+
+---
+
+## § Per-date prompts
+
+### Tuesday, December 9, 2025 — CHATGPT / MOUNT RUSHMORE
+
+```
+Best Guess Live, Tuesday, December 9, 2025. Round 1 answer was CHATGPT. Round 2 answer was MOUNT RUSHMORE.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (CHATGPT): `guesses` (total submissions) for clues 3, 4, 5
+- Round 2 (MOUNT RUSHMORE): `guesses` (total submissions) for clues 4, 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Tuesday, December 9, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Wednesday, December 10, 2025 — JAMES BOND / S'MORES
+
+```
+Best Guess Live, Wednesday, December 10, 2025. Round 1 answer was JAMES BOND. Round 2 answer was S'MORES.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (JAMES BOND): `guesses` (total submissions) for clues 2, 5
+- Round 2 (S'MORES): `guesses` (total submissions) for clue 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Wednesday, December 10, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Thursday, December 11, 2025 — M&MS / TITANIC
+
+```
+Best Guess Live, Thursday, December 11, 2025. Round 1 answer was M&MS. Round 2 answer was TITANIC.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (M&MS): `guesses` (total submissions) for clues 3, 4
+- Round 2 (TITANIC): `guesses` (total submissions) for clue 4
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Thursday, December 11, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Friday, December 12, 2025 — GOODYEAR BLIMP / BIRTHDAY CAKE
+
+```
+Best Guess Live, Friday, December 12, 2025. Round 1 answer was GOODYEAR BLIMP. Round 2 answer was BIRTHDAY CAKE.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (GOODYEAR BLIMP): `guesses` (total submissions) for clues 4, 5
+- Round 2 (BIRTHDAY CAKE): `guesses` (total submissions) for clues 1, 3, 4, 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Friday, December 12, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Monday, December 15, 2025 — PARIS HILTON / MONOPOLY
+
+```
+Best Guess Live, Monday, December 15, 2025. Round 1 answer was PARIS HILTON. Round 2 answer was MONOPOLY.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (PARIS HILTON): `guesses` (total submissions) for clues 3, 4, 5
+- Round 2 (MONOPOLY): `guesses` (total submissions) for clues 3, 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Monday, December 15, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Tuesday, December 16, 2025 — THE GRINCH / BOWLING
+
+```
+Best Guess Live, Tuesday, December 16, 2025. Round 1 answer was THE GRINCH. Round 2 answer was BOWLING.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (THE GRINCH): `guesses` (total submissions) for clues 1, 2, 3, 4, 5
+- Round 2 (BOWLING): `correct` count for clue 5; `guesses` (total submissions) for clues 2, 4, 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Tuesday, December 16, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Wednesday, December 17, 2025 — RUDOLPH THE RED-NOSED REINDEER / OREO
+
+```
+Best Guess Live, Wednesday, December 17, 2025. Round 1 answer was RUDOLPH THE RED-NOSED REINDEER. Round 2 answer was OREO.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (RUDOLPH THE RED-NOSED REINDEER): `correct` count for clues 4, 5; `guesses` (total submissions) for clues 2, 4, 5
+- Round 2 (OREO): `guesses` (total submissions) for clues 2, 3, 4, 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Wednesday, December 17, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Thursday, December 18, 2025 — KING KONG / FRENCH FRIES
+
+```
+Best Guess Live, Thursday, December 18, 2025. Round 1 answer was KING KONG. Round 2 answer was FRENCH FRIES.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (KING KONG): `guesses` (total submissions) for clues 2, 4, 5
+- Round 2 (FRENCH FRIES): `guesses` (total submissions) for clue 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Thursday, December 18, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Monday, December 22, 2025 — PINOCCHIO / WILL FERRELL
+
+```
+Best Guess Live, Monday, December 22, 2025. Round 1 answer was PINOCCHIO. Round 2 answer was WILL FERRELL.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (PINOCCHIO): `guesses` (total submissions) for clue 4
+- Round 2 (WILL FERRELL): `guesses` (total submissions) for clues 2, 3, 4
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Monday, December 22, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Thursday, December 25, 2025 — GARBAGE TRUCK / CRUTCHES
+
+```
+Best Guess Live, Thursday, December 25, 2025. Round 1 answer was GARBAGE TRUCK. Round 2 answer was CRUTCHES.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (CRUTCHES): `correct` count for clue 3; `guesses` (total submissions) for clue 3
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Thursday, December 25, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Friday, December 26, 2025 — BAGGAGE CLAIM / ICE CUBE TRAY
+
+```
+Best Guess Live, Friday, December 26, 2025. Round 1 answer was BAGGAGE CLAIM. Round 2 answer was ICE CUBE TRAY.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (ICE CUBE TRAY): `guesses` (total submissions) for clue 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Friday, December 26, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Monday, December 29, 2025 — WONDER WOMAN / CAVITY
+
+```
+Best Guess Live, Monday, December 29, 2025. Round 1 answer was WONDER WOMAN. Round 2 answer was CAVITY.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (CAVITY): `correct` count for clue 5; `guesses` (total submissions) for clues 4, 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Monday, December 29, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Tuesday, December 30, 2025 — MCDONALD'S / SANDCASTLE
+
+```
+Best Guess Live, Tuesday, December 30, 2025. Round 1 answer was MCDONALD'S. Round 2 answer was SANDCASTLE.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (SANDCASTLE): `correct` count for clue 5; `guesses` (total submissions) for clue 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Tuesday, December 30, 2025", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Thursday, January 1, 2026 — KENTUCKY DERBY / JOKE
+
+```
+Best Guess Live, Thursday, January 1, 2026. Round 1 answer was KENTUCKY DERBY. Round 2 answer was JOKE.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (KENTUCKY DERBY): `correct` count for clue 5; `guesses` (total submissions) for clue 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Thursday, January 1, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Tuesday, January 13, 2026 — ENGAGEMENT RING / PEPPERONI
+
+```
+Best Guess Live, Tuesday, January 13, 2026. Round 1 answer was ENGAGEMENT RING. Round 2 answer was PEPPERONI.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (ENGAGEMENT RING): `guesses` (total submissions) for clues 4, 5
+- Round 2 (PEPPERONI): `guesses` (total submissions) for clue 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Tuesday, January 13, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Thursday, January 15, 2026 — COSTCO / HARMONICA
+
+```
+Best Guess Live, Thursday, January 15, 2026. Round 1 answer was COSTCO. Round 2 answer was HARMONICA.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (COSTCO): `guesses` (total submissions) for clue 4
+- Round 2 (HARMONICA): `guesses` (total submissions) for clue 5
+
+**Rules — read before answering:**
+- The on-screen results card is the only source of truth for numbers. If a figure is never shown on screen, say `null` for it rather than guessing — do not infer it from the payout, from other clues, or from what sounds plausible.
+- If the host says a number aloud but it is never shown on screen, give the number and set `"heardOnly": true` for that round.
+- Do not round. Give counts exactly as displayed, digits only (no commas needed).
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Thursday, January 15, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Tuesday, January 20, 2026 — SCUBA DIVING / AVOCADO
+
+```
+Best Guess Live, Tuesday, January 20, 2026. Round 1 answer was SCUBA DIVING. Round 2 answer was AVOCADO.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (AVOCADO): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Tuesday, January 20, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Friday, February 6, 2026 — CUTTING BOARD / SCARECROW
+
+```
+Best Guess Live, Friday, February 6, 2026. Round 1 answer was CUTTING BOARD. Round 2 answer was SCARECROW.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (SCARECROW): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Friday, February 6, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Thursday, February 12, 2026 — PICKUP LINE / PENCIL SHARPENER
+
+```
+Best Guess Live, Thursday, February 12, 2026. Round 1 answer was PICKUP LINE. Round 2 answer was PENCIL SHARPENER.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (PENCIL SHARPENER): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Thursday, February 12, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Thursday, February 26, 2026 — SNEEZE / TABLE LEAF
+
+```
+Best Guess Live, Thursday, February 26, 2026. Round 1 answer was SNEEZE. Round 2 answer was TABLE LEAF.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (TABLE LEAF): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Thursday, February 26, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Wednesday, March 25, 2026 — QUICKSAND / SURF AND TURF
+
+```
+Best Guess Live, Wednesday, March 25, 2026. Round 1 answer was QUICKSAND. Round 2 answer was SURF AND TURF.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (QUICKSAND): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Wednesday, March 25, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Tuesday, March 31, 2026 — HIGH HEELS / SNOOP DOGG
+
+```
+Best Guess Live, Tuesday, March 31, 2026. Round 1 answer was HIGH HEELS. Round 2 answer was SNOOP DOGG.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (SNOOP DOGG): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Tuesday, March 31, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Wednesday, April 1, 2026 — SUNGLASSES / EMOJI
+
+```
+Best Guess Live, Wednesday, April 1, 2026. Round 1 answer was SUNGLASSES. Round 2 answer was EMOJI.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (SUNGLASSES): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Wednesday, April 1, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Monday, April 20, 2026 — RAINBOW / MUHAMMAD ALI
+
+```
+Best Guess Live, Monday, April 20, 2026. Round 1 answer was RAINBOW. Round 2 answer was MUHAMMAD ALI.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (MUHAMMAD ALI): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Monday, April 20, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Friday, May 1, 2026 — ZOOM / JUMPING JACKS
+
+```
+Best Guess Live, Friday, May 1, 2026. Round 1 answer was ZOOM. Round 2 answer was JUMPING JACKS.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (ZOOM): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+- Round 2 (JUMPING JACKS): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Friday, May 1, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Friday, May 8, 2026 — LEBRON JAMES / YODELING
+
+```
+Best Guess Live, Friday, May 8, 2026. Round 1 answer was LEBRON JAMES. Round 2 answer was YODELING.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (LEBRON JAMES): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Friday, May 8, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Friday, June 5, 2026 — SUNBURN / TOM HANKS
+
+```
+Best Guess Live, Friday, June 5, 2026. Round 1 answer was SUNBURN. Round 2 answer was TOM HANKS.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (SUNBURN): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+- Round 2 (TOM HANKS): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Friday, June 5, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Tuesday, June 9, 2026 — TACO BELL / TOM CRUISE
+
+```
+Best Guess Live, Tuesday, June 9, 2026. Round 1 answer was TACO BELL. Round 2 answer was TOM CRUISE.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (TACO BELL): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Tuesday, June 9, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Monday, June 15, 2026 — CANDLE / SEATBELT
+
+```
+Best Guess Live, Monday, June 15, 2026. Round 1 answer was CANDLE. Round 2 answer was SEATBELT.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (SEATBELT): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Monday, June 15, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Wednesday, June 24, 2026 — NIGHTMARE / BUTT DIAL
+
+```
+Best Guess Live, Wednesday, June 24, 2026. Round 1 answer was NIGHTMARE. Round 2 answer was BUTT DIAL.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (NIGHTMARE): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Wednesday, June 24, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Friday, June 26, 2026 — SURFBOARD / POPCORN
+
+```
+Best Guess Live, Friday, June 26, 2026. Round 1 answer was SURFBOARD. Round 2 answer was POPCORN.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (POPCORN): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Friday, June 26, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Monday, June 29, 2026 — FLAMINGO / MARIO
+
+```
+Best Guess Live, Monday, June 29, 2026. Round 1 answer was FLAMINGO. Round 2 answer was MARIO.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (MARIO): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Monday, June 29, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Friday, July 31, 2026 — PINEAPPLE / PITBULL
+
+```
+Best Guess Live, Friday, July 31, 2026. Round 1 answer was PINEAPPLE. Round 2 answer was PITBULL.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (PITBULL): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Friday, July 31, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Friday, August 14, 2026 — MATT DAMON / BIG BEN
+
+```
+Best Guess Live, Friday, August 14, 2026. Round 1 answer was MATT DAMON. Round 2 answer was BIG BEN.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (BIG BEN): the host's spoken explanation of clue 5 — one sentence, what the clue meant. If the host never explains it, return `null`.
+
+**Rules — read before answering:**
+- Quote the host's actual words for an explanation. If the host never explains that clue, return `null` — do not write your own explanation of the wordplay.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Friday, August 14, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Monday, August 24, 2026 — PENGUIN / BATMAN
+
+```
+Best Guess Live, Monday, August 24, 2026. Round 1 answer was PENGUIN. Round 2 answer was BATMAN.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (BATMAN): the host's spoken explanation of clue 5 — one sentence, what the clue meant. If the host never explains it, return `null`.
+
+**Rules — read before answering:**
+- Quote the host's actual words for an explanation. If the host never explains that clue, return `null` — do not write your own explanation of the wordplay.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Monday, August 24, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Tuesday, August 25, 2026 — MULLET / K-POP
+
+```
+Best Guess Live, Tuesday, August 25, 2026. Round 1 answer was MULLET. Round 2 answer was K-POP.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 1 (MULLET): the host's spoken explanation of clue 5 — one sentence, what the clue meant. If the host never explains it, return `null`.
+
+**Rules — read before answering:**
+- Quote the host's actual words for an explanation. If the host never explains that clue, return `null` — do not write your own explanation of the wordplay.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Tuesday, August 25, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
+
+### Wednesday, August 26, 2026 — ZIPPER / MILKSHAKE
+
+```
+Best Guess Live, Wednesday, August 26, 2026. Round 1 answer was ZIPPER. Round 2 answer was MILKSHAKE.
+This episode is already archived — I do not need a transcript or a re-import. I need only the specific values below, which are missing from my records.
+
+**What I need:**
+- Round 2 (MILKSHAKE): the winner usernames the host reads out (comma-separated, exactly as spelled on screen)
+
+**Rules — read before answering:**
+- Take usernames from the on-screen winners list, not from the host saying them aloud — hosts mispronounce them. If they are never shown on screen, transcribe what the host says and set `"heardOnly": true` for that round.
+- If no winner names are shown or read at all, say `null` rather than guessing.
+- Do not re-transcribe the episode and do not return any field I did not ask for.
+
+**Output:** one JSON object and nothing else — no markdown fences, no commentary — shaped as {"date": "Wednesday, August 26, 2026", "round1": {...}, "round2": {...}}. Use only the keys listed under "What I need" for each round, and omit a round entirely if I did not ask for anything from it.
+```
