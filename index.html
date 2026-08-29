@@ -3164,30 +3164,23 @@ class App {
     });
   }
 
-  // Hunter March announced on Friday, August 14, 2026 that the show ends on
-  // Friday, August 28. The bubble counts down the weekday episodes left and
-  // rewrites itself to past tense once that date passes, so nobody has to
-  // remember to come back and edit it.
   // Builds both halves of the end-of-series notice from one set of dates: the
   // compact home banner, and the full card the banner opens in the modal.
-  // Three phases keep it true without maintenance — before the finale it reads
-  // as the app's does, between the finale and the app shutdown the claim
-  // deadline is the live part, and afterwards both dates are past and only the
-  // archive remains.
+  //
+  // The finale has aired, so there is no longer a "coming to an end" phase.
+  // There was one, and it was a bug once the show ended: `new Date()` is the
+  // viewer's local clock, so anyone still on Aug 28 in a US timezone kept
+  // getting future-tense copy hours after the episode had actually aired.
+  // Two phases remain, and both lead with the wrap headline — only the claim
+  // deadline changes once the app closes.
   _homeNewsContent() {
-    const finale = new Date(2026, 7, 28, 12, 0, 0, 0);      // Fri Aug 28, 2026
     const appCloses = new Date(2026, 8, 30, 12, 0, 0, 0);    // Wed Sep 30, 2026
     const today = new Date();
     today.setHours(12, 0, 0, 0);
 
     const para = [];
     let date, headline;
-    if (today <= finale) {
-      date = 'Final episode Friday, Aug 28th.';
-      headline = 'Best Guess Live is coming to an end.';
-      para.push('After an incredible run, the final episode airs <strong>Friday, August 28th</strong>. Thank you for playing, guessing, and celebrating with us every night — it\'s been a blast.');
-      para.push('<strong>The app stays open through Wednesday, September 30th.</strong> If you have outstanding winnings to claim, now\'s the time.');
-    } else if (today <= appCloses) {
+    if (today <= appCloses) {
       date = 'Claim winnings by Sep 30th.';
       headline = 'That\'s a wrap on Best Guess Live!';
       para.push('Our final episode aired <strong>Friday, August 28th</strong>. Thank you for playing, guessing, and celebrating with us every night — it\'s been a blast.');
@@ -3750,16 +3743,36 @@ Rules:
     return String(s || '').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g, '');
   }
 
+  // Alternates the show itself accepted on the night. Data-driven via the
+  // game's `alsoAccepted` field (comma-separated); the two cases below predate
+  // that field and stay hard-coded.
   _getAcceptedAnswers(game) {
     const answer = this._normalizeAnswer(game?.secretItem);
     const accepted = new Set([answer]);
+    this._alsoAcceptedList(game).forEach(alt => accepted.add(this._normalizeAnswer(alt)));
     if (game?.date === 'Tuesday, May 5, 2026' && answer === 'mayonnaise') {
       accepted.add('mayo');
     }
     if (answer === 'kfc') {
       accepted.add('kentuckyfriedchicken');
     }
+    accepted.delete('');
     return accepted;
+  }
+
+  _alsoAcceptedList(game) {
+    return String(game?.alsoAccepted || '').split(',').map(s => s.trim()).filter(Boolean);
+  }
+
+  // Carries the `db-explanation` class purely for its spoiler gating: an
+  // alternate is usually a near-miss of the answer itself, so showing it beside
+  // an unrevealed secret item would give the round away.
+  _renderAlsoAccepted(game) {
+    const alts = this._alsoAcceptedList(game);
+    if (!alts.length) return '';
+    return `<div class="db-explanation mt-2 text-xs font-bold uppercase tracking-wider text-emerald-300/80">
+      Also accepted: ${this._escapeHtml(this._formatNaturalList(alts))}
+    </div>`;
   }
 
   _pickHostCartoon(hostName) {
@@ -4930,6 +4943,7 @@ Rules:
       <div class="mb-8 text-center">
         <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
         <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${secretHeading}</h2>
+        ${this._renderAlsoAccepted(g)}
         <div class="mt-5 flex flex-wrap items-center justify-center text-sm" style="column-gap:2rem;row-gap:.75rem;line-height:1.7">
           <span class="font-bold text-green-300">${g.pot ? `$${Number(g.pot).toLocaleString()}` : 'Pot unavailable'}</span>
           <span class="font-bold text-blue-200">${esc(g.host || 'Host unknown')}</span>
@@ -5089,7 +5103,7 @@ Rules:
       <div class="mb-8 text-center">
         <div class="text-xs font-bold uppercase tracking-widest text-slate-500">${esc(g.date)}</div>
         <h2 class="mt-1 text-4xl font-display font-bold leading-tight text-white">${secretHeading}</h2>
-
+        ${this._renderAlsoAccepted(g)}
         <div class="mt-5 flex flex-wrap items-center justify-center text-sm" style="column-gap:2rem;row-gap:.75rem;line-height:1.7">
           <span class="font-bold ${this._isKnownCount(g.pot) ? 'text-green-300' : 'text-slate-500'}">${this._isKnownCount(g.pot) ? `$${this._parseCount(g.pot).toLocaleString()}` : 'Pot unavailable'}</span>
           <span class="font-bold text-blue-200">${esc(g.host || 'Host unknown')}</span>
@@ -5589,6 +5603,9 @@ Rules:
       .map(([text, entries]) => ({ text, count: entries.length, entries }));
     const knownAnswers = new Set([
       ...games.map(g => (g.secretItem || '').trim().toUpperCase()),
+      // An alternate the show accepted was a correct answer too, so it does not
+      // belong in a wrong-guess ranking either.
+      ...games.flatMap(g => this._alsoAcceptedList(g).map(a => a.toUpperCase())),
       ...this.dailyPuzzles.map(p => (p.secretItem || '').trim().toUpperCase())
     ].filter(Boolean));
     const wrongGuessMap = {};

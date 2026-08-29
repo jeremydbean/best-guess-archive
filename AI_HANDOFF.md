@@ -1,6 +1,19 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (home banner now leads with the wrap headline)
+Last updated: 2026-08-29 (THE KITCHEN SINK answer + accepted-alternate support)
+
+## Most Recent Changes (2026-08-29, continued 4)
+
+- **Aug 28 Round 2's answer is now `THE KITCHEN SINK`, with `SINK` recorded as an accepted alternate.** Updated in `data/games-2026.json` and in the transcript's `secretItems` and `rounds[1].secretItem`. This matches the on-air reveal ("The correct answer was. The kitchen sink!") and clue 1's own explanation, which turns on the phrase *kitchen sink*.
+- **Added a general `alsoAccepted` field rather than a one-off.** It is a comma-separated ALL CAPS string sitting next to `secretItem`, and three places read it automatically:
+  - `_getAcceptedAnswers()` — Play mode now accepts both `thekitchensink` and `sink`. The pre-existing hard-coded mayo/mayonnaise and KFC cases still stand; new alternates should go in the data instead.
+  - The stats page's `knownAnswers` set — **this mattered.** `SINK` is a popular wrong guess on Friday, March 27, 2026. While `SINK` was the Aug 28 answer it was filtered out of "Most Popular Wrong Guesses" automatically; renaming the answer would have silently promoted it into the rankings. Feeding `alsoAccepted` into `knownAnswers` keeps it out, which is correct — the show counted it right.
+  - `_renderAlsoAccepted()` — an "Also accepted: SINK" line under the answer in both detail modals.
+- **⚠️ The alternate line is spoiler-gated and must stay that way.** It carries the `db-explanation` class purely for that gating; an alternate is usually a near-miss of the answer, so an ungated line would give the round away next to an unrevealed secret item. Verified: `blur(6px)` before reveal, `none` after.
+- **⚠️ `note` is the wrong field for this and was not used.** Despite AGENTS.md listing it as a general field, its only existing use is `"Game was cancelled"`, and the database view renders any `note` as a red warning badge and appends "— no episode aired". `alsoAccepted` is documented in AGENTS.md with that warning attached.
+- **The "coming to an end" phase is gone from `_homeNewsContent()`, and this was a real bug, not just cleanup.** `new Date()` reads the *viewer's* local clock, so anyone still on Aug 28 in a US timezone kept seeing future-tense "the final episode airs Friday, August 28th" copy hours after it had aired — which is what the user reported. Two phases remain, both leading with the wrap headline; only the claim-deadline line changes once the app closes on Sep 30.
+- Verified with `page.clock.setFixedTime()` at 2026-08-28T02:00Z, 2026-08-28T20:00Z, 2026-08-29T12:00Z and 2026-10-05T12:00Z: every one now shows "That's a wrap on Best Guess Live!" in both banner and card, with the date line switching to "Final episode Aug 28, 2026." only after Sep 30.
+
 
 ## Most Recent Changes (2026-08-29, continued 3)
 
