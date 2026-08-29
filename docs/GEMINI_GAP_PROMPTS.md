@@ -25,9 +25,9 @@ than an honest gap.
 | Missing `correct` counts | 7 | Same window, same cause. |
 | Missing winner names | 20 | Scattered Jan–Aug 2026. Usernames the host reads out. |
 | Missing clue-5 explanation | 3 | Aug 14, 24, 25, 2026 — may genuinely not exist; see below. |
-| Known-bad values to re-check | 2 | Aug 13 and Aug 20, 2026 — watched by hand, see § Verification. |
+| Judgement call | 1 | Aug 13, 2026 — YO YO spelling, see § Verification. |
 
-Total: **38 dates** need something from Gemini, plus **2** checked by hand.
+Total: **38 dates** need something from Gemini, plus **1** checked by hand.
 
 **Resolved so far**
 
@@ -39,23 +39,18 @@ Total: **38 dates** need something from Gemini, plus **2** checked by hand.
   6,821 for clues 2–5. Two figures stay unknown and are listed below: PARADE
   clue 1 (the host says it, but the source transcript garbles it to "6,63") and
   MOON clue 5 (never stated aloud).*
+- *Aug 20, 2026 (MIRROR / KEANU REEVES) — **false alarm, nothing was wrong.** The
+  transcript confirms all twenty figures exactly as stored, and all six payouts
+  reproduce. MIRROR clue 5's 4,883 / 5,141 really are its numbers; that they also
+  appear as BUTTERFLY's guess counts on Aug 12 is coincidence, and note they sit
+  in different roles there (both are guess counts on Aug 12, but correct-and-guesses
+  on Aug 20), which is what a real copy would not do.*
 
 ---
 
 ## § Verification — watch these yourself
 
-Two dates hold a value that is probably wrong, and both are quicker to settle by
-eye than by prompt.
-
-### Thursday, August 20, 2026 — MIRROR
-
-Clue 5 is stored as 4,883 correct of 5,141 guesses. Both of those exact numbers
-also appear on Aug 12 (BUTTERFLY), so they were probably carried across — the
-same failure that hit Feb 17.
-
-Need: **the correct and guess counts for all five clues** on the MIRROR results
-card. Nothing here is confirmed by arithmetic, since MIRROR's payouts derive from
-the medal tiers rather than clue 5, so the whole card is worth a look.
+One item left, and it is not a number.
 
 ### Thursday, August 13, 2026 — YO YO
 
