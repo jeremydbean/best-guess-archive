@@ -826,6 +826,48 @@
     background: linear-gradient(90deg, #10b981 0%, #2dd4bf 100%);
   }
   .answer-pct { font-weight: 700; color: #6ee7b7; }
+  /* Each category row is a disclosure: the bar is the summary, the answers
+     behind it are the detail. */
+  .answer-cat > summary {
+    cursor: pointer;
+    list-style: none;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.4rem;
+    margin: 0 -0.4rem;
+    transition: background 0.15s ease;
+  }
+  .answer-cat > summary::-webkit-details-marker { display: none; }
+  .answer-cat > summary:hover { background: rgba(148, 163, 184, 0.08); }
+  .answer-cat > summary:focus-visible { outline: 2px solid #34d399; outline-offset: 2px; }
+  .answer-cat-chevron {
+    display: inline-block;
+    margin-left: 0.4rem;
+    color: #64748b;
+    font-weight: 700;
+    transition: transform 0.15s ease;
+  }
+  .answer-cat[open] .answer-cat-chevron { transform: rotate(90deg); }
+  .answer-cat-group { margin: 0.6rem 0 0 0.4rem; }
+  .answer-cat-group-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+  }
+  .answer-chip {
+    display: inline-block;
+    margin: 0 0.3rem 0.3rem 0;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    background: rgba(16, 185, 129, 0.1);
+    color: #cbd5e1;
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
   .latest-medal-strip {
     display: flex;
     flex-wrap: wrap;
@@ -5491,7 +5533,8 @@ Rules:
     if (nodes.answerIntro) {
       nodes.answerIntro.innerText =
         `Every answer the show ever used — ${p.liveTotal.toLocaleString()} live rounds and ${p.dailyTotal} daily puzzles, `
-        + `${p.uniqueTotal.toLocaleString()} of them and not one repeated.`;
+        + `${p.uniqueTotal.toLocaleString()} of them and not one repeated. `
+        + `Tap any category to see everything in it.`;
     }
     const tile = (val, label) => `<div class="bg-slate-800/50 rounded-lg border border-slate-700/30 p-3 text-center">
       <div class="text-lg font-bold text-white leading-tight truncate" title="${esc(String(val))}">${esc(String(val))}</div>
@@ -5508,16 +5551,25 @@ Rules:
       ].join('');
     }
     const max = p.categories[0].count || 1;
+    const itemList = (label, items) => items.length
+      ? `<div class="answer-cat-group"><span class="answer-cat-group-label">${esc(label)} (${items.length})</span>
+           ${items.map(i => `<span class="answer-chip">${esc(i)}</span>`).join('')}</div>`
+      : '';
     nodes.answerCategories.innerHTML = p.categories.map(c => `
       <li>
-        <div class="flex flex-wrap items-baseline justify-between gap-x-3 text-sm">
-          <span class="font-bold text-white">${esc(c.name)}</span>
-          <span class="text-slate-400">
-            <span class="answer-pct">${c.pct.toFixed(1)}%</span>
-            <span class="text-xs"> · ${c.count} (${c.live} live · ${c.daily} daily)</span>
-          </span>
-        </div>
-        <div class="answer-bar"><div class="answer-bar-fill" style="width:${(c.count / max) * 100}%"></div></div>
+        <details class="answer-cat">
+          <summary>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-3 text-sm">
+              <span class="font-bold text-white">${esc(c.name)}<span class="answer-cat-chevron" aria-hidden="true">›</span></span>
+              <span class="text-slate-400">
+                <span class="answer-pct">${c.pct.toFixed(1)}%</span>
+                <span class="text-xs"> · ${c.count} (${c.live} live · ${c.daily} daily)</span>
+              </span>
+            </div>
+            <div class="answer-bar"><div class="answer-bar-fill" style="width:${(c.count / max) * 100}%"></div></div>
+          </summary>
+          ${itemList('Live rounds', c.liveItems)}${itemList('Daily puzzles', c.dailyItems)}
+        </details>
       </li>`).join('');
     if (nodes.answerNote) {
       const digits = p.withDigits.length ? p.withDigits.join(', ') : 'none';
@@ -5535,16 +5587,22 @@ Rules:
     const all = [...live, ...daily];
     if (!all.length) return null;
 
-    const tally = items => items.reduce((m, i) => {
+    // Group rather than count, so each category can list the answers behind it.
+    const group = items => items.reduce((m, i) => {
       const c = cats[i];
-      if (c) m[c] = (m[c] || 0) + 1;
+      if (c) (m[c] = m[c] || []).push(i);
       return m;
     }, {});
-    const liveBy = tally(live);
-    const dailyBy = tally(daily);
+    const liveBy = group(live);
+    const dailyBy = group(daily);
+    const alpha = (a, b) => a.localeCompare(b);
     const categorised = all.filter(i => cats[i]).length;
     const categories = Object.keys({ ...liveBy, ...dailyBy })
-      .map(name => ({ name, live: liveBy[name] || 0, daily: dailyBy[name] || 0, count: (liveBy[name] || 0) + (dailyBy[name] || 0) }))
+      .map(name => {
+        const liveItems = (liveBy[name] || []).slice().sort(alpha);
+        const dailyItems = (dailyBy[name] || []).slice().sort(alpha);
+        return { name, liveItems, dailyItems, live: liveItems.length, daily: dailyItems.length, count: liveItems.length + dailyItems.length };
+      })
       .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
       .map(c => ({ ...c, pct: categorised ? (c.count / categorised) * 100 : 0 }));
 

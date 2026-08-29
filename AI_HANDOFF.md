@@ -1,6 +1,23 @@
 # AI Handoff
 
-Last updated: 2026-08-29 (YO YO → YO-YO; every verification flag now closed)
+Last updated: 2026-08-29 (expandable answer categories; 7 mis-files corrected)
+
+## Most Recent Changes (2026-08-29, continued 12)
+
+- **Each category row in "Anatomy of an Answer" now expands** to list every answer behind it, split into "Live rounds (n)" and "Daily puzzles (n)" and alphabetised, rendered as chips. Built on native `<details>`/`<summary>`, matching the bonus-section pattern already in the modal — no JS state to keep in sync.
+- The whole bar row is the `<summary>`, so the click target is the full row rather than a small chevron. Default markers are suppressed and a `›` rotates on open.
+- **⚠️ Exposing the lists immediately caught seven mis-filed answers, three of them left over from the first draft of the category map.** This is the real value of the feature: percentages alone hid them.
+  - `ATM` and `KNOT` were in **Transportation** — neither is transport. → Everyday Objects.
+  - `6 7` was in Transportation → **Screen & Stage**, with MEME / EMOJI / SELFIE.
+  - `AUGUST` was in **Screen & Stage** — it is the month → Ideas & Feelings, with LEAP YEAR / MIDNIGHT / TIME.
+  - `EMAIL` was in Screen & Stage → Ideas & Feelings, matching VOICEMAIL and JUNK MAIL.
+  - `PINBALL` was an Everyday Object → Sports & Games.
+  - `POT HOLE` was an Everyday Object → Transportation, matching SPEED BUMP.
+- Revised split: Everyday Objects 112, People & Characters 80, Ideas & Feelings 50, Food & Drink 49, Places & Landmarks 43, Sports & Games 36, Screen & Stage 29, Animals & Nature 28, Brands & Companies 21, Body & Health 16, Transportation 12.
+- Verified by asserting **each category's rendered chip count equals the count printed on its own row**, for all eleven, summing to 476. That check is worth repeating after any category edit — it catches a row whose label and contents have drifted apart.
+- **Deliberately left alone**: FERRIS WHEEL / ROLLER COASTER / WATERSLIDE / BUMPER CARS sit across three categories. Amusement rides have no clean home among the eleven and reasonable people would file them differently — they are debatable, not wrong, and re-filing them would be churn.
+- Punctuation count in the footnote rose 17 → 18 on its own, because YO-YO gained a hyphen. The figure is derived, so nothing needed editing.
+
 
 ## Most Recent Changes (2026-08-29, continued 11)
 
